@@ -2,8 +2,10 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev"
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./app/styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i ./app/styles/app.css -o app/styles/app.css"
   },
   "dependencies": {
     "@react-chess/chessground": "^1.2.4",
@@ -24,7 +26,11 @@
     "@types/react": "^17.0.45",
     "@types/react-dom": "^17.0.17",
     "@types/styled-components": "^5.1.25",
+    "autoprefixer": "^10.4.7",
+    "concurrently": "^7.2.1",
     "eslint": "^8.15.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24",
     "typescript": "^4.6.4"
   },
   "engines": {
