@@ -1,0 +1,111 @@
+import styled, { keyframes, css } from "styled-components";
+
+const getAnimationDelay = (index: any) => {
+  return index * 0.2 + "s";
+};
+
+const getTileColor = (color: any) => {
+  switch (color) {
+    case "green":
+      return "#6AAA63";
+    case "yellow":
+      return "#C9B458";
+    case "grey":
+      return "#787C7E";
+    default:
+      return "#d3d6da";
+  }
+};
+
+const bounce = () => keyframes`
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+`;
+
+const flip = (c: any) => keyframes`
+  0% {
+    transform: rotateX(0deg);
+    background: #fff;
+    border-color: #787C7E;
+    color: #000;
+  }
+
+  45% {
+    transform: rotateX(90deg);
+    background: #fff;
+    border-color: #787C7E;
+    color: #000;
+  }
+
+  55% {
+    transform: rotateX(90deg);
+    background: ${c};
+    border-color: ${c};
+    color: #fff;
+  }
+
+  100% {
+    transform: rotateX(0deg);
+    background: ${c};
+    border-color: ${c};
+    color: #fff;
+  }
+`;
+
+export const StyledRow = styled.div`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+`;
+
+interface TileProps {
+  flipTile?: any;
+  color?: any;
+  current?: any;
+  animationIndex?: any;
+}
+
+export const Tile = styled.div<TileProps>`
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+
+  display: block;
+  border: 2px solid #d3d6da;
+
+  justify-content: center;
+  align-content: center;
+  margin: 3px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  user-select: none;
+  box-sizing: border-box;
+
+  background-color: white;
+  border-color: #787c7e;
+  animation: ${flip} 0.5s ease forwards;
+
+  animation: ${({ flipTile, color, current }: any) =>
+    flipTile
+      ? css`
+          ${flip(getTileColor(color))} 0.5s ease forwards
+        `
+      : current
+      ? css`
+          ${bounce} 0.2s ease-in-out forwards
+        `
+      : "none"};
+
+  animation-delay: ${({ animationIndex }: any) =>
+    getAnimationDelay(animationIndex)};
+`;
