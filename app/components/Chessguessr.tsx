@@ -12,6 +12,10 @@ const ChessboardWrapper = styled.div`
   margin-bottom: 5rem;
 `;
 
+const Buttons = styled.div`
+  display: flex;
+`;
+
 export const Chessguessr = ({ data }: any) => {
   const {
     currentGuess,
@@ -42,6 +46,11 @@ export const Chessguessr = ({ data }: any) => {
           />
         )}
       </ChessboardWrapper>
+      <Buttons>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Button
+        </button>
+      </Buttons>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
     </div>
   );
