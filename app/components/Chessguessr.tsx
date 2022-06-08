@@ -5,7 +5,12 @@ import Chessground from "@react-chess/chessground";
 import { Grid } from "./Grid";
 import styled from "styled-components";
 
-const ChessboardWrapper = styled.div``;
+const ChessboardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`;
 
 export const Chessguessr = ({ data }: any) => {
   const {
