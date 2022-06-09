@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { arraysEqual } from "../utils/utils";
 import * as ChessJS from "chess.js";
+import { Square } from "react-chessboard";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
@@ -18,6 +19,7 @@ const useChessguessr = (data: any) => {
   const [correct, setCorrect] = useState(false);
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
+  const [insufficientMoves, setInsufficientMoves] = useState(false);
 
   useEffect(() => {
     if (data) {
@@ -72,7 +74,7 @@ const useChessguessr = (data: any) => {
 
     setTurn((prev) => prev + 1);
 
-    setCurrentGuess("");
+    setCurrentGuess([]);
     setFenHistory([]);
 
     if (arraysEqual(currentGuess, data.solution)) {
@@ -82,8 +84,8 @@ const useChessguessr = (data: any) => {
     }
   };
 
-  const onDrop = (sourceSquare: any, targetSquare: any) => {
-    let move: any = null;
+  const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
+    let move = null;
 
     safeGameMutate((game: any) => {
       move = game.move({
@@ -98,7 +100,11 @@ const useChessguessr = (data: any) => {
         setFenHistory((prev): any => [...prev, position.fen()]);
         setCurrentGuess((prev): any => [...prev, move.san]);
       }
+
+      return true;
     }
+
+    return false;
   };
 
   const takeback = () => {
@@ -114,6 +120,8 @@ const useChessguessr = (data: any) => {
   };
 
   const submitGuess = () => {
+    console.log("cur", currentGuess);
+    console.log("gues", guesses);
     if (turn > 5) {
       console.log("Too many guesses");
       return;
@@ -126,6 +134,15 @@ const useChessguessr = (data: any) => {
 
     if (currentGuess.length !== 5) {
       console.log("Need 5 moves");
+      setInsufficientMoves(true);
+
+      setTimeout(
+        function () {
+          setInsufficientMoves(false);
+        }.bind(this),
+        1000
+      );
+
       return;
     }
 
@@ -143,6 +160,7 @@ const useChessguessr = (data: any) => {
     position,
     takeback,
     submitGuess,
+    insufficientMoves,
   };
 };
 
