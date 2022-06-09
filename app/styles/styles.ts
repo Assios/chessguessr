@@ -7,11 +7,11 @@ const getAnimationDelay = (index: any) => {
 const getTileColor = (color: any) => {
   switch (color) {
     case "green":
-      return "#6AAA63";
+      return "#12B980";
     case "yellow":
-      return "#C9B458";
+      return "#FBBF23";
     case "grey":
-      return "#787C7E";
+      return "#9CA3AF";
     default:
       return "#d3d6da";
   }

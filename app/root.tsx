@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
+import { Navbar } from "./components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -26,6 +28,8 @@ export default function App() {
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
+        <Toaster />
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

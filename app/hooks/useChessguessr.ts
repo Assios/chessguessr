@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { arraysEqual } from "../utils/utils";
 import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
+import toast from "react-hot-toast";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
@@ -135,6 +136,7 @@ const useChessguessr = (data: any) => {
     if (currentGuess.length !== 5) {
       console.log("Need 5 moves");
       setInsufficientMoves(true);
+      toast.error("5 moves needed.", { duration: 2000 });
 
       setTimeout(
         function () {

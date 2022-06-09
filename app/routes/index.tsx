@@ -19,13 +19,9 @@ export default function Index() {
     fetch("http://localhost:3001/data")
       .then((res) => res.json())
       .then((json) => {
-        setGame(json[0]);
+        setGame(json[1]);
       });
   }, [setGame]);
 
-  return (
-    <StyledIndex>
-      <Chessguessr data={game} />
-    </StyledIndex>
-  );
+  return <StyledIndex>{game && <Chessguessr data={game} />}</StyledIndex>;
 }
