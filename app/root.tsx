@@ -10,6 +10,7 @@ import {
 import styles from "./tailwind.css";
 import { Navbar } from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "./components/Footer";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -31,6 +32,7 @@ export default function App() {
         <Toaster />
         <Navbar fixed={false} />
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
