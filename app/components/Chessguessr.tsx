@@ -47,8 +47,8 @@ export const Chessguessr = ({ data }: any) => {
         )}
       </ChessboardWrapper>
       <Buttons>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Button
+        <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+          Save changes
         </button>
       </Buttons>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
