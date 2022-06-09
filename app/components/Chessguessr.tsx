@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useChessguessr from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
-import Chessground from "@react-chess/chessground";
 import { Grid } from "./Grid";
 import styled from "styled-components";
 
@@ -39,8 +38,8 @@ export const Chessguessr = ({ data }: any) => {
   } = useChessguessr(data);
 
   useEffect(() => {
-    console.log(guesses, turn, correct);
-  }, [guesses, turn, correct]);
+    console.log(guesses, turn);
+  }, [guesses, turn, correct, turn]);
 
   const { white, black, wRating, bRating } = data;
 
@@ -55,7 +54,7 @@ export const Chessguessr = ({ data }: any) => {
       <ChessboardWrapper>
         {position && (
           <Chessboard
-            arePiecesDraggable={turn < 5 && !correct}
+            arePiecesDraggable={currentGuess.length < 5 && !correct}
             position={position.fen()}
             onPieceDrop={onDrop}
             areArrowsAllowed={false}

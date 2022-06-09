@@ -29,7 +29,7 @@ export default function App() {
       </head>
       <body>
         <Toaster />
-        <Navbar />
+        <Navbar fixed={false} />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
