@@ -26,6 +26,7 @@ export const Chessguessr = ({ data }: any) => {
     guesses,
     correct,
     turn,
+    insufficientMoves,
   } = useChessguessr(data);
 
   useEffect(() => {
@@ -43,6 +44,7 @@ export const Chessguessr = ({ data }: any) => {
             arePiecesDraggable={turn < 5 && !correct}
             position={position.fen()}
             onPieceDrop={onDrop}
+            areArrowsAllowed={false}
           />
         )}
       </ChessboardWrapper>
@@ -51,7 +53,12 @@ export const Chessguessr = ({ data }: any) => {
           Save changes
         </button>
       </Buttons>
-      <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+      <Grid
+        currentGuess={currentGuess}
+        guesses={guesses}
+        turn={turn}
+        insufficientMoves={insufficientMoves}
+      />
     </div>
   );
 };
