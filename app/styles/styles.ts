@@ -105,9 +105,9 @@ interface TileProps {
 }
 
 export const Tile = styled.div<TileProps>`
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
+  width: 107px;
+  height: 107px;
+  line-height: 107px;
 
   display: block;
   border: 2px solid #d3d6da;

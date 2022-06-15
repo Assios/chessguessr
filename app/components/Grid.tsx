@@ -2,6 +2,11 @@ import React from "react";
 import { Row } from "./Row";
 import styled from "styled-components";
 
+const StyledGrid = styled.div`
+  margin-top: 2.8rem;
+  margin-left: 1rem;
+`;
+
 export const Grid = ({
   currentGuess,
   guesses,
@@ -9,7 +14,7 @@ export const Grid = ({
   insufficientMoves,
 }: any) => {
   return (
-    <div>
+    <StyledGrid>
       {guesses.map((guess: any, i: any) => {
         if (turn === i) {
           return (
@@ -23,6 +28,6 @@ export const Grid = ({
         }
         return <Row key={i} guess={guess} />;
       })}
-    </div>
+    </StyledGrid>
   );
 };
