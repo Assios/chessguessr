@@ -111,7 +111,7 @@ const useChessguessr = (data: any) => {
 
   const takeback = () => {
     if (currentGuess.length < 1) {
-      toast.error("Can't undo nothing.", { duration: 2000 });
+      toast.error("Nothing to undo.", { duration: 2000 });
       return;
     }
 
