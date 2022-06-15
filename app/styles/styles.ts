@@ -12,6 +12,8 @@ const getTileColor = (color: any) => {
       return "#FBBF23";
     case "grey":
       return "#9CA3AF";
+    case "blue":
+      return "blue";
     default:
       return "#d3d6da";
   }

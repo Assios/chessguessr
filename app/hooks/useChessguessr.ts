@@ -52,8 +52,9 @@ const useChessguessr = (data: any) => {
 
     formattedGuess.forEach((move, i) => {
       if (solutionArray.includes(move.key) && move.color !== "green") {
+        console.log("sol", solutionArray);
         formattedGuess[i].color = "yellow";
-        solutionArray[i] = null;
+        solutionArray[solutionArray.indexOf(move.key)] = null;
       }
     });
 

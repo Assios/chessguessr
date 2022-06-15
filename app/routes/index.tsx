@@ -19,7 +19,7 @@ export default function Index() {
     fetch("http://localhost:3001/data")
       .then((res) => res.json())
       .then((json) => {
-        setGame(json[1]);
+        setGame(json[0]);
       });
   }, [setGame]);
 
