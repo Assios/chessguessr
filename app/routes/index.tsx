@@ -8,16 +8,6 @@ import { useLoaderData } from "@remix-run/react";
 export const loader: LoaderFunction = async () => {
   return json([
     {
-      fen: "1r6/4k3/p2rbnQ1/4R2p/6pP/1NP5/PK2R1P1/5q2 w - - 4 30",
-      solution: ["Qg7+", "Kd8", "Rxe6", "Rxe6", "Rxe6"],
-      gameUrl: "https://lichess.org/M3b8qnOv/white#58",
-      white: "RebeccaHarris",
-      black: "DrNykterstein",
-      wRating: 3134,
-      bRating: 3271,
-      id: 1,
-    },
-    {
       fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
       solution: ["d4", "Ne4", "Nc3", "Bf6", "Na4"],
       gameUrl: "https://lichess.org/Hk3Gr55R#16",
