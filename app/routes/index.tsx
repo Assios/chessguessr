@@ -43,7 +43,7 @@ const StyledIndex = styled.div`
 export default function Index() {
   const games = useLoaderData();
 
-  const game = games[Math.floor(Math.random() * 3)];
+  const game = games[Math.floor(Math.random() * 2)];
 
   return <StyledIndex>{game && <Chessguessr data={game} />}</StyledIndex>;
 }
