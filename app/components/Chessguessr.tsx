@@ -46,10 +46,6 @@ export const Chessguessr = ({ data }: any) => {
     insufficientMoves,
   } = useChessguessr(data);
 
-  useEffect(() => {
-    console.log(guesses, turn);
-  }, [guesses, turn, correct, turn]);
-
   const { white, black, wRating, bRating } = data;
 
   const [showModal, setShowModal] = useState(false);

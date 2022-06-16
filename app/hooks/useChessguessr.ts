@@ -52,7 +52,6 @@ const useChessguessr = (data: any) => {
 
     formattedGuess.forEach((move, i) => {
       if (solutionArray.includes(move.key) && move.color !== "green") {
-        console.log("sol", solutionArray);
         formattedGuess[i].color = "yellow";
         solutionArray[solutionArray.indexOf(move.key)] = null;
       }
@@ -127,8 +126,6 @@ const useChessguessr = (data: any) => {
   };
 
   const submitGuess = () => {
-    console.log("cur", currentGuess);
-    console.log("gues", guesses);
     if (turn > 5) {
       console.log("Too many guesses");
       return;

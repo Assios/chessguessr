@@ -32,9 +32,7 @@ export const Footer = () => {
       <div
         className="text-center p-4"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-      >
-        By Assios
-      </div>
+      ></div>
     </footer>
   );
 };

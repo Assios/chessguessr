@@ -32,7 +32,6 @@ export default function App() {
         <Toaster />
         <Navbar fixed={false} />
         <Outlet />
-        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
