@@ -24,7 +24,7 @@ export default function Modal({ showModal, setShowModal }) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    Jaddajadda
+                    wp
                   </p>
                 </div>
                 {/*footer*/}
