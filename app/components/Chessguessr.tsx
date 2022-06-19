@@ -62,7 +62,7 @@ export const Chessguessr = ({ data }: any) => {
 
   return (
     <div>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal game={data} showModal={showModal} setShowModal={setShowModal} />
       <Game>
         <BoardWrapper>
           <Players>

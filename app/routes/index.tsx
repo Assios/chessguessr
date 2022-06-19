@@ -18,7 +18,7 @@ export const loader: LoaderFunction = async () => {
       black: "ManuDavid2910",
       wRating: 3309,
       bRating: 2985,
-      id: 2,
+      id: 1,
     },
     {
       date: "2022-06-19",

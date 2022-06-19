@@ -1,6 +1,13 @@
 import React from "react";
 
-export default function Modal({ showModal, setShowModal }) {
+export default function Modal({ showModal, setShowModal, game }) {
+  const gameUrlText = (game) => {
+    if (game.gameUrl.includes("lichess.org")) {
+      return "on lichess";
+    }
+
+    return "here";
+  };
   return (
     <>
       {showModal ? (
@@ -24,7 +31,16 @@ export default function Modal({ showModal, setShowModal }) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    wp
+                    This game was played between {game.white} and {game.black}.
+                    Check out the game{" "}
+                    <a
+                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                      href={game.gameUrl}
+                      target="_blank"
+                    >
+                      {gameUrlText(game)}
+                    </a>
+                    .
                   </p>
                 </div>
                 {/*footer*/}
