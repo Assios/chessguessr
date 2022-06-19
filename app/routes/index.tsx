@@ -6,8 +6,22 @@ import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { useLoaderData } from "@remix-run/react";
 
 export const loader: LoaderFunction = async () => {
-  return json([
+  const d = new Date().toISOString().split("T")[0];
+
+  const data = [
     {
+      date: "2022-06-18",
+      fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
+      solution: ["d4", "Ne4", "Nc3", "Bf6", "Na4"],
+      gameUrl: "https://lichess.org/Hk3Gr55R#16",
+      white: "Sepp",
+      black: "ManuDavid2910",
+      wRating: 3309,
+      bRating: 2985,
+      id: 2,
+    },
+    {
+      date: "2022-06-19",
       fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
       solution: ["d4", "Ne4", "Nc3", "Bf6", "Na4"],
       gameUrl: "https://lichess.org/Hk3Gr55R#16",
@@ -18,6 +32,7 @@ export const loader: LoaderFunction = async () => {
       id: 2,
     },
     {
+      date: "2022-06-20",
       fen: "3r2k1/prp3p1/1b2Rp1p/8/7P/1P4P1/P2qQP2/B1R3K1 w - - 1 25",
       solution: ["Re8+", "Kh7", "Qe4+", "g6", "Qe7#"],
       gameUrl: "https://lichess.org/PLHVVZhI/white#48",
@@ -27,7 +42,11 @@ export const loader: LoaderFunction = async () => {
       bRating: 2291,
       id: 3,
     },
-  ]);
+  ];
+
+  return data.find((game) => {
+    return game.date === d;
+  });
 };
 
 const StyledIndex = styled.div`
@@ -41,9 +60,7 @@ const StyledIndex = styled.div`
 `;
 
 export default function Index() {
-  const games = useLoaderData();
-
-  const game = games[Math.floor(Math.random() * 2)];
+  const game = useLoaderData();
 
   return <StyledIndex>{game && <Chessguessr data={game} />}</StyledIndex>;
 }
