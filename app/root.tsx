@@ -27,6 +27,11 @@ export default function App() {
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
+        <script
+          defer
+          data-domain="chessguessr.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
       </head>
       <body style={{ backgroundColor: "#dae1ed" }}>
         <Toaster />
