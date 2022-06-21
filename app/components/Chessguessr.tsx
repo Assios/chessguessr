@@ -4,7 +4,7 @@ import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
 import styled from "styled-components";
 import Modal from "./Modal";
-import { Game } from "../utils/types";
+import { Game } from "~/utils/types";
 
 const ChessboardWrapper = styled.div`
   display: flex;

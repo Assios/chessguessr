@@ -4,10 +4,11 @@ import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
+import { Game } from "~/utils/types";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
-const useChessguessr = (game: any) => {
+const useChessguessr = (game: Game) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guesses, setGuesses] = useState([
@@ -54,7 +55,7 @@ const useChessguessr = (game: any) => {
     }
   }, [game]);
 
-  const safeGameMutate = (modify: any) => {
+  const updateChessBoard = (modify: any) => {
     setPosition((g: any) => {
       const update = { ...g };
       modify(update);
@@ -121,7 +122,7 @@ const useChessguessr = (game: any) => {
   const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
     let move = null;
 
-    safeGameMutate((game: any) => {
+    updateChessBoard((game: any) => {
       move = game.move({
         from: sourceSquare,
         to: targetSquare,

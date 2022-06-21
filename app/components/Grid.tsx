@@ -15,7 +15,7 @@ export const Grid = ({
 }: any) => {
   return (
     <StyledGrid>
-      {guesses.map((guess: any, i: any) => {
+      {guesses.map((guess: any, i: number) => {
         if (turn === i) {
           return (
             <Row
