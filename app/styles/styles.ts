@@ -125,6 +125,14 @@ export const Tile = styled.div<TileProps>`
   border-color: #787c7e;
   animation: ${flip} 0.5s ease forwards;
 
+  @media (max-width: 580px) {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+
+    font-size: 1rem;
+  }
+
   animation: ${({ flipTile, color, current }: any) =>
     flipTile
       ? css`

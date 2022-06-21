@@ -5,6 +5,7 @@ import { Grid } from "./Grid";
 import styled from "styled-components";
 import Modal from "./Modal";
 import { Game } from "~/utils/types";
+import { useWindowSize } from "~/hooks/useWindowSize";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -21,7 +22,6 @@ const Game = styled.div`
 
 const Buttons = styled.div`
   display: flex;
-  margin-bottom: 2rem;
 
   justify-content: center;
 `;
@@ -46,6 +46,8 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     turn,
     insufficientMoves,
   } = useChessguessr(game);
+
+  const size = useWindowSize();
 
   const { white, black, wRating, bRating } = game;
 
@@ -79,6 +81,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
                 position={position.fen()}
                 onPieceDrop={onDrop}
                 areArrowsAllowed={false}
+                boardWidth={size.width < 581 ? 370 : 560}
               />
             )}
           </ChessboardWrapper>
