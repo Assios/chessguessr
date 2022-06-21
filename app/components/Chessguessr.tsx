@@ -36,6 +36,7 @@ const Players = styled.div`
   display: flex;
 
   justify-content: center;
+  font-weight: bold;
 
   @media (max-width: 580px) {
     p {
@@ -46,7 +47,7 @@ const Players = styled.div`
 
   @media (max-width: 450px) {
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 `;
