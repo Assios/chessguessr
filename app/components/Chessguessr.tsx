@@ -4,6 +4,7 @@ import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
 import styled from "styled-components";
 import Modal from "./Modal";
+import { Game } from "../utils/types";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ const Players = styled.div`
   justify-content: center;
 `;
 
-export const Chessguessr = ({ data }: any) => {
+export const Chessguessr = ({ game }: { game: Game }) => {
   const {
     currentGuess,
     onDrop,
@@ -44,9 +45,9 @@ export const Chessguessr = ({ data }: any) => {
     correct,
     turn,
     insufficientMoves,
-  } = useChessguessr(data);
+  } = useChessguessr(game);
 
-  const { white, black, wRating, bRating } = data;
+  const { white, black, wRating, bRating } = game;
 
   const [showModal, setShowModal] = useState(false);
 
@@ -62,7 +63,7 @@ export const Chessguessr = ({ data }: any) => {
 
   return (
     <div>
-      <Modal game={data} showModal={showModal} setShowModal={setShowModal} />
+      <Modal game={game} showModal={showModal} setShowModal={setShowModal} />
       <Game>
         <BoardWrapper>
           <Players>

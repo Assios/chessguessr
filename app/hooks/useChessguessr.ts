@@ -7,7 +7,7 @@ import { useLocalStorage } from "./useLocalStorage";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
-const useChessguessr = (data: any) => {
+const useChessguessr = (game: any) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guesses, setGuesses] = useState([
@@ -28,11 +28,11 @@ const useChessguessr = (data: any) => {
     turn: turn,
     history: history,
     correct: correct,
-    date: data.date,
+    date: game.date,
   });
 
   useEffect(() => {
-    if (gameState.turn > 0 && gameState.date === data.date) {
+    if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
       setHistory(gameState.history);
@@ -43,16 +43,16 @@ const useChessguessr = (data: any) => {
         turn: turn,
         history: history,
         correct: correct,
-        date: data.date,
+        date: game.date,
       });
     }
   }, []);
 
   useEffect(() => {
-    if (data) {
-      setPosition(new Chess(data.fen));
+    if (game) {
+      setPosition(new Chess(game.fen));
     }
-  }, [data]);
+  }, [game]);
 
   const safeGameMutate = (modify: any) => {
     setPosition((g: any) => {
@@ -63,7 +63,7 @@ const useChessguessr = (data: any) => {
   };
 
   const formatGuess = () => {
-    let solutionArray = [...data.solution];
+    let solutionArray = [...game.solution];
 
     let formattedGuess = [...currentGuess].map((move) => {
       return { key: move, color: "grey" };
@@ -90,7 +90,7 @@ const useChessguessr = (data: any) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const newHistory = [...history, currentGuess];
-    const solved = arraysEqual(currentGuess, data.solution);
+    const solved = arraysEqual(currentGuess, game.solution);
 
     newGuesses[turn] = formattedGuess;
 
@@ -101,7 +101,7 @@ const useChessguessr = (data: any) => {
     if (solved) {
       setCorrect(true);
     } else {
-      setPosition(new Chess(data.fen));
+      setPosition(new Chess(game.fen));
     }
 
     setGameState((prev) => {
@@ -148,7 +148,7 @@ const useChessguessr = (data: any) => {
     }
 
     if (fenHistory.length < 2) {
-      setPosition(new Chess(data.fen));
+      setPosition(new Chess(game.fen));
     } else {
       setPosition(new Chess(fenHistory[fenHistory.length - 2]));
     }

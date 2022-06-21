@@ -8,7 +8,7 @@ import { useLoaderData } from "@remix-run/react";
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
 
-  const data = [
+  const games = [
     {
       date: "2022-06-18",
       fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
@@ -44,7 +44,7 @@ export const loader: LoaderFunction = async () => {
     },
   ];
 
-  return data.find((game) => {
+  return games.find((game) => {
     return game.date === d;
   });
 };
@@ -62,5 +62,5 @@ const StyledIndex = styled.div`
 export default function Index() {
   const game = useLoaderData();
 
-  return <StyledIndex>{game && <Chessguessr data={game} />}</StyledIndex>;
+  return <StyledIndex>{game && <Chessguessr game={game} />}</StyledIndex>;
 }
