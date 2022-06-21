@@ -133,6 +133,14 @@ export const Tile = styled.div<TileProps>`
     font-size: 1rem;
   }
 
+  @media (max-width: 450px) {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+    font-size: 0.8rem;
+  }
+
   animation: ${({ flipTile, color, current }: any) =>
     flipTile
       ? css`

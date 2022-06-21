@@ -32,6 +32,19 @@ const Players = styled.div`
   display: flex;
 
   justify-content: center;
+
+  @media (max-width: 580px) {
+    p {
+      font-size: 22px;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const Chessguessr = ({ game }: { game: Game }) => {
@@ -63,6 +76,15 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     }
   }, [correct]);
 
+  const getBoardWidth = () => {
+    let width = 560;
+
+    if (size.width < 581) width = 370;
+    if (size.width < 451) width = 270;
+
+    return width;
+  };
+
   return (
     <div>
       <Modal game={game} showModal={showModal} setShowModal={setShowModal} />
@@ -81,7 +103,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
                 position={position.fen()}
                 onPieceDrop={onDrop}
                 areArrowsAllowed={false}
-                boardWidth={size.width < 581 ? 370 : 560}
+                boardWidth={getBoardWidth()}
               />
             )}
           </ChessboardWrapper>
