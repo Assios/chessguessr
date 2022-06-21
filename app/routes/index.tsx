@@ -32,7 +32,7 @@ export const loader: LoaderFunction = async () => {
       id: 2,
     },
     {
-      date: "2022-06-20",
+      date: "2022-06-21",
       fen: "3r2k1/prp3p1/1b2Rp1p/8/7P/1P4P1/P2qQP2/B1R3K1 w - - 1 25",
       solution: ["Re8+", "Kh7", "Qe4+", "g6", "Qe7#"],
       gameUrl: "https://lichess.org/PLHVVZhI/white#48",

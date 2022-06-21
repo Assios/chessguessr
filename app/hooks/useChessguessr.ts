@@ -3,6 +3,7 @@ import { arraysEqual } from "../utils/utils";
 import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
+import { useLocalStorage } from "./useLocalStorage";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
@@ -21,6 +22,22 @@ const useChessguessr = (data: any) => {
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
+
+  const [gameState, setGameState] = useLocalStorage("savestate", {
+    guesses: guesses,
+    turn: turn,
+    history: history,
+    correct: correct,
+  });
+
+  useEffect(() => {
+    if (gameState.turn > 0) {
+      setGuesses(gameState.guesses);
+      setTurn(gameState.turn);
+      setHistory(gameState.history);
+      setCorrect(gameState.correct);
+    }
+  }, []);
 
   useEffect(() => {
     if (data) {
@@ -61,28 +78,35 @@ const useChessguessr = (data: any) => {
   };
 
   const addGuess = (formattedGuess: any) => {
-    setGuesses((prev) => {
-      let newGuesses = [...prev];
+    const newGuesses = [...guesses];
+    const newTurn = turn + 1;
+    const newHistory = [...history, currentGuess];
+    const solved = arraysEqual(currentGuess, data.solution);
 
-      newGuesses[turn] = formattedGuess;
+    newGuesses[turn] = formattedGuess;
 
-      return newGuesses;
-    });
+    setGuesses(newGuesses);
+    setTurn(newTurn);
+    setHistory(newHistory);
 
-    setHistory((prev): any => {
-      return [...prev, currentGuess];
-    });
-
-    setTurn((prev) => prev + 1);
-
-    setCurrentGuess([]);
-    setFenHistory([]);
-
-    if (arraysEqual(currentGuess, data.solution)) {
+    if (solved) {
       setCorrect(true);
     } else {
       setPosition(new Chess(data.fen));
     }
+
+    setGameState((prev) => {
+      return {
+        ...prev,
+        guesses: newGuesses,
+        turn: newTurn,
+        history: newHistory,
+        correct: solved,
+      };
+    });
+
+    setCurrentGuess([]);
+    setFenHistory([]);
   };
 
   const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
