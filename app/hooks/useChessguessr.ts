@@ -23,19 +23,28 @@ const useChessguessr = (data: any) => {
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
 
-  const [gameState, setGameState] = useLocalStorage("savestate", {
+  const [gameState, setGameState] = useLocalStorage("chessguessr-state", {
     guesses: guesses,
     turn: turn,
     history: history,
     correct: correct,
+    date: data.date,
   });
 
   useEffect(() => {
-    if (gameState.turn > 0) {
+    if (gameState.turn > 0 && gameState.date === data.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
       setHistory(gameState.history);
       setCorrect(gameState.correct);
+    } else {
+      setGameState({
+        guesses: guesses,
+        turn: turn,
+        history: history,
+        correct: correct,
+        date: data.date,
+      });
     }
   }, []);
 
