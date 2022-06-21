@@ -24,6 +24,11 @@ export default function App() {
   return (
     <html lang="en">
       <head>
+        <script
+          defer
+          data-domain="chessguessr.com"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
