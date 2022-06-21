@@ -12,6 +12,8 @@ const ChessboardWrapper = styled.div`
   justify-content: center;
 
   margin-bottom: 2rem;
+
+  touch-action: manipulation;
 `;
 
 const Game = styled.div`
@@ -24,6 +26,8 @@ const Buttons = styled.div`
   display: flex;
 
   justify-content: center;
+
+  touch-action: manipulation;
 `;
 
 const BoardWrapper = styled.div``;
