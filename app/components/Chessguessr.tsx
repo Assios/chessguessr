@@ -96,8 +96,10 @@ export const Chessguessr = ({ game }: { game: Game }) => {
       <Modal
         correct={correct}
         game={game}
+        turn={turn}
         showModal={showModal}
         setShowModal={setShowModal}
+        guesses={guesses}
       />
       <Game>
         <BoardWrapper>

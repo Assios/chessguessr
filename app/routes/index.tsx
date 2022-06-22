@@ -10,39 +10,6 @@ export const loader: LoaderFunction = async () => {
 
   const games = [
     {
-      date: "2022-06-18",
-      fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
-      solution: ["d4", "Ne4", "Nc3", "Bf6", "Na4"],
-      gameUrl: "https://lichess.org/Hk3Gr55R#16",
-      white: "Sepp",
-      black: "ManuDavid2910",
-      wRating: 3309,
-      bRating: 2985,
-      id: 1,
-    },
-    {
-      date: "2022-06-19",
-      fen: "r1bq1rk1/pp2bppp/2n2n2/2pp4/8/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 0 9",
-      solution: ["d4", "Ne4", "Nc3", "Bf6", "Na4"],
-      gameUrl: "https://lichess.org/Hk3Gr55R#16",
-      white: "DrNykterstein",
-      black: "ManuDavid2910",
-      wRating: 3309,
-      bRating: 2985,
-      id: 2,
-    },
-    {
-      date: "2022-06-21",
-      fen: "r5k1/pb1p2q1/1p4p1/n1p3Q1/4p1P1/2N1P3/PPP2r2/1K1R3R w - - 0 25",
-      solution: ["Rd6", "Qf7", "Rxg6+", "Kf8", "Rh8+"],
-      gameUrl: "https://lichess.org/510uJ3P3/white#48",
-      white: "DrNykterstein",
-      black: "nihalsarin2004",
-      wRating: 3022,
-      bRating: 2855,
-      id: 3,
-    },
-    {
       date: "2022-06-22",
       fen: "r5k1/pb1p2q1/1p4p1/n1p3Q1/4p1P1/2N1P3/PPP2r2/1K1R3R w - - 0 25",
       solution: ["Rd6", "Qf7", "Rxg6+", "Kf8", "Rh8+"],
@@ -51,7 +18,7 @@ export const loader: LoaderFunction = async () => {
       black: "nihalsarin2004",
       wRating: 3022,
       bRating: 2855,
-      id: 4,
+      id: 1,
     },
   ];
 
