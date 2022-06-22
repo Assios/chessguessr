@@ -27,7 +27,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: any) => {
           if (move) {
             return (
               <Tile color={move.color} flipTile={true} animationIndex={i}>
-                {move.key}
+                {move.move}
               </Tile>
             );
           } else {

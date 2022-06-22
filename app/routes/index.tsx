@@ -20,6 +20,17 @@ export const loader: LoaderFunction = async () => {
       bRating: 2855,
       id: 1,
     },
+    {
+      date: "2022-06-23",
+      fen: "r1b1k2r/ppp1nppp/8/2bpq3/3n4/2P1B3/PP1NBPPP/R2QK2R w KQkq - 0 10",
+      solution: ["Bxd4", "Bxd4", "Nf3", "Bxc3+", "Kf1"],
+      gameUrl: "https://lichess.org/xztMYqOP/white#18",
+      white: "RpImpulse",
+      black: "vicous",
+      wRating: 1744,
+      bRating: 1928,
+      id: 2,
+    },
   ];
 
   return games.find((game) => {

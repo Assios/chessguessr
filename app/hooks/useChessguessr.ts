@@ -25,7 +25,7 @@ const useChessguessr = (game: Game) => {
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
 
-  const [gameState, setGameState] = useLocalStorage("chessguessr-state", {
+  const [gameState, setGameState] = useLocalStorage("cg-state", {
     guesses: guesses,
     turn: turn,
     history: history,
@@ -71,20 +71,20 @@ const useChessguessr = (game: Game) => {
     let solutionArray = [...game.solution];
 
     let formattedGuess = [...currentGuess].map((move) => {
-      return { key: move, color: "grey" };
+      return { move: move, color: "grey" };
     });
 
     formattedGuess.forEach((move, i) => {
-      if (solutionArray[i] === move.key) {
+      if (solutionArray[i] === move.move) {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
       }
     });
 
     formattedGuess.forEach((move, i) => {
-      if (solutionArray.includes(move.key) && move.color !== "green") {
+      if (solutionArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
-        solutionArray[solutionArray.indexOf(move.key)] = null;
+        solutionArray[solutionArray.indexOf(move.move)] = null;
       }
     });
 
