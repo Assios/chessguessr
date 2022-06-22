@@ -92,7 +92,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     let width = 560;
 
     if (size.width < 581) width = 370;
-    if (size.width < 451) width = 270;
+    if (size.width < 451) width = 310;
 
     return width;
   };
