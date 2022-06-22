@@ -24,7 +24,7 @@ export default function TutorialModal({
                   You will be shown a position from a chess game.
                 </p>
                 <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                  Guess the 5 next moves.
+                  Guess the 5 next moves played in the game.
                 </p>
                 <p className="my-4 text-slate-500 text-lg leading-relaxed font-bold">
                   A new position will appear every day.
