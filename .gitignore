@@ -6,7 +6,7 @@ node_modules
 .output
 .vscode
 
-/models/game.server.ts
+/app/models/game.server.ts
 
 /build/
 /public/build
