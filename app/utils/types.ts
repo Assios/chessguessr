@@ -1,5 +1,4 @@
-export interface Game {
-  id: number;
+export type Game = {
   date: string;
   fen: string;
   solution: string[];
@@ -8,4 +7,5 @@ export interface Game {
   black: string;
   wRating: number;
   bRating: number;
-}
+  id: number;
+};
