@@ -16,7 +16,7 @@ export async function getGames(): Promise<Array<Game>> {
     {
       date: "2022-06-23",
       fen: "r2q1r1k/6bp/2n1B1p1/1p6/p2pP3/P2P2Q1/1PnB4/R3K2R w KQ - 0 25",
-      solution: ["Ke2", "Nxa1", "Rxh7+", "Kxh7", "Qh3"],
+      solution: ["Ke2", "Nxa1", "Rxh7+", "Kxh7", "Qh3+"],
       gameUrl: "https://lichess.org/MCI2SKd9/white#48",
       white: "penguingim1",
       black: "Tardisiana",
