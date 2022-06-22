@@ -68,6 +68,8 @@ export default function Modal({
     let text = `Chessguessr #${game.id} ${correct ? turn : "X"}/5\n\n`;
 
     guesses.forEach((guess) => {
+      if (!guess[0]) return;
+
       guess.forEach((move) => {
         if (move && move.color) {
           if (move.color === "green") {
