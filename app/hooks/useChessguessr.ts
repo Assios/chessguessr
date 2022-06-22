@@ -20,6 +20,7 @@ const useChessguessr = (game: Game) => {
   ]);
   const [history, setHistory] = useState([]);
   const [correct, setCorrect] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
@@ -29,6 +30,7 @@ const useChessguessr = (game: Game) => {
     turn: turn,
     history: history,
     correct: correct,
+    failed: failed,
     date: game.date,
   });
 
@@ -38,12 +40,14 @@ const useChessguessr = (game: Game) => {
       setTurn(gameState.turn);
       setHistory(gameState.history);
       setCorrect(gameState.correct);
+      setFailed(gameState.failed);
     } else {
       setGameState({
         guesses: guesses,
         turn: turn,
         history: history,
         correct: correct,
+        failed: failed,
         date: game.date,
       });
     }
@@ -92,12 +96,18 @@ const useChessguessr = (game: Game) => {
     const newTurn = turn + 1;
     const newHistory = [...history, currentGuess];
     const solved = arraysEqual(currentGuess, game.solution);
+    let newFailed = false;
+
+    if (newTurn === 5 && !solved) {
+      newFailed = true;
+    }
 
     newGuesses[turn] = formattedGuess;
 
     setGuesses(newGuesses);
     setTurn(newTurn);
     setHistory(newHistory);
+    setFailed(newFailed);
 
     if (solved) {
       setCorrect(true);
@@ -112,6 +122,7 @@ const useChessguessr = (game: Game) => {
         turn: newTurn,
         history: newHistory,
         correct: solved,
+        failed: newFailed,
       };
     });
 
@@ -195,6 +206,7 @@ const useChessguessr = (game: Game) => {
     currentGuess,
     guesses,
     correct,
+    failed,
     onDrop,
     position,
     takeback,

@@ -61,6 +61,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     submitGuess,
     guesses,
     correct,
+    failed,
     turn,
     insufficientMoves,
   } = useChessguessr(game);
@@ -72,14 +73,14 @@ export const Chessguessr = ({ game }: { game: Game }) => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    if (correct) {
+    if (correct || failed) {
       setTimeout(function () {
         setShowModal(true);
       }, 1600);
     } else {
       setShowModal(false);
     }
-  }, [correct]);
+  }, [correct, failed]);
 
   const getBoardWidth = () => {
     let width = 560;
@@ -92,7 +93,12 @@ export const Chessguessr = ({ game }: { game: Game }) => {
 
   return (
     <div>
-      <Modal game={game} showModal={showModal} setShowModal={setShowModal} />
+      <Modal
+        correct={correct}
+        game={game}
+        showModal={showModal}
+        setShowModal={setShowModal}
+      />
       <Game>
         <BoardWrapper>
           <Players>
@@ -104,7 +110,9 @@ export const Chessguessr = ({ game }: { game: Game }) => {
           <ChessboardWrapper>
             {position && (
               <Chessboard
-                arePiecesDraggable={currentGuess.length < 5 && !correct}
+                arePiecesDraggable={
+                  currentGuess.length < 5 && !correct && !failed
+                }
                 position={position.fen()}
                 onPieceDrop={onDrop}
                 areArrowsAllowed={false}
