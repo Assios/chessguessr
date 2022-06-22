@@ -6,6 +6,8 @@ import styled from "styled-components";
 import Modal from "./Modal";
 import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
+import { useLocalStorage } from "~/hooks/useLocalStorage";
+import TutorialModal from "./TutorialModal";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -68,6 +70,10 @@ export const Chessguessr = ({ game }: { game: Game }) => {
 
   const size = useWindowSize();
 
+  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
+
+  const [showTutorial, setShowTutorial] = useState(!tutorial);
+
   const { white, black, wRating, bRating } = game;
 
   const [showModal, setShowModal] = useState(false);
@@ -93,14 +99,21 @@ export const Chessguessr = ({ game }: { game: Game }) => {
 
   return (
     <div>
-      <Modal
-        correct={correct}
-        game={game}
-        turn={turn}
-        showModal={showModal}
-        setShowModal={setShowModal}
-        guesses={guesses}
-      />
+      <div>
+        <Modal
+          correct={correct}
+          game={game}
+          turn={turn}
+          showModal={showModal}
+          setShowModal={setShowModal}
+          guesses={guesses}
+        />
+        <TutorialModal
+          showTutorial={showTutorial}
+          setShowTutorial={setShowTutorial}
+          setTutorial={setTutorial}
+        />
+      </div>
       <Game>
         <BoardWrapper>
           <Players>
