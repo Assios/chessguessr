@@ -4,6 +4,9 @@ node_modules
 .env
 .vercel
 .output
+.vscode
+
+/models/game.server.ts
 
 /build/
 /public/build
