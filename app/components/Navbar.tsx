@@ -19,7 +19,7 @@ export const Navbar = ({ fixed }) => {
               <i className="fas fa-bars"></i>
             </button>
           </div>
-          <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+          {/*<ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             <li className="nav-item">
               <a
                 href="https://lichess.org/Assios"
@@ -29,7 +29,7 @@ export const Navbar = ({ fixed }) => {
                 <SiLichess /> <span className="ml-2">Assios</span>
               </a>
             </li>
-          </ul>
+        </ul>*/}
         </div>
       </nav>
     </>
