@@ -1,6 +1,11 @@
 import React from "react";
 import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import Countdown, {
+  zeroPad,
+  calcTimeDelta,
+  formatTimeDelta,
+} from "react-countdown";
 
 const Correct = ({ game, gameUrlText }) => {
   return (
@@ -88,6 +93,22 @@ export default function Modal({
     return text;
   };
 
+  let tomorrow = new Date();
+  tomorrow.setDate(new Date().getDate() + 1);
+
+  const nextDate =
+    tomorrow.getFullYear().toString() +
+    "-" +
+    (tomorrow.getMonth() + 1).toString().padStart(2, 0) +
+    "-" +
+    tomorrow.getDate().toString();
+
+  const renderer = ({ hours, minutes, seconds }) => (
+    <span>
+      {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+    </span>
+  );
+
   const shareGameText = getShareGameText(guesses, game, turn, correct);
 
   return (
@@ -119,22 +140,33 @@ export default function Modal({
                   <Failed game={game} gameUrlText={gameUrlText} />
                 )}
                 {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                  <button
-                    type="button"
-                    onClick={() => copy(shareGameText)}
-                    className="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    {!value ? "SHARE SCORE" : "Copied to clipboard"}
-                  </button>
 
-                  <button
-                    className="text-red-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
+                <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">
+                  <div className="font-bold">
+                    NEXT GUESSR IN{" "}
+                    <Countdown
+                      date={nextDate}
+                      zeroPadTime={2}
+                      renderer={renderer}
+                    />{" "}
+                  </div>
+                  <div className="flex">
+                    <button
+                      type="button"
+                      onClick={() => copy(shareGameText)}
+                      className="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      {!value ? "SHARE SCORE" : "Copied to clipboard"}
+                    </button>
+
+                    <button
+                      className="text-red-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
