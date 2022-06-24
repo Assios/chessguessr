@@ -37,6 +37,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-06-25",
+      fen: "2k3rr/1b3p1p/1P2p1p1/pq1pP3/2pQ4/2P5/2B1NPPP/R5K1 w - - 3 25",
+      solution: ["Ba4", "Qb2", "Qc5+", "Kb8", "Re1"],
+      gameUrl: "https://lichess.org/ZP0qydyh/white#48",
+      white: "GM RebeccaHarris",
+      black: "NM TwelveTeen",
+      wRating: 2721,
+      bRating: 2520,
+      id: 4,
+    },
+    {
+      date: "2022-06-26",
       fen: "r1b1k2r/ppp1nppp/8/2bpq3/3n4/2P1B3/PP1NBPPP/R2QK2R w KQkq - 0 10",
       solution: ["Bxd4", "Bxd4", "Nf3", "Bxc3+", "Kf1"],
       gameUrl: "https://lichess.org/xztMYqOP/white#18",
@@ -44,7 +55,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "vicous",
       wRating: 1744,
       bRating: 1928,
-      id: 4,
+      id: 5,
     },
   ];
 }
