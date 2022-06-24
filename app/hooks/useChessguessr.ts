@@ -18,7 +18,7 @@ const useChessguessr = (game: Game) => {
     [null, null, null, null, null],
     [null, null, null, null, null],
   ]);
-  const [history, setHistory] = useState([]);
+
   const [correct, setCorrect] = useState(false);
   const [failed, setFailed] = useState(false);
   const [position, setPosition] = useState(null);
@@ -28,7 +28,6 @@ const useChessguessr = (game: Game) => {
   const [gameState, setGameState] = useLocalStorage("cg-state", {
     guesses: guesses,
     turn: turn,
-    history: history,
     correct: correct,
     failed: failed,
     date: game.date,
@@ -38,14 +37,12 @@ const useChessguessr = (game: Game) => {
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
-      setHistory(gameState.history);
       setCorrect(gameState.correct);
       setFailed(gameState.failed);
     } else {
       setGameState({
         guesses: guesses,
         turn: turn,
-        history: history,
         correct: correct,
         failed: failed,
         date: game.date,
@@ -94,7 +91,6 @@ const useChessguessr = (game: Game) => {
   const addGuess = (formattedGuess: any) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
-    const newHistory = [...history, currentGuess];
     const solved = arraysEqual(currentGuess, game.solution);
     let newFailed = false;
 
@@ -106,7 +102,6 @@ const useChessguessr = (game: Game) => {
 
     setGuesses(newGuesses);
     setTurn(newTurn);
-    setHistory(newHistory);
     setFailed(newFailed);
 
     if (solved) {
@@ -120,7 +115,6 @@ const useChessguessr = (game: Game) => {
         ...prev,
         guesses: newGuesses,
         turn: newTurn,
-        history: newHistory,
         correct: solved,
         failed: newFailed,
       };
@@ -173,11 +167,6 @@ const useChessguessr = (game: Game) => {
   const submitGuess = () => {
     if (turn > 5) {
       console.log("Too many guesses");
-      return;
-    }
-
-    if (history.includes(currentGuess)) {
-      console.log("Already guessed");
       return;
     }
 
