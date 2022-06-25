@@ -34,6 +34,20 @@ const useChessguessr = (game: Game) => {
     date: game.date,
   });
 
+  const [playerStats, setPlayerStats] = useLocalStorage("cg-stats", {
+    gamesPlayed: 0,
+    guesses: {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      failed: 0,
+    },
+  });
+
+  console.log("p", playerStats);
+
   useEffect(() => {
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
@@ -100,6 +114,17 @@ const useChessguessr = (game: Game) => {
 
     if (newTurn === 5 && !solved) {
       newFailed = true;
+
+      setPlayerStats((prev) => {
+        return {
+          ...prev,
+          gamesPlayed: prev.gamesPlayed + 1,
+          guesses: {
+            ...prev.guesses,
+            failed: prev.guesses.failed + 1,
+          },
+        };
+      });
     }
 
     newGuesses[turn] = formattedGuess;
@@ -111,6 +136,17 @@ const useChessguessr = (game: Game) => {
 
     if (solved) {
       setCorrect(true);
+
+      setPlayerStats((prev) => {
+        return {
+          ...prev,
+          gamesPlayed: prev.gamesPlayed + 1,
+          guesses: {
+            ...prev.guesses,
+            [turn + 1]: prev.guesses[turn] + 1,
+          },
+        };
+      });
     } else {
       setPosition(new Chess(game.fen));
     }
