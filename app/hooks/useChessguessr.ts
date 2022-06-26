@@ -33,6 +33,22 @@ const useChessguessr = (game: Game) => {
     date: game.date,
   });
 
+  const [playerStats, setPlayerStats] = useLocalStorage("cg-stats", {
+    gamesPlayed: 0,
+    currentStreak: 1,
+    lastPlayed: null,
+    guesses: {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      failed: 0,
+    },
+  });
+
+  console.log("p", playerStats);
+
   useEffect(() => {
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
@@ -93,9 +109,23 @@ const useChessguessr = (game: Game) => {
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
     let newFailed = false;
+    let streak = false;
 
     if (newTurn === 5 && !solved) {
       newFailed = true;
+
+      setPlayerStats((prev) => {
+        return {
+          ...prev,
+          gamesPlayed: prev.gamesPlayed + 1,
+          lastPlayed: game.date,
+          currentStreak: 1,
+          guesses: {
+            ...prev.guesses,
+            failed: prev.guesses.failed + 1,
+          },
+        };
+      });
     }
 
     newGuesses[turn] = formattedGuess;
@@ -106,6 +136,26 @@ const useChessguessr = (game: Game) => {
 
     if (solved) {
       setCorrect(true);
+
+      if (
+        playerStats.lastPlayed &&
+        Date.parse(game.date) - Date.parse(playerStats.lastPlayed) === 86400000
+      ) {
+        streak = true;
+      }
+
+      setPlayerStats((prev) => {
+        return {
+          ...prev,
+          gamesPlayed: prev.gamesPlayed + 1,
+          lastPlayed: game.date,
+          currentStreak: streak ? prev.currentStreak + 1 : 1,
+          guesses: {
+            ...prev.guesses,
+            [turn + 1]: prev.guesses[turn + 1] + 1,
+          },
+        };
+      });
     } else {
       setPosition(new Chess(game.fen));
     }
@@ -201,6 +251,7 @@ const useChessguessr = (game: Game) => {
     takeback,
     submitGuess,
     insufficientMoves,
+    playerStats,
   };
 };
 
