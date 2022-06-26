@@ -47,8 +47,6 @@ const useChessguessr = (game: Game) => {
     },
   });
 
-  console.log("p", playerStats);
-
   useEffect(() => {
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
