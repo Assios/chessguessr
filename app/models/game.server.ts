@@ -61,7 +61,7 @@ export async function getGames(): Promise<Array<Game>> {
       date: "2022-06-27",
       fen: "3rr3/pp2pnkp/2p2pp1/q2p1b2/2PP1N2/1P4P1/PQ2PPBP/2RR2K1 w - - 4 20",
       solution: ["cxd5", "cxd5", "Rc5", "Qb6", "Nxd5"],
-      gameUrl: "https://lichess.org/xztMYqOP/white#18",
+      gameUrl: "https://lichess.org/DouGIVl6#38",
       white: "GM SVODMEVKO",
       black: "GM neslraCsungaM77",
       wRating: 2978,
