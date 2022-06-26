@@ -91,6 +91,8 @@ export default function Modal({
       text += "\n";
     });
 
+    text += "\nhttps://chessguessr.com";
+
     return text;
   };
 
