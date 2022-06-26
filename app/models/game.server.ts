@@ -59,6 +59,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-06-27",
+      fen: "3rr3/pp2pnkp/2p2pp1/q2p1b2/2PP1N2/1P4P1/PQ2PPBP/2RR2K1 w - - 4 20",
+      solution: ["cxd5", "cxd5", "Rc5", "Qb6", "Nxd5"],
+      gameUrl: "https://lichess.org/xztMYqOP/white#18",
+      white: "GM SVODMEVKO",
+      black: "GM neslraCsungaM77",
+      wRating: 2978,
+      bRating: 3029,
+      id: 6,
+    },
+    {
+      date: "2022-06-28",
       fen: "r1b1k2r/ppp1nppp/8/2bpq3/3n4/2P1B3/PP1NBPPP/R2QK2R w KQkq - 0 10",
       solution: ["Bxd4", "Bxd4", "Nf3", "Bxc3+", "Kf1"],
       gameUrl: "https://lichess.org/xztMYqOP/white#18",
@@ -66,7 +77,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "vicous",
       wRating: 1744,
       bRating: 1928,
-      id: 6,
+      id: 7,
     },
   ];
 }
