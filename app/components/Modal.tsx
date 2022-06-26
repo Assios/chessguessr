@@ -53,6 +53,7 @@ export default function Modal({
   game,
   guesses,
   turn,
+  playerStats,
 }) {
   const [value, copy] = useCopyToClipboard();
 
@@ -111,6 +112,19 @@ export default function Modal({
 
   const shareGameText = getShareGameText(guesses, game, turn, correct);
 
+  console.log("ps", playerStats);
+
+  const numWins =
+    playerStats.guesses[1] +
+    playerStats.guesses[2] +
+    playerStats.guesses[3] +
+    playerStats.guesses[4] +
+    playerStats.guesses[5];
+
+  const winPercentage = Math.round(
+    (numWins / (numWins + playerStats.guesses["failed"])) * 100
+  );
+
   return (
     <>
       {showModal ? (
@@ -121,9 +135,7 @@ export default function Modal({
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
-                    {correct ? "Congrats!" : "Oops!"}
-                  </h3>
+                  <h3 className="text-3xl font-semibold">Statistics</h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -132,6 +144,46 @@ export default function Modal({
                       ×
                     </span>
                   </button>
+                </div>
+
+                <div className="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
+                  <div
+                    id="jh-stats-positive"
+                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
+                  >
+                    <div>
+                      <p className="text-3xl font-semibold text-center text-gray-800">
+                        {playerStats.gamesPlayed}
+                      </p>
+                      <p className="text-lg text-center text-gray-500">
+                        Games played
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="jh-stats-positive"
+                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
+                  >
+                    <div>
+                      <p className="text-3xl font-semibold text-center text-gray-800">
+                        {winPercentage}
+                      </p>
+                      <p className="text-lg text-center text-gray-500">Win %</p>
+                    </div>
+                  </div>
+                  <div
+                    id="jh-stats-positive"
+                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
+                  >
+                    <div>
+                      <p className="text-3xl font-semibold text-center text-gray-800">
+                        {playerStats.currentStreak}
+                      </p>
+                      <p className="text-lg text-center text-gray-500">
+                        Current streak
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 {/*body*/}
                 {correct ? (

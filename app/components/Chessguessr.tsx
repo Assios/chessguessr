@@ -66,6 +66,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     failed,
     turn,
     insufficientMoves,
+    playerStats,
   } = useChessguessr(game);
 
   const size = useWindowSize();
@@ -107,6 +108,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
           showModal={showModal}
           setShowModal={setShowModal}
           guesses={guesses}
+          playerStats={playerStats}
         />
         <TutorialModal
           showTutorial={showTutorial}
