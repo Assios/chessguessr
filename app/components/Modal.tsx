@@ -112,8 +112,6 @@ export default function Modal({
 
   const shareGameText = getShareGameText(guesses, game, turn, correct);
 
-  console.log("ps", playerStats);
-
   const numWins =
     playerStats.guesses[1] +
     playerStats.guesses[2] +
