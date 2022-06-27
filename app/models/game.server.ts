@@ -70,6 +70,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-06-28",
+      fen: "2r1k3/p3qp1Q/1n1rpbp1/3p4/2nP1NP1/1BP2R2/P4PK1/2B1R3 w - - 19 31",
+      solution: ["Sxg6", "fxg6", "Dxg6", "Qf7", "Rxf6"],
+      gameUrl: "https://lichess.org/E19QuQRe#60",
+      white: "IM petriashvili2",
+      black: "splendidkid",
+      wRating: 2704,
+      bRating: 2796,
+      id: 7,
+    },
+    {
+      date: "2022-06-29",
       fen: "r1b1k2r/ppp1nppp/8/2bpq3/3n4/2P1B3/PP1NBPPP/R2QK2R w KQkq - 0 10",
       solution: ["Bxd4", "Bxd4", "Nf3", "Bxc3+", "Kf1"],
       gameUrl: "https://lichess.org/xztMYqOP/white#18",
@@ -77,7 +88,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "vicous",
       wRating: 1744,
       bRating: 1928,
-      id: 7,
+      id: 8,
     },
   ];
 }
