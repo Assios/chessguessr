@@ -70,7 +70,7 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-06-28",
-      fen: "2r1k3/p3qp1Q/1n1rpbp1/3p4/2nP1NP1/1BP2R2/P4PK1/2B1R3 w - - 19 31",
+      fen: "r2q1r2/pp4k1/4b1p1/3Nnp1p/1PP3n1/P3PN2/3QBPPP/R4RK1 w - - 2 18",
       solution: ["Nxe5", "Nxe5", "Qb2", "Bxd5", "Qxe5+"],
       gameUrl: "https://lichess.org/7WscjKGA#34",
       white: "WFM Fredericia",
