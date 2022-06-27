@@ -8,6 +8,10 @@ import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import TutorialModal from "./TutorialModal";
+import { collection, doc, setDoc, addDoc, updateDoc } from "firebase/firestore";
+import firestore from "firebase/firestore";
+
+import db from "../firebase";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -83,6 +87,15 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     return width;
   };
 
+  const testNew = async () => {
+    const statsRef = collection(db, "stats");
+
+    await setDoc(doc(statsRef, "2"), {
+      // @ts-ignore
+      solved: firestore.FieldValue.increment(1),
+    });
+  };
+
   return (
     <div>
       <div>
@@ -108,6 +121,13 @@ export const Chessguessr = ({ game }: { game: Game }) => {
               {white} ({wRating}) – {black} ({bRating})
             </p>
           </Players>
+
+          <button
+            className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
+            onClick={testNew}
+          >
+            Add
+          </button>
 
           <ChessboardWrapper>
             {position && (
