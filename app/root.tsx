@@ -27,7 +27,7 @@ export default function App() {
         <script
           defer
           data-domain="chessguessr.com"
-          src="https://plausible.io/js/plausible.js"
+          src="https://chessguessr-proxy.vercel.app/js/script.js"
         ></script>
         <Meta />
         <Links />
