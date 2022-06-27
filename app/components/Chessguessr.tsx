@@ -38,20 +38,6 @@ const Players = styled.div`
   display: flex;
 
   justify-content: center;
-  font-weight: bold;
-
-  @media (max-width: 580px) {
-    p {
-      font-size: 22px;
-      margin-bottom: 0.2rem;
-    }
-  }
-
-  @media (max-width: 450px) {
-    p {
-      font-size: 16px;
-    }
-  }
 `;
 
 export const Chessguessr = ({ game }: { game: Game }) => {
@@ -119,7 +105,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="text-2xl mb-4">
+            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold">
               {white} ({wRating}) – {black} ({bRating})
             </p>
           </Players>
