@@ -117,7 +117,7 @@ const useChessguessr = (game: Game) => {
           ...prev,
           gamesPlayed: prev.gamesPlayed + 1,
           lastPlayed: game.date,
-          currentStreak: 1,
+          currentStreak: 0,
           guesses: {
             ...prev.guesses,
             failed: prev.guesses.failed + 1,
