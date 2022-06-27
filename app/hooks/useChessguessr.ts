@@ -6,6 +6,12 @@ import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import { Game } from "~/utils/types";
 
+export enum GameStatus {
+  IN_PROGRESS = "IN_PROGRESS",
+  SOLVED = "SOLVED",
+  FAILED = "FAILED",
+}
+
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
 const useChessguessr = (game: Game) => {
@@ -19,8 +25,10 @@ const useChessguessr = (game: Game) => {
     [null, null, null, null, null],
   ]);
 
-  const [correct, setCorrect] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [gameStatus, setGameStatus] = useState<GameStatus>(
+    GameStatus.IN_PROGRESS
+  );
+
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
@@ -28,8 +36,7 @@ const useChessguessr = (game: Game) => {
   const [gameState, setGameState] = useLocalStorage("cg-state", {
     guesses: guesses,
     turn: turn,
-    correct: correct,
-    failed: failed,
+    gameStatus: gameStatus,
     date: game.date,
   });
 
@@ -51,14 +58,12 @@ const useChessguessr = (game: Game) => {
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
-      setCorrect(gameState.correct);
-      setFailed(gameState.failed);
+      setGameStatus(gameState.gameStatus);
     } else {
       setGameState({
         guesses: guesses,
         turn: turn,
-        correct: correct,
-        failed: failed,
+        gameStatus: gameStatus,
         date: game.date,
       });
     }
@@ -106,11 +111,11 @@ const useChessguessr = (game: Game) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
-    let newFailed = false;
+    let currentGameStatus = GameStatus.IN_PROGRESS;
     let streak = false;
 
     if (newTurn === 5 && !solved) {
-      newFailed = true;
+      currentGameStatus = GameStatus.FAILED;
 
       setPlayerStats((prev) => {
         return {
@@ -130,10 +135,11 @@ const useChessguessr = (game: Game) => {
 
     setGuesses(newGuesses);
     setTurn(newTurn);
-    setFailed(newFailed);
+    setGameStatus(currentGameStatus);
 
     if (solved) {
-      setCorrect(true);
+      setGameStatus(GameStatus.SOLVED);
+      currentGameStatus = GameStatus.SOLVED;
 
       if (
         playerStats.lastPlayed &&
@@ -163,8 +169,7 @@ const useChessguessr = (game: Game) => {
         ...prev,
         guesses: newGuesses,
         turn: newTurn,
-        correct: solved,
-        failed: newFailed,
+        gameStatus: currentGameStatus,
       };
     });
 
@@ -242,14 +247,13 @@ const useChessguessr = (game: Game) => {
     turn,
     currentGuess,
     guesses,
-    correct,
-    failed,
     onDrop,
     position,
     takeback,
     submitGuess,
     insufficientMoves,
     playerStats,
+    gameStatus,
   };
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import useChessguessr from "../hooks/useChessguessr";
+import useChessguessr, { GameStatus } from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
 import styled from "styled-components";
@@ -48,11 +48,10 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     takeback,
     submitGuess,
     guesses,
-    correct,
-    failed,
     turn,
     insufficientMoves,
     playerStats,
+    gameStatus,
   } = useChessguessr(game);
 
   const size = useWindowSize();
@@ -66,14 +65,14 @@ export const Chessguessr = ({ game }: { game: Game }) => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    if (correct || failed) {
+    if (gameStatus !== GameStatus.IN_PROGRESS) {
       setTimeout(function () {
         setShowModal(true);
       }, 1600);
     } else {
       setShowModal(false);
     }
-  }, [correct, failed]);
+  }, [gameStatus]);
 
   const getBoardWidth = () => {
     let width = 560;
@@ -88,7 +87,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     <div>
       <div>
         <Modal
-          correct={correct}
+          correct={gameStatus === GameStatus.SOLVED}
           game={game}
           turn={turn}
           showModal={showModal}
@@ -114,7 +113,8 @@ export const Chessguessr = ({ game }: { game: Game }) => {
             {position && (
               <Chessboard
                 arePiecesDraggable={
-                  currentGuess.length < 5 && !correct && !failed
+                  currentGuess.length < 5 &&
+                  gameStatus === GameStatus.IN_PROGRESS
                 }
                 position={position.fen()}
                 onPieceDrop={onDrop}
