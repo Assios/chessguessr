@@ -5,15 +5,22 @@ import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudfl
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { db } from "../firebase/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
 
   const games = await getGames();
 
-  return games.find((game) => {
+  const dailyGame = games.find((game) => {
     return game.date === d;
   });
+
+  const docRef = doc(db, "stats", dailyGame.id.toString());
+  const docSnap = await getDoc(docRef);
+
+  return json({ game: dailyGame, stats: docSnap.data() });
 };
 
 const StyledIndex = styled.div`
@@ -27,7 +34,11 @@ const StyledIndex = styled.div`
 `;
 
 export default function Index() {
-  const game = useLoaderData();
+  const { game, stats } = useLoaderData();
 
-  return <StyledIndex>{game && <Chessguessr game={game} />}</StyledIndex>;
+  return (
+    <StyledIndex>
+      {game && <Chessguessr game={game} stats={stats} />}
+    </StyledIndex>
+  );
 }

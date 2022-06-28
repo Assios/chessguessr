@@ -5,13 +5,18 @@ import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudfl
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { db } from "../../firebase/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const games = await getGames();
 
   const index = parseInt(params.slug) - 1;
 
-  return games[index];
+  const docRef = doc(db, "stats", "7");
+  const docSnap = await getDoc(docRef);
+
+  return json({ game: games[index], stats: docSnap.data() });
 };
 
 const StyledIndex = styled.div`
@@ -25,7 +30,11 @@ const StyledIndex = styled.div`
 `;
 
 export default function Index() {
-  const game = useLoaderData();
+  const data = useLoaderData();
 
-  return <StyledIndex>{game && <Chessguessr game={game} />}</StyledIndex>;
+  console.log("DATA", data);
+
+  return (
+    <StyledIndex>{data.game && <Chessguessr game={data.game} />}</StyledIndex>
+  );
 }

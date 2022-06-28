@@ -41,7 +41,7 @@ const Players = styled.div`
   justify-content: center;
 `;
 
-export const Chessguessr = ({ game }: { game: Game }) => {
+export const Chessguessr = ({ game, stats }: { game: Game; stats?: any }) => {
   const {
     currentGuess,
     onDrop,
@@ -95,6 +95,7 @@ export const Chessguessr = ({ game }: { game: Game }) => {
           setShowModal={setShowModal}
           guesses={guesses}
           playerStats={playerStats}
+          puzzleStats={stats}
         />
         <TutorialModal
           showTutorial={showTutorial}

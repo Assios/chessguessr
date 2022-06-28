@@ -7,7 +7,15 @@ import Countdown, {
   formatTimeDelta,
 } from "react-countdown";
 
-const Correct = ({ game, gameUrlText }) => {
+const getSolvedPercentage = (puzzleStats) => {
+  const { solved, failed } = puzzleStats;
+
+  if (!(solved && failed)) return null;
+
+  return Math.round((solved / (solved + failed)) * 100);
+};
+
+const Correct = ({ game, gameUrlText, solvedPercentage }) => {
   return (
     <div className="relative p-6 flex-auto">
       <p className="my-4 text-slate-500 text-lg leading-relaxed">
@@ -22,11 +30,25 @@ const Correct = ({ game, gameUrlText }) => {
         </a>
         .
       </p>
+      {solvedPercentage && (
+        <>
+          <h1 className="my-4  text-lg leading-relaxed">
+            {solvedPercentage}% got this one right.
+          </h1>
+          <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
+            <div className="w-full h-full bg-gray-200 absolute"></div>
+            <div
+              className="h-full bg-green-500 absolute"
+              style={{ width: `${solvedPercentage}%` }}
+            ></div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
 
-const Failed = ({ game, gameUrlText }) => {
+const Failed = ({ game, gameUrlText, solvedPercentage }) => {
   return (
     <div className="relative p-6 flex-auto">
       <p className="my-4 text-slate-500 text-lg leading-relaxed">
@@ -42,6 +64,18 @@ const Failed = ({ game, gameUrlText }) => {
         </a>
         .
       </p>
+      {solvedPercentage && (
+        <>
+          <h1 className="my-4  text-lg leading-relaxed">Progress Bar</h1>
+          <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
+            <div className="w-full h-full bg-gray-200 absolute"></div>
+            <div
+              className="h-full bg-green-500 absolute"
+              style={{ width: "10%" }}
+            ></div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
@@ -54,8 +88,11 @@ export default function Modal({
   guesses,
   turn,
   playerStats,
+  puzzleStats,
 }) {
   const [value, copy] = useCopyToClipboard();
+
+  const solvedPercentage = getSolvedPercentage(puzzleStats);
 
   const gameUrlText = (game) => {
     if (game.gameUrl.includes("lichess.org")) {
@@ -187,9 +224,17 @@ export default function Modal({
                 </div>
                 {/*body*/}
                 {correct ? (
-                  <Correct game={game} gameUrlText={gameUrlText} />
+                  <Correct
+                    game={game}
+                    gameUrlText={gameUrlText}
+                    solvedPercentage={solvedPercentage}
+                  />
                 ) : (
-                  <Failed game={game} gameUrlText={gameUrlText} />
+                  <Failed
+                    game={game}
+                    gameUrlText={gameUrlText}
+                    solvedPercentage={solvedPercentage}
+                  />
                 )}
                 {/*footer*/}
 
