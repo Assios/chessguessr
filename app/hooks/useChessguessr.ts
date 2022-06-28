@@ -164,7 +164,7 @@ const useChessguessr = (game: Game) => {
         };
       });
 
-      incrementSolved(game.id);
+      incrementSolved(game.id, turn + 1);
     } else {
       setPosition(new Chess(game.fen));
     }

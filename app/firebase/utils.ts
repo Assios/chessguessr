@@ -12,12 +12,13 @@ import {
   increment,
 } from "firebase/firestore";
 
-export const incrementSolved = (id: number) => {
+export const incrementSolved = (id: number, turns: number) => {
   const statsDoc = doc(db, "stats", id.toString());
   return setDoc(
     statsDoc,
     {
       solved: increment(1),
+      turns: increment(turns),
     },
     { merge: true }
   );
