@@ -3,7 +3,7 @@ import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 
 const getSolvedPercentage = (puzzleStats) => {
-  if (!puzzleStats?.solved || !puzzleStats?.faild) {
+  if (!puzzleStats?.solved || !puzzleStats?.failed) {
     return null;
   }
 
