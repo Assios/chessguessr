@@ -5,6 +5,7 @@ import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import { Game } from "~/utils/types";
+import { incrementFailed, incrementSolved } from "../firebase/utils";
 
 export enum GameStatus {
   IN_PROGRESS = "IN_PROGRESS",
@@ -129,6 +130,8 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
+
+      incrementFailed(game.id);
     }
 
     newGuesses[turn] = formattedGuess;
@@ -160,6 +163,8 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
+
+      incrementSolved(game.id);
     } else {
       setPosition(new Chess(game.fen));
     }

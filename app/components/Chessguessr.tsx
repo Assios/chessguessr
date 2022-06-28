@@ -8,20 +8,7 @@ import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import TutorialModal from "./TutorialModal";
-import { db } from "../firebase";
-
-import {
-  collection,
-  getDocs,
-  getDoc,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-  increment,
-} from "firebase/firestore";
-
-import firebase from "firebase/firestore";
+import { incrementSolved } from "~/firebase/utils";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -97,13 +84,6 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     return width;
   };
 
-  const test = async () => {
-    const statsDoc = doc(db, "stats", "1");
-    return updateDoc(statsDoc, {
-      solved: increment(1),
-    });
-  };
-
   return (
     <div>
       <div>
@@ -129,13 +109,6 @@ export const Chessguessr = ({ game }: { game: Game }) => {
               {white} ({wRating}) – {black} ({bRating})
             </p>
           </Players>
-
-          <button
-            className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
-            onClick={test}
-          >
-            Test
-          </button>
 
           <ChessboardWrapper>
             {position && (
