@@ -13,10 +13,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
   const index = parseInt(params.slug) - 1;
 
-  const docRef = doc(db, "stats", "7");
-  const docSnap = await getDoc(docRef);
-
-  return json({ game: games[index], stats: docSnap.data() });
+  return json({ game: games[index] });
 };
 
 const StyledIndex = styled.div`

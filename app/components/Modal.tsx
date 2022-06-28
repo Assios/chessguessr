@@ -8,11 +8,13 @@ import Countdown, {
 } from "react-countdown";
 
 const getSolvedPercentage = (puzzleStats) => {
-  const { solved, failed } = puzzleStats;
+  if (!puzzleStats?.solved || !puzzleStats?.faild) {
+    return null;
+  }
 
-  if (!(solved && failed)) return null;
-
-  return Math.round((solved / (solved + failed)) * 100);
+  return Math.round(
+    (puzzleStats.solved / (puzzleStats.solved + puzzleStats.failed)) * 100
+  );
 };
 
 const Correct = ({ game, gameUrlText, solvedPercentage }) => {
