@@ -18,7 +18,10 @@ import {
   updateDoc,
   deleteDoc,
   doc,
+  increment,
 } from "firebase/firestore";
+
+import firebase from "firebase/firestore";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -96,7 +99,9 @@ export const Chessguessr = ({ game }: { game: Game }) => {
 
   const test = async () => {
     const statsDoc = doc(db, "stats", "1");
-    return updateDoc(statsDoc, { spp: 2 });
+    return updateDoc(statsDoc, {
+      solved: increment(1),
+    });
   };
 
   return (
