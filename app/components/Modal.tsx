@@ -1,11 +1,6 @@
 import React from "react";
 import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
-import { AiOutlineShareAlt } from "react-icons/ai";
-import Countdown, {
-  zeroPad,
-  calcTimeDelta,
-  formatTimeDelta,
-} from "react-countdown";
+import Countdown, { zeroPad } from "react-countdown";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.faild) {
