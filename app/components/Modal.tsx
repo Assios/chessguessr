@@ -3,7 +3,7 @@ import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 
 const getSolvedPercentage = (puzzleStats) => {
-  if (!puzzleStats?.solved || !puzzleStats?.faild) {
+  if (!puzzleStats?.solved || !puzzleStats?.failed) {
     return null;
   }
 
@@ -63,12 +63,14 @@ const Failed = ({ game, gameUrlText, solvedPercentage }) => {
       </p>
       {solvedPercentage && (
         <>
-          <h1 className="my-4  text-lg leading-relaxed">Progress Bar</h1>
+          <h1 className="my-4  text-lg leading-relaxed">
+            {solvedPercentage}% got this one right.
+          </h1>
           <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
             <div className="w-full h-full bg-gray-200 absolute"></div>
             <div
               className="h-full bg-green-500 absolute"
-              style={{ width: "10%" }}
+              style={{ width: `${solvedPercentage}%` }}
             ></div>
           </div>
         </>
