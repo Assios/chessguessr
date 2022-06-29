@@ -92,6 +92,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-06-30",
+      fen: "3r4/2p2p2/1p2p1pp/p3P3/P2r1P2/1P2BK2/3P3k/2R5 w - - 0 40",
+      solution: ["Bg1+", "Kh3", "Bxd4", "Kh2", "Bg1+"],
+      gameUrl: "https://lichess.org/EcoMqfu6/white#78",
+      white: "Fast_Change",
+      black: "GM AnishGiri",
+      wRating: 2755,
+      bRating: 2997,
+      id: 9,
+    },
+    {
+      date: "2022-06-31",
       fen: "r1b1k2r/ppp1nppp/8/2bpq3/3n4/2P1B3/PP1NBPPP/R2QK2R w KQkq - 0 10",
       solution: ["Bxd4", "Bxd4", "Nf3", "Bxc3+", "Kf1"],
       gameUrl: "https://lichess.org/xztMYqOP/white#18",
@@ -99,7 +110,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "vicous",
       wRating: 1744,
       bRating: 1928,
-      id: 9,
+      id: 10,
     },
   ];
 }
