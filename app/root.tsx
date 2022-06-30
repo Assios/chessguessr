@@ -33,7 +33,7 @@ export default function App() {
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
-      <body style={{ backgroundColor: "#dae1ed" }}>
+      <body>
         <Toaster />
         <Navbar fixed={false} />
         <Outlet />

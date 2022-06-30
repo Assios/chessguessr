@@ -3,7 +3,7 @@ import useChessguessr, { GameStatus } from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
 import styled from "styled-components";
-import Modal from "./Modal";
+import Modal from "./Modal/Modal";
 import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import { useLocalStorage } from "~/hooks/useLocalStorage";

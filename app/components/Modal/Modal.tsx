@@ -1,6 +1,7 @@
 import React from "react";
-import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
+import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
+import StatsCards from "./StatsCards";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -150,17 +151,6 @@ export default function Modal({
 
   const shareGameText = getShareGameText(guesses, game, turn, correct);
 
-  const numWins =
-    playerStats.guesses[1] +
-    playerStats.guesses[2] +
-    playerStats.guesses[3] +
-    playerStats.guesses[4] +
-    playerStats.guesses[5];
-
-  const winPercentage = Math.round(
-    (numWins / (numWins + playerStats.guesses["failed"])) * 100
-  );
-
   return (
     <>
       {showModal ? (
@@ -182,45 +172,8 @@ export default function Modal({
                   </button>
                 </div>
 
-                <div className="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
-                  <div
-                    id="jh-stats-positive"
-                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
-                  >
-                    <div>
-                      <p className="text-3xl font-semibold text-center text-gray-800">
-                        {playerStats.gamesPlayed}
-                      </p>
-                      <p className="text-lg text-center text-gray-500">
-                        Games played
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    id="jh-stats-positive"
-                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
-                  >
-                    <div>
-                      <p className="text-3xl font-semibold text-center text-gray-800">
-                        {winPercentage}
-                      </p>
-                      <p className="text-lg text-center text-gray-500">Win %</p>
-                    </div>
-                  </div>
-                  <div
-                    id="jh-stats-positive"
-                    className="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded"
-                  >
-                    <div>
-                      <p className="text-3xl font-semibold text-center text-gray-800">
-                        {playerStats.currentStreak}
-                      </p>
-                      <p className="text-lg text-center text-gray-500">
-                        Current streak
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <StatsCards playerStats={playerStats} />
+
                 {/*body*/}
                 {correct ? (
                   <Correct
