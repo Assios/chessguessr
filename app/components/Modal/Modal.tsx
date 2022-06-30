@@ -162,6 +162,18 @@ export default function Modal({
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">Statistics</h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-2 h-10 w-10"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -188,6 +200,19 @@ export default function Modal({
                     solvedPercentage={solvedPercentage}
                   />
                 )}
+                <div className="relative pl-6 flex-auto">
+                  <p className="mt-4 mb-4 text-md">
+                    Feedback?{" "}
+                    <a
+                      target="_blank"
+                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                      href="https://lichess.org/Assios"
+                    >
+                      DM Assios on Lichess.
+                    </a>
+                  </p>
+                </div>
+
                 {/*footer*/}
 
                 <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">

@@ -17,7 +17,7 @@ const StatsCards = ({ playerStats }) => {
 
   return (
     <div className="stats shadow flex flex-col md:flex-row">
-      <div className="stat">
+      <div className="stat m-2">
         <div className="stat-figure text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
