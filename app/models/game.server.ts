@@ -95,7 +95,7 @@ export async function getGames(): Promise<Array<Game>> {
       fen: "3r4/2p2p2/1p2p1pp/p3P3/P2r1P2/1P2BK2/3P3k/2R5 w - - 0 40",
       solution: ["Bg1+", "Kh3", "Bxd4", "Kh2", "Bg1+"],
       gameUrl: "https://lichess.org/EcoMqfu6/white#78",
-      white: "Fast_Change",
+      white: "Fast_Chance",
       black: "GM AnishGiri",
       wRating: 2755,
       bRating: 2997,
