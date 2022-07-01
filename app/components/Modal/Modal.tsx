@@ -194,7 +194,7 @@ export default function Modal({
 
                 {playerStats.gamesPlayed ? (
                   <>
-                    {correct ? (
+                    {gameStatus === GameStatus.SOLVED ? (
                       <Correct
                         game={game}
                         gameUrlText={gameUrlText}
