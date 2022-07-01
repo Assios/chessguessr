@@ -223,8 +223,9 @@ const useChessguessr = (game: Game) => {
   };
 
   const submitGuess = () => {
-    if (turn > 5) {
-      console.log("Too many guesses");
+    if (turn > 5 || gameStatus !== GameStatus.IN_PROGRESS) {
+      toast.error("Game over.", { duration: 2000 });
+
       return;
     }
 

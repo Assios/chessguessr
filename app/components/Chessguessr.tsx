@@ -46,11 +46,17 @@ export const Chessguessr = ({
   stats,
   showModal,
   setShowModal,
+  showTutorial,
+  setShowTutorial,
+  setTutorial,
 }: {
   game: Game;
   stats?: any;
   showModal: boolean;
   setShowModal: any;
+  showTutorial: boolean;
+  setShowTutorial: any;
+  setTutorial: any;
 }) => {
   const {
     currentGuess,
@@ -66,10 +72,6 @@ export const Chessguessr = ({
   } = useChessguessr(game);
 
   const size = useWindowSize();
-
-  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
-
-  const [showTutorial, setShowTutorial] = useState(!tutorial);
 
   const { white, black, wRating, bRating } = game;
 
@@ -134,39 +136,27 @@ export const Chessguessr = ({
             )}
           </ChessboardWrapper>
           <Buttons>
-            {gameStatus === GameStatus.IN_PROGRESS && (
-              <button
-                className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
-                onClick={takeback}
+            <button
+              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
+              onClick={takeback}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 inline mr-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline mr-1"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z" />
-                </svg>
-                Undo last move
-              </button>
-            )}
-            {gameStatus === GameStatus.IN_PROGRESS ? (
-              <button
-                className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ml-2"
-                onClick={submitGuess}
-              >
-                Submit
-              </button>
-            ) : (
-              <button
-                className="py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-75 ml-2"
-                onClick={() => {
-                  setShowModal(true);
-                }}
-              >
-                Stats
-              </button>
-            )}
+                <path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z" />
+              </svg>
+              Undo last move
+            </button>
+
+            <button
+              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ml-2"
+              onClick={submitGuess}
+            >
+              Submit
+            </button>
           </Buttons>
         </BoardWrapper>
         <Grid

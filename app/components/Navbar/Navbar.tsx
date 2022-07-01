@@ -1,18 +1,38 @@
 import React, { useState } from "react";
 
-export const Navbar = ({ setShowModal }) => {
+export const Navbar = ({ setShowModal, setShowTutorial }) => {
   return (
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl">Chessguessr</a>
+        <button className="btn btn-ghost btn-circle" onClick={setShowTutorial}>
+          <div className="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span className="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
       </div>
-      <div className="navbar-center"></div>
+      <div className="navbar-center">
+        <a className="btn btn-ghost normal-case text-2xl">Chessguessr</a>
+      </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle" onClick={setShowModal}>
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h- w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
