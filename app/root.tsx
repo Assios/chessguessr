@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html data-theme="cupcake" lang="en">
+    <html data-theme="light" lang="en">
       <head>
         <script
           defer
