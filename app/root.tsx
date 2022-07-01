@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
 
@@ -35,7 +35,6 @@ export default function App() {
       </head>
       <body>
         <Toaster />
-        <Navbar fixed={false} />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -186,20 +186,24 @@ export default function Modal({
 
                 <StatsCards playerStats={playerStats} />
 
-                {/*body*/}
-                {correct ? (
-                  <Correct
-                    game={game}
-                    gameUrlText={gameUrlText}
-                    solvedPercentage={solvedPercentage}
-                  />
-                ) : (
-                  <Failed
-                    game={game}
-                    gameUrlText={gameUrlText}
-                    solvedPercentage={solvedPercentage}
-                  />
-                )}
+                {playerStats.gamesPlayed ? (
+                  <>
+                    {correct ? (
+                      <Correct
+                        game={game}
+                        gameUrlText={gameUrlText}
+                        solvedPercentage={solvedPercentage}
+                      />
+                    ) : (
+                      <Failed
+                        game={game}
+                        gameUrlText={gameUrlText}
+                        solvedPercentage={solvedPercentage}
+                      />
+                    )}
+                  </>
+                ) : null}
+
                 <div className="relative pl-6 flex-auto">
                   <p className="mt-4 mb-4 text-md">
                     Feedback?{" "}
@@ -216,14 +220,14 @@ export default function Modal({
                 {/*footer*/}
 
                 <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">
-                  <div className="font-bold">
+                  {/*<div className="font-bold">
                     NEXT GUESSR IN{" "}
                     <Countdown
                       date={nextDate}
                       zeroPadTime={2}
                       renderer={renderer}
                     />{" "}
-                  </div>
+                </div>*/}
                   <div className="flex">
                     <button
                       type="button"

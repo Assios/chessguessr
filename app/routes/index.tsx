@@ -7,6 +7,7 @@ import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
+import { Navbar } from "~/components/Navbar/Navbar";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -24,8 +25,6 @@ export const loader: LoaderFunction = async () => {
 };
 
 const StyledIndex = styled.div`
-  margin-top: 5rem;
-
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -35,10 +34,21 @@ const StyledIndex = styled.div`
 
 export default function Index() {
   const { game, stats } = useLoaderData();
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <StyledIndex>
-      {game && <Chessguessr game={game} stats={stats} />}
+      <Navbar fixed={false} setShowModal={setShowModal} />
+      <div className="mt-20">
+        {game && (
+          <Chessguessr
+            showModal={showModal}
+            setShowModal={setShowModal}
+            game={game}
+            stats={stats}
+          />
+        )}
+      </div>
     </StyledIndex>
   );
 }

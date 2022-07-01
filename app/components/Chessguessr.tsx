@@ -41,7 +41,17 @@ const Players = styled.div`
   justify-content: center;
 `;
 
-export const Chessguessr = ({ game, stats }: { game: Game; stats?: any }) => {
+export const Chessguessr = ({
+  game,
+  stats,
+  showModal,
+  setShowModal,
+}: {
+  game: Game;
+  stats?: any;
+  showModal: boolean;
+  setShowModal: any;
+}) => {
   const {
     currentGuess,
     onDrop,
@@ -62,8 +72,6 @@ export const Chessguessr = ({ game, stats }: { game: Game; stats?: any }) => {
   const [showTutorial, setShowTutorial] = useState(!tutorial);
 
   const { white, black, wRating, bRating } = game;
-
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {

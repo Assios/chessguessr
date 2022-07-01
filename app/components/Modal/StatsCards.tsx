@@ -13,8 +13,6 @@ const StatsCards = ({ playerStats }) => {
     (numWins / (numWins + playerStats.guesses["failed"])) * 100
   );
 
-  console.log("stats", playerStats);
-
   return (
     <div className="stats shadow flex flex-col md:flex-row">
       <div className="stat m-2">
@@ -41,7 +39,9 @@ const StatsCards = ({ playerStats }) => {
       <div className="stat">
         <div className="stat-figure text-secondary"></div>
         <div className="stat-title">Win %</div>
-        <div className="stat-value text-secondary">{winPercentage}%</div>
+        <div className="stat-value text-secondary">
+          {playerStats.gamesPlayed ? winPercentage : "0"}%
+        </div>
         <div className="stat-desc">Ratio of games you've solved</div>
       </div>
 
@@ -62,7 +62,7 @@ const StatsCards = ({ playerStats }) => {
         </div>
         <div className="stat-title">Current streak</div>
         <div className="stat-value text-primary">
-          {playerStats.currentStreak}
+          {playerStats.gamesPlaye > 0 ? playerStats.currentStreak : 0}
         </div>
         <div className="stat-desc">Number of games solved in a row</div>
       </div>
