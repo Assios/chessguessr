@@ -2,6 +2,7 @@ import React from "react";
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
+import { GameStatus } from "~/hooks/useChessguessr";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -81,7 +82,6 @@ const Failed = ({ game, gameUrlText, solvedPercentage }) => {
 };
 
 export default function Modal({
-  correct,
   showModal,
   setShowModal,
   game,
@@ -89,6 +89,7 @@ export default function Modal({
   turn,
   playerStats,
   puzzleStats,
+  gameStatus,
 }) {
   const [value, copy] = useCopyToClipboard();
 
@@ -149,7 +150,12 @@ export default function Modal({
     </span>
   );
 
-  const shareGameText = getShareGameText(guesses, game, turn, correct);
+  const shareGameText = getShareGameText(
+    guesses,
+    game,
+    turn,
+    gameStatus === GameStatus.SOLVED
+  );
 
   return (
     <>
@@ -229,13 +235,15 @@ export default function Modal({
                     />{" "}
                 </div>*/}
                   <div className="flex">
-                    <button
-                      type="button"
-                      onClick={() => copy(shareGameText)}
-                      className="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                      {!value ? "SHARE SCORE" : "Copied to clipboard"}
-                    </button>
+                    {gameStatus !== GameStatus.IN_PROGRESS && (
+                      <button
+                        type="button"
+                        onClick={() => copy(shareGameText)}
+                        className="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        {!value ? "SHARE SCORE" : "Copied to clipboard"}
+                      </button>
+                    )}
 
                     <button
                       className="text-red-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"

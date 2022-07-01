@@ -98,7 +98,7 @@ export const Chessguessr = ({
     <div>
       <div>
         <Modal
-          correct={gameStatus === GameStatus.SOLVED}
+          gameStatus={gameStatus}
           game={game}
           turn={turn}
           showModal={showModal}
