@@ -226,14 +226,7 @@ export default function Modal({
                 {/*footer*/}
 
                 <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">
-                  <div className="font-bold">
-                    NEXT GUESSR IN{" "}
-                    <Countdown
-                      date={nextDate}
-                      zeroPadTime={2}
-                      renderer={renderer}
-                    />
-                  </div>
+                  <div className="font-bold">NEW PUZZLE AT 2AM UTC</div>
                   <div className="flex">
                     {gameStatus !== GameStatus.IN_PROGRESS && (
                       <button
