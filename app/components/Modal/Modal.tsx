@@ -227,7 +227,7 @@ export default function Modal({
 
                 <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">
                   <div className="font-bold">
-                    NEXT GUESSR IN
+                    NEXT GUESSR IN{" "}
                     <Countdown
                       date={nextDate}
                       zeroPadTime={2}
