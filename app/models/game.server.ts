@@ -134,5 +134,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2046,
       id: 12,
     },
+    {
+      date: "2022-07-04",
+      fen: "8/pp3k1P/6N1/2p1p1B1/1n1pP1p1/1q4P1/8/K6R w - - 1 38",
+      solution: ["Nxe5+", "Ke6", "Rh6+", "Kxe5", "h8=Q+"],
+      gameUrl: "https://lichess.org/AlZU0Ga6/white#74",
+      white: "GM alireza2003",
+      black: "GM Konevlad",
+      wRating: 2762,
+      bRating: 3007,
+      id: 13,
+    },
   ];
 }
