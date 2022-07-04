@@ -145,5 +145,27 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3007,
       id: 13,
     },
+    {
+      date: "2022-07-05",
+      fen: "2k2r1r/pb3p2/2n1pP1p/q2pP1pB/1NpP4/2Q3B1/1P4PP/5RK1 w - - 3 25",
+      solution: ["Nxc6", "Qxc3", "Ne7+", "Kd7", "bxc3"],
+      gameUrl: "https://lichess.org/LKL0jVuR/white#48",
+      white: "GM AnishOnYoutube",
+      black: "GM nihalsarin2004",
+      wRating: 2869,
+      bRating: 2972,
+      id: 14,
+    },
+    {
+      date: "2022-07-06",
+      fen: "2r3k1/7p/6p1/1p6/1P2P3/2pq2N1/2Q2bPP/7K w - - 0 32",
+      solution: ["Qxd3", "c2", "Qd5+", "Kh8", "Qe5+"],
+      gameUrl: "https://lichess.org/8fERehxe/white#62",
+      white: "ChessGiant",
+      black: "FM Heisenberg01",
+      wRating: 2046,
+      bRating: 2627,
+      id: 15,
+    },
   ];
 }
