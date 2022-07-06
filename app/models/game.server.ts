@@ -167,5 +167,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2627,
       id: 15,
     },
+    {
+      date: "2022-07-07",
+      fen: "1n1q2kr/4rpp1/pp5p/2p2R2/6N1/1PP1P3/P3Q1PP/5RK1 w - - 1 23",
+      solution: ["Ne5", "Qe8", "Nxf7", "Rxf7", "Qc4"],
+      gameUrl: "https://lichess.org/WvIezSkr#44",
+      white: "GM BabaRamdev",
+      black: "IM mutdpro",
+      wRating: 3031,
+      bRating: 3131,
+      id: 16,
+    },
   ];
 }
