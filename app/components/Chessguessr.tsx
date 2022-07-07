@@ -142,7 +142,7 @@ export const Chessguessr = ({
           </ChessboardWrapper>
           <Buttons>
             <button
-              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
+              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2"
               onClick={takeback}
             >
               <svg
@@ -157,7 +157,7 @@ export const Chessguessr = ({
             </button>
 
             <button
-              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ml-2"
+              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
               onClick={submitGuess}
             >
               Submit
