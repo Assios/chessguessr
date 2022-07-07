@@ -3,8 +3,8 @@ import { Row } from "./Row";
 import styled from "styled-components";
 
 const StyledGrid = styled.div`
-  margin-top: 2.8rem;
   margin-left: 1rem;
+  margin-top: 5.5rem;
 `;
 
 export const Grid = ({

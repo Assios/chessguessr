@@ -38,6 +38,8 @@ const BoardWrapper = styled.div``;
 const Players = styled.div`
   display: flex;
 
+  flex-direction: column;
+
   justify-content: center;
 `;
 
@@ -116,8 +118,11 @@ export const Chessguessr = ({
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold">
+            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
               {white} ({wRating}) – {black} ({bRating})
+            </p>
+            <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+              White to play
             </p>
           </Players>
 
