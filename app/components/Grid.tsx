@@ -5,6 +5,10 @@ import styled from "styled-components";
 const StyledGrid = styled.div`
   margin-left: 1rem;
   margin-top: 5.5rem;
+
+  @media (max-width: 1140px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const Grid = ({
