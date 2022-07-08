@@ -71,6 +71,7 @@ export const Chessguessr = ({
     insufficientMoves,
     playerStats,
     gameStatus,
+    colorToPlay,
   } = useChessguessr(game);
 
   const size = useWindowSize();
@@ -121,9 +122,11 @@ export const Chessguessr = ({
             <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
               {white} ({wRating}) – {black} ({bRating})
             </p>
-            <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
-              White to play
-            </p>
+            {position && (
+              <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                {colorToPlay === "b" ? "Black" : "White"} to play
+              </p>
+            )}
           </Players>
 
           <ChessboardWrapper>
@@ -137,6 +140,7 @@ export const Chessguessr = ({
                 onPieceDrop={onDrop}
                 areArrowsAllowed={false}
                 boardWidth={getBoardWidth()}
+                boardOrientation={colorToPlay === "b" ? "black" : "white"}
               />
             )}
           </ChessboardWrapper>

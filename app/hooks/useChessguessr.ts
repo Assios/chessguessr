@@ -33,6 +33,7 @@ const useChessguessr = (game: Game) => {
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
+  const [colorToPlay, setColorToPlay] = useState("white");
 
   const [gameState, setGameState] = useLocalStorage("cg-state", {
     guesses: guesses,
@@ -72,7 +73,9 @@ const useChessguessr = (game: Game) => {
 
   useEffect(() => {
     if (game) {
-      setPosition(new Chess(game.fen));
+      const pos = new Chess(game.fen);
+      setPosition(pos);
+      setColorToPlay(pos.turn());
     }
   }, [game]);
 
@@ -260,6 +263,7 @@ const useChessguessr = (game: Game) => {
     insufficientMoves,
     playerStats,
     gameStatus,
+    colorToPlay,
   };
 };
 
