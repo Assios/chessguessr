@@ -40,11 +40,11 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: any) => {
 
   return (
     <StyledRow>
-      <Tile></Tile>
-      <Tile></Tile>
-      <Tile></Tile>
-      <Tile></Tile>
-      <Tile></Tile>
+      <Tile className="bg-primary"></Tile>
+      <Tile className="bg-primary"></Tile>
+      <Tile className="bg-primary"></Tile>
+      <Tile className="bg-primary"></Tile>
+      <Tile className="bg-primary"></Tile>
     </StyledRow>
   );
 };
