@@ -29,6 +29,7 @@ export default function App() {
           data-domain="chessguessr.com"
           src="https://chessguessr-proxy.vercel.app/js/script.js"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}

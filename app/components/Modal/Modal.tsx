@@ -165,7 +165,7 @@ export default function Modal({
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-200 outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <div className="flex items-start justify-between p-5 rounded-t">
                   <h3 className="text-3xl font-semibold">Statistics</h3>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ export default function Modal({
 
                 {/*footer*/}
 
-                <div className="flex space-x-12 items-center justify-between p-6 border-t border-solid border-slate-200 rounded-b">
+                <div className="flex space-x-12 items-center justify-between p-6 rounded-b">
                   <div className="font-bold">NEW PUZZLE AT 2AM UTC</div>
                   <div className="flex">
                     {gameStatus !== GameStatus.IN_PROGRESS && (
