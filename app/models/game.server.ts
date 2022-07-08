@@ -191,6 +191,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-07-09",
+      fen: "r6r/p3kpp1/1qp3b1/3pPnN1/5P2/2P2Q2/PP1N1bPP/R1B2K1R b - - 6 16",
+      solution: ["Ng3+", "hxg3", "Rxh1+", "Ke2", "Re1#"],
+      gameUrl: "https://lichess.org/JYhT24aC/black#31",
+      white: "Rarelyadraw",
+      black: "IM EricRosen",
+      wRating: 1761,
+      bRating: 2506,
+      id: 18,
+    },
+    {
+      date: "2022-07-10",
       fen: "r2qr1k1/1p1b1p1p/2pb1pp1/p2n3P/3P4/2PB1P2/PPQBN1P1/2KR3R w - - 0 16",
       solution: ["hxg6", "hxg6", "Bxg6", "fxg6", "Qxg6+"],
       gameUrl: "https://lichess.org/9yaDFsYB#30",
@@ -198,7 +209,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "Alexandra2011",
       wRating: 2273,
       bRating: 1634,
-      id: 18,
+      id: 19,
     },
   ];
 }
