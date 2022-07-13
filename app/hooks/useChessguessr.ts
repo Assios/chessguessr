@@ -5,6 +5,7 @@ import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import { Game } from "~/utils/types";
+import { incrementFailed, incrementSolved } from "../firebase/utils";
 
 export enum GameStatus {
   IN_PROGRESS = "IN_PROGRESS",
@@ -32,6 +33,7 @@ const useChessguessr = (game: Game) => {
   const [position, setPosition] = useState(null);
   const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
+  const [colorToPlay, setColorToPlay] = useState("white");
 
   const [gameState, setGameState] = useLocalStorage("cg-state", {
     guesses: guesses,
@@ -71,7 +73,9 @@ const useChessguessr = (game: Game) => {
 
   useEffect(() => {
     if (game) {
-      setPosition(new Chess(game.fen));
+      const pos = new Chess(game.fen);
+      setPosition(pos);
+      setColorToPlay(pos.turn());
     }
   }, [game]);
 
@@ -129,6 +133,8 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
+
+      incrementFailed(game.id);
     }
 
     newGuesses[turn] = formattedGuess;
@@ -160,6 +166,8 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
+
+      incrementSolved(game.id, turn + 1);
     } else {
       setPosition(new Chess(game.fen));
     }
@@ -218,8 +226,9 @@ const useChessguessr = (game: Game) => {
   };
 
   const submitGuess = () => {
-    if (turn > 5) {
-      console.log("Too many guesses");
+    if (turn > 5 || gameStatus !== GameStatus.IN_PROGRESS) {
+      toast.error("Game over.", { duration: 2000 });
+
       return;
     }
 
@@ -254,6 +263,7 @@ const useChessguessr = (game: Game) => {
     insufficientMoves,
     playerStats,
     gameStatus,
+    colorToPlay,
   };
 };
 

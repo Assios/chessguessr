@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
 
@@ -22,20 +22,20 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en">
+    <html data-theme="cupcake" lang="en">
       <head>
         <script
           defer
           data-domain="chessguessr.com"
           src="https://chessguessr-proxy.vercel.app/js/script.js"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
-      <body style={{ backgroundColor: "#dae1ed" }}>
+      <body>
         <Toaster />
-        <Navbar fixed={false} />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -3,11 +3,12 @@ import useChessguessr, { GameStatus } from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
 import styled from "styled-components";
-import Modal from "./Modal";
+import Modal from "./Modal/Modal";
 import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import TutorialModal from "./TutorialModal";
+import { incrementSolved } from "~/firebase/utils";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -37,10 +38,28 @@ const BoardWrapper = styled.div``;
 const Players = styled.div`
   display: flex;
 
+  flex-direction: column;
+
   justify-content: center;
 `;
 
-export const Chessguessr = ({ game }: { game: Game }) => {
+export const Chessguessr = ({
+  game,
+  stats,
+  showModal,
+  setShowModal,
+  showTutorial,
+  setShowTutorial,
+  setTutorial,
+}: {
+  game: Game;
+  stats?: any;
+  showModal: boolean;
+  setShowModal: any;
+  showTutorial: boolean;
+  setShowTutorial: any;
+  setTutorial: any;
+}) => {
   const {
     currentGuess,
     onDrop,
@@ -52,17 +71,12 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     insufficientMoves,
     playerStats,
     gameStatus,
+    colorToPlay,
   } = useChessguessr(game);
 
   const size = useWindowSize();
 
-  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
-
-  const [showTutorial, setShowTutorial] = useState(!tutorial);
-
   const { white, black, wRating, bRating } = game;
-
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
@@ -87,13 +101,14 @@ export const Chessguessr = ({ game }: { game: Game }) => {
     <div>
       <div>
         <Modal
-          correct={gameStatus === GameStatus.SOLVED}
+          gameStatus={gameStatus}
           game={game}
           turn={turn}
           showModal={showModal}
           setShowModal={setShowModal}
           guesses={guesses}
           playerStats={playerStats}
+          puzzleStats={stats}
         />
         <TutorialModal
           showTutorial={showTutorial}
@@ -104,9 +119,14 @@ export const Chessguessr = ({ game }: { game: Game }) => {
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold">
+            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
               {white} ({wRating}) – {black} ({bRating})
             </p>
+            {position && (
+              <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                {colorToPlay === "b" ? "Black" : "White"} to play
+              </p>
+            )}
           </Players>
 
           <ChessboardWrapper>
@@ -120,12 +140,13 @@ export const Chessguessr = ({ game }: { game: Game }) => {
                 onPieceDrop={onDrop}
                 areArrowsAllowed={false}
                 boardWidth={getBoardWidth()}
+                boardOrientation={colorToPlay === "b" ? "black" : "white"}
               />
             )}
           </ChessboardWrapper>
           <Buttons>
             <button
-              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 mr-2"
+              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2"
               onClick={takeback}
             >
               <svg
@@ -138,8 +159,9 @@ export const Chessguessr = ({ game }: { game: Game }) => {
               </svg>
               Undo last move
             </button>
+
             <button
-              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ml-2"
+              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
               onClick={submitGuess}
             >
               Submit

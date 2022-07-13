@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        22: "5.5rem",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

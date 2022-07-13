@@ -54,16 +54,12 @@ const bounce = () => keyframes`
 const flip = (c: any) => keyframes`
   0% {
     transform: rotateX(0deg);
-    background: #fff;
     border-color: #787C7E;
-    color: #000;
   }
 
   45% {
     transform: rotateX(90deg);
-    background: #fff;
     border-color: #787C7E;
-    color: #000;
   }
 
   55% {
@@ -121,7 +117,6 @@ export const Tile = styled.div<TileProps>`
   user-select: none;
   box-sizing: border-box;
 
-  background-color: white;
   border-color: #787c7e;
   animation: ${flip} 0.5s ease forwards;
 
