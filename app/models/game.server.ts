@@ -255,5 +255,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2810,
       id: 23,
     },
+    {
+      date: "2022-07-15",
+      fen: "r1bqkb1r/pppp1ppp/2nn4/4p2Q/8/1BN5/PPPP1PPP/R1B1K1NR w KQkq - 4 6",
+      solution: ["Nb5", "g6", "Qf3", "f5", "Qd5"],
+      gameUrl: "https://lichess.org/2cOg7Que#10",
+      white: "FM Paparama",
+      black: "JoeAssaad",
+      wRating: 2683,
+      bRating: 2603,
+      id: 24,
+    },
   ];
 }
