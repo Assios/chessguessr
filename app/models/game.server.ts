@@ -266,5 +266,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2603,
       id: 24,
     },
+    {
+      date: "2022-07-16",
+      fen: "r2qr1k1/pp3pp1/2p3p1/3Pp3/1PP1n3/P5P1/4BP1P/R2Q1RK1 w - - 0 20",
+      solution: ["dxc6", "Nc3", "cxb7", "Nxd1", "Rfxd1"],
+      gameUrl: "https://lichess.org/y3eP3jdE#38",
+      white: "GM DrNykterstein",
+      black: "Night-King96",
+      wRating: 3259,
+      bRating: 3138,
+      id: 25,
+    },
   ];
 }
