@@ -12,7 +12,14 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  {
+    rel: "icon",
+    href: "/favicon.png",
+    type: "image/png",
+  },
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
