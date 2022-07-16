@@ -40,7 +40,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        {/*<Footer />*/}
+        <Footer />
       </body>
     </html>
   );

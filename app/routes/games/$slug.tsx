@@ -41,7 +41,7 @@ export default function Index() {
         setShowTutorial={setShowTutorial}
         setShowModal={setShowModal}
       />
-      <div className="mt-20">
+      <div className="mt-20 mb-20">
         {game && (
           <Chessguessr
             showModal={showModal}
