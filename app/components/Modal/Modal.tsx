@@ -221,7 +221,7 @@ export default function Modal({
                 {/*footer*/}
 
                 <div className="flex space-x-12 items-center justify-between p-6 rounded-b">
-                  <div className="font-bold">NEW PUZZLE AT 2AM UTC</div>
+                  <div className="font-bold">NEW PUZZLE AT MIDNIGHT UTC</div>
                   <div className="flex">
                     {gameStatus !== GameStatus.IN_PROGRESS && (
                       <button
