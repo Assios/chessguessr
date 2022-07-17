@@ -1,13 +1,9 @@
-import React from "react";
-import { BiTrendingUp } from "react-icons/bi";
-
 const StatsCards = ({ playerStats }) => {
-  const numWins =
-    playerStats.guesses[1] +
-    playerStats.guesses[2] +
-    playerStats.guesses[3] +
-    playerStats.guesses[4] +
-    playerStats.guesses[5];
+  let numWins = 0;
+
+  for (let i = 1; i < 6; i++) {
+    numWins += playerStats.guesses[i];
+  }
 
   const winPercentage = Math.round(
     (numWins / (numWins + playerStats.guesses["failed"])) * 100

@@ -1,6 +1,14 @@
-import React from "react";
 import { Row } from "./Row";
 import styled from "styled-components";
+
+type Guess = string[];
+
+interface Props {
+  currentGuess: Guess;
+  guesses: Guess[];
+  turn: number;
+  insufficientMoves: boolean;
+}
 
 const StyledGrid = styled.div`
   margin-left: 1rem;
@@ -16,7 +24,7 @@ export const Grid = ({
   guesses,
   turn,
   insufficientMoves,
-}: any) => {
+}: Props) => {
   return (
     <StyledGrid>
       {guesses.map((guess: any, i: number) => {
