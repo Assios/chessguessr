@@ -14,10 +14,22 @@ const getSolvedPercentage = (puzzleStats) => {
   );
 };
 
-const Correct = ({ game, gameUrlText, solvedPercentage }) => {
+const getAverageNumberOfTurns = (puzzleStats) => {
+  if (!(puzzleStats?.solved > 0 && puzzleStats?.turns > 0)) {
+    return null;
+  }
+
+  return Math.round((puzzleStats.turns / puzzleStats.solved) * 100) / 100;
+};
+
+const Correct = ({ game, gameUrlText, puzzleStats }) => {
+  const solvedPercentage = getSolvedPercentage(puzzleStats);
+
+  const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
+
   return (
     <div className="relative p-6 flex-auto">
-      <p className="my-4 text-slate-500 text-lg leading-relaxed">
+      <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white} and {game.black}. Check out
         the game{" "}
         <a
@@ -29,28 +41,33 @@ const Correct = ({ game, gameUrlText, solvedPercentage }) => {
         </a>
         .
       </p>
-      {solvedPercentage && (
+      {solvedPercentage && averageNumberOfTurns && (
         <>
           <h1 className="my-4  text-lg leading-relaxed">
-            {solvedPercentage}% got this one right.
+            {solvedPercentage}% got this one right. For the people that got it
+            right, the average number of turns was {averageNumberOfTurns}.
           </h1>
-          <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
+          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
             <div className="w-full h-full bg-gray-300 absolute"></div>
             <div
               className="h-full bg-green-500 absolute"
               style={{ width: `${solvedPercentage}%` }}
             ></div>
-          </div>
+      </div>*/}
         </>
       )}
     </div>
   );
 };
 
-const Failed = ({ game, gameUrlText, solvedPercentage }) => {
+const Failed = ({ game, gameUrlText, puzzleStats }) => {
+  const solvedPercentage = getSolvedPercentage(puzzleStats);
+
+  const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
+
   return (
     <div className="relative p-6 flex-auto">
-      <p className="my-4 text-slate-700 text-lg leading-relaxed">
+      <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white} and {game.black}. Check out
         the game (and the solution){" "}
         <a
@@ -62,18 +79,19 @@ const Failed = ({ game, gameUrlText, solvedPercentage }) => {
         </a>
         .
       </p>
-      {solvedPercentage && (
+      {solvedPercentage && averageNumberOfTurns && (
         <>
           <h1 className="my-4  text-lg leading-relaxed">
-            {solvedPercentage}% got this one right.
+            {solvedPercentage}% got this one right. For the people that got it
+            right, the average number of turns was {averageNumberOfTurns}.
           </h1>
-          <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
+          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
             <div className="w-full h-full bg-gray-300 absolute"></div>
             <div
               className="h-full bg-green-500 absolute"
               style={{ width: `${solvedPercentage}%` }}
             ></div>
-          </div>
+      </div>*/}
         </>
       )}
     </div>
@@ -193,7 +211,7 @@ export default function Modal({
                       <Correct
                         game={game}
                         gameUrlText={gameUrlText}
-                        solvedPercentage={solvedPercentage}
+                        puzzleStats={puzzleStats}
                       />
                     ) : (
                       <Failed
