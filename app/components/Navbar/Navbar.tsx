@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export const Navbar = ({ setShowModal, setShowTutorial }) => {
   return (
     <div className="navbar bg-primary text-primary-content">
