@@ -94,10 +94,10 @@ export const StyledRow = styled.div<StyledRowProps>`
 `;
 
 interface TileProps {
-  flipTile?: any;
-  color?: any;
-  current?: any;
-  animationIndex?: any;
+  flipTile?: boolean;
+  color?: string;
+  current?: boolean;
+  animationIndex?: number;
 }
 
 export const Tile = styled.div<TileProps>`

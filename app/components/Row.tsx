@@ -1,5 +1,3 @@
-import React from "react";
-import styled, { keyframes, css } from "styled-components";
 import { StyledRow, Tile } from "../styles/styles";
 
 export const Row = ({ guess, currentGuess, insufficientMoves }: any) => {
