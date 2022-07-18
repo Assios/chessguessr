@@ -5,7 +5,7 @@ import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudfl
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { db } from "../firebase/firebaseConfig";
+import { db } from "~/firebase";
 import { getDoc, doc } from "firebase/firestore";
 import { Navbar } from "~/components/Navbar/Navbar";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
@@ -19,10 +19,12 @@ export const loader: LoaderFunction = async () => {
     return game.date === d;
   });
 
-  const docRef = doc(db, "stats", dailyGame.id.toString());
-  const docSnap = await getDoc(docRef);
+  const stats = await db.doc("stats/" + dailyGame.id.toString());
+  const snap = await stats.get();
 
-  return json({ game: dailyGame, stats: docSnap.data() });
+  const statData = snap.data();
+
+  return json({ game: dailyGame, stats: statData });
 };
 
 const StyledIndex = styled.div`
@@ -40,6 +42,8 @@ export default function Index() {
   const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
 
   const [showTutorial, setShowTutorial] = useState(!tutorial);
+
+  console.log("statss", stats);
 
   return (
     <StyledIndex>

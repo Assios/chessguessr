@@ -5,8 +5,6 @@ import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudfl
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { db } from "../../firebase/firebaseConfig";
-import { getDoc, doc } from "firebase/firestore";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import { Navbar } from "~/components/Navbar/Navbar";
 

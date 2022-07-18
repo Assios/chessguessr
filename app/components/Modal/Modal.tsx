@@ -217,7 +217,7 @@ export default function Modal({
                       <Failed
                         game={game}
                         gameUrlText={gameUrlText}
-                        solvedPercentage={solvedPercentage}
+                        puzzleStats={puzzleStats}
                       />
                     )}
                   </>

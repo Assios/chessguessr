@@ -133,8 +133,6 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
-
-      incrementFailed(game.id);
     }
 
     newGuesses[turn] = formattedGuess;
