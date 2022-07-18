@@ -58,7 +58,7 @@ const StatsCards = ({ playerStats }) => {
         </div>
         <div className="stat-title">Current streak</div>
         <div className="stat-value text-primary">
-          {playerStats.gamesPlaye > 0 ? playerStats.currentStreak : 0}
+          {playerStats.gamesPlayed > 0 ? playerStats.currentStreak : 0}
         </div>
         <div className="stat-desc">Number of games solved in a row</div>
       </div>
