@@ -161,8 +161,9 @@ export const Chessguessr = ({
             </button>
 
             <button
-              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
               onClick={submitGuess}
+              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
+              type="submit"
             >
               Submit
             </button>
