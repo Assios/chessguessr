@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Chessguessr } from "../components/Chessguessr";
 import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
@@ -67,9 +67,11 @@ export const loader: LoaderFunction = async () => {
   return json({ game: dailyGame, stats: docSnap.data() });
 };
 
-export const action = async ({ request }) => {
-  const d = await request.formData();
-  console.log("d", d);
+export const action = async ({ formData }) => {
+  console.log("SS");
+  const d = await formData();
+  console.log("d", d.get("gameStatus"));
+  console.log("t", d.get("turn"));
   const statsDoc = doc(db, "stats", "1");
 
   setDoc(
@@ -117,12 +119,17 @@ export default function Index() {
     colorToPlay,
   } = useChessguessr(game);
 
+  const formRef = useRef<HtmlFormElement>(null); //Add a form ref.
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     submitGuess();
 
-    submit(event.target, "sup");
+    const formData = new FormData(formRef.current);
+    formData.set("arbitraryData", "jadda");
+
+    submit(formData);
   };
 
   const size = useWindowSize();
@@ -158,6 +165,9 @@ export default function Index() {
       <div className="mt-20">
         {game && (
           <form method="post" onSubmit={handleSubmit}>
+            <input readOnly name="gameStatus" value={gameStatus} />
+            <input readOnly name="turn" value={turn} />
+
             <div>
               <div>
                 <Modal
