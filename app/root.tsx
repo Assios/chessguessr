@@ -11,6 +11,13 @@ import styles from "./tailwind.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
+import styled from "styled-components";
+import { useState } from "react";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+
+const Content = styled.div`
+  flex: 1;
+`;
 
 export const links: LinksFunction = () => [
   {
@@ -28,6 +35,19 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
+
+  const [showTutorial, setShowTutorial] = useState(!tutorial);
+
+  const context: any = {
+    showTutorial,
+    showModal,
+    setShowModal,
+    setShowTutorial,
+    setTutorial,
+  };
+
   return (
     <html data-theme="cupcake" lang="en">
       <head>
@@ -41,13 +61,21 @@ export default function App() {
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
-      <body>
-        <Toaster />
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-        {/*<Footer />*/}
+      <body
+        style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      >
+        <Content>
+          <Toaster />
+          <Navbar
+            setShowTutorial={setShowTutorial}
+            setShowModal={setShowModal}
+          />
+          <Outlet context={context} />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </Content>
+        <Footer />
       </body>
     </html>
   );
