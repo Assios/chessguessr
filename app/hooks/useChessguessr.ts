@@ -5,7 +5,8 @@ import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import { Game } from "~/utils/types";
-import { incrementFailed, incrementSolved } from "../firebase/utils";
+import { db } from "~/firebase";
+import { useSubmit, useTransition } from "@remix-run/react";
 
 export enum GameStatus {
   IN_PROGRESS = "IN_PROGRESS",
@@ -164,8 +165,6 @@ const useChessguessr = (game: Game) => {
           },
         };
       });
-
-      incrementSolved(game.id, turn + 1);
     } else {
       setPosition(new Chess(game.fen));
     }

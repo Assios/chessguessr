@@ -1,10 +1,5 @@
-import {
-  applicationDefault,
-  getApp,
-  getApps,
-  initializeApp,
-} from "firebase-admin/app";
-import { getFirestore } from "firebase-admin/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAozth9aqslPm3leuDijEhOT28_yJKriLU",
@@ -15,26 +10,6 @@ const firebaseConfig = {
   appId: "1:458796929173:web:1f2b68838af8536b0ecb9c",
 };
 
-/*
-const app = initializeApp({ credential: applicationDefault() });
+const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-*/
-
-let app;
-let auth;
-let db;
-if (process.env.NODE_ENV === "development") {
-  app =
-    getApps().length === 0
-      ? initializeApp({ projectId: "chessguessr-7eb3c" })
-      : getApp();
-  db = getFirestore();
-} else {
-  app =
-    getApps().length === 0
-      ? initializeApp({ credential: applicationDefault() })
-      : getApp();
-  db = getFirestore();
-}
-export { app, auth, db };

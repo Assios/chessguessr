@@ -3,12 +3,14 @@ import { Chessguessr } from "../components/Chessguessr";
 import styled from "styled-components";
 import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudflare"
 import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useActionData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { db } from "~/firebase";
-import { getDoc, doc } from "firebase/firestore";
+import { getDoc, doc, setDoc, increment } from "firebase/firestore";
 import { Navbar } from "~/components/Navbar/Navbar";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
+import { incrementSolved } from "~/firebase/utils";
+import { useSubmit } from "@remix-run/react";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -19,12 +21,25 @@ export const loader: LoaderFunction = async () => {
     return game.date === d;
   });
 
-  const stats = await db.doc("stats/" + dailyGame.id.toString());
-  const snap = await stats.get();
+  const docRef = doc(db, "stats", dailyGame.id.toString());
+  const docSnap = await getDoc(docRef);
 
-  const statData = snap.data();
+  return json({ game: dailyGame, stats: docSnap.data() });
+};
 
-  return json({ game: dailyGame, stats: statData });
+export const action = async ({ request }) => {
+  const statsDoc = doc(db, "stats", "1");
+
+  setDoc(
+    statsDoc,
+    {
+      solved: increment(1),
+      turns: increment(10),
+    },
+    { merge: true }
+  );
+
+  return null;
 };
 
 const StyledIndex = styled.div`
@@ -38,12 +53,19 @@ const StyledIndex = styled.div`
 export default function Index() {
   const { game, stats } = useLoaderData();
   const [showModal, setShowModal] = useState(false);
+  const submit = useSubmit();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    submit(event.target);
+  };
 
   const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
 
   const [showTutorial, setShowTutorial] = useState(!tutorial);
 
-  console.log("statss", stats);
+  const data = useActionData();
+  console.log("d", data);
 
   return (
     <StyledIndex>
@@ -54,15 +76,18 @@ export default function Index() {
       />
       <div className="mt-20">
         {game && (
-          <Chessguessr
-            showModal={showModal}
-            setShowModal={setShowModal}
-            showTutorial={showTutorial}
-            setShowTutorial={setShowTutorial}
-            setTutorial={setTutorial}
-            game={game}
-            stats={stats}
-          />
+          <form method="post" onSubmit={handleSubmit}>
+            <Chessguessr
+              showModal={showModal}
+              setShowModal={setShowModal}
+              showTutorial={showTutorial}
+              setShowTutorial={setShowTutorial}
+              setTutorial={setTutorial}
+              game={game}
+              stats={stats}
+            />
+            <button type="submit">halla</button>
+          </form>
         )}
       </div>
     </StyledIndex>
