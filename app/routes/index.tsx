@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Chessguessr } from "../components/Chessguessr";
 import styled from "styled-components";
-import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudflare"
-import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
+import type { LoaderFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { Navbar } from "~/components/Navbar/Navbar";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
+import { useOutletContext } from "@remix-run/react";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -35,20 +36,18 @@ const StyledIndex = styled.div`
 
 export default function Index() {
   const { game, stats } = useLoaderData();
-  const [showModal, setShowModal] = useState(false);
 
-  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
-
-  const [showTutorial, setShowTutorial] = useState(!tutorial);
+  const {
+    showModal,
+    setShowModal,
+    showTutorial,
+    setShowTutorial,
+    setTutorial,
+  }: any = useOutletContext();
 
   return (
     <StyledIndex>
-      <Navbar
-        fixed={false}
-        setShowTutorial={setShowTutorial}
-        setShowModal={setShowModal}
-      />
-      <div className="mt-20 mb-20">
+      <div className="mt-10 mb-20 lg:mb-0">
         {game && (
           <Chessguessr
             showModal={showModal}
