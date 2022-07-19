@@ -1,6 +1,7 @@
+import { RowProps } from "~/utils/types";
 import { StyledRow, Tile } from "../styles/styles";
 
-export const Row = ({ guess, currentGuess, insufficientMoves }: any) => {
+export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
   if (currentGuess) {
     return (
       <StyledRow insufficientMoves={insufficientMoves}>

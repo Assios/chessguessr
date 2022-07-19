@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Swap = () => {
   const [checked, setChecked] = useState(false);

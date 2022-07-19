@@ -217,7 +217,7 @@ export default function Modal({
                       <Failed
                         game={game}
                         gameUrlText={gameUrlText}
-                        solvedPercentage={solvedPercentage}
+                        puzzleStats={puzzleStats}
                       />
                     )}
                   </>
@@ -235,8 +235,6 @@ export default function Modal({
                     </a>
                   </p>
                 </div>
-
-                {/*footer*/}
 
                 <div className="flex space-x-12 items-center justify-between p-6 rounded-b">
                   <div className="font-bold">NEW PUZZLE AT MIDNIGHT UTC</div>
