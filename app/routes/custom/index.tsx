@@ -1,26 +1,27 @@
-import { Chessguessr } from "../components/Chessguessr";
+import { Chessguessr } from "../../components/Chessguessr";
 import styled from "styled-components";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { useOutletContext } from "@remix-run/react";
 
-export const loader: LoaderFunction = async () => {
-  const d = new Date().toISOString().split("T")[0];
+// eyJkYXRlIjogIjIwMjItMDYtMjUiLCJmZW4iOiAiMmszcnIvMWIzcDFwLzFQMnAxcDEvcHExcFAzLzJwUTQvMlA1LzJCMU5QUFAvUjVLMSB3IC0gLSAzIDI1Iiwic29sdXRpb24iOiBbCiAgICJCYTQiLCJRYjIiLCJRYzUrIiwiS2I4IiwiUmUxIl0sImdhbWVVcmwiOiAiaHR0cHM6Ly9saWNoZXNzLm9yZy9aUDBxeWR5aC93aGl0ZSM0OCIsIndoaXRlIjogIkdNIFJlYmVjY2FIYXJyaXMiLCJibGFjayI6ICJOTSBUd2VsdmVUZWVuIiwid1JhdGluZyI6IDI3MjEsImJSYXRpbmciOiAyNTIwLCJpZCI6IDR9
 
-  const games = await getGames();
+export const loader: LoaderFunction = async ({ request }) => {
+  const url = new URL(request.url);
+  const data = url.searchParams.get("data");
 
-  const dailyGame = games.find((game) => {
-    return game.date === d;
+  const decoded = atob(data);
+
+  console.log("data", decoded);
+
+  const game = JSON.parse(decoded);
+
+  return json({
+    game: game,
   });
-
-  const docRef = doc(db, "stats", dailyGame.id.toString());
-  const docSnap = await getDoc(docRef);
-
-  return json({ game: dailyGame, stats: docSnap.data() });
 };
 
 const StyledIndex = styled.div`

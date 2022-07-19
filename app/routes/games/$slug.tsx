@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { Chessguessr } from "../../components/Chessguessr";
 import styled from "styled-components";
-import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudflare"
-import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
+import type { LoaderFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { useLocalStorage } from "~/hooks/useLocalStorage";
-import { Navbar } from "~/components/Navbar/Navbar";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const games = await getGames();
