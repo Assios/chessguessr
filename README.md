@@ -14,4 +14,4 @@ Like Wordle, or Chessle, you are given hints after each guess.
 
 ## Development
 
-Chessguessr is built with [Remix](https://remix.run/), Typescript, Firebase (for keeping track of puzzle stats).
+Chessguessr is built with [Remix](https://remix.run/), Typescript, Tailwind, Firebase (for keeping track of puzzle stats).
