@@ -89,6 +89,7 @@ const useChessguessr = (game: Game) => {
 
   const formatGuess = () => {
     let solutionArray = [...game.solution];
+    let discardYellowArray = [...game.solution];
 
     let formattedGuess = [...currentGuess].map((move) => {
       return { move: move, color: "grey", pieceColor: "regular" };
@@ -98,21 +99,20 @@ const useChessguessr = (game: Game) => {
       if (solutionArray[i] === move.move) {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
+        discardYellowArray[i] = null;
       }
     });
 
     formattedGuess.forEach((move, i) => {
-      if (solutionArray.includes(move.move) && move.color !== "green") {
+      if (discardYellowArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
-
-        solutionArray[solutionArray.indexOf(move.move)] = null;
       }
 
       if (move.color !== "green" && solutionArray[i][0] === move.move[0]) {
         formattedGuess[i].pieceColor = "blue";
-
-        solutionArray[solutionArray.indexOf(move.move)] = null;
       }
+
+      discardYellowArray[solutionArray.indexOf(move.move)] = null;
     });
 
     return formattedGuess;
