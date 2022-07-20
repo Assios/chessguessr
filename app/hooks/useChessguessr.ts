@@ -13,6 +13,8 @@ export enum GameStatus {
   FAILED = "FAILED",
 }
 
+const chessCols = "abcdefgh";
+
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
 const useChessguessr = (game: Game) => {
@@ -89,23 +91,35 @@ const useChessguessr = (game: Game) => {
 
   const formatGuess = () => {
     let solutionArray = [...game.solution];
+    let discardYellowArray = [...game.solution];
 
     let formattedGuess = [...currentGuess].map((move) => {
-      return { move: move, color: "grey" };
+      return { move: move, color: "grey", pieceColor: "regular" };
     });
 
     formattedGuess.forEach((move, i) => {
       if (solutionArray[i] === move.move) {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
+        discardYellowArray[i] = null;
       }
     });
 
     formattedGuess.forEach((move, i) => {
-      if (solutionArray.includes(move.move) && move.color !== "green") {
+      if (discardYellowArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
-        solutionArray[solutionArray.indexOf(move.move)] = null;
       }
+
+      if (
+        move.color !== "green" &&
+        (solutionArray[i][0] === move.move[0] ||
+          (chessCols.includes(solutionArray[i][0]) &&
+            chessCols.includes(move.move[0])))
+      ) {
+        formattedGuess[i].pieceColor = "red";
+      }
+
+      discardYellowArray[solutionArray.indexOf(move.move)] = null;
     });
 
     return formattedGuess;

@@ -25,7 +25,12 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
         {guess.map((move: any, i: any) => {
           if (move) {
             return (
-              <Tile color={move.color} flipTile={true} animationIndex={i}>
+              <Tile
+                color={move.color}
+                pieceColor={move.pieceColor}
+                flipTile={true}
+                animationIndex={i}
+              >
                 {move.move}
               </Tile>
             );
