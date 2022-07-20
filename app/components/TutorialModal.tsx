@@ -38,7 +38,7 @@ export default function TutorialModal({
                   <Tile
                     color="green"
                     flipTile={true}
-                    animationIndex={0}
+                    animationIndex={1}
                     tutorial={true}
                   >
                     Nd5
@@ -56,7 +56,7 @@ export default function TutorialModal({
                   <Tile
                     color="yellow"
                     flipTile={true}
-                    animationIndex={0}
+                    animationIndex={3}
                     tutorial={true}
                   >
                     Bxb6
@@ -76,7 +76,7 @@ export default function TutorialModal({
                     color="grey"
                     pieceColor="red"
                     flipTile={true}
-                    animationIndex={0}
+                    animationIndex={2}
                     tutorial={true}
                   >
                     Nxf6
