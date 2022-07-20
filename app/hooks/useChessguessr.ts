@@ -116,7 +116,7 @@ const useChessguessr = (game: Game) => {
           (chessCols.includes(solutionArray[i][0]) &&
             chessCols.includes(move.move[0])))
       ) {
-        formattedGuess[i].pieceColor = "blue";
+        formattedGuess[i].pieceColor = "red";
       }
 
       discardYellowArray[solutionArray.indexOf(move.move)] = null;

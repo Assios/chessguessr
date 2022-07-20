@@ -72,7 +72,7 @@ export default function TutorialModal({
                   <Tile tutorial={true}>Qf6+</Tile>
                   <Tile
                     color="grey"
-                    pieceColor="blue"
+                    pieceColor="red"
                     flipTile={true}
                     animationIndex={0}
                     tutorial={true}

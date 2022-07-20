@@ -17,8 +17,8 @@ const getTileColor = (color: any) => {
 
 const getPieceColor = (color: any) => {
   switch (color) {
-    case "blue":
-      return "#3ABFF8";
+    case "red":
+      return "#EB2F51";
     default:
       return "#9CA3AF";
   }
@@ -69,11 +69,11 @@ const flip = (c: any, pieceColor: any) => keyframes`
 
   55% {
     transform: rotateX(90deg);
-    background: ${c === "#9CA3AF" && pieceColor === "#3ABFF8" ? "#3ABFF8" : c};
+    background: ${c === "#9CA3AF" && pieceColor === "#EB2F51" ? "#EB2F51" : c};
 
     background-image: ${
-      c === "#FBBF23" && pieceColor === "#3ABFF8"
-        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #3ABFF8 50%);"
+      c === "#FBBF23" && pieceColor === "#EB2F51"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #EB2F51 50%);"
         : "none"
     };
   
@@ -85,11 +85,11 @@ const flip = (c: any, pieceColor: any) => keyframes`
   100% {
     transform: rotateX(0deg);
 
-    background: ${c === "#9CA3AF" && pieceColor === "#3ABFF8" ? "#3ABFF8" : c};
+    background: ${c === "#9CA3AF" && pieceColor === "#EB2F51" ? "#EB2F51" : c};
 
     background-image: ${
-      c === "#FBBF23" && pieceColor === "#3ABFF8"
-        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #3ABFF8 50%);"
+      c === "#FBBF23" && pieceColor === "#EB2F51"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #EB2F51 50%);"
         : "none"
     };
   
