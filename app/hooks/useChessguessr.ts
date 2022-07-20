@@ -91,7 +91,7 @@ const useChessguessr = (game: Game) => {
     let solutionArray = [...game.solution];
 
     let formattedGuess = [...currentGuess].map((move) => {
-      return { move: move, color: "grey" };
+      return { move: move, color: "grey", pieceColor: "regular" };
     });
 
     formattedGuess.forEach((move, i) => {
@@ -104,6 +104,13 @@ const useChessguessr = (game: Game) => {
     formattedGuess.forEach((move, i) => {
       if (solutionArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
+
+        solutionArray[solutionArray.indexOf(move.move)] = null;
+      }
+
+      if (move.color !== "green" && solutionArray[i][0] === move.move[0]) {
+        formattedGuess[i].pieceColor = "blue";
+
         solutionArray[solutionArray.indexOf(move.move)] = null;
       }
     });

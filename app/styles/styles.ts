@@ -10,12 +10,17 @@ const getTileColor = (color: any) => {
       return "#12B980";
     case "yellow":
       return "#FBBF23";
-    case "grey":
-      return "#9CA3AF";
-    case "blue":
-      return "blue";
     default:
-      return "#d3d6da";
+      return "#9CA3AF";
+  }
+};
+
+const getPieceColor = (color: any) => {
+  switch (color) {
+    case "blue":
+      return "#3ABFF8";
+    default:
+      return "#9CA3AF";
   }
 };
 
@@ -51,7 +56,7 @@ const bounce = () => keyframes`
     }
 `;
 
-const flip = (c: any) => keyframes`
+const flip = (c: any, pieceColor: any) => keyframes`
   0% {
     transform: rotateX(0deg);
     border-color: #787C7E;
@@ -64,15 +69,32 @@ const flip = (c: any) => keyframes`
 
   55% {
     transform: rotateX(90deg);
-    background: ${c};
-    border-color: ${c};
+    background: ${c === "#9CA3AF" && pieceColor === "#3ABFF8" ? "#3ABFF8" : c};
+
+    background-image: ${
+      c === "#FBBF23" && pieceColor === "#3ABFF8"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #3ABFF8 50%);"
+        : "none"
+    };
+  
+    border: none;
+
     color: #fff;
   }
 
   100% {
     transform: rotateX(0deg);
-    background: ${c};
-    border-color: ${c};
+
+    background: ${c === "#9CA3AF" && pieceColor === "#3ABFF8" ? "#3ABFF8" : c};
+
+    background-image: ${
+      c === "#FBBF23" && pieceColor === "#3ABFF8"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #3ABFF8 50%);"
+        : "none"
+    };
+  
+    border: none;
+
     color: #fff;
   }
 `;
@@ -96,6 +118,7 @@ export const StyledRow = styled.div<StyledRowProps>`
 interface TileProps {
   flipTile?: boolean;
   color?: string;
+  pieceColor?: string;
   current?: boolean;
   animationIndex?: number;
 }
@@ -136,10 +159,13 @@ export const Tile = styled.div<TileProps>`
     font-size: 0.9rem;
   }
 
-  animation: ${({ flipTile, color, current }: any) =>
+  animation: ${({ flipTile, color, pieceColor, current }: any) =>
     flipTile
       ? css`
-          ${flip(getTileColor(color))} 0.5s ease forwards
+          ${flip(
+            getTileColor(color),
+            getPieceColor(pieceColor)
+          )} 0.5s ease forwards
         `
       : current
       ? css`
