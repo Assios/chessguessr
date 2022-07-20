@@ -132,11 +132,13 @@ export default function Modal({
       if (!guess[0]) return;
 
       guess.forEach((move) => {
-        if (move && move.color) {
+        if (move && move.color && move.pieceColor) {
           if (move.color === "green") {
             text += "🟩";
           } else if (move.color === "yellow") {
             text += "🟨";
+          } else if (move.pieceColor === "blue") {
+            text += "🟦";
           } else if (move.color === "grey") {
             text += "⬜";
           }

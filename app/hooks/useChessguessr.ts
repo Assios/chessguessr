@@ -13,6 +13,8 @@ export enum GameStatus {
   FAILED = "FAILED",
 }
 
+const chessCols = "abcdefgh";
+
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
 const useChessguessr = (game: Game) => {
@@ -108,7 +110,12 @@ const useChessguessr = (game: Game) => {
         formattedGuess[i].color = "yellow";
       }
 
-      if (move.color !== "green" && solutionArray[i][0] === move.move[0]) {
+      if (
+        move.color !== "green" &&
+        (solutionArray[i][0] === move.move[0] ||
+          (chessCols.includes(solutionArray[i][0]) &&
+            chessCols.includes(move.move[0])))
+      ) {
         formattedGuess[i].pieceColor = "blue";
       }
 
