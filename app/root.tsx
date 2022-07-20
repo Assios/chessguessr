@@ -31,6 +31,18 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Chessguessr",
+  description: "Guess the continuation of the chess game",
+  "og:title": "Chessguessr – Guess the continuation of the chess game",
+  "og:description":
+    "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
+  "og:image":
+    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
+  "twitter:title": "Chessguessr – Guess the continuation of a chess game",
+  "twitter:description":
+    "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
+  "twitter:image":
+    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
+  "twitter:card": "summary_large_image",
   viewport: "width=device-width,initial-scale=1",
 });
 
