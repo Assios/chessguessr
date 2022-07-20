@@ -31,6 +31,10 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Chessguessr",
+  description: "Guess the continuation of the chess game",
+  "og:title": "Chessguessr",
+  "og:description": "Guess the continuation of the chess game",
+  "og:image": "/chessguessr.png",
   viewport: "width=device-width,initial-scale=1",
 });
 
