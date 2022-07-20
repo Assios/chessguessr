@@ -8,9 +8,10 @@ Chessguessr is a game where you try to guess the next moves in a chessgame. All 
 
 Like Wordle, or Chessle, you are given hints after each guess.
 
-* 🟩 indicates that the move is correct.
-* 🟨 indicates that the move is correct, but in the wrong place.
-* ⬜ indicates that the move  is wrong.
+- 🟩 indicates that the move is correct.
+- 🟨 indicates that the move is correct, but in the wrong place.
+- 🟥 indicates that the correct piece type was moved (but not necessarily the exact same piece).
+- ⬜ indicates that the move is wrong.
 
 ## Development
 
