@@ -121,12 +121,13 @@ interface TileProps {
   pieceColor?: string;
   current?: boolean;
   animationIndex?: number;
+  tutorial?: boolean;
 }
 
 export const Tile = styled.div<TileProps>`
-  width: 107px;
-  height: 107px;
-  line-height: 107px;
+  width: ${(props) => (props.tutorial ? "60px" : "107px")};
+  height: ${(props) => (props.tutorial ? "60px" : "107px")};
+  line-height: ${(props) => (props.tutorial ? "60px" : "107px")};
 
   display: block;
   border: 2px solid #d3d6da;
@@ -136,7 +137,7 @@ export const Tile = styled.div<TileProps>`
   margin: 3px;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: ${(props) => (props.tutorial ? "1rem" : "1.5rem")};
   user-select: none;
   box-sizing: border-box;
 
