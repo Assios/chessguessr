@@ -48,7 +48,9 @@ export default function TutorialModal({
                   <Tile tutorial={true}>Qd6</Tile>
                   <Tile tutorial={true}>Rxd4</Tile>
                 </TutorialVariation>
-                <p className="text-lg mb-6">Ne4 is in the correct place</p>
+                <p className="text-lg mb-6">
+                  Nd5 is the correct move in the correct spot.
+                </p>
                 <TutorialVariation>
                   <Tile tutorial={true}>Be6</Tile>
                   <Tile
@@ -82,9 +84,9 @@ export default function TutorialModal({
                   <Tile tutorial={true}>Be7#</Tile>
                 </TutorialVariation>
                 <p className="text-lg mb-6">
-                  The same piece-type was played, but the move is wrong. In this
-                  case, a knight was played, but not necessarily the same
-                  knight.
+                  The same piece-type was played in this spot, but the move is
+                  wrong. In this case, a knight was played, but not necessarily
+                  the same knight.
                 </p>
                 <p className="my-4 text-slate-500 text-lg leading-relaxed font-bold">
                   A new position will appear every day.
