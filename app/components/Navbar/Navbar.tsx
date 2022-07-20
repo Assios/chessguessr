@@ -1,3 +1,5 @@
+import { AiOutlineArrowLeft } from "react-icons/ai";
+
 export const Navbar = ({ setShowModal, setShowTutorial }) => {
   return (
     <div className="navbar bg-primary text-primary-content">
@@ -21,6 +23,12 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
             <span className="badge badge-xs badge-accent indicator-item"></span>
           </div>
         </button>
+        <span
+          className="font-semibold sm:block hidden"
+          onClick={setShowTutorial}
+        >
+          New: A third (red) color has been introduced
+        </span>
       </div>
       <div className="navbar-center">
         <a className="btn btn-ghost normal-case text-2xl">Chessguessr</a>
