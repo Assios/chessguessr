@@ -245,7 +245,7 @@ export default function Modal({
                     >
                       file an issue
                     </a>{" "}
-                    on Github .
+                    on Github.
                   </p>
                 </div>
 
