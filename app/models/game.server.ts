@@ -334,7 +334,7 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-07-22",
-      fen: "2kr4/1pp2ppp/5nb1/p3b3/1q3PP1/2N4P/PPPBB3/1KQ1R3 b - - 0 19",
+      fen: "r5k1/ppq2pp1/3b2p1/2n2P2/2B1r2B/P3p3/1PP1Q1PP/R4R1K w - - 2 22",
       solution: ["fxg6", "Rxh4", "Rxf7", "Rxh2", "Kg1"],
       gameUrl: "https://lichess.org/8tstxXga/white#42",
       white: "GM TSMFTXH",
