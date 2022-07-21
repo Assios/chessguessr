@@ -235,8 +235,17 @@ export default function Modal({
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
                       href="https://lichess.org/Assios"
                     >
-                      DM Assios on Lichess.
-                    </a>
+                      DM Assios{" "}
+                    </a>{" "}
+                    on Lichess or{" "}
+                    <a
+                      target="_blank"
+                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                      href="https://github.com/Assios/chessguessr"
+                    >
+                      file an issue
+                    </a>{" "}
+                    on Github .
                   </p>
                 </div>
 
