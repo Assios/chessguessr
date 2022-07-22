@@ -117,9 +117,15 @@ export const Chessguessr = ({
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
-              {white} ({wRating}) – {black} ({bRating})
-            </p>
+            {wRating && bRating ? (
+              <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
+                {white} ({wRating}) – {black} ({bRating})
+              </p>
+            ) : (
+              <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
+                {white} – {black}
+              </p>
+            )}
             {position && (
               <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
                 {colorToPlay === "b" ? "Black" : "White"} to play
