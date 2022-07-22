@@ -74,7 +74,7 @@ export const Chessguessr = ({
 
   const size = useWindowSize();
 
-  const { white, black, wRating, bRating } = game;
+  const { white, black, wRating, bRating, wAka, bAka } = game;
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {

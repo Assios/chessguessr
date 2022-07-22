@@ -350,6 +350,7 @@ export async function getGames(): Promise<Array<Game>> {
       gameUrl: "https://lichess.org/0GPeQ9Gs#54",
       white: "GM TSMFTXH",
       black: "Mardan0212",
+      wAka: "Hikaru Nakamura",
       wRating: "2276?",
       bRating: "2413",
       id: 32,
