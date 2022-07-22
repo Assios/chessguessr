@@ -5,8 +5,8 @@ export type Game = {
   gameUrl: string;
   white: string;
   black: string;
-  wRating: number;
-  bRating: number;
+  wRating: number | string;
+  bRating: number | string;
   id: number;
 };
 
