@@ -42,15 +42,20 @@ const index = () => {
 
   console.log("d", data);
   return (
-    <div>
-      <Form method="post">
+    <div className="w-1/3">
+      <Form method="post" style={{ display: "flex", flexDirection: "column" }}>
+        <label htmlFor="lichess-game">Lichess game</label>
         <input
           className="block border-2 mb-2"
           type="text"
           name="lichess-game"
         />
+
+        <label htmlFor="move-number">Move number</label>
         <input className="block border-2" type="number" name="move-number" />
-        <button type="submit">Submit game</button>
+        <button className="btn btn-primary" type="submit">
+          Submit game
+        </button>
       </Form>
     </div>
   );
