@@ -343,5 +343,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2632,
       id: 31,
     },
+    {
+      date: "2022-07-23",
+      fen: "1r5r/p3pk1p/2pp1p2/5R2/2P1P1Q1/2qPB3/b1P3PP/5RK1 w - - 9 28",
+      solution: ["e5", "dxe5", "Rxf6+", "exf6", "Qd7+"],
+      gameUrl: "https://lichess.org/0GPeQ9Gs#54",
+      white: "GM TSMFTXH",
+      black: "Mardan0212",
+      wAka: "Hikaru Nakamura",
+      wRating: "2276?",
+      bRating: "2413",
+      id: 32,
+    },
   ];
 }
