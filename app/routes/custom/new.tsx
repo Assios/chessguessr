@@ -5,8 +5,18 @@ import * as ChessJS from "chess.js";
 import { Chessboard } from "react-chessboard";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import styled from "styled-components";
+import { Tile } from "~/styles/styles";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
+
+const TutorialVariation = styled.div`
+  display: flex;
+
+  justify-content: center;
+
+  flex-direction: row;
+  margin-top: 0.5rem;
+`;
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -82,7 +92,7 @@ const index = () => {
   const data = useActionData();
 
   const getBoardWidth = () => {
-    let width = 370;
+    let width = 327;
 
     if (size.width < 451) width = 310;
 
@@ -159,6 +169,22 @@ const index = () => {
               />
             )}
           </ChessboardWrapper>
+          <TutorialVariation>
+            {data.solution?.map((move, i) => (
+              <Tile
+                color="green"
+                flipTile={true}
+                animationIndex={i * 0.2}
+                tutorial={true}
+              >
+                {move}
+              </Tile>
+            ))}
+          </TutorialVariation>
+          <p className="sm:text-md mt-6 text-center content-center">
+            Click to upload this position:{" "}
+            <button className="btn btn-xs">Upload</button>
+          </p>
         </div>
       )}
     </div>
