@@ -8,3 +8,20 @@ export const arraysEqual = (a: any, b: any) => {
   }
   return true;
 };
+
+export const numberToLetters = (number: number): string => {
+  const letters = "abcdefghijklmnopqrstuvwxyz";
+
+  let res = "";
+  let a = number - 1;
+  while (true) {
+    const remainder = a % letters.length;
+    res = letters[remainder] + res;
+    if (a < letters.length) {
+      break;
+    }
+    a = Math.floor(a / letters.length) - 1;
+  }
+
+  return res;
+};

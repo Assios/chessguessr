@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Form, useActionData } from "@remix-run/react";
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import { Chessboard } from "react-chessboard";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import styled from "styled-components";
 import { Tile } from "~/styles/styles";
 import { getPosition } from "~/models/game.server";
+import { doc, addDoc, collection, setDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
+import { numberToLetters } from "~/utils/utils";
 
 const FormContent = styled.div``;
 
@@ -45,6 +48,9 @@ export async function action({ request }) {
 const index = () => {
   const size = useWindowSize();
   const data = useActionData();
+  const [addedGame, setAddedGame] = useState(false);
+  const [moveNumberInput, setMoveNumberInput] = useState("");
+  const [moveNumber, setMoveNumber] = useState("");
 
   const getBoardWidth = () => {
     let width = 327;
@@ -54,7 +60,24 @@ const index = () => {
     return width;
   };
 
-  console.log("d", data);
+  const uploadGame = async (e) => {
+    e.preventDefault();
+    setAddedGame(false);
+
+    const gameId = data?.game?.id + numberToLetters(parseInt(moveNumber, 10));
+
+    await setDoc(doc(db, "games", gameId), {
+      white: data?.game?.players?.white?.user?.name,
+      black: data?.game?.players?.black?.user?.name,
+      whiteRating: data?.game?.players?.white?.rating,
+      blackRating: data?.game?.players?.black?.rating,
+      fen: data.fen,
+      gameUrl: "jifow",
+      solution: data.solution,
+    }).then(() => {
+      setAddedGame(true);
+    });
+  };
 
   return (
     <Form method="post" className="flex flex-row justify-between">
@@ -91,6 +114,10 @@ const index = () => {
                 className="input input-bordered w-full max-w-xs"
                 type="text"
                 name="move-number"
+                value={moveNumberInput}
+                onChange={(e) => {
+                  setMoveNumberInput(e.target.value);
+                }}
               />
             </div>
 
@@ -100,6 +127,9 @@ const index = () => {
                 type="submit"
                 name="intent"
                 value="get-position"
+                onClick={() => {
+                  setMoveNumber(moveNumberInput);
+                }}
               >
                 Get position
               </button>
@@ -142,7 +172,7 @@ const index = () => {
               </TutorialVariation>
               <p className="sm:text-md mt-6 text-center content-center">
                 Click to upload this position:{" "}
-                <button className="btn btn-xs" name="intent" value="upload">
+                <button className="btn btn-xs" onClick={uploadGame}>
                   Upload
                 </button>
               </p>
