@@ -49,6 +49,7 @@ export const Chessguessr = ({
   showTutorial,
   setShowTutorial,
   setTutorial,
+  firebaseStats,
 }: {
   game: Game;
   stats?: any;
@@ -57,6 +58,7 @@ export const Chessguessr = ({
   showTutorial: boolean;
   setShowTutorial: any;
   setTutorial: any;
+  firebaseStats: boolean;
 }) => {
   const {
     currentGuess,
@@ -70,7 +72,7 @@ export const Chessguessr = ({
     playerStats,
     gameStatus,
     colorToPlay,
-  } = useChessguessr(game);
+  } = useChessguessr(game, firebaseStats);
 
   const size = useWindowSize();
 

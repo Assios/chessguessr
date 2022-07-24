@@ -47,6 +47,7 @@ export default function Index() {
             setTutorial={setTutorial}
             game={game}
             stats={stats}
+            firebaseStats={false}
           />
         )}
       </div>

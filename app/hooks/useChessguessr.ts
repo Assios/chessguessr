@@ -17,7 +17,7 @@ const chessCols = "abcdefgh";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
-const useChessguessr = (game: Game) => {
+const useChessguessr = (game: Game, firebaseStats: boolean) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guesses, setGuesses] = useState([
@@ -148,7 +148,9 @@ const useChessguessr = (game: Game) => {
         };
       });
 
-      incrementFailed(game.id);
+      if (firebaseStats) {
+        incrementFailed(game.id);
+      }
     }
 
     newGuesses[turn] = formattedGuess;
@@ -181,7 +183,9 @@ const useChessguessr = (game: Game) => {
         };
       });
 
-      incrementSolved(game.id, turn + 1);
+      if (firebaseStats) {
+        incrementSolved(game.id, turn + 1);
+      }
     } else {
       setPosition(new Chess(game.fen));
     }

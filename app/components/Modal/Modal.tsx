@@ -31,8 +31,8 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
     <div className="relative p-6 flex-auto">
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
-        {game.wAka && `(${game.wAka})`} and {game.black}{" "}
-        {game.bAka && `(${game.bAka})`}. Check out the game{" "}
+        {game.wAka && `(${game.wAka})`} and {game.black}
+        {game.bAka && ` (${game.bAka})`}. Check out the game{" "}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href={game.gameUrl}
