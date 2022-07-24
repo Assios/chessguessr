@@ -402,5 +402,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: "2860",
       id: 33,
     },
+    {
+      date: "2022-07-25",
+      fen: "r1bq1rk1/p1p2ppp/2p2n2/3p4/1b2PB2/P1N5/1PPQBPPP/2KR3R b - - 0 11",
+      solution: ["Nxe4", "Qd4", "Nxc3", "bxc3", "Bxa3+"],
+      gameUrl: "https://lichess.org/A0IKJkoZ/black#21",
+      white: "GM Watneg",
+      black: "GM Moro183",
+      wRating: "2789",
+      bRating: "2700",
+      id: 34,
+    },
   ];
 }
