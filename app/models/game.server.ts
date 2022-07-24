@@ -1,4 +1,38 @@
+import { getIdFromUrl } from "~/utils/gameUtils";
 import { Game } from "~/utils/types";
+import * as ChessJS from "chess.js";
+
+const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
+
+export const getPosition = async function (body) {
+  const lichessUrl = body.get("lichess-game");
+  const moveNumber = parseInt(body.get("move-number"), 10);
+
+  const lichessId = getIdFromUrl(lichessUrl);
+
+  if (!lichessId) return;
+
+  const res = await fetch(`https://lichess.org/game/export/${lichessId}`, {
+    headers: new Headers({
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    }),
+  });
+
+  const data = await res.json();
+
+  const moves = await data.moves.split(" ");
+
+  const chess = new Chess();
+
+  for (let i = 0; i < moveNumber; i++) {
+    chess.move(moves[i]);
+  }
+
+  const solution = moves.slice(moveNumber, moveNumber + 5);
+
+  return { game: data, solution, fen: chess.fen() };
+};
 
 export async function getGames(): Promise<Array<Game>> {
   return [
