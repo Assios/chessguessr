@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Form, useActionData } from "@remix-run/react";
 import { json, redirect } from "@remix-run/node";
 import { Chessboard } from "react-chessboard";
@@ -6,7 +6,7 @@ import { useWindowSize } from "~/hooks/useWindowSize";
 import styled from "styled-components";
 import { Tile } from "~/styles/styles";
 import { getPosition } from "~/models/game.server";
-import { doc, addDoc, collection, setDoc } from "firebase/firestore";
+import { doc, addDoc, collection, setDoc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import { numberToLetters } from "~/utils/utils";
 
@@ -49,8 +49,19 @@ const index = () => {
   const size = useWindowSize();
   const data = useActionData();
   const [addedGame, setAddedGame] = useState<string>("");
+  const [gameExists, setGameExists] = useState<boolean>(false);
   const [moveNumberInput, setMoveNumberInput] = useState("");
   const [moveNumber, setMoveNumber] = useState("");
+
+  const [currentGameId, setCurrentGameId] = useState("");
+
+  useEffect(() => {
+    if (!data?.game?.id || moveNumber.length < 1) return;
+
+    setCurrentGameId(
+      data?.game?.id + numberToLetters(parseInt(moveNumber, 10))
+    );
+  }, [data, moveNumber]);
 
   const getBoardWidth = () => {
     let width = 327;
@@ -63,22 +74,30 @@ const index = () => {
   const uploadGame = async (e) => {
     e.preventDefault();
     setAddedGame("");
+    setGameExists(false);
 
-    const gameId = data?.game?.id + numberToLetters(parseInt(moveNumber, 10));
+    const docRef = doc(db, "games", currentGameId);
+    const docSnap = await getDoc(docRef);
 
-    await setDoc(doc(db, "games", gameId), {
-      white: data?.game?.players?.white?.user?.name,
-      black: data?.game?.players?.black?.user?.name,
-      whiteRating: data?.game?.players?.white?.rating,
-      blackRating: data?.game?.players?.black?.rating,
-      fen: data.fen,
-      gameUrl: "jifow",
-      solution: data.solution,
-    })
-      .then(() => {
-        setAddedGame(gameId);
+    if (docSnap.exists()) {
+      setGameExists(true);
+      console.log("Document exists.");
+      throw new Error("Document already exists");
+    } else {
+      await setDoc(doc(db, "games", currentGameId), {
+        white: data?.game?.players?.white?.user?.name,
+        black: data?.game?.players?.black?.user?.name,
+        whiteRating: data?.game?.players?.white?.rating,
+        blackRating: data?.game?.players?.black?.rating,
+        fen: data.fen,
+        gameUrl: "jifow",
+        solution: data.solution,
       })
-      .catch((err) => console.log("err", err));
+        .then(() => {
+          setAddedGame(currentGameId);
+        })
+        .catch((err) => console.log("err", err));
+    }
   };
 
   return (
@@ -181,6 +200,11 @@ const index = () => {
               {addedGame && (
                 <p className="sm:text-md mt-6 text-center content-center">
                   {addedGame} uploaded.
+                </p>
+              )}
+              {gameExists && (
+                <p className="sm:text-md mt-6 text-center content-center">
+                  This game has already been uploaded from the same position.
                 </p>
               )}
             </div>
