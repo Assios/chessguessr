@@ -3,6 +3,15 @@ import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
 import { GameStatus } from "~/hooks/useChessguessr";
+import styled from "styled-components";
+import { Tile } from "~/styles/styles";
+
+const TutorialVariation = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 0.5rem;
+`;
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -68,9 +77,21 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
 
   return (
     <div className="relative p-6 flex-auto">
+      <TutorialVariation>
+        {game.solution?.map((move, i) => (
+          <Tile
+            color="green"
+            flipTile={true}
+            animationIndex={i * 0.2}
+            tutorial={true}
+          >
+            {move}
+          </Tile>
+        ))}
+      </TutorialVariation>
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white} and {game.black}. Check out
-        the game (and the solution){" "}
+        the game{" "}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href={game.gameUrl}
