@@ -29,7 +29,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
                 color={move.color}
                 pieceColor={move.pieceColor}
                 flipTile={true}
-                animationIndex={i}
+                animationIndex={i * 0.2}
               >
                 {move.move}
               </Tile>
