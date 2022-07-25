@@ -48,7 +48,7 @@ export async function action({ request }) {
 const index = () => {
   const size = useWindowSize();
   const data = useActionData();
-  const [addedGame, setAddedGame] = useState(false);
+  const [addedGame, setAddedGame] = useState<string>("");
   const [moveNumberInput, setMoveNumberInput] = useState("");
   const [moveNumber, setMoveNumber] = useState("");
 
@@ -62,7 +62,7 @@ const index = () => {
 
   const uploadGame = async (e) => {
     e.preventDefault();
-    setAddedGame(false);
+    setAddedGame("");
 
     const gameId = data?.game?.id + numberToLetters(parseInt(moveNumber, 10));
 
@@ -74,9 +74,11 @@ const index = () => {
       fen: data.fen,
       gameUrl: "jifow",
       solution: data.solution,
-    }).then(() => {
-      setAddedGame(true);
-    });
+    })
+      .then(() => {
+        setAddedGame(gameId);
+      })
+      .catch((err) => console.log("err", err));
   };
 
   return (
@@ -176,6 +178,11 @@ const index = () => {
                   Upload
                 </button>
               </p>
+              {addedGame && (
+                <p className="sm:text-md mt-6 text-center content-center">
+                  {addedGame} uploaded.
+                </p>
+              )}
             </div>
           </BoardContent>
         )}
