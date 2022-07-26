@@ -269,15 +269,15 @@ export default function Modal({
 
                 <div className="relative pl-6 flex-auto">
                   <p className="mt-4 mb-4 text-md">
-                    Feedback?{" "}
+                    Feedback? Post in the{" "}
                     <a
                       target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="https://lichess.org/Assios"
+                      href="https://lichess.org/team/chessguessr"
                     >
-                      DM Assios{" "}
+                      Lichess team forum
                     </a>{" "}
-                    on Lichess or{" "}
+                    or{" "}
                     <a
                       target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"

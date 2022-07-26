@@ -30,7 +30,7 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
         <label className="swap swap-rotate">
           <input
             type="checkbox"
-            data-toggle-theme="cupcake,lichess"
+            data-toggle-theme="cupcake,night"
             data-act-class="ACTIVECLASS"
           />
 
