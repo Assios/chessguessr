@@ -97,9 +97,8 @@ export const Chessguessr = ({
     return width;
   };
 
-  const setGuess = () => {};
-  useHotkeys('Backspace', takeback, [currentGuess, fenHistory]);
-  useHotkeys('Enter', submitGuess, [currentGuess]);
+  useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Enter", submitGuess, [currentGuess]);
 
   return (
     <div>

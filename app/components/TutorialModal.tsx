@@ -27,6 +27,7 @@ export default function TutorialModal({
                 <div className="flex items-start justify-between p-5 rounded-t">
                   <h3 className="text-3xl font-semibold">How to play</h3>
                 </div>
+                <div className="divider" />
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5

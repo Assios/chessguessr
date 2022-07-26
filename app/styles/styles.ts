@@ -56,7 +56,7 @@ const bounce = () => keyframes`
     }
 `;
 
-const flip = (c: any, pieceColor: any) => keyframes`
+const flip = (c: string, pieceColor: string) => keyframes`
   0% {
     transform: rotateX(0deg);
     border-color: #787C7E;
@@ -116,12 +116,12 @@ export const StyledRow = styled.div<StyledRowProps>`
 `;
 
 interface TileProps {
-  flipTile?: boolean;
   color?: string;
   pieceColor?: string;
   current?: boolean;
   animationIndex?: number;
   tutorial?: boolean;
+  flipTile?: boolean;
 }
 
 export const Tile = styled.div<TileProps>`
@@ -142,7 +142,6 @@ export const Tile = styled.div<TileProps>`
   box-sizing: border-box;
 
   border-color: #787c7e;
-  animation: ${flip} 0.5s ease forwards;
 
   @media (max-width: 580px) {
     width: 70px;
