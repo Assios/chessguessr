@@ -12,7 +12,7 @@ const ChessboardWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   touch-action: manipulation;
 `;
@@ -146,7 +146,7 @@ export const Chessguessr = ({
           </ChessboardWrapper>
           <Buttons>
             <button
-              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2"
+              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2 mb-4"
               onClick={takeback}
             >
               <svg
@@ -161,7 +161,7 @@ export const Chessguessr = ({
             </button>
 
             <button
-              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
+              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2 mb-4"
               onClick={submitGuess}
             >
               Submit
