@@ -95,6 +95,8 @@ export const Chessguessr = ({
     return width;
   };
 
+  const setGuess = () => {};
+
   return (
     <div>
       <div>

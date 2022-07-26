@@ -38,20 +38,24 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
 
   return (
     <div className="relative p-6 flex-auto">
-      <span className="font-semibold">Solution</span>
-      <div className="flex flex-row mt-1">
-        {game.solution?.map((move, i) => (
-          <Tile
-            className="mr-[6px]"
-            color="green"
-            flipTile={true}
-            animationIndex={i * 0.2}
-            tutorial={true}
-          >
-            {move}
-          </Tile>
-        ))}
-      </div>
+      {game.gameStatus !== GameStatus.IN_PROGRESS && (
+        <>
+          <span className="font-semibold">Solution</span>
+          <div className="flex flex-row mt-1">
+            {game.solution?.map((move, i) => (
+              <Tile
+                className="mr-[6px]"
+                color="green"
+                flipTile={true}
+                animationIndex={i * 0.2}
+                tutorial={true}
+              >
+                {move}
+              </Tile>
+            ))}
+          </div>
+        </>
+      )}
       <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
@@ -92,20 +96,24 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
 
   return (
     <div className="relative p-6 flex-auto">
-      <span className="font-semibold">Solution</span>
-      <div className="flex flex-row mt-1">
-        {game.solution?.map((move, i) => (
-          <Tile
-            className="mr-[6px]"
-            color="green"
-            flipTile={true}
-            animationIndex={i * 0.2}
-            tutorial={true}
-          >
-            {move}
-          </Tile>
-        ))}
-      </div>
+      {game.gameStatus !== GameStatus.IN_PROGRESS && (
+        <>
+          <span className="font-semibold">Solution</span>
+          <div className="flex flex-row mt-1">
+            {game.solution?.map((move, i) => (
+              <Tile
+                className="mr-[6px]"
+                color="green"
+                flipTile={true}
+                animationIndex={i * 0.2}
+                tutorial={true}
+              >
+                {move}
+              </Tile>
+            ))}
+          </div>
+        </>
+      )}
       <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white} and {game.black}. Check out
