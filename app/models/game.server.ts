@@ -392,6 +392,18 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-07-27",
+      fen: "r1bqkb1r/pp2pppp/2np1n2/8/2B1P3/2N2N2/PP3PPP/R1BQK2R w KQkq - 2 7",
+      solution: ["e5", "Nxe5", "Nxe5", "dxe5", "Bxf7+"],
+      gameUrl: "https://lichess.org/YiYYk1jZ/white#12",
+      white: "EricRosen",
+      black: "kurcho1",
+      wRating: 2629,
+      bRating: 1863,
+      id: 36,
+    },
+
+    {
+      date: "2022-07-28",
       fen: "2kr1b1r/pp1bpp1p/6p1/3BP3/Q7/4PN2/Pq1NK1P1/7R w - - 5 18",
       solution: ["Qc4+", "Kb8", "Rb1", "Bb5", "Rxb2"],
       gameUrl: "https://lichess.org/XON9GZ2p/white#34",
@@ -399,10 +411,10 @@ export async function getGames(): Promise<Array<Game>> {
       black: "mbakkor",
       wRating: 2471,
       bRating: 2321,
-      id: 36,
+      id: 37,
     },
     {
-      date: "2022-07-28",
+      date: "2022-07-29",
       fen: "1r4k1/2Q3p1/R6p/1pBb1p2/3PqP2/6P1/3KP2P/8 b - - 4 45",
       solution: ["Re8", "Qe5", "Rxe5", "fxe5", "Bc4"],
       gameUrl: "https://lichess.org/5SAtZQjk/black#89",
@@ -410,10 +422,10 @@ export async function getGames(): Promise<Array<Game>> {
       black: "FM Zhalmakhanov_R",
       wRating: 2989,
       bRating: 2905,
-      id: 37,
+      id: 38,
     },
     {
-      date: "2022-07-29",
+      date: "2022-07-30",
       fen: "rn1q1rk1/p4ppp/1pb1pb2/4N3/3Q1B2/2n3P1/PP2PPBP/R3R1K1 w - - 0 14",
       solution: ["Qxd8", "Rxd8", "Nxc6", "Nxc6", "Bxc6"],
       gameUrl: "https://lichess.org/xjx7F8Nn/white#26",
@@ -421,7 +433,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "Traptical",
       wRating: 2898,
       bRating: 2853,
-      id: 38,
+      id: 39,
     },
   ];
 }
