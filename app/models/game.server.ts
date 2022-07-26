@@ -395,7 +395,7 @@ export async function getGames(): Promise<Array<Game>> {
       fen: "r1bqkb1r/pp2pppp/2np1n2/8/2B1P3/2N2N2/PP3PPP/R1BQK2R w KQkq - 2 7",
       solution: ["e5", "Nxe5", "Nxe5", "dxe5", "Bxf7+"],
       gameUrl: "https://lichess.org/YiYYk1jZ/white#12",
-      white: "EricRosen",
+      white: "GM EricRosen",
       black: "kurcho1",
       wRating: 2629,
       bRating: 1863,
