@@ -7,13 +7,13 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
       <StyledRow insufficientMoves={insufficientMoves}>
         {currentGuess.map((g: any, i: any) => {
           return (
-            <Tile key={i} current={true}>
+            <Tile className="m-[3px]" key={i} current={true}>
               {g}
             </Tile>
           );
         })}
         {[...Array(5 - currentGuess.length)].map((_, i) => (
-          <Tile key={i}></Tile>
+          <Tile className="m-[3px]" key={i}></Tile>
         ))}
       </StyledRow>
     );
@@ -26,6 +26,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
           if (move) {
             return (
               <Tile
+                className="m-[3px]"
                 color={move.color}
                 pieceColor={move.pieceColor}
                 flipTile={true}
@@ -35,7 +36,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
               </Tile>
             );
           } else {
-            return <Tile />;
+            return <Tile className="m-[3px]" />;
           }
         })}
       </StyledRow>
@@ -44,11 +45,11 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
 
   return (
     <StyledRow>
-      <Tile className="bg-primary"></Tile>
-      <Tile className="bg-primary"></Tile>
-      <Tile className="bg-primary"></Tile>
-      <Tile className="bg-primary"></Tile>
-      <Tile className="bg-primary"></Tile>
+      <Tile className="bg-primary m-[3px]"></Tile>
+      <Tile className="bg-primary m-[3px]"></Tile>
+      <Tile className="bg-primary m-[3px]"></Tile>
+      <Tile className="bg-primary m-[3px]"></Tile>
+      <Tile className="bg-primary m-[3px]"></Tile>
     </StyledRow>
   );
 };

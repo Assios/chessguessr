@@ -134,7 +134,7 @@ export const Tile = styled.div<TileProps>`
 
   justify-content: center;
   align-content: center;
-  margin: 3px;
+
   text-align: center;
   font-weight: bold;
   font-size: ${(props) => (props.tutorial ? "1rem" : "1.5rem")};
