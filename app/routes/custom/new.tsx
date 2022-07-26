@@ -107,7 +107,7 @@ const index = () => {
           <div className="space-y-4 mb-10">
             <h1 className="font-bold text-3xl xl:text-4xl">
               Create your own{" "}
-              <span className="text-primary">Chessguessr puzzle</span>
+              <span className="text-success">Chessguessr puzzle</span>
             </h1>
             <p className="text-gray-500 text-xl max-w-xl leading-relaxed">
               Submit your own Lichess game and get a Chessguessr url.
@@ -182,6 +182,7 @@ const index = () => {
               <TutorialVariation>
                 {data.solution?.map((move, i) => (
                   <Tile
+                    className="mr-[6px]"
                     color="green"
                     flipTile={true}
                     animationIndex={i * 0.2}
