@@ -61,7 +61,7 @@ export default function App() {
   };
 
   return (
-    <html data-theme="cupcake" lang="en">
+    <html data-theme="corporate" lang="en">
       <head>
         <script
           defer
