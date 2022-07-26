@@ -278,6 +278,7 @@ const useChessguessr = (game: Game) => {
     playerStats,
     gameStatus,
     colorToPlay,
+    fenHistory,
   };
 };
 

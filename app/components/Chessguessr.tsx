@@ -7,6 +7,7 @@ import Modal from "./Modal/Modal";
 import { Game } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -70,6 +71,7 @@ export const Chessguessr = ({
     playerStats,
     gameStatus,
     colorToPlay,
+    fenHistory,
   } = useChessguessr(game);
 
   const size = useWindowSize();
@@ -96,6 +98,8 @@ export const Chessguessr = ({
   };
 
   const setGuess = () => {};
+  useHotkeys('Backspace', takeback, [currentGuess, fenHistory]);
+  useHotkeys('Enter', submitGuess, [currentGuess]);
 
   return (
     <div>
