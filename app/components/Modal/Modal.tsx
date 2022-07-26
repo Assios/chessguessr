@@ -3,6 +3,15 @@ import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
 import { GameStatus } from "~/hooks/useChessguessr";
+import styled from "styled-components";
+import { Tile } from "~/styles/styles";
+
+const TutorialVariation = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 0.5rem;
+`;
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -29,6 +38,22 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
 
   return (
     <div className="relative p-6 flex-auto">
+      <span className="font-semibold">Solution</span>
+      <div className="flex flex-row mt-1">
+        {game.solution?.map((move, i) => (
+          <Tile
+            className="mr-[6px]"
+            color="green"
+            flipTile={true}
+            animationIndex={i * 0.2}
+            tutorial={true}
+          >
+            {move}
+          </Tile>
+        ))}
+      </div>
+
+      <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
@@ -44,10 +69,10 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
       </p>
       {solvedPercentage && averageNumberOfTurns && (
         <>
-          <h1 className="my-4  text-lg leading-relaxed">
+          <p className="my-4 text-lg leading-relaxed">
             {solvedPercentage}% got this one right. For the people that got it
             right, the average number of turns was {averageNumberOfTurns}.
-          </h1>
+          </p>
           {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
             <div className="w-full h-full bg-gray-300 absolute"></div>
             <div
@@ -68,9 +93,25 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
 
   return (
     <div className="relative p-6 flex-auto">
+      <span className="font-semibold">Solution</span>
+      <div className="flex flex-row mt-1">
+        {game.solution?.map((move, i) => (
+          <Tile
+            className="mr-[6px]"
+            color="green"
+            flipTile={true}
+            animationIndex={i * 0.2}
+            tutorial={true}
+          >
+            {move}
+          </Tile>
+        ))}
+      </div>
+
+      <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white} and {game.black}. Check out
-        the game (and the solution){" "}
+        the game{" "}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href={game.gameUrl}
@@ -210,7 +251,7 @@ export default function Modal({
 
                 <StatsCards playerStats={playerStats} />
 
-                {playerStats.gamesPlayed ? (
+                {gameStatus !== GameStatus.IN_PROGRESS ? (
                   <>
                     {gameStatus === GameStatus.SOLVED ? (
                       <Correct
@@ -230,15 +271,15 @@ export default function Modal({
 
                 <div className="relative pl-6 flex-auto">
                   <p className="mt-4 mb-4 text-md">
-                    Feedback?{" "}
+                    Feedback? Post in the{" "}
                     <a
                       target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="https://lichess.org/Assios"
+                      href="https://lichess.org/team/chessguessr"
                     >
-                      DM Assios{" "}
+                      Lichess team forum
                     </a>{" "}
-                    on Lichess or{" "}
+                    or{" "}
                     <a
                       target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"

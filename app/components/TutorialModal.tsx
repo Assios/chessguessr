@@ -34,9 +34,10 @@ export default function TutorialModal({
                     of the tile will show how close you were.
                   </p>
                   <h3 className="text-xl font-semibold mb-2">Examples</h3>
-                  <hr />
+                  <div className="divider" />
                   <TutorialVariation>
                     <Tile
+                      className="m-[3px]"
                       color="green"
                       flipTile={true}
                       animationIndex={1}
@@ -44,17 +45,28 @@ export default function TutorialModal({
                     >
                       Nd5
                     </Tile>
-                    <Tile tutorial={true}>Nbxd5</Tile>
-                    <Tile tutorial={true}>exd5</Tile>
-                    <Tile tutorial={true}>Qd6</Tile>
-                    <Tile tutorial={true}>Rxd4</Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Nbxd5
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      exd5
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Qd6
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Rxd4
+                    </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
                     Nd5 is the correct move in the correct spot.
                   </p>
                   <TutorialVariation>
-                    <Tile tutorial={true}>Be6</Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Be6
+                    </Tile>
                     <Tile
+                      className="m-[3px]"
                       color="yellow"
                       flipTile={true}
                       animationIndex={3}
@@ -62,18 +74,31 @@ export default function TutorialModal({
                     >
                       Bxb6
                     </Tile>
-                    <Tile tutorial={true}>Bxc4+</Tile>
-                    <Tile tutorial={true}>Kg1</Tile>
-                    <Tile tutorial={true}>Ne2+</Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Bxc4+
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Kg1
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Ne2+
+                    </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
                     The move Bxb6 is in the played line, but in the wrong spot.
                   </p>
                   <TutorialVariation>
-                    <Tile tutorial={true}>Nxg7</Tile>
-                    <Tile tutorial={true}>Kd8</Tile>
-                    <Tile tutorial={true}>Qf6+</Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Nxg7
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Kd8
+                    </Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Qf6+
+                    </Tile>
                     <Tile
+                      className="m-[3px]"
                       color="grey"
                       pieceColor="red"
                       flipTile={true}
@@ -82,15 +107,17 @@ export default function TutorialModal({
                     >
                       Nxf6
                     </Tile>
-                    <Tile tutorial={true}>Be7#</Tile>
+                    <Tile className="m-[3px]" tutorial={true}>
+                      Be7#
+                    </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
                     The same piece-type was played in this spot, but the move is
                     wrong. In this case, a knight was played, but not
                     necessarily the same knight.
                   </p>
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed font-bold">
-                    A new position will appear every day.
+                  <p className="my-4 text-lg leading-relaxed font-bold">
+                    A new position will appear every day at midnight UTC.
                   </p>
                 </div>
                 <div className="flex items-center justify-end p-6 rounded-b">

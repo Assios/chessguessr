@@ -82,7 +82,7 @@ export const Chessguessr = ({
     if (gameStatus !== GameStatus.IN_PROGRESS) {
       setTimeout(function () {
         setShowModal(true);
-      }, 1600);
+      }, 1000);
     } else {
       setShowModal(false);
     }
@@ -96,6 +96,8 @@ export const Chessguessr = ({
 
     return width;
   };
+
+  const setGuess = () => {};
 
   return (
     <div>
