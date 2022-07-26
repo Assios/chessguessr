@@ -2,7 +2,7 @@
 
 Chessguessr is a game where you try to guess the next moves in a chessgame. All positions are currently taken from games played on [Lichess](https://lichess.org).
 
-![](https://user-images.githubusercontent.com/1413265/179714835-ac3d2ce9-d014-42bd-9ce4-5236a86cb187.png)
+![](https://user-images.githubusercontent.com/1413265/181054468-38682e2f-837f-4ca2-94c0-f270bdc14488.png)
 
 ## Rules
 
