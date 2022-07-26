@@ -27,7 +27,7 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
         <a className="btn btn-ghost normal-case text-2xl">Chessguessr</a>
       </div>
       <div className="navbar-end">
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate btn btn-ghost btn-circle">
           <input
             type="checkbox"
             data-toggle-theme="corporate,lichess-dark"
