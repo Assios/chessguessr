@@ -21,6 +21,7 @@
     "chess.js": "^0.12.1",
     "daisyui": "^2.17.0",
     "firebase": "^9.8.4",
+    "plausible-tracker": "^0.3.8",
     "react": "^17.0.2",
     "react-chessboard": "^1.2.5",
     "react-countdown": "^2.3.2",

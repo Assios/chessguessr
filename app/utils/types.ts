@@ -26,3 +26,9 @@ export interface RowProps {
   currentGuess: Guess;
   insufficientMoves: boolean;
 }
+
+export enum GameStatus {
+  IN_PROGRESS = "IN_PROGRESS",
+  SOLVED = "SOLVED",
+  FAILED = "FAILED",
+}
