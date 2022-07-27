@@ -76,7 +76,7 @@ export const Chessguessr = ({
 
   const size = useWindowSize();
 
-  const { white, black, wRating, bRating, wAka, bAka } = game;
+  const { white, black, wRating, bRating, wTitle, bTitle, wAka, bAka } = game;
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
@@ -123,7 +123,14 @@ export const Chessguessr = ({
         <BoardWrapper>
           <Players>
             <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
-              {white} ({wRating}) – {black} ({bRating})
+              {wTitle && (
+                <span className="text-secondary-content">{wTitle}</span>
+              )}{" "}
+              {white} ({wRating}) –{" "}
+              {bTitle && (
+                <span className="text-secondary-content">{bTitle}</span>
+              )}{" "}
+               {black} ({bRating})
             </p>
             {position && (
               <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">

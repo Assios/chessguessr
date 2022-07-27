@@ -7,6 +7,8 @@ export type Game = {
   black: string;
   wAka?: string;
   bAka?: string;
+  wTitle?: string;
+  bTitle?: string;
   wRating: number | string;
   bRating: number | string;
   id: number;
