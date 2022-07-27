@@ -2,9 +2,9 @@ import React from "react";
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
-import { GameStatus } from "~/hooks/useChessguessr";
 import styled from "styled-components";
 import { Tile } from "~/styles/styles";
+import { GameStatus } from "~/utils/types";
 
 const TutorialVariation = styled.div`
   display: flex;
