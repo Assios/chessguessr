@@ -1,5 +1,3 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
-
 export const Navbar = ({ setShowModal, setShowTutorial }) => {
   return (
     <div className="navbar bg-primary text-primary-content">

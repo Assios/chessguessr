@@ -1,17 +1,7 @@
-import React from "react";
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
-import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
-import styled from "styled-components";
 import { Tile } from "~/styles/styles";
 import { GameStatus } from "~/utils/types";
-
-const TutorialVariation = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 0.5rem;
-`;
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -73,13 +63,6 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
             {solvedPercentage}% got this one right. For the people that got it
             right, the average number of turns was {averageNumberOfTurns}.
           </p>
-          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 absolute"></div>
-            <div
-              className="h-full bg-green-500 absolute"
-              style={{ width: `${solvedPercentage}%` }}
-            ></div>
-      </div>*/}
         </>
       )}
     </div>
@@ -127,13 +110,6 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
             {solvedPercentage}% got this one right. For the people that got it
             right, the average number of turns was {averageNumberOfTurns}.
           </h1>
-          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 absolute"></div>
-            <div
-              className="h-full bg-green-500 absolute"
-              style={{ width: `${solvedPercentage}%` }}
-            ></div>
-      </div>*/}
         </>
       )}
     </div>
@@ -196,22 +172,6 @@ export default function Modal({
 
     return text;
   };
-
-  let tomorrow = new Date();
-  tomorrow.setDate(new Date().getDate() + 1);
-
-  const nextDate =
-    tomorrow.getFullYear().toString() +
-    "-" +
-    (tomorrow.getMonth() + 1).toString().padStart(2, 0) +
-    "-" +
-    tomorrow.getDate().toString();
-
-  const renderer = ({ hours, minutes, seconds }) => (
-    <span>
-      {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
-    </span>
-  );
 
   const shareGameText = getShareGameText(
     guesses,

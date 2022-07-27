@@ -30,7 +30,7 @@ export const Footer = () => {
         <a
           href="https://lichess.org/team/chessguessr"
           target="_blank"
-          className="mt-[2px] ml-1"
+          className="mt-[3px] ml-1"
         >
           <svg
             viewBox="-0.692 0.5 51.573 55.285"

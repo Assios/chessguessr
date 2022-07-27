@@ -16,10 +16,6 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
 
-const Content = styled.div`
-  flex: 1;
-`;
-
 export const links: LinksFunction = () => [
   {
     rel: "icon",
@@ -75,20 +71,13 @@ export default function App() {
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        {/*<script
-          defer
-          data-domain="chessguessr.com"
-          src="https://chessguessr-proxy.vercel.app/js/script.js"
-        ></script>*/}
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
-      <body
-        style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-      >
-        <Content>
+      <body className="min-h-screen flex flex-col">
+        <div className="flex-1">
           <Toaster />
           <Navbar
             setShowTutorial={setShowTutorial}
@@ -98,7 +87,7 @@ export default function App() {
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
-        </Content>
+        </div>
         <Footer />
       </body>
     </html>

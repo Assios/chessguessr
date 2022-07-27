@@ -1,16 +1,6 @@
 import { db } from "./firebaseConfig";
 
-import {
-  collection,
-  getDocs,
-  getDoc,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  setDoc,
-  doc,
-  increment,
-} from "firebase/firestore";
+import { setDoc, doc, increment } from "firebase/firestore";
 
 export const incrementSolved = (id: number, turns: number) => {
   const statsDoc = doc(db, "stats", id.toString());
