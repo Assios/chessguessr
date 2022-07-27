@@ -12,8 +12,9 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import Plausible from "plausible-tracker";
 
 const Content = styled.div`
   flex: 1;
@@ -52,22 +53,33 @@ export default function App() {
 
   const [showTutorial, setShowTutorial] = useState(!tutorial);
 
+  const { trackPageview, trackEvent } = Plausible({
+    domain: "chessguessr.com",
+    apiHost: "https://chessguessr-proxy.vercel.app",
+  });
+
   const context: any = {
     showTutorial,
     showModal,
     setShowModal,
     setShowTutorial,
     setTutorial,
+    trackPageview,
+    trackEvent,
   };
+
+  useEffect(() => {
+    trackPageview();
+  }, []);
 
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script
+        {/*<script
           defer
           data-domain="chessguessr.com"
           src="https://chessguessr-proxy.vercel.app/js/script.js"
-        ></script>
+        ></script>*/}
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />

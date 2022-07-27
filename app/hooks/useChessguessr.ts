@@ -4,14 +4,9 @@ import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
-import { Game } from "~/utils/types";
+import { Game, GameStatus } from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
-
-export enum GameStatus {
-  IN_PROGRESS = "IN_PROGRESS",
-  SOLVED = "SOLVED",
-  FAILED = "FAILED",
-}
+import { useOutletContext } from "@remix-run/react";
 
 const chessCols = "abcdefgh";
 
@@ -27,6 +22,8 @@ const useChessguessr = (game: Game) => {
     [null, null, null, null, null],
     [null, null, null, null, null],
   ]);
+
+  const { trackEvent }: any = useOutletContext();
 
   const [gameStatus, setGameStatus] = useState<GameStatus>(
     GameStatus.IN_PROGRESS
@@ -149,6 +146,7 @@ const useChessguessr = (game: Game) => {
       });
 
       incrementFailed(game.id);
+      trackEvent("Submit daily", { props: { result: "Failed" } });
     }
 
     newGuesses[turn] = formattedGuess;
@@ -182,6 +180,7 @@ const useChessguessr = (game: Game) => {
       });
 
       incrementSolved(game.id, turn + 1);
+      trackEvent("Submit daily", { props: { result: "Success" } });
     } else {
       setPosition(new Chess(game.fen));
     }
