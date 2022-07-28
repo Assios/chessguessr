@@ -5,7 +5,11 @@ export const Footer = () => {
   return (
     <footer className="footer items-center justify-center p-4 bg-primary text-primary-content">
       <div className="items-center grid-flow-col">
-        <a className="mr-1" href="https://twitter.com/Assios" target="_blank">
+        <a
+          className="mr-1"
+          href="https://twitter.com/chessguessr"
+          target="_blank"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
