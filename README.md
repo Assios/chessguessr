@@ -1,8 +1,10 @@
 # [Chessguessr](https://chessguessr.com)
 
-Chessguessr is a game where you try to guess the next moves in a chessgame. All positions are currently taken from games played on [Lichess](https://lichess.org).
+[![Twitter](https://img.shields.io/badge/Twitter-%40chessguessr-blue.svg)](https://twitter.com/chessguessr)
 
 ![](https://user-images.githubusercontent.com/1413265/181054468-38682e2f-837f-4ca2-94c0-f270bdc14488.png)
+
+Chessguessr is a game where you try to guess the next moves in a chessgame. All positions are currently taken from games played on [Lichess](https://lichess.org).
 
 ## Rules
 
