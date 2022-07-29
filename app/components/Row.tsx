@@ -26,6 +26,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
           if (move) {
             return (
               <Tile
+                key={i}
                 className="m-[3px]"
                 color={move.color}
                 pieceColor={move.pieceColor}
@@ -36,7 +37,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
               </Tile>
             );
           } else {
-            return <Tile className="m-[3px]" />;
+            return <Tile key={i} className="m-[3px]" />;
           }
         })}
       </StyledRow>
