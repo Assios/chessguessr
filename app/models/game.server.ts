@@ -428,5 +428,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3181,
       id: 38,
     },
+    {
+      date: "2022-07-30",
+      fen: "6k1/p1q2p1p/bp4p1/2pPN3/2n2Q2/3B4/P4PPP/6K1 w - - 0 30",
+      solution: ["d6", "Nxd6", "Bxa6", "b5", "Nxf7"],
+      gameUrl: "https://lichess.org/kms76085/white#58",
+      white: "GgangbuVip",
+      black: "howitzer14",
+      bTitle: "GM",
+      wRating: 2784,
+      bRating: 2938,
+      id: 39,
+    },
   ];
 }
