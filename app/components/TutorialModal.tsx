@@ -22,14 +22,14 @@ export default function TutorialModal({
       {showTutorial ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto mx-auto max-w-3xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none">
-                <div className="flex items-start justify-between p-5 rounded-t">
+                <div className="flex items-start justify-between pl-5 pt-5 rounded-t">
                   <h3 className="text-3xl font-semibold">How to play</h3>
                 </div>
                 <div className="divider" />
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-lg leading-relaxed">
+                <div className="relative pl-6 flex-auto">
+                  <p className="mb-6 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5
                     next moves played in the game. After each guess, the color
                     of the tile will show how close you were.
