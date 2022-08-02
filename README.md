@@ -1,6 +1,8 @@
 # [Chessguessr](https://chessguessr.com)
 
+
 [![Twitter](https://img.shields.io/badge/Twitter-%40chessguessr-blue.svg)](https://twitter.com/chessguessr)
+[![GPL 3.0 License][https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square]][license]
 
 ![](https://user-images.githubusercontent.com/1413265/181054468-38682e2f-837f-4ca2-94c0-f270bdc14488.png)
 
