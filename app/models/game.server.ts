@@ -492,5 +492,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2664,
       id: 43,
     },
+    {
+      date: "2022-08-04",
+      fen: "r1bq1rk1/pp1nbppp/2p5/3pP3/3P3P/3B1N2/PPP3P1/R1BQK2R w KQ - 0 11",
+      solution: ["Bxh7+", "Kxh7", "Ng5+", "Bxg5", "hxg5+"],
+      gameUrl: "https://lichess.org/OR3sRhmX/white#20",
+      white: "Kingscrusher-YouTube",
+      black: "SergejManojlovic",
+      wTitle: "CM",
+      wRating: 2502,
+      bRating: 2150,
+      id: 35,
+    },
   ];
 }
