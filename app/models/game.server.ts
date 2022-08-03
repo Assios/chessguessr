@@ -502,7 +502,7 @@ export async function getGames(): Promise<Array<Game>> {
       wTitle: "CM",
       wRating: 2502,
       bRating: 2150,
-      id: 35,
+      id: 44,
     },
   ];
 }
