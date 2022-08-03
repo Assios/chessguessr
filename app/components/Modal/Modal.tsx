@@ -2,6 +2,7 @@ import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import StatsCards from "./StatsCards";
 import { Tile } from "~/styles/styles";
 import { GameStatus } from "~/utils/types";
+import Distribution from "./Distribution";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -210,6 +211,10 @@ export default function Modal({
                 </div>
 
                 <StatsCards playerStats={playerStats} />
+
+                {playerStats?.guesses && (
+                  <Distribution guessDistribution={playerStats.guesses} />
+                )}
 
                 {gameStatus !== GameStatus.IN_PROGRESS ? (
                   <>
