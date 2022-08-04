@@ -29,13 +29,13 @@ export default function TutorialModal({
                 </div>
                 <div className="divider" />
                 <div className="relative pl-6 flex-auto">
-                  <p className="mb-6 text-lg leading-relaxed">
+                  <p className="mb-2 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5
                     next moves played in the game. After each guess, the color
-                    of the tile will show how close you were.
+                    of the tile will show how close you were (much like Wordle).
                   </p>
-                  <h3 className="text-xl font-semibold mb-2">Examples</h3>
                   <div className="divider" />
+                  <h3 className="text-xl font-semibold mb-2">Examples</h3>
                   <TutorialVariation>
                     <Tile
                       className="m-[3px]"
