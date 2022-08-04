@@ -504,5 +504,19 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2150,
       id: 44,
     },
+    {
+      date: "2022-08-05",
+      fen: "4rr1k/6b1/p5Pp/5q2/PP2R1QB/8/3p1PP1/1B1R2K1 b - - 0 42",
+      solution: ["Qxg4", "Rxg4", "Re1+", "Kh2", "Rxd1"],
+      gameUrl: "https://lichess.org/myHAhrVm/black#83",
+      white: "Zaven_ChessMood",
+      black: "manwithavan",
+      bAka: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2830,
+      bRating: 2762,
+      id: 45,
+    },
   ];
 }
