@@ -28,22 +28,7 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
 
   return (
-    <div className="relative p-6 flex-auto">
-      <span className="font-semibold">Solution</span>
-      <div className="flex flex-row mt-1">
-        {game.solution?.map((move, i) => (
-          <Tile
-            className="mr-[6px]"
-            color="green"
-            flipTile={true}
-            animationIndex={i * 0.2}
-            tutorial={true}
-          >
-            {move}
-          </Tile>
-        ))}
-      </div>
-
+    <div className="relative pl-6 pr-6 flex-auto">
       <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
@@ -58,6 +43,20 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
         </a>
         .
       </p>
+      <span className="font-semibold">Solution</span>
+      <div className="flex flex-row mt-1">
+        {game.solution?.map((move, i) => (
+          <Tile
+            className="mr-[6px]"
+            color="green"
+            flipTile={true}
+            animationIndex={i * 0.2}
+            tutorial={true}
+          >
+            {move}
+          </Tile>
+        ))}
+      </div>
       {solvedPercentage && averageNumberOfTurns && (
         <>
           <p className="my-4 text-lg leading-relaxed">
@@ -76,7 +75,20 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
 
   return (
-    <div className="relative p-6 flex-auto">
+    <div className="relative pl-6 pr-6 flex-auto">
+      <div className="divider" />
+      <p className="my-4 text-lg leading-relaxed">
+        This game was played between {game.white} and {game.black}. Check out
+        the game{" "}
+        <a
+          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+          href={game.gameUrl}
+          target="_blank"
+        >
+          {gameUrlText(game)}
+        </a>
+        .
+      </p>
       <span className="font-semibold">Solution</span>
       <div className="flex flex-row mt-1">
         {game.solution?.map((move, i) => (
@@ -91,20 +103,6 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
           </Tile>
         ))}
       </div>
-
-      <div className="divider" />
-      <p className="my-4 text-lg leading-relaxed">
-        This game was played between {game.white} and {game.black}. Check out
-        the game{" "}
-        <a
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href={game.gameUrl}
-          target="_blank"
-        >
-          {gameUrlText(game)}
-        </a>
-        .
-      </p>
       {solvedPercentage && averageNumberOfTurns && (
         <>
           <h1 className="my-4  text-lg leading-relaxed">

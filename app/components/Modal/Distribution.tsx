@@ -14,7 +14,7 @@ const Distribution = ({ guessDistribution }) => {
       <h4 className="text-xl font-semibold">
         Guess distribution <div className="badge badge-info">New</div>
       </h4>
-      <div className="flex flex-col mb-2">
+      <div className="flex flex-col">
         {distributionArray.map((numGuesses, i) => (
           <div key={i}>
             <span className="mr-2 font-semibold">{i + 1}</span>
