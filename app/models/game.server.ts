@@ -531,5 +531,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2860,
       id: 46,
     },
+    {
+      date: "2022-08-07",
+      fen: "r4rk1/pp1b1ppp/2n1p3/2qp4/8/2PBP3/PP1N1PPP/R2QK2R w KQ - 0 13",
+      solution: ["Bxh7+", "Kxh7", "Qh5+", "Kg8", "Ne4"],
+      gameUrl: "https://lichess.org/v72eGZ6h/white#24",
+      white: "stewartbanawa",
+      black: "MrTroutstanding",
+      wRating: 2617,
+      bRating: 2606,
+      id: 47,
+    },
   ];
 }
