@@ -148,9 +148,10 @@ export const Chessguessr = ({
                 }
                 position={position.fen()}
                 onPieceDrop={onDrop}
-                areArrowsAllowed={false}
+                areArrowsAllowed={true}
                 boardWidth={getBoardWidth()}
                 boardOrientation={colorToPlay === "b" ? "black" : "white"}
+                customArrowColor={"rgba(98, 155, 35, 0.9)"}
               />
             )}
           </ChessboardWrapper>
