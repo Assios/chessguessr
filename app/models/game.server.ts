@@ -542,5 +542,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2606,
       id: 47,
     },
+    {
+      date: "2022-08-08",
+      fen: "2r1k2r/1pbn1ppp/p1p1pn2/2Pp1b2/1P1P1B2/2N1PN1P/1P2BPP1/R4RK1 w k - 5 14",
+      solution: ["Bxc7", "Rxc7", "b5", "cxb5", "Nxb5"],
+      gameUrl: "https://lichess.org/WA8cozpK/white#26",
+      white: "MagicAndy",
+      black: "Boknoy2019",
+      wTitle: "FM",
+      wRating: 2493,
+      bRating: 2323,
+      id: 48,
+    },
   ];
 }
