@@ -3,6 +3,11 @@ import StatsCards from "./StatsCards";
 import { Tile } from "~/styles/styles";
 import { GameStatus } from "~/utils/types";
 import Distribution from "./Distribution";
+import Countdown, {
+  zeroPad,
+  calcTimeDelta,
+  formatTimeDelta,
+} from "react-countdown";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -179,6 +184,35 @@ export default function Modal({
     gameStatus === GameStatus.SOLVED
   );
 
+  let tomorrow = new Date();
+
+  tomorrow.setDate(new Date().getDate() + 1);
+
+  let utcTomorrow = new Date(
+    Date.UTC(
+      tomorrow.getFullYear(),
+      tomorrow.getMonth(),
+      tomorrow.getDate(),
+      0,
+      0,
+      0,
+      0
+    )
+  );
+
+  const nextDate =
+    utcTomorrow.getFullYear().toString() +
+    "-" +
+    (utcTomorrow.getMonth() + 1).toString().padStart(2, 0) +
+    "-" +
+    utcTomorrow.getDate().toString();
+
+  const renderer = ({ hours, minutes, seconds }) => (
+    <span>
+      {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+    </span>
+  );
+
   return (
     <>
       {showModal ? (
@@ -258,7 +292,15 @@ export default function Modal({
                 </div>
 
                 <div className="flex space-x-12 items-center justify-between p-6 rounded-b">
-                  <div className="font-bold">NEW PUZZLE AT MIDNIGHT UTC</div>
+                  <div className="font-bold">
+                    NEW PUZZLE AT MIDNIGHT UTC (
+                    <Countdown
+                      date={nextDate}
+                      zeroPadTime={2}
+                      renderer={renderer}
+                    />
+                    )
+                  </div>
                   <div className="flex">
                     {gameStatus !== GameStatus.IN_PROGRESS && (
                       <button
