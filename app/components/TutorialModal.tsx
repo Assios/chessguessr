@@ -119,8 +119,9 @@ export default function TutorialModal({
                   </p>
                   <p className="text-lg mb-6">
                     <span className="font-bold">NB!</span> The notation has to
-                    be identical for the moves to be considered the same. Nxf7
-                    and Nxf7+ aren't considered the same.
+                    be identical for the moves to be considered the same (
+                    <i>Nxf7</i> and <i>Nxf7+</i> aren't considered the same
+                    moves).
                   </p>
                   <p className="my-4 text-lg leading-relaxed font-bold">
                     A new position will appear every day at midnight UTC.
