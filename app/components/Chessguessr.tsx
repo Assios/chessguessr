@@ -8,6 +8,8 @@ import { Game, GameStatus } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
 import { useHotkeys } from "react-hotkeys-hook";
+import Countdown from "react-countdown";
+import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -97,6 +99,8 @@ export const Chessguessr = ({
     return width;
   };
 
+  const nextDate = midnightUtcTomorrow();
+
   useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
   useHotkeys("Enter", submitGuess, [currentGuess]);
 
@@ -133,9 +137,22 @@ export const Chessguessr = ({
                {black} ({bRating})
             </p>
             {position && (
-              <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
-                {colorToPlay === "b" ? "Black" : "White"} to play
-              </p>
+              <>
+                {gameStatus === GameStatus.IN_PROGRESS ? (
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                    {colorToPlay === "b" ? "Black" : "White"} to play
+                  </p>
+                ) : (
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                    New game in{" "}
+                    <Countdown
+                      date={nextDate}
+                      zeroPadTime={2}
+                      renderer={countdownRenderer}
+                    />
+                  </p>
+                )}
+              </>
             )}
           </Players>
 
