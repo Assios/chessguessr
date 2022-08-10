@@ -44,6 +44,7 @@ export default function Index() {
           setTutorial={setTutorial}
           game={game}
           stats={stats}
+          shouldUpdateStats={true}
         />
       )}
     </div>

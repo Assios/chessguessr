@@ -52,6 +52,7 @@ export const Chessguessr = ({
   showTutorial,
   setShowTutorial,
   setTutorial,
+  shouldUpdateStats,
 }: {
   game: Game;
   stats?: any;
@@ -60,6 +61,7 @@ export const Chessguessr = ({
   showTutorial: boolean;
   setShowTutorial: any;
   setTutorial: any;
+  shouldUpdateStats: boolean;
 }) => {
   const {
     currentGuess,
@@ -74,7 +76,7 @@ export const Chessguessr = ({
     gameStatus,
     colorToPlay,
     fenHistory,
-  } = useChessguessr(game);
+  } = useChessguessr(game, shouldUpdateStats);
 
   const size = useWindowSize();
 
@@ -138,7 +140,7 @@ export const Chessguessr = ({
             </p>
             {position && (
               <>
-                {gameStatus === GameStatus.IN_PROGRESS ? (
+                {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (
                   <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
                     {colorToPlay === "b" ? "Black" : "White"} to play
                   </p>
