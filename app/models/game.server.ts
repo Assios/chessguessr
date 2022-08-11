@@ -603,5 +603,19 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2308,
       id: 52,
     },
+    {
+      date: "2022-08-13",
+      fen: "r2qk1nr/pp1nbpp1/2p1p2p/3pP3/3P1NPP/2NQ4/PPP2P2/R1B1K2R w KQkq - 1 11",
+      solution: ["Nxe6", "fxe6", "Qg6+", "Kf8", "Rh3"],
+      gameUrl: "https://lichess.org/QtMOmoYO/white#20",
+      white: "nihalsarin2004",
+      black: "darsen_dancer",
+      wAka: "Nihal Sarin",
+      wTitle: "GM",
+      bTitle: "IM",
+      wRating: 2944,
+      bRating: 2688,
+      id: 53,
+    },
   ];
 }
