@@ -27,9 +27,9 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Chessguessr – Guess the moves",
+  title: "Chessguessr – Wordle for Chess Games",
   description: "Guess the continuation of the chess game",
-  "og:title": "Chessguessr – Guess the moves",
+  "og:title": "Chessguessr – Wordle for Chess Games",
   "og:description":
     "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
   "og:image":
