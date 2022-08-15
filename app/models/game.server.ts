@@ -645,5 +645,19 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2499,
       id: 55,
     },
+    {
+      date: "2022-08-16",
+      fen: "r1bqk2r/ppp2pp1/2p2n2/2b4p/4P3/3P4/PPP1BPPP/RNBQ1RK1 b kq - 1 7",
+      solution: ["Ng4", "h3", "Qd6", "g3", "Qxg3+"],
+      gameUrl: "https://lichess.org/POePbLZn/black#13",
+      white: "Stefan005",
+      black: "EricRosen",
+      wTitle: "FM",
+      wAka: "Eric Rosen",
+      bTitle: "GM",
+      wRating: 2335,
+      bRating: 2682,
+      id: 56,
+    },
   ];
 }
