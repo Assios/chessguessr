@@ -24,15 +24,20 @@ const index = () => {
   console.log("g", games);
   return (
     <div className="mt-10 mb-20 content-center lg:mb-0">
-      <div className="grid grid-cols-4">
+      <h1 className="text-center text-4xl mb-8 font-semibold">
+        Puzzle history
+      </h1>
+      <div className="p-12 grid grid-cols-4">
         {gamesSorted.map((game) => {
           return (
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl mb-6">
               <div className="card-body">
                 <h2 className="card-title">
                   {game.white} – {game.black}
                 </h2>
-                <p>{dayjs(game.date).format("MMMM D[th], YYYY")}</p>
+                <div className="badge badge-primary">
+                  {dayjs(game.date).format("MMMM D[th], YYYY")}
+                </div>
               </div>
             </div>
           );
