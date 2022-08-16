@@ -5,6 +5,7 @@ import { GameStatus } from "~/utils/types";
 import Distribution from "./Distribution";
 import Countdown, { zeroPad } from "react-countdown";
 import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
+import Draggable from "react-draggable";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -194,6 +195,7 @@ export default function Modal({
     <>
       {showModal ? (
         <>
+          <Draggable>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
@@ -301,6 +303,7 @@ export default function Modal({
               </div>
             </div>
           </div>
+          </Draggable>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
