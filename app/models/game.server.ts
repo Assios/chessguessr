@@ -720,5 +720,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2682,
       id: 56,
     },
+    {
+      date: "2022-08-17",
+      fen: "2R2r1k/6b1/8/1P6/6Pp/4RpqP/P1Q5/5K2 b - - 1 47",
+      solution: ["Qxh3+", "Ke1", "f2+", "Qxf2", "Qh1+"],
+      gameUrl: "https://lichess.org/QJBExSuV/black#93",
+      white: "Pandochka",
+      black: "muisback",
+      wTitle: "WGM",
+      bTitle: "GM",
+      wAka: "Maria Fominykh",
+      bAka: "Rauf Mamedov",
+      wRating: 2179,
+      bRating: 2928,
+      id: 57,
+    },
   ];
 }
