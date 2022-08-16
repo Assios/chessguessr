@@ -2,6 +2,7 @@ import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { sortBy } from "../../utils/sort";
+import dayjs from "dayjs";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -31,7 +32,7 @@ const index = () => {
                 <h2 className="card-title">
                   {game.white} – {game.black}
                 </h2>
-                <p>{game.date}</p>
+                <p>{dayjs(game.date).format("MMMM D[th], YYYY")}</p>
               </div>
             </div>
           );
