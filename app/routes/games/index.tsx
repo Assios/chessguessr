@@ -1,14 +1,17 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import React from "react";
 import { getGames } from "~/models/game.server";
 
 export const loader: LoaderFunction = async () => {
+  const d = new Date().toISOString().split("T")[0];
+
   const games = await getGames();
 
-  console.log("gp", games);
+  const previousGames = games.filter((game) => {
+    return game.date <= d;
+  });
 
-  return json({ games: games });
+  return json({ games: previousGames });
 };
 
 const index = () => {
