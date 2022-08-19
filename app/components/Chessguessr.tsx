@@ -118,6 +118,7 @@ export const Chessguessr = ({
           guesses={guesses}
           playerStats={playerStats}
           puzzleStats={stats}
+          shouldUpdateStats={shouldUpdateStats}
         />
         <TutorialModal
           showTutorial={showTutorial}

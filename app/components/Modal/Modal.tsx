@@ -126,6 +126,7 @@ export default function Modal({
   playerStats,
   puzzleStats,
   gameStatus,
+  shouldUpdateStats,
 }) {
   const [value, copy] = useCopyToClipboard();
 
@@ -217,6 +218,41 @@ export default function Modal({
                     className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   ></button>
+                </div>
+
+                <div>
+                  {!shouldUpdateStats && (
+                    <div className="mb-6 ml-4 mr-2">
+                      <div className="w-[inherit]">
+                        <div className="flex flex-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            className="stroke-current flex-shrink-0 w-6 h-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          <span className="ml-2 text-sm">
+                            This is a previous daily puzzle, so solving this
+                            won't affect your stats. Click{" "}
+                            <a
+                              className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                              href="/"
+                            >
+                              here
+                            </a>{" "}
+                            to play today's.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <StatsCards playerStats={playerStats} />
