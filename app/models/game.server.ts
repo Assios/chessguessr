@@ -735,5 +735,27 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2928,
       id: 57,
     },
+    {
+      date: "2022-08-18",
+      fen: "r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6",
+      solution: ["Nxd5", "Bxd8", "Bb4+", "Qd2", "Kxd8"],
+      gameUrl: "https://lichess.org/xpqhsS1I/black#11",
+      white: "BES_ALEX_1971_ba",
+      black: "agofman",
+      wRating: 2286,
+      bRating: 2336,
+      id: 58,
+    },
+    {
+      date: "2022-08-19",
+      fen: "r6k/6pp/2p1b2q/ppPpN3/3Pp3/6P1/PP3QP1/1K3R2 w - - 4 25",
+      solution: ["Qf8+", "Rxf8", "Rxf8+", "Bg8", "Nf7#"],
+      gameUrl: "https://lichess.org/DIDUYZVL/white#48",
+      white: "moonLight2533",
+      black: "abdonsky2020",
+      wRating: 2015,
+      bRating: 1999,
+      id: 59,
+    },
   ];
 }
