@@ -757,5 +757,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1999,
       id: 59,
     },
+    {
+      date: "2022-08-20",
+      fen: "2r1r1k1/pp1n1pbp/6p1/3p4/5BP1/2PQ1N1P/P2N1q2/2RK3R b - - 2 23",
+      solution: ["Nc5", "Qf1", "Qxf1+", "Nxf1", "Nd3"],
+      gameUrl: "https://lichess.org/gxA2WzRB/black#45",
+      white: "burbur1",
+      black: "VerdeNotte",
+      bTitle: "GM",
+      bAka: "Gawain Jones",
+      wRating: 2627,
+      bRating: 2739,
+      id: 60,
+    },
   ];
 }
