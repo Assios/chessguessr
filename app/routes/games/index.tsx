@@ -21,12 +21,21 @@ const index = () => {
 
   const gamesSorted = games.sort(sortBy("-date"));
 
-  console.log("g", games);
   return (
     <div className="mt-10 mb-20 content-center lg:mb-0">
-      <h1 className="text-center text-4xl mb-8 font-semibold">
-        Puzzle history
-      </h1>
+      <h1 className="text-center text-4xl mb-8 font-semibold">Archive</h1>
+      <p className="max-w-prose m-auto text-center text-lg">
+        On this page you'll find all previous Chessguessr puzzles. Your stats
+        will only update for today's puzzle, though. Play today's Chessguessr{" "}
+        <a
+          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+          href="/"
+        >
+          here
+        </a>
+        .
+      </p>
+
       <div className="p-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {gamesSorted.map((game) => {
           return (
