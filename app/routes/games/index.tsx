@@ -27,10 +27,10 @@ const index = () => {
       <h1 className="text-center text-4xl mb-8 font-semibold">
         Puzzle history
       </h1>
-      <div className="p-12 grid grid-cols-4">
+      <div className="p-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {gamesSorted.map((game) => {
           return (
-            <div className="card w-96 bg-base-100 shadow-xl mb-6">
+            <div className="card border-2 bg-base-100 shadow-xl mb-6">
               <div className="card-body">
                 <h2 className="card-title">
                   {game.white} – {game.black}
