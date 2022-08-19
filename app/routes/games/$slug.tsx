@@ -4,6 +4,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
+import { useEffect } from "react";
 
 export const loader: LoaderFunction = async ({ params, request }) => {
   const url = new URL(request.url);
@@ -36,7 +37,12 @@ export default function Index() {
     showTutorial,
     setShowTutorial,
     setTutorial,
+    setShowNavbarStats,
   }: any = useOutletContext();
+
+  useEffect(() => {
+    setShowNavbarStats(true);
+  });
 
   return (
     <div className="mt-10 mb-20 lg:mb-0">

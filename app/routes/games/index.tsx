@@ -5,6 +5,7 @@ import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
 import { useNavigate } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
+import { useEffect } from "react";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -25,11 +26,14 @@ const index = () => {
     showTutorial,
     setShowTutorial,
     setTutorial,
+    setShowNavbarStats,
   }: any = useOutletContext();
 
   const { games } = useLoaderData();
 
-  console.log("g", games);
+  useEffect(() => {
+    setShowNavbarStats(false);
+  }, []);
 
   const gamesSorted = games.sort(sortBy("-date"));
 

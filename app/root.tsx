@@ -46,6 +46,8 @@ export default function App() {
   const [showModal, setShowModal] = useState(false);
   const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
 
+  const [showNavbarStats, setShowNavbarStats] = useState(true);
+
   const [wrongTheme, setWrongTheme] = useState(false);
 
   const [showTutorial, setShowTutorial] = useState(!tutorial);
@@ -63,6 +65,8 @@ export default function App() {
     setTutorial,
     trackPageview,
     trackEvent,
+    showNavbarStats,
+    setShowNavbarStats,
   };
 
   useEffect(() => {
@@ -92,6 +96,7 @@ export default function App() {
           <Navbar
             setShowTutorial={setShowTutorial}
             setShowModal={setShowModal}
+            showNavbarStats={showNavbarStats}
           />
 
           {wrongTheme && (
