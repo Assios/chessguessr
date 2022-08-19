@@ -3,6 +3,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { redirect } from "@remix-run/node";
 
 export const loader: LoaderFunction = async ({ params, request }) => {
   const url = new URL(request.url);
@@ -17,7 +18,9 @@ export const loader: LoaderFunction = async ({ params, request }) => {
     throw new Response("Not Found", { status: 404 });
   }
 
-  if (currentGame.date > d && dates !== "all") {
+  if (currentGame.date === d) {
+    return redirect("/");
+  } else if (currentGame.date > d && dates !== "all") {
     throw new Response("Not Found", { status: 404 });
   }
 
