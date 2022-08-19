@@ -12,7 +12,7 @@ const chessCols = "abcdefgh";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
-const useChessguessr = (game: Game) => {
+const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guesses, setGuesses] = useState([
@@ -132,21 +132,23 @@ const useChessguessr = (game: Game) => {
     if (newTurn === 5 && !solved) {
       currentGameStatus = GameStatus.FAILED;
 
-      setPlayerStats((prev) => {
-        return {
-          ...prev,
-          gamesPlayed: prev.gamesPlayed + 1,
-          lastPlayed: game.date,
-          currentStreak: 0,
-          guesses: {
-            ...prev.guesses,
-            failed: prev.guesses.failed + 1,
-          },
-        };
-      });
+      if (shouldUpdateStats) {
+        setPlayerStats((prev) => {
+          return {
+            ...prev,
+            gamesPlayed: prev.gamesPlayed + 1,
+            lastPlayed: game.date,
+            currentStreak: 0,
+            guesses: {
+              ...prev.guesses,
+              failed: prev.guesses.failed + 1,
+            },
+          };
+        });
 
-      incrementFailed(game.id);
-      trackEvent("Submit daily", { props: { result: "Failed" } });
+        incrementFailed(game.id);
+        trackEvent("Submit daily", { props: { result: "Failed" } });
+      }
     }
 
     newGuesses[turn] = formattedGuess;
@@ -166,21 +168,23 @@ const useChessguessr = (game: Game) => {
         streak = true;
       }
 
-      setPlayerStats((prev) => {
-        return {
-          ...prev,
-          gamesPlayed: prev.gamesPlayed + 1,
-          lastPlayed: game.date,
-          currentStreak: streak ? prev.currentStreak + 1 : 1,
-          guesses: {
-            ...prev.guesses,
-            [turn + 1]: prev.guesses[turn + 1] + 1,
-          },
-        };
-      });
+      if (shouldUpdateStats) {
+        setPlayerStats((prev) => {
+          return {
+            ...prev,
+            gamesPlayed: prev.gamesPlayed + 1,
+            lastPlayed: game.date,
+            currentStreak: streak ? prev.currentStreak + 1 : 1,
+            guesses: {
+              ...prev.guesses,
+              [turn + 1]: prev.guesses[turn + 1] + 1,
+            },
+          };
+        });
 
-      incrementSolved(game.id, turn + 1);
-      trackEvent("Submit daily", { props: { result: "Success" } });
+        incrementSolved(game.id, turn + 1);
+        trackEvent("Submit daily", { props: { result: "Success" } });
+      }
     } else {
       setPosition(new Chess(game.fen));
     }
