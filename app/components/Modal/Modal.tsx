@@ -306,13 +306,12 @@ export default function Modal({
 
                 <div className="flex space-x-12 items-center justify-between p-6 rounded-b">
                   <div className="font-bold">
-                    NEW PUZZLE AT MIDNIGHT UTC (
+                    NEW PUZZLE IN{" "}
                     <Countdown
                       date={nextDate}
                       zeroPadTime={2}
                       renderer={countdownRenderer}
                     />
-                    )
                   </div>
                   <div className="flex">
                     {gameStatus !== GameStatus.IN_PROGRESS && (
