@@ -39,7 +39,7 @@ export default function Index() {
   }: any = useOutletContext();
 
   return (
-    <div className="mt-6 mb-20 lg:mb-5">
+    <div className="mt-10 mb-20 lg:mb-0">
       {game && (
         <Chessguessr
           showModal={showModal}
