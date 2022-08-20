@@ -1,4 +1,4 @@
-import { json, LoaderFunction } from "@remix-run/node";
+import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { sortBy } from "../../utils/sort";
@@ -6,6 +6,10 @@ import dayjs from "dayjs";
 import { useNavigate } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
 import { useEffect } from "react";
+
+export const meta: MetaFunction = () => ({
+  title: "Chessguessr – Game Archive",
+});
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -21,8 +25,6 @@ export const loader: LoaderFunction = async () => {
 
 const index = () => {
   const {
-    showModal,
-    setShowModal,
     showTutorial,
     setShowTutorial,
     setTutorial,
