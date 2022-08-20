@@ -770,5 +770,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2739,
       id: 60,
     },
+    {
+      date: "2022-08-21",
+      fen: "8/3k4/4p3/2KPP1p1/2p1B2p/2P3P1/4b3/8 w - - 0 47",
+      solution: ["gxh4", "gxh4", "d6", "h3", "Bc6+"],
+      gameUrl: "https://lichess.org/dgdwgo1j/white#92",
+      white: "Luckyriver",
+      black: "Sgplus",
+      wTitle: "LM",
+      wRating: 2329,
+      bRating: 2221,
+      id: 61,
+    },
   ];
 }
