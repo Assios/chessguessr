@@ -73,9 +73,6 @@ const index = () => {
           {gamesSorted.map((game, i) => {
             return (
               <div className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
-                <figure>
-                  <img src={"//www.fen-to-image.com/image/36/" + game.fen} />
-                </figure>
                 <div className="card-body">
                   {i == 0 && <div className="badge badge-accent">TODAY'S</div>}
                   <h2 className="card-title">
