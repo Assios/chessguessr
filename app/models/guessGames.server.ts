@@ -40,3 +40,27 @@ export async function getPositions(): Promise<Array<any>> {
     },
   ];
 }
+
+const guessObjects = [
+  {
+    fen: "2kr4/ppp1qpp1/2p5/2b2b2/2P1pPP1/1P2P3/PBQPB1p1/RN2K2R w Q - 0 16",
+    options: [
+      {
+        text: "Bent Larsen – Boris Spassky",
+        correct: true,
+      },
+      {
+        text: "Donald Byrne – Bobby Fischer",
+        correct: false,
+      },
+      {
+        text: "Paul Keres",
+        correct: false,
+      },
+      {
+        text: "Anatoly Karpov",
+        correct: false,
+      },
+    ],
+  },
+];
