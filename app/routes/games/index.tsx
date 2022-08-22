@@ -5,7 +5,7 @@ import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
 import { useNavigate } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const meta: MetaFunction = () => ({
   title: "Chessguessr – Game Archive",

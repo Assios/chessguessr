@@ -6,7 +6,7 @@ import { getGames } from "~/models/game.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { useOutletContext } from "@remix-run/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];

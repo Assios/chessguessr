@@ -33,7 +33,7 @@ export async function getPositions(): Promise<Array<any>> {
       link: "https://lichess.org/study/Hk9Zzv6o",
     },
     {
-      fen: "2kr4/ppp1qpp1/2p5/2b2b2/2P1pPP1/1P2P1p1/PBQPB3/RN2K1Rr w Q - 2 15",
+      fen: "2kr4/ppp1qpp1/2p5/2b2b2/2P1pPP1/1P2P3/PBQPB1p1/RN2K2R w Q - 0 16",
       white: "Bent Larsen",
       black: "Boris Spassky",
       link: "https://lichess.org/study/Hk9Zzv6o",

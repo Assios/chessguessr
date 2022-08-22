@@ -5,9 +5,10 @@ import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
 import { useNavigate } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Chessboard } from "react-chessboard";
 import { getPositions } from "~/models/guessGames.server";
+import useCountdown from "~/hooks/useCountdown";
 
 export const meta: MetaFunction = () => ({
   title: "Chessguessr Guess the game",
@@ -31,13 +32,22 @@ const index = () => {
     setShowNavbarStats,
   }: any = useOutletContext();
 
+  const [intervalValue, setIntervalValue] = useState<number>(1000);
+  const [count, { startCountdown, stopCountdown, resetCountdown }] =
+    useCountdown({
+      countStart: 60,
+      intervalMs: intervalValue,
+    });
+
   const { games } = useLoaderData();
 
   useEffect(() => {
     setShowNavbarStats(false);
   }, []);
 
-  const solution = Math.floor(Math.random() * 3);
+  useEffect(() => {
+    startCountdown();
+  }, []);
 
   return (
     <div>
@@ -48,24 +58,19 @@ const index = () => {
           setTutorial={setTutorial}
         />
       </div>
-      <div className="mt-10 mb-20 content-center lg:mb-0">
+      <div className="mt-10 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
-          <h1 className="text-center text-4xl mb-8 font-semibold">
-            Guess the game
-          </h1>
+          <h1 className="text-center text-4xl font-semibold">{count}</h1>
         </div>
-        <p className="max-w-prose m-auto text-center text-lg">
-          You'll be shown a positions from famous games. Who played the games?
-        </p>
 
         <div className="mt-10 flex justify-center">
-          <Chessboard position={games[solution].fen} />
+          <Chessboard position={games[1].fen} />
         </div>
 
         <div className="grid grid-cols-4 gap-4 mt-4 mb-10">
           {games.map((game) => {
             return (
-              <div className="card w-96 bg-base-100 shadow-xl mb-[-20px]">
+              <div className="card w-96 border-2 bg-base-100 shadow-xl mb-[-20px]">
                 <div className="card-body">
                   <h2 className="card-title">
                     {game.white} – {game.black}
