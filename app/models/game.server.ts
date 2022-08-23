@@ -810,5 +810,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2726,
       id: 63,
     },
+    {
+      date: "2022-08-24",
+      fen: "r4rk1/1p1q1ppp/p1n1p2B/2p5/3bN1Q1/3P4/PPP2PPP/R4RK1 w - - 8 16",
+      solution: ["Nxc5", "Qe7", "Nb3", "Bxb2", "Rab1"],
+      gameUrl: "https://lichess.org/LgYFjeUo/white#30",
+      white: "DrNykterstein",
+      black: "mutdpro",
+      wTitle: "GM",
+      bTitle: "IM",
+      wAka: "Magnus Carlsen",
+      bAka: "Minh Le",
+      wRating: 3329,
+      bRating: 3190,
+      id: 64,
+    },
   ];
 }
