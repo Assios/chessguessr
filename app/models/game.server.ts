@@ -827,6 +827,20 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-08-25",
+      fen: "2r5/3bk2p/p2ppp2/1p2b2B/1r2P3/qP1N2P1/P1PRQ2P/1K5R b - - 4 24",
+      solution: ["Bc3", "Rdd1", "Ra4", "bxa4", "bxa4"],
+      gameUrl: "https://lichess.org/oBwL5dab/black#47",
+      white: "ianfindlay2314",
+      black: "Fins",
+      wTitle: "FM",
+      bTitle: "IM",
+      bAka: "John Bartholomew",
+      wRating: 2362,
+      bRating: 2613,
+      id: 65,
+    },
+    {
+      date: "2022-08-26",
       fen: "rr6/4kp2/3b2p1/1B2p3/PB1p4/1n3PP1/1P5P/R1R3K1 w - - 4 32",
       solution: ["Rc7+", "Ke6", "Bc4+", "Kf6", "Rxf7+"],
       gameUrl: "https://lichess.org/frYGHvJt/white#62",
@@ -838,7 +852,7 @@ export async function getGames(): Promise<Array<Game>> {
       bAka: "Minh Le",
       wRating: 3295,
       bRating: 3222,
-      id: 65,
+      id: 67,
     },
   ];
 }
