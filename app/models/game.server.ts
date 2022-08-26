@@ -854,5 +854,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3222,
       id: 67,
     },
+    {
+      date: "2022-08-27",
+      fen: "r1b1kbnr/pppp1ppp/8/4N1q1/2BnP3/8/PPPP1PPP/RNBQK2R w KQkq - 1 5",
+      solution: ["Nxf7", "Qxg2", "Rf1", "Qxe4+", "Qe2"],
+      gameUrl: "https://lichess.org/R21FvxpT/white#8",
+      white: "Dr_Ruthless",
+      black: "THE_MAMMADOV",
+      wRating: 2454,
+      bRating: 2614,
+      id: 68,
+    },
   ];
 }
