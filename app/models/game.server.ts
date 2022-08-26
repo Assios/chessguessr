@@ -852,7 +852,7 @@ export async function getGames(): Promise<Array<Game>> {
       bAka: "Minh Le",
       wRating: 3295,
       bRating: 3222,
-      id: 67,
+      id: 66,
     },
     {
       date: "2022-08-27",
@@ -863,7 +863,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "THE_MAMMADOV",
       wRating: 2454,
       bRating: 2614,
-      id: 68,
+      id: 67,
     },
   ];
 }
