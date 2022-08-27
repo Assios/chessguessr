@@ -56,6 +56,8 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
   });
 
   useEffect(() => {
+    if (!shouldUpdateStats) return;
+
     if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
@@ -189,14 +191,16 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
       setPosition(new Chess(game.fen));
     }
 
-    setGameState((prev) => {
-      return {
-        ...prev,
-        guesses: newGuesses,
-        turn: newTurn,
-        gameStatus: currentGameStatus,
-      };
-    });
+    if (shouldUpdateStats) {
+      setGameState((prev) => {
+        return {
+          ...prev,
+          guesses: newGuesses,
+          turn: newTurn,
+          gameStatus: currentGameStatus,
+        };
+      });
+    }
 
     setCurrentGuess([]);
     setFenHistory([]);
