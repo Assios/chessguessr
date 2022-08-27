@@ -10,6 +10,7 @@ import TutorialModal from "./TutorialModal";
 import { useHotkeys } from "react-hotkeys-hook";
 import Countdown from "react-countdown";
 import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
+import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -100,6 +101,8 @@ export const Chessguessr = ({
 
     return width;
   };
+
+  const [linkValue, copy] = useCopyToClipboard();
 
   const nextDate = midnightUtcTomorrow();
 
@@ -199,12 +202,59 @@ export const Chessguessr = ({
             </button>
           </Buttons>
         </BoardWrapper>
-        <Grid
-          currentGuess={currentGuess}
-          guesses={guesses}
-          turn={turn}
-          insufficientMoves={insufficientMoves}
-        />
+        <div className="flex flex-col">
+          <Grid
+            currentGuess={currentGuess}
+            guesses={guesses}
+            turn={turn}
+            insufficientMoves={insufficientMoves}
+          />
+          <div className="flex flex-row justify-end">
+            <input
+              type="text"
+              className="input input-bordered input-sm w-full max-w-xs mt-2 mr-1 w-56"
+              readOnly={true}
+              value={"https://chessguessr.com/games/" + game.id}
+              onFocus={(event) => event.target.select()}
+            />
+            <button
+              className="btn btn-square btn-sm bg-primary border-primary mt-2"
+              onClick={() => copy("https://chessguessr.com/games/" + game.id)}
+            >
+              {linkValue ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       </Game>
     </div>
   );
