@@ -878,5 +878,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2494,
       id: 68,
     },
+    {
+      date: "2022-08-29",
+      fen: "2rr2k1/4bpp1/p3pn1p/1pqnN3/8/P1P3BP/1P2QPP1/1B1RR1K1 w - - 4 32",
+      solution: ["Nxf7", "Kxf7", "Qxe6+", "Kf8", "Bg6"],
+      gameUrl: "https://lichess.org/55KdCDlX/white#62",
+      white: "AnishGiri",
+      black: "Night-King96",
+      wAka: "Anish Giri",
+      wTitle: "GM",
+      bAka: "Oleksandr Bortnyk",
+      bTitle: "GM",
+      wRating: 3039,
+      bRating: 3124,
+      id: 69,
+    },
   ];
 }
