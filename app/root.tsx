@@ -6,6 +6,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -23,6 +24,50 @@ export const links: LinksFunction = () => [
   },
   { rel: "stylesheet", href: styles },
 ];
+
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  return (
+    <html data-theme="corporate" lang="en">
+      <head>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        <Meta />
+        <Links />
+        {typeof document === "undefined" ? "__STYLES__" : null}
+      </head>
+      <div className="mt-10 mb-20 content-center lg:mb-0">
+        <div className="flex flex-row justify-center">
+          <h1 className="text-center text-4xl mb-8 font-semibold">
+            {caught.status}
+          </h1>
+        </div>
+        <p className="max-w-prose m-auto text-center text-lg">
+          {caught.statusText}
+        </p>
+        <p className="max-w-prose m-auto text-center text-lg">
+          If you think this is an error, you can{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="https://github.com/Assios/chessguessr/issues"
+            target="_blank"
+          >
+            file an issue
+          </a>{" "}
+          on Github or{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="https://lichess.org/inbox/Assios"
+            target="_blank"
+          >
+            contact Assios on Lichess
+          </a>
+          .
+        </p>
+      </div>
+    </html>
+  );
+}
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
