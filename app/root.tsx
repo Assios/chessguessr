@@ -120,15 +120,15 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Chessguessr – Wordle for Chess Games",
   description:
-    "Guess the continuation of daily chess games, with the help of Wordle-like hints.",
+    "Solve chess puzzles from real games, with the help of Wordle-like hints.",
   "og:title": "Chessguessr – Wordle for Chess Games",
   "og:description":
     "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
   "og:image":
     "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
-  "twitter:title": "Chessguessr – Guess the continuation of a chess game",
+  "twitter:title": "Chessguessr – Wordle for Chess Games",
   "twitter:description":
-    "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
+    "Solve chess puzzles from real games, with the help of Wordle-like hints.",
   "twitter:image":
     "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
   "twitter:card": "summary_large_image",
