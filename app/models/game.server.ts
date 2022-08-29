@@ -895,6 +895,19 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-08-30",
+      fen: "r1b2k1r/pp3pp1/2q1pn2/1N5p/8/3B1Q2/2P2PPP/R2R2K1 w - - 2 16",
+      solution: ["Be4", "Qxb5", "Rd8+", "Ne8", "Bg6"],
+      gameUrl: "https://lichess.org/YwBrydbe/white#30",
+      white: "GingerGM",
+      black: "bob_2004",
+      wAka: "Simon Williams",
+      wTitle: "GM",
+      wRating: 2638,
+      bRating: 2643,
+      id: 70,
+    },
+    {
+      date: "2022-08-31",
       fen: "2r1qrk1/pp4p1/1n1pp1p1/3p2Pp/1n1PP2P/P1N2P1N/1PP1Q3/2KR3R b - - 0 17",
       solution: ["Rxc3", "bxc3", "Na2+", "Kb2", "Na4+"],
       gameUrl: "https://lichess.org/J6RAbrM2/black#33",
@@ -906,7 +919,7 @@ export async function getGames(): Promise<Array<Game>> {
       wTitle: "GM",
       wRating: 3117,
       bRating: 3046,
-      id: 70,
+      id: 71,
     },
   ];
 }
