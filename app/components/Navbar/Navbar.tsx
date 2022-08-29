@@ -22,7 +22,11 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
             </svg>
           </div>
         </button>
-        <NavLink to="games" className="btn btn-ghost btn-circle">
+        <NavLink
+          prefetch="intent"
+          to="games"
+          className="btn btn-ghost btn-circle"
+        >
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +47,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
       </div>
       <div className="navbar-center">
         <NavLink
+          prefetch="intent"
           to="/"
           className="btn btn-ghost normal-case text-lg lg:text-2xl"
         >
