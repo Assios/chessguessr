@@ -5,8 +5,9 @@ import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
+import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 
-export function CatchBoundary() {
+export const CatchBoundary: CatchBoundaryComponent = () => {
   const caught = useCatch();
 
   return (
@@ -21,7 +22,7 @@ export function CatchBoundary() {
       </p>
     </div>
   );
-}
+};
 
 export const loader: LoaderFunction = async ({ params, request }) => {
   const url = new URL(request.url);

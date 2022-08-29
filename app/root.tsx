@@ -1,4 +1,8 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type {
+  ErrorBoundaryComponent,
+  LinksFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -15,6 +19,7 @@ import { Footer } from "./components/Footer";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
+import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 
 export const links: LinksFunction = () => [
   {
@@ -25,7 +30,49 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export function CatchBoundary() {
+export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+  return (
+    <html data-theme="corporate" lang="en">
+      <head>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        <Meta />
+        <Links />
+        {typeof document === "undefined" ? "__STYLES__" : null}
+      </head>
+      <div className="mt-10 mb-20 content-center lg:mb-0">
+        <div className="flex flex-row justify-center">
+          <h1 className="text-center text-4xl mb-8 font-semibold">
+            {error.name}
+          </h1>
+        </div>
+        <p className="max-w-prose m-auto text-center text-lg">
+          {error.message}
+        </p>
+        <p className="max-w-prose m-auto text-center text-lg">
+          If this error persists, please{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="https://github.com/Assios/chessguessr/issues"
+            target="_blank"
+          >
+            file an issue
+          </a>{" "}
+          on Github or{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="https://lichess.org/inbox/Assios"
+            target="_blank"
+          >
+            contact Assios on Lichess
+          </a>
+          .
+        </p>
+      </div>
+    </html>
+  );
+};
+
+export const CatchBoundary: CatchBoundaryComponent = () => {
   const caught = useCatch();
 
   return (
@@ -67,7 +114,7 @@ export function CatchBoundary() {
       </div>
     </html>
   );
-}
+};
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
