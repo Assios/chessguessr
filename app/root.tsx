@@ -1,6 +1,8 @@
-import type {
+import {
   ErrorBoundaryComponent,
+  json,
   LinksFunction,
+  LoaderFunction,
   MetaFunction,
 } from "@remix-run/node";
 import {
@@ -11,7 +13,11 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLoaderData,
 } from "@remix-run/react";
+import { useChangeLanguage } from "remix-i18next";
+import { useTranslation } from "react-i18next";
+
 import styles from "./tailwind.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
@@ -20,6 +26,16 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import i18next from "./i18next.server";
+
+export const loader: LoaderFunction = async ({ request }) => {
+  let locale = await i18next.getLocale(request);
+  return json({ locale });
+};
+
+export const handle = {
+  i18n: "common",
+};
 
 export const links: LinksFunction = () => [
   {
@@ -136,6 +152,12 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  let { locale } = useLoaderData();
+
+  let { i18n } = useTranslation();
+
+  useChangeLanguage(locale);
+
   const [showModal, setShowModal] = useState(false);
   const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
 
@@ -176,7 +198,7 @@ export default function App() {
   }, []);
 
   return (
-    <html data-theme="corporate" lang="en">
+    <html data-theme="corporate" lang={locale} dir={i18n.dir()}>
       <head>
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />

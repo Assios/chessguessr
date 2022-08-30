@@ -3,6 +3,7 @@ import StatsCards from "./StatsCards";
 import { Tile } from "~/styles/styles";
 import { GameStatus } from "~/utils/types";
 import Distribution from "./Distribution";
+import { useTranslation } from "react-i18next";
 import Countdown, { zeroPad } from "react-countdown";
 import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
 
@@ -128,6 +129,7 @@ export default function Modal({
   gameStatus,
   shouldUpdateStats,
 }) {
+  const { t } = useTranslation();
   const [value, copy] = useCopyToClipboard();
 
   const solvedPercentage = getSolvedPercentage(puzzleStats);
@@ -201,7 +203,7 @@ export default function Modal({
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-200 outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 rounded-t">
-                  <h3 className="text-3xl font-semibold">Statistics</h3>
+                  <h3 className="text-3xl font-semibold">{t("stat")}</h3>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="ml-2 h-10 w-10"
