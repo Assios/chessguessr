@@ -35,13 +35,20 @@ export default async function handleRequest(
       },
     });
 
+  const sheet = new ServerStyleSheet();
+
   // Then you can render your app wrapped in the I18nextProvider as in the
   // entry.client file
   let markup = renderToString(
-    <I18nextProvider i18n={instance}>
-      <RemixServer context={context} url={request.url} />
-    </I18nextProvider>
+    sheet.collectStyles(
+      <I18nextProvider i18n={instance}>
+        <RemixServer context={context} url={request.url} />
+      </I18nextProvider>
+    )
   );
+
+  const styles = sheet.getStyleTags();
+  markup = markup.replace("__STYLES__", styles);
 
   headers.set("Content-Type", "text/html");
 
