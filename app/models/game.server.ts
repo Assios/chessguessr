@@ -913,6 +913,7 @@ export async function getGames(): Promise<Array<Game>> {
       gameUrl: "https://lichess.org/yymcj0ON/white#36",
       white: "SuperDodgy",
       black: "Chesspatzeruk-TWITCH",
+      wAka: "THE MrDodgy",
       wRating: 2211,
       bRating: 2090,
       id: 71,
