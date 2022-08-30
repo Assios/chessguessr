@@ -908,6 +908,17 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-08-31",
+      fen: "r1b2r1k/4qp1p/p2ppb1Q/1p2n3/3NP3/2N5/PPP4P/2KR1BR1 w - - 2 19",
+      solution: ["Nf5", "exf5", "Nd5", "Ng4", "Rxg4"],
+      gameUrl: "https://lichess.org/yymcj0ON/white#36",
+      white: "SuperDodgy",
+      black: "Chesspatzeruk-TWITCH",
+      wRating: 2211,
+      bRating: 2090,
+      id: 71,
+    },
+    {
+      date: "2022-09-01",
       fen: "2r1qrk1/pp4p1/1n1pp1p1/3p2Pp/1n1PP2P/P1N2P1N/1PP1Q3/2KR3R b - - 0 17",
       solution: ["Rxc3", "bxc3", "Na2+", "Kb2", "Na4+"],
       gameUrl: "https://lichess.org/J6RAbrM2/black#33",
@@ -919,7 +930,7 @@ export async function getGames(): Promise<Array<Game>> {
       wTitle: "GM",
       wRating: 3117,
       bRating: 3046,
-      id: 71,
+      id: 72,
     },
   ];
 }
