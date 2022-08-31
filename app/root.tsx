@@ -30,6 +30,9 @@ import i18next from "./i18next.server";
 
 export const loader: LoaderFunction = async ({ request }) => {
   let locale = await i18next.getLocale(request);
+
+  locale = "nb";
+
   return json({ locale });
 };
 

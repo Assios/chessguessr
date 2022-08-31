@@ -1,3 +1,9 @@
 {
-  "stat": "Statistics"
+  "stat.statistics": "Statistics",
+  "stat.gamesPlayed": "Games played",
+  "stat.winPercentage": "Win %",
+  "stat.ratio": "Ratio of games you've solved",
+  "stat.currentStreak": "Current streak",
+  "stat.inARow": "Number of games solved in a row",
+  "stat.guessDistribution": "Your guess distribution"
 }

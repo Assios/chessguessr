@@ -1,3 +1,5 @@
+import { t } from "i18next";
+
 const Distribution = ({ guessDistribution }) => {
   const distributionArray = [
     guessDistribution[1],
@@ -11,7 +13,7 @@ const Distribution = ({ guessDistribution }) => {
 
   return (
     <div className="relative pl-6 mt-4 flex-auto">
-      <h4 className="text-xl font-semibold">Your guess distribution</h4>
+      <h4 className="text-xl font-semibold">{t("stat.guessDistribution")}</h4>
       <div className="flex flex-col">
         {distributionArray.map((numGuesses, i) => (
           <div key={i}>

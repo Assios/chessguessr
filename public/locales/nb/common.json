@@ -1,3 +1,9 @@
 {
-  "stat": "Statistikk"
+  "stat.statistics": "Statistikk",
+  "stat.gamesPlayed": "Antall spill",
+  "stat.winPercentage": "Vinstprosent",
+  "stat.ratio": "Andel spill du har klart",
+  "stat.currentStreak": "Seiersrekke",
+  "stat.inARow": "Antall spill klart på rad",
+  "stat.guessDistribution": "Din fordeling"
 }

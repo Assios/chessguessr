@@ -1,3 +1,5 @@
+import { t } from "i18next";
+
 const StatsCards = ({ playerStats }) => {
   let numWins = 0;
 
@@ -34,11 +36,11 @@ const StatsCards = ({ playerStats }) => {
 
       <div className="stat">
         <div className="stat-figure text-secondary"></div>
-        <div className="stat-title">Win %</div>
+        <div className="stat-title">{t("stat.winPercentage")}</div>
         <div className="stat-value text-success">
           {playerStats.gamesPlayed ? winPercentage : "0"}%
         </div>
-        <div className="stat-desc">Ratio of games you've solved</div>
+        <div className="stat-desc">{t("stat.ratio")}</div>
       </div>
 
       <div className="stat">
@@ -56,11 +58,11 @@ const StatsCards = ({ playerStats }) => {
             />
           </svg>
         </div>
-        <div className="stat-title">Current streak</div>
+        <div className="stat-title">{t("stat.currentStreak")}</div>
         <div className="stat-value text-success">
           {playerStats.gamesPlayed > 0 ? playerStats.currentStreak : 0}
         </div>
-        <div className="stat-desc">Number of games solved in a row</div>
+        <div className="stat-desc">{t("stat.inARow")}</div>
       </div>
     </div>
   );
