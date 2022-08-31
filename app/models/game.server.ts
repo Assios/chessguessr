@@ -920,6 +920,21 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-09-01",
+      fen: "r1b2rk1/p1q1bppp/1p1np3/2ppN1P1/3PNP2/2PBPQ2/PP3B1P/R3K2R b KQ - 0 15",
+      solution: ["dxe4", "Bxe4", "Nxe4", "Qxe4", "Bb7"],
+      gameUrl: "https://lichess.org/X2h2lMno/black#29",
+      white: "macko06",
+      black: "Fiona",
+      bTitle: "WIM",
+      bAka: "Fiona Steil-Antoni",
+      wTitle: "FM",
+      wAka: "Marek Karas",
+      wRating: 2200,
+      bRating: 1980,
+      id: 72,
+    },
+    {
+      date: "2022-09-02",
       fen: "2r1qrk1/pp4p1/1n1pp1p1/3p2Pp/1n1PP2P/P1N2P1N/1PP1Q3/2KR3R b - - 0 17",
       solution: ["Rxc3", "bxc3", "Na2+", "Kb2", "Na4+"],
       gameUrl: "https://lichess.org/J6RAbrM2/black#33",
@@ -931,7 +946,7 @@ export async function getGames(): Promise<Array<Game>> {
       wTitle: "GM",
       wRating: 3117,
       bRating: 3046,
-      id: 72,
+      id: 73,
     },
   ];
 }
