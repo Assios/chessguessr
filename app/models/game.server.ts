@@ -920,6 +920,21 @@ export async function getGames(): Promise<Array<Game>> {
     },
     {
       date: "2022-09-01",
+      fen: "2k5/p1n2N1R/2pKp3/p4p2/8/2P2P2/8/3r4 w - - 2 43",
+      solution: ["Kxc6", "Ne8", "Rh8", "Rd8", "Nxd8"],
+      gameUrl: "https://lichess.org/D2eJ0TNr/white#84",
+      white: "manwithavan",
+      black: "Konevlad",
+      wAka: "Magnus Carlsen",
+      wTitle: "GM",
+      bAka: "Vladislav Artemiev",
+      bTitle: "GM",
+      wRating: 3043,
+      bRating: 2909,
+      id: 72,
+    },
+    {
+      date: "2022-09-02",
       fen: "r1b2rk1/p1q1bppp/1p1np3/2ppN1P1/3PNP2/2PBPQ2/PP3B1P/R3K2R b KQ - 0 15",
       solution: ["dxe4", "Bxe4", "Nxe4", "Qxe4", "Bb7"],
       gameUrl: "https://lichess.org/X2h2lMno/black#29",
@@ -931,10 +946,10 @@ export async function getGames(): Promise<Array<Game>> {
       wAka: "Marek Karas",
       wRating: 2200,
       bRating: 1980,
-      id: 72,
+      id: 73,
     },
     {
-      date: "2022-09-02",
+      date: "2022-09-03",
       fen: "2r1qrk1/pp4p1/1n1pp1p1/3p2Pp/1n1PP2P/P1N2P1N/1PP1Q3/2KR3R b - - 0 17",
       solution: ["Rxc3", "bxc3", "Na2+", "Kb2", "Na4+"],
       gameUrl: "https://lichess.org/J6RAbrM2/black#33",
@@ -946,7 +961,7 @@ export async function getGames(): Promise<Array<Game>> {
       wTitle: "GM",
       wRating: 3117,
       bRating: 3046,
-      id: 73,
+      id: 74,
     },
   ];
 }
