@@ -963,5 +963,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3046,
       id: 74,
     },
+    {
+      date: "2022-09-04",
+      fen: "r6q/pb6/1p3kp1/4Np2/2pp4/2P1P3/PPQK1P2/6R1 w - - 0 26",
+      solution: ["Rxg6+", "Kxe5", "cxd4+", "Kd5", "Qxf5+"],
+      gameUrl: "https://lichess.org/FokoZFif/white#50",
+      white: "viktorgs",
+      black: "eibert",
+      wRating: 1606,
+      bRating: 1522,
+      id: 75,
+    },
   ];
 }
