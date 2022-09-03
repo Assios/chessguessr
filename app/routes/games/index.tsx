@@ -55,7 +55,6 @@ const index = () => {
           <h1 className="text-center text-4xl mb-8 font-semibold">
             Game Archive
           </h1>
-          <div className="badge badge-info mb-4">New</div>
         </div>
         <p className="max-w-prose m-auto text-center text-lg">
           On this page you'll find all previous Chessguessr puzzles. Your stats
