@@ -974,5 +974,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1522,
       id: 75,
     },
+    {
+      date: "2022-09-05",
+      fen: "3r1rk1/p1q2ppp/1p2pb2/4B3/7P/1P1p2P1/P1PNQPK1/R3R3 b - - 1 18",
+      solution: ["dxe2", "Bxc7", "Rxd2", "Rac1", "Rc8"],
+      gameUrl: "https://lichess.org/ljD6Sk9P/black#35",
+      white: "PI3K",
+      black: "AbasovN",
+      bTitle: "GM",
+      bAka: "Nijat Abasov",
+      wRating: 2692,
+      bRating: 2875,
+      id: 76,
+    },
   ];
 }
