@@ -32,7 +32,8 @@ export default function TutorialModal({
                   <p className="mb-2 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5
                     next moves played in the game. After each guess, the color
-                    of the tile will show how close you were (much like Wordle).
+                    of the tile will show how close you were. It's like Wordle,
+                    or Chessle, but for chess games.
                   </p>
                   <div className="divider" />
                   <h3 className="text-xl font-semibold mb-2">Examples</h3>
