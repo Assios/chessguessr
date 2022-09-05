@@ -987,5 +987,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2875,
       id: 76,
     },
+    {
+      date: "2022-09-06",
+      fen: "2r5/7p/2p1n3/1pP1kprP/pP5R/P6B/4KP2/6R1 w - - 0 33",
+      solution: ["Rxg5", "Nxg5", "f4+", "Kf6", "fxg5+"],
+      gameUrl: "https://lichess.org/2gjS5BSU/white#64",
+      white: "Urkis",
+      black: "sedizor",
+      wAka: "Frode Urkedal",
+      wTitle: "GM",
+      wRating: 2476,
+      bRating: 2243,
+      id: 77,
+    },
   ];
 }
