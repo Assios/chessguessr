@@ -1000,5 +1000,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2243,
       id: 77,
     },
+    {
+      date: "2022-09-07",
+      fen: "5rk1/5qp1/1PbpN3/3P2r1/5p2/5B2/Q6P/5R1K b - - 1 37",
+      solution: ["Rxd5", "Bxd5", "Qxe6", "Rd1", "Rf5"],
+      gameUrl: "https://lichess.org/p8KNUKPd/black#73",
+      white: "BlueGreensun",
+      black: "may6enexttime",
+      wTitle: "GM",
+      bTitle: "GM",
+      wAka: "Vahap Sanal",
+      bAka: "Aleksei Sarana",
+      wRating: 2735,
+      bRating: 2914,
+      id: 78,
+    },
   ];
 }
