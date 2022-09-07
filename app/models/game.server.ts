@@ -1015,5 +1015,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2914,
       id: 78,
     },
+    {
+      date: "2022-09-08",
+      fen: "r3r1k1/pbq2ppp/1p6/2pPn1B1/2PpN3/P2B1Q2/1P3PPb/3R1R1K w - - 2 19",
+      solution: ["Nf6+", "gxf6", "Bxh7+", "Kxh7", "Qh5+"],
+      gameUrl: "https://lichess.org/ZuBwwur9/white#36",
+      white: "C9C9C9C9C9",
+      black: "Zhigalko_Sergei",
+      wAka: "Andrew Tang",
+      wTitle: "GM",
+      bAka: "Sergei Zhigalko",
+      bTitle: "GM",
+      wRating: 3133,
+      bRating: 3168,
+      id: 79,
+    },
   ];
 }
