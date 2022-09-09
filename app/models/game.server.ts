@@ -1041,5 +1041,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2633,
       id: 80,
     },
+    {
+      date: "2022-09-10",
+      fen: "5k2/1p4bR/4q1p1/p7/4N3/5N1P/P1r2PP1/4R1K1 w - - 1 29",
+      solution: ["Neg5", "Qxa2", "Ne6+", "Kg8", "Rxg7+"],
+      gameUrl: "https://lichess.org/fzfQO111/white#56",
+      white: "mysterious_expert",
+      black: "C9C9C9C9C9",
+      wTitle: "IM",
+      bTitle: "GM",
+      wAka: "Dimitar Mardov",
+      bAka: "Andrew Tang",
+      wRating: 2839,
+      bRating: 3118,
+      id: 81,
+    },
   ];
 }
