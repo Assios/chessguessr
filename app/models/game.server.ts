@@ -1056,5 +1056,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3118,
       id: 81,
     },
+    {
+      date: "2022-09-11",
+      fen: "r3k2r/1b1nbppp/p3pn2/1p1pN3/3q4/P1NB2B1/1PP2PPP/R2Q1R1K w kq - 2 13",
+      solution: ["Nxf7", "Rf8", "Ng5", "Qg4", "Qxg4"],
+      gameUrl: "https://lichess.org/kuZYvDzj/white#24",
+      white: "PchelkinVK",
+      black: "luyfluy",
+      wTitle: "GM",
+      wAka: "Andrey Ermolaev",
+      wRating: 2596,
+      bRating: 2409,
+      id: 82,
+    },
   ];
 }
