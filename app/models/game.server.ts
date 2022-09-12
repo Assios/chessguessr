@@ -1083,5 +1083,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2271,
       id: 83,
     },
+    {
+      date: "2022-09-13",
+      fen: "r3k1r1/1p1b1pp1/pq1ppb1p/2n5/4PPP1/1NN4Q/PPP3BP/1K1R3R w q - 6 16",
+      solution: ["e5", "dxe5", "Nxc5", "Qxc5", "Ne4"],
+      gameUrl: "https://lichess.org/aaG3BxBC/white#30",
+      white: "Grukjr",
+      black: "Espntheocho",
+      wTitle: "GM",
+      wAka: "Simen Agdestein",
+      wRating: 2566,
+      bRating: 2514,
+      id: 84,
+    },
   ];
 }
