@@ -9,6 +9,7 @@ import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
 
 const chessCols = "abcdefgh";
+const kingMove = "OK";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
@@ -109,11 +110,16 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
         formattedGuess[i].color = "yellow";
       }
 
+      console.log("solutionarr", solutionArray);
+      console.log("move", move.move);
+
       if (
         move.color !== "green" &&
         (solutionArray[i][0] === move.move[0] ||
           (chessCols.includes(solutionArray[i][0]) &&
-            chessCols.includes(move.move[0])))
+            chessCols.includes(move.move[0])) ||
+          (kingMove.includes(solutionArray[i][0]) &&
+            kingMove.includes(move.move[0])))
       ) {
         formattedGuess[i].pieceColor = "red";
       }
