@@ -1108,5 +1108,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2598,
       id: 85,
     },
+    {
+      date: "2022-09-15",
+      fen: "r4rk1/pp1n1pp1/2pb3p/4pb2/3P1N2/2P1BQR1/PP3PP1/R3KB1q w Q - 0 19",
+      solution: ["Nh5", "Bg6", "Rh3", "Qg1", "O-O-O"],
+      gameUrl: "https://lichess.org/gU6oNxsm/white#36",
+      white: "Elda64",
+      black: "VincentKeymer2004",
+      wTitle: "GM",
+      bTitle: "GM",
+      wAka: "Paul Velten",
+      bAka: "Vincent Keymer",
+      wRating: 2669,
+      bRating: 2732,
+      id: 86,
+    },
   ];
 }
