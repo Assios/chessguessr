@@ -110,9 +110,6 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
         formattedGuess[i].color = "yellow";
       }
 
-      console.log("solutionarr", solutionArray);
-      console.log("move", move.move);
-
       if (
         move.color !== "green" &&
         (solutionArray[i][0] === move.move[0] ||
