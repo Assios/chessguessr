@@ -1123,5 +1123,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2732,
       id: 86,
     },
+    {
+      date: "2022-09-16",
+      fen: "r2q1k1r/pp3ppp/3bb3/1B2n3/4N1n1/5N2/PPPB1PPP/R2Q1RK1 b - - 3 14",
+      solution: ["Nxf3+", "Qxf3", "Bxh2+", "Kh1", "Qh4"],
+      gameUrl: "https://lichess.org/9KNWIDNb/black#27",
+      white: "Electrochess2019",
+      black: "HUN-vighim",
+      wRating: 2112,
+      bRating: 1888,
+      id: 87,
+    },
   ];
 }
