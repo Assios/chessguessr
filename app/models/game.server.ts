@@ -1160,5 +1160,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3063,
       id: 89,
     },
+    {
+      date: "2022-09-19",
+      fen: "r4r1k/1p2Nppp/p3b3/2q5/3p4/5QP1/PP3K1R/RN6 w - - 0 25",
+      solution: ["Rxh7+", "Kxh7", "Qh1+", "Qh5", "Qxh5#"],
+      gameUrl: "https://lichess.org/WZ2kDfYN/white#48",
+      white: "TiBreizh",
+      black: "Archimboldi",
+      wTitle: "FM",
+      wRating: 1914,
+      bRating: 2001,
+      id: 90,
+    },
   ];
 }
