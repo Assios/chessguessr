@@ -1172,5 +1172,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2001,
       id: 90,
     },
+    {
+      date: "2022-09-20",
+      fen: "r1bqkb1r/p3pp1p/2pp2p1/4P2n/2B5/2N5/PPP2PPP/R1BQK2R w KQkq - 1 9",
+      solution: ["Qf3", "d5", "Nxd5", "Be6", "Ne3"],
+      gameUrl: "https://lichess.org/z3F7x66p/white#16",
+      white: "Quparadze",
+      black: "Pandachess-ru",
+      bTitle: "IM",
+      wRating: 2860,
+      bRating: 2760,
+      id: 91,
+    },
   ];
 }
