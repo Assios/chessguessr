@@ -1184,5 +1184,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2760,
       id: 91,
     },
+    {
+      date: "2022-09-21",
+      fen: "1r2r1k1/2q3P1/1n1b1pQ1/3n1b1B/1ppp4/7P/1P1N2PB/R4R1K w - - 2 28",
+      solution: ["Qxf5", "Bxh2", "Bxe8", "Rxe8", "Qh5"],
+      gameUrl: "https://lichess.org/Odhogsu4/white#54",
+      white: "user_silva2002",
+      black: "gmadham",
+      bTitle: "GM",
+      bAka: "Adham Fawzy",
+      wRating: 2500,
+      bRating: 2429,
+      id: 92,
+    },
   ];
 }
