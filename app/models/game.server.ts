@@ -1216,6 +1216,7 @@ export async function getGames(): Promise<Array<Game>> {
       white: "drshabir",
       black: "sestremera",
       bTitle: "IM",
+      bAka: "Sergio Estremera",
       wRating: 2207,
       bRating: 2338,
       id: 94,
