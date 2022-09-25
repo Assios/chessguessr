@@ -1245,5 +1245,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1935,
       id: 96,
     },
+    {
+      date: "2022-09-26",
+      fen: "r3r1k1/1p4p1/2p4p/p1q1Bp2/2P5/1n1P2P1/1Q2RP1P/R5K1 w - - 2 26",
+      solution: ["Rae1", "a4", "Bxg7", "Rxe2", "Rxe2"],
+      gameUrl: "https://lichess.org/COtstaTZ/white#50",
+      white: "couchpotato123",
+      black: "Ferrum89",
+      bTitle: "GM",
+      bAka: "Artem Chernobay",
+      wRating: 2447,
+      bRating: 2597,
+      id: 97,
+    },
   ];
 }
