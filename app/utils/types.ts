@@ -9,6 +9,7 @@ export type Game = {
   bAka?: string;
   wTitle?: string;
   bTitle?: string;
+  event?: string;
   wRating: number | string;
   bRating: number | string;
   id: number;

@@ -35,7 +35,8 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
-        {game.bAka && ` (${game.bAka})`}. Check out the game{" "}
+        {game.bAka && ` (${game.bAka})`}
+        {game.event && ` in the ${game.event}`}. Check out the game{" "}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href={game.gameUrl}
@@ -80,8 +81,9 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
     <div className="relative pl-6 pr-6 flex-auto">
       <div className="divider" />
       <p className="my-4 text-lg leading-relaxed">
-        This game was played between {game.white} and {game.black}. Check out
-        the game{" "}
+        This game was played between {game.white}{" "}
+        {game.wAka && `(${game.wAka})`} and {game.black}
+        {game.bAka && ` (${game.bAka})`}. Check out the game{" "}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href={game.gameUrl}
