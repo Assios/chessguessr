@@ -1258,5 +1258,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2597,
       id: 97,
     },
+    {
+      date: "2022-09-27",
+      fen: "1k6/bpp1qp2/5n1p/5Pp1/QPBN1n2/2P1B3/P5PP/3R2K1 b - - 0 27",
+      solution: ["Qxe3+", "Kf1", "N4d5", "Bxd5", "Ng4"],
+      gameUrl:
+        "https://lichess.org/broadcast/julius-baer-generation-cup--meltwater-champions-chess-tour/final-match-1/c3KdjFm1/VSX1vtAY#53",
+      white: "Arjun Erigaisi",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Julius Baer Generation Cup",
+      wRating: 2725,
+      bRating: 2861,
+      id: 98,
+    },
   ];
 }
