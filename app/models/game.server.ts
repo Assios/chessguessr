@@ -1273,5 +1273,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2861,
       id: 98,
     },
+    {
+      date: "2022-09-28",
+      fen: "4r2r/p1p5/2pbk3/4pR1n/1P2Pp2/P1N2P1p/1BP2K1P/4R3 b - - 5 25",
+      solution: ["Reg8", "Rg1", "Ng3", "hxg3", "fxg3+"],
+      gameUrl: "https://lichess.org/79RtcNKN/black#49",
+      white: "Buituankiet2009",
+      black: "Timislov",
+      wRating: 2098,
+      bRating: 1990,
+      id: 99,
+    },
   ];
 }
