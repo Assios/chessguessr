@@ -1284,5 +1284,19 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1990,
       id: 99,
     },
+    {
+      date: "2022-09-29",
+      fen: "8/R2Pk1p1/p3b2p/3P4/4B3/2q1BP1P/2P2KP1/q7 w - - 0 47",
+      solution: ["d6+", "Kf6", "d8=Q+", "Ke5", "Bf4+"],
+      gameUrl: "https://lichess.org/1r9vZqgk/white#92",
+      white: "chessbrahs",
+      black: "Zaven_ChessMood",
+      wAka: "Eric Hansen",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2973,
+      bRating: 2926,
+      id: 100,
+    },
   ];
 }
