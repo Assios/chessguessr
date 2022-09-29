@@ -1,11 +1,18 @@
 import { Chessguessr } from "../../components/Chessguessr";
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+
+export const meta: MetaFunction = ({ data }) => {
+  const players = data?.game?.white + " vs. " + data?.game?.black;
+  return {
+    title: `Chessguessr – ${players}`,
+  };
+};
 
 export const CatchBoundary: CatchBoundaryComponent = () => {
   const caught = useCatch();
