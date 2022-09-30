@@ -1322,5 +1322,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2471,
       id: 102,
     },
+    {
+      date: "2022-10-02",
+      fen: "2rq2k1/1p2Nrb1/p5p1/P6p/2Q1PBnP/8/1P3PP1/R3K2R b KQ - 2 21",
+      solution: ["Qxe7", "Qxc8+", "Kh7", "f3", "Rxf4"],
+      gameUrl: "https://lichess.org/OsUOMiph/black#41",
+      white: "jsl",
+      black: "Yarebore",
+      wTitle: "GM",
+      bTitle: "IM",
+      wRating: 2493,
+      bRating: 2571,
+      id: 103,
+    },
   ];
 }
