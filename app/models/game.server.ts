@@ -1309,5 +1309,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1847,
       id: 101,
     },
+    {
+      date: "2022-10-01",
+      fen: "2R5/4ppk1/6p1/2p2n1p/2P1P3/3P1NP1/r4PKP/8 b - - 0 32",
+      solution: ["Ne3+", "Kh3", "Ng4", "Kh4", "Rxf2"],
+      gameUrl: "https://lichess.org/wR2bKCfs/black#63",
+      white: "Grandelicious",
+      wAka: "Nils Grandelius",
+      wTitle: "GM",
+      black: "eltarol",
+      wRating: 2645,
+      bRating: 2471,
+      id: 102,
+    },
   ];
 }
