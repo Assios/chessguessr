@@ -1335,5 +1335,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2571,
       id: 103,
     },
+    {
+      date: "2022-10-03",
+      fen: "2bq1r2/p2n1pk1/1p1Bp2b/4P3/3P1p2/P2B3Q/6P1/5RK1 w - - 0 26",
+      solution: ["Rxf4", "f5", "exf6+", "Rxf6", "Rg4+"],
+      gameUrl: "https://lichess.org/M99GUC1l/white#50",
+      white: "therealYardbird",
+      black: "linusj",
+      bAka: "Linus Johansson",
+      bTitle: "IM",
+      wRating: 2700,
+      bRating: 2568,
+      id: 104,
+    },
   ];
 }
