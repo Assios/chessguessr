@@ -81,7 +81,8 @@ export const Chessguessr = ({
 
   const size = useWindowSize();
 
-  const { white, black, wRating, bRating, wTitle, bTitle, wAka, bAka } = game;
+  const { white, black, wRating, bRating, wTitle, bTitle, wAka, bAka, event } =
+    game;
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
@@ -143,13 +144,13 @@ export const Chessguessr = ({
                {black} ({bRating})
             </p>
             {position && (
-              <>
+              <div className="flex justify-between">
                 {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (
-                  <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
                     {colorToPlay === "b" ? "Black" : "White"} to play
                   </p>
                 ) : (
-                  <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
                     New game in{" "}
                     <Countdown
                       date={nextDate}
@@ -158,7 +159,15 @@ export const Chessguessr = ({
                     />
                   </p>
                 )}
-              </>
+                <div
+                  className="tooltip"
+                  data-tip="Event or website where the game was played"
+                >
+                  <span className="mt-2 badge badge-accent">
+                    {event ? event : "lichess.org"}
+                  </span>
+                </div>
+              </div>
             )}
           </Players>
 
