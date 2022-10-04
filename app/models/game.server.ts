@@ -1359,8 +1359,19 @@ export async function getGames(): Promise<Array<Game>> {
       black: "Sipke Ernst",
       bTitle: "IM",
       bRating: 2474,
-      id: 104,
+      id: 105,
       event: "Wijk aan Zee, 2004",
+    },
+    {
+      date: "2022-10-05",
+      fen: "r6r/pb2k3/2p1p2p/2N3p1/3Q1q2/8/PPP3PP/R5K1 w - - 0 21",
+      solution: ["Qd7+", "Kf6", "Rf1", "Qxf1+", "Kxf1"],
+      gameUrl: "https://lichess.org/YjSbKY9C/white#40",
+      white: "Roy_Batty",
+      black: "tsitsila",
+      wRating: 1854,
+      bRating: 1835,
+      id: 106,
     },
   ];
 }
