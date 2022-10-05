@@ -1373,5 +1373,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1835,
       id: 106,
     },
+    {
+      date: "2022-10-06",
+      fen: "4rrk1/1b1qn1b1/pp1p2np/6p1/3P4/2N2NB1/PPP1QPPP/R3R1K1 b - - 9 19",
+      solution: ["Bxf3", "gxf3", "Nf5", "Qc4+", "Kh8"],
+      gameUrl: "https://lichess.org/SMoLyBgS/black#37",
+      white: "Yakov25",
+      black: "howitzer14",
+      bAka: "David Howell",
+      bTitle: "GM",
+      wRating: 2679,
+      bRating: 2948,
+      id: 107,
+    },
   ];
 }
