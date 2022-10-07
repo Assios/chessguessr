@@ -1397,5 +1397,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1715,
       id: 108,
     },
+    {
+      date: "2022-10-08",
+      fen: "2rr2k1/1b3ppp/pb2p3/1p2P3/1P2BPnq/P1N3P1/1B2Q2P/R4R1K b - - 0 22",
+      solution: ["Rxc3", "gxh4", "Rd2", "Qxd2", "Bxe4"],
+      gameUrl: "https://lichess.org/ROVVvhJR#43",
+      white: "Georg Rotlewi",
+      black: "Akiba Rubinstein",
+      wRating: "?",
+      bRating: "?",
+      id: 109,
+    },
   ];
 }
