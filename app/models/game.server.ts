@@ -1409,5 +1409,16 @@ export async function getGames(): Promise<Array<Game>> {
       id: 109,
       event: "Lodz (1907)",
     },
+    {
+      date: "2022-10-09",
+      fen: "r1bqkb1r/3n1p2/p1n1p1p1/1p2P1Np/1PNP3P/P1P5/2Q2PP1/R1B1K2R w KQkq - 0 15",
+      solution: ["Nxe6", "bxc4", "Nxd8", "Kxd8", "Qe4"],
+      gameUrl: "https://lichess.org/yRTlran4/white#28",
+      white: "faizalzal077",
+      black: "Dua_alim",
+      wRating: 2403,
+      bRating: 2112,
+      id: 110,
+    },
   ];
 }
