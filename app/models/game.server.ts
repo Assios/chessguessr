@@ -1446,5 +1446,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1666,
       id: 112,
     },
+    {
+      date: "2022-10-12",
+      fen: "r1b1rbk1/1p6/2p2n2/p3p3/P4p2/1PNRBBNP/2P5/4R1K1 w - - 0 25",
+      solution: ["Nge4", "Nxe4", "Nxe4", "fxe3", "Nf6+"],
+      gameUrl: "https://lichess.org/VCh7AENR/white#48",
+      white: "DrNykterstein",
+      black: "Night-King96",
+      wTitle: "GM",
+      bTitle: "GM",
+      wAka: "Magnus Carlsen",
+      bAka: "Oleksandr Bortnyk",
+      wRating: 3278,
+      bRating: 3118,
+      id: 113,
+    },
   ];
 }
