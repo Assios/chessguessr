@@ -1472,5 +1472,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1524,
       id: 114,
     },
+    {
+      date: "2022-10-14",
+      fen: "6k1/4bpp1/1p1p4/5R1P/4PQ1q/5P2/r5KP/2R5 w - - 1 48",
+      solution: ["Kh1", "Qf2", "Rc8+", "Kh7", "Qh6+"],
+      gameUrl: "https://lichess.org/rm2COksD#94",
+      white: "Magnus Carlsen",
+      black: "Sergey Karjakin",
+      event: "World Chess Championship 2016",
+      wRating: 2853,
+      bRating: 2772,
+      id: 115,
+    },
   ];
 }
