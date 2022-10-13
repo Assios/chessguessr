@@ -1479,6 +1479,8 @@ export async function getGames(): Promise<Array<Game>> {
       gameUrl: "https://lichess.org/rm2COksD#94",
       white: "Magnus Carlsen",
       black: "Sergey Karjakin",
+      wTitle: "GM",
+      bTitle: "GM",
       event: "World Chess Championship 2016",
       wRating: 2853,
       bRating: 2772,
