@@ -1501,5 +1501,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2805,
       id: 116,
     },
+    {
+      date: "2022-10-16",
+      fen: "2k1b1r1/1pp4R/p1p1p3/8/8/6B1/r4PK1/3R4 w - - 2 29",
+      solution: ["Rxc7+", "Kb8", "Rg7+", "Ka7", "Rxg8"],
+      gameUrl: "https://lichess.org/JUESVQle/white#56",
+      white: "JoseTedesco",
+      black: "Kurd_1991",
+      wRating: 1780,
+      bRating: 1642,
+      id: 117,
+    },
   ];
 }
