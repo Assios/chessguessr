@@ -1535,5 +1535,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1900,
       id: 119,
     },
+    {
+      date: "2022-10-19",
+      fen: "8/6Q1/2p5/2P5/Pp3k1P/1P1q1b2/8/2K5 w - - 1 45",
+      solution: ["Qg5+", "Ke4", "Qg6+", "Ke3", "Qxd3+"],
+      gameUrl: "https://lichess.org/f6XLaHIT/white#88",
+      white: "razorivo85",
+      black: "JayanthConanKing",
+      wRating: 1884,
+      bRating: 1847,
+      id: 120,
+    },
   ];
 }
