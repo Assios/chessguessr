@@ -108,7 +108,9 @@ export const Chessguessr = ({
   const nextDate = midnightUtcTomorrow();
 
   useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Left", takeback, [currentGuess, fenHistory]);
   useHotkeys("Enter", submitGuess, [currentGuess]);
+  useHotkeys("Space", submitGuess, [currentGuess]);
 
   return (
     <div>
