@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useChessguessr from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
+import { Row } from "./Row";
 import styled from "styled-components";
 import Modal from "./Modal/Modal";
 import { Game, GameStatus } from "~/utils/types";
@@ -9,8 +10,14 @@ import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
 import { useHotkeys } from "react-hotkeys-hook";
 import Countdown from "react-countdown";
-import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
+import {
+  countdownRenderer,
+  midnightUtcTomorrow,
+  GameLink,
+  guessifySolution,
+} from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
+import { Tile } from "~/styles/styles";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -43,6 +50,15 @@ const Players = styled.div`
   flex-direction: column;
 
   justify-content: center;
+`;
+
+const SolutionWrapper = styled.div`
+  margin-left: 1rem;
+  margin-bottom: -1.3rem;
+
+  @media (max-width: 1140px) {
+    margin-bottom: 0rem;
+  }
 `;
 
 export const Chessguessr = ({
@@ -212,6 +228,23 @@ export const Chessguessr = ({
           </Buttons>
         </BoardWrapper>
         <div className="flex flex-col">
+          {gameStatus !== GameStatus.IN_PROGRESS && (
+            <>
+              <SolutionWrapper className="flex flex-col justify-end pl-3 border-b-5 border-b-zinc-500">
+                <div className="flex flex-row justify-between">
+                  <p className="sm:text-lg lg:text-2xl mb-3 font-semibold">
+                    Game over! Solution:
+                  </p>
+                  <span>
+                    See game <GameLink game={game} />
+                  </span>
+                </div>
+                <div className="flex flex-row mt-1">
+                  <Row guess={guessifySolution(game)} />
+                </div>
+              </SolutionWrapper>
+            </>
+          )}
           <Grid
             currentGuess={currentGuess}
             guesses={guesses}

@@ -4,7 +4,11 @@ import { Tile } from "~/styles/styles";
 import { GameStatus } from "~/utils/types";
 import Distribution from "./Distribution";
 import Countdown, { zeroPad } from "react-countdown";
-import { countdownRenderer, midnightUtcTomorrow } from "~/utils/utils";
+import {
+  countdownRenderer,
+  midnightUtcTomorrow,
+  GameLink,
+} from "~/utils/utils";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -24,7 +28,7 @@ const getAverageNumberOfTurns = (puzzleStats) => {
   return Math.round((puzzleStats.turns / puzzleStats.solved) * 100) / 100;
 };
 
-const Correct = ({ game, gameUrlText, puzzleStats }) => {
+const Correct = ({ game, puzzleStats }) => {
   const solvedPercentage = getSolvedPercentage(puzzleStats);
 
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
@@ -36,15 +40,12 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
         {game.bAka && ` (${game.bAka})`}
-        {game.event && ` in the ${game.event}`}. Check out the game{" "}
-        <a
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href={game.gameUrl}
-          target="_blank"
-        >
-          {gameUrlText(game)}
-        </a>
-        .
+        {game.event && ` in the ${game.event}`}.{" "}
+        {game.gameUrl && (
+          <>
+            Check out the game <GameLink game={game} />.
+          </>
+        )}
       </p>
       <span className="font-semibold">Solution</span>
       <div className="flex flex-row mt-1">
@@ -55,6 +56,7 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
             flipTile={true}
             animationIndex={i * 0.2}
             tutorial={true}
+            key={`${move}-${i}`}
           >
             {move}
           </Tile>
@@ -72,7 +74,7 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
   );
 };
 
-const Failed = ({ game, gameUrlText, puzzleStats }) => {
+const Failed = ({ game, puzzleStats }) => {
   const solvedPercentage = getSolvedPercentage(puzzleStats);
 
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
@@ -83,15 +85,12 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
       <p className="my-4 text-lg leading-relaxed">
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
-        {game.bAka && ` (${game.bAka})`}. Check out the game{" "}
-        <a
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href={game.gameUrl}
-          target="_blank"
-        >
-          {gameUrlText(game)}
-        </a>
-        .
+        {game.bAka && ` (${game.bAka})`}.{" "}
+        {game.gameUrl && (
+          <>
+            Check out the game <GameLink game={game} />.
+          </>
+        )}
       </p>
       <span className="font-semibold">Solution</span>
       <div className="flex flex-row mt-1">
@@ -133,14 +132,6 @@ export default function Modal({
   const [value, copy] = useCopyToClipboard();
 
   const solvedPercentage = getSolvedPercentage(puzzleStats);
-
-  const gameUrlText = (game) => {
-    if (game.gameUrl.includes("lichess.org")) {
-      return "on lichess";
-    }
-
-    return "here";
-  };
 
   const getShareGameText = (
     guesses: any,
@@ -266,17 +257,9 @@ export default function Modal({
                 {gameStatus !== GameStatus.IN_PROGRESS ? (
                   <>
                     {gameStatus === GameStatus.SOLVED ? (
-                      <Correct
-                        game={game}
-                        gameUrlText={gameUrlText}
-                        puzzleStats={puzzleStats}
-                      />
+                      <Correct game={game} puzzleStats={puzzleStats} />
                     ) : (
-                      <Failed
-                        game={game}
-                        gameUrlText={gameUrlText}
-                        puzzleStats={puzzleStats}
-                      />
+                      <Failed game={game} puzzleStats={puzzleStats} />
                     )}
                   </>
                 ) : null}
