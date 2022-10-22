@@ -1589,6 +1589,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "George Alan Thomas",
       wRating: "?",
       bRating: "?",
+      event: "Casual game (1912), London",
       id: 124,
     },
   ];
