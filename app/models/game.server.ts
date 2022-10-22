@@ -1580,5 +1580,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2036,
       id: 123,
     },
+    {
+      date: "2022-10-23",
+      fen: "rn3rk1/pbppq1pp/1p2pb2/4N2Q/3PN3/3B4/PPP2PPP/R3K2R w KQ - 6 11",
+      solution: ["Qxh7+", "Kxh7", "Nxf6+", "Kh6", "Neg4+"],
+      gameUrl: "https://lichess.org/YpIjuOvA#20",
+      white: "Edward Lasker",
+      black: "George Alan Thomas",
+      wRating: "?",
+      bRating: "?",
+      id: 124,
+    },
   ];
 }
