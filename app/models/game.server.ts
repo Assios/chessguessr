@@ -1592,5 +1592,16 @@ export async function getGames(): Promise<Array<Game>> {
       event: "Casual game (1912), London",
       id: 124,
     },
+    {
+      date: "2022-10-24",
+      fen: "2rq1rk1/1p3ppp/p1nbp3/8/1PQ3b1/P3PN2/1B1RBPPP/5RK1 b - - 0 16",
+      solution: ["Bxf3", "gxf3", "Bxh2+", "Kxh2", "Qxd2"],
+      gameUrl: "https://lichess.org/A35eciJy/black#31",
+      white: "CryptoHyppo",
+      black: "VINICIOUS_12345",
+      wRating: 2566,
+      bRating: 2618,
+      id: 125,
+    },
   ];
 }
