@@ -1603,5 +1603,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2618,
       id: 125,
     },
+    {
+      date: "2022-10-25",
+      fen: "3r1rk1/pp3ppp/b1n2n2/2b1p3/8/1P1qPPP1/PB1PN1BP/RN1QR1K1 b - - 4 14",
+      solution: ["Bxe3+", "Kh1", "Bxd2", "Nxd2", "Qxd2"],
+      gameUrl: "https://lichess.org/K8s3h9AT/black#27",
+      white: "lakersfan24",
+      black: "PusheenMeow",
+      bTitle: "CM",
+      bAka: "Jon Kristian Haarr",
+      wRating: 2552,
+      bRating: 2528,
+      id: 126,
+    },
   ];
 }
