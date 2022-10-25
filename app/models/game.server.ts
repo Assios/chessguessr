@@ -1616,5 +1616,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2528,
       id: 126,
     },
+    {
+      date: "2022-10-26",
+      fen: "r1b2r1k/p2pq1pp/2nN2n1/1ppBp3/3p1P2/5RQ1/PPP3PP/R1B3K1 w - - 0 19",
+      solution: ["Qxg6", "Rf6", "Qe8+", "Qxe8", "Nxe8"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-fischer-random-chess-championship/day-1-match-1/Eij7M6Cb/h1n67bcy#36",
+      white: "Magnus Carlsen",
+      black: "Vladimir Fedoseev",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2856,
+      bRating: 2688,
+      id: 127,
+      event: "World Fischer Random Championship",
+    },
   ];
 }
