@@ -1634,7 +1634,7 @@ export async function getGames(): Promise<Array<Game>> {
     {
       date: "2022-10-27",
       fen: "8/pk3b1p/1p6/2p2p2/8/1PR1rP2/P2N2PP/2NK4 b - - 0 28",
-      solution: ["Qxg6", "Rf6", "Qe8+", "Qxe8", "Nxe8"],
+      solution: ["Rxc3", "Nf1", "c4", "Kd2", "Rxc1"],
       gameUrl:
         "https://lichess.org/broadcast/fide-world-fischer-random-chess-championship/day-2-match-3/z6zmRbP4/iDn5JuvT#55",
       white: "Matthias Bluebaum",
