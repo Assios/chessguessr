@@ -1631,5 +1631,20 @@ export async function getGames(): Promise<Array<Game>> {
       id: 127,
       event: "World Fischer Random Championship",
     },
+    {
+      date: "2022-10-27",
+      fen: "8/pk3b1p/1p6/2p2p2/8/1PR1rP2/P2N2PP/2NK4 b - - 0 28",
+      solution: ["Qxg6", "Rf6", "Qe8+", "Qxe8", "Nxe8"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-fischer-random-chess-championship/day-2-match-3/z6zmRbP4/iDn5JuvT#55",
+      white: "Matthias Bluebaum",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2647,
+      bRating: 2856,
+      id: 128,
+      event: "World Fischer Random Championship",
+    },
   ];
 }
