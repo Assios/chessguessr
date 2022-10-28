@@ -1646,5 +1646,20 @@ export async function getGames(): Promise<Array<Game>> {
       id: 128,
       event: "World Fischer Random Championship",
     },
+    {
+      date: "2022-10-28",
+      fen: "b3k3/pq1p2p1/1b2n1r1/1P2B2p/PP2n2P/1B1Q1N2/5PP1/5RK1 w - - 1 21",
+      solution: ["a5", "Bc7", "a6", "Qb6", "Bd5"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-fischer-random-chess-championship/day-3-match-6/BYiQHJ5Z/yFYL9Vq2#40",
+      white: "Magnus Carlsen",
+      black: "Hikaru Nakamura",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2856,
+      bRating: 2768,
+      id: 129,
+      event: "World Fischer Random Championship",
+    },
   ];
 }
