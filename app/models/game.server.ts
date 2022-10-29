@@ -1672,5 +1672,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2049,
       id: 130,
     },
+    {
+      date: "2022-10-30",
+      fen: "6n1/3k1pB1/4p1p1/1p1pP3/1PpPq1PP/2P3K1/1n1QN3/8 b - - 4 39",
+      solution: ["Qd3+", "Qxd3", "cxd3", "Kf2", "d2"],
+      gameUrl: "https://lichess.org/jb65p2Qn/black#77",
+      white: "PlanetLABC61",
+      black: "mHeidelberg",
+      wRating: 1780,
+      bRating: 1887,
+      id: 131,
+    },
   ];
 }
