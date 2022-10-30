@@ -1683,5 +1683,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1887,
       id: 131,
     },
+    {
+      date: "2022-10-31",
+      fen: "4rr2/pk1p4/1ppP4/4N2p/5Nb1/1PK1R1P1/P1P4n/1R6 w - - 0 26",
+      solution: ["Rbe1", "Rxe5", "Rxe5", "Nf3", "Re8"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-fischer-random-chess-championship/finals--armageddon/1jTLZRNH/UwCkIVUD#50",
+      white: "Hikaru Nakamura",
+      black: "Ian Nepomniachtchi",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2768,
+      bRating: 2793,
+      id: 132,
+      event: "World Fischer Random Championship",
+    },
   ];
 }
