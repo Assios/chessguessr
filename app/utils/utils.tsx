@@ -36,6 +36,34 @@ export const countdownRenderer = ({ hours, minutes, seconds }) => (
   </span>
 );
 
+const gameUrlText = (game) => {
+  if (game.gameUrl.includes("lichess.org")) {
+    return "on lichess";
+  }
+
+  return "here";
+};
+
+export const GameLink = ({ game }) => {
+  return (
+    <a
+      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+      href={game.gameUrl}
+      target="_blank"
+    >
+      {gameUrlText(game)}
+    </a>
+  );
+};
+
+export const guessifySolution = (game) => {
+  return game.solution.map((move) => ({
+    move,
+    color: "green",
+    pieceColor: "regular",
+  }));
+};
+
 // We re-export useHotkeys with preventDefault on the handler
 export const useHotkeys = (
   key: string,
