@@ -232,7 +232,7 @@ export const Chessguessr = ({
           </Buttons>
         </BoardWrapper>
         <div className="flex flex-col">
-          {gameStatus !== GameStatus.IN_PROGRESS && (
+          {gameStatus === GameStatus.FAILED && (
             <>
               <SolutionWrapper className="flex flex-col justify-end pl-3 border-b-5 border-b-zinc-500">
                 <div className="flex flex-row justify-between">
@@ -255,7 +255,7 @@ export const Chessguessr = ({
             turn={turn}
             insufficientMoves={insufficientMoves}
           />
-          <div className="flex flex-row justify-end">
+          <div className="flex mb-4 flex-row justify-end">
             <input
               type="text"
               className="input input-bordered input-sm w-full max-w-xs mt-2 mr-1 w-56"
