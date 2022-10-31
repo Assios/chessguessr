@@ -1698,5 +1698,16 @@ export async function getGames(): Promise<Array<Game>> {
       id: 132,
       event: "World Fischer Random Championship",
     },
+    {
+      date: "2022-11-01",
+      fen: "2b1k2r/1p1p1ppp/r3p3/q1b5/4N3/P3P3/3Q1PPP/R3K1NR w KQk - 0 14",
+      solution: ["Nxc5", "Qxc5", "Rc1", "Qxa3", "Rxc8+"],
+      gameUrl: "https://lichess.org/R3r8hOGc/white#26",
+      white: "ghost",
+      black: "ChessRookieLA",
+      wRating: 1625,
+      bRating: 1710,
+      id: 133,
+    },
   ];
 }
