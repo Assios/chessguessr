@@ -4,7 +4,12 @@ import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
-import { Game, GameStatus } from "~/utils/types";
+import {
+  Game,
+  GameStatus,
+  FullFenHistory,
+  GuessWithHistory,
+} from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
 
@@ -13,9 +18,94 @@ const kingMove = "OK";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
+const useNavigableGuessAndFenHistory = () => {
+  const [_currentGuess, _setCurrentGuess] = useState<GuessWithHistory>({
+    trueGuess: [],
+    cachedNavigableGuess: [],
+  });
+  const currentGuess = _currentGuess.trueGuess;
+  const setCurrentGuess = (updater: (oldTrueGuess: string[]) => string[]) => {
+    _setCurrentGuess((oldFullGuess) => {
+      // Apply the user-requested update to see what the new true guess is
+      const newTrueGuess = updater(oldFullGuess.trueGuess);
+      for (let moveIndex = 0; moveIndex < newTrueGuess.length; moveIndex++) {
+        const guessedMove = newTrueGuess[moveIndex];
+        const cachedMove = oldFullGuess.cachedNavigableGuess[moveIndex];
+        if (guessedMove !== cachedMove) {
+          // Player has played a different move than what we had in the cache
+          // We wipe the future history, since "going forwards" from here doesn't make sense now
+          return {
+            trueGuess: newTrueGuess,
+            cachedNavigableGuess: [...newTrueGuess],
+          };
+        }
+      }
+      // If we made it here, no moves in the new true history are different from the cache
+      // We return the same navigable cache so the player can "go forwards"
+      return {
+        trueGuess: newTrueGuess,
+        cachedNavigableGuess: [...oldFullGuess.cachedNavigableGuess],
+      };
+    });
+  };
+
+  const [_fenHistory, _setFenHistory] = useState<FullFenHistory>({
+    trueFenHistory: [],
+    cachedNavigableHistory: [],
+  });
+  const fenHistory = _fenHistory.trueFenHistory;
+  const setFenHistory = (
+    updater: (oldTrueFenHistory: string[]) => string[]
+  ) => {
+    _setFenHistory((oldFullFenHistory: FullFenHistory) => {
+      // Apply the user-requested update to see what the new true history is
+      const newTrueHistory = updater(oldFullFenHistory.trueFenHistory);
+      for (let moveIndex = 0; moveIndex < newTrueHistory.length; moveIndex++) {
+        const fenPosition = newTrueHistory[moveIndex];
+        const cachedPosition =
+          oldFullFenHistory.cachedNavigableHistory[moveIndex];
+        if (fenPosition !== cachedPosition) {
+          // Player has played a different move than what we had in the cache
+          // We wipe the future history, since "going forwards" from here doesn't make sense now
+          return {
+            trueFenHistory: newTrueHistory,
+            cachedNavigableHistory: [...newTrueHistory],
+          };
+        }
+      }
+      // If we made it here, no moves in the new true history are different from the cache
+      // We return the same navigable cache so the player can "go forwards"
+      return {
+        trueFenHistory: newTrueHistory,
+        cachedNavigableHistory: [...oldFullFenHistory.cachedNavigableHistory],
+      };
+    });
+  };
+
+  const nextHistoryStep = () => {
+    if (
+      _fenHistory.cachedNavigableHistory.length === fenHistory.length ||
+      _currentGuess.cachedNavigableGuess.length === currentGuess.length
+    ) {
+      return undefined;
+    } else
+      return {
+        move: _currentGuess.cachedNavigableGuess[currentGuess.length],
+        fen: _fenHistory.cachedNavigableHistory[fenHistory.length],
+      };
+  };
+
+  return {
+    currentGuess,
+    setCurrentGuess,
+    fenHistory,
+    setFenHistory,
+    nextHistoryStep,
+  };
+};
+
 const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
   const [turn, setTurn] = useState(0);
-  const [currentGuess, setCurrentGuess] = useState([]);
   const [guesses, setGuesses] = useState([
     [null, null, null, null, null],
     [null, null, null, null, null],
@@ -30,8 +120,14 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
     GameStatus.IN_PROGRESS
   );
 
+  const {
+    currentGuess,
+    setCurrentGuess,
+    fenHistory,
+    setFenHistory,
+    nextHistoryStep,
+  } = useNavigableGuessAndFenHistory();
   const [position, setPosition] = useState(null);
-  const [fenHistory, setFenHistory] = useState([]);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
   const [colorToPlay, setColorToPlay] = useState("white");
 
@@ -205,8 +301,8 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
       });
     }
 
-    setCurrentGuess([]);
-    setFenHistory([]);
+    setCurrentGuess(() => []);
+    setFenHistory(() => []);
   };
 
   const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
@@ -249,6 +345,21 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
     setFenHistory((prev) => prev.filter((_, i) => i !== prev.length - 1));
   };
 
+  const goForwards = () => {
+    const nextStep = nextHistoryStep();
+    if (nextStep === undefined) {
+      toast.error("No more moves to go forwards.", { duration: 2000 });
+      return;
+    }
+    const { move, fen } = nextStep;
+
+    setPosition(new Chess(fen));
+
+    setCurrentGuess((prev) => [...prev, move]);
+
+    setFenHistory((prev) => [...prev, fen]);
+  };
+
   const submitGuess = () => {
     if (turn > 5 || gameStatus !== GameStatus.IN_PROGRESS) {
       toast.error("Game over.", { duration: 2000 });
@@ -283,6 +394,7 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
     onDrop,
     position,
     takeback,
+    goForwards,
     submitGuess,
     insufficientMoves,
     playerStats,

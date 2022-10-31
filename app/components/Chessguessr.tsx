@@ -8,13 +8,13 @@ import Modal from "./Modal/Modal";
 import { Game, GameStatus } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
-import { useHotkeys } from "react-hotkeys-hook";
 import Countdown from "react-countdown";
 import {
   countdownRenderer,
   midnightUtcTomorrow,
   GameLink,
   guessifySolution,
+  useHotkeys,
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { Tile } from "~/styles/styles";
@@ -85,6 +85,7 @@ export const Chessguessr = ({
     onDrop,
     position,
     takeback,
+    goForwards,
     submitGuess,
     guesses,
     turn,
@@ -124,7 +125,10 @@ export const Chessguessr = ({
   const nextDate = midnightUtcTomorrow();
 
   useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Left", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Right", goForwards, [currentGuess, fenHistory]);
   useHotkeys("Enter", submitGuess, [currentGuess]);
+  useHotkeys("Space", submitGuess, [currentGuess]);
 
   return (
     <div>

@@ -35,3 +35,13 @@ export enum GameStatus {
   SOLVED = "SOLVED",
   FAILED = "FAILED",
 }
+
+export type FullFenHistory = {
+  trueFenHistory: string[];
+  cachedNavigableHistory: string[];
+};
+
+export type GuessWithHistory = {
+  trueGuess: string[];
+  cachedNavigableGuess: string[];
+};

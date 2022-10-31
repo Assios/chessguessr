@@ -1,4 +1,5 @@
 import { zeroPad } from "react-countdown";
+import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
 
 export const arraysEqual = (a: any, b: any) => {
   if (a === b) return true;
@@ -61,4 +62,20 @@ export const guessifySolution = (game) => {
     color: "green",
     pieceColor: "regular",
   }));
+};
+
+// We re-export useHotkeys with preventDefault on the handler
+export const useHotkeys = (
+  key: string,
+  callback: () => void,
+  deps: any[] = []
+) => {
+  return _useHotkeys(
+    key,
+    (e) => {
+      e.preventDefault();
+      callback();
+    },
+    deps
+  );
 };
