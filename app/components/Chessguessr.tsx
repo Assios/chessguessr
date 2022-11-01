@@ -180,9 +180,14 @@ export const Chessguessr = ({
                   </p>
                 )}
                 <div
-                  className="tooltip"
+                  className="tooltip hidden md:block"
                   data-tip="Event or website where the game was played"
                 >
+                  <span className="mt-2 badge badge-accent">
+                    {event ? event : "lichess.org"}
+                  </span>
+                </div>
+                <div className="block md:hidden">
                   <span className="mt-2 badge badge-accent">
                     {event ? event : "lichess.org"}
                   </span>
