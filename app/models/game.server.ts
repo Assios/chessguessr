@@ -1722,5 +1722,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1276,
       id: 134,
     },
+    {
+      date: "2022-11-03",
+      fen: "2k4r/bp3pp1/p1q1p2r/2P1P3/1P1p1PP1/P2B2Pp/1Q3R1K/3R4 b - - 6 28",
+      solution: ["Qg2+", "Rxg2", "hxg2+", "Kg1", "Rh1+"],
+      gameUrl: "https://lichess.org/Tc9lCMsb/black#55",
+      white: "kokospoko",
+      black: "ChessPrince10",
+      wRating: 2008,
+      bRating: 1923,
+      id: 135,
+    },
   ];
 }
