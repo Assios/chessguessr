@@ -1744,5 +1744,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2047,
       id: 136,
     },
+    {
+      date: "2022-11-05",
+      fen: "r2q1rk1/ppp1bpp1/3p1n1B/4p3/P1BnP2P/2NPQ3/1PP2P2/2KR3R b - - 0 13",
+      solution: ["Ng4", "Qg3", "Nxh6", "Rdg1", "Bf6"],
+      gameUrl: "https://lichess.org/v9VChywZ/black#25",
+      white: "DechetNucleaire",
+      black: "isilud",
+      wRating: 2293,
+      bRating: 2219,
+      id: 137,
+    },
   ];
 }
