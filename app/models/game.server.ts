@@ -1779,5 +1779,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 3019,
       id: 139,
     },
+    {
+      date: "2022-11-08",
+      fen: "2r4r/pp1pkppp/2n1pn2/q5B1/4P3/2b5/PPPQ1PPP/2KR1B1R w - - 0 12",
+      solution: ["Qxd7+", "Kf8", "Qxc8+", "Ne8", "bxc3"],
+      gameUrl: "https://lichess.org/29Uf2YnW/white#22",
+      white: "FatherGascoigne",
+      black: "JulioAraVe",
+      wTitle: "IM",
+      wRating: 1920,
+      bRating: 1979,
+      id: 140,
+    },
   ];
 }
