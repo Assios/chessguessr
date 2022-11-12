@@ -1839,5 +1839,19 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2783,
       id: 144,
     },
+    {
+      date: "2022-11-13",
+      fen: "r5k1/2b2rpp/2p1b2P/p3p3/p1q1Pn2/B1P2NQ1/1PB5/2KRR3 b - - 4 29",
+      solution: ["Ne2+", "Rxe2", "Qxe2", "Ng5", "Bb3"],
+      gameUrl: "https://lichess.org/56zqiMBS/black#85",
+      white: "penguingim1",
+      black: "DrNykterstein",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2440,
+      bRating: 2738,
+      id: 145,
+      variant: "Chess960",
+    },
   ];
 }
