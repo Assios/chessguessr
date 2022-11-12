@@ -98,8 +98,18 @@ export const Chessguessr = ({
 
   const size = useWindowSize();
 
-  const { white, black, wRating, bRating, wTitle, bTitle, wAka, bAka, event } =
-    game;
+  const {
+    white,
+    black,
+    wRating,
+    bRating,
+    wTitle,
+    bTitle,
+    wAka,
+    bAka,
+    event,
+    variant,
+  } = game;
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
@@ -179,18 +189,25 @@ export const Chessguessr = ({
                     />
                   </p>
                 )}
-                <div
-                  className="tooltip hidden md:block"
-                  data-tip="Event or website where the game was played"
-                >
-                  <span className="mt-2 badge badge-accent">
-                    {event ? event : "lichess.org"}
-                  </span>
-                </div>
-                <div className="block md:hidden">
-                  <span className="mt-2 badge badge-accent">
-                    {event ? event : "lichess.org"}
-                  </span>
+                <div className="flex flex-row">
+                  {variant && (
+                    <span className="mt-2 mr-1 badge badge-accent">
+                      {variant}
+                    </span>
+                  )}
+                  <div
+                    className="tooltip hidden md:block"
+                    data-tip="Event or website where the game was played"
+                  >
+                    <span className="mt-2 badge badge-accent">
+                      {event ? event : "lichess.org"}
+                    </span>
+                  </div>
+                  <div className="block md:hidden">
+                    <span className="mt-2 badge badge-accent">
+                      {event ? event : "lichess.org"}
+                    </span>
+                  </div>
                 </div>
               </div>
             )}

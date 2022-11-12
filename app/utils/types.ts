@@ -10,6 +10,7 @@ export type Game = {
   wTitle?: string;
   bTitle?: string;
   event?: string;
+  variant?: string;
   wRating: number | string;
   bRating: number | string;
   id: number;
