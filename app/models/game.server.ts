@@ -1843,7 +1843,7 @@ export async function getGames(): Promise<Array<Game>> {
       date: "2022-11-13",
       fen: "r5k1/2b2rpp/2p1b2P/p3p3/p1q1Pn2/B1P2NQ1/1PB5/2KRR3 b - - 4 29",
       solution: ["Ne2+", "Rxe2", "Qxe2", "Ng5", "Bb3"],
-      gameUrl: "https://lichess.org/56zqiMBS/black#85",
+      gameUrl: "https://lichess.org/NLE3Pwlb/black#57",
       white: "penguingim1",
       black: "DrNykterstein",
       wTitle: "GM",
