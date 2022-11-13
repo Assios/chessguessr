@@ -1853,5 +1853,16 @@ export async function getGames(): Promise<Array<Game>> {
       id: 145,
       variant: "Chess960",
     },
+    {
+      date: "2022-11-14",
+      fen: "r1b2rk1/pp3ppp/2p3n1/5N1Q/4q1N1/1P3R1P/1PP3P1/R6K w - - 0 25",
+      solution: ["Nfh6+", "Kh8", "Nxf7+", "Rxf7", "Rxf7"],
+      gameUrl: "https://lichess.org/wuthNZjQ/white#48",
+      white: "Alcher123",
+      black: "piyushshivani",
+      wRating: 1982,
+      bRating: 1920,
+      id: 146,
+    },
   ];
 }
