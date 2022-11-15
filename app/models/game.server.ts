@@ -1875,5 +1875,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2164,
       id: 147,
     },
+    {
+      date: "2022-11-16",
+      fen: "rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 9",
+      solution: ["Qd8+", "Kxd8", "Bg5+", "Ke8", "Rd8#"],
+      gameUrl: "https://lichess.org/rGXYbHgE/white#16",
+      white: "hjim1",
+      black: "mbinu",
+      wRating: 2359,
+      bRating: 1994,
+      id: 148,
+    },
   ];
 }
