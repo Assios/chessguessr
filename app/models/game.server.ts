@@ -1897,5 +1897,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1755,
       id: 149,
     },
+    {
+      date: "2022-11-18",
+      fen: "r1bqk1nr/pppp1ppp/8/2b1n1N1/2BpP3/8/PPP2PPP/RNBQK2R w KQkq - 4 6",
+      solution: ["Nxf7", "Nxf7", "Bxf7+", "Kxf7", "Qh5+"],
+      gameUrl: "https://lichess.org/0Q5BM8Eb/white#10",
+      white: "nobitski",
+      black: "Gilggamesh",
+      wRating: 2463,
+      bRating: 2596,
+      id: 150,
+    },
   ];
 }
