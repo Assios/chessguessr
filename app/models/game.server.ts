@@ -1919,5 +1919,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1679,
       id: 151,
     },
+    {
+      date: "2022-11-20",
+      fen: "r2r2k1/pp3pb1/2p3n1/4pNPR/4P3/8/qPP4Q/2K4R w - - 0 30",
+      solution: ["Rh8+", "Bxh8", "Qh7+", "Kf8", "Qxh8+"],
+      gameUrl: "https://lichess.org/cHn0mDGB/white#58",
+      white: "The-RoadtoGM",
+      black: "Vachagan67",
+      wRating: 2174,
+      bRating: 2264,
+      id: 152,
+    },
   ];
 }
