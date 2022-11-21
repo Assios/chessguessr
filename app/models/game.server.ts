@@ -1941,5 +1941,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1696,
       id: 153,
     },
+    {
+      date: "2022-11-22",
+      fen: "r4rk1/ppp2ppp/3p2b1/3Pn1q1/5NP1/2PB1P2/P2Q3P/3R1RK1 w - - 1 20",
+      solution: ["Nxg6", "Qxd2", "Ne7+", "Kh8", "Rxd2"],
+      gameUrl: "https://lichess.org/G1xyHhny/white#38",
+      white: "moshakvar",
+      black: "Greeny-Mea",
+      wRating: 2521,
+      bRating: 2050,
+      id: 154,
+    },
   ];
 }
