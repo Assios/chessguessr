@@ -1963,5 +1963,17 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2220,
       id: 155,
     },
+    {
+      date: "2022-11-24",
+      fen: "5rk1/p1p2ppp/3b4/q1pNrQ2/2R5/1P6/P4PPP/5RK1 w - - 5 21",
+      solution: ["Nf6+", "gxf6", "Rg4+", "Kh8", "Qxf6#"],
+      gameUrl: "https://lichess.org/PoK6FEZA/white#40",
+      white: "Amro-Alhareth",
+      black: "pollovsky",
+      bTitle: "IM",
+      wRating: 2461,
+      bRating: 2466,
+      id: 156,
+    },
   ];
 }
