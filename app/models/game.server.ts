@@ -1997,5 +1997,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1659,
       id: 158,
     },
+    {
+      date: "2022-11-27",
+      fen: "2r4r/1b3kpp/p2ppb2/q6P/1n1BP3/2N5/1PPQBP2/1K1R2R1 b - - 3 21",
+      solution: ["Bxe4", "Rxg7+", "Bxg7", "Qf4+", "Bf5"],
+      gameUrl: "https://lichess.org/50REhumy/black#41",
+      white: "JacobAagaard",
+      black: "PetarBosnjak",
+      wRating: 2533,
+      wTitle: "GM",
+      bTitle: "FM",
+      bRating: 2564,
+      id: 159,
+    },
   ];
 }
