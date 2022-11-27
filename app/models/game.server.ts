@@ -2010,5 +2010,20 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2564,
       id: 159,
     },
+    {
+      date: "2022-11-28",
+      fen: "r2qr1k1/pp3ppp/2n2b2/2PR3b/1P6/1QP1BN1P/P3BnP1/RN4K1 b - - 0 15",
+      solution: ["Nxh3+", "gxh3", "Qe7", "Bf2", "Qxe2"],
+      gameUrl: "https://lichess.org/F6eF1LFo/black#29",
+      white: "MeneerMandje",
+      black: "Maksat-94",
+      wTitle: "IM",
+      bTitle: "GM",
+      wAka: "Thomas Beerdsen",
+      bAka: "Maksat Atabayev",
+      wRating: 2988,
+      bRating: 2651,
+      id: 160,
+    },
   ];
 }
