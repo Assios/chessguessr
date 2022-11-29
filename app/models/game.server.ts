@@ -2047,6 +2047,7 @@ export async function getGames(): Promise<Array<Game>> {
       black: "Ali Bitalzadeh",
       wTitle: "GM",
       bTitle: "GM",
+      event: "Wijk aan Zee, 2009",
       wRating: 2622,
       bRating: 2400,
       id: 162,
