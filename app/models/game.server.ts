@@ -2038,5 +2038,18 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 2696,
       id: 161,
     },
+    {
+      date: "2022-11-30",
+      fen: "r1b2r2/p1q1bppk/1pn1p2p/8/2BPN1Q1/2P5/P4PPP/R1B1R1K1 w - - 4 16",
+      solution: ["Bxh6", "Kxh6", "Qh3+", "Kg6", "g4"],
+      gameUrl: "https://lichess.org/uOUUBE01#30",
+      white: "David Howell",
+      black: "Ali Bitalzadeh",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2622,
+      bRating: 2400,
+      id: 162,
+    },
   ];
 }
