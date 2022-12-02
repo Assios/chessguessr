@@ -2076,5 +2076,16 @@ export async function getGames(): Promise<Array<Game>> {
       bRating: 1708,
       id: 164,
     },
+    {
+      date: "2022-12-03",
+      fen: "r6k/6pp/b4bQ1/q7/4P3/4B3/PP2BP2/1K1R3R b - - 0 30",
+      solution: ["Bd3+", "Kc1", "Rc8+", "Bc5", "Rxc5#"],
+      gameUrl: "https://lichess.org/Oa6lS05B/black#59",
+      white: "mMAXim001",
+      black: "mobeen_uddin",
+      wRating: 2045,
+      bRating: 2053,
+      id: 165,
+    },
   ];
 }
