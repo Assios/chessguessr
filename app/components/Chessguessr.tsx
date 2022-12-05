@@ -15,7 +15,6 @@ import {
   GameLink,
   guessifySolution,
   useHotkeys,
-  wrongSolution,
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { Tile } from "~/styles/styles";
@@ -161,11 +160,6 @@ export const Chessguessr = ({
           setTutorial={setTutorial}
         />
       </div>
-      <p className=" mb-4 font-semibold text-center">
-        There was an error in today's solution until ~6:40 UTC. If you did get
-        it wrong despite getting it right on move 4, we've cleared your guesses
-        and you can try again.
-      </p>
       <Game>
         <BoardWrapper>
           <Players>

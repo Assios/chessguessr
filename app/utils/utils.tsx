@@ -79,11 +79,3 @@ export const useHotkeys = (
     deps
   );
 };
-
-export const wrongSolution = (guesses: any[]) => {
-  return guesses
-    .flatMap((g) => g)
-    .some((guess: any) => {
-      return guess?.move === "Nxg6" && guess?.color == "grey";
-    });
-};

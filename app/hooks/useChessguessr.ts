@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { arraysEqual, wrongSolution } from "../utils/utils";
+import { arraysEqual } from "../utils/utils";
 import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
@@ -156,11 +156,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   useEffect(() => {
     if (!shouldUpdateStats) return;
 
-    if (
-      gameState.turn > 0 &&
-      gameState.date === game.date &&
-      !wrongSolution(gameState.guesses)
-    ) {
+    if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
       setGameStatus(gameState.gameStatus);
