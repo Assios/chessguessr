@@ -5,7 +5,7 @@ import { Grid } from "./Grid";
 import { Row } from "./Row";
 import styled from "styled-components";
 import Modal from "./Modal/Modal";
-import { Game, GameStatus } from "~/utils/types";
+import { GameType, GameStatus } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
 import Countdown from "react-countdown";
@@ -72,7 +72,7 @@ export const Chessguessr = ({
   setTutorial,
   shouldUpdateStats,
 }: {
-  game: Game;
+  game: GameType;
   stats?: any;
   showModal: boolean;
   setShowModal: any;

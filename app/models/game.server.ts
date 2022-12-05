@@ -1,6 +1,6 @@
-import { Game } from "~/utils/types";
+import { GameType } from "~/utils/types";
 
-export async function getGames(): Promise<Array<Game>> {
+export async function getGames(): Promise<Array<GameType>> {
   return [
     {
       date: "2022-06-22",

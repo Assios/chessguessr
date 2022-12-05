@@ -1,4 +1,4 @@
-export type Game = {
+export type GameType = {
   date: string;
   fen: string;
   solution: string[];

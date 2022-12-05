@@ -5,7 +5,7 @@ import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import {
-  Game,
+  GameType,
   GameStatus,
   FullFenHistory,
   GuessWithHistory,
@@ -105,7 +105,7 @@ const useNavigableGuessAndFenHistory = () => {
   };
 };
 
-const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
+const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   const [turn, setTurn] = useState(0);
   const [guesses, setGuesses] = useState([
     [null, null, null, null, null],
@@ -406,7 +406,6 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
     gameStatus,
     colorToPlay,
     fenHistory,
-    gameState,
   };
 };
 
