@@ -2113,5 +2113,16 @@ export async function getGames(): Promise<Array<Game>> {
       id: 167,
       variant: "Chess960",
     },
+    {
+      date: "2022-12-06",
+      fen: "7r/pp2Q1pk/2pB1n2/5Rp1/2Pq4/7P/PP2B1P1/7K b - - 1 28",
+      solution: ["Re8", "Bc5", "Rxe7", "Bxd4", "Rxe2"],
+      gameUrl: "https://lichess.org/MPO33geT/black#55",
+      white: "klokkismann",
+      black: "monstermasten",
+      wRating: 1754,
+      bRating: 1367,
+      id: 168,
+    },
   ];
 }
