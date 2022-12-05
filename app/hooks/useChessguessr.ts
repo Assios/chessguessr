@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { arraysEqual } from "../utils/utils";
+import { arraysEqual, wrongSolution } from "../utils/utils";
 import * as ChessJS from "chess.js";
 import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
@@ -9,6 +9,7 @@ import {
   GameStatus,
   FullFenHistory,
   GuessWithHistory,
+  Guess,
 } from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
@@ -155,7 +156,11 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
   useEffect(() => {
     if (!shouldUpdateStats) return;
 
-    if (gameState.turn > 0 && gameState.date === game.date) {
+    if (
+      gameState.turn > 0 &&
+      gameState.date === game.date &&
+      !wrongSolution(gameState.guesses)
+    ) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
       setGameStatus(gameState.gameStatus);
@@ -401,6 +406,7 @@ const useChessguessr = (game: Game, shouldUpdateStats: boolean) => {
     gameStatus,
     colorToPlay,
     fenHistory,
+    gameState,
   };
 };
 
