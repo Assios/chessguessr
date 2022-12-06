@@ -2124,5 +2124,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1367,
       id: 168,
     },
+    {
+      date: "2022-12-07",
+      fen: "r6k/1ppb1q2/3p3P/p1nPp3/2P1P3/4Qr2/PP2N3/2K3RR w - - 5 32",
+      solution: ["Qg5", "Rg8", "Qg7+", "Rxg7", "hxg7+"],
+      gameUrl: "https://lichess.org/aIsh9ShU/white#62",
+      white: "Torpinson",
+      black: "cavallinozoppo",
+      wRating: 1978,
+      bRating: 1967,
+      id: 169,
+    },
   ];
 }
