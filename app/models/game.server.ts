@@ -2135,5 +2135,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1967,
       id: 169,
     },
+    {
+      date: "2022-12-08",
+      fen: "r2qk2r/pbp2pbp/1p4p1/4p3/4n3/2P2N2/PPB1KPPP/R1BQR3 w kq - 0 13",
+      solution: ["Bxe4", "Bxe4", "Qa4+", "Qd7", "Qxe4"],
+      gameUrl: "https://lichess.org/49No9A6k/white#24",
+      white: "Supervolk",
+      black: "Cranmobbed",
+      bTitle: "CM",
+      wRating: 2425,
+      bRating: 2393,
+      id: 170,
+    },
   ];
 }
