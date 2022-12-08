@@ -2147,5 +2147,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2393,
       id: 170,
     },
+    {
+      date: "2022-12-09",
+      fen: "r4r1k/1b1p1B2/p4nPp/1pp4Q/3pPq2/P2P4/1PP2P2/R3K2R w KQ - 2 21",
+      solution: ["g7+", "Kxg7", "Qg6+", "Kh8", "Rxh6+"],
+      gameUrl: "https://lichess.org/EvrNQMup/white#40",
+      white: "MassterofMayhem",
+      black: "BughouseKnight",
+      wTitle: "IM",
+      wRating: 2658,
+      bRating: 2616,
+      id: 171,
+    },
   ];
 }
