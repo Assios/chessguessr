@@ -2162,7 +2162,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2022-12-10",
       fen: "r3k2r/2p1bppp/p2qbn2/1p1R4/5B2/1B1PQ3/PPP2PPP/RN4K1 b kq - 0 14",
-      solution: ["Nxd5", "Bxd6", "Sxe3", "Bxe7", "Bxb3"],
+      solution: ["Nxd5", "Bxd6", "Nxe3", "Bxe7", "Bxb3"],
       gameUrl: "https://lichess.org/yDrSYdeB/black#27",
       white: "halil0",
       black: "pascualmaestre",
