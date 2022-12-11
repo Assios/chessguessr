@@ -2170,5 +2170,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1749,
       id: 172,
     },
+    {
+      date: "2022-12-11",
+      fen: "8/2k3pp/4Rp2/1p6/1P6/2K2P2/rP4PP/8 b - - 0 33",
+      solution: ["Kd7", "Rb6", "Kc7", "Rxb5", "Ra1"],
+      gameUrl: "https://lichess.org/HvStdECF/black#65",
+      white: "MMAbdul",
+      black: "yt_hebabeats",
+      wRating: 1998,
+      bRating: 2007,
+      id: 173,
+    },
   ];
 }
