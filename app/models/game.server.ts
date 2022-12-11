@@ -2172,9 +2172,9 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2022-12-11",
-      fen: "8/2k3pp/4Rp2/1p6/1P6/2K2P2/rP4PP/8 b - - 0 33",
-      solution: ["Kd7", "Rb6", "Kc7", "Rxb5", "Ra1"],
-      gameUrl: "https://lichess.org/HvStdECF/black#65",
+      fen: "8/6pp/1k2pp2/1pNb4/1P6/2K2P2/rP4PP/3R4 w - - 5 31",
+      solution: ["Nxe6", "Bxe6", "Rd6+", "Kc7", "Rxe6"],
+      gameUrl: "https://lichess.org/HvStdECF/white#60",
       white: "MMAbdul",
       black: "yt_hebabeats",
       wRating: 1998,
