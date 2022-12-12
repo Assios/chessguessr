@@ -2192,5 +2192,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1762,
       id: 174,
     },
+    {
+      date: "2022-12-13",
+      fen: "4k2r/1b2ppb1/p5p1/1p2PN1p/2r5/P1N1q3/1PP3PP/3R1R1K w k - 0 21",
+      solution: ["Nxg7+", "Kf8", "Ne6+", "Kg8", "Rd8+"],
+      gameUrl: "https://lichess.org/4sscTcLE/white#40",
+      white: "Weerasekara",
+      black: "Ledzeppelin73",
+      wRating: 2354,
+      bRating: 2156,
+      id: 175,
+    },
   ];
 }
