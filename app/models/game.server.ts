@@ -2203,5 +2203,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2156,
       id: 175,
     },
+    {
+      date: "2022-12-14",
+      fen: "r2q2k1/2p2pbp/1p1p1np1/p2N2B1/2Q1r3/7P/PPP2PP1/2KR3R w - - 0 16",
+      solution: ["Qxe4", "Nxe4", "Bxd8", "Rxd8", "Rhf1"],
+      gameUrl: "https://lichess.org/RAKKO18e/white#30",
+      white: "monstermasten",
+      black: "drious",
+      wRating: 1291,
+      bRating: 1171,
+      id: 176,
+    },
   ];
 }
