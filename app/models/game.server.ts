@@ -2236,5 +2236,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1883,
       id: 178,
     },
+    {
+      date: "2022-12-17",
+      fen: "r4rn1/5pbk/p1pq4/2p1p1B1/P3P3/2PP1Q1P/1P4P1/R4RK1 w - - 2 20",
+      solution: ["Qh5+", "Nh6", "Rf6", "Qxf6", "Bxf6"],
+      gameUrl: "https://lichess.org/3X90Rht1/white#38",
+      white: "volkan_yirik",
+      black: "babifisher",
+      wTitle: "NM",
+      wRating: 2349,
+      bRating: 2035,
+      id: 179,
+    },
   ];
 }
