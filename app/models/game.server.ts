@@ -2248,5 +2248,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2035,
       id: 179,
     },
+    {
+      date: "2022-12-18",
+      fen: "r7/7p/p4Qqk/6p1/2p5/P3B3/1P4P1/6K1 w - - 1 40",
+      solution: ["Bxg5+", "Kh5", "g4+", "Kxg4", "Qf4+"],
+      gameUrl: "https://lichess.org/zDT9KiDi/white#78",
+      white: "mnmassari",
+      black: "Tulasi-Ram_64",
+      wTitle: "NM",
+      wRating: 2057,
+      bRating: 2096,
+      id: 180,
+    },
   ];
 }
