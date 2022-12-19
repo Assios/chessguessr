@@ -2271,5 +2271,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1930,
       id: 181,
     },
+    {
+      date: "2022-12-20",
+      fen: "8/3p1p2/4p3/2k1P3/6R1/1r1bNP2/5KP1/8 b - - 1 34",
+      solution: ["Rb2+", "Kg3", "Re2", "Kf4", "Kd4"],
+      gameUrl: "https://lichess.org/J9b2bP5M/black#67",
+      white: "Pap-G",
+      black: "DrNykterstein",
+      bAka: "Magnus Carlsen",
+      wAka: "Pap Gyula",
+      wRating: 2497,
+      bRating: 2580,
+      id: 182,
+      variant: "Chess960",
+    },
   ];
 }
