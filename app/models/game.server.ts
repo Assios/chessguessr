@@ -2279,6 +2279,8 @@ export async function getGames(): Promise<Array<GameType>> {
       white: "Pap-G",
       black: "DrNykterstein",
       bAka: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
       wAka: "Pap Gyula",
       wRating: 2497,
       bRating: 2580,
