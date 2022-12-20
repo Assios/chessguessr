@@ -2287,5 +2287,18 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 182,
       variant: "Chess960",
     },
+    {
+      date: "2022-12-22",
+      fen: "4r2k/2br3P/1p2qp1R/p1p1PNp1/P1Np2P1/1Pn2K2/2P2P2/R3Q3 b - - 0 42",
+      solution: ["Qd5+", "Kg3", "Rxe5", "Nxe5", "Bxe5+"],
+      gameUrl: "https://lichess.org/tCEZhIkS/black#83",
+      white: "TheWarning",
+      black: "Bombegranate",
+      bTitle: "GM",
+      bAka: "Fabiano Caruana",
+      wRating: 2708,
+      bRating: 2788,
+      id: 184,
+    },
   ];
 }
