@@ -8,7 +8,9 @@ import TutorialModal from "~/components/TutorialModal";
 import { useEffect } from "react";
 
 export const meta: MetaFunction = () => ({
-  title: "Chessguessr – Game Archive",
+  title: "Chessguessr Archive – Play through all previous puzzles",
+  description:
+    "On this page, you can play through all of the previous Chessguessr puzzles at your leisure. Whether you're looking to brush up on your chess skills or just enjoy a fun and challenging puzzle, our archive has something for everyone.",
 });
 
 export const loader: LoaderFunction = async () => {
@@ -57,15 +59,18 @@ const index = () => {
           </h1>
         </div>
         <p className="max-w-prose m-auto text-center text-lg">
-          On this page you'll find all previous Chessguessr puzzles. Your stats
-          will only update for today's puzzle, though. Play today's Chessguessr{" "}
+          On this page, you can play through all of the previous Chessguessr
+          puzzles at your leisure. Whether you're looking to brush up on your
+          chess skills or just enjoy a fun and challenging puzzle, our archive
+          has something for everyone. Your stats will only update for today's
+          puzzle, though. Play today's Chessguessr{" "}
           <a
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="/"
           >
             here
           </a>
-          .
+          . Happy puzzling!
         </p>
 
         <div className="p-12 margin-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
