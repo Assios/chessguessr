@@ -19,3 +19,26 @@ Like Wordle, or Chessle, you are given hints after each guess.
 ## Development
 
 Chessguessr is built with [Remix](https://remix.run/), Typescript, Tailwind, Firebase (for keeping track of puzzle stats).
+
+## REST API
+
+### Get the daily Chessguessr puzzle
+
+#### Request
+
+`GET https://chessguessr.com/api/daily`
+
+#### Response
+
+The API returns a JSON object with the following properties:
+
+- `date`: The date of the puzzle, in the format "YYYY-MM-DD".
+- `fen`: The chess position in FEN format.
+- `solution`: An array of moves that represents the solution to the puzzle.
+- `id`: The unique ID of the puzzle.
+- `boardImage`: an image of the chess board with the puzzle position.
+- `players`: An array of objects representing the white and black players in the game. Each player object has the following properties:
+    - `color`: The color of the player ("white" or "black").
+    - `name`: The name of the player.
+    - `rating`: The rating of the player.
+    - `title`: The chess title of the player, if any (e.g. "GM" or "WIM").
