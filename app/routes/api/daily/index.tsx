@@ -44,5 +44,11 @@ export const loader: LoaderFunction = async () => {
     ...response
   } = dailyGameWithPlayers;
 
-  return json(response);
+  const body = JSON.stringify(response);
+
+  return new Response(body, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 };
