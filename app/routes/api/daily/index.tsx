@@ -40,6 +40,7 @@ export const loader: LoaderFunction = async () => {
     bTitle,
     bAka,
     wAka,
+    gameUrl,
     ...response
   } = dailyGameWithPlayers;
 
