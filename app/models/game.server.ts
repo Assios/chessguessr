@@ -2329,6 +2329,8 @@ export async function getGames(): Promise<Array<GameType>> {
       gameUrl: "https://lichess.org/YRE2uOtG/black#49",
       white: "gogotaniye",
       black: "vizumatv4hoda",
+      wTitle: "FM",
+      bTitle: "IM",
       wRating: 2622,
       bRating: 2575,
       id: 186,
