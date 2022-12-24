@@ -2337,6 +2337,22 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2022-12-25",
+      fen: "r1b1rnk1/1p4pp/p3p3/2qpPp2/3N1P1P/3BQ1R1/P1P3P1/1R4K1 w - - 2 21",
+      solution: ["Rxg7+", "Kh8", "h5", "Re7", "h6"],
+      gameUrl: "https://lichess.org/p4sduSYw/white#40",
+      white: "alireza2003",
+      black: "toivok3",
+      wTitle: "GM",
+      bTitle: "IM",
+      wAka: "Alireza Firouzja",
+      bAka: "Toivo Keinänen",
+      wRating: 3212,
+      bRating: 2999,
+      id: 187,
+    },
+
+    {
+      date: "2022-12-26",
       fen: "4r1k1/5pp1/5n1p/P5r1/4p2q/1QP3PP/1P3P2/R3RBK1 b - - 0 26",
       solution: ["e3", "Kh2", "Ng4+", "Kg2", "Nxf2"],
       gameUrl: "https://lichess.org/FQ3hbxjY/black#51",
@@ -2344,7 +2360,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Starzzz",
       wRating: 1861,
       bRating: 1859,
-      id: 187,
+      id: 188,
     },
   ];
 }
