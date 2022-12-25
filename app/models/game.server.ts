@@ -2350,7 +2350,6 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2999,
       id: 187,
     },
-
     {
       date: "2022-12-26",
       fen: "4r1k1/5pp1/5n1p/P5r1/4p2q/1QP3PP/1P3P2/R3RBK1 b - - 0 26",
