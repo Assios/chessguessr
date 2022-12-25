@@ -27,7 +27,7 @@ module.exports = {
       {
         "lichess-dark": {
           primary: "#373430",
-          secondary: "#2E2C29",
+          secondary: "#66625d",
           accent: "#393632",
           neutral: "#2E2C29",
           "base-100": "#161512",
@@ -36,12 +36,14 @@ module.exports = {
           warning: "#BF811E",
           error: "#EA7175",
           "secondary-content": "#fcd34d", // amber-300
+          "accent-content": "#87C6Ea"
         },
       },
       {
         corporate: {
           ...require("daisyui/src/colors/themes")["[data-theme=corporate]"],
           "secondary-content": "#f59e0b", // amber-500
+          "accent-content": "#373430",
         },
       },
     ],
