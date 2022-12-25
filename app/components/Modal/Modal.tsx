@@ -9,6 +9,7 @@ import {
   midnightUtcTomorrow,
   GameLink,
 } from "~/utils/utils";
+import { useOutletContext } from "@remix-run/react";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -129,6 +130,8 @@ export default function Modal({
   gameStatus,
   shouldUpdateStats,
 }) {
+  const { trackEvent }: any = useOutletContext();
+
   const [value, copy] = useCopyToClipboard();
 
   const solvedPercentage = getSolvedPercentage(puzzleStats);
@@ -266,13 +269,15 @@ export default function Modal({
 
                 <div className="relative pl-6 flex-auto">
                   <p className="mt-4 mb-4 text-md">
-                    Feedback? Post in the{" "}
+                    Wanna play old puzzles? Check out the{" "}
                     <a
-                      target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="https://lichess.org/team/chessguessr"
+                      href="games"
+                      onClick={() => {
+                        trackEvent("Click modal archive link");
+                      }}
                     >
-                      Lichess team forum.
+                      archive.
                     </a>{" "}
                   </p>
                   <p className="text-md">
@@ -295,7 +300,10 @@ export default function Modal({
                     {gameStatus !== GameStatus.IN_PROGRESS && (
                       <button
                         type="button"
-                        onClick={() => copy(shareGameText)}
+                        onClick={() => {
+                          trackEvent("Click share score");
+                          copy(shareGameText);
+                        }}
                         className="text-white bg-primary hover:bg-primary-focus focus:ring-2 focus:outline-none focus:ring-primary-focus font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2"
                       >
                         {!value ? "SHARE SCORE" : "Copied to clipboard"}
