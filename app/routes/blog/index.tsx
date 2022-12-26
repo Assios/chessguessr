@@ -54,7 +54,7 @@ export default function Posts() {
                       href={"blog/" + post.slug.current}
                       className="mt-2 block"
                     >
-                      <p className="text-xl font-semibold text-error">
+                      <p className="text-xl font-semibold text-success-content">
                         {post.title}
                       </p>
                       <p className="mt-3 text-base text-secondary">

@@ -36,7 +36,8 @@ module.exports = {
           warning: "#BF811E",
           error: "#EA7175",
           "secondary-content": "#fcd34d", // amber-300
-          "accent-content": "#87C6Ea"
+          "accent-content": "#87C6Ea",
+          "success-content": "#87C6Ea"
         },
       },
       {
@@ -44,6 +45,7 @@ module.exports = {
           ...require("daisyui/src/colors/themes")["[data-theme=corporate]"],
           "secondary-content": "#f59e0b", // amber-500
           "accent-content": "#373430",
+          "success-content": "#4b6bfb"
         },
       },
     ],
