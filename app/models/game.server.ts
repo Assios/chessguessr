@@ -2366,6 +2366,20 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2022-12-27",
+      fen: "3rrb1k/1ppq2pp/6P1/4pp2/b2nP3/P1QP1NR1/1B2BP1P/6RK w - - 1 28",
+      solution: ["e3", "Kh2", "Ng4+", "Kg2", "Nxf2"],
+      gameUrl: "https://lichess.org/FQ3hbxjY/black#51",
+      white: "Magnus Carlsen",
+      black: "Nodirbek Abdusattorov",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2022 FIDE World Rapid Championship",
+      wRating: 2834,
+      bRating: 2676,
+      id: 189,
+    },
+    {
+      date: "2022-12-28",
       fen: "4r1k1/5pp1/5n1p/P5r1/4p2q/1QP3PP/1P3P2/R3RBK1 b - - 0 26",
       solution: ["e3", "Kh2", "Ng4+", "Kg2", "Nxf2"],
       gameUrl: "https://lichess.org/FQ3hbxjY/black#51",
@@ -2373,7 +2387,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Starzzz",
       wRating: 1861,
       bRating: 1859,
-      id: 189,
+      id: 190,
     },
   ];
 }
