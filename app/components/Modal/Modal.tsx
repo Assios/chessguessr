@@ -272,7 +272,7 @@ export default function Modal({
                     Wanna play old puzzles? Check out the{" "}
                     <a
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="games"
+                      href="/games"
                       onClick={() => {
                         trackEvent("Click modal archive link");
                       }}
