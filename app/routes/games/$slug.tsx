@@ -8,8 +8,11 @@ import { useEffect } from "react";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 
 export const meta: MetaFunction = ({ data }) => {
+  const fen = data.game.fen.split(" ")[0];
   const imageUrl =
-    "//images.weserv.nl/?url=fen-to-image.com/image/36/" + data.fen;
+    "https://images.weserv.nl/?url=fen-to-image.com/image/36/" + fen;
+
+  console.log("img", imageUrl);
 
   const players = data?.game?.white + " vs. " + data?.game?.black;
   return {
