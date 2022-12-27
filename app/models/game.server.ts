@@ -2368,7 +2368,8 @@ export async function getGames(): Promise<Array<GameType>> {
       date: "2022-12-27",
       fen: "3rrb1k/1ppq2pp/6P1/4pp2/b2nP3/P1QP1NR1/1B2BP1P/6RK w - - 1 28",
       solution: ["Ng5", "Nxe2", "Nf7+", "Qxf7", "gxf7"],
-      gameUrl: "https://lichess.org/FQ3hbxjY/black#51",
+      gameUrl:
+        "https://lichess.org/broadcast/2022-fide-world-rapid-championship/round-4/eCDoDZQs/pYHm9lqd#54",
       white: "Magnus Carlsen",
       black: "Nodirbek Abdusattorov",
       wTitle: "GM",
