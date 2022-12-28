@@ -2390,5 +2390,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1859,
       id: 190,
     },
+    {
+      date: "2022-12-29",
+      fen: "r4rk1/pp3ppp/2p4q/2b2P2/1nP5/8/PB2Q1BP/R5RK w - - 2 23",
+      solution: ["Bd5", "Bxg1", "Rxg1", "cxd5", "Qh5"],
+      gameUrl:
+        "https://lichess.org/broadcast/2022-fide-world-rapid-championship/round-11/W0VzySOb/zans7hdM#44",
+      white: "Johan-Sebastian Christiansen",
+      black: "Vladimir Burmakin",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2022 FIDE World Rapid Championship",
+      wRating: 2513,
+      bRating: 2412,
+      id: 191,
+    },
   ];
 }
