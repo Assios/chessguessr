@@ -2405,5 +2405,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2412,
       id: 191,
     },
+    {
+      date: "2022-12-30",
+      fen: "5rk1/5p1p/1qp2p2/p2pb2Q/P7/1r5P/4R1P1/4RN1K w - - 0 33",
+      solution: ["Rxe5", "fxe5", "Qg5+", "Kh8", "Qf6+"],
+      gameUrl: "https://lichess.org/HlEcGBSh/white#64",
+      white: "Lucin",
+      black: "MatHermann",
+      wRating: 1843,
+      bRating: 1779,
+      id: 192,
+    },
   ];
 }
