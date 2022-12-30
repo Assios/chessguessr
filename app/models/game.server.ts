@@ -2416,5 +2416,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1779,
       id: 192,
     },
+    {
+      date: "2022-12-31",
+      fen: "4r3/3b2kn/5p1b/2pPp1Np/1qp1P2P/4Q3/1PB1NPP1/1R4K1 w - - 0 37",
+      solution: ["f4", "exf4", "Nxf4", "fxg5", "Nxh5+"],
+      gameUrl: "https://lichess.org/HlEcGBSh/white#64",
+      white: "Fabiano Caruana",
+      black: "Timur Gareyev",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2022 FIDE World Rapid Championship",
+      wRating: 2747,
+      bRating: 2617,
+      id: 193,
+    },
   ];
 }
