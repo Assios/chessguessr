@@ -2420,7 +2420,8 @@ export async function getGames(): Promise<Array<GameType>> {
       date: "2022-12-31",
       fen: "4r3/3b2kn/5p1b/2pPp1Np/1qp1P2P/4Q3/1PB1NPP1/1R4K1 w - - 0 37",
       solution: ["f4", "exf4", "Nxf4", "fxg5", "Nxh5+"],
-      gameUrl: "https://lichess.org/HlEcGBSh/white#64",
+      gameUrl:
+        "https://lichess.org/broadcast/2022-fide-world-rapid-championship/round-9/6B0fqAG1/n00mrd05#72",
       white: "Fabiano Caruana",
       black: "Timur Gareyev",
       wTitle: "GM",
