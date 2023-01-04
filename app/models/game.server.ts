@@ -2477,5 +2477,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1813,
       id: 197,
     },
+    {
+      date: "2023-01-05",
+      fen: "2r2rk1/p2R1pp1/1p1R3p/3Q1P2/2p3q1/4P3/P4P1P/5K2 w - - 0 26",
+      solution: ["Rg6", "Qh3+", "Ke1", "Kh8", "Qe5"],
+      gameUrl: "https://lichess.org/FmQFRQQL/white#50",
+      white: "ELKOSH",
+      black: "ilkernadi",
+      wRating: 2371,
+      bRating: 2423,
+      id: 198,
+    },
   ];
 }
