@@ -2488,5 +2488,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2423,
       id: 198,
     },
+    {
+      date: "2023-01-06",
+      fen: "r2qkb1r/p1pp1ppp/Qpn5/4P3/2P1n3/5N2/PP2PPPP/RNB1KB1R b KQkq - 2 7",
+      solution: ["Bb4+", "Bd2", "Nc5", "Qb5", "Bxd2"],
+      gameUrl: "https://lichess.org/3iarla1R#13",
+      white: "Dlugy",
+      black: "TrickyMate",
+      wTitle: "GM",
+      event: "ICC",
+      wRating: 3131,
+      bRating: 1400,
+      id: 199,
+    },
   ];
 }
