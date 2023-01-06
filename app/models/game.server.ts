@@ -2501,5 +2501,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1400,
       id: 199,
     },
+    {
+      date: "2023-01-07",
+      fen: "3R4/6b1/1p4k1/5p1p/rP2N3/6PP/4PP1K/2Nn1b2 w - - 6 46",
+      solution: ["Rd6+", "Kh7", "Ng5+", "Kg8", "Rd8+"],
+      gameUrl: "https://lichess.org/FxiPFiF2/white#90",
+      white: "HomeAp",
+      black: "Strelok2222",
+      bTitle: "FM",
+      wRating: 2543,
+      bRating: 2638,
+      id: 200,
+    },
   ];
 }
