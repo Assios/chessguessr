@@ -2515,6 +2515,20 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-01-08",
+      fen: "1qb2k1r/4bp2/5p2/1p2p3/3pPNQ1/1B1P2Pp/1PP4P/R5K1 w - - 0 25",
+      solution: ["Ng6+", "Ke8", "Bxf7+", "Kd8", "Be6"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-rapid-championship-2023--open/round-5/7SHVMoYf/VVtlxb5v#48",
+      white: "Jøran Aulin Jansson",
+      black: "Bjørn Robert Unhjem",
+      wTitle: "FM",
+      wRating: 2235,
+      bRating: 1935,
+      id: 201,
+      event: "Norwegian Rapid Championship 2023",
+    },
+    {
+      date: "2023-01-09",
       fen: "r1q2rk1/1bp2ppp/p3p3/1p4BQ/1b1P2N1/1Pn5/1PP2PPP/R3R1K1 w - - 0 16",
       solution: ["Nf6+", "gxf6", "Bxf6", "Rd8", "Qh6"],
       gameUrl: "https://lichess.org/ZryoPVja/white#30",
@@ -2523,7 +2537,7 @@ export async function getGames(): Promise<Array<GameType>> {
       wTitle: "LM",
       wRating: 2228,
       bRating: 2222,
-      id: 201,
+      id: 202,
     },
   ];
 }
