@@ -2519,7 +2519,7 @@ export async function getGames(): Promise<Array<GameType>> {
       solution: ["Ng6+", "Ke8", "Bxf7+", "Kd8", "Be6"],
       gameUrl:
         "https://lichess.org/broadcast/norwegian-rapid-championship-2023--open/round-5/7SHVMoYf/VVtlxb5v#48",
-      white: "Jøran Aulin Jansson",
+      white: "Jøran Aulin-Jansson",
       black: "Bjørn Robert Unhjem",
       wTitle: "FM",
       wRating: 2235,
