@@ -2531,7 +2531,7 @@ export async function getGames(): Promise<Array<GameType>> {
       date: "2023-01-09",
       fen: "4rr1k/1ppb3p/2q1n1p1/p7/3b4/1BP1B3/PP3PP1/2KR1Q1R w - - 0 23",
       solution: ["Rxd4", "Nxd4", "Rxh7+", "Kxh7", "Qh1+"],
-      gameUrl: "https://lichess.org/ZryoPVja/white#30",
+      gameUrl: "https://lichess.org/oySFOURV#46",
       white: "Wilhelm Steinitz",
       black: "Mikhail Chigorin",
       event: "World Chess Championship 1892",
