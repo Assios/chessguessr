@@ -2584,5 +2584,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2137,
       id: 206,
     },
+    {
+      date: "2023-01-14",
+      fen: "rn1R4/5pBk/2p3pp/2P5/5QP1/Pp5P/1P2qPB1/1K6 b - - 0 28",
+      solution: ["Qc2+", "Ka1", "Rxa3+", "bxa3", "Qa2#"],
+      gameUrl: "https://lichess.org/McetDgvS/black#55",
+      white: "jo2020",
+      black: "FunnyFighter",
+      wRating: 1758,
+      bRating: 1761,
+      id: 207,
+    },
   ];
 }
