@@ -2596,7 +2596,7 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 207,
     },
     {
-      date: "2023-01-16",
+      date: "2023-01-15",
       fen: "7k/ppp1qp2/1b4pp/8/1P2N3/P4QP1/2P2P2/1K6 w - - 1 28",
       solution: ["Qc3+", "Kg8", "Nf6+", "Kf8", "Nd5"],
       gameUrl: "https://lichess.org/YeS1rXU8/white#54",
@@ -2604,7 +2604,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "getmohsinpy",
       wRating: 1645,
       bRating: 1704,
-      id: 209,
+      id: 208,
     },
   ];
 }
