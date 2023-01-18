@@ -167,11 +167,11 @@ export const Chessguessr = ({
               {wTitle && (
                 <span className="text-secondary-content">{wTitle}</span>
               )}{" "}
-              {white} ({wRating}) –{" "}
+              {white} {wRating && `(${wRating})`} –{" "}
               {bTitle && (
                 <span className="text-secondary-content">{bTitle}</span>
               )}{" "}
-               {black} ({bRating})
+               {black} {bRating && `(${bRating})`}
             </p>
             {position && (
               <div className="flex justify-between">
