@@ -2684,5 +2684,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2176,
       id: 215,
     },
+    {
+      date: "2023-01-23",
+      fen: "1r1qrbk1/2pb1pp1/p1np1n1p/P3P3/3N1P2/NBP3BP/6P1/R2QR1K1 b - - 0 19",
+      solution: ["dxe5", "fxe5", "Nxd4", "cxd4", "Bc6"],
+      gameUrl:
+        "https://lichess.org/broadcast/tata-steel-masters-2023/round-8/LejdhBJ0/f2Bj05Jz#37",
+      white: "Fabiano Caruana",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Tata Steel Masters 2023",
+      wRating: 2766,
+      bRating: 2859,
+      id: 216,
+    },
   ];
 }
