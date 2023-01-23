@@ -2701,6 +2701,17 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-01-24",
+      fen: "5r1k/2p1qPpp/r2p1n2/p2B4/1p1pP3/3P1Q1P/PPP2P2/2K3RR w - - 1 20",
+      solution: ["Rxg7", "Kxg7", "Rg1+", "Kh8", "Qxf6+"],
+      gameUrl: "https://lichess.org/TCTsuMEA/white#38",
+      white: "SirdoblintheIV",
+      black: "istvan55",
+      wRating: 1700,
+      bRating: 1740,
+      id: 217,
+    },
+    {
+      date: "2023-01-25",
       fen: "1R6/P3p1kp/2b3p1/3qP3/p3p3/2pP2P1/P6P/5QK1 b - - 3 27",
       solution: ["Qd4+", "Qf2", "Qxf2+", "Kxf2", "c2"],
       gameUrl: "https://lichess.org/e3Nrvy5r/black#53",
@@ -2708,18 +2719,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "ElectricChess73",
       wRating: 2230,
       bRating: 1992,
-      id: 217,
-    },
-    {
-      date: "2023-01-25",
-      fen: "6k1/pp3pp1/7p/3R4/1QP1r2N/7R/PP4PK/2q5 b - - 6 33",
-      solution: ["Qf4+", "g3", "Re2+", "Ng2", "Qf3"],
-      gameUrl: "https://lichess.org/dQe3RO62/black#65",
-      white: "SirJohn13",
-      black: "burgerswave",
-      wRating: 2762,
-      bRating: 2588,
-      id: 219,
+      id: 218,
     },
   ];
 }
