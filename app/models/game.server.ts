@@ -2721,5 +2721,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1992,
       id: 218,
     },
+    {
+      date: "2023-01-26",
+      fen: "r4rk1/1pp1nqp1/p1nb2bp/3p4/3P2PB/PBN2N1P/1P3P2/R2Q1RK1 w - - 4 20",
+      solution: ["Ne5", "Bxe5", "dxe5", "Kh8", "f4"],
+      gameUrl: "https://lichess.org/r3A6l6FS/white#38",
+      white: "alireza2003",
+      black: "pozvonochek",
+      wAka: "Alireza Firouzja",
+      bAka: "Nikita Petrov",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 3210,
+      bRating: 2880,
+      id: 219,
+    },
   ];
 }
