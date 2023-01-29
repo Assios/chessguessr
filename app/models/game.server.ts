@@ -2769,5 +2769,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1943,
       id: 222,
     },
+    {
+      date: "2023-01-30",
+      fen: "2q3k1/2pbbn2/1p1p1n2/1N1Pp1p1/1PP1PpP1/2NQ1P2/2K3Rr/rRB2B2 b - - 4 32",
+      solution: ["Rxg2+", "Bxg2", "Rxb1", "Kxb1", "Nxg4"],
+      gameUrl:
+        "https://lichess.org/broadcast/tata-steel-masters-2023/round-13/Ckn34s23/akUaghI8#63",
+      white: "Arjun Erigaisi",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Tata Steel Masters 2023",
+      wRating: 2722,
+      bRating: 2859,
+      id: 223,
+    },
   ];
 }
