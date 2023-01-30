@@ -55,7 +55,7 @@ const index = () => {
       <div className="mt-10 mb-20 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
           <h1 className="text-center text-4xl mb-8 font-semibold">
-            Game Archive
+            Game Archive – Unlimited Chessguessr
           </h1>
         </div>
         <p className="max-w-prose m-auto text-center text-lg">
