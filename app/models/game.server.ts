@@ -2806,5 +2806,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1994,
       id: 225,
     },
+    {
+      date: "2023-02-02",
+      fen: "r1b1k2r/pp2ppb1/1q4p1/3P3n/2pn1P2/2P3P1/PP4B1/RNBQ1RKN w kq - 0 14",
+      solution: ["Be3", "Qxb2", "Bxd4", "Qxa1", "Qd2"],
+      gameUrl: "https://lichess.org/w6OuOuma/white#26",
+      white: "penguingim1",
+      black: "alireza2003",
+      wAka: "Andrew Tang",
+      bAka: "Alireza Firouzja",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 3272,
+      bRating: 3334,
+      id: 226,
+    },
   ];
 }
