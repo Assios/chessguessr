@@ -2821,5 +2821,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 3334,
       id: 226,
     },
+    {
+      date: "2023-02-03",
+      fen: "3r1k2/p1qr2pp/1p1NQn2/8/8/2PR4/PP3PPP/3R2K1 b - - 2 24",
+      solution: ["Re7", "Qf5", "Rxd6", "Rxd6", "Qxd6"],
+      gameUrl: "https://lichess.org/RBb9GYt2/black#47",
+      white: "lagartodeleyende",
+      black: "pasino",
+      wTitle: "IM",
+      bTitle: "IM",
+      wRating: 2607,
+      bRating: 2692,
+      id: 227,
+    },
   ];
 }
