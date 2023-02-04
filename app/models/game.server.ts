@@ -2834,5 +2834,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2692,
       id: 227,
     },
+    {
+      date: "2023-02-04",
+      fen: "5k2/8/5P1p/4P2r/1p2B1p1/1P4P1/8/5K2 w - - 0 40",
+      solution: ["e6", "Re5", "e7+", "Kf7", "Bc6"],
+      gameUrl: "https://lichess.org/CugbusUy/white#78",
+      white: "ashraf2000",
+      black: "Striker_CKD",
+      wRating: 2198,
+      bRating: 2421,
+      id: 228,
+    },
   ];
 }
