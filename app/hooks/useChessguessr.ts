@@ -215,7 +215,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
           (kingMove.includes(solutionArray[i][0]) &&
             kingMove.includes(move.move[0])))
       ) {
-        formattedGuess[i].pieceColor = "red";
+        formattedGuess[i].pieceColor = "blue";
       }
 
       discardYellowArray[solutionArray.indexOf(move.move)] = null;
