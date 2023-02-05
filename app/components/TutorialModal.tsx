@@ -102,7 +102,7 @@ export default function TutorialModal({
                     <Tile
                       className="m-[3px]"
                       color="grey"
-                      pieceColor="red"
+                      pieceColor="blue"
                       flipTile={true}
                       animationIndex={2}
                       tutorial={true}
