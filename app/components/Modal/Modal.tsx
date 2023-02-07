@@ -156,7 +156,7 @@ export default function Modal({
           } else if (move.color === "yellow") {
             text += "🟨";
           } else if (move.pieceColor === "blue") {
-            text += "🟥";
+            text += "🟦";
           } else if (move.color === "grey") {
             text += "⬜";
           }
