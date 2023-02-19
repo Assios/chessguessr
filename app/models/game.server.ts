@@ -3000,5 +3000,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1945,
       id: 242,
     },
+    {
+      date: "2023-02-19",
+      fen: "r3kr2/p1pp4/1p2p3/3Pn3/2N4p/5B1q/PP4QB/R4K1R b q - 0 28",
+      solution: ["Rxf3+", "Kg1", "Qxg2+", "Kxg2", "h3+"],
+      gameUrl: "https://lichess.org/g0k0IITj/black#55",
+      white: "sanara",
+      black: "devillemilan",
+      wRating: 1647,
+      bRating: 1591,
+      id: 243,
+    },
   ];
 }
