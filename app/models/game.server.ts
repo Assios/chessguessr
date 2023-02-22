@@ -3044,5 +3044,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1824,
       id: 246,
     },
+    {
+      date: "2023-02-23",
+      fen: "1b6/1B1K4/P2p4/2k1p3/1p2P3/1P6/8/8 w - - 9 57",
+      solution: ["Kc8", "Ba7", "Kc7", "Kb5", "Bc8"],
+      gameUrl: "https://lichess.org/NQBOcamR/white#112",
+      white: "RL12",
+      black: "blueberry_pancakes",
+      wTitle: "IM",
+      wRating: 2596,
+      bRating: 2563,
+      id: 247,
+    },
   ];
 }
