@@ -152,11 +152,11 @@ export default function Modal({
           if (move.color === "green") {
             text += "🟩";
           } else if (move.color === "yellow" && move.pieceColor === "blue") {
-            text += "🟧";
+            text += "🇺🇦";
           } else if (move.color === "yellow") {
             text += "🟨";
           } else if (move.pieceColor === "blue") {
-            text += "🟥";
+            text += "🟦";
           } else if (move.color === "grey") {
             text += "⬜";
           }
