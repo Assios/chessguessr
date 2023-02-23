@@ -3056,5 +3056,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2563,
       id: 247,
     },
+    {
+      date: "2023-02-24",
+      fen: "r1bq1rk1/pp1n2pp/2pb4/5p2/3Pp3/2P3P1/PP1N1PBP/R1BQR1K1 b - - 1 13",
+      solution: ["Nf6", "f3", "e3", "Rxe3", "f4"],
+      gameUrl: "https://lichess.org/TblVs0x9/black#25",
+      white: "GangsterSau1",
+      black: "Assios",
+      bTitle: "LM",
+      wRating: 2311,
+      bRating: 2496,
+      id: 248,
+    },
   ];
 }
