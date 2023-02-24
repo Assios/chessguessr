@@ -3068,5 +3068,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2496,
       id: 248,
     },
+    {
+      date: "2023-02-25",
+      fen: "r1b2rk1/pp4bp/6p1/2nP1pq1/1PPNp3/P1N1P1P1/3QB2P/R4RK1 b - - 0 18",
+      solution: ["Bxd4", "Qxd4", "Nb3", "Qe5", "Qxe3+"],
+      gameUrl: "https://lichess.org/OzSHoyJM/black#35",
+      white: "nancy1966",
+      black: "kozimninkarasi",
+      wRating: 2062,
+      bRating: 2310,
+      id: 249,
+    },
   ];
 }
