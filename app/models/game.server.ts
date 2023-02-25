@@ -3079,5 +3079,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2310,
       id: 249,
     },
+    {
+      date: "2023-02-26",
+      fen: "1kn4r/ppp2p2/8/1P1R1n1p/Q1P5/P3B2P/2B2PPK/q7 b - - 5 29",
+      solution: ["Nxe3", "fxe3", "Nb6", "Rd1", "Qe5+"],
+      gameUrl: "https://lichess.org/MWvYgo8t/black#57",
+      white: "matiz-2001",
+      black: "Charlmorfi",
+      wRating: 2064,
+      bRating: 2179,
+      id: 250,
+    },
   ];
 }
