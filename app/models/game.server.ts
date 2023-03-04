@@ -3158,5 +3158,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1913,
       id: 256,
     },
+    {
+      date: "2023-03-05",
+      fen: "3R4/6rp/4p1p1/p1kbPp2/3N1P2/3K1P2/1P4P1/8 w - - 4 36",
+      solution: ["Rb8", "Rb7", "Nxe6+", "Kb4", "Rxb7+"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-team-league/round-8-offerspill-oslo-schakselskap/H1K1Moyi/k9nrWMlj#70",
+      white: "Magnus Carlsen",
+      black: "Jon Ludvig Hammer",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2852,
+      bRating: 2631,
+      id: 257,
+    },
   ];
 }
