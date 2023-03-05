@@ -3166,11 +3166,27 @@ export async function getGames(): Promise<Array<GameType>> {
         "https://lichess.org/broadcast/norwegian-team-league/round-8-offerspill-oslo-schakselskap/H1K1Moyi/k9nrWMlj#70",
       white: "Magnus Carlsen",
       black: "Jon Ludvig Hammer",
+      event: "Norwegian Team League",
       wTitle: "GM",
       bTitle: "GM",
       wRating: 2852,
       bRating: 2631,
       id: 257,
+    },
+    {
+      date: "2023-03-06",
+      fen: "r4rk1/pQn2ppp/2p5/3q4/2Nb1B2/6P1/PP3P1P/R4RK1 b - - 2 19",
+      solution: ["Ne6", "Ne3", "Qe4", "Ng2", "Nxf4"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-team-league/round-9-valerenga-offerspill/PYI0oJ3B/nhCMWo8N#37",
+      white: "Evgeny Romanov",
+      black: "Rameshbabu Praggnanandhaa",
+      event: "Norwegian Team League",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2583,
+      bRating: 2691,
+      id: 258,
     },
   ];
 }
