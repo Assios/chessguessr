@@ -1,4 +1,4 @@
-export type Game = {
+export type GameType = {
   date: string;
   fen: string;
   solution: string[];
@@ -7,6 +7,10 @@ export type Game = {
   black: string;
   wAka?: string;
   bAka?: string;
+  wTitle?: string;
+  bTitle?: string;
+  event?: string;
+  variant?: string;
   wRating: number | string;
   bRating: number | string;
   id: number;
@@ -26,3 +30,19 @@ export interface RowProps {
   currentGuess: Guess;
   insufficientMoves: boolean;
 }
+
+export enum GameStatus {
+  IN_PROGRESS = "IN_PROGRESS",
+  SOLVED = "SOLVED",
+  FAILED = "FAILED",
+}
+
+export type FullFenHistory = {
+  trueFenHistory: string[];
+  cachedNavigableHistory: string[];
+};
+
+export type GuessWithHistory = {
+  trueGuess: string[];
+  cachedNavigableGuess: string[];
+};

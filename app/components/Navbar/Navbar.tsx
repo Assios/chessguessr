@@ -1,6 +1,6 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { NavLink } from "@remix-run/react";
 
-export const Navbar = ({ setShowModal, setShowTutorial }) => {
+export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
   return (
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
@@ -8,7 +8,7 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="w-5 h-5 md:w-6 md:h-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -22,12 +22,40 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
             </svg>
           </div>
         </button>
+        <NavLink
+          prefetch="intent"
+          to="games"
+          className="btn btn-ghost btn-circle"
+        >
+          <div className="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 md:w-6 md:h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+              />
+            </svg>
+          </div>
+        </NavLink>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-2xl">Chessguessr</a>
+        <NavLink
+          prefetch="intent"
+          to="/"
+          className="btn btn-ghost normal-case text-lg lg:text-2xl"
+        >
+          Chessguessr
+        </NavLink>
       </div>
       <div className="navbar-end">
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate btn btn-ghost btn-circle">
           <input
             type="checkbox"
             data-toggle-theme="corporate,lichess-dark"
@@ -35,7 +63,7 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
           />
 
           <svg
-            className="swap-off fill-current w-8 h-8"
+            className="swap-off fill-current w-6 h-6 md:w-8 md:h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -51,22 +79,24 @@ export const Navbar = ({ setShowModal, setShowTutorial }) => {
           </svg>
         </label>
 
-        <button className="btn btn-ghost btn-circle" onClick={setShowModal}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h- w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-            />
-          </svg>
-        </button>
+        {showNavbarStats && (
+          <button className="btn btn-ghost btn-circle" onClick={setShowModal}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 md:w-6 md:h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );

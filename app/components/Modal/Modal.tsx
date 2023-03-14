@@ -1,17 +1,15 @@
-import React from "react";
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
-import Countdown, { zeroPad } from "react-countdown";
 import StatsCards from "./StatsCards";
-import { GameStatus } from "~/hooks/useChessguessr";
-import styled from "styled-components";
 import { Tile } from "~/styles/styles";
-
-const TutorialVariation = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 0.5rem;
-`;
+import { GameStatus } from "~/utils/types";
+import Distribution from "./Distribution";
+import Countdown, { zeroPad } from "react-countdown";
+import {
+  countdownRenderer,
+  midnightUtcTomorrow,
+  GameLink,
+} from "~/utils/utils";
+import { useOutletContext } from "@remix-run/react";
 
 const getSolvedPercentage = (puzzleStats) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
@@ -31,13 +29,25 @@ const getAverageNumberOfTurns = (puzzleStats) => {
   return Math.round((puzzleStats.turns / puzzleStats.solved) * 100) / 100;
 };
 
-const Correct = ({ game, gameUrlText, puzzleStats }) => {
+const Correct = ({ game, puzzleStats }) => {
   const solvedPercentage = getSolvedPercentage(puzzleStats);
 
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
 
   return (
-    <div className="relative p-6 flex-auto">
+    <div className="relative pl-6 pr-6 flex-auto">
+      <div className="divider" />
+      <p className="my-4 text-lg leading-relaxed">
+        This game was played between {game.white}{" "}
+        {game.wAka && `(${game.wAka})`} and {game.black}
+        {game.bAka && ` (${game.bAka})`}
+        {game.event && ` in the ${game.event}`}.{" "}
+        {game.gameUrl && (
+          <>
+            Check out the game <GameLink game={game} />.
+          </>
+        )}
+      </p>
       <span className="font-semibold">Solution</span>
       <div className="flex flex-row mt-1">
         {game.solution?.map((move, i) => (
@@ -47,52 +57,43 @@ const Correct = ({ game, gameUrlText, puzzleStats }) => {
             flipTile={true}
             animationIndex={i * 0.2}
             tutorial={true}
+            key={`${move}-${i}`}
           >
             {move}
           </Tile>
         ))}
       </div>
 
-      <div className="divider" />
-      <p className="my-4 text-lg leading-relaxed">
-        This game was played between {game.white}{" "}
-        {game.wAka && `(${game.wAka})`} and {game.black}
-        {game.bAka && ` (${game.bAka})`}. Check out the game{" "}
-        <a
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href={game.gameUrl}
-          target="_blank"
-        >
-          {gameUrlText(game)}
-        </a>
-        .
-      </p>
       {solvedPercentage && averageNumberOfTurns && (
         <>
           <p className="my-4 text-lg leading-relaxed">
             {solvedPercentage}% got this one right. For the people that got it
             right, the average number of turns was {averageNumberOfTurns}.
           </p>
-          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 absolute"></div>
-            <div
-              className="h-full bg-green-500 absolute"
-              style={{ width: `${solvedPercentage}%` }}
-            ></div>
-      </div>*/}
         </>
       )}
     </div>
   );
 };
 
-const Failed = ({ game, gameUrlText, puzzleStats }) => {
+const Failed = ({ game, puzzleStats }) => {
   const solvedPercentage = getSolvedPercentage(puzzleStats);
 
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
 
   return (
-    <div className="relative p-6 flex-auto">
+    <div className="relative pl-6 pr-6 flex-auto">
+      <div className="divider" />
+      <p className="my-4 text-lg leading-relaxed">
+        This game was played between {game.white}{" "}
+        {game.wAka && `(${game.wAka})`} and {game.black}
+        {game.bAka && ` (${game.bAka})`}.{" "}
+        {game.gameUrl && (
+          <>
+            Check out the game <GameLink game={game} />.
+          </>
+        )}
+      </p>
       <span className="font-semibold">Solution</span>
       <div className="flex flex-row mt-1">
         {game.solution?.map((move, i) => (
@@ -107,33 +108,12 @@ const Failed = ({ game, gameUrlText, puzzleStats }) => {
           </Tile>
         ))}
       </div>
-
-      <div className="divider" />
-      <p className="my-4 text-lg leading-relaxed">
-        This game was played between {game.white} and {game.black}. Check out
-        the game{" "}
-        <a
-          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href={game.gameUrl}
-          target="_blank"
-        >
-          {gameUrlText(game)}
-        </a>
-        .
-      </p>
       {solvedPercentage && averageNumberOfTurns && (
         <>
           <h1 className="my-4  text-lg leading-relaxed">
             {solvedPercentage}% got this one right. For the people that got it
             right, the average number of turns was {averageNumberOfTurns}.
           </h1>
-          {/*<div className="h-3 relative max-w-xl rounded-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 absolute"></div>
-            <div
-              className="h-full bg-green-500 absolute"
-              style={{ width: `${solvedPercentage}%` }}
-            ></div>
-      </div>*/}
         </>
       )}
     </div>
@@ -149,18 +129,13 @@ export default function Modal({
   playerStats,
   puzzleStats,
   gameStatus,
+  shouldUpdateStats,
 }) {
+  const { trackEvent }: any = useOutletContext();
+
   const [value, copy] = useCopyToClipboard();
 
   const solvedPercentage = getSolvedPercentage(puzzleStats);
-
-  const gameUrlText = (game) => {
-    if (game.gameUrl.includes("lichess.org")) {
-      return "on lichess";
-    }
-
-    return "here";
-  };
 
   const getShareGameText = (
     guesses: any,
@@ -177,12 +152,12 @@ export default function Modal({
         if (move && move.color && move.pieceColor) {
           if (move.color === "green") {
             text += "🟩";
-          } else if (move.color === "yellow" && move.pieceColor === "red") {
-            text += "🟧";
+          } else if (move.color === "yellow" && move.pieceColor === "blue") {
+            text += "🇺🇦";
           } else if (move.color === "yellow") {
             text += "🟨";
-          } else if (move.pieceColor === "red") {
-            text += "🟥";
+          } else if (move.pieceColor === "blue") {
+            text += "🟦";
           } else if (move.color === "grey") {
             text += "⬜";
           }
@@ -197,28 +172,21 @@ export default function Modal({
     return text;
   };
 
-  let tomorrow = new Date();
-  tomorrow.setDate(new Date().getDate() + 1);
-
-  const nextDate =
-    tomorrow.getFullYear().toString() +
-    "-" +
-    (tomorrow.getMonth() + 1).toString().padStart(2, 0) +
-    "-" +
-    tomorrow.getDate().toString();
-
-  const renderer = ({ hours, minutes, seconds }) => (
-    <span>
-      {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
-    </span>
-  );
-
   const shareGameText = getShareGameText(
     guesses,
     game,
     turn,
     gameStatus === GameStatus.SOLVED
   );
+
+  const utcTomorrow = midnightUtcTomorrow();
+
+  const nextDate =
+    utcTomorrow.getFullYear().toString() +
+    "-" +
+    (utcTomorrow.getMonth() + 1).toString().padStart(2, 0) +
+    "-" +
+    utcTomorrow.getDate().toString();
 
   return (
     <>
@@ -249,45 +217,81 @@ export default function Modal({
                   ></button>
                 </div>
 
+                <div>
+                  {!shouldUpdateStats && (
+                    <div className="mb-6 ml-4 mr-2">
+                      <div className="w-[inherit]">
+                        <div className="flex flex-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            className="stroke-current flex-shrink-0 w-6 h-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          <span className="ml-2 text-sm">
+                            This is a previous daily puzzle, so solving this
+                            won't affect your stats. Click{" "}
+                            <a
+                              className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                              href="/"
+                            >
+                              here
+                            </a>{" "}
+                            to play today's.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 <StatsCards playerStats={playerStats} />
+
+                {playerStats?.guesses && (
+                  <Distribution guessDistribution={playerStats.guesses} />
+                )}
 
                 {gameStatus !== GameStatus.IN_PROGRESS ? (
                   <>
                     {gameStatus === GameStatus.SOLVED ? (
-                      <Correct
-                        game={game}
-                        gameUrlText={gameUrlText}
-                        puzzleStats={puzzleStats}
-                      />
+                      <Correct game={game} puzzleStats={puzzleStats} />
                     ) : (
-                      <Failed
-                        game={game}
-                        gameUrlText={gameUrlText}
-                        puzzleStats={puzzleStats}
-                      />
+                      <Failed game={game} puzzleStats={puzzleStats} />
                     )}
                   </>
                 ) : null}
 
                 <div className="relative pl-6 flex-auto">
                   <p className="mt-4 mb-4 text-md">
-                    Feedback? Post in the{" "}
+                    Wanna play old puzzles? Check out the{" "}
+                    <a
+                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                      href="/games"
+                      onClick={() => {
+                        trackEvent("Click modal archive link");
+                      }}
+                    >
+                      archive.
+                    </a>{" "}
+                  </p>
+                  <p className="text-md">
+                    {" "}
+                    Now also on Twitter! Follow{" "}
                     <a
                       target="_blank"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="https://lichess.org/team/chessguessr"
+                      href="https://twitter.com/chessguessr"
                     >
-                      Lichess team forum
+                      Chessguessr
                     </a>{" "}
-                    or{" "}
-                    <a
-                      target="_blank"
-                      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                      href="https://github.com/Assios/chessguessr"
-                    >
-                      file an issue
-                    </a>{" "}
-                    on Github.
+                    for updates.
                   </p>
                 </div>
 
@@ -297,7 +301,10 @@ export default function Modal({
                     {gameStatus !== GameStatus.IN_PROGRESS && (
                       <button
                         type="button"
-                        onClick={() => copy(shareGameText)}
+                        onClick={() => {
+                          trackEvent("Click share score");
+                          copy(shareGameText);
+                        }}
                         className="text-white bg-primary hover:bg-primary-focus focus:ring-2 focus:outline-none focus:ring-primary-focus font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2"
                       >
                         {!value ? "SHARE SCORE" : "Copied to clipboard"}

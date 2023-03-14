@@ -17,8 +17,8 @@ const getTileColor = (color: any) => {
 
 const getPieceColor = (color: any) => {
   switch (color) {
-    case "red":
-      return "#EB2F51";
+    case "blue":
+      return "#4b6bfc";
     default:
       return "#9CA3AF";
   }
@@ -56,7 +56,7 @@ const bounce = () => keyframes`
     }
 `;
 
-const flip = (c: any, pieceColor: any) => keyframes`
+const flip = (c: string, pieceColor: string) => keyframes`
   0% {
     transform: rotateX(0deg);
     border-color: #787C7E;
@@ -69,11 +69,11 @@ const flip = (c: any, pieceColor: any) => keyframes`
 
   55% {
     transform: rotateX(90deg);
-    background: ${c === "#9CA3AF" && pieceColor === "#EB2F51" ? "#EB2F51" : c};
+    background: ${c === "#9CA3AF" && pieceColor === "#4b6bfc" ? "#4b6bfc" : c};
 
     background-image: ${
-      c === "#FBBF23" && pieceColor === "#EB2F51"
-        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #EB2F51 50%);"
+      c === "#FBBF23" && pieceColor === "#4b6bfc"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);"
         : "none"
     };
   
@@ -85,11 +85,11 @@ const flip = (c: any, pieceColor: any) => keyframes`
   100% {
     transform: rotateX(0deg);
 
-    background: ${c === "#9CA3AF" && pieceColor === "#EB2F51" ? "#EB2F51" : c};
+    background: ${c === "#9CA3AF" && pieceColor === "#4b6bfc" ? "#4b6bfc" : c};
 
     background-image: ${
-      c === "#FBBF23" && pieceColor === "#EB2F51"
-        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #EB2F51 50%);"
+      c === "#FBBF23" && pieceColor === "#4b6bfc"
+        ? "-webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);"
         : "none"
     };
   
@@ -116,12 +116,12 @@ export const StyledRow = styled.div<StyledRowProps>`
 `;
 
 interface TileProps {
-  flipTile?: boolean;
   color?: string;
   pieceColor?: string;
   current?: boolean;
   animationIndex?: number;
   tutorial?: boolean;
+  flipTile?: boolean;
 }
 
 export const Tile = styled.div<TileProps>`
@@ -142,7 +142,6 @@ export const Tile = styled.div<TileProps>`
   box-sizing: border-box;
 
   border-color: #787c7e;
-  animation: ${flip} 0.5s ease forwards;
 
   @media (max-width: 580px) {
     width: 70px;

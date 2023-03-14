@@ -12,7 +12,7 @@ const StatsCards = ({ playerStats }) => {
   return (
     <div className="stats shadow flex flex-col md:flex-row">
       <div className="stat m-2">
-        <div className="stat-figure text-primary">
+        <div className="stat-figure text-success">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-10 w-10"
@@ -29,20 +29,20 @@ const StatsCards = ({ playerStats }) => {
           </svg>
         </div>
         <div className="stat-title">Games played</div>
-        <div className="stat-value text-primary">{playerStats.gamesPlayed}</div>
+        <div className="stat-value text-success">{playerStats.gamesPlayed}</div>
       </div>
 
       <div className="stat">
         <div className="stat-figure text-secondary"></div>
         <div className="stat-title">Win %</div>
-        <div className="stat-value text-secondary">
+        <div className="stat-value text-success">
           {playerStats.gamesPlayed ? winPercentage : "0"}%
         </div>
         <div className="stat-desc">Ratio of games you've solved</div>
       </div>
 
       <div className="stat">
-        <div className="stat-figure text-primary">
+        <div className="stat-figure text-success">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"
@@ -57,7 +57,7 @@ const StatsCards = ({ playerStats }) => {
           </svg>
         </div>
         <div className="stat-title">Current streak</div>
-        <div className="stat-value text-primary">
+        <div className="stat-value text-success">
           {playerStats.gamesPlayed > 0 ? playerStats.currentStreak : 0}
         </div>
         <div className="stat-desc">Number of games solved in a row</div>

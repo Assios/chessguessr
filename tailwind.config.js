@@ -35,13 +35,15 @@ module.exports = {
           success: "#629923",
           warning: "#BF811E",
           error: "#EA7175",
+          "secondary-content": "#fcd34d", // amber-300
         },
       },
-      "light",
-      "dark",
-      "cupcake",
-      "night",
-      "corporate",
+      {
+        corporate: {
+          ...require("daisyui/src/colors/themes")["[data-theme=corporate]"],
+          "secondary-content": "#f59e0b", // amber-500
+        },
+      },
     ],
   },
 };

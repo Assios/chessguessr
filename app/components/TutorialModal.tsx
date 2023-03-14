@@ -22,19 +22,21 @@ export default function TutorialModal({
       {showTutorial ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto mx-auto max-w-3xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none">
-                <div className="flex items-start justify-between p-5 rounded-t">
+                <div className="flex items-start justify-between pl-5 pt-5 rounded-t">
                   <h3 className="text-3xl font-semibold">How to play</h3>
                 </div>
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-lg leading-relaxed">
+                <div className="divider" />
+                <div className="relative pl-6 flex-auto">
+                  <p className="mb-2 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5
                     next moves played in the game. After each guess, the color
-                    of the tile will show how close you were.
+                    of the tile will show how close you were. It's like Wordle,
+                    or Chessle, but for chess games.
                   </p>
-                  <h3 className="text-xl font-semibold mb-2">Examples</h3>
                   <div className="divider" />
+                  <h3 className="text-xl font-semibold mb-2">Examples</h3>
                   <TutorialVariation>
                     <Tile
                       className="m-[3px]"
@@ -100,7 +102,7 @@ export default function TutorialModal({
                     <Tile
                       className="m-[3px]"
                       color="grey"
-                      pieceColor="red"
+                      pieceColor="blue"
                       flipTile={true}
                       animationIndex={2}
                       tutorial={true}
@@ -115,6 +117,12 @@ export default function TutorialModal({
                     The same piece-type was played in this spot, but the move is
                     wrong. In this case, a knight was played, but not
                     necessarily the same knight.
+                  </p>
+                  <p className="text-lg mb-6">
+                    <span className="font-bold">NB!</span> The notation has to
+                    be identical for the moves to be considered the same (
+                    <i>Nxf7</i> and <i>Nxf7+</i> aren't considered the same
+                    moves).
                   </p>
                   <p className="my-4 text-lg leading-relaxed font-bold">
                     A new position will appear every day at midnight UTC.

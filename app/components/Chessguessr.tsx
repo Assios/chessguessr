@@ -1,18 +1,29 @@
 import { useEffect } from "react";
-import useChessguessr, { GameStatus } from "../hooks/useChessguessr";
+import useChessguessr from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
+import { Row } from "./Row";
 import styled from "styled-components";
 import Modal from "./Modal/Modal";
-import { Game } from "~/utils/types";
+import { GameType, GameStatus } from "~/utils/types";
 import { useWindowSize } from "~/hooks/useWindowSize";
 import TutorialModal from "./TutorialModal";
+import Countdown from "react-countdown";
+import {
+  countdownRenderer,
+  midnightUtcTomorrow,
+  GameLink,
+  guessifySolution,
+  useHotkeys,
+} from "~/utils/utils";
+import useCopyToClipboard from "~/hooks/useCopyToClipboard";
+import { Tile } from "~/styles/styles";
 
 const ChessboardWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   touch-action: manipulation;
 `;
@@ -41,6 +52,15 @@ const Players = styled.div`
   justify-content: center;
 `;
 
+const SolutionWrapper = styled.div`
+  margin-left: 1rem;
+  margin-bottom: -1.3rem;
+
+  @media (max-width: 1140px) {
+    margin-bottom: 0rem;
+  }
+`;
+
 export const Chessguessr = ({
   game,
   stats,
@@ -49,22 +69,23 @@ export const Chessguessr = ({
   showTutorial,
   setShowTutorial,
   setTutorial,
-  firebaseStats,
+  shouldUpdateStats,
 }: {
-  game: Game;
+  game: GameType;
   stats?: any;
   showModal: boolean;
   setShowModal: any;
   showTutorial: boolean;
   setShowTutorial: any;
   setTutorial: any;
-  firebaseStats: boolean;
+  shouldUpdateStats: boolean;
 }) => {
   const {
     currentGuess,
     onDrop,
     position,
     takeback,
+    goForwards,
     submitGuess,
     guesses,
     turn,
@@ -72,11 +93,23 @@ export const Chessguessr = ({
     playerStats,
     gameStatus,
     colorToPlay,
-  } = useChessguessr(game, firebaseStats);
+    fenHistory,
+  } = useChessguessr(game, shouldUpdateStats);
 
   const size = useWindowSize();
 
-  const { white, black, wRating, bRating, wAka, bAka } = game;
+  const {
+    white,
+    black,
+    wRating,
+    bRating,
+    wTitle,
+    bTitle,
+    wAka,
+    bAka,
+    event,
+    variant,
+  } = game;
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
@@ -97,7 +130,15 @@ export const Chessguessr = ({
     return width;
   };
 
-  const setGuess = () => {};
+  const [linkValue, copy] = useCopyToClipboard();
+
+  const nextDate = midnightUtcTomorrow();
+
+  useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Left", takeback, [currentGuess, fenHistory]);
+  useHotkeys("Right", goForwards, [currentGuess, fenHistory]);
+  useHotkeys("Enter", submitGuess, [currentGuess]);
+  useHotkeys("Space", submitGuess, [currentGuess]);
 
   return (
     <div>
@@ -111,6 +152,7 @@ export const Chessguessr = ({
           guesses={guesses}
           playerStats={playerStats}
           puzzleStats={stats}
+          shouldUpdateStats={shouldUpdateStats}
         />
         <TutorialModal
           showTutorial={showTutorial}
@@ -121,19 +163,53 @@ export const Chessguessr = ({
       <Game>
         <BoardWrapper>
           <Players>
-            {wRating && bRating ? (
-              <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
-                {white} ({wRating}) – {black} ({bRating})
-              </p>
-            ) : (
-              <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
-                {white} – {black}
-              </p>
-            )}
+            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
+              {wTitle && (
+                <span className="text-secondary-content">{wTitle}</span>
+              )}{" "}
+              {white} {wRating && `(${wRating})`} –{" "}
+              {bTitle && (
+                <span className="text-secondary-content">{bTitle}</span>
+              )}{" "}
+               {black} {bRating && `(${bRating})`}
+            </p>
             {position && (
-              <p className="sm:text-lg lg:text-md mb-4 font-semibold text-center">
-                {colorToPlay === "b" ? "Black" : "White"} to play
-              </p>
+              <div className="flex justify-between">
+                {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
+                    {colorToPlay === "b" ? "Black" : "White"} to play
+                  </p>
+                ) : (
+                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
+                    New game in{" "}
+                    <Countdown
+                      date={nextDate}
+                      zeroPadTime={2}
+                      renderer={countdownRenderer}
+                    />
+                  </p>
+                )}
+                <div className="flex flex-row">
+                  {variant && (
+                    <span className="mt-2 mr-1 badge badge-accent">
+                      {variant}
+                    </span>
+                  )}
+                  <div
+                    className="tooltip hidden md:block"
+                    data-tip="Event or website where the game was played"
+                  >
+                    <span className="mt-2 badge badge-accent">
+                      {event ? event : "lichess.org"}
+                    </span>
+                  </div>
+                  <div className="block md:hidden">
+                    <span className="mt-2 badge badge-accent">
+                      {event ? event : "lichess.org"}
+                    </span>
+                  </div>
+                </div>
+              </div>
             )}
           </Players>
 
@@ -146,15 +222,16 @@ export const Chessguessr = ({
                 }
                 position={position.fen()}
                 onPieceDrop={onDrop}
-                areArrowsAllowed={false}
+                areArrowsAllowed={true}
                 boardWidth={getBoardWidth()}
                 boardOrientation={colorToPlay === "b" ? "black" : "white"}
+                customArrowColor={"rgba(98, 155, 35, 0.9)"}
               />
             )}
           </ChessboardWrapper>
           <Buttons>
             <button
-              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2"
+              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2 mb-4"
               onClick={takeback}
             >
               <svg
@@ -169,19 +246,83 @@ export const Chessguessr = ({
             </button>
 
             <button
-              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2"
+              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2 mb-4"
               onClick={submitGuess}
             >
               Submit
             </button>
           </Buttons>
         </BoardWrapper>
-        <Grid
-          currentGuess={currentGuess}
-          guesses={guesses}
-          turn={turn}
-          insufficientMoves={insufficientMoves}
-        />
+        <div className="flex flex-col">
+          {gameStatus === GameStatus.FAILED && (
+            <>
+              <SolutionWrapper className="flex flex-col justify-end pl-3 border-b-5 border-b-zinc-500">
+                <div className="flex flex-row justify-between">
+                  <p className="sm:text-lg lg:text-2xl mb-3 font-semibold">
+                    Game over! Solution:
+                  </p>
+                  <span>
+                    See game <GameLink game={game} />
+                  </span>
+                </div>
+                <div className="flex flex-row mt-1">
+                  <Row guess={guessifySolution(game)} />
+                </div>
+              </SolutionWrapper>
+            </>
+          )}
+          <Grid
+            currentGuess={currentGuess}
+            guesses={guesses}
+            turn={turn}
+            insufficientMoves={insufficientMoves}
+          />
+          <div className="flex mb-4 flex-row justify-end">
+            <input
+              type="text"
+              className="input input-bordered input-sm w-full max-w-xs mt-2 mr-1 w-56"
+              readOnly={true}
+              value={"https://chessguessr.com/games/" + game.id}
+              onFocus={(event) => event.target.select()}
+            />
+            <button
+              className="btn btn-square btn-sm bg-primary border-primary mt-2"
+              onClick={() => copy("https://chessguessr.com/games/" + game.id)}
+            >
+              {linkValue ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       </Game>
     </div>
   );
