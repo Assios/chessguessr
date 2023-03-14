@@ -10,7 +10,12 @@ export const getPosition = async function (body) {
 
   const lichessId = getIdFromUrl(lichessUrl);
 
-  if (!lichessId) return;
+  if (!lichessId) {
+    throw new Response("Invalid Lichess URL", {
+      status: 400,
+      statusText: `${lichessUrl} doesn't seem to be a valid game. Are you sure this is the correct URL?`,
+    });
+  }
 
   const res = await fetch(`https://lichess.org/game/export/${lichessId}`, {
     headers: new Headers({
