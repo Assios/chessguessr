@@ -3437,5 +3437,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1837,
       id: 280,
     },
+    {
+      date: "2023-03-29",
+      fen: "8/pp4kp/2n3p1/4pq2/2P2r1r/1NQPNpR1/PP3P1P/R6K b - - 5 31",
+      solution: ["Qh5", "Nf1", "Rxh2+", "Nxh2", "Rh4"],
+      gameUrl: "https://lichess.org/cCCUDIeD/black#61",
+      white: "AdolfoDuno",
+      black: "ryanwiz",
+      wRating: 2176,
+      bRating: 2243,
+      id: 281,
+    },
   ];
 }
