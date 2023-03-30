@@ -3461,18 +3461,6 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 282,
     },
     {
-      date: "2023-03-30",
-      fen: "1rr3k1/2q2p1p/5bp1/p2Rp3/4Q2P/1B3P2/PPP3P1/2K4R b - - 0 20",
-      solution: ["Rb4", "Qd3", "e4", "fxe4", "a4"],
-      gameUrl: "https://lichess.org/YRzh6tY7/black#39",
-      white: "Lowskill12",
-      black: "MastacticaTeoria",
-      bTitle: "CM",
-      wRating: 1989,
-      bRating: 2404,
-      id: 282,
-    },
-    {
       date: "2023-03-31",
       fen: "r5q1/pp1k1p1p/2p1p3/4P3/3p1Prb/3P1R2/PPP1Q1P1/RNB3K1 b - - 4 20",
       solution: ["Qg7", "Rh3", "Rg8", "Rh2", "Bg3"],
