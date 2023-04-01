@@ -3483,5 +3483,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2252,
       id: 284,
     },
+    {
+      date: "2023-04-02",
+      fen: "r2qk2r/1p1b1pp1/2n1p2p/p3P3/Q2P4/B1bB1N2/P5PP/1R3RK1 w kq - 2 16",
+      solution: ["Rxb7", "Nxd4", "Nxd4", "Bxa4", "Nxe6"],
+      gameUrl: "https://lichess.org/1Tr0gZQo#30",
+      white: "Simon Williams",
+      black: "Anastasiya Rakhmangulova",
+      wTitle: "GM",
+      bTitle: "WIM",
+      wRating: 2461,
+      bRating: 2266,
+      id: 127,
+      event: "Reykjavik Open",
+    },
   ];
 }
