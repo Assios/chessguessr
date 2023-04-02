@@ -1628,7 +1628,7 @@ export async function getGames(): Promise<Array<GameType>> {
       bTitle: "GM",
       wRating: 2856,
       bRating: 2688,
-      id: 127,
+      id: 285,
       event: "World Fischer Random Championship",
     },
     {
