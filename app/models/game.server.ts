@@ -3497,5 +3497,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 285,
       event: "Reykjavik Open",
     },
+    {
+      date: "2023-04-03",
+      fen: "6rk/p3Pp1p/1pq3pQ/8/2Bb4/3P3P/P3K3/1R3R2 b - - 10 35",
+      solution: ["Qg2+", "Ke1", "Bc3+", "Kd1", "g5"],
+      gameUrl: "https://lichess.org/0POw0Yxe/black#69",
+      white: "j7galaxy",
+      black: "luysMoreno",
+      wRating: 2141,
+      bRating: 2201,
+      id: 286,
+    },
   ];
 }
