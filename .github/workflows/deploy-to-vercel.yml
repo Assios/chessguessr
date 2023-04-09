@@ -28,3 +28,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Alias deployment to custom domain
+        run: vercel alias ${{ steps.vercel-deployment.outputs.deployment-url }} chessguessr.com --token ${{ secrets.VERCEL_TOKEN }}
