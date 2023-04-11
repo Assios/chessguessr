@@ -31,3 +31,6 @@ jobs:
 
       - name: Alias deployment to custom domain
         run: vercel alias ${{ steps.vercel-deployment.outputs.deployment-url }} chessguessr.com --token ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Alias deployment to www subdomain
+        run: vercel alias ${{ steps.vercel-deployment.outputs.deployment-url }} www.chessguessr.com --token ${{ secrets.VERCEL_TOKEN }}
