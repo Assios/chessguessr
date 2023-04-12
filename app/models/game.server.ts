@@ -3611,5 +3611,28 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2270,
       id: 295,
     },
+    {
+      date: "2023-04-13",
+      fen: "r1b2rk1/pp2npbp/2n3p1/qBPpP3/5B2/2N2N1P/PP3PP1/R2QK2R b KQ - 4 11",
+      solution: ["d4", "Nxd4", "Rd8", "Bxc6", "Nxc6"],
+      gameUrl: "https://lichess.org/cp5c6yli/black#21",
+      white: "chechereche",
+      black: "ASHWINSAIRAM",
+      wTitle: "FM",
+      wRating: 2627,
+      bRating: 2550,
+      id: 296,
+    },
+    {
+      date: "2023-04-14",
+      fen: "6k1/2p4p/5p2/p1N2q1b/3P2P1/1PP2p1P/1P6/4Q2K b - - 0 31",
+      solution: ["f2", "Qf1", "Qf3+", "Kh2", "Bg6"],
+      gameUrl: "https://lichess.org/0FWiWuiJ/black#61",
+      white: "neoman_ville",
+      black: "Yobi38",
+      wRating: 2062,
+      bRating: 1930,
+      id: 297,
+    },
   ];
 }
