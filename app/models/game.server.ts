@@ -3645,5 +3645,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2376,
       id: 298,
     },
+    {
+      date: "2023-04-16",
+      fen: "5rk1/pp3rpp/2pq4/3p4/1P2b3/P1Q1P3/4BPPP/3R1RK1 b - - 5 20",
+      solution: ["Bxg2", "Kxg2", "Qg6+", "Kh1", "Rxf2"],
+      gameUrl: "https://lichess.org/QnMfnZ5u/black#39",
+      white: "l_e_v_a",
+      black: "Schneehasser",
+      wRating: 1808,
+      bRating: 1778,
+      id: 299,
+    },
   ];
 }
