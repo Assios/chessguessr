@@ -3656,5 +3656,31 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1778,
       id: 299,
     },
+    {
+      date: "2022-10-17",
+      fen: "5r1k/R3N1p1/5p1p/3P3P/8/2P3Q1/p4PPK/1bq5 w - - 0 42",
+      solution: ["Qc7", "Kh7", "Ng6", "Rg8", "Qf7"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-chess-championship-2023/round-6/Teae9PdP/DYYUwnnc#82",
+      white: "Ding Liren",
+      black: "Ian Nepomniachtchi",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "World Chess Championship 2023",
+      wRating: 2788,
+      bRating: 2795,
+      id: 300,
+    },
+    {
+      date: "2023-04-18",
+      fen: "7k/pp1npR1p/3pB1pB/q2Pn1P1/3r4/2P5/P6P/6K1 w - - 0 25",
+      solution: ["Bg7+", "Kg8", "Rf8+", "Kxg7", "Rg8#"],
+      gameUrl: "https://lichess.org/ZvpdC9CK/white#48",
+      white: "Tony__Soprano",
+      black: "Echo1965",
+      wRating: 2114,
+      bRating: 2194,
+      id: 301,
+    },
   ];
 }
