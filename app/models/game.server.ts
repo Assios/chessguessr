@@ -3682,5 +3682,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2194,
       id: 301,
     },
+    {
+      date: "2023-04-19",
+      fen: "3r1r2/p1q2pkp/2b3p1/2ppnPP1/4P3/8/P1PB1K2/1R3Q1R w - - 0 28",
+      solution: ["Rxh7+", "Kxh7", "Qh3+", "Kg8", "Rh1"],
+      gameUrl: "https://lichess.org/nl7RdqbB/white#54",
+      white: "Repcinio",
+      black: "carlosalbertolopez",
+      wRating: 1526,
+      bRating: 1942,
+      id: 302,
+    },
   ];
 }
