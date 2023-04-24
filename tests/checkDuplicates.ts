@@ -33,4 +33,5 @@ import { getGames } from "../app/models/game.server";
   console.log("No duplicate dates, IDs, or positions found!");
 })().catch((error) => {
   console.error("Error:", error);
+  process.exit(1);
 });
