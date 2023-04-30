@@ -3816,5 +3816,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2879,
       id: 313,
     },
+    {
+      date: "2023-05-01",
+      fen: "8/6pk/5r1p/p1pQ4/1b6/4B1PP/4qP2/2R3K1 w - - 10 46",
+      solution: ["Qe4+", "Rg6", "Qf5", "c4", "h4"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-chess-championship-2023/tie-breaks/jCs1wd0E/8QvKR1zU#90",
+      white: "Ding Liren",
+      black: "Ian Nepomniachtchi",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "World Chess Championship 2023",
+      wRating: 2788,
+      bRating: 2795,
+      id: 314,
+    },
   ];
 }
