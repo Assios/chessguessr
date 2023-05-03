@@ -3853,5 +3853,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2113,
       id: 316,
     },
+    {
+      date: "2023-05-04",
+      fen: "r2qkb1r/p2n1pp1/1pp1p1bp/3n2N1/P2PN3/B2B4/2P1QPPP/RR4K1 w kq - 2 17",
+      solution: ["Nxe6", "fxe6", "Nd6+", "Bxd6", "Qxe6+"],
+      gameUrl: "https://lichess.org/n3gOXQwx/white#32",
+      white: "spilsomir",
+      black: "K0rnet_white",
+      wRating: 1646,
+      bRating: 1635,
+      id: 317,
+    },
+    {
+      date: "2023-05-05",
+      fen: "4rrk1/p2N2p1/5q1p/5p2/2Pp4/PP1P2n1/5P1K/R2QR3 b - - 1 31",
+      solution: ["Qh4+", "Kg2", "Rxe1", "Qxe1", "Nh5"],
+      gameUrl: "https://lichess.org/Lryk27xF/black#61",
+      white: "Romeyko",
+      black: "sebolla",
+      wRating: 2028,
+      bRating: 2201,
+      id: 318,
+    },
   ];
 }
