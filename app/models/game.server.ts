@@ -3910,13 +3910,13 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-05-09",
-      fen: "Nn3rk1/pp2b1pp/3p2q1/4P2b/5B2/2N4P/PPPQ2P1/R3K2R b KQ - 0 16",
-      solution: ["Bh4+", "Kf1", "dxe5", "Qd5+", "Kh8"],
-      gameUrl: "https://lichess.org/JRXEqbSA/black#31",
-      white: "maxseel",
-      black: "priest_maxim",
-      wRating: 1691,
-      bRating: 1617,
+      fen: "r1bqkb1r/ppp2ppp/3P1n2/4p1N1/2Bn4/8/PPPP1PPP/RNBQK2R b KQkq - 0 6",
+      solution: ["Qxd6", "Nxf7", "Qc6", "Nxe5", "Qxg2"],
+      gameUrl: "https://lichess.org/cQNnZu0k/black#11",
+      white: "Volandovoy",
+      black: "AxelMahone",
+      wRating: 1724,
+      bRating: 1734,
       id: 322,
     },
     {
@@ -3973,6 +3973,17 @@ export async function getGames(): Promise<Array<GameType>> {
       wRating: 2192,
       bRating: 2099,
       id: 327,
+    },
+    {
+      date: "2023-05-15",
+      fen: "Nn3rk1/pp2b1pp/3p2q1/4P2b/5B2/2N4P/PPPQ2P1/R3K2R b KQ - 0 16",
+      solution: ["Bh4+", "Kf1", "dxe5", "Qd5+", "Kh8"],
+      gameUrl: "https://lichess.org/JRXEqbSA/black#31",
+      white: "maxseel",
+      black: "priest_maxim",
+      wRating: 1691,
+      bRating: 1617,
+      id: 328,
     },
   ];
 }
