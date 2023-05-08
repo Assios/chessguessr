@@ -221,7 +221,7 @@ export default function App() {
           <Scripts />
           <LiveReload />
         </div>
-        <Footer />
+        <Footer trackEvent={trackEvent} />
       </body>
     </html>
   );

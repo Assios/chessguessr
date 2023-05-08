@@ -1,7 +1,7 @@
 import React from "react";
 import { SiLichess, SiBuymeacoffee } from "react-icons/si";
 
-export const Footer = () => {
+export const Footer = ({ trackEvent }: any) => {
   return (
     <footer className="footer items-center p-4 bg-primary text-primary-content">
       <div className="flex flex-row justify-between w-full">
@@ -57,6 +57,9 @@ export const Footer = () => {
           href="https://www.buymeacoffee.com/assios"
           target="_blank"
           title="Support Chessguessr"
+          onClick={() => {
+            trackEvent("Click buymeacoffee");
+          }}
         >
           <SiBuymeacoffee className="fill-current w-6 h-6" />
           <span className="mt-1 ml-1 text-xs hidden md:inline">
