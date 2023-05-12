@@ -79,3 +79,7 @@ export const useHotkeys = (
     deps
   );
 };
+
+export const classNames = (...classes) => {
+  return classes.filter(Boolean).join(" ");
+};
