@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocalStorage } from "./useLocalStorage";
 
 export enum GameStatus {
   IN_PROGRESS = "IN_PROGRESS",
@@ -14,6 +15,17 @@ export const useQuiz = (game) => {
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOptionCorrect, setIsOptionCorrect] = useState(null);
+
+  const [quizStats, setQuizStats] = useLocalStorage("quiz-stats", {
+    scores: {
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    },
+  });
 
   const [roundStatus, setRoundStatus] = useState(
     game.rounds.map((game, i) => {
@@ -46,9 +58,11 @@ export const useQuiz = (game) => {
       })
     );
 
+    const newScore = isCorrect ? score + 1 : score;
+
     if (isCorrect) {
       setIsOptionCorrect(true);
-      setScore(score + 1);
+      setScore(newScore);
     } else {
       setIsOptionCorrect(false);
     }
@@ -58,6 +72,11 @@ export const useQuiz = (game) => {
         setCurrentRound(currentRound + 1);
       } else {
         setGameStatus(GameStatus.COMPLETED);
+        setQuizStats((prevStats) => {
+          const newScores = { ...prevStats.scores };
+          newScores[newScore] = (newScores[newScore] || 0) + 1;
+          return { ...prevStats, scores: newScores };
+        });
       }
 
       setSelectedOption(null);
@@ -80,5 +99,6 @@ export const useQuiz = (game) => {
     isTransitioning,
     roundStatus,
     flash,
+    quizStats,
   };
 };

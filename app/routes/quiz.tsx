@@ -27,16 +27,12 @@ const Quiz = () => {
     checkAnswer,
     isTransitioning,
     flash,
+    quizStats,
   } = useQuiz(game);
 
-  const {
-    showModal,
-    setShowModal,
-    showTutorial,
-    setShowTutorial,
-    setTutorial,
-    setShowNavbarStats,
-  }: any = useOutletContext();
+  const { showModal, setShowModal }: any = useOutletContext();
+
+  console.log("STATS", quizStats);
 
   useEffect(() => {
     if (gameStatus !== GameStatus.IN_PROGRESS) {
