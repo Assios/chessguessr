@@ -31,10 +31,10 @@ export const useQuiz = (game) => {
     setIsTransitioning(true);
     setSelectedOption(answerIndex);
 
-    const isCorrect = game.rounds[currentRound].answer === answerIndex;
+    const isCorrect = game.rounds[currentRound].correctAnswer === answerIndex;
 
-    setRoundStatus(
-      roundStatus.map((round, i) => {
+    setRoundStatus((prevRoundStatus) =>
+      prevRoundStatus.map((round, i) => {
         if (i === currentRound) {
           return { ...round, status: "complete", correct: isCorrect };
         } else if (i === currentRound + 1) {
@@ -45,7 +45,7 @@ export const useQuiz = (game) => {
       })
     );
 
-    if (answerIndex === game.rounds[currentRound].correctAnswer) {
+    if (isCorrect) {
       setIsOptionCorrect(true);
       setScore(score + 1);
     } else {
