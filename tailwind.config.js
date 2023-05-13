@@ -6,6 +6,8 @@ module.exports = {
       spacing: {
         22: "5.5rem",
       },
+      'inner-green': 'inset 0 0 0 10px #10B981',
+      'inner-red': 'inset 0 0 0 10px #EF4444', 
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
@@ -23,7 +25,7 @@ module.exports = {
           warning: "#F1B24B",
           error: "#EA7175",
         },
-      },
+      
       {
         "lichess-dark": {
           primary: "#373430",

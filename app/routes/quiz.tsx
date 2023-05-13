@@ -1,7 +1,7 @@
 import { Chessboard } from "react-chessboard";
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
-import { getPlayerGuessGames } from "~/models/playerGuess.server";
+import { getQuiz } from "~/models/quiz";
 import { useQuiz, GameStatus } from "../hooks/useQuiz";
 import { useEffect } from "react";
 import QuizModal from "~/components/Modal/QuizModal";
@@ -9,7 +9,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import { classNames } from "~/utils/utils";
 
 export const loader: LoaderFunction = async () => {
-  const games = await getPlayerGuessGames();
+  const games = await getQuiz();
   return json({ games });
 };
 
@@ -19,7 +19,6 @@ const Quiz = () => {
   const game = games[0];
 
   const {
-    currentGame,
     currentRound,
     gameStatus,
     score,
@@ -27,6 +26,8 @@ const Quiz = () => {
     isOptionCorrect,
     roundStatus,
     checkAnswer,
+    isTransitioning,
+    flash,
   } = useQuiz(game);
 
   const {
@@ -67,7 +68,7 @@ const Quiz = () => {
                 aria-hidden="true"
               >
                 <div
-                  className={`h-0.5 w-full transition-all duration-1000 ease-in-out ${
+                  className={`h-0.5 w-full transition-all duration-[800ms] ease-in-out ${
                     stepIdx < currentRound
                       ? lineColor
                       : stepIdx === currentRound
@@ -78,7 +79,7 @@ const Quiz = () => {
               </div>
               {step.status === "complete" ? (
                 <div
-                  className={`relative flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-1000 ease-out ${
+                  className={`relative flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-[800ms] ease-in-out ${
                     step.correct ? "bg-green-600" : "bg-red-600"
                   }`}
                 >
@@ -103,34 +104,56 @@ const Quiz = () => {
 
       {gameStatus !== GameStatus.COMPLETED ? (
         <>
-          <div className="flex justify-center mt-20">
+          <div className={`flex justify-center mt-20 relative`}>
             <Chessboard
               arePiecesDraggable={false}
-              position={game.rounds[currentRound].fen}
+              position={
+                isTransitioning
+                  ? "8/8/8/8/8/8/8/8 w - - 0 1"
+                  : game.rounds[currentRound].fen
+              }
               areArrowsAllowed={false}
               boardWidth={400}
               boardOrientation={"white"}
             />
+            <div
+              className={`absolute inset-0 transition-colors duration-500 ${
+                flash ? "bg-white opacity-100 z-50" : "bg-transparent"
+              }`}
+            />
           </div>
+
           <div className="grid grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto">
-            {game.rounds[currentRound].options.map((option, index) => (
-              <button
-                key={index}
-                className={`relative ${
-                  index === selectedOption
-                    ? isOptionCorrect
-                      ? "bg-green-400 transition-colors duration-1000"
-                      : "bg-red-400 transition-colors duration-1000"
-                    : "bg-primary"
-                } text-white font-bold py-4 px-4 rounded`}
-                onClick={() => checkAnswer(index)}
-              >
-                <div
-                  className={`absolute inset-0 bg-black opacity-0 hover:opacity-10 transition-opacity duration-200`}
-                ></div>
-                {option}
-              </button>
-            ))}
+            {game.rounds[currentRound].options.map((option, index) => {
+              const isCorrectAnswer =
+                index === game.rounds[currentRound].correctAnswer;
+              const isAnswered = index === selectedOption;
+              const isCorrectlyAnswered = isAnswered && isOptionCorrect;
+              const isIncorrectlyAnswered = isAnswered && !isOptionCorrect;
+
+              const bgColor = isCorrectlyAnswered
+                ? "bg-green-400"
+                : isCorrectAnswer && isOptionCorrect !== null
+                ? "bg-green-400"
+                : isIncorrectlyAnswered
+                ? "bg-red-400"
+                : "bg-primary";
+
+              const textColor = "text-white";
+
+              return (
+                <button
+                  key={index}
+                  className={`relative ${bgColor} ${textColor} font-bold py-4 px-4 rounded transition-colors duration-1000`}
+                  onClick={() => checkAnswer(index)}
+                >
+                  <div
+                    className={`absolute inset-0 bg-black opacity-0 hover:opacity-10 transition-opacity duration-200`}
+                  ></div>
+                  {option}
+                </button>
+              );
+            })}
           </div>
         </>
       ) : (

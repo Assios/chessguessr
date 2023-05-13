@@ -6,11 +6,11 @@ export enum GameStatus {
 }
 
 export const useQuiz = (game) => {
-  const [currentGame, setCurrentGame] = useState(0);
   const [currentRound, setCurrentRound] = useState(0);
   const [gameStatus, setGameStatus] = useState(GameStatus.IN_PROGRESS);
   const [score, setScore] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [flash, setFlash] = useState(false);
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOptionCorrect, setIsOptionCorrect] = useState(null);
@@ -29,6 +29,7 @@ export const useQuiz = (game) => {
     if (isTransitioning) return;
 
     setIsTransitioning(true);
+    setFlash(true);
     setSelectedOption(answerIndex);
 
     const isCorrect = game.rounds[currentRound].correctAnswer === answerIndex;
@@ -62,11 +63,14 @@ export const useQuiz = (game) => {
       setSelectedOption(null);
       setIsOptionCorrect(null);
       setIsTransitioning(false);
-    }, 1000);
+    }, 500);
+
+    setTimeout(() => {
+      setFlash(false);
+    }, 700);
   };
 
   return {
-    currentGame,
     currentRound,
     gameStatus,
     score,
@@ -75,5 +79,6 @@ export const useQuiz = (game) => {
     checkAnswer,
     isTransitioning,
     roundStatus,
+    flash,
   };
 };
