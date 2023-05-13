@@ -6,8 +6,14 @@ module.exports = {
       spacing: {
         22: "5.5rem",
       },
-      'inner-green': 'inset 0 0 0 10px #10B981',
-      'inner-red': 'inset 0 0 0 10px #EF4444', 
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        '5xl': '64rem',
+        '6xl': '72rem',
+        '7xl': '80rem',
+      }
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],

@@ -1,12 +1,11 @@
 import { Chessboard } from "react-chessboard";
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
-import { getQuiz } from "~/models/quiz";
+import { getQuiz } from "~/models/quiz.server";
 import { useQuiz, GameStatus } from "../hooks/useQuiz";
 import { useEffect } from "react";
 import QuizModal from "~/components/Modal/QuizModal";
-import { CheckIcon } from "@heroicons/react/20/solid";
-import { classNames } from "~/utils/utils";
+import QuizStep from "~/components/QuizStep";
 
 export const loader: LoaderFunction = async () => {
   const games = await getQuiz();
@@ -51,60 +50,13 @@ const Quiz = () => {
 
   return (
     <div className="m-10">
-      {showModal && <QuizModal setShowModal={setShowModal} />}
-      <ol role="list" className="flex items-center justify-center">
-        {roundStatus.map((step, stepIdx) => {
-          const lineColor = step.correct ? "bg-green-600" : "bg-red-600";
-          return (
-            <li
-              key={step.name}
-              className={classNames(
-                stepIdx !== roundStatus.length - 1 ? "pr-8 sm:pr-20" : "",
-                "relative"
-              )}
-            >
-              <div
-                className="absolute inset-0 flex items-center"
-                aria-hidden="true"
-              >
-                <div
-                  className={`h-0.5 w-full transition-all duration-[800ms] ease-in-out ${
-                    stepIdx < currentRound
-                      ? lineColor
-                      : stepIdx === currentRound
-                      ? "bg-blue-600"
-                      : "bg-gray-200"
-                  }`}
-                />
-              </div>
-              {step.status === "complete" ? (
-                <div
-                  className={`relative flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-[800ms] ease-in-out ${
-                    step.correct ? "bg-green-600" : "bg-red-600"
-                  }`}
-                >
-                  <span className="text-white">{stepIdx + 1}</span>{" "}
-                  <span className="sr-only">{step.name}</span>
-                </div>
-              ) : step.status === "current" ? (
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-indigo-600 bg-white">
-                  <span className="text-indigo-600">{stepIdx + 1}</span>
-                  <span className="sr-only">{step.name}</span>
-                </div>
-              ) : (
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 bg-white">
-                  <span className="text-gray-300">{stepIdx + 1}</span>{" "}
-                  <span className="sr-only">{step.name}</span>
-                </div>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-
+      {showModal && (
+        <QuizModal setShowModal={setShowModal} score={score} games={games} />
+      )}
+      <QuizStep roundStatus={roundStatus} currentRound={currentRound} />
       {gameStatus !== GameStatus.COMPLETED ? (
         <>
-          <div className={`flex justify-center mt-20 relative`}>
+          <div className={`flex justify-center mt-10 relative`}>
             <Chessboard
               arePiecesDraggable={false}
               position={
@@ -113,7 +65,7 @@ const Quiz = () => {
                   : game.rounds[currentRound].fen
               }
               areArrowsAllowed={false}
-              boardWidth={400}
+              boardWidth={500}
               boardOrientation={"white"}
             />
             <div
@@ -123,7 +75,7 @@ const Quiz = () => {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 mt-10 max-w-3xl mx-auto">
             {game.rounds[currentRound].options.map((option, index) => {
               const isCorrectAnswer =
                 index === game.rounds[currentRound].correctAnswer;
@@ -156,15 +108,7 @@ const Quiz = () => {
             })}
           </div>
         </>
-      ) : (
-        <div
-          className="mt-10 text-lg font-bold text-blue
-        500"
-        >
-          You got {score} out of{" "}
-          {games.reduce((acc, game) => acc + game.rounds.length, 0)} correct!
-        </div>
-      )}
+      ) : null}
     </div>
   );
 };
