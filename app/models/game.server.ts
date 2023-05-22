@@ -4058,5 +4058,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1684,
       id: 334,
     },
+    {
+      date: "2023-05-22",
+      fen: "3r2k1/6p1/R4p2/1p2r2p/3p3q/1Pp2P2/2P3PP/3R1Q1K w - - 2 35",
+      solution: ["g3", "Qg5", "f4", "Qg4", "fxe5"],
+      gameUrl: "https://lichess.org/i3xnipCl/white#68",
+      white: "SoundTacStrat",
+      black: "AngelMates",
+      wRating: 2368,
+      bRating: 2274,
+      id: 335,
+    },
   ];
 }
