@@ -4069,5 +4069,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2274,
       id: 335,
     },
+    {
+      date: "2023-05-23",
+      fen: "3r1k2/p4p2/6p1/2n1p3/npP1Pq2/3pN2Q/PP1N2B1/1R2K3 w - - 1 37",
+      solution: ["Nd5", "Rxd5", "cxd5", "Kg7", "Rc1"],
+      gameUrl: "https://lichess.org/veoEO1Ta/white#72",
+      white: "DrGrekenstein",
+      black: "funny_chess",
+      wAka: "Magnus Carlsen",
+      bAka: "Mikhail Demidov",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2929,
+      bRating: 2719,
+      id: 336,
+    },
   ];
 }
