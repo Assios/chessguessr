@@ -4095,5 +4095,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1743,
       id: 337,
     },
+    {
+      date: "2023-05-25",
+      fen: "r2qrk2/1bpnbppB/pp3n1p/6N1/3P4/5N2/PPQ2PPP/R1B2RK1 w - - 2 15",
+      solution: ["Nxf7", "Kxf7", "Qg6+", "Kf8", "Bxh6"],
+      gameUrl: "https://lichess.org/BeCsFFps/white#28",
+      white: "Kreutoreuk",
+      black: "Guilmour",
+      wRating: 1871,
+      bRating: 1866,
+      id: 338,
+    },
   ];
 }
