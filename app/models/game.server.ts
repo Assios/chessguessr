@@ -4106,5 +4106,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1866,
       id: 338,
     },
+    {
+      date: "2023-05-26",
+      fen: "1r3rk1/6p1/3b1pPp/3Ppq1P/p7/P4N2/1P1BQ3/K2R3R b - - 0 30",
+      solution: ["Qc2", "Rb1", "Bxa3", "bxa3", "Rb3"],
+      gameUrl: "https://lichess.org/puNdNlsQ/black#59",
+      white: "VladimirMF",
+      black: "Chesser_of_persia",
+      wRating: 2002,
+      bRating: 1865,
+      id: 339,
+    },
   ];
 }
