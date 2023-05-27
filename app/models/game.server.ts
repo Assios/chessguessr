@@ -4128,5 +4128,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1852,
       id: 340,
     },
+    {
+      date: "2023-05-28",
+      fen: "r2q4/pp3k2/3b1rbQ/2pp4/8/3P4/PPP1N3/2K3RR w - - 4 28",
+      solution: ["Rxg6", "Rxg6", "Qh7+", "Rg7", "Rf1+"],
+      gameUrl: "https://lichess.org/FiiJqcHO/white#54",
+      white: "IndianerJones",
+      black: "Jack413",
+      wRating: 1866,
+      bRating: 1866,
+      id: 341,
+    },
   ];
 }
