@@ -4139,5 +4139,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1866,
       id: 341,
     },
+    {
+      date: "2023-05-29",
+      fen: "4n3/8/6P1/2k1KP2/3p4/8/8/8 w - - 0 48",
+      solution: ["g7", "Nxg7", "f6", "d3", "f7"],
+      gameUrl: "https://lichess.org/le7dteND/white#94",
+      white: "GrandamateurFlo",
+      black: "ttrv",
+      wRating: 1910,
+      bRating: 1959,
+      id: 342,
+    },
   ];
 }
