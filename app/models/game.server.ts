@@ -4150,5 +4150,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1959,
       id: 342,
     },
+    {
+      date: "2023-05-30",
+      fen: "3r2k1/5p1p/2p3pQ/4p2P/pP2Pn1q/6N1/P1PR1PP1/6K1 w - - 1 28",
+      solution: ["hxg6", "Ne2+", "Nxe2", "Qxh6", "Rxd8+"],
+      gameUrl:
+        "https://lichess.org/broadcast/norway-chess-2023--blitz/round-2/m0BW8vxo/mWTfGcwx#54",
+      white: "Aryan Tari",
+      black: "Anish Giri",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Norway Chess Blitz 2023",
+      wRating: 2571,
+      bRating: 2807,
+      id: 343,
+    },
   ];
 }
