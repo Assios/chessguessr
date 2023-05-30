@@ -4165,5 +4165,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2807,
       id: 343,
     },
+    {
+      date: "2023-05-31",
+      fen: "r4r1k/pb5p/1p1b2p1/3N4/4Pp2/1Q3B1q/PP3PRP/6RK w - - 0 25",
+      solution: ["Qc3+", "Kg8", "Rxg6+", "hxg6", "Rxg6+"],
+      gameUrl: "https://lichess.org/DR0YLzja/white#48",
+      white: "DivyamChauhan",
+      black: "satverma123456",
+      wRating: 2154,
+      bRating: 2061,
+      id: 344,
+    },
   ];
 }
