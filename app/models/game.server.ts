@@ -4176,5 +4176,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2061,
       id: 344,
     },
+    {
+      date: "2023-06-01",
+      fen: "r1b4R/1p2k1p1/4p3/p3Npq1/4p3/1Pn1P1P1/PB3r2/2KR4 w - - 2 24",
+      solution: ["Ba3+", "Kf6", "Rf8+", "Kxe5", "Bd6#"],
+      gameUrl: "https://lichess.org/DHkhlgI6/white#46",
+      white: "Poets_Of_The_Fall",
+      black: "Shuyebahmed123",
+      wRating: 2375,
+      bRating: 2088,
+      id: 345,
+    },
   ];
 }
