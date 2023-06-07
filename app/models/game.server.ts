@@ -4255,5 +4255,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2132,
       id: 351,
     },
+    {
+      date: "2023-06-08",
+      fen: "2r4k/5ppp/4p3/RP1p4/8/1Q5P/1P4PK/5q2 w - - 0 31",
+      solution: ["b6", "Qf4+", "Qg3", "Qb4", "Qc7"],
+      gameUrl: "https://lichess.org/8xB1VmHy/white#60",
+      white: "SYROX_19",
+      black: "tunacem",
+      bTitle: "CM",
+      wRating: 2233,
+      bRating: 2320,
+      id: 352,
+    },
   ];
 }
