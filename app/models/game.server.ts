@@ -4455,5 +4455,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2138,
       id: 369,
     },
+    {
+      date: "2023-06-26",
+      fen: "r4r2/2pq1pk1/p5p1/1p1bp1B1/3nP1p1/5PN1/PPPQ4/2KR3R w - - 0 19",
+      solution: ["Rh7+", "Kg8", "Bf6"],
+      gameUrl: "https://lichess.org/huIXSxA8/white#36",
+      white: "Sandstad",
+      black: "Bohnenbauer",
+      wTitle: "FM",
+      wRating: 2461,
+      bRating: 2388,
+      id: 370,
+    },
   ];
 }
