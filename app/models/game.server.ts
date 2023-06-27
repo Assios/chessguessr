@@ -4478,5 +4478,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1986,
       id: 371,
     },
+    {
+      date: "2023-06-28",
+      fen: "4r1k1/pp1P2pp/2q5/2p5/4b1N1/P4rQP/1P3P2/3RR1K1 b - - 0 29",
+      solution: ["Rxg3+", "fxg3", "Rd8", "Ne5", "Qa4"],
+      gameUrl: "https://lichess.org/k0TMI6W3/black#57",
+      white: "Macrofago",
+      black: "Hyperkatze",
+      wTitle: "GM",
+      wRating: 2669,
+      bRating: 2387,
+      id: 372,
+    },
   ];
 }
