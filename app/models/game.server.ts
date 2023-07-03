@@ -4553,5 +4553,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2533,
       id: 377,
     },
+    {
+      date: "2023-07-04",
+      fen: "3qr1k1/1pp1bppp/2n5/rQ1bp3/p7/P2PBNP1/1P2PPBP/2R1R1K1 w - - 2 16",
+      solution: ["Qxb7", "Qd6", "Ng5", "Rb8", "Nxf7"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-championship-2023--elite/round-3/Dke0g2aV/f5UTdhdi#30",
+      white: "Simen Agdestein",
+      black: "Tor Fredrik Kaasen",
+      wTitle: "GM",
+      bTitle: "IM",
+      wRating: 2584,
+      bRating: 2484,
+      id: 378,
+      event: "Norwegian Championship 2023",
+    },
   ];
 }
