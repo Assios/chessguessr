@@ -4541,5 +4541,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2445,
       id: 376,
     },
+    {
+      date: "2023-07-03",
+      fen: "6rk/1pR3b1/pP1pP2p/7q/3N4/3Q1p1P/2P2PK1/5R2 w - - 0 33",
+      solution: ["Nxf3", "Be5+", "Ng5", "Qxg5+", "Kf3"],
+      gameUrl: "https://lichess.org/OBqPnNgo/white#64",
+      white: "INDIAN-ELEPHANT",
+      black: "LebronJames22",
+      wTitle: "GM",
+      wRating: 2369,
+      bRating: 2533,
+      id: 377,
+    },
   ];
 }
