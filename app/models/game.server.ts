@@ -4568,5 +4568,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 378,
       event: "Norwegian Championship 2023",
     },
+    {
+      date: "2023-07-05",
+      fen: "2rq1rk1/p4pp1/2p1bn1p/3pb3/5P1B/2N5/PPP3PP/R2Q1RK1 w - - 0 15",
+      solution: ["fxe5", "Qb6+", "Bf2", "Qxb2", "exf6"],
+      gameUrl: "https://lichess.org/IfOKfAty/white#28",
+      white: "want2loz",
+      black: "augustin37",
+      wRating: 2012,
+      bRating: 2004,
+      id: 379,
+    },
   ];
 }
