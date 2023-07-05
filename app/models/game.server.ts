@@ -4579,5 +4579,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2004,
       id: 379,
     },
+    {
+      date: "2023-07-06",
+      fen: "5r2/Rr3qkp/2R5/1p3p2/4P3/4Q3/6PP/7K w - - 1 34",
+      solution: ["Qg3+", "Kh8", "Rxb7", "Qxb7", "Rc7"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-championship-2023--elite/round-6/vsSWugxM/dfdH9yv5#66",
+      white: "Tor Fredrik Kaasen",
+      black: "Sondre Melaa",
+      wTitle: "IM",
+      bTitle: "IM",
+      wRating: 2484,
+      bRating: 2230,
+      id: 380,
+      event: "Norwegian Championship 2023",
+    },
   ];
 }
