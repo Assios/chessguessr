@@ -4594,5 +4594,20 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 380,
       event: "Norwegian Championship 2023",
     },
+    {
+      date: "2023-07-07",
+      fen: "rn2r1k1/pp3p2/1q2b3/3p3Q/3b1B2/2NB2P1/PPP3KP/R7 w - - 4 19",
+      solution: ["Nb5", "Nd7", "Bc7", "Qc6", "Qh7+"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-championship-2023--elite/round-7/iUj3Q5kF/rRrKXJ0j#36",
+      white: "Ward Al-Tarboush",
+      black: "Alexander Øye-Strömberg",
+      wTitle: "FM",
+      bTitle: "FM",
+      wRating: 2254,
+      bRating: 2300,
+      id: 381,
+      event: "Norwegian Championship 2023",
+    },
   ];
 }
