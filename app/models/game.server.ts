@@ -4609,5 +4609,20 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 381,
       event: "Norwegian Championship 2023",
     },
+    {
+      date: "2023-07-08",
+      fen: "4k2r/pp2bpp1/4p2p/q5B1/4n2Q/6P1/PP2PP1P/2R3K1 w k - 0 19",
+      solution: ["Bxe7", "Qd2", "Bg5", "Nxg5", "Rc8+"],
+      gameUrl:
+        "https://lichess.org/broadcast/superunited-rapid--blitz-croatia/round-8-rapid/LVByGQqh/qYquSBso#36",
+      white: "Magnus Carlsen",
+      black: "Jan-Krzysztof Duda",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2835,
+      bRating: 2732,
+      id: 382,
+      event: "SuperUnited Rapid & Blitz 2023",
+    },
   ];
 }
