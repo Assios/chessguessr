@@ -4624,5 +4624,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 382,
       event: "SuperUnited Rapid & Blitz 2023",
     },
+    {
+      date: "2023-07-09",
+      fen: "1r3rk1/pb3pbp/3Np1p1/2pnP3/2Q5/5NP1/Pq3PBP/3RR1K1 w - - 0 20",
+      solution: ["Rb1", "Qc3", "Qxc3", "Nxc3", "Rxb7"],
+      gameUrl: "https://lichess.org/MuS7OIFX/white#38",
+      white: "krolfan",
+      black: "diWert64",
+      wRating: 1777,
+      bRating: 1779,
+      id: 383,
+    },
   ];
 }
