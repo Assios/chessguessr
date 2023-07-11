@@ -199,12 +199,13 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
         discardYellowArray[i] = null;
-      }
-    });
-
-    formattedGuess.forEach((move, i) => {
-      if (discardYellowArray.includes(move.move) && move.color !== "green") {
+      } else if (
+        discardYellowArray.includes(move.move) &&
+        move.color !== "green"
+      ) {
         formattedGuess[i].color = "yellow";
+      } else if (discardYellowArray.indexOf(move.move) !== -1) {
+        discardYellowArray[discardYellowArray.indexOf(move.move)] = null;
       }
 
       if (
@@ -217,8 +218,6 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       ) {
         formattedGuess[i].pieceColor = "blue";
       }
-
-      discardYellowArray[solutionArray.indexOf(move.move)] = null;
     });
 
     return formattedGuess;
