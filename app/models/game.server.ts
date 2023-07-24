@@ -4812,5 +4812,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2289,
       id: 398,
     },
+    {
+      date: "2023-07-25",
+      fen: "r3kb1r/3q1n2/2p1pQ2/pp4pp/3P4/P1P1PN1P/1P3PPB/R3K2R b KQkq - 0 18",
+      solution: ["Rh6", "Ne5", "Rxf6", "Nxd7", "Kxd7"],
+      gameUrl: "https://lichess.org/WFWcr5yo/black#35",
+      white: "Joachim-Schmid",
+      black: "Olimac2003",
+      wRating: 1880,
+      bRating: 1830,
+      id: 399,
+    },
   ];
 }
