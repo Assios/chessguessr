@@ -4834,5 +4834,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1894,
       id: 400,
     },
+    {
+      date: "2023-07-27",
+      fen: "1b2r1k1/1pNnqpp1/p5b1/3p3p/1P1B3P/PQ2PPP1/4BK2/2R5 b - - 1 25",
+      solution: ["Qd6", "Nxe8", "Qxg3+", "Kf1", "Bf5"],
+      gameUrl: "https://lichess.org/mmTPXWFj/black#49",
+      white: "AndrewCunanan",
+      black: "Assios",
+      bTitle: "LM",
+      wRating: 2384,
+      bRating: 2481,
+      id: 401,
+    },
   ];
 }
