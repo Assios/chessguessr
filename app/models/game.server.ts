@@ -4846,5 +4846,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2481,
       id: 401,
     },
+    {
+      date: "2023-07-28",
+      fen: "1n2r1k1/2q1bppp/p1Pp1n2/1p6/8/1B6/PP2QPPP/2R1R1K1 w - - 2 20",
+      solution: ["Qxe7", "Rxe7", "Rxe7", "Qxe7", "c7"],
+      gameUrl: "https://lichess.org/XVDQ2mXu/white#38",
+      white: "joris01",
+      black: "SupplyChain",
+      wTitle: "FM",
+      wRating: 2378,
+      bRating: 2422,
+      id: 402,
+    },
   ];
 }
