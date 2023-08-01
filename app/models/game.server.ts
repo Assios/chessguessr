@@ -4902,5 +4902,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1997,
       id: 406,
     },
+    {
+      date: "2023-08-02",
+      fen: "8/5Rpk/4p2p/p7/r4NP1/7P/8/r4RK1 b - - 3 36",
+      solution: ["Rxf1+", "Kxf1", "Kg8", "Ra7", "Rxf4+"],
+      gameUrl: "https://lichess.org/foVca9rV/black#71",
+      white: "zed_the_undead",
+      black: "nammek",
+      wRating: 1876,
+      bRating: 1813,
+      id: 407,
+    },
   ];
 }
