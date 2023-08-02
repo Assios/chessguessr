@@ -5,7 +5,11 @@ export const Footer = ({ trackEvent }: any) => {
   return (
     <footer className="footer items-center p-4 bg-primary text-primary-content">
       <div className="flex flex-row justify-between w-full">
-        <div className="flex flex-row gap-2"></div>
+        <div className="flex flex-row gap-2 mt-[6px]">
+          <span className="text-xs hidden md:inline-block">
+            mail@chessguessr.com
+          </span>
+        </div>
         <div className="flex flex-row gap-2 md:ml-40">
           <a
             className="mr-1"
