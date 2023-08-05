@@ -1,6 +1,50 @@
+import { useContext } from "react";
 import { NavLink } from "@remix-run/react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { logOut } from "../../firebase/authUtils"; // adjust the path accordingly
 
 export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
+  const authContext = useContext(AuthContext);
+
+  if (!authContext) {
+    throw new Error("Component must be wrapped with <AuthProvider>");
+  }
+
+  const { user } = authContext;
+
+  const handleLogout = async () => {
+    const success = await logOut();
+    if (!success) {
+      console.error("Failed to log out.");
+    }
+    // Handle other side-effects of logging out, if necessary
+  };
+
+  const userProfileDropdown = user ? (
+    <div className="relative">
+      <img
+        src={"https://fastly.picsum.photos/id/30/200/200.jpg"}
+        alt="Profile"
+        className="rounded-full w-8 h-8"
+      />
+      <div className="absolute top-10 right-0 bg-white rounded shadow-lg">
+        <NavLink
+          prefetch="intent"
+          to={`/profile/${user.username}`}
+          className="block px-4 py-2"
+        >
+          {user.username}'s Profile
+        </NavLink>
+        <button
+          onClick={handleLogout}
+          className="block w-full text-left px-4 py-2"
+        >
+          Log out
+        </button>
+      </div>
+    </div>
+  ) : null;
+
   return (
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
@@ -96,6 +140,14 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
               />
             </svg>
           </button>
+        )}
+
+        {user ? (
+          userProfileDropdown
+        ) : (
+          <NavLink prefetch="intent" to="/login" className="btn btn-ghost">
+            Login
+          </NavLink>
         )}
       </div>
     </div>
