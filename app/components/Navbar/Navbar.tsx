@@ -34,11 +34,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
         className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52"
       >
         <li>
-          <NavLink
-            prefetch="intent"
-            to={"/profile"}
-            className="block px-4 py-2 justify-between"
-          >
+          <NavLink to={"/profile"} className="block px-4 py-2 justify-between">
             Profile
           </NavLink>
         </li>
