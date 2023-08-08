@@ -3,8 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - master
-      - check-duplicates
+      - "**"
 
 jobs:
   deploy:
@@ -34,7 +33,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Alias deployment to custom domain
+        if: github.ref == 'refs/heads/master'
         run: vercel alias ${{ steps.vercel-deployment.outputs.deployment-url }} chessguessr.com --token ${{ secrets.VERCEL_TOKEN }}
 
       - name: Alias deployment to www subdomain
+        if: github.ref == 'refs/heads/master'
         run: vercel alias ${{ steps.vercel-deployment.outputs.deployment-url }} www.chessguessr.com --token ${{ secrets.VERCEL_TOKEN }}
