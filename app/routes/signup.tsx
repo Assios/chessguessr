@@ -29,43 +29,43 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 m-4 bg-white shadow-md rounded">
+    <div className="flex justify-center items-center">
+      <div className="mt-4 w-full max-w-md p-8 m-4 shadow-md rounded">
         <h2 className="text-2xl font-bold mb-5 text-center">Sign Up</h2>
 
-        <div className="mb-4">
-          <label className="block text-sm font-bold mb-2" htmlFor="username">
-            Username:
+        <div className="form-control w-full max-w-xs">
+          <label className="label" htmlFor="username">
+            <span className="label-text">Username</span>
           </label>
           <input
             type="text"
-            className="w-full px-3 py-2 border rounded-md"
+            className="input input-bordered input-primary w-full max-w-xs"
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-bold mb-2" htmlFor="email">
-            Email:
+        <div className="form-control w-full max-w-xs">
+          <label className="label" htmlFor="email">
+            <span className="label-text">Email</span>
           </label>
           <input
             type="email"
-            className="w-full px-3 py-2 border rounded-md"
+            className="input input-bordered input-primary w-full max-w-xs"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-bold mb-2" htmlFor="password">
-            Password:
+        <div className="form-control w-full max-w-xs">
+          <label className="label" htmlFor="password">
+            <span className="label-text">Password</span>
           </label>
           <input
             type="password"
-            className="w-full px-3 py-2 border rounded-md"
+            className="input input-bordered input-primary w-full max-w-xs"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -73,10 +73,7 @@ export default function SignUp() {
         </div>
 
         <div className="mb-4">
-          <button
-            className="w-full px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-            onClick={handleSignUp}
-          >
+          <button className="mt-6 btn btn-primary" onClick={handleSignUp}>
             {loading ? "Signing up..." : "Sign Up"}
           </button>
         </div>
