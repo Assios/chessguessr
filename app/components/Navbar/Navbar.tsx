@@ -17,31 +17,40 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
     if (!success) {
       console.error("Failed to log out.");
     }
-    // Handle other side-effects of logging out, if necessary
   };
 
   const userProfileDropdown = user ? (
-    <div className="relative">
-      <img
-        src={"https://fastly.picsum.photos/id/30/200/200.jpg"}
-        alt="Profile"
-        className="rounded-full w-8 h-8"
-      />
-      <div className="absolute top-10 right-0 bg-white rounded shadow-lg">
-        <NavLink
-          prefetch="intent"
-          to={`/profile/${user.username}`}
-          className="block px-4 py-2"
-        >
-          {user.username}'s Profile
-        </NavLink>
-        <button
-          onClick={handleLogout}
-          className="block w-full text-left px-4 py-2"
-        >
-          Log out
-        </button>
-      </div>
+    <div className="dropdown dropdown-end text-primary-content bg-primary">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img
+            src={`https://ui-avatars.com/api/?name=${user.username}&size=512`}
+            alt="Profile"
+          />
+        </div>
+      </label>
+      <ul
+        tabIndex={0}
+        className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52"
+      >
+        <li>
+          <NavLink
+            prefetch="intent"
+            to={"/profile"}
+            className="block px-4 py-2 justify-between"
+          >
+            Profile
+          </NavLink>
+        </li>
+        <li>
+          <button
+            onClick={handleLogout}
+            className="block w-full text-left px-4 py-2"
+          >
+            Log out
+          </button>
+        </li>
+      </ul>
     </div>
   ) : null;
 
