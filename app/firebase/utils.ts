@@ -1,6 +1,6 @@
 import { db } from "./firebaseConfig";
 
-import { setDoc, doc, getDoc, increment } from "firebase/firestore";
+import { setDoc, doc, getDoc, increment, writeBatch } from "firebase/firestore";
 import { AppUser } from "~/components/AuthProvider/AuthProvider";
 
 export const incrementSolved = (id: number, turns: number) => {
@@ -58,4 +58,42 @@ export async function getUserFromFirestore(
   } else {
     return null;
   }
+}
+
+export async function updateUsername(
+  uid: string,
+  newUsername: string
+): Promise<void> {
+  console.log(
+    `Attempting to update username for UID: ${uid} to: ${newUsername}`
+  );
+
+  if (await isUsernameTaken(newUsername)) {
+    console.error(`Username "${newUsername}" is already taken.`);
+    throw new Error("Username is already taken.");
+  }
+
+  const userRef = doc(db, "users", uid);
+  const oldUsernameData = await getDoc(userRef);
+
+  if (!oldUsernameData.exists()) {
+    console.error(`User with UID: ${uid} does not exist.`);
+    throw new Error("User does not exist.");
+  }
+
+  const oldUsername = oldUsernameData.get("username");
+  console.log(`Current username for UID: ${uid} is: ${oldUsername}`);
+
+  const oldUsernameRef = doc(db, "usernames", oldUsername);
+  const newUsernameRef = doc(db, "usernames", newUsername);
+
+  const batch = writeBatch(db);
+
+  batch.update(userRef, { username: newUsername });
+  batch.delete(oldUsernameRef);
+  batch.set(newUsernameRef, { uid });
+
+  await batch.commit();
+
+  console.log(`Username update for UID: ${uid} completed successfully.`);
 }
