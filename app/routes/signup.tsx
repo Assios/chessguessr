@@ -3,7 +3,6 @@ import {
   signUpWithEmailPasswordAndUsername,
   observeAuth,
 } from "../firebase/authUtils";
-import { User } from "firebase/auth";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -12,8 +11,38 @@ export default function SignUp() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+  };
+
   const handleSignUp = async () => {
     if (loading) return;
+
+    if (!email || !isValidEmail(email)) {
+      setMessage("Please provide a valid email address.");
+      return;
+    }
+
+    if (!password || password.length < 6) {
+      setMessage(
+        "The password is too short. It should be at least 6 characters."
+      );
+      return;
+    }
+
+    if (!username) {
+      setMessage("Username is required.");
+      return;
+    }
+
+    const ERROR_MAP = {
+      "auth/email-already-in-use":
+        "There was an issue with your sign-up. Please try again later, or contact support@chessguessr.com if the problem persists.",
+      "auth/invalid-email": "Please provide a valid email address.",
+      "auth/weak-password":
+        "The password is too weak. Please choose a stronger one.",
+    };
 
     setLoading(true);
     setMessage("");
@@ -22,7 +51,7 @@ export default function SignUp() {
       await signUpWithEmailPasswordAndUsername(email, password, username);
       setMessage("Successfully signed up!");
     } catch (error) {
-      setMessage(`Error: ${error.message}`);
+      setMessage(ERROR_MAP[error.code] || `Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -83,6 +112,12 @@ export default function SignUp() {
             {message}
           </div>
         )}
+        <div className="text-center">
+          Already registered?{" "}
+          <a href="/login" className="text-blue-500 underline">
+            Log in
+          </a>
+        </div>
       </div>
     </div>
   );
