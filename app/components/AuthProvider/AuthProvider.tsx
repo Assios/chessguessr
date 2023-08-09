@@ -27,6 +27,7 @@ interface AuthContextType {
   user: AppUser | null;
   isAuthenticated: boolean;
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  updateUser: any;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(
@@ -39,10 +40,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   const [user, setUser] = useState<AppUser | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const updateUser = (updatedUser: AppUser) => {
+    setUser(updatedUser);
+  };
+
   useEffect(() => {
     const unsubscribe = observeAuth(async (firebaseUser) => {
       if (firebaseUser) {
-        // Fetch the user's data from Firestore
         const appUser = await getUserFromFirestore(firebaseUser.uid);
         if (appUser) {
           setUser(appUser);
@@ -63,7 +67,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, setIsAuthenticated }}>
+    <AuthContext.Provider
+      value={{ user, isAuthenticated, setIsAuthenticated, updateUser }}
+    >
       {children}
     </AuthContext.Provider>
   );

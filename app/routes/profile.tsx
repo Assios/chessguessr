@@ -3,7 +3,7 @@ import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import { updateUsername, isUsernameTaken } from "../firebase/utils";
 
 export default function Profile() {
-  const { user } = useContext(AuthContext);
+  const { user, updateUser } = useContext(AuthContext);
 
   const [newUsername, setNewUsername] = useState("");
   const [changing, setChanging] = useState(false);
@@ -27,6 +27,11 @@ export default function Profile() {
 
       try {
         await updateUsername(user.uid, newUsername);
+
+        updateUser({
+          ...user,
+          username: newUsername,
+        });
       } catch (error) {
         console.error(`Failed to update username: ${error.message}`);
       }
