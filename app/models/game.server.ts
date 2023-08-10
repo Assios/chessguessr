@@ -5012,5 +5012,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2666,
       id: 415,
     },
+    {
+      date: "2023-08-11",
+      fen: "r2q1rk1/pp4pp/2nbR3/3p4/4n3/1NN5/PPP2PPP/R1BQ2K1 b - - 2 13",
+      solution: ["Bxh2+", "Kxh2", "Qh4+", "Kg1", "Qxf2+"],
+      gameUrl: "https://lichess.org/c7BL4xuX/black#25",
+      white: "artedelamente",
+      black: "Schachtrainer-Schuh",
+      bTitle: "IM",
+      wRating: 2381,
+      bRating: 2641,
+      id: 416,
+    },
   ];
 }
