@@ -1,6 +1,13 @@
 import { db } from "./firebaseConfig";
 
-import { setDoc, doc, getDoc, increment, writeBatch } from "firebase/firestore";
+import {
+  setDoc,
+  doc,
+  getDoc,
+  increment,
+  writeBatch,
+  serverTimestamp,
+} from "firebase/firestore";
 import { AppUser } from "~/components/AuthProvider/AuthProvider";
 
 export const incrementSolved = (id: number, turns: number) => {
@@ -89,7 +96,11 @@ export async function updateUsername(
 
   const batch = writeBatch(db);
 
-  batch.update(userRef, { username: newUsername });
+  batch.update(userRef, {
+    username: newUsername,
+    lastUpdatedUsername: serverTimestamp(),
+  });
+
   batch.delete(oldUsernameRef);
   batch.set(newUsernameRef, { uid });
 
