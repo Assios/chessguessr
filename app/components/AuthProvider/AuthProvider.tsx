@@ -21,6 +21,7 @@ export interface AppUser {
   email: string;
   username: string;
   stats: PlayerStats;
+  lastUpdatedUsername: any;
 }
 
 interface AuthContextType {

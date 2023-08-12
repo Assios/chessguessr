@@ -47,8 +47,17 @@ export async function saveNewUser(
   const userRef = doc(db, "users", uid);
   const usernameRef = doc(db, "usernames", username);
 
-  await setDoc(userRef, { email, username });
-  await setDoc(usernameRef, { uid });
+  const batch = writeBatch(db);
+
+  batch.set(userRef, {
+    email,
+    username,
+    lastUpdatedUsername: serverTimestamp(),
+  });
+
+  batch.set(usernameRef, { uid });
+
+  await batch.commit();
 }
 
 export async function getUserFromFirestore(

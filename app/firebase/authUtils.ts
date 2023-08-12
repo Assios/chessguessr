@@ -94,7 +94,8 @@ export async function signUpWithEmailPasswordAndUsername(
     await sendEmailVerification(user);
 
     const uid = user.uid;
-    await saveNewUser(uid, email, username);
+
+    await saveNewUser(uid, email, username, new Date());
   } else {
     throw new Error("Failed to create a user");
   }
