@@ -5035,5 +5035,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1738,
       id: 417,
     },
+    {
+      date: "2023-08-13",
+      fen: "r2qk3/ppp2p2/2n1pn2/5b1r/3PB1p1/P1N3PP/1PP1Q3/2KR2NR b q - 0 15",
+      solution: ["Nxe4", "Nxe4", "Nxd4", "Qe3", "Bxe4"],
+      gameUrl: "https://lichess.org/FyYJDV4L/black#29",
+      white: "Roma_Chess",
+      black: "FirstCarcass",
+      wRating: 2165,
+      bRating: 1775,
+      id: 418,
+    },
   ];
 }
