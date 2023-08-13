@@ -5046,5 +5046,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1775,
       id: 418,
     },
+    {
+      date: "2023-08-14",
+      fen: "r3r2k/p3q1pp/1p1pBn2/1NpPn3/P1P2B2/6P1/1Q5P/5RK1 w - - 6 30",
+      solution: ["Nxd6", "Nd3", "Qd2", "Nxf4", "Nf7+"],
+      gameUrl: "https://lichess.org/s5dI0Kdu/white#58",
+      white: "MahammadMuradli2003",
+      black: "Abdisalimov",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2714,
+      bRating: 2699,
+      id: 419,
+    },
   ];
 }
