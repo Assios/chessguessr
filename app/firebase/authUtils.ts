@@ -5,7 +5,7 @@ import { signOut } from "firebase/auth";
 import { isUsernameTaken, saveNewUser } from "./utils";
 import { getDoc, doc } from "firebase/firestore";
 import { db, auth } from "./firebaseConfig";
-import { sendEmailVerification } from "firebase/auth";
+import { sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 
 export const signIn = async (email: string, password: string) => {
   try {
@@ -95,7 +95,7 @@ export async function signUpWithEmailPasswordAndUsername(
 
     const uid = user.uid;
 
-    await saveNewUser(uid, email, username, new Date());
+    await saveNewUser(uid, email, username);
   } else {
     throw new Error("Failed to create a user");
   }
