@@ -5059,5 +5059,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2699,
       id: 419,
     },
+    {
+      date: "2023-08-15",
+      fen: "6k1/pb2p2p/1p1q1rp1/3P4/1pP2n2/1P3R1P/1Q6/1B2R2K b - - 1 30",
+      solution: ["Nxd5", "Be4", "Rxf3", "Bxf3", "Qg3"],
+      gameUrl: "https://lichess.org/JalPTP1m/black#59",
+      white: "crackcubano",
+      black: "Chalawan",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2747,
+      bRating: 2697,
+      id: 420,
+    },
   ];
 }
