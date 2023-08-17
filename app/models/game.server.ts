@@ -5094,5 +5094,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1890,
       id: 422,
     },
+    {
+      date: "2023-08-18",
+      fen: "r3kbnr/ppp2p1p/5q2/4n1p1/2B2B2/2P2QP1/PP5P/RN2K2R w KQkq - 0 12",
+      solution: ["Qxb7", "Rd8", "Qb5+", "Nd7", "Bxc7"],
+      gameUrl: "https://lichess.org/ULaOq2JR/white#22",
+      white: "Kristijan45",
+      black: "Linson_K_P-2020",
+      wRating: 1991,
+      bRating: 1995,
+      id: 423,
+    },
   ];
 }
