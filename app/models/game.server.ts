@@ -5105,5 +5105,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1995,
       id: 423,
     },
+    {
+      date: "2023-08-19",
+      fen: "2r3k1/p4pb1/5p2/q2p1Q1N/1p1P3P/4PP2/Ppr5/1K4RR w - - 0 25",
+      solution: ["Rxg7+", "Kf8", "Rxf7+", "Kxf7", "Qd7+"],
+      gameUrl: "https://lichess.org/8UIk1VVp/white#48",
+      white: "GermanoMosconi",
+      black: "gioaspe_chess",
+      wRating: 2245,
+      bRating: 2271,
+      id: 424,
+    },
   ];
 }
