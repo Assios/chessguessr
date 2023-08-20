@@ -13,6 +13,9 @@ import {
 } from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
+import { AppUser } from "~/components/AuthProvider/AuthProvider";
+import { usePlayerStats } from "./usePlayerStats";
+import { PlayerStats } from "../components/AuthProvider/AuthProvider";
 
 const chessCols = "abcdefgh";
 const kingMove = "OK";
@@ -105,7 +108,11 @@ const useNavigableGuessAndFenHistory = () => {
   };
 };
 
-const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
+const useChessguessr = (
+  game: GameType,
+  shouldUpdateStats: boolean,
+  user: AppUser
+) => {
   const [turn, setTurn] = useState(0);
   const [guesses, setGuesses] = useState([
     [null, null, null, null, null],
@@ -139,19 +146,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     date: game.date,
   });
 
-  const [playerStats, setPlayerStats] = useLocalStorage("cg-stats", {
-    gamesPlayed: 0,
-    currentStreak: 1,
-    lastPlayed: null,
-    guesses: {
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-      failed: 0,
-    },
-  });
+  const { playerStats, setPlayerStats } = usePlayerStats(user?.uid);
 
   useEffect(() => {
     if (!shouldUpdateStats) return;

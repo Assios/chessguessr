@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import useChessguessr from "../hooks/useChessguessr";
 import { Chessboard } from "react-chessboard";
 import { Grid } from "./Grid";
@@ -18,6 +18,7 @@ import {
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { Tile } from "~/styles/styles";
+import { AuthContext } from "./AuthProvider/AuthProvider";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -80,6 +81,14 @@ export const Chessguessr = ({
   setTutorial: any;
   shouldUpdateStats: boolean;
 }) => {
+  const authContext = useContext(AuthContext);
+
+  if (!authContext) {
+    throw new Error("Component must be wrapped with <AuthProvider>");
+  }
+
+  const { user } = authContext;
+
   const {
     currentGuess,
     onDrop,
@@ -94,7 +103,7 @@ export const Chessguessr = ({
     gameStatus,
     colorToPlay,
     fenHistory,
-  } = useChessguessr(game, shouldUpdateStats);
+  } = useChessguessr(game, shouldUpdateStats, user);
 
   const size = useWindowSize();
 

@@ -8,7 +8,21 @@ import {
   writeBatch,
   serverTimestamp,
 } from "firebase/firestore";
-import { AppUser } from "~/components/AuthProvider/AuthProvider";
+import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
+
+const initialPlayerStats: PlayerStats = {
+  gamesPlayed: 0,
+  lastPlayed: "",
+  currentStreak: 0,
+  guesses: {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    failed: 0,
+  },
+};
 
 export const incrementSolved = (id: number, turns: number) => {
   const statsDoc = doc(db, "stats", id.toString());
@@ -52,6 +66,7 @@ export async function saveNewUser(
   batch.set(userRef, {
     email,
     username,
+    stats: initialPlayerStats,
     lastUpdatedUsername: serverTimestamp(),
   });
 
@@ -116,4 +131,18 @@ export async function updateUsername(
   await batch.commit();
 
   console.log(`Username update for UID: ${uid} completed successfully.`);
+}
+
+import { updateDoc } from "firebase/firestore";
+
+export async function updateUserStats(
+  uid: string,
+  stats: PlayerStats
+): Promise<void> {
+  const userRef = doc(db, "users", uid);
+  try {
+    await updateDoc(userRef, { stats: stats });
+  } catch (error) {
+    console.error("Failed to update stats in Firestore:", error);
+  }
 }
