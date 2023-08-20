@@ -1,5 +1,6 @@
 import { zeroPad } from "react-countdown";
 import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
+import { PlayerStats } from "~/components/AuthProvider/AuthProvider";
 
 export const arraysEqual = (a: any, b: any) => {
   if (a === b) return true;
@@ -77,5 +78,32 @@ export const useHotkeys = (
       callback();
     },
     deps
+  );
+};
+
+export const isValidPlayerStats = (stats: any): stats is PlayerStats => {
+  if (!stats) return false;
+
+  const hasValidNumberProp = (obj: any, propName: string) => {
+    return typeof obj[propName] === "number";
+  };
+
+  const hasValidGuesses = (guesses: any) => {
+    return (
+      hasValidNumberProp(guesses, "1") &&
+      hasValidNumberProp(guesses, "2") &&
+      hasValidNumberProp(guesses, "3") &&
+      hasValidNumberProp(guesses, "4") &&
+      hasValidNumberProp(guesses, "5") &&
+      hasValidNumberProp(guesses, "failed")
+    );
+  };
+
+  return (
+    hasValidNumberProp(stats, "gamesPlayed") &&
+    hasValidNumberProp(stats, "currentStreak") &&
+    (stats.lastPlayed === null || typeof stats.lastPlayed === "string") &&
+    stats.guesses &&
+    hasValidGuesses(stats.guesses)
   );
 };

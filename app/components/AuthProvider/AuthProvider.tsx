@@ -22,6 +22,7 @@ export interface AppUser {
   username: string;
   stats: PlayerStats;
   lastUpdatedUsername: any;
+  importedLocalStorageDate: string | null;
 }
 
 interface AuthContextType {

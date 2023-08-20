@@ -17,7 +17,6 @@ import {
   useHotkeys,
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
-import { Tile } from "~/styles/styles";
 import { AuthContext } from "./AuthProvider/AuthProvider";
 
 const ChessboardWrapper = styled.div`

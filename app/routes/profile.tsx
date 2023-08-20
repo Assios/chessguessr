@@ -1,16 +1,65 @@
 import { useContext, useState, useEffect } from "react";
+import { toast } from "react-hot-toast";
+import { useLocalStorage } from "~/hooks/useLocalStorage";
+import { isValidPlayerStats } from "~/utils/utils";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
-import { updateUsername, isUsernameTaken } from "../firebase/utils";
+import {
+  updateUsername,
+  isUsernameTaken,
+  importStatsFromLocalStorage,
+} from "../firebase/utils";
 
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
-
-  console.log("u", user);
   const [newUsername, setNewUsername] = useState("");
   const [changing, setChanging] = useState(false);
   const [message, setMessage] = useState("");
   const [canUpdateUsername, setCanUpdateUsername] = useState(true);
   const [timeLeftToUpdate, setTimeLeftToUpdate] = useState("");
+  const [localStats, setLocalStats] = useLocalStorage("cg-stats", null);
+
+  const [importedDate, setImportedDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (user && user.importedLocalStorageDate) {
+      setImportedDate(user.importedLocalStorageDate);
+    }
+  }, [user]);
+
+  const importLocalStorageStats = async () => {
+    if (importedDate) {
+      toast.error(
+        `You've already imported stats on ${new Date(
+          importedDate
+        ).toLocaleDateString()}.`
+      );
+      return;
+    }
+
+    const localStatsStr = localStorage.getItem("cg-stats");
+    if (!localStatsStr) {
+      toast.error("No stats found in localStorage.");
+      return;
+    }
+
+    const parsedLocalStats = JSON.parse(localStatsStr);
+
+    if (!isValidPlayerStats(parsedLocalStats)) {
+      toast.error("Invalid or missing stats in local storage.");
+      return;
+    }
+
+    try {
+      await importStatsFromLocalStorage(user.uid, parsedLocalStats);
+      setImportedDate(new Date().toISOString());
+
+      toast.success(
+        "Your game stats have been successfully imported to your account!"
+      );
+    } catch (error) {
+      toast.error(`Error: ${error.message}`);
+    }
+  };
 
   useEffect(() => {
     if (user && user.lastUpdatedUsername) {
@@ -88,35 +137,44 @@ export default function Profile() {
           <hr className="mb-6" />
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold mb-4 text-center">
-              Update Profile
-            </h2>
+            {!importedDate && localStats && (
+              <div>
+                <h2 className="text-xl font-bold mb-4">
+                  Import your game stats
+                </h2>
+                <p>
+                  If you've been playing Chessguessr, your stats are saved in
+                  your browser. By importing them, you can keep them safe on
+                  your account and access them on any device. Please note, stats
+                  can be imported only once.
+                </p>
 
-            <div className="form-control w-full max-w-xs">
-              <label className="label" htmlFor="newUsername">
-                <span className="label-text">Change Username:</span>
-              </label>
-              <input
-                type="text"
-                className="input input-bordered input-primary w-full max-w-xs"
-                id="newUsername"
-                value={newUsername}
-                onChange={(e) => setNewUsername(e.target.value)}
-                disabled={!canUpdateUsername}
-              />
-              <button
-                className="mt-4 btn btn-primary"
-                onClick={handleUsernameChange}
-                disabled={!canUpdateUsername}
-              >
-                {changing ? "Updating..." : "Update Username"}
-              </button>
-              {!canUpdateUsername && (
-                <div className="mt-4 text-center font-semibold text-red-500 mb-4">
-                  {timeLeftToUpdate}
+                <div className="mt-4">
+                  <h3 className="font-semibold mb-2">Your Local Stats:</h3>
+                  <ul className="list-disc ml-4">
+                    <li>Games Played: {localStats.gamesPlayed}</li>
+                    <li>Current Streak: {localStats.currentStreak}</li>
+                    <li>Guess distribution:</li>
+                    <ul className="list-disc ml-6">
+                      <li>1: {localStats.guesses["1"]}</li>
+                      <li>2: {localStats.guesses["2"]}</li>
+                      <li>3: {localStats.guesses["3"]}</li>
+                      <li>4: {localStats.guesses["4"]}</li>
+                      <li>5: {localStats.guesses["5"]}</li>
+                    </ul>
+                  </ul>
                 </div>
-              )}
-            </div>
+
+                <div className="form-control w-full max-w-xs mt-4">
+                  <button
+                    className="btn btn-primary"
+                    onClick={importLocalStorageStats}
+                  >
+                    Import Stats to Account
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           {message && (

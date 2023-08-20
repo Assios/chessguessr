@@ -134,6 +134,7 @@ export async function updateUsername(
 }
 
 import { updateDoc } from "firebase/firestore";
+import { isValidPlayerStats } from "~/utils/utils";
 
 export async function updateUserStats(
   uid: string,
@@ -144,5 +145,29 @@ export async function updateUserStats(
     await updateDoc(userRef, { stats: stats });
   } catch (error) {
     console.error("Failed to update stats in Firestore:", error);
+  }
+}
+
+export async function importStatsFromLocalStorage(
+  uid: string,
+  localStats: PlayerStats
+): Promise<void> {
+  const userRef = doc(db, "users", uid);
+
+  if (!isValidPlayerStats(localStats)) {
+    console.error("Invalid stats format from localStorage. Aborting import.");
+    return;
+  }
+
+  try {
+    await updateDoc(userRef, {
+      stats: localStats,
+      importedLocalStorageDate: new Date().toISOString(),
+    });
+  } catch (error) {
+    console.error(
+      "Failed to import stats from localStorage to Firestore:",
+      error
+    );
   }
 }
