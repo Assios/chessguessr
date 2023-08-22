@@ -7,6 +7,8 @@ import {
   increment,
   writeBatch,
   serverTimestamp,
+  arrayUnion,
+  runTransaction,
 } from "firebase/firestore";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 
@@ -170,4 +172,46 @@ export async function importStatsFromLocalStorage(
       error
     );
   }
+}
+
+export async function updateFirstSolverAndAchievement(
+  puzzleId: number,
+  userId: string,
+  username: string,
+  achievement: string
+) {
+  const puzzleDocRef = doc(db, "stats", puzzleId.toString());
+  const userDocRef = doc(db, "users", userId);
+
+  const preTransactionPuzzleDocSnap = await getDoc(puzzleDocRef);
+
+  if (!preTransactionPuzzleDocSnap.exists()) {
+    throw new Error("No puzzle document found for the given ID.");
+  }
+
+  return runTransaction(db, async (transaction) => {
+    const puzzleDocSnap = await transaction.get(puzzleDocRef);
+    const puzzleData = puzzleDocSnap.data();
+
+    const userDocSnap = await transaction.get(userDocRef);
+    const userData = userDocSnap.data();
+
+    if (!userData) {
+      console.error("User document does not exist for the given ID.");
+      throw new Error("No user document found for the given ID.");
+    }
+
+    if (!puzzleData.firstSolver) {
+      transaction.update(puzzleDocRef, {
+        firstSolver: username,
+      });
+
+      const currentAchievements = userData.achievements || [];
+      if (!currentAchievements.includes(achievement)) {
+        transaction.update(userDocRef, {
+          achievements: arrayUnion(achievement),
+        });
+      }
+    }
+  });
 }

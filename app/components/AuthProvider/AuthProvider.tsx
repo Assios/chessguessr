@@ -16,6 +16,14 @@ export interface PlayerStats {
   };
 }
 
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  iconUrl?: string;
+  achieved: boolean;
+}
+
 export interface AppUser {
   uid: string;
   email: string;
@@ -23,6 +31,7 @@ export interface AppUser {
   stats: PlayerStats;
   lastUpdatedUsername: any;
   importedLocalStorageDate: string | null;
+  achievements: Achievement[];
 }
 
 interface AuthContextType {

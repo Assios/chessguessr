@@ -11,7 +11,11 @@ import {
   GuessWithHistory,
   Guess,
 } from "~/utils/types";
-import { incrementFailed, incrementSolved } from "../firebase/utils";
+import {
+  incrementFailed,
+  incrementSolved,
+  updateFirstSolverAndAchievement,
+} from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
 import { AppUser } from "~/components/AuthProvider/AuthProvider";
 import { usePlayerStats } from "./usePlayerStats";
@@ -111,7 +115,8 @@ const useNavigableGuessAndFenHistory = () => {
 const useChessguessr = (
   game: GameType,
   shouldUpdateStats: boolean,
-  user: AppUser
+  user: AppUser,
+  stats: any
 ) => {
   const [turn, setTurn] = useState(0);
   const [guesses, setGuesses] = useState([
@@ -121,6 +126,8 @@ const useChessguessr = (
     [null, null, null, null, null],
     [null, null, null, null, null],
   ]);
+
+  const firstSolver = stats?.firstSolver;
 
   const { trackEvent }: any = useOutletContext();
 
@@ -277,6 +284,20 @@ const useChessguessr = (
             },
           };
         });
+
+        console.log("GAmeId", game.id);
+
+        if (user && !firstSolver) {
+          console.log("first-to-solve");
+          updateFirstSolverAndAchievement(
+            game.id,
+            user.uid,
+            user.username,
+            "first-to-solve"
+          );
+        } else {
+          console.log("USER", user);
+        }
 
         incrementSolved(game.id, turn + 1);
         trackEvent("Submit daily", { props: { result: "Success" } });

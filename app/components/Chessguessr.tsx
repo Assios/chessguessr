@@ -102,7 +102,7 @@ export const Chessguessr = ({
     gameStatus,
     colorToPlay,
     fenHistory,
-  } = useChessguessr(game, shouldUpdateStats, user);
+  } = useChessguessr(game, shouldUpdateStats, user, stats);
 
   const size = useWindowSize();
 
