@@ -5149,5 +5149,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2099,
       id: 427,
     },
+    {
+      date: "2023-08-23",
+      fen: "8/pR4pk/1b2p3/2p3p1/N1p5/7P/PP1r2P1/6K1 b - - 2 31",
+      solution: ["Rxb2", "Nxb2", "c3", "Rxb6", "c4"],
+      gameUrl: "https://lichess.org/hrYc5xDM#61",
+      white: "Martin Ortueta Esteban",
+      black: "Jose Sanz Aguado",
+      wRating: null,
+      bRating: null,
+      id: 427,
+      event: "Madrid, 1933",
+    },
   ];
 }
