@@ -5161,5 +5161,19 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 428,
       event: "Madrid, 1933",
     },
+    {
+      date: "2023-08-24",
+      fen: "6k1/1pbR1p1p/2r3p1/p7/1BnNP3/2P5/5PPP/6K1 b - - 1 28",
+      solution: ["axb4", "Nxc6", "b3", "Rxc7", "Nd6"],
+      gameUrl: "https://lichess.org/1u60hIy9#55",
+      white: "Liviu-Dieter Nisipeanu",
+      black: "Fabiano Caruana",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2654,
+      bRating: 2805,
+      id: 429,
+      event: "Dortmund, 2015",
+    },
   ];
 }
