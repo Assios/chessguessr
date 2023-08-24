@@ -5175,5 +5175,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 429,
       event: "Dortmund, 2015",
     },
+    {
+      date: "2023-08-25",
+      fen: "rnbq1r2/pp2k3/3pn3/5QRp/2P1P3/8/PP4PP/R1B3K1 w - - 3 20",
+      solution: ["Rg7+", "Nxg7", "Bg5+", "Ke8", "Qg6+"],
+      gameUrl: "https://lichess.org/WwTj0Io9/white#38",
+      white: "Calzadre",
+      black: "haldunaksel",
+      wRating: 1938,
+      bRating: 1930,
+      id: 430,
+    },
   ];
 }
