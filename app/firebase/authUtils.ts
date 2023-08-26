@@ -114,3 +114,8 @@ export const logOut = async () => {
 export const observeAuth = (callback: (user: User | null) => void) => {
   return onAuthStateChanged(auth, callback);
 };
+
+export const isValidUsername = (username) => {
+  const usernameRegex = /^[a-zA-Z0-9]{1,16}$/;
+  return usernameRegex.test(username);
+};

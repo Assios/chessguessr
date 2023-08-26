@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   signUpWithEmailPasswordAndUsername,
   observeAuth,
+  isValidUsername,
 } from "../firebase/authUtils";
 
 export default function SignUp() {
@@ -31,8 +32,10 @@ export default function SignUp() {
       return;
     }
 
-    if (!username) {
-      setMessage("Username is required.");
+    if (!username || !isValidUsername(username)) {
+      setMessage(
+        "Username should only contain letters and numbers and be at most 16 characters long."
+      );
       return;
     }
 
@@ -73,6 +76,7 @@ export default function SignUp() {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            maxLength={16}
           />
         </div>
 

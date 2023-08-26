@@ -27,6 +27,7 @@ export interface Achievement {
 export interface AppUser {
   uid: string;
   email: string;
+  emailVerified: boolean;
   username: string;
   stats: PlayerStats;
   lastUpdatedUsername: any;
@@ -60,7 +61,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
       if (firebaseUser) {
         const appUser = await getUserFromFirestore(firebaseUser.uid);
         if (appUser) {
-          setUser(appUser);
+          setUser({
+            ...appUser,
+            emailVerified: firebaseUser.emailVerified,
+          });
           setIsAuthenticated(true);
         } else {
           setUser(null);

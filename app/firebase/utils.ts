@@ -87,6 +87,7 @@ export async function getUserFromFirestore(
     return {
       uid,
       ...data,
+      emailVerified: data.emailVerified || false,
     };
   } else {
     return null;
