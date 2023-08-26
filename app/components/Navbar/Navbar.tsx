@@ -49,7 +49,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
         <NavLink
           prefetch="intent"
           to="/"
-          className="btn btn-ghost normal-case text-lg lg:text-2xl"
+          className="btn btn-ghost normal-case text-md md:text-lg lg:text-2xl"
         >
           Chessguessr
         </NavLink>
