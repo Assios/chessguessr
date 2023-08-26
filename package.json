@@ -14,6 +14,7 @@
   "dependencies": {
     "@firebase/auth": "^1.1.0",
     "@firebase/storage": "^0.11.2",
+    "@heroicons/react": "^2.0.18",
     "@react-chess/chessground": "^1.2.4",
     "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
