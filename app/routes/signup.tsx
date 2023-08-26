@@ -50,6 +50,7 @@ export default function SignUp() {
     try {
       await signUpWithEmailPasswordAndUsername(email, password, username);
       setMessage("Successfully signed up!");
+      window.location.href = "/profile";
     } catch (error) {
       setMessage(ERROR_MAP[error.code] || `Error: ${error.message}`);
     } finally {

@@ -107,3 +107,29 @@ export const isValidPlayerStats = (stats: any): stats is PlayerStats => {
     hasValidGuesses(stats.guesses)
   );
 };
+
+export const idToColor = (userID) => {
+  const colors = {
+    "cyan-400": "22D3EE",
+    "yellow-400": "FBBF24",
+    "amber-400": "F59E0B",
+    "green-400": "10B981",
+    "lime-400": "84CC16",
+    "emerald-400": "059669",
+    "teal-400": "14B8A6",
+    "orange-400": "FB923C",
+    "red-400": "EF4444",
+    "fuchsia-400": "D946EF",
+    "pink-400": "EC4899",
+    "rose-400": "FB7185",
+  };
+
+  let hash = 0;
+  for (let i = 0; i < userID.length; i++) {
+    hash += userID.charCodeAt(i);
+  }
+
+  const colorKeys = Object.keys(colors);
+  const index = hash % colorKeys.length;
+  return colors[colorKeys[index]];
+};

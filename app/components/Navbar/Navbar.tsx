@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 import { NavLink } from "@remix-run/react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { logOut } from "../../firebase/authUtils"; // adjust the path accordingly
+import { logOut } from "../../firebase/authUtils";
+import { idToColor } from "~/utils/utils";
 
 export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
   const authContext = useContext(AuthContext);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef(null);
 
   if (!authContext) {
     throw new Error("Component must be wrapped with <AuthProvider>");
@@ -19,34 +22,62 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const userProfileDropdown = user ? (
-    <div className="dropdown dropdown-end text-primary-content bg-primary">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
+    <div className="relative inline-block text-left">
+      <label
+        tabIndex={0}
+        className="btn btn-ghost btn-circle avatar"
+        onClick={() => setDropdownVisible(!dropdownVisible)} // Toggle dropdown visibility when avatar is clicked
+      >
+        <div className="w-8 rounded-full">
           <img
-            src={`https://ui-avatars.com/api/?name=${user.username}&size=512`}
+            src={`https://ui-avatars.com/api/?name=${
+              user.username
+            }&size=20&background=${idToColor(user.uid)}`}
             alt="Profile"
           />
         </div>
       </label>
-      <ul
-        tabIndex={0}
-        className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52"
-      >
-        <li>
-          <NavLink to={"/profile"} className="block px-4 py-2 justify-between">
-            Profile
-          </NavLink>
-        </li>
-        <li>
-          <button
-            onClick={handleLogout}
-            className="block w-full text-left px-4 py-2"
-          >
-            Log out
-          </button>
-        </li>
-      </ul>
+
+      {dropdownVisible && (
+        <ul
+          tabIndex={0}
+          className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52 absolute right-0"
+          ref={dropdownRef}
+        >
+          <li>
+            <NavLink
+              to={"/profile"}
+              className="block px-4 py-2 justify-between"
+              onClick={() => setDropdownVisible(false)}
+            >
+              Profile
+            </NavLink>
+          </li>
+          <li>
+            <button
+              onClick={handleLogout}
+              className="block w-full text-left px-4 py-2"
+            >
+              Log out
+            </button>
+          </li>
+        </ul>
+      )}
     </div>
   ) : null;
 

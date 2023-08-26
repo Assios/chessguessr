@@ -188,7 +188,7 @@ export default function Profile() {
   } else {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="bg-white p-8 rounded-xl shadow-md w-96 text-center">
+        <div className="p-8 rounded-xl shadow-md w-96 text-center">
           <span>You are not logged in.</span>
         </div>
       </div>
