@@ -5200,7 +5200,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2023-08-27",
       fen: "b2r3r/k4p1p/p2q1np1/NppP4/3p1Q2/P4PPB/1PP4P/1K1RR3 w - - 1 24",
-      solution: ["Rxd4", "cxd4", "Re7+", "Kb6", "Qxd4"],
+      solution: ["Rxd4", "cxd4", "Re7+", "Kb6", "Qxd4+"],
       gameUrl: "https://lichess.org/DfNYMFE4#46",
       white: "Garry Kasparov",
       black: "Veselin Topalov",
