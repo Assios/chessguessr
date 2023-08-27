@@ -5221,7 +5221,7 @@ export async function getGames(): Promise<Array<GameType>> {
       wRating: null,
       bRating: null,
       id: 433,
-      event: "Wijk aan Zee, 1999",
+      event: "USSR Championship, 1964/65",
     },
   ];
 }
