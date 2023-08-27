@@ -2,7 +2,7 @@ import { useContext, useRef, useState, useEffect } from "react";
 import { NavLink } from "@remix-run/react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { logOut } from "../../firebase/authUtils";
-import { idToColor } from "~/utils/utils";
+import { getGravatarUrlWithDefault, idToColor } from "~/utils/utils";
 import EmailVerificationReminder from "../EmailVerificationReminder/EmailVerificationReminder";
 
 export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
@@ -45,12 +45,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
         onClick={() => setDropdownVisible(!dropdownVisible)} // Toggle dropdown visibility when avatar is clicked
       >
         <div className="w-8 rounded-full">
-          <img
-            src={`https://ui-avatars.com/api/?name=${
-              user.username
-            }&size=20&background=${idToColor(user.uid)}`}
-            alt="Profile"
-          />
+          <img src={getGravatarUrlWithDefault(user, 150)} alt="Profile" />
         </div>
       </label>
 

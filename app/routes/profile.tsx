@@ -1,7 +1,11 @@
 import { useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
-import { idToColor, isValidPlayerStats } from "~/utils/utils";
+import {
+  getGravatarUrlWithDefault,
+  idToColor,
+  isValidPlayerStats,
+} from "~/utils/utils";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import {
   updateUsername,
@@ -122,9 +126,7 @@ export default function Profile() {
     ? {
         name: user.username,
         email: user.email,
-        avatar: `https://ui-avatars.com/api/?name=${
-          user.username
-        }&size=20&background=${idToColor(user.uid)}`, // replace with user avatar link if any
+        avatar: getGravatarUrlWithDefault(user, 300),
         backgroundImage: "https://via.placeholder.com/1920x1080", // replace with a user background link if any
       }
     : null;

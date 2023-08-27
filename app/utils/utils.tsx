@@ -1,6 +1,6 @@
 import { zeroPad } from "react-countdown";
 import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
-import { PlayerStats } from "~/components/AuthProvider/AuthProvider";
+import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 
 export const arraysEqual = (a: any, b: any) => {
   if (a === b) return true;
@@ -132,4 +132,13 @@ export const idToColor = (userID) => {
   const colorKeys = Object.keys(colors);
   const index = hash % colorKeys.length;
   return colors[colorKeys[index]];
+};
+
+export const getGravatarUrlWithDefault = (user: AppUser, size: number) => {
+  const defaultAvatar = encodeURIComponent(
+    `https://ui-avatars.com/api/?name=${
+      user.username
+    }&size=${size}&background=${idToColor(user.uid)}`
+  );
+  return `https://www.gravatar.com/avatar/${user.emailHash}?d=${defaultAvatar}&s=${size}`;
 };

@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { observeAuth } from "~/firebase/authUtils";
 import { getUserFromFirestore } from "~/firebase/utils";
+import CryptoJS from "crypto-js";
 
 export interface PlayerStats {
   gamesPlayed: number;
@@ -30,6 +31,7 @@ export interface AppUser {
   emailVerified: boolean;
   username: string;
   stats: PlayerStats;
+  emailHash: string;
   lastUpdatedUsername: any;
   importedLocalStorageDate: string | null;
   achievements: Achievement[];
@@ -61,9 +63,12 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
       if (firebaseUser) {
         const appUser = await getUserFromFirestore(firebaseUser.uid);
         if (appUser) {
+          const emailHash = CryptoJS.MD5(firebaseUser.email || "").toString();
+
           setUser({
             ...appUser,
             emailVerified: firebaseUser.emailVerified,
+            emailHash,
           });
           setIsAuthenticated(true);
         } else {
