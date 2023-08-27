@@ -5211,5 +5211,17 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 432,
       event: "Wijk aan Zee, 1999",
     },
+    {
+      date: "2023-08-28",
+      fen: "r1b2r1k/4qp1p/p2ppb1Q/4nP2/1p1NP3/2N5/PPP4P/2KR1BR1 w - - 4 18",
+      solution: ["Nc6", "Nxc6", "e5", "Bg5+", "Rxg5"],
+      gameUrl: "https://lichess.org/Lcd69rwK#34",
+      white: "Ratmir Kholmov",
+      black: "David Bronstein",
+      wRating: null,
+      bRating: null,
+      id: 433,
+      event: "Wijk aan Zee, 1999",
+    },
   ];
 }
