@@ -11,6 +11,7 @@ import {
   runTransaction,
 } from "firebase/firestore";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
+import CryptoJS from "crypto-js";
 
 const initialPlayerStats: PlayerStats = {
   gamesPlayed: 0,
@@ -60,6 +61,7 @@ export async function saveNewUser(
   email: string,
   username: string
 ) {
+  const emailHash = CryptoJS.MD5(email).toString();
   const userRef = doc(db, "users", uid);
   const usernameRef = doc(db, "usernames", username);
 
@@ -69,6 +71,7 @@ export async function saveNewUser(
     email,
     username,
     stats: initialPlayerStats,
+    emailHash,
     lastUpdatedUsername: serverTimestamp(),
   });
 
@@ -215,4 +218,17 @@ export async function updateFirstSolverAndAchievement(
       }
     }
   });
+}
+
+export async function getUserByUsername(
+  username: string
+): Promise<AppUser | null> {
+  const usernameRef = doc(db, "usernames", username);
+  const docSnap = await getDoc(usernameRef);
+  if (docSnap.exists()) {
+    const uid = docSnap.get("uid");
+    return getUserFromFirestore(uid);
+  }
+
+  return null;
 }

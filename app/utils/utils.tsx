@@ -135,10 +135,6 @@ export const idToColor = (userID) => {
 };
 
 export const getGravatarUrlWithDefault = (user: AppUser, size: number) => {
-  const defaultAvatar = encodeURIComponent(
-    `https://ui-avatars.com/api/?name=${
-      user.username
-    }&size=${size}&background=${idToColor(user.uid)}`
-  );
+  const defaultAvatar = "monsterid";
   return `https://www.gravatar.com/avatar/${user.emailHash}?d=${defaultAvatar}&s=${size}`;
 };

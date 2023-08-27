@@ -6,14 +6,28 @@ import {
   idToColor,
   isValidPlayerStats,
 } from "~/utils/utils";
-import { AuthContext } from "../components/AuthProvider/AuthProvider";
+import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import {
   updateUsername,
   isUsernameTaken,
   importStatsFromLocalStorage,
-} from "../firebase/utils";
+} from "../../firebase/utils";
+import trianglify from "trianglify";
 
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
+
+function generateBackground(emailHash: string) {
+  const pattern = trianglify({
+    width: 1920,
+    height: 1080,
+    seed: emailHash,
+    cellSize: 80,
+    variance: 0.25,
+  });
+
+  const canvas = pattern.toCanvas();
+  return canvas.toDataURL("image/png");
+}
 
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
@@ -127,7 +141,7 @@ export default function Profile() {
         name: user.username,
         email: user.email,
         avatar: getGravatarUrlWithDefault(user, 300),
-        backgroundImage: "https://via.placeholder.com/1920x1080", // replace with a user background link if any
+        backgroundImage: generateBackground(user.emailHash), // replace with a user background link if any
       }
     : null;
 
@@ -144,22 +158,22 @@ export default function Profile() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
             <div className="flex">
-              <img
-                className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
-                src={profile.avatar}
-                alt=""
-              />
+              <div
+                className="tooltip"
+                data-tip="Profile picture fetched from Gravatar using your email. Update it on gravatar.com."
+              >
+                <img
+                  className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
+                  src={profile.avatar}
+                  alt=""
+                />
+              </div>
             </div>
             <div className="mt-6 min-w-0 flex-1 sm:pb-1">
-              <h1 className="truncate text-2xl font-bold text-gray-900">
-                {profile.name}
-              </h1>
+              <h1 className="truncate text-2xl font-bold">{profile.name}</h1>
               <div className="flex flex-row items-center space-x-2 mt-4">
-                <EnvelopeIcon
-                  className="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-                <span className="text-sm text-gray-600">{profile.email}</span>
+                <EnvelopeIcon className="h-5 w-5" aria-hidden="true" />
+                <span className="text-sm">{profile.email}</span>
               </div>
             </div>
           </div>

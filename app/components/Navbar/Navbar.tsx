@@ -42,7 +42,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
       <label
         tabIndex={0}
         className="btn btn-ghost btn-circle avatar"
-        onClick={() => setDropdownVisible(!dropdownVisible)} // Toggle dropdown visibility when avatar is clicked
+        onClick={() => setDropdownVisible(!dropdownVisible)}
       >
         <div className="w-8 rounded-full">
           <img src={getGravatarUrlWithDefault(user, 150)} alt="Profile" />

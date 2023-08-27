@@ -37,7 +37,8 @@
     "react-hotkeys-hook": "^3.4.7",
     "react-icons": "^4.4.0",
     "styled-components": "^5.3.5",
-    "theme-change": "^2.1.0"
+    "theme-change": "^2.1.0",
+    "trianglify": "^4.1.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.5.1",
