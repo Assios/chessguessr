@@ -5223,5 +5223,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 433,
       event: "USSR Championship, 1964/65",
     },
+    {
+      date: "2023-08-29",
+      fen: "r1bq1rk1/p4p2/2p2B2/np2R3/3b4/1P5P/P1B2PP1/RN1Q2K1 b - - 0 21",
+      solution: ["Bxf2+", "Kh1", "Qxf6", "Qh5", "Rd8"],
+      gameUrl: "https://lichess.org/BHjypauB/black#41",
+      white: "Roozbeh15",
+      black: "Soroush_r",
+      wRating: 1510,
+      bRating: 1795,
+      id: 434,
+    },
   ];
 }
