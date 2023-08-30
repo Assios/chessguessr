@@ -5246,7 +5246,7 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 435,
     },
     {
-      date: "2022-08-31",
+      date: "2023-08-31",
       fen: "r1r1k3/pp1qn2p/5pp1/3p2N1/6Q1/8/PP3PPP/2R1R1K1 w - - 2 22",
       solution: ["Rxe7+", "Kf8", "Rf7+", "Kg8", "Rg7+"],
       gameUrl: "https://lichess.org/7LFlIBZa#42",
