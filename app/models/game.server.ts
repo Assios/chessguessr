@@ -5234,5 +5234,28 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1795,
       id: 434,
     },
+    {
+      date: "2023-08-30",
+      fen: "r5k1/3p1ppp/2b1r3/2B1pN2/2Q1PnqP/2P3P1/2B2P2/1R3RK1 b - - 2 24",
+      solution: ["Qh3", "gxf4", "Rg6+", "Ng3", "exf4"],
+      gameUrl: "https://lichess.org/z5hjiRiC/black#47",
+      white: "Aidy",
+      black: "Pikulin-kudesnik2",
+      wRating: 1984,
+      bRating: 1856,
+      id: 435,
+    },
+    {
+      date: "2023-08-31",
+      fen: "r1r1k3/pp1qn2p/5pp1/3p2N1/6Q1/8/PP3PPP/2R1R1K1 w - - 2 22",
+      solution: ["Rxe7+", "Kf8", "Rf7+", "Kg8", "Rg7+"],
+      gameUrl: "https://lichess.org/7LFlIBZa#42",
+      white: "Wilhelm Steinitz",
+      black: "Curt von Bardeleben",
+      wRating: null,
+      bRating: null,
+      id: 436,
+      event: "Hastings, 1895",
+    },
   ];
 }
