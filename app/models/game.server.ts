@@ -5257,5 +5257,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 436,
       event: "Hastings, 1895",
     },
+    {
+      date: "2023-09-01",
+      fen: "5rk1/pp4pp/8/2pP3b/2P5/1P2K1bP/P2B2P1/2R4R b - - 2 29",
+      solution: ["Re8+", "Kd3", "Bg6+", "Kc3", "Be5#"],
+      gameUrl: "https://lichess.org/CiNStd6m/black#57",
+      white: "Chocboy",
+      black: "walter_temi",
+      wRating: 2108,
+      bRating: 2016,
+      id: 437,
+    },
   ];
 }
