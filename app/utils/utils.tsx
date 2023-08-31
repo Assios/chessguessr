@@ -1,6 +1,7 @@
 import { zeroPad } from "react-countdown";
 import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
+import trianglify from "trianglify";
 
 export const arraysEqual = (a: any, b: any) => {
   if (a === b) return true;
@@ -137,4 +138,33 @@ export const idToColor = (userID) => {
 export const getGravatarUrlWithDefault = (user: AppUser, size: number) => {
   const defaultAvatar = "monsterid";
   return `https://www.gravatar.com/avatar/${user.emailHash}?d=${defaultAvatar}&s=${size}`;
+};
+
+export const generateBackground = (emailHash: string) => {
+  const seedNumber = Array.from(emailHash).reduce(
+    (acc, char) => acc + char.charCodeAt(0),
+    0
+  );
+
+  const colors = ["#4b6bfc", "#fbbd25", "#11b97f"];
+  const shuffledColors = colors
+    .slice(seedNumber % colors.length)
+    .concat(colors.slice(0, seedNumber % colors.length));
+
+  const cellSize = 20 + (seedNumber % 181);
+  const variance = 0.1 + 0.8 * ((seedNumber % 100) / 100);
+
+  const pattern = trianglify({
+    width: 1920,
+    height: 600,
+    seed: emailHash,
+    cellSize: cellSize,
+    variance: variance,
+    palette: {
+      default: shuffledColors,
+    },
+  });
+
+  const canvas = pattern.toCanvas();
+  return canvas.toDataURL("image/png");
 };

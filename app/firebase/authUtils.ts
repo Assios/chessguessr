@@ -5,7 +5,12 @@ import { signOut } from "firebase/auth";
 import { isUsernameTaken, saveNewUser } from "./utils";
 import { getDoc, doc } from "firebase/firestore";
 import { db, auth } from "./firebaseConfig";
-import { sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
+import {
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 
 export const signIn = async (email: string, password: string) => {
   try {
@@ -118,4 +123,28 @@ export const observeAuth = (callback: (user: User | null) => void) => {
 export const isValidUsername = (username) => {
   const usernameRegex = /^[a-zA-Z0-9]{1,16}$/;
   return usernameRegex.test(username);
+};
+
+export const signInWithGoogle = async () => {
+  const provider = new GoogleAuthProvider();
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+
+    const userRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(userRef);
+
+    if (!docSnap.exists()) {
+      await saveNewUser(
+        user.uid,
+        user.email,
+        "GoogleUser_" + user.uid.slice(0, 5)
+      );
+    }
+
+    return user;
+  } catch (error) {
+    console.error("Error signing in with Google:", error);
+    throw error;
+  }
 };

@@ -2,21 +2,7 @@ import { json, LoaderFunction } from "@remix-run/node";
 import { getUserByUsername } from "~/firebase/utils";
 import { useLoaderData } from "@remix-run/react";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
-import trianglify from "trianglify";
-import { getGravatarUrlWithDefault } from "~/utils/utils";
-
-function generateBackground(emailHash: string) {
-  const pattern = trianglify({
-    width: 1920,
-    height: 1080,
-    seed: emailHash,
-    cellSize: 80,
-    variance: 0.25,
-  });
-
-  const canvas = pattern.toCanvas();
-  return canvas.toDataURL("image/png");
-}
+import { generateBackground, getGravatarUrlWithDefault } from "~/utils/utils";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const username = params.slug;

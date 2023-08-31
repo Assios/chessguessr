@@ -1,45 +1,19 @@
 import { useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
-import { getGravatarUrlWithDefault, isValidPlayerStats } from "~/utils/utils";
+import {
+  generateBackground,
+  getGravatarUrlWithDefault,
+  isValidPlayerStats,
+} from "~/utils/utils";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import {
   updateUsername,
   isUsernameTaken,
   importStatsFromLocalStorage,
 } from "../../firebase/utils";
-import trianglify from "trianglify";
 
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
-
-function generateBackground(emailHash: string) {
-  const seedNumber = Array.from(emailHash).reduce(
-    (acc, char) => acc + char.charCodeAt(0),
-    0
-  );
-
-  const colors = ["#4b6bfc", "#fbbd25", "#11b97f"];
-  const shuffledColors = colors
-    .slice(seedNumber % colors.length)
-    .concat(colors.slice(0, seedNumber % colors.length));
-
-  const cellSize = 20 + (seedNumber % 181);
-  const variance = 0.1 + 0.8 * ((seedNumber % 100) / 100);
-
-  const pattern = trianglify({
-    width: 1920,
-    height: 600,
-    seed: emailHash,
-    cellSize: cellSize,
-    variance: variance,
-    palette: {
-      default: shuffledColors,
-    },
-  });
-
-  const canvas = pattern.toCanvas();
-  return canvas.toDataURL("image/png");
-}
 
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
@@ -197,11 +171,11 @@ export default function Profile() {
           </div>
           <div className="space-y-4 mt-8">
             {!importedDate && localStats && (
-              <div className="p-6 rounded-lg shadow-sm bg-white">
+              <div className="p-6 rounded-lg shadow-sm">
                 <h2 className="text-xl font-bold mb-4">
                   Import your game stats
                 </h2>
-                <p className="text-gray-600">
+                <p>
                   If you've been playing Chessguessr, your stats are saved in
                   your browser. By importing them, you can keep them safe on
                   your account and access them on any device. Please note, stats
@@ -209,7 +183,7 @@ export default function Profile() {
                 </p>
                 <div className="mt-4">
                   <h3 className="font-semibold mb-2">Your Local Stats:</h3>
-                  <ul className="list-disc ml-4 text-gray-600">
+                  <ul className="list-disc ml-4">
                     <li>Games Played: {localStats.gamesPlayed}</li>
                     <li>Current Streak: {localStats.currentStreak}</li>
                     <li>Guess distribution:</li>
@@ -224,7 +198,7 @@ export default function Profile() {
                 </div>
                 <div className="mt-4">
                   <button
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     onClick={importLocalStorageStats}
                   >
                     Import Stats to Account
@@ -233,7 +207,7 @@ export default function Profile() {
               </div>
             )}
             {message && (
-              <div className="p-6 rounded-lg shadow-sm bg-white text-center font-semibold text-red-500 mb-4">
+              <div className="p-6 rounded-lg shadow-sm text-center font-semibold text-red-500 mb-4">
                 {message}
               </div>
             )}
