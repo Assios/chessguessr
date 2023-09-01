@@ -5271,7 +5271,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2023-09-02",
       fen: "rnbq1rk1/p5bp/3Pp1p1/1pp1P3/2p3n1/2N2N2/PP3PP1/R1BQKB1R w KQ - 0 12",
-      solution: ["Rxh7+", "Kxh7", "Ng5+", "Kg8", "Qxg4"],
+      solution: ["Rxh7", "Kxh7", "Ng5+", "Kg8", "Qxg4"],
       gameUrl:
         "https://lichess.org/broadcast/san-christobal-de-la-laguna/round-8/XYHI5xok/HK1al1RW#22",
       white: "Miaoyi Lu",
