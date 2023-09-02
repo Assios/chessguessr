@@ -124,24 +124,6 @@ export default function Login() {
             </div>
           )}
 
-          <div className="relative mt-10">
-            <div className="relative flex justify-center text-sm font-medium leading-6">
-              <span className="px-6">Or continue with</span>
-            </div>
-          </div>
-
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <button className="flex w-full items-center justify-center gap-3 rounded-md bg-[#1D9BF0] px-3 py-1.5 text-white">
-              <span className="text-sm font-semibold leading-6">Twitter</span>
-            </button>
-            <button
-              className="flex w-full items-center justify-center gap-3 rounded-md bg-[#24292F] px-3 py-1.5 text-white"
-              onClick={handleGoogleLogin}
-            >
-              <span className="text-sm font-semibold leading-6">Google</span>
-            </button>
-          </div>
-
           <p className="mt-10 text-center text-sm text-gray-500">
             Don't have an account?{" "}
             <a

@@ -17,7 +17,9 @@ export default function SignUp() {
     return emailRegex.test(email);
   };
 
-  const handleSignUp = async () => {
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
     if (loading) return;
 
     if (!email || !isValidEmail(email)) {
@@ -62,66 +64,99 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="mt-4 w-full max-w-md p-8 m-4 shadow-md rounded">
-        <h2 className="text-2xl font-bold mb-5 text-center">Sign Up</h2>
+    <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight">
+          Sign up for Chessguessr
+        </h2>
+      </div>
 
-        <div className="form-control w-full max-w-xs">
-          <label className="label" htmlFor="username">
-            <span className="label-text">Username</span>
-          </label>
-          <input
-            type="text"
-            className="input input-bordered input-primary w-full max-w-xs"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            maxLength={16}
-          />
-        </div>
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+        <div className="px-6 py-12 shadow sm:rounded-lg sm:px-12">
+          <form className="space-y-6" onSubmit={handleSignUp}>
+            <div>
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium leading-6"
+              >
+                Username
+              </label>
+              <div className="mt-2">
+                <input
+                  id="username"
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  maxLength={16}
+                  className="input input-bordered block w-full border-0 py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
 
-        <div className="form-control w-full max-w-xs">
-          <label className="label" htmlFor="email">
-            <span className="label-text">Email</span>
-          </label>
-          <input
-            type="email"
-            className="input input-bordered input-primary w-full max-w-xs"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium leading-6"
+              >
+                Email
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="input input-bordered block w-full border-0 py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
 
-        <div className="form-control w-full max-w-xs">
-          <label className="label" htmlFor="password">
-            <span className="label-text">Password</span>
-          </label>
-          <input
-            type="password"
-            className="input input-bordered input-primary w-full max-w-xs"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium leading-6"
+              >
+                Password
+              </label>
+              <div className="mt-2">
+                <input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="input input-bordered block w-full border-0 py-1.5 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
 
-        <div className="mb-4">
-          <button className="mt-6 btn btn-primary" onClick={handleSignUp}>
-            {loading ? "Signing up..." : "Sign Up"}
-          </button>
-        </div>
+            <div>
+              <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                {loading ? "Signing up..." : "Sign Up"}
+              </button>
+            </div>
+          </form>
 
-        {message && (
-          <div className="text-center font-semibold text-red-500">
-            {message}
-          </div>
-        )}
-        <div className="text-center">
-          Already registered?{" "}
-          <a href="/login" className="text-blue-500 underline">
-            Log in
-          </a>
+          {message && (
+            <div className="text-center font-semibold text-red-500 mb-4">
+              {message}
+            </div>
+          )}
+
+          <p className="mt-10 text-center text-sm text-gray-500">
+            Already have an account?{" "}
+            <a
+              href="/login"
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Log in
+            </a>
+          </p>
         </div>
       </div>
     </div>
