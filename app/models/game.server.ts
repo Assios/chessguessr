@@ -5283,5 +5283,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 438,
       event: "San Christobal de la Laguna",
     },
+    {
+      date: "2023-09-03",
+      fen: "4r2k/2q2pp1/3RP2p/p1p2P2/2Pn3P/6Q1/P5P1/4R1K1 b - - 0 32",
+      solution: ["Nxf5", "exf7", "Rxe1+", "Qxe1", "Qxd6"],
+      gameUrl: "https://lichess.org/3bsKPzXz/black#63",
+      white: "eMaga",
+      black: "Beaurodar",
+      wRating: 1657,
+      bRating: 1733,
+      id: 439,
+    },
   ];
 }
