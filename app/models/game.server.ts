@@ -5305,5 +5305,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1675,
       id: 440,
     },
+    {
+      date: "2023-09-05",
+      fen: "r1bq1rk1/5ppp/p2p1b2/1p2n3/3NP3/P6P/1PBB1PP1/R2QR1K1 b - - 0 18",
+      solution: ["Nd3", "Nc6", "Nxf2", "Qxf3", "Nxh3+"],
+      gameUrl: "https://lichess.org/FbZwnwwn#35",
+      white: "Mikhail Tal",
+      black: "Paul Keres",
+      event: "Candidates, 1962",
+      wRating: null,
+      bRating: null,
+      id: 441,
+    },
   ];
 }
