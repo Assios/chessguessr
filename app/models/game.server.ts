@@ -5308,7 +5308,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2023-09-05",
       fen: "r1bq1rk1/5ppp/p2p1b2/1p2n3/3NP3/P6P/1PBB1PP1/R2QR1K1 b - - 0 18",
-      solution: ["Nd3", "Nc6", "Nxf2", "Qxf3", "Nxh3+"],
+      solution: ["Nd3", "Nc6", "Nxf2", "Qf3", "Nxh3+"],
       gameUrl: "https://lichess.org/FbZwnwwn#35",
       white: "Mikhail Tal",
       black: "Paul Keres",
@@ -5316,6 +5316,21 @@ export async function getGames(): Promise<Array<GameType>> {
       wRating: null,
       bRating: null,
       id: 441,
+    },
+    {
+      date: "2023-09-06",
+      fen: "1q4k1/pp4pp/4b3/2p5/4P3/3P2nP/PPn1NRP1/5Q1K w - - 4 27",
+      solution: ["Nxg3", "Ne3", "Qe1", "Qxg3", "Rf8+"],
+      gameUrl: "https://lichess.org/qp2nvue5/white#52",
+      white: "manwithavan",
+      black: "recapture",
+      wTitle: "GM",
+      bTitle: "GM",
+      wAka: "Magnus Carlsen",
+      bAka: "Aryan Tari",
+      wRating: 2573,
+      bRating: 2411,
+      id: 442,
     },
   ];
 }
