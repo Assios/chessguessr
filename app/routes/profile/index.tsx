@@ -13,7 +13,7 @@ import {
   importStatsFromLocalStorage,
   getUserActivities,
 } from "../../firebase/utils";
-
+import { achievements, Achievement } from "~/models/achievements";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { AiFillStar } from "react-icons/ai";
 import { FaTrophy } from "react-icons/fa";
@@ -39,6 +39,7 @@ export default function Profile() {
   const [canUpdateUsername, setCanUpdateUsername] = useState(true);
   const [timeLeftToUpdate, setTimeLeftToUpdate] = useState("");
   const [localStats, setLocalStats] = useLocalStorage("cg-stats", null);
+  const [userAchievements, setUserAchievements] = useState<Achievement[]>([]);
 
   const [importedDate, setImportedDate] = useState<string | null>(null);
 
@@ -51,6 +52,17 @@ export default function Profile() {
       });
     }
   }, [user]);
+
+  useEffect(() => {
+    if (user && user.achievements) {
+      const userAchievementsData = achievements.filter((ach) =>
+        user.achievements.includes(ach.id)
+      );
+      setUserAchievements(userAchievementsData);
+    }
+  }, [user]);
+
+  console.log("u", userAchievements);
 
   const activityIcon = (type: string) => {
     switch (type) {
@@ -277,6 +289,35 @@ export default function Profile() {
                       </div>
                     </li>
                   ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-6 shadow overflow-hidden rounded-lg max-w-2xl mx-auto mb-8">
+              <div className="px-4 py-5 sm:px-6">
+                <h2 className="text-lg leading-6 font-medium">Achievements</h2>
+              </div>
+              <div className="px-4 py-5 sm:px-6">
+                <ul role="list">
+                  {userAchievements.length > 0 ? (
+                    userAchievements.map((achievement, index) => (
+                      <li key={index}>
+                        <div className="flex justify-between">
+                          <span>{achievement.title}</span>
+                          {achievement.iconUrl && (
+                            <img
+                              src={achievement.iconUrl}
+                              alt={achievement.title}
+                              width={24}
+                              height={24}
+                            />
+                          )}
+                        </div>
+                      </li>
+                    ))
+                  ) : (
+                    <li>No achievements earned yet.</li>
+                  )}
                 </ul>
               </div>
             </div>
