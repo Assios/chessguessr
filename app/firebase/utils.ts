@@ -9,6 +9,9 @@ import {
   serverTimestamp,
   arrayUnion,
   runTransaction,
+  collection,
+  query,
+  getDocs,
 } from "firebase/firestore";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 import CryptoJS from "crypto-js";
@@ -65,6 +68,8 @@ export async function saveNewUser(
   const userRef = doc(db, "users", uid);
   const usernameRef = doc(db, "usernames", username);
 
+  const activityRef = doc(collection(db, "users", uid, "activities"));
+
   const batch = writeBatch(db);
 
   batch.set(userRef, {
@@ -76,6 +81,12 @@ export async function saveNewUser(
   });
 
   batch.set(usernameRef, { uid });
+
+  batch.set(activityRef, {
+    type: "signup",
+    message: "Signed up",
+    timestamp: serverTimestamp(),
+  });
 
   await batch.commit();
 }
@@ -231,4 +242,41 @@ export async function getUserByUsername(
   }
 
   return null;
+}
+
+export async function getUserActivities(uid: string): Promise<any[]> {
+  const activitiesRef = collection(db, "users", uid, "activities");
+  const q = query(activitiesRef);
+  const querySnapshot = await getDocs(q);
+
+  const activities = [];
+  querySnapshot.forEach((doc) => {
+    activities.push(doc.data());
+  });
+
+  return activities;
+}
+
+export async function addActivityToFeed(
+  uid: string,
+  type: string,
+  message: string
+): Promise<void> {
+  const activityRef = doc(collection(db, "users", uid, "activities"));
+
+  try {
+    await setDoc(
+      activityRef,
+      {
+        type: type,
+        message: message,
+        timestamp: serverTimestamp(),
+      },
+      { merge: true }
+    );
+
+    console.log(`Activity added successfully for UID: ${uid}.`);
+  } catch (error) {
+    console.error(`Failed to add activity for UID: ${uid}.`, error);
+  }
 }

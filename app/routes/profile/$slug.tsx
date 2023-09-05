@@ -1,7 +1,6 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { getUserByUsername } from "~/firebase/utils";
 import { useLoaderData } from "@remix-run/react";
-import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { generateBackground, getGravatarUrlWithDefault } from "~/utils/utils";
 
 export const loader: LoaderFunction = async ({ params }) => {

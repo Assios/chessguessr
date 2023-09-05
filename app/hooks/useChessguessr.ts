@@ -12,6 +12,7 @@ import {
   Guess,
 } from "~/utils/types";
 import {
+  addActivityToFeed,
   incrementFailed,
   incrementSolved,
   updateFirstSolverAndAchievement,
@@ -294,6 +295,12 @@ const useChessguessr = (
             user.uid,
             user.username,
             "first-to-solve"
+          );
+
+          addActivityToFeed(
+            user.uid,
+            "firstSolver",
+            "First to solve a daily Chessguessr"
           );
         } else {
           console.log("USER", user);

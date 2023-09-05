@@ -11,9 +11,24 @@ import {
   updateUsername,
   isUsernameTaken,
   importStatsFromLocalStorage,
+  getUserActivities,
 } from "../../firebase/utils";
 
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
+import { AiFillStar } from "react-icons/ai";
+import { FaTrophy } from "react-icons/fa";
+
+const formatDate = (timestamp: {
+  seconds: number;
+  nanoseconds: number;
+}): string => {
+  const date = new Date(timestamp.seconds * 1000);
+  return date.toLocaleString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};
 
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
@@ -26,6 +41,29 @@ export default function Profile() {
   const [localStats, setLocalStats] = useLocalStorage("cg-stats", null);
 
   const [importedDate, setImportedDate] = useState<string | null>(null);
+
+  const [activities, setActivities] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (user) {
+      getUserActivities(user.uid).then((data) => {
+        setActivities(data);
+      });
+    }
+  }, [user]);
+
+  const activityIcon = (type: string) => {
+    switch (type) {
+      case "signup":
+        return (
+          <EnvelopeIcon className="h-5 w-5 text-white" aria-hidden="true" />
+        );
+      case "firstSolver":
+        return <AiFillStar className="h-5 w-5 text-white" aria-hidden="true" />;
+      default:
+        return <FaTrophy className="h-5 w-5 text-white" aria-hidden="true" />;
+    }
+  };
 
   useEffect(() => {
     if (user && user.importedLocalStorageDate) {
@@ -169,7 +207,7 @@ export default function Profile() {
               </>
             )}
           </div>
-          <div className="space-y-4 mt-8">
+          <div className="mt-8">
             {!importedDate && localStats && (
               <div className="p-6 rounded-lg shadow-sm">
                 <h2 className="text-xl font-bold mb-4">
@@ -206,6 +244,43 @@ export default function Profile() {
                 </div>
               </div>
             )}
+            <div className="mt-6 shadow overflow-hidden rounded-lg max-w-2xl mx-auto mb-8">
+              <div className="px-4 py-5 sm:px-6">
+                <h2 className="text-lg leading-6 font-medium">Activity</h2>
+              </div>
+              <div className="flow-root px-4 py-5 sm:px-6">
+                <ul role="list" className="-mb-8">
+                  {activities.map((event, eventIdx) => (
+                    <li key={eventIdx}>
+                      <div className="relative pb-8">
+                        {eventIdx !== activities.length - 1 ? (
+                          <span
+                            className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-300"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
+                          <div>
+                            <span className="h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white bg-blue-500">
+                              {activityIcon(event.type)}
+                            </span>
+                          </div>
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                            <div>
+                              <p className="text-sm">{event.message}</p>
+                            </div>
+                            <div className="whitespace-nowrap text-right text-sm">
+                              <time>{formatDate(event.timestamp)}</time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
             {message && (
               <div className="p-6 rounded-lg shadow-sm text-center font-semibold text-red-500 mb-4">
                 {message}
