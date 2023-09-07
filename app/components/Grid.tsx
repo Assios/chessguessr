@@ -1,14 +1,7 @@
 import { Row } from "./Row";
 import styled from "styled-components";
 import { GridProps } from "../utils/types";
-import {
-  FaChessKing,
-  FaChessQueen,
-  FaChessBishop,
-  FaChessPawn,
-  FaChessRook,
-  FaChessKnight,
-} from "react-icons/fa";
+import { convertToIcon } from "~/utils/utils";
 
 const StyledGrid = styled.div`
   margin-left: 1rem;
@@ -18,53 +11,6 @@ const StyledGrid = styled.div`
     margin-top: 2rem;
   }
 `;
-
-export const convertToIcon = (move: string) => {
-  if (!move) return "";
-
-  if (move[0].toLowerCase() === move[0] && /[a-h]/.test(move[0])) {
-    return (
-      <>
-        <FaChessPawn /> {move}
-      </>
-    );
-  }
-
-  switch (move[0]) {
-    case "K":
-      return (
-        <>
-          <FaChessKing /> {move.substr(1)}
-        </>
-      );
-    case "Q":
-      return (
-        <>
-          <FaChessQueen /> {move.substr(1)}
-        </>
-      );
-    case "B":
-      return (
-        <>
-          <FaChessBishop /> {move.substr(1)}
-        </>
-      );
-    case "N":
-      return (
-        <>
-          <FaChessKnight /> {move.substr(1)}
-        </>
-      );
-    case "R":
-      return (
-        <>
-          <FaChessRook /> {move.substr(1)}
-        </>
-      );
-    default:
-      return move;
-  }
-};
 
 export const Grid = ({
   currentGuess,
