@@ -8,6 +8,7 @@ import {
   countdownRenderer,
   midnightUtcTomorrow,
   GameLink,
+  convertToIcon,
 } from "~/utils/utils";
 import { useOutletContext } from "@remix-run/react";
 
@@ -59,7 +60,7 @@ const Correct = ({ game, puzzleStats }) => {
             tutorial={true}
             key={`${move}-${i}`}
           >
-            {move}
+            {convertToIcon(move)}
           </Tile>
         ))}
       </div>
@@ -103,7 +104,7 @@ const Failed = ({ game, puzzleStats }) => {
             animationIndex={i * 0.2}
             tutorial={true}
           >
-            {move}
+            {convertToIcon(move)}
           </Tile>
         ))}
       </div>

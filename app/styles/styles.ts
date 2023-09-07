@@ -129,7 +129,10 @@ export const Tile = styled.div<TileProps>`
   height: ${(props) => (props.tutorial ? "60px" : "107px")};
   line-height: ${(props) => (props.tutorial ? "60px" : "107px")};
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border: 2px solid #d3d6da;
 
   justify-content: center;
