@@ -5343,5 +5343,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1960,
       id: 443,
     },
+    {
+      date: "2023-09-08",
+      fen: "r4r1k/pp2qbpp/4p3/2ppP3/6Q1/2PBPR2/PP4PP/R5K1 w - - 3 19",
+      solution: ["Rh3", "Bg8", "Bxh7", "Bxh7", "Qg6"],
+      gameUrl: "https://lichess.org/ALk8kl1J/white#36",
+      white: "bolarpear",
+      black: "giantgooga2",
+      wRating: 2376,
+      bRating: 2370,
+      id: 444,
+    },
   ];
 }
