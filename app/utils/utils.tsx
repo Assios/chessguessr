@@ -3,6 +3,15 @@ import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 import trianglify from "trianglify";
 
+import {
+  FaChessBishop,
+  FaChessKing,
+  FaChessKnight,
+  FaChessPawn,
+  FaChessQueen,
+  FaChessRook,
+} from "react-icons/fa";
+
 export const arraysEqual = (a: any, b: any) => {
   if (a === b) return true;
   if (a == null || b == null) return false;
@@ -60,7 +69,7 @@ export const GameLink = ({ game }) => {
 
 export const guessifySolution = (game) => {
   return game.solution.map((move) => ({
-    move,
+    move: convertToIcon(move),
     color: "green",
     pieceColor: "regular",
   }));
@@ -167,4 +176,51 @@ export const generateBackground = (emailHash: string) => {
 
   const canvas = pattern.toCanvas();
   return canvas.toDataURL("image/png");
-};
+}
+
+export const convertToIcon = (move: string) => {
+  if (!move) return "";
+
+  if (move[0].toLowerCase() === move[0] && /[a-h]/.test(move[0])) {
+    return (
+      <>
+        <FaChessPawn /> {move}
+      </>
+    );
+  }
+
+  switch (move[0]) {
+    case "K":
+      return (
+        <>
+          <FaChessKing /> {move.substr(1)}
+        </>
+      );
+    case "Q":
+      return (
+        <>
+          <FaChessQueen /> {move.substr(1)}
+        </>
+      );
+    case "B":
+      return (
+        <>
+          <FaChessBishop /> {move.substr(1)}
+        </>
+      );
+    case "N":
+      return (
+        <>
+          <FaChessKnight /> {move.substr(1)}
+        </>
+      );
+    case "R":
+      return (
+        <>
+          <FaChessRook /> {move.substr(1)}
+        </>
+      );
+    default:
+      return move;
+  }
+}
