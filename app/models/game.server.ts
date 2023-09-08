@@ -5354,5 +5354,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2370,
       id: 444,
     },
+    {
+      date: "2023-09-09",
+      fen: "3rr2k/1pqb2b1/p5Qp/4P3/2B5/PP6/1B3PPP/R5K1 w - - 3 24",
+      solution: ["e6", "Bxb2", "Qxh6+", "Kg8", "exd7+"],
+      gameUrl: "https://lichess.org/3tPM8dKN/white#46",
+      white: "A380isthebest",
+      black: "zexkex",
+      wRating: 2430,
+      bRating: 2443,
+      id: 445,
+    },
   ];
 }
