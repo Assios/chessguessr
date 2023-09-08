@@ -33,7 +33,7 @@ export interface AppUser {
   emailHash: string;
   lastUpdatedUsername: any;
   importedLocalStorageDate: string | null;
-  achievements: Achievement[];
+  achievements: string[];
 }
 
 interface AuthContextType {

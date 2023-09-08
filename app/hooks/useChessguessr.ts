@@ -300,7 +300,7 @@ const useChessguessr = (
           addActivityToFeed(
             user.uid,
             "firstSolver",
-            "First to solve a daily Chessguessr"
+            "Achievement: First to solve a daily Chessguessr"
           );
         } else {
           console.log("USER", user);
