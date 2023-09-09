@@ -46,7 +46,7 @@ export default function TutorialModal({
                       animationIndex={1}
                       tutorial={true}
                     >
-                      Nd5
+                      {convertToIcon("Nd5")}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
                       {convertToIcon("Nbxd5")}
