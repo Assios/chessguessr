@@ -12,6 +12,7 @@ import {
   collection,
   query,
   getDocs,
+  orderBy,
 } from "firebase/firestore";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 import CryptoJS from "crypto-js";
@@ -246,7 +247,7 @@ export async function getUserByUsername(
 
 export async function getUserActivities(uid: string): Promise<any[]> {
   const activitiesRef = collection(db, "users", uid, "activities");
-  const q = query(activitiesRef);
+  const q = query(activitiesRef, orderBy("timestamp", "desc"));
   const querySnapshot = await getDocs(q);
 
   const activities = [];
@@ -260,20 +261,22 @@ export async function getUserActivities(uid: string): Promise<any[]> {
 export async function addActivityToFeed(
   uid: string,
   type: string,
-  message: string
+  message: string,
+  puzzleId?: number,
+  url?: string
 ): Promise<void> {
   const activityRef = doc(collection(db, "users", uid, "activities"));
 
+  const activityData = {
+    type: type,
+    message: message,
+    timestamp: serverTimestamp(),
+    puzzleId: puzzleId,
+    url: url,
+  };
+
   try {
-    await setDoc(
-      activityRef,
-      {
-        type: type,
-        message: message,
-        timestamp: serverTimestamp(),
-      },
-      { merge: true }
-    );
+    await setDoc(activityRef, activityData, { merge: true });
 
     console.log(`Activity added successfully for UID: ${uid}.`);
   } catch (error) {

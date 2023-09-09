@@ -297,10 +297,16 @@ const useChessguessr = (
             "first-to-solve"
           );
 
+          const puzzleId = game.id;
+          const puzzleUrl = `/games/${puzzleId}`;
+          const message = `First to solve Chessguessr #${puzzleId}`;
+
           addActivityToFeed(
             user.uid,
             "firstSolver",
-            "Achievement: First to solve a daily Chessguessr"
+            message,
+            game.id,
+            puzzleUrl
           );
         } else {
           console.log("USER", user);

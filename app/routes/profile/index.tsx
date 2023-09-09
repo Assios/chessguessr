@@ -279,7 +279,19 @@ export default function Profile() {
                           </div>
                           <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
-                              <p className="text-sm">{event.message}</p>
+                              {event.type === "firstSolver" ? (
+                                <p className="text-sm">
+                                  First to solve{" "}
+                                  <a
+                                    href={event.url}
+                                    className="text-blue-600 hover:underline"
+                                  >
+                                    Chessguessr #{event.puzzleId}
+                                  </a>
+                                </p>
+                              ) : (
+                                <p className="text-sm">{event.message}</p>
+                              )}
                             </div>
                             <div className="whitespace-nowrap text-right text-sm">
                               <time>{formatDate(event.timestamp)}</time>
