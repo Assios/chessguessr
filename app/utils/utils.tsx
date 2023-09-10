@@ -89,6 +89,8 @@ export const useHotkeys = (
 };
 
 export const convertToIcon = (move: string) => {
+  return move;
+
   if (!move) return "";
 
   if (move[0].toLowerCase() === move[0] && /[a-h]/.test(move[0])) {
