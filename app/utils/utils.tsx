@@ -176,7 +176,7 @@ export const generateBackground = (emailHash: string) => {
 
   const canvas = pattern.toCanvas();
   return canvas.toDataURL("image/png");
-}
+};
 
 export const convertToIcon = (move: string) => {
   if (!move) return "";
@@ -223,4 +223,4 @@ export const convertToIcon = (move: string) => {
     default:
       return move;
   }
-}
+};

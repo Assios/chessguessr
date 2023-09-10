@@ -13,6 +13,7 @@ import {
 } from "~/utils/types";
 import {
   addActivityToFeed,
+  hasPlayedDaily,
   incrementFailed,
   incrementSolved,
   updateFirstSolverAndAchievement,
@@ -250,6 +251,23 @@ const useChessguessr = (
           };
         });
 
+        const puzzleId = game.id;
+        const puzzleUrl = `/games/${puzzleId}`;
+        const playedMessage = `Played Chessguessr #${puzzleId}`;
+
+        if (!hasPlayedDaily) {
+          addActivityToFeed(
+            user.uid,
+            "playedPuzzle",
+            playedMessage,
+            game.id,
+            puzzleUrl,
+            "failed"
+          );
+        } else {
+          console.log("This puzzle has already been played");
+        }
+
         incrementFailed(game.id);
         trackEvent("Submit daily", { props: { result: "Failed" } });
       }
@@ -286,7 +304,23 @@ const useChessguessr = (
           };
         });
 
-        console.log("GAmeId", game.id);
+        const puzzleId = game.id;
+        const puzzleUrl = `/games/${puzzleId}`;
+
+        const playedMessage = `Played Chessguessr #${puzzleId}`;
+
+        if (!hasPlayedDaily) {
+          addActivityToFeed(
+            user.uid,
+            "playedPuzzle",
+            playedMessage,
+            game.id,
+            puzzleUrl,
+            "solved"
+          );
+        } else {
+          console.log("This puzzle has already been played");
+        }
 
         if (user && !firstSolver) {
           console.log("first-to-solve");

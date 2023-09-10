@@ -13,6 +13,8 @@ import {
   query,
   getDocs,
   orderBy,
+  addDoc,
+  where,
 } from "firebase/firestore";
 import { AppUser, PlayerStats } from "~/components/AuthProvider/AuthProvider";
 import CryptoJS from "crypto-js";
@@ -263,23 +265,62 @@ export async function addActivityToFeed(
   type: string,
   message: string,
   puzzleId?: number,
-  url?: string
+  url?: string,
+  status?: string
 ): Promise<void> {
-  const activityRef = doc(collection(db, "users", uid, "activities"));
+  const activitiesCollection = collection(db, "users", uid, "activities");
 
-  const activityData = {
+  const activityData: any = {
     type: type,
     message: message,
     timestamp: serverTimestamp(),
-    puzzleId: puzzleId,
-    url: url,
   };
 
+  if (puzzleId !== undefined) {
+    activityData.puzzleId = puzzleId;
+  }
+
+  if (url !== undefined) {
+    activityData.url = url;
+  }
+
+  if (status !== undefined) {
+    activityData.status = status;
+  }
+
   try {
-    await setDoc(activityRef, activityData, { merge: true });
+    await addDoc(activitiesCollection, activityData);
 
     console.log(`Activity added successfully for UID: ${uid}.`);
   } catch (error) {
     console.error(`Failed to add activity for UID: ${uid}.`, error);
   }
+}
+
+function getStartAndEndOfDay(): { startOfDay: Date; endOfDay: Date } {
+  const now = new Date();
+  const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const endOfDay = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate() + 1
+  );
+
+  return { startOfDay, endOfDay };
+}
+
+export async function hasPlayedDaily(uid: string): Promise<boolean> {
+  const { startOfDay, endOfDay } = getStartAndEndOfDay();
+  const activitiesCollection = collection(db, "users", uid, "activities");
+
+  const querySnapshot = await getDocs(
+    query(
+      activitiesCollection,
+      where("type", "==", "playedDaily"),
+      where("timestamp", ">=", startOfDay),
+      where("timestamp", "<", endOfDay)
+    )
+  );
+
+  return !querySnapshot.empty;
 }
