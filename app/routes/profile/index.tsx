@@ -289,7 +289,7 @@ export default function Profile() {
                                     Chessguessr #{event.puzzleId}
                                   </a>
                                 </p>
-                              ) : event.type === "playedPuzzle" ? (
+                              ) : event.type === "playedDaily" ? (
                                 <p className="text-sm">
                                   Played{" "}
                                   <a
