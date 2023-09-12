@@ -5400,5 +5400,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2045,
       id: 448,
     },
+    {
+      date: "2023-09-13",
+      fen: "rnbq1rk1/pp1n1ppp/4p3/1NbpP3/3p4/3B1N2/PPP2PPP/R1BQ1RK1 w - - 4 9",
+      solution: ["Bxh7+", "Kxh7", "Ng5+", "Kg6", "Qg4"],
+      gameUrl: "https://lichess.org/R1CrHNMf/white#16",
+      white: "Girisakti70",
+      black: "Bharath2006",
+      wRating: 2264,
+      bRating: 2013,
+      id: 449,
+    },
   ];
 }
