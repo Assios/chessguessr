@@ -289,6 +289,25 @@ export default function Profile() {
                                     Chessguessr #{event.puzzleId}
                                   </a>
                                 </p>
+                              ) : event.type === "playedPuzzle" ? (
+                                <p className="text-sm">
+                                  Played{" "}
+                                  <a
+                                    href={event.url}
+                                    className="text-blue-600 hover:underline"
+                                  >
+                                    Chessguessr #{event.puzzleId}
+                                  </a>{" "}
+                                  {event.status === "solved" ? (
+                                    <span className="ml-2 text-green-500">
+                                      ✅
+                                    </span>
+                                  ) : (
+                                    <span className="ml-2 text-red-500">
+                                      ❌
+                                    </span>
+                                  )}
+                                </p>
                               ) : (
                                 <p className="text-sm">{event.message}</p>
                               )}
