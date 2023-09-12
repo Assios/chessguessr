@@ -21,8 +21,6 @@ export default function UserProfile() {
   const data = useLoaderData();
   const user = data.user;
 
-  console.log("u", user);
-
   const profile = user
     ? {
         name: user.username,

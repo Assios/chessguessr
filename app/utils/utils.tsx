@@ -226,3 +226,15 @@ export const convertToIcon = (move: string) => {
       return move;
   }
 };
+
+export const formatDate = (timestamp: {
+  seconds: number;
+  nanoseconds: number;
+}): string => {
+  const date = new Date(timestamp.seconds * 1000);
+  return date.toLocaleString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};

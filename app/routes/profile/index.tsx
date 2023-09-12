@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import {
+  formatDate,
   generateBackground,
   getGravatarUrlWithDefault,
   isValidPlayerStats,
@@ -17,18 +18,6 @@ import { achievements, Achievement } from "~/models/achievements";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { AiFillStar } from "react-icons/ai";
 import { FaTrophy } from "react-icons/fa";
-
-const formatDate = (timestamp: {
-  seconds: number;
-  nanoseconds: number;
-}): string => {
-  const date = new Date(timestamp.seconds * 1000);
-  return date.toLocaleString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-};
 
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
