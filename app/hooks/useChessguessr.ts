@@ -346,6 +346,11 @@ const useChessguessr = (
             game.id,
             puzzleUrl
           );
+
+          toast.success(
+            "Congrats! You are the first user to solve today's Chessguessr 🥳",
+            { duration: 6000 }
+          );
         } else {
           console.log("USER", user);
         }
