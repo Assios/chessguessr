@@ -227,7 +227,7 @@ const useChessguessr = (
     return formattedGuess;
   };
 
-  const addGuess = (formattedGuess: any) => {
+  const addGuess = async (formattedGuess: any) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
@@ -255,10 +255,12 @@ const useChessguessr = (
         const puzzleUrl = `/games/${puzzleId}`;
         const playedMessage = `Played Chessguessr #${puzzleId}`;
 
-        if (!hasPlayedDaily) {
+        const playedDaily = await hasPlayedDaily(user.uid);
+
+        if (!playedDaily) {
           addActivityToFeed(
             user.uid,
-            "playedPuzzle",
+            "playedDaily",
             playedMessage,
             game.id,
             puzzleUrl,
@@ -309,10 +311,12 @@ const useChessguessr = (
 
         const playedMessage = `Played Chessguessr #${puzzleId}`;
 
-        if (!hasPlayedDaily) {
+        const playedDaily = await hasPlayedDaily(user.uid);
+
+        if (!playedDaily) {
           addActivityToFeed(
             user.uid,
-            "playedPuzzle",
+            "playedDaily",
             playedMessage,
             game.id,
             puzzleUrl,
