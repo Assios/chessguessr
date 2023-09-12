@@ -62,8 +62,6 @@ export default function Profile() {
     }
   }, [user]);
 
-  console.log("u", userAchievements);
-
   const activityIcon = (type: string) => {
     switch (type) {
       case "signup":
@@ -325,29 +323,46 @@ export default function Profile() {
             </div>
 
             <div className="mt-6 shadow overflow-hidden rounded-lg max-w-2xl mx-auto mb-8">
-              <div className="px-4 py-5 sm:px-6">
-                <h2 className="text-lg leading-6 font-medium">Achievements</h2>
-              </div>
-              <div className="px-4 py-5 sm:px-6">
-                <ul role="list">
+              <div className="px-4 py-5 sm:px-6 shadow rounded-lg">
+                <h2 className="text-xl font-semibold mb-4">Achievements</h2>
+                <ul role="list" className="space-y-4">
                   {userAchievements.length > 0 ? (
                     userAchievements.map((achievement, index) => (
-                      <li key={index}>
-                        <div className="flex justify-between">
-                          <span>{achievement.title}</span>
-                          {achievement.iconUrl && (
-                            <img
-                              src={achievement.iconUrl}
-                              alt={achievement.title}
-                              width={24}
-                              height={24}
-                            />
+                      <li
+                        key={index}
+                        className="bg-gray-100 p-4 rounded-lg shadow-md flex items-center space-x-4"
+                      >
+                        {achievement.iconUrl ? (
+                          <img
+                            src={achievement.iconUrl}
+                            alt={achievement.title}
+                            width={36}
+                            height={36}
+                            className="rounded-full"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center">
+                            <span className="text-xl font-bold">
+                              {achievement.title.charAt(0)}
+                            </span>
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="text-lg font-medium text-gray-600">
+                            {achievement.title}
+                          </h3>
+                          {achievement.description && (
+                            <p className="text-sm text-gray-600">
+                              {achievement.description}
+                            </p>
                           )}
                         </div>
                       </li>
                     ))
                   ) : (
-                    <li>No achievements earned yet.</li>
+                    <li className="text-center text-gray-500">
+                      No achievements earned yet.
+                    </li>
                   )}
                 </ul>
               </div>
