@@ -5416,6 +5416,17 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-09-14",
+      fen: "r1b1k2r/ppp2pp1/2P1p2p/1Q6/1b1q4/2N5/PPP2PPP/R3KBNR b KQkq - 0 9",
+      solution: ["Bxc3+", "bxc3", "Qxc3+", "Ke2", "bxc6"],
+      gameUrl: "https://lichess.org/0po2MA0m/black#17",
+      white: "leonardo1313",
+      black: "AndresValenciaUQ",
+      wRating: 1701,
+      bRating: 1808,
+      id: 450,
+    },
+    {
+      date: "2023-09-15",
       fen: "rnbq1rk1/pp1n1ppp/4p3/1NbpP3/3p4/3B1N2/PPP2PPP/R1BQ1RK1 w - - 4 9",
       solution: ["Bxh7+", "Kxh7", "Ng5+", "Kg6", "Qg4"],
       gameUrl: "https://lichess.org/R1CrHNMf/white#16",
@@ -5423,7 +5434,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Bharath2006",
       wRating: 2264,
       bRating: 2013,
-      id: 450,
+      id: 451,
     },
   ];
 }
