@@ -5402,6 +5402,20 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-09-13",
+      fen: "6k1/3n1pbp/nq1p2p1/1p1P4/1Pr1PBP1/1QpN1P2/4B2P/R6K b - - 0 32",
+      solution: ["Nxb4", "Nxb4", "Qf2", "Ra2", "Bd4"],
+      gameUrl: "https://lichess.org/fDo4yfsM#63",
+      white: "Vidit Gujrathi",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Speed Chess Championship 2023",
+      wRating: 2954,
+      bRating: 3363,
+      id: 449,
+    },
+    {
+      date: "2023-09-14",
       fen: "rnbq1rk1/pp1n1ppp/4p3/1NbpP3/3p4/3B1N2/PPP2PPP/R1BQ1RK1 w - - 4 9",
       solution: ["Bxh7+", "Kxh7", "Ng5+", "Kg6", "Qg4"],
       gameUrl: "https://lichess.org/R1CrHNMf/white#16",
@@ -5409,7 +5423,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Bharath2006",
       wRating: 2264,
       bRating: 2013,
-      id: 449,
+      id: 450,
     },
   ];
 }
