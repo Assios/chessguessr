@@ -5436,5 +5436,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2013,
       id: 451,
     },
+    {
+      date: "2023-09-16",
+      fen: "rr4k1/2q3bp/b1p3p1/p1B2p2/2P1p3/1P5P/P1B1QPP1/R2R2K1 b - - 1 19",
+      solution: ["Bxa1", "Bd6", "Qg7", "Bxb8", "Rxb8"],
+      gameUrl: "https://lichess.org/bxgZyOQB/black#37",
+      white: "E4d4",
+      black: "purzelbaumer",
+      bTitle: "IM",
+      wRating: 2014,
+      bRating: 2429,
+      id: 452,
+    },
   ];
 }
