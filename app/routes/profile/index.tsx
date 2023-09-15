@@ -19,6 +19,15 @@ import { EnvelopeIcon } from "@heroicons/react/20/solid";
 import { AiFillStar } from "react-icons/ai";
 import { FaTrophy } from "react-icons/fa";
 
+interface Activity {
+  type: string;
+  url: string;
+  puzzleId: string;
+  status: string;
+  message: string;
+  timestamp: Date;
+}
+
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
 
@@ -168,6 +177,18 @@ export default function Profile() {
       }
     : null;
 
+  function groupByDate(activities) {
+    return activities.reduce((acc, activity) => {
+      const dateStr = formatDate(activity.timestamp);
+      if (!acc[dateStr]) {
+        acc[dateStr] = [];
+      }
+      acc[dateStr].push(activity);
+      return acc;
+    }, {});
+  }
+  const groupedActivities: Record<string, Activity[]> = groupByDate(activities);
+
   if (user) {
     return (
       <div>
@@ -245,68 +266,72 @@ export default function Profile() {
             )}
             <div className="mt-6 shadow overflow-hidden rounded-lg max-w-2xl mx-auto mb-8">
               <div className="px-4 py-5 sm:px-6">
-                <h2 className="text-lg leading-6 font-medium">Activity</h2>
+                <h2 className="text-lg font-semibold leading-6 font-medium">
+                  Activity
+                </h2>
               </div>
-              <div className="flow-root px-4 py-5 sm:px-6">
+              <div className="flow-root px-4 pb-5 sm:px-6">
                 <ul role="list" className="-mb-8">
-                  {activities.map((event, eventIdx) => (
-                    <li key={eventIdx}>
-                      <div className="relative pb-8">
-                        {eventIdx !== activities.length - 1 ? (
-                          <span
-                            className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-300"
-                            aria-hidden="true"
-                          />
-                        ) : null}
-                        <div className="relative flex space-x-3">
-                          <div>
-                            <span className="h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white bg-blue-500">
-                              {activityIcon(event.type)}
-                            </span>
-                          </div>
-                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                            <div>
-                              {event.type === "firstSolver" ? (
-                                <p className="text-sm">
-                                  First to solve{" "}
-                                  <a
-                                    href={event.url}
-                                    className="text-blue-600 hover:underline"
-                                  >
-                                    Chessguessr #{event.puzzleId}
-                                  </a>
-                                </p>
-                              ) : event.type === "playedDaily" ? (
-                                <p className="text-sm">
-                                  Played{" "}
-                                  <a
-                                    href={event.url}
-                                    className="text-blue-600 hover:underline"
-                                  >
-                                    Chessguessr #{event.puzzleId}
-                                  </a>{" "}
-                                  {event.status === "solved" ? (
-                                    <span className="ml-2 text-green-500">
-                                      ✅
-                                    </span>
+                  {Object.entries(groupedActivities).map(
+                    ([date, dateActivities]) => (
+                      <li key={date}>
+                        <h3 className="text-md font-semibold mb-4">{date}</h3>
+                        {dateActivities.map((event, eventIdx) => (
+                          <div key={eventIdx} className="relative pb-8">
+                            {eventIdx !== dateActivities.length - 1 ? (
+                              <span
+                                className="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-300"
+                                aria-hidden="true"
+                              />
+                            ) : null}
+                            <div className="relative flex space-x-3">
+                              <div>
+                                <span className="h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white bg-blue-500">
+                                  {activityIcon(event.type)}
+                                </span>
+                              </div>
+                              <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                  {event.type === "firstSolver" ? (
+                                    <p className="text-sm">
+                                      First to solve{" "}
+                                      <a
+                                        href={event.url}
+                                        className="text-blue-600 hover:underline"
+                                      >
+                                        Chessguessr #{event.puzzleId}
+                                      </a>
+                                    </p>
+                                  ) : event.type === "playedDaily" ? (
+                                    <p className="text-sm">
+                                      Played{" "}
+                                      <a
+                                        href={event.url}
+                                        className="text-blue-600 hover:underline"
+                                      >
+                                        Chessguessr #{event.puzzleId}
+                                      </a>{" "}
+                                      {event.status === "solved" ? (
+                                        <span className="ml-2 text-green-500">
+                                          ✅
+                                        </span>
+                                      ) : (
+                                        <span className="ml-2 text-red-500">
+                                          ❌
+                                        </span>
+                                      )}
+                                    </p>
                                   ) : (
-                                    <span className="ml-2 text-red-500">
-                                      ❌
-                                    </span>
+                                    <p className="text-sm">{event.message}</p>
                                   )}
-                                </p>
-                              ) : (
-                                <p className="text-sm">{event.message}</p>
-                              )}
-                            </div>
-                            <div className="whitespace-nowrap text-right text-sm">
-                              <time>{formatDate(event.timestamp)}</time>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
+                        ))}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
