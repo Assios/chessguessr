@@ -324,3 +324,38 @@ export async function hasPlayedDaily(uid: string): Promise<boolean> {
 
   return !querySnapshot.empty;
 }
+
+export const calculateLevel = (xp: number): number => {
+  if (xp < 100) {
+    return 1;
+  }
+  return 2;
+};
+
+export async function updateXPAndLevel(
+  uid: string,
+  xpToAdd: number
+): Promise<void> {
+  const userRef = doc(db, "users", uid);
+
+  try {
+    await runTransaction(db, async (transaction) => {
+      const docSnap = await transaction.get(userRef);
+      if (!docSnap.exists()) {
+        throw Error("User does not exist."); // This will abort the transaction
+      }
+
+      const userData = docSnap.data() as AppUser;
+      const currentXP = userData.progress?.xp || 0;
+      const newXP = currentXP + xpToAdd;
+      const newLevel = calculateLevel(newXP);
+
+      transaction.update(userRef, {
+        "progress.xp": newXP,
+        "progress.level": newLevel,
+      });
+    });
+  } catch (error) {
+    console.error("Failed to update XP and Level in Firestore:", error);
+  }
+}

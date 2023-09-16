@@ -17,6 +17,7 @@ import {
   incrementFailed,
   incrementSolved,
   updateFirstSolverAndAchievement,
+  updateXPAndLevel,
 } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
 import { AppUser } from "~/components/AuthProvider/AuthProvider";
@@ -266,6 +267,8 @@ const useChessguessr = (
             puzzleUrl,
             "failed"
           );
+
+          updateXPAndLevel(user.uid, 50);
         } else {
           console.log("This puzzle has already been played");
         }
@@ -322,6 +325,8 @@ const useChessguessr = (
             puzzleUrl,
             "solved"
           );
+
+          updateXPAndLevel(user.uid, 50);
         } else {
           console.log("This puzzle has already been played");
         }

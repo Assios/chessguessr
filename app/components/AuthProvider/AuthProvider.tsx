@@ -2,6 +2,11 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 import { observeAuth } from "~/firebase/authUtils";
 import { getUserFromFirestore } from "~/firebase/utils";
 
+export interface UserProgress {
+  xp: number;
+  level: number;
+}
+
 export interface PlayerStats {
   gamesPlayed: number;
   currentStreak: number;
@@ -30,6 +35,7 @@ export interface AppUser {
   emailVerified: boolean;
   username: string;
   stats: PlayerStats;
+  progress: UserProgress;
   emailHash: string;
   lastUpdatedUsername: any;
   importedLocalStorageDate: string | null;
