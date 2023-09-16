@@ -28,6 +28,10 @@ interface Activity {
   timestamp: Date;
 }
 
+function xpNeededForNextLevel(level) {
+  return Math.pow(2, level) * 100;
+}
+
 export default function Profile() {
   const { user, updateUser } = useContext(AuthContext);
 
@@ -216,12 +220,39 @@ export default function Profile() {
                   </div>
                 </div>
                 <div className="mt-6 min-w-0 flex-1 sm:pb-1">
-                  <h1 className="truncate text-2xl font-bold">
+                  <h1 className="truncate text-2xl font-bold text-gray-900">
                     {profile.name}
                   </h1>
                   <div className="flex flex-row items-center space-x-2 mt-4">
                     <EnvelopeIcon className="h-5 w-5" aria-hidden="true" />
                     <span className="text-sm">{profile.email}</span>
+                  </div>
+                  <div className="relative mt-2">
+                    <div className="flex mb-2 items-center justify-between">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">
+                          Level {user.progress.level}
+                        </span>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-xs font-semibold inline-block text-indigo-600">
+                          {user.progress.xp} /{" "}
+                          {xpNeededForNextLevel(user.progress.level)} XP
+                        </span>
+                      </div>
+                    </div>
+                    <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-indigo-200">
+                      <div
+                        style={{
+                          width: `${
+                            (user.progress.xp /
+                              xpNeededForNextLevel(user.progress.level)) *
+                            100
+                          }%`,
+                        }}
+                        className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-500"
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </>
