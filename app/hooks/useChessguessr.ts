@@ -13,6 +13,7 @@ import {
 } from "~/utils/types";
 import {
   addActivityToFeed,
+  getUserFromFirestore,
   hasPlayedDaily,
   incrementFailed,
   incrementSolved,
@@ -327,6 +328,10 @@ const useChessguessr = (
           );
 
           updateXPAndLevel(user.uid, 50);
+
+          toast.success(`You gained 50 XP for solving today's Chessguessr!`, {
+            duration: 2500,
+          });
         } else {
           console.log("This puzzle has already been played");
         }
@@ -354,7 +359,7 @@ const useChessguessr = (
 
           toast.success(
             "Congrats! You are the first user to solve today's Chessguessr 🥳",
-            { duration: 6000 }
+            { duration: 5000 }
           );
         } else {
           console.log("USER", user);
