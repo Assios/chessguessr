@@ -1,6 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { observeAuth } from "~/firebase/authUtils";
 import { getUserFromFirestore } from "~/firebase/utils";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "~/firebase/firebaseConfig";
 
 export interface UserProgress {
   xp: number;
@@ -59,12 +61,12 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   const [user, setUser] = useState<AppUser | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const updateUser = (updatedUser: AppUser) => {
-    setUser(updatedUser);
+  const updateUser = (updatedFields: Partial<AppUser>) => {
+    setUser((prevUser) => ({ ...prevUser, ...updatedFields }));
   };
 
   useEffect(() => {
-    const unsubscribe = observeAuth(async (firebaseUser) => {
+    const unsubscribeAuth = observeAuth(async (firebaseUser) => {
       if (firebaseUser) {
         const appUser = await getUserFromFirestore(firebaseUser.uid);
         if (appUser) {
@@ -73,6 +75,19 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             emailVerified: firebaseUser.emailVerified,
           });
           setIsAuthenticated(true);
+
+          const userDocRef = doc(db, "users", firebaseUser.uid);
+          const unsubscribeFirestore = onSnapshot(userDocRef, (docSnapshot) => {
+            if (docSnapshot.exists) {
+              const data = docSnapshot.data() as AppUser;
+              updateUser(data);
+            }
+          });
+
+          return () => {
+            unsubscribeAuth();
+            unsubscribeFirestore();
+          };
         } else {
           setUser(null);
           setIsAuthenticated(false);
@@ -84,7 +99,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     });
 
     return () => {
-      unsubscribe();
+      unsubscribeAuth();
     };
   }, []);
 
