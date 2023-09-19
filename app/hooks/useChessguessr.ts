@@ -327,11 +327,15 @@ const useChessguessr = (
             "solved"
           );
 
-          updateXPAndLevel(user.uid, 50);
+          await updateXPAndLevel(user.uid, 50);
+          const newLevel = user.progress.level;
 
-          toast.success(`You gained 50 XP for solving today's Chessguessr!`, {
-            duration: 2500,
-          });
+          toast.success(
+            `You gained 50 XP for solving today's Chessguessr! Your level is now ${newLevel}`,
+            {
+              duration: 2500,
+            }
+          );
         } else {
           console.log("This puzzle has already been played");
         }
