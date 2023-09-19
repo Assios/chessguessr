@@ -5501,7 +5501,7 @@ export async function getGames(): Promise<Array<GameType>> {
       white: "Aksel Bu Kvaløy",
       black: "Vince Gergo Turcsanyi",
       wTitle: "IM",
-      event: "Julius Baer Generation Cup",
+      event: "European Youth Chess Championships",
       wRating: 2469,
       bRating: 2206,
       id: 457,
