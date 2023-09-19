@@ -5470,5 +5470,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2134,
       id: 454,
     },
+    {
+      date: "2023-09-19",
+      fen: "1r4k1/6pp/pqp5/3p1Q2/2P2p2/1P3Pbr/P1B3K1/R2R1N2 b - - 3 25",
+      solution: ["Rh2+", "Nxh2", "Qf2+", "Kh3", "Qxh2+"],
+      gameUrl: "https://lichess.org/PvgQBu4S/black#49",
+      white: "Dauerlaeufer",
+      black: "kreser",
+      wRating: 2006,
+      bRating: 1946,
+      id: 455,
+    },
+    {
+      date: "2023-09-20",
+      fen: "2k4r/pppq2bp/2rn2p1/8/4RB2/2PP3P/PP2QPP1/R5K1 w - - 3 22",
+      solution: ["Re7"],
+      gameUrl: "https://lichess.org/vWKV7haa/white#42",
+      white: "Tobendax",
+      black: "TheLastStyleBender",
+      wRating: 1879,
+      bRating: 2013,
+      id: 456,
+    },
   ];
 }
