@@ -5486,7 +5486,7 @@ export async function getGames(): Promise<Array<GameType>> {
       fen: "6r1/1bp1rp2/1p2pR2/p3P1p1/3Pp1k1/2P1P3/PP4P1/6KN w - - 8 29",
       solution: ["Nf2+", "Kg3", "Rh6", "g4", "Nh1#"],
       gameUrl:
-        "https://lichess.org/broadcast/european-youth-chess-championships--u16/round-8/AjO0j41p",
+        "https://lichess.org/broadcast/european-youth-chess-championships--u16/round-8/AjO0j41p/VafBqA0d#56",
       white: "Aksel Bu Kvaløy",
       black: "Vince Gergo Turcsanyi",
       wTitle: "IM",
