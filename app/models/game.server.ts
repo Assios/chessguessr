@@ -5483,17 +5483,6 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2023-09-20",
-      fen: "2k4r/pppq2bp/2rn2p1/8/4RB2/2PP3P/PP2QPP1/R5K1 w - - 3 22",
-      solution: ["Re7"],
-      gameUrl: "https://lichess.org/vWKV7haa/white#42",
-      white: "Tobendax",
-      black: "TheLastStyleBender",
-      wRating: 1879,
-      bRating: 2013,
-      id: 456,
-    },
-    {
-      date: "2023-09-21",
       fen: "6r1/1bp1rp2/1p2pR2/p3P1p1/3Pp1k1/2P1P3/PP4P1/6KN w - - 8 29",
       solution: ["Nf2+", "Kg3", "Rh6", "g4", "Nh1#"],
       gameUrl:
@@ -5504,7 +5493,7 @@ export async function getGames(): Promise<Array<GameType>> {
       event: "European Youth Chess Championships",
       wRating: 2469,
       bRating: 2206,
-      id: 457,
+      id: 456,
     },
   ];
 }
