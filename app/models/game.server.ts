@@ -5517,5 +5517,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1820,
       id: 458,
     },
+    {
+      date: "2023-09-23",
+      fen: "2r3k1/2P2ppp/4p3/p3N3/2RP4/6P1/1r3P1P/6K1 w - - 1 30",
+      solution: ["Nc6", "Rxc7", "Ne7+", "Kf8", "Rxc7"],
+      gameUrl: "https://lichess.org/gsfUe1HN/white#58",
+      white: "chillingsworth",
+      black: "Miticals",
+      wRating: 2152,
+      bRating: 2091,
+      id: 459,
+    },
+    {
+      date: "2023-09-24",
+      fen: "r6q/p2k2br/6p1/1Np2pP1/2P2Bn1/3P1Q2/PP4K1/R4R2 b - - 2 27",
+      solution: ["Rh2+", "Kg1", "Bd4+", "Nxd4", "Qxd4+"],
+      gameUrl: "https://lichess.org/Ro1tV137/black#53",
+      white: "Ti22",
+      black: "selton1p",
+      wRating: 2024,
+      bRating: 2027,
+      id: 460,
+    },
   ];
 }
