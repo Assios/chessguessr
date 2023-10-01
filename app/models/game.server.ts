@@ -5617,5 +5617,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1909,
       id: 467,
     },
+    {
+      date: "2023-10-02",
+      fen: "6k1/5ppp/p7/P4b2/B1P1p3/6BP/1r1r1bP1/1R3RK1 w - - 0 29",
+      solution: ["Bxf2", "Rxf2", "Rxb2", "Rxb2", "Rxf5"],
+      gameUrl: "https://lichess.org/OKr6YTLe/white#56",
+      white: "Keipo",
+      black: "MaxZabor",
+      wTitle: "FM",
+      wRating: 2288,
+      bRating: 2324,
+      id: 468,
+    },
   ];
 }
