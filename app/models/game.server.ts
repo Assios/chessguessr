@@ -5606,5 +5606,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1773,
       id: 466,
     },
+    {
+      date: "2023-10-01",
+      fen: "4r1k1/1p3p1p/6p1/3P4/3Q4/5q2/PP3P1P/3R2K1 b - - 0 27",
+      solution: ["Re4", "Qd3", "Re1+", "Rxe1", "Qxd3"],
+      gameUrl: "https://lichess.org/OoGDnqsS/black#53",
+      white: "dandelicious",
+      black: "jayong007",
+      wRating: 2014,
+      bRating: 1909,
+      id: 467,
+    },
   ];
 }
