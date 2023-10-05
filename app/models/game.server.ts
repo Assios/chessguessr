@@ -5663,7 +5663,7 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 471,
     },
     {
-      date: "2022-10-06",
+      date: "2023-10-06",
       fen: "rn3rk1/1pqbbppp/p2pp3/P7/2BNP1n1/2N1B3/1PP1QPPP/R4RK1 w - - 1 12",
       solution: ["Nf5", "Bf6", "Bb6", "Qc6", "Nd4"],
       gameUrl:
