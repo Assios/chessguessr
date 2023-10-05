@@ -5677,5 +5677,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2717,
       id: 472,
     },
+    {
+      date: "2023-10-07",
+      fen: "r1b2rk1/p5p1/2pp1pB1/2n1pPb1/4P3/2pP3R/q1P1N1K1/1R2Q3 w - - 0 24",
+      solution: ["Qh1", "Bh6", "Rxh6", "gxh6", "Qxh6"],
+      gameUrl: "https://lichess.org/iP3nX4RC/white#46",
+      white: "Genry1999",
+      black: "goodfrind12",
+      wRating: 2345,
+      bRating: 2336,
+      id: 473,
+    },
+    {
+      date: "2023-10-08",
+      fen: "r3k2r/ppp2pp1/3p4/3Np1q1/1PBbP1bp/P2P4/1BP2PQ1/1R3RK1 b kq - 1 17",
+      solution: ["h3", "Qg3", "h2+", "Kh1", "Rh3"],
+      gameUrl: "https://lichess.org/kwQYEvCu/black#33",
+      white: "malcomar",
+      black: "nabiltrouna",
+      wRating: 1814,
+      bRating: 1812,
+      id: 474,
+    },
   ];
 }
