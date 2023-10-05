@@ -5662,5 +5662,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2256,
       id: 471,
     },
+    {
+      date: "2022-10-06",
+      fen: "rn3rk1/1pqbbppp/p2pp3/P7/2BNP1n1/2N1B3/1PP1QPPP/R4RK1 w - - 1 12",
+      solution: ["Nf5", "Bf6", "Bb6", "Qc6", "Nd4"],
+      gameUrl:
+        "https://lichess.org/broadcast/european-chess-club-cup-2023--open/round-5/x9N5eFgw/Cmql6gtq#22",
+      white: "Magnus Carlsen",
+      black: "Vincent Keymer",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "European Chess Club Cup 2023",
+      wRating: 2839,
+      bRating: 2717,
+      id: 472,
+    },
   ];
 }
