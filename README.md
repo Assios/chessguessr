@@ -9,7 +9,7 @@ Chessguessr is a game where you try to guess the next moves in a chessgame. All 
 
 ## Rules
 
-Like Wordle, or Chessle, you are given hints after each guess.
+Like [Wordle](https://www.nytimes.com/games/wordle/index.html), or [Chessle](https://jackli.gg/chessle/), you are given hints after each guess.
 
 - 🟩 indicates that the move is correct.
 - 🟨 indicates that the move is correct, but in the wrong place.
