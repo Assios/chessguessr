@@ -5732,5 +5732,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1563,
       id: 477,
     },
+    {
+      date: "2023-10-12",
+      fen: "rn3r2/pp2qpk1/2p3p1/5P2/2BP2Q1/2b1P3/P4P2/R1B1R1K1 w - - 2 19",
+      solution: ["e4", "Bxa1", "Bg5", "Qb4", "f6+"],
+      gameUrl:
+        "https://lichess.org/broadcast/qatar-masters-2023/round-1/a7PwP0Wb/nMw1sEBk#36",
+      white: "Magnus Carlsen",
+      black: "L R Srihari",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Qatar Masters 2023",
+      wRating: 2839,
+      bRating: 2438,
+      id: 478,
+    },
   ];
 }
