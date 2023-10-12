@@ -5747,5 +5747,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2438,
       id: 478,
     },
+    {
+      date: "2023-10-13",
+      fen: "5rk1/1p4q1/6Q1/pP1r4/P3N1p1/3P2Pb/4RP1K/8 w - - 3 34",
+      solution: ["Qe6+", "Qf7", "Nf6+", "Kg7", "Qxf7+"],
+      gameUrl: "https://lichess.org/pVU8WRmB/white#66",
+      white: "Stradivari17",
+      black: "wingrand2012",
+      wTitle: "FM",
+      wRating: 2544,
+      bRating: 2460,
+      id: 479,
+    },
   ];
 }
