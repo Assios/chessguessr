@@ -3,7 +3,7 @@
 [![Twitter](https://img.shields.io/twitter/follow/chessguessr?style=social)](https://twitter.com/chessguessr)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-![](https://github.com/lukasb1b/chessguessr/blob/picture/public/chessguessr.PNG)
+![](https://github.com/lukasb1b/chessguessr/blob/master/public/chessguessr.PNG)
 
 Chessguessr is a game where you try to guess the next moves in a chessgame. All positions are currently taken from games played on [Lichess](https://lichess.org).
 
