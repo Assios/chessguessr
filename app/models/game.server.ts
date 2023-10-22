@@ -5863,5 +5863,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2077,
       id: 488,
     },
+    {
+      date: "2023-10-23",
+      fen: "3r2k1/1B3p1p/1p3qp1/8/3b4/1P5P/P1Q2PP1/3R2K1 b - - 0 27",
+      solution: ["Qxf2+", "Qxf2", "Bxf2+", "Kxf2", "Rxd1"],
+      gameUrl: "https://lichess.org/rTcmi4sN/black#53",
+      white: "interestinggame3",
+      black: "TheBossfan02",
+      wRating: 2344,
+      bRating: 1877,
+      id: 489,
+    },
   ];
 }
