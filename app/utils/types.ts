@@ -16,7 +16,7 @@ export type GameType = {
   id: number;
 };
 
-export type Guess = (string | JSX.Element)[];
+export type Guess = string[];
 
 export interface GridProps {
   currentGuess: Guess;

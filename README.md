@@ -3,7 +3,7 @@
 [![Twitter](https://img.shields.io/twitter/follow/chessguessr?style=social)](https://twitter.com/chessguessr)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-![](https://chessguessr.com/chessguessr.png)
+![](https://user-images.githubusercontent.com/1413265/181054468-38682e2f-837f-4ca2-94c0-f270bdc14488.png)
 
 Chessguessr is a game where you try to guess the next moves in a chessgame. All positions are currently taken from games played on [Lichess](https://lichess.org).
 
@@ -13,7 +13,7 @@ Like Wordle, or Chessle, you are given hints after each guess.
 
 - 🟩 indicates that the move is correct.
 - 🟨 indicates that the move is correct, but in the wrong place.
-- 🟦 indicates that the correct piece type was moved (but not necessarily the exact same piece).
+- 🟥 indicates that the correct piece type was moved (but not necessarily the exact same piece).
 - ⬜ indicates that the move is wrong.
 
 ## Development
@@ -38,7 +38,7 @@ The API returns a JSON object with the following properties:
 - `id`: The unique ID of the puzzle.
 - `boardImage`: an image of the chess board with the puzzle position.
 - `players`: An array of objects representing the white and black players in the game. Each player object has the following properties:
-  - `color`: The color of the player ("white" or "black").
-  - `name`: The name of the player.
-  - `rating`: The rating of the player.
-  - `title`: The chess title of the player, if any (e.g. "GM" or "WIM").
+    - `color`: The color of the player ("white" or "black").
+    - `name`: The name of the player.
+    - `rating`: The rating of the player.
+    - `title`: The chess title of the player, if any (e.g. "GM" or "WIM").

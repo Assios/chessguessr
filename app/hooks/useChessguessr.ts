@@ -11,19 +11,8 @@ import {
   GuessWithHistory,
   Guess,
 } from "~/utils/types";
-import {
-  addActivityToFeed,
-  getUserFromFirestore,
-  hasPlayedDaily,
-  incrementFailed,
-  incrementSolved,
-  updateFirstSolverAndAchievement,
-  updateXPAndLevel,
-} from "../firebase/utils";
+import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
-import { AppUser } from "~/components/AuthProvider/AuthProvider";
-import { usePlayerStats } from "./usePlayerStats";
-import { PlayerStats } from "../components/AuthProvider/AuthProvider";
 
 const chessCols = "abcdefgh";
 const kingMove = "OK";
@@ -116,12 +105,7 @@ const useNavigableGuessAndFenHistory = () => {
   };
 };
 
-const useChessguessr = (
-  game: GameType,
-  shouldUpdateStats: boolean,
-  user: AppUser,
-  stats: any
-) => {
+const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   const [turn, setTurn] = useState(0);
   const [guesses, setGuesses] = useState([
     [null, null, null, null, null],
@@ -130,8 +114,6 @@ const useChessguessr = (
     [null, null, null, null, null],
     [null, null, null, null, null],
   ]);
-
-  const firstSolver = stats?.firstSolver;
 
   const { trackEvent }: any = useOutletContext();
 
@@ -157,7 +139,19 @@ const useChessguessr = (
     date: game.date,
   });
 
-  const { playerStats, setPlayerStats } = usePlayerStats(user?.uid);
+  const [playerStats, setPlayerStats] = useLocalStorage("cg-stats", {
+    gamesPlayed: 0,
+    currentStreak: 1,
+    lastPlayed: null,
+    guesses: {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      failed: 0,
+    },
+  });
 
   useEffect(() => {
     if (!shouldUpdateStats) return;
@@ -205,13 +199,12 @@ const useChessguessr = (
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
         discardYellowArray[i] = null;
-      } else if (
-        discardYellowArray.includes(move.move) &&
-        move.color !== "green"
-      ) {
+      }
+    });
+
+    formattedGuess.forEach((move, i) => {
+      if (discardYellowArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
-      } else if (discardYellowArray.indexOf(move.move) !== -1) {
-        discardYellowArray[discardYellowArray.indexOf(move.move)] = null;
       }
 
       if (
@@ -222,14 +215,16 @@ const useChessguessr = (
           (kingMove.includes(solutionArray[i][0]) &&
             kingMove.includes(move.move[0])))
       ) {
-        formattedGuess[i].pieceColor = "blue";
+        formattedGuess[i].pieceColor = "red";
       }
+
+      discardYellowArray[solutionArray.indexOf(move.move)] = null;
     });
 
     return formattedGuess;
   };
 
-  const addGuess = async (formattedGuess: any) => {
+  const addGuess = (formattedGuess: any) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
@@ -252,27 +247,6 @@ const useChessguessr = (
             },
           };
         });
-
-        const puzzleId = game.id;
-        const puzzleUrl = `/games/${puzzleId}`;
-        const playedMessage = `Played Chessguessr #${puzzleId}`;
-
-        const playedDaily = await hasPlayedDaily(user.uid);
-
-        if (!playedDaily) {
-          addActivityToFeed(
-            user.uid,
-            "playedDaily",
-            playedMessage,
-            game.id,
-            puzzleUrl,
-            "failed"
-          );
-
-          updateXPAndLevel(user.uid, 50);
-        } else {
-          console.log("This puzzle has already been played");
-        }
 
         incrementFailed(game.id);
         trackEvent("Submit daily", { props: { result: "Failed" } });
@@ -309,65 +283,6 @@ const useChessguessr = (
             },
           };
         });
-
-        const puzzleId = game.id;
-        const puzzleUrl = `/games/${puzzleId}`;
-
-        const playedMessage = `Played Chessguessr #${puzzleId}`;
-
-        const playedDaily = await hasPlayedDaily(user.uid);
-
-        if (!playedDaily) {
-          addActivityToFeed(
-            user.uid,
-            "playedDaily",
-            playedMessage,
-            game.id,
-            puzzleUrl,
-            "solved"
-          );
-
-          await updateXPAndLevel(user.uid, 50);
-          const newLevel = user.progress.level;
-
-          toast.success(
-            `You gained 50 XP for solving today's Chessguessr! Your level is now ${newLevel}`,
-            {
-              duration: 2500,
-            }
-          );
-        } else {
-          console.log("This puzzle has already been played");
-        }
-
-        if (user && !firstSolver) {
-          console.log("first-to-solve");
-          updateFirstSolverAndAchievement(
-            game.id,
-            user.uid,
-            user.username,
-            "first-to-solve"
-          );
-
-          const puzzleId = game.id;
-          const puzzleUrl = `/games/${puzzleId}`;
-          const message = `First to solve Chessguessr #${puzzleId}`;
-
-          addActivityToFeed(
-            user.uid,
-            "firstSolver",
-            message,
-            game.id,
-            puzzleUrl
-          );
-
-          toast.success(
-            "Congrats! You are the first user to solve today's Chessguessr 🥳",
-            { duration: 5000 }
-          );
-        } else {
-          console.log("USER", user);
-        }
 
         incrementSolved(game.id, turn + 1);
         trackEvent("Submit daily", { props: { result: "Success" } });

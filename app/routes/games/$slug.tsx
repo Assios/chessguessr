@@ -12,6 +12,8 @@ export const meta: MetaFunction = ({ data }) => {
   const imageUrl =
     "https://images.weserv.nl/?url=fen-to-image.com/image/36/" + fen;
 
+  console.log("img", imageUrl);
+
   const players = data?.game?.white + " vs. " + data?.game?.black;
   return {
     title: `Chessguessr – ${players}`,

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Tile } from "~/styles/styles";
 import styled from "styled-components";
-import { convertToIcon } from "~/utils/utils";
 
 const TutorialVariation = styled.div`
   display: flex;
@@ -46,19 +45,19 @@ export default function TutorialModal({
                       animationIndex={1}
                       tutorial={true}
                     >
-                      {convertToIcon("Nd5")}
+                      Nd5
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Nbxd5")}
+                      Nbxd5
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("exd5")}
+                      exd5
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Qd6")}
+                      Qd6
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Rxd4")}
+                      Rxd4
                     </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
@@ -66,7 +65,7 @@ export default function TutorialModal({
                   </p>
                   <TutorialVariation>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Be6")}
+                      Be6
                     </Tile>
                     <Tile
                       className="m-[3px]"
@@ -75,16 +74,16 @@ export default function TutorialModal({
                       animationIndex={3}
                       tutorial={true}
                     >
-                      {convertToIcon("Bxb6")}
+                      Bxb6
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Bxc4+")}
+                      Bxc4+
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Kg1")}
+                      Kg1
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Ne2+")}
+                      Ne2+
                     </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
@@ -92,26 +91,26 @@ export default function TutorialModal({
                   </p>
                   <TutorialVariation>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Nxg7")}
+                      Nxg7
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Kd8")}
+                      Kd8
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Qf6+")}
+                      Qf6+
                     </Tile>
                     <Tile
                       className="m-[3px]"
                       color="grey"
-                      pieceColor="blue"
+                      pieceColor="red"
                       flipTile={true}
                       animationIndex={2}
                       tutorial={true}
                     >
-                      {convertToIcon("Nxf6")}
+                      Nxf6
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Be7#")}
+                      Be7#
                     </Tile>
                   </TutorialVariation>
                   <p className="text-lg mb-6">
