@@ -8,6 +8,7 @@ import {
   countdownRenderer,
   midnightUtcTomorrow,
   GameLink,
+  convertToIcon,
 } from "~/utils/utils";
 import { useOutletContext } from "@remix-run/react";
 
@@ -59,7 +60,7 @@ const Correct = ({ game, puzzleStats }) => {
             tutorial={true}
             key={`${move}-${i}`}
           >
-            {move}
+            {convertToIcon(move)}
           </Tile>
         ))}
       </div>
@@ -103,7 +104,7 @@ const Failed = ({ game, puzzleStats }) => {
             animationIndex={i * 0.2}
             tutorial={true}
           >
-            {move}
+            {convertToIcon(move)}
           </Tile>
         ))}
       </div>
@@ -151,12 +152,12 @@ export default function Modal({
         if (move && move.color && move.pieceColor) {
           if (move.color === "green") {
             text += "🟩";
-          } else if (move.color === "yellow" && move.pieceColor === "red") {
-            text += "🟧";
+          } else if (move.color === "yellow" && move.pieceColor === "blue") {
+            text += "🇺🇦";
           } else if (move.color === "yellow") {
             text += "🟨";
-          } else if (move.pieceColor === "red") {
-            text += "🟥";
+          } else if (move.pieceColor === "blue") {
+            text += "🟦";
           } else if (move.color === "grey") {
             text += "⬜";
           }
