@@ -5923,7 +5923,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2023-10-28",
       fen: "rnb1kb1r/ppppqp1p/8/8/5BNP/3P4/PPP1Q1P1/RN2KB1n w Qkq - 2 10",
-      solution: ["Nf6+", "Kd8", "Bxc7+", "Kxc7", "Nd5"],
+      solution: ["Nf6+", "Kd8", "Bxc7+", "Kxc7", "Nd5+"],
       gameUrl: "https://lichess.org/zLbLEaLA#18",
       white: "Paul Morphy",
       black: "Adolf Anderssen",
