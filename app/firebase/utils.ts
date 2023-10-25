@@ -81,6 +81,10 @@ export async function saveNewUser(
     stats: initialPlayerStats,
     emailHash,
     lastUpdatedUsername: serverTimestamp(),
+    progress: {
+      level: 0,
+      xp: 0,
+    },
   });
 
   batch.set(usernameRef, { uid });

@@ -145,7 +145,7 @@ export const idToColor = (userID) => {
 };
 
 export const getGravatarUrlWithDefault = (user: AppUser, size: number) => {
-  const defaultAvatar = "monsterid";
+  const defaultAvatar = "mp";
   return `https://www.gravatar.com/avatar/${user.emailHash}?d=${defaultAvatar}&s=${size}`;
 };
 

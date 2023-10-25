@@ -231,13 +231,13 @@ export default function Profile() {
                     <div className="flex mb-2 items-center justify-between">
                       <div>
                         <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">
-                          Level {user.progress.level}
+                          Level {user.progress?.level}
                         </span>
                       </div>
                       <div className="text-right">
                         <span className="text-xs font-semibold inline-block text-indigo-600">
-                          {user.progress.xp} /{" "}
-                          {xpNeededForNextLevel(user.progress.level)} XP
+                          {user.progress?.xp} /{" "}
+                          {xpNeededForNextLevel(user.progress?.level)} XP
                         </span>
                       </div>
                     </div>
@@ -245,8 +245,8 @@ export default function Profile() {
                       <div
                         style={{
                           width: `${
-                            (user.progress.xp /
-                              xpNeededForNextLevel(user.progress.level)) *
+                            (user.progress?.xp /
+                              xpNeededForNextLevel(user.progress?.level)) *
                             100
                           }%`,
                         }}
