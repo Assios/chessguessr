@@ -5920,5 +5920,28 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1928,
       id: 493,
     },
+    {
+      date: "2023-10-28",
+      fen: "rnb1kb1r/ppppqp1p/8/8/5BNP/3P4/PPP1Q1P1/RN2KB1n w Qkq - 2 10",
+      solution: ["Nf6+", "Kd8", "Bxc7+", "Kxc7", "Nd5"],
+      gameUrl: "https://lichess.org/zLbLEaLA#18",
+      white: "Paul Morphy",
+      black: "Adolf Anderssen",
+      event: "Paris, 1858",
+      wRating: null,
+      bRating: null,
+      id: 494,
+    },
+    {
+      date: "2023-10-29",
+      fen: "8/5ppk/1Qb4p/4R1q1/1P6/6BP/2r2PP1/6K1 b - - 2 30",
+      solution: ["Qc1+", "Kh2", "Qf1", "Qxc6", "Rxc6"],
+      gameUrl: "https://lichess.org/VFzTL2zd/black#59",
+      white: "japp1996",
+      black: "mykidsdad",
+      wRating: 1805,
+      bRating: 1851,
+      id: 495,
+    },
   ];
 }
