@@ -5943,5 +5943,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1851,
       id: 495,
     },
+    {
+      date: "2023-10-30",
+      fen: "2kr3r/ppp5/3bpn1p/4q1p1/2B5/3PB1Pb/PP1Q1P2/RN2R1K1 w - - 0 17",
+      solution: ["Bxa7", "Qf5", "Bxe6+", "Qxe6", "Rxe6"],
+      gameUrl: "https://lichess.org/gxmJUfTs/white#32",
+      white: "kuduro99",
+      black: "Akshay2jalihal",
+      wRating: 1672,
+      bRating: 1747,
+      id: 496,
+    },
+    {
+      date: "2023-10-31",
+      fen: "2kr3r/ppp5/3bpn1p/4q1p1/2B5/3PB1Pb/PP1Q1P2/RN2R1K1 w - - 0 17",
+      solution: ["Bxa7", "Qf5", "Bxe6+", "Qxe6", "Rxe6"],
+      gameUrl: "https://lichess.org/gxmJUfTs/white#32",
+      white: "kuduro99",
+      black: "Akshay2jalihal",
+      wRating: 1672,
+      bRating: 1747,
+      id: 497,
+    },
   ];
 }
