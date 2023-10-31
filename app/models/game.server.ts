@@ -5966,5 +5966,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2501,
       id: 497,
     },
+    {
+      date: "2023-11-01",
+      fen: "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 4 4",
+      solution: ["Nxe5", "Nxe5", "d4", "Ng6", "e5"],
+      gameUrl: "https://lichess.org/2scyuIBO/white#6",
+      white: "rob188",
+      black: "Alex_Sahakyan",
+      wTitle: "FM",
+      bTitle: "FM",
+      wRating: 2949,
+      bRating: 2924,
+      id: 498,
+    },
   ];
 }
