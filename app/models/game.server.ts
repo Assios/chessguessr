@@ -6003,5 +6003,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2496,
       id: 500,
     },
+    {
+      date: "2023-11-04",
+      fen: "2r2br1/5qpk/p4p1p/1p2pP2/3pP1NQ/Pn1P2RP/1P4P1/1RB3K1 w - - 7 27",
+      solution: ["Bxh6", "gxh6", "Nxf6+", "Qxf6", "Qxf6"],
+      gameUrl: "https://lichess.org/UzbsVW9u/white#52",
+      white: "HallsOfValhalla_OFF",
+      black: "zoranmil50",
+      wRating: 1881,
+      bRating: 2212,
+      id: 501,
+    },
   ];
 }
