@@ -6036,5 +6036,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2148,
       id: 503,
     },
+    {
+      date: "2023-11-07",
+      fen: "8/4k3/8/p3Kpp1/4p1p1/1B4P1/7P/8 b - - 15 54",
+      solution: ["e3", "Bc4", "a4", "Kd4", "f4"],
+      gameUrl: "https://lichess.org/elpl7ITH/black#107",
+      white: "Molurus",
+      black: "MadMox",
+      wRating: 2094,
+      bRating: 2010,
+      id: 504,
+    },
   ];
 }
