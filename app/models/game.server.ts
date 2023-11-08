@@ -6058,5 +6058,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2273,
       id: 505,
     },
+    {
+      date: "2023-11-09",
+      fen: "2kr3r/pp1bbp2/2n5/N1q2p2/7p/4PQ2/PP1B1PPP/R3KB1R b KQ - 1 17",
+      solution: ["Nxa5", "Rc1", "Qxc1+", "Bxc1", "Bb4+"],
+      gameUrl: "https://lichess.org/Kwv9g2fP/black#33",
+      white: "TheRatman",
+      black: "Elektricar",
+      wRating: 1785,
+      bRating: 1764,
+      id: 506,
+    },
   ];
 }
