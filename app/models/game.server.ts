@@ -6103,5 +6103,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2621,
       id: 509,
     },
+    {
+      date: "2023-11-13",
+      fen: "1Q6/5pk1/p3pbp1/1p2B2p/2q4P/P1P5/1P1r1PP1/4R1K1 w - - 8 31",
+      solution: ["Bxf6+", "Kxf6", "Qe5+", "Ke7", "Qg5+"],
+      gameUrl: "https://lichess.org/KEw3e90z/white#60",
+      white: "gmftorres1",
+      black: "jesusmartinduque",
+      bTitle: "IM",
+      wRating: 2635,
+      bRating: 2686,
+      id: 510,
+    },
   ];
 }
