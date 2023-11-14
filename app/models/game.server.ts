@@ -6126,5 +6126,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1838,
       id: 511,
     },
+    {
+      date: "2023-11-15",
+      fen: "r1bqkr2/1p1p1p1Q/p1nbp3/2p5/4Pn2/2NP3P/PPP4N/R1B1RB1K w q - 2 17",
+      solution: ["e5", "Bxe5", "Rxe5", "Nxe5", "Bxf4"],
+      gameUrl: "https://lichess.org/WXvqH7oX/white#32",
+      white: "Kleinseelheim",
+      black: "RiseLikeAPhoenix",
+      wTitle: "FM",
+      wRating: 2447,
+      bRating: 2573,
+      id: 512,
+    },
   ];
 }
