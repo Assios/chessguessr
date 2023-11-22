@@ -6218,5 +6218,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2603,
       id: 519,
     },
+    {
+      date: "2023-11-23",
+      fen: "r3r1k1/p3R1pp/2p2p2/1p1qn3/3P4/2P2N1P/P2Q1PP1/4R1K1 w - - 6 21",
+      solution: ["Rxe8+", "Rxe8", "dxe5", "Qxd2", "Nxd2"],
+      gameUrl: "https://lichess.org/SpiCg8at/white#40",
+      white: "Tosky2008",
+      black: "montazerin",
+      wRating: 1866,
+      bRating: 1886,
+      id: 520,
+    },
   ];
 }
