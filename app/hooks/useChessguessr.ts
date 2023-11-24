@@ -203,7 +203,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       }
     });
        
-    // fmark all the yellow and blue moves
+    // mark all the yellow and blue moves
     formattedGuess.forEach((move, i) => {
        if (
         discardYellowArray.includes(move.move) &&
