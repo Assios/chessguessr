@@ -6241,5 +6241,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2208,
       id: 521,
     },
+    {
+      date: "2023-11-25",
+      fen: "r1b4r/1ppkq1p1/p1nb1nQp/8/4p3/2N2P2/PPPB2PP/2KR1BNR b - - 1 13",
+      solution: ["Ne5", "Qf5+", "Ke8", "Qf4", "Nd3+"],
+      gameUrl: "https://lichess.org/eGkNMsKH/black#25",
+      white: "boggioggi",
+      black: "Chintaki",
+      wRating: 2307,
+      bRating: 2161,
+      id: 522,
+    },
   ];
 }
