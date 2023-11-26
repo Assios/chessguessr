@@ -6263,5 +6263,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1817,
       id: 523,
     },
+    {
+      date: "2023-11-27",
+      fen: "r1b2rk1/pp1pppbp/1qn2np1/8/3NP3/1BN1BP2/PPP3PP/R2QK2R b KQ - 4 9",
+      solution: ["Nxe4", "Nd5", "Qa5+", "c3", "Nc5"],
+      gameUrl: "https://lichess.org/6bpiUA2Q/black#17",
+      white: "clash-of-clans-01",
+      black: "Kamo_Gurtovoy85",
+      wRating: 2485,
+      bRating: 2671,
+      id: 524,
+    },
   ];
 }
