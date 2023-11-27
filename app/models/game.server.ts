@@ -6274,5 +6274,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2671,
       id: 524,
     },
+    {
+      date: "2023-11-28",
+      fen: "3R4/p2r2bk/1p2N1pp/3Nnp2/4p3/2P4P/PP3PP1/6K1 w - - 4 30",
+      solution: ["Nf8+", "Bxf8", "Nf6+", "Kg7", "Nxd7"],
+      gameUrl: "https://lichess.org/87FWOa9Z/white#58",
+      white: "EricRosen",
+      black: "Ristic58",
+      wTitle: "IM",
+      wAka: "Eric Rosen",
+      wRating: 2620,
+      bRating: 2597,
+      id: 525,
+    },
   ];
 }
