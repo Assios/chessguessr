@@ -6287,5 +6287,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2597,
       id: 525,
     },
+    {
+      date: "2023-11-29",
+      fen: "r2q1rk1/5ppp/b7/nN1Pp3/8/8/PP1Q1PPP/R3KB1R b KQ - 0 17",
+      solution: ["Bxb5", "Bxb5", "Nb3", "Qc3", "Nxa1"],
+      gameUrl: "https://lichess.org/Hsz0wgRt/black#33",
+      white: "AlexNovitz",
+      black: "Chessadiction",
+      wTitle: "NM",
+      wRating: 2357,
+      bRating: 2303,
+      id: 526,
+    },
   ];
 }
