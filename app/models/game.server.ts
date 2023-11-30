@@ -6310,5 +6310,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1913,
       id: 527,
     },
+    {
+      date: "2023-12-01",
+      fen: "r3k2r/1p3ppp/p3p3/qb6/Pb1P4/1Qn2N2/1P1B1PPP/R3K2R w KQkq - 0 15",
+      solution: ["bxc3", "Bd6", "c4", "Bxc4", "Qxc4"],
+      gameUrl: "https://lichess.org/LVixyMIx/white#28",
+      white: "MrGeoDr",
+      black: "TheEvilmeister",
+      wRating: 1637,
+      bRating: 1703,
+      id: 528,
+    },
   ];
 }
