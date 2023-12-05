@@ -6366,5 +6366,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1838,
       id: 532,
     },
+    {
+      date: "2023-12-06",
+      fen: "r2qr3/pb2bpk1/1p1p1npp/3Pn3/1P1N4/2NQ2B1/P1B1RPPP/4R1K1 w - - 6 21",
+      solution: ["Bxe5", "dxe5", "Ne6+", "fxe6", "Qxg6+"],
+      gameUrl: "https://lichess.org/vNxPvVy0/white#40",
+      white: "Luckyriver",
+      black: "TheoLego",
+      wTitle: "LM",
+      wAka: "Askild Bryn",
+      wRating: 2492,
+      bRating: 2287,
+      id: 533,
+    },
   ];
 }
