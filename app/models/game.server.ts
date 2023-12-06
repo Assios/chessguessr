@@ -6379,5 +6379,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2287,
       id: 533,
     },
+    {
+      date: "2023-12-07",
+      fen: "2kr1r2/Qp2q1pp/2p5/1B1b2p1/3p2P1/3p3P/PP3P2/1KR2R2 w - - 0 23",
+      solution: ["Bxc6", "Bxc6", "Rxc6+", "bxc6", "Qxe7"],
+      gameUrl: "https://lichess.org/hPt5vfZe/white#44",
+      white: "amabo_elitper",
+      black: "Aguadelafonte",
+      wRating: 1630,
+      bRating: 1657,
+      id: 534,
+    },
   ];
 }
