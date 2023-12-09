@@ -6412,5 +6412,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2370,
       id: 536,
     },
+    {
+      date: "2023-12-10",
+      fen: "2q3k1/1rp3bp/6p1/3P4/2Q3P1/3nrB2/P6P/2R2R1K w - - 0 32",
+      solution: ["d6+", "Kh8", "Bxb7", "Qxb7+", "Qc6"],
+      gameUrl: "https://lichess.org/1EOuafmw/white#62",
+      white: "VitaliySnatenkov",
+      black: "Khusenkhojaev",
+      wRating: 2557,
+      bRating: 2538,
+      id: 537,
+    },
   ];
 }
