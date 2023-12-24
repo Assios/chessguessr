@@ -6591,5 +6591,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2012,
       id: 551,
     },
+    {
+      date: "2023-12-25",
+      fen: "2R5/2pq1pk1/1p1pp1pp/n7/2PPN1P1/4P2P/5P2/R5K1 w - - 5 33",
+      solution: ["Rg8+", "Kxg8", "Nf6+", "Kf8", "Nxd7+"],
+      gameUrl: "https://lichess.org/hm8qC9h4/white#64",
+      white: "lojzek18",
+      black: "Ernie_McCracken",
+      wTitle: "GM",
+      wRating: 2696,
+      bRating: 2627,
+      id: 552,
+    },
   ];
 }
