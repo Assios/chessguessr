@@ -41,20 +41,7 @@ export default function Index() {
 
   return (
     <div>
-      <div className="mr-2 ml-2 flex justify-center text-center mt-4">
-        <p>
-          Want more puzzles this advent? Check out{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://adventofchess.com"
-            target="_blank"
-          >
-            Advent of Chess
-          </a>
-          , and get a chance to win a board signed by Magnus Carlsen.
-        </p>
-      </div>
-      <div className="mt-6 mb-20 lg:mb-0">
+      <div className="mt-10 mb-20 lg:mb-0">
         {game && (
           <Chessguessr
             showModal={showModal}
