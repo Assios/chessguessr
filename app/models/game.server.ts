@@ -6614,5 +6614,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1583,
       id: 553,
     },
+    {
+      date: "2022-09-27",
+      fen: "r4k2/ppq2P2/5nrp/2n3p1/P7/1B5P/1PP2QP1/3RR1K1 w - - 1 23",
+      solution: ["Qf5", "Kg7", "Re8", "Rxe8", "Qxf6+"],
+      gameUrl:
+        "https://lichess.org/broadcast/2023-fide-world-rapid-championship/round-5/z54JKcL1/yG2Y6Bm0#44",
+      white: "Ivan Cheparinov",
+      black: "Richard Rapport",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "World Rapid 2023",
+      wRating: 2618,
+      bRating: 2735,
+      id: 554,
+    },
   ];
 }
