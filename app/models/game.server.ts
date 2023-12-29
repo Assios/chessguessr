@@ -6640,5 +6640,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1934,
       id: 555,
     },
+    {
+      date: "2023-12-29",
+      fen: "8/2k5/1p1p4/p1pP1q1p/P1P1pPn1/1KP3Q1/2B1b2r/2B1R3 b - - 5 46",
+      solution: ["Bxc4+", "Kxc4", "Rxc2", "Qh4", "Kd7"],
+      gameUrl:
+        "https://lichess.org/broadcast/2023-fide-world-rapid-championship/round-10/Mgr6FWwY/WdgyQs5t#91",
+      white: "Vladimir Fedoseev",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "World Rapid 2023",
+      wRating: 2716,
+      bRating: 2818,
+      id: 556,
+    },
   ];
 }
