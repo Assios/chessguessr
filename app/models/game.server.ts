@@ -6655,5 +6655,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2818,
       id: 556,
     },
+    {
+      date: "2023-12-30",
+      fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      solution: ["Nf3", "Nf6", "Nd4", "Nd5", "Nb3"],
+      gameUrl:
+        "https://lichess.org/broadcast/2023-fide-world-blitz-championship--boards-1-30/round-11/yem1lgfo/ESRRgphO#0",
+      white: "Daniil Dubov",
+      black: "Ian Nepomniachtchi",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "World Rapid 2023",
+      wRating: 2763,
+      bRating: 2795,
+      id: 557,
+    },
   ];
 }
