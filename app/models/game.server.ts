@@ -6665,7 +6665,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Ian Nepomniachtchi",
       wTitle: "GM",
       bTitle: "GM",
-      event: "World Rapid 2023",
+      event: "World Blitz 2023",
       wRating: 2763,
       bRating: 2795,
       id: 557,
