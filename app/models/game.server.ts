@@ -6673,7 +6673,7 @@ export async function getGames(): Promise<Array<GameType>> {
     {
       date: "2023-12-31",
       fen: "8/2p1k1p1/p3p3/nr2p3/4P3/1p2KN1P/1PP3P1/2R5 b - - 1 32",
-      solution: ["Nc5", "Ke2", "bxc2", "Rxc2", "Rxb2"],
+      solution: ["Nc4+", "Ke2", "bxc2", "Rxc2", "Rxb2"],
       gameUrl:
         "https://lichess.org/broadcast/2023-fide-world-blitz-championship--boards-1-30/round-11/yem1lgfo/ESRRgphO#0",
       white: "Jan-Krzysztof Duda",
