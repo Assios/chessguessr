@@ -6696,5 +6696,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2143,
       id: 559,
     },
+    {
+      date: "2024-01-02",
+      fen: "rn1qk1nr/pb1p1pp1/1p2p2p/2b1P1N1/3p4/1P1B4/P1P2PPP/RNBQK2R w KQkq - 0 8",
+      solution: ["Qh5", "Qe7", "Nxf7", "Qxf7", "Bg6"],
+      gameUrl: "https://lichess.org/Cmt7oyu8/white#14",
+      white: "farhanhasbi",
+      black: "bumblebee-man",
+      wRating: 1751,
+      bRating: 1781,
+      id: 560,
+    },
   ];
 }
