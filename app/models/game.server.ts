@@ -6719,5 +6719,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2143,
       id: 561,
     },
+    {
+      date: "2024-01-04",
+      fen: "3r1rk1/Q3Rp2/5q2/4p1p1/3n1P2/P3N1Pp/1P5P/1B3R1K b - - 0 31",
+      solution: ["Qc6+", "Kg1", "Nf3+", "Rxf3", "Qxf3"],
+      gameUrl: "https://lichess.org/FM4TW7Xw/black#61",
+      white: "GidroCiclonSCBW",
+      black: "seregabogaty27",
+      wRating: 1601,
+      bRating: 1603,
+      id: 562,
+    },
   ];
 }
