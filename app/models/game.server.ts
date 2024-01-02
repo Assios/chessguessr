@@ -6707,5 +6707,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1781,
       id: 560,
     },
+    {
+      date: "2024-01-03",
+      fen: "r4rk1/5p2/7p/pp1pPRbP/3P2Q1/8/PPq3P1/5RK1 w - - 0 25",
+      solution: ["Rxg5+", "hxg5", "Qxg5+", "Kh8", "Rf6"],
+      gameUrl: "https://lichess.org/UAATOWnD/white#48",
+      white: "Roullo_Rolzon",
+      black: "DANIEL_BAYLOSIS2",
+      wTitle: "NM",
+      wRating: 2491,
+      bRating: 2143,
+      id: 561,
+    },
   ];
 }
