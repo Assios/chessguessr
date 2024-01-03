@@ -210,7 +210,6 @@ const useChessguessr = (
         move.color !== "green"
       ) {
         formattedGuess[i].color = "yellow";
-      } else if (discardYellowArray.indexOf(move.move) !== -1) {
         discardYellowArray[discardYellowArray.indexOf(move.move)] = null;
       }
 

@@ -1,7 +1,7 @@
 import { Chessguessr } from "../components/Chessguessr";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
@@ -40,19 +40,21 @@ export default function Index() {
   });
 
   return (
-    <div className="mt-10 mb-20 lg:mb-0">
-      {game && (
-        <Chessguessr
-          showModal={showModal}
-          setShowModal={setShowModal}
-          showTutorial={showTutorial}
-          setShowTutorial={setShowTutorial}
-          setTutorial={setTutorial}
-          game={game}
-          stats={stats}
-          shouldUpdateStats={true}
-        />
-      )}
+    <div>
+      <div className="mt-10 mb-20 lg:mb-0">
+        {game && (
+          <Chessguessr
+            showModal={showModal}
+            setShowModal={setShowModal}
+            showTutorial={showTutorial}
+            setShowTutorial={setShowTutorial}
+            setTutorial={setTutorial}
+            game={game}
+            stats={stats}
+            shouldUpdateStats={true}
+          />
+        )}
+      </div>
     </div>
   );
 }
