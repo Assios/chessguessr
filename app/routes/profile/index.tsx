@@ -15,7 +15,7 @@ import {
   getUserActivities,
 } from "../../firebase/utils";
 import { achievements, Achievement } from "~/models/achievements";
-import { EnvelopeIcon } from "@heroicons/react/20/solid";
+import { EnvelopeIcon, PencilIcon } from "@heroicons/react/20/solid";
 import { AiFillStar } from "react-icons/ai";
 import { FaTrophy } from "react-icons/fa";
 
@@ -38,6 +38,7 @@ export default function Profile() {
   const [newUsername, setNewUsername] = useState("");
   const [changing, setChanging] = useState(false);
   const [message, setMessage] = useState("");
+  const [showUsernameChange, setShowUsernameChange] = useState(false);
   const [canUpdateUsername, setCanUpdateUsername] = useState(true);
   const [timeLeftToUpdate, setTimeLeftToUpdate] = useState("");
   const [localStats, setLocalStats] = useLocalStorage("cg-stats", null);
@@ -142,33 +143,31 @@ export default function Profile() {
 
     try {
       if (newUsername === "") {
-        setMessage("Username cannot be empty.");
+        toast.error("Username cannot be empty.", { duration: 2500 });
         return;
       }
 
       if (await isUsernameTaken(newUsername)) {
-        setMessage("Username is already taken.");
+        toast.error("Username is already taken.", { duration: 2500 });
         return;
       }
 
-      try {
-        await updateUsername(user.uid, newUsername);
+      await updateUsername(user.uid, newUsername);
 
-        updateUser({
-          ...user,
-          username: newUsername,
-        });
+      updateUser({
+        ...user,
+        username: newUsername,
+      });
 
-        setMessage("Username updated successfully!");
-      } catch (error) {
-        console.error(`Failed to update username: ${error.message}`);
-
-        setMessage(`Failed to update username: ${error.message}`);
-      }
+      toast.success("Username updated successfully!", { duration: 2500 });
     } catch (error) {
-      setMessage(`Error: ${error.message}`);
+      console.error(`Failed to update username: ${error.message}`);
+      toast.error(`Failed to update username: ${error.message}`, {
+        duration: 2500,
+      });
     } finally {
       setChanging(false);
+      setShowUsernameChange(false);
     }
   };
 
@@ -204,60 +203,59 @@ export default function Profile() {
           />
         </div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
-            {profile && (
-              <>
-                <div className="flex">
-                  <div
-                    className="tooltip"
-                    data-tip="Profile picture fetched from Gravatar using your email. Update it on gravatar.com."
-                  >
-                    <img
-                      className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
-                      src={profile.avatar}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="mt-6 min-w-0 flex-1 sm:pb-1">
+          <div className="relative -mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
+            <div className="flex">
+              <img
+                className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
+                src={profile.avatar}
+                alt="Avatar"
+              />
+            </div>
+            <div className="mt-6 min-w-0 flex-1 sm:pb-1">
+              <div className="flex justify-between items-center">
+                <div>
                   <h1 className="truncate text-2xl font-bold text-gray-900">
                     {profile.name}
+                    <button
+                      onClick={() => setShowUsernameChange(!showUsernameChange)}
+                      className="ml-2 text-sm btn btn-ghost btn-xs"
+                    >
+                      <PencilIcon className="h-4 w-4" aria-hidden="true" />
+                    </button>
                   </h1>
                   <div className="flex flex-row items-center space-x-2 mt-4">
                     <EnvelopeIcon className="h-5 w-5" aria-hidden="true" />
                     <span className="text-sm">{profile.email}</span>
                   </div>
-                  <div className="relative mt-2">
-                    <div className="flex mb-2 items-center justify-between">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">
-                          Level {user.progress?.level}
-                        </span>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-xs font-semibold inline-block text-indigo-600">
-                          {user.progress?.xp} /{" "}
-                          {xpNeededForNextLevel(user.progress?.level)} XP
-                        </span>
-                      </div>
-                    </div>
-                    <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-indigo-200">
-                      <div
-                        style={{
-                          width: `${
-                            (user.progress?.xp /
-                              xpNeededForNextLevel(user.progress?.level)) *
-                            100
-                          }%`,
-                        }}
-                        className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-500"
-                      ></div>
-                    </div>
-                  </div>
                 </div>
-              </>
-            )}
+                {showUsernameChange && (
+                  <div className="flex items-center mb-8">
+                    <input
+                      type="text"
+                      className="input input-bordered input-sm max-w-xs"
+                      placeholder="New username"
+                      value={newUsername}
+                      onChange={(e) => setNewUsername(e.target.value)}
+                    />
+                    <button
+                      onClick={handleUsernameChange}
+                      className="btn btn-primary btn-sm ml-2"
+                    >
+                      Update
+                    </button>
+                    <button
+                      onClick={() => setShowUsernameChange(false)}
+                      className="btn btn-ghost btn-sm ml-2"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className={"mt-2 h-6"}></div>
+            </div>
           </div>
+
           <div className="mt-8">
             {!importedDate && localStats && (
               <div className="p-6 rounded-lg shadow-sm">

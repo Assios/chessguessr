@@ -13,21 +13,6 @@ export default function Login() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleGoogleLogin = async () => {
-    try {
-      setLoading(true);
-      const user = await signInWithGoogle();
-      if (user) {
-        setMessage("Login successful!");
-        window.location.href = "/profile";
-      }
-    } catch (error) {
-      setMessage(`Error: ${error.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -56,6 +41,16 @@ export default function Login() {
       setMessage(ERROR_MAP[error.code] || `Error: ${error.message}`);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      // Assuming you want to redirect after successful login
+      window.location.href = "/profile";
+    } catch (error) {
+      setMessage(`Error during Google Sign In: ${error.message}`);
     }
   };
 
@@ -123,6 +118,16 @@ export default function Login() {
               {message}
             </div>
           )}
+
+          <div>
+            <button
+              type="button"
+              onClick={handleGoogleSignIn}
+              className="flex w-full justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-700"
+            >
+              Sign in with Google
+            </button>
+          </div>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Don't have an account?{" "}
