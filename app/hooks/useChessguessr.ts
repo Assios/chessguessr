@@ -194,12 +194,18 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       return { move: move, color: "grey", pieceColor: "regular" };
     });
 
+    // mark all the green moves
     formattedGuess.forEach((move, i) => {
       if (solutionArray[i] === move.move) {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
         discardYellowArray[i] = null;
-      } else if (
+      }
+    });
+       
+    // mark all the yellow and blue moves
+    formattedGuess.forEach((move, i) => {
+       if (
         discardYellowArray.includes(move.move) &&
         move.color !== "green"
       ) {
