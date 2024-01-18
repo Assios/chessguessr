@@ -6919,5 +6919,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2530,
       id: 579,
     },
+    {
+      date: "2024-01-22",
+      fen: "rn1qk2r/1b3ppp/p2bpn2/1p1PN3/4P3/1Q4P1/5PBP/RNB2RK1 w kq - 1 14",
+      solution: ["Nxf7", "Kxf7", "dxe6+", "Ke8", "e5"],
+      gameUrl: "https://lichess.org/dJdR2yCw#26",
+      white: "Anish Giri",
+      black: "Alexander Morozevich",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "SportAccord World Mind Games, 2012",
+      wRating: 2720,
+      bRating: 2748,
+      id: 580,
+    },
   ];
 }
