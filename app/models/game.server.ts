@@ -6944,5 +6944,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1847,
       id: 581,
     },
+    {
+      date: "2024-01-24",
+      fen: "1rb1k2r/2qp2p1/p1p1p2n/2b1Pp2/N7/1P4P1/P1PB1PB1/R2QR1K1 b k - 2 15",
+      solution: ["Bxf2+", "Kxf2", "Ng4+", "Kf1", "Qa7"],
+      gameUrl: "https://lichess.org/EtTglHMV/black#29",
+      white: "VfL1848",
+      black: "Chess-Orca",
+      bTitle: "FM",
+      wRating: 2412,
+      bRating: 2571,
+      id: 582,
+    },
   ];
 }
