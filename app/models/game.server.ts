@@ -7001,5 +7001,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2211,
       id: 586,
     },
+    {
+      date: "2024-01-29",
+      fen: "4r1k1/p1pb1ppp/Qbp1r3/8/1P6/2Pq1B2/R2P1PPP/2B2RK1 b - - 4 17",
+      solution: ["Qxf3", "gxf3", "Rg6+", "Kh1", "Bh3"],
+      gameUrl: "https://lichess.org/1rjeMQSr#33",
+      white: "Louis Paulsen",
+      black: "Paul Morphy",
+      event: "1st American Chess Congress, New York (1857)",
+      eventUrl: "https://www.chessgames.com/perl/chess.pl?tid=79271",
+      wRating: null,
+      bRating: null,
+      id: 587,
+    },
   ];
 }
