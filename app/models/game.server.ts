@@ -7082,5 +7082,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1694,
       id: 593,
     },
+    {
+      date: "2024-02-05",
+      fen: "r1b1k1r1/2q1bp1p/pB1pp3/8/2n1P1n1/P1N4N/2PQB1PP/1R3RK1 w q - 2 20",
+      solution: ["Qf4", "Nxb6", "Qxf7+", "Kd7", "Qxg8"],
+      gameUrl: "https://lichess.org/xo6WGF5O/white#38",
+      white: "EstadisticasAjedrez",
+      black: "fankasp",
+      wRating: 2408,
+      bRating: 2426,
+      id: 594,
+    },
   ];
 }
