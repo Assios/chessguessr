@@ -7115,5 +7115,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2341,
       id: 596,
     },
+    {
+      date: "2024-02-08",
+      fen: "3r4/8/k1B1Rp2/p1PP2pp/3n4/6P1/6P1/6K1 w - - 3 40",
+      solution: ["Ba4+", "Ka7", "Re7+", "Kb8", "d6"],
+      gameUrl:
+        "https://lichess.org/broadcast/chessable-masters-2024--division-1/day-5--grand-final/X0yrZMxm/pzozNI3k#78",
+      white: "Magnus Carlsen",
+      black: "Alireza Firouzja",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Chessable Masters 2024",
+      wRating: 2882,
+      bRating: 2843,
+      id: 597,
+    },
   ];
 }
