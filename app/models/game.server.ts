@@ -7153,5 +7153,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2535,
       id: 599,
     },
+    {
+      date: "2024-02-11",
+      fen: "r6k/1b1qbp2/2p1p2p/2p1P2P/1pP5/1P1PQP2/rB2R1PK/4N3 w - - 0 35",
+      solution: ["Qxh6+", "Kg8", "Re4", "f5", "exf6"],
+      gameUrl: "https://lichess.org/rDEzVowG/white#68",
+      white: "dragonberlin",
+      black: "Ivan_Bubeshko",
+      wTitle: "CM",
+      wRating: 2223,
+      bRating: 2165,
+      id: 600,
+    },
   ];
 }
