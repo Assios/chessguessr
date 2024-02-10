@@ -7141,5 +7141,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1667,
       id: 598,
     },
+    {
+      date: "2024-02-10",
+      fen: "2k1r3/pp2P2b/5p2/3pb2N/1PB1n3/8/P3K1PP/2R5 w - - 0 25",
+      solution: ["Bb5+", "Nc3+", "Rxc3+", "Bxc3", "Bxe8"],
+      gameUrl: "https://lichess.org/WjrBMWVM/white#48",
+      white: "Juegosolidokf7",
+      black: "mux77",
+      bTitle: "FM",
+      wRating: 2417,
+      bRating: 2535,
+      id: 599,
+    },
   ];
 }
