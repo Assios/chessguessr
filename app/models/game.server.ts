@@ -7176,5 +7176,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2354,
       id: 601,
     },
+    {
+      date: "2024-02-13",
+      fen: "3q1r1k/1b5p/pp2Q1p1/8/PP1Rp3/2r4P/B5PB/5R1K b - - 0 27",
+      solution: ["Rxf1+", "Bg1", "Rxg1+", "Kxg1", "Qxd4+"],
+      gameUrl: "https://lichess.org/mEto9Ttz/black#53",
+      white: "timur816",
+      black: "victorgabino",
+      wRating: 1979,
+      bRating: 2002,
+      id: 602,
+    },
   ];
 }
