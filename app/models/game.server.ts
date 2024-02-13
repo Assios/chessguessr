@@ -7187,5 +7187,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2002,
       id: 602,
     },
+    {
+      date: "2024-02-14",
+      fen: "r3r1k1/p4pp1/2p2n1p/3bN3/5B2/2PQ4/1q3PPP/R4RK1 w - - 2 20",
+      solution: ["Rfb1", "Be4", "Rxb2", "Bxd3", "Nxd3"],
+      gameUrl: "https://lichess.org/fL1uq8Ie/white#38",
+      white: "Volodymir-Kiev",
+      black: "Twaambo22",
+      wRating: 1927,
+      bRating: 1908,
+      id: 603,
+    },
+    {
+      date: "2024-02-15",
+      fen: "r4rk1/pp3pp1/4bb2/1nP4p/2Qp1B2/PN1P1q1P/1P3PP1/1K1RR3 w - - 0 21",
+      solution: ["gxf3", "Bxc4", "dxc4", "Nxa3+", "bxa3"],
+      gameUrl: "https://lichess.org/aYiLPcRm/white#40",
+      white: "MikkhailTal",
+      black: "Yorumsuz",
+      wRating: 2075,
+      bRating: 2308,
+      id: 604,
+    },
   ];
 }
