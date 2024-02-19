@@ -7253,5 +7253,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2513,
       id: 608,
     },
+    {
+      date: "2024-02-20",
+      fen: "8/6B1/5p2/pp2b3/2ppk1PP/P7/1PP2K2/8 w - - 2 33",
+      solution: ["h5", "d3", "cxd3+", "cxd3", "Ke1"],
+      gameUrl: "https://lichess.org/ehdNSU2G/white#64",
+      white: "BanshilalRanchi",
+      black: "raffgier",
+      wRating: 1949,
+      bRating: 1986,
+      id: 609,
+    },
   ];
 }
