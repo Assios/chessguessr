@@ -7264,5 +7264,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1986,
       id: 609,
     },
+    {
+      date: "2024-02-21",
+      fen: "rnb2rk1/pp2bpp1/2pp1nqp/4p3/2BPP3/P1N1BQ2/1PP1NPPP/R4RK1 b - - 0 10",
+      solution: ["Bg4", "Qg3", "Nh5", "Qh4", "Bxh4"],
+      gameUrl: "https://lichess.org/h4YLmqPK/black#19",
+      white: "aVZalovalbert",
+      black: "Ivan-gso",
+      wRating: 1604,
+      bRating: 1604,
+      id: 610,
+    },
   ];
 }
