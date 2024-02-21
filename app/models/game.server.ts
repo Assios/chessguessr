@@ -7275,5 +7275,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1604,
       id: 610,
     },
+    {
+      date: "2024-02-22",
+      fen: "2q2bk1/5p2/6pp/2NP1b2/1r2N3/1P2Q2P/6P1/2R4K b - - 4 33",
+      solution: ["Bxe4", "Nxe4", "Rxe4", "Rxc8", "Rxe3"],
+      gameUrl: "https://lichess.org/Bl1XZBRt/black#65",
+      white: "AMMs",
+      black: "BraveHeartIndian",
+      bTitle: "IM",
+      wRating: 2453,
+      bRating: 2553,
+      id: 611,
+    },
   ];
 }
