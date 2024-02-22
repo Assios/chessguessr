@@ -7287,5 +7287,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2553,
       id: 611,
     },
+    {
+      date: "2024-02-23",
+      fen: "1r3r1k/4N1pp/8/5pQP/2pP4/qp2P1P1/b4PBK/2n2R2 w - - 0 41",
+      solution: ["Ng6+", "Kg8", "Bd5+", "Rf7", "Qxf5"],
+      gameUrl: "https://lichess.org/kVUSCxkH/white#80",
+      white: "Assios",
+      black: "MasterChessDojo",
+      wTitle: "LM",
+      bTitle: "NM",
+      wRating: 2268,
+      bRating: 2131,
+      id: 612,
+    },
   ];
 }
