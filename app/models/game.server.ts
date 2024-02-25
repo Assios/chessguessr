@@ -7322,5 +7322,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1816,
       id: 614,
     },
+    {
+      date: "2024-02-26",
+      fen: "1r4k1/1q4pp/b3p3/p2pN3/P2P4/5QR1/2P2P1P/2K5 b - - 4 28",
+      solution: ["Qb2+", "Kd2", "Qxd4+", "Nd3", "Bxd3"],
+      gameUrl: "https://lichess.org/uv0wXgnR/black#55",
+      white: "Alexr58",
+      black: "Bondarenko-Dmitriy",
+      wTitle: "IM",
+      wRating: 2441,
+      bRating: 2257,
+      id: 615,
+    },
   ];
 }
