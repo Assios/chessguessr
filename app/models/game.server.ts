@@ -7346,5 +7346,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2531,
       id: 616,
     },
+    {
+      date: "2024-02-28",
+      fen: "r4r1k/ppq3p1/2p1QnnP/b2p2N1/6P1/3P4/PPP2PB1/R1BK3R w - - 3 20",
+      solution: ["Qf5", "Ne7", "hxg7+", "Kxg7", "Ne6+"],
+      gameUrl: "https://lichess.org/u1XczV88/white#38",
+      white: "manwithavan",
+      wAka: "Magnus Carlsen",
+      wTitle: "GM",
+      black: "nihalsarin2004",
+      bAka: "Nihal Sarin",
+      bTitle: "GM",
+      wRating: 3073,
+      bRating: 3078,
+      id: 617,
+    },
   ];
 }
