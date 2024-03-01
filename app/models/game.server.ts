@@ -7383,5 +7383,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2115,
       id: 619,
     },
+    {
+      date: "2024-03-02",
+      fen: "Rr5k/2p3bp/1p1p2p1/1P6/2Pp1q2/3P4/Q3PP1P/5R1K b - - 1 26",
+      solution: ["Be5", "Rxb8+", "Kg7", "Rg8+", "Kh6"],
+      gameUrl: "https://lichess.org/VapBoi8v/black#51",
+      white: "Arturo_Vidarte",
+      black: "ulduz01",
+      wTitle: "IM",
+      wRating: 2497,
+      bRating: 2440,
+      id: 620,
+    },
   ];
 }
