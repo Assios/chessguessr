@@ -7372,5 +7372,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2001,
       id: 618,
     },
+    {
+      date: "2024-03-01",
+      fen: "6k1/5pp1/2q4p/pr6/Qp1r2n1/1N4P1/PP3P1P/4R1K1 w - - 0 30",
+      solution: ["Nxd4", "Qf6", "Re8+", "Kh7", "Qc2+"],
+      gameUrl: "https://lichess.org/UCUGzzfs/white#58",
+      white: "The_Illumined",
+      black: "Liminlin",
+      wRating: 2144,
+      bRating: 2115,
+      id: 619,
+    },
   ];
 }
