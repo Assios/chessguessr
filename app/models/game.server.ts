@@ -7395,5 +7395,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2440,
       id: 620,
     },
+    {
+      date: "2024-03-03",
+      fen: "5rk1/1p2pp1p/p2p2p1/3Pb3/5NqP/1P4P1/P4PB1/3RR1K1 w - - 2 27",
+      solution: ["Bh3", "Qf3", "Rd3", "Qxd3", "Nxd3"],
+      gameUrl: "https://lichess.org/ZHLgu7OV/white#52",
+      white: "TheWallofChess",
+      black: "tsartsaanamjil",
+      wRating: 2651,
+      bRating: 2591,
+      id: 621,
+    },
   ];
 }
