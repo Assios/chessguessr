@@ -163,7 +163,7 @@ export const Chessguessr = ({
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
+            <p className="sm:text-lg lg:text-2xl mb-2 font-semibold text-center">
               {wTitle && (
                 <span className="text-secondary-content">{wTitle}</span>
               )}{" "}
