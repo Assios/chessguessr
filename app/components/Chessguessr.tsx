@@ -165,26 +165,25 @@ export const Chessguessr = ({
       </div>
       <Game>
         <div className="flex justify-center items-center w-full px-4 sm:px-0">
-          <div className="bg-gray-900 px-6 py-2.5 rounded-xl text-white text-sm mb-4 inline-block">
-            <a
-              href="https://chessprophet.app/"
-              target="_blank"
-              onClick={() => {
-                trackEvent("Click Chess Prophet");
-              }}
+          <a
+            href="https://chessprophet.app/"
+            target="_blank"
+            className="inline-block bg-gray-900 px-6 py-2.5 rounded-xl text-white text-sm mb-4 text-center"
+            onClick={() => {
+              trackEvent("Click Chess Prophet");
+            }}
+          >
+            <strong>Sponsored by Chess Prophet</strong>
+            <svg
+              viewBox="0 0 2 2"
+              className="mx-2 inline h-0.5 w-0.5 fill-current"
+              aria-hidden="true"
             >
-              <strong>Sponsored by Chess Prophet</strong>
-              <svg
-                viewBox="0 0 2 2"
-                className="mx-2 inline h-0.5 w-0.5 fill-current"
-                aria-hidden="true"
-              >
-                <circle cx="1" cy="1" r="1" />
-              </svg>
-              Predict game results and win prizes &nbsp;
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            Predict game results and win prizes &nbsp;
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
 
         <BoardWrapper>
