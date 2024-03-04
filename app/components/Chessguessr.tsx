@@ -162,6 +162,7 @@ export const Chessguessr = ({
       </div>
       <Game>
         <BoardWrapper>
+          <div className="text-center mx-auto">Test</div>
           <Players>
             <p className="sm:text-lg lg:text-2xl mb-2 font-semibold text-center">
               {wTitle && (
