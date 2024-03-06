@@ -7447,5 +7447,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 3112,
       id: 624,
     },
+    {
+      date: "2024-03-07",
+      fen: "4q1k1/pb5p/1p4p1/2pP1pB1/2Qb4/5BP1/PP3P1P/6K1 w - - 0 28",
+      solution: ["d6+", "Qf7", "Qxf7+", "Kxf7", "Bxb7"],
+      gameUrl: "https://lichess.org/8XkxwdKm/white#54",
+      white: "Dany2k7",
+      black: "SkeweredBishop",
+      wRating: 2147,
+      bRating: 2239,
+      id: 625,
+    },
   ];
 }
