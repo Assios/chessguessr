@@ -7491,5 +7491,27 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1613,
       id: 628,
     },
+    {
+      date: "2024-03-11",
+      fen: "6k1/2P5/6N1/1P2p2p/6q1/6P1/7K/8 w - - 0 51",
+      solution: ["c8=Q+", "Qxc8", "Ne7+", "Kf7", "Nxc8"],
+      gameUrl: "https://lichess.org/e8dvznav/white#100",
+      white: "uwontfindmyidentity",
+      black: "Navier_Stokes",
+      wRating: 2222,
+      bRating: 2078,
+      id: 629,
+    },
+    {
+      date: "2024-03-12",
+      fen: "r3k2r/pp3ppq/8/2pPp3/3PN1P1/3P2P1/PP6/R1BQR1K1 b kq - 0 18",
+      solution: ["Qh1+", "Kf2", "Rh2+", "Ke3", "cxd4#"],
+      gameUrl: "https://lichess.org/l1IJAAuR/black#35",
+      white: "HARPIA1965",
+      black: "PrawdziwyByk",
+      wRating: 1866,
+      bRating: 1837,
+      id: 630,
+    },
   ];
 }
