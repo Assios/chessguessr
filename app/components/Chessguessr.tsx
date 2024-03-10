@@ -173,7 +173,7 @@ export const Chessguessr = ({
               trackEvent("Click Chess Prophet");
             }}
           >
-            <strong>Sponsored by Chess Prophet</strong>
+            <strong>Sponsored</strong>
             <svg
               viewBox="0 0 2 2"
               className="mx-2 inline h-0.5 w-0.5 fill-current"
@@ -181,7 +181,7 @@ export const Chessguessr = ({
             >
               <circle cx="1" cy="1" r="1" />
             </svg>
-            Predict game results and win prizes &nbsp;
+            New Chess Prophet game this tuesday! &nbsp;
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
