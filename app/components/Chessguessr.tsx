@@ -181,7 +181,7 @@ export const Chessguessr = ({
             >
               <circle cx="1" cy="1" r="1" />
             </svg>
-            New Chess Prophet game this tuesday! &nbsp;
+            New Chess Prophet game 16:00 UTC TODAY! &nbsp;
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
