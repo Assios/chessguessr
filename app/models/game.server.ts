@@ -7513,5 +7513,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1837,
       id: 630,
     },
+    {
+      date: "2024-03-13",
+      fen: "r1br2k1/p3q1p1/4p2p/2pn1p2/2p1QN2/8/PPB2PPP/R3R1K1 w - - 0 20",
+      solution: ["Nxd5", "Qb7", "Ne7+", "Kf7", "Nc6"],
+      gameUrl: "https://lichess.org/tlCTt9Vl/white#38",
+      white: "lojzek18",
+      black: "mhamadfandy",
+      wTitle: "GM",
+      wAka: "Alojzije Jankovic",
+      wRating: 2635,
+      bRating: 2447,
+      id: 631,
+    },
   ];
 }
