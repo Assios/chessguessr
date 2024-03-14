@@ -7537,5 +7537,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1619,
       id: 632,
     },
+    {
+      date: "2024-03-15",
+      fen: "1r6/p1pk2pp/2n2p2/2Q5/8/2BP2Pb/P1q2P1P/4R1K1 w - - 0 22",
+      solution: ["Qd5+", "Kc8", "Re8+", "Kb7", "Qb5+"],
+      gameUrl: "https://lichess.org/47YHk0ET/white#42",
+      white: "shaik-786",
+      black: "JBSmith",
+      wRating: 1806,
+      bRating: 1824,
+      id: 633,
+    },
   ];
 }
