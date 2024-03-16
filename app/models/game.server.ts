@@ -7548,5 +7548,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1824,
       id: 633,
     },
+    {
+      date: "2024-03-16",
+      fen: "r1bR1rk1/ppQ2p1p/2p1p1p1/2b5/2q3N1/8/P1P2PPP/5RK1 w - - 0 25",
+      solution: ["Nh6+", "Kg7", "Rxf8", "Bxf8", "Qxf7+"],
+      gameUrl: "https://lichess.org/x6JcTWrn/white#48",
+      white: "Weetik",
+      black: "TrillandoLaFina",
+      wRating: 2439,
+      bRating: 2188,
+      id: 634,
+    },
   ];
 }
