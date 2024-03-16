@@ -7559,5 +7559,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2188,
       id: 634,
     },
+    {
+      date: "2024-03-17",
+      fen: "r1bqk1nr/1pp3p1/1pnp3p/5p2/2BpP3/3P3P/PPP2PP1/R1BQK2R w KQkq - 0 10",
+      solution: ["Qh5+", "Kd7", "Qxf5+", "Ke7", "Qf7#"],
+      gameUrl: "https://lichess.org/o9jOEUrn/white#18",
+      white: "Nirvana777",
+      black: "vollo",
+      wRating: 1691,
+      bRating: 1759,
+      id: 635,
+    },
   ];
 }
