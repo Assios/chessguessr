@@ -7570,5 +7570,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1759,
       id: 635,
     },
+    {
+      date: "2024-03-18",
+      fen: "8/6k1/P7/2p5/5pp1/8/8/4n2K b - - 0 43",
+      solution: ["f3", "Kg1", "g3", "a7", "f2+"],
+      gameUrl: "https://lichess.org/g4Mtictl/black#85",
+      white: "keshav27",
+      black: "Averbakh_Student",
+      wTitle: "CM",
+      wRating: 2319,
+      bRating: 2417,
+      id: 636,
+    },
   ];
 }
