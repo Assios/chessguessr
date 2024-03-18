@@ -7582,5 +7582,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2417,
       id: 636,
     },
+    {
+      date: "2024-03-19",
+      fen: "5rk1/5p1p/3P2p1/4Q3/p2p3q/8/Br4P1/5RK1 w - - 2 33",
+      solution: ["Bxf7+", "Rxf7", "Qe8+", "Kg7", "Rxf7+"],
+      gameUrl: "https://lichess.org/HrriTBsz/white#64",
+      white: "voliagross",
+      black: "ReinaldoR",
+      wRating: 2482,
+      bRating: 2492,
+      id: 637,
+    },
   ];
 }
