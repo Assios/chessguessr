@@ -7628,17 +7628,6 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2024-03-23",
-      fen: "3r1rk1/Q3Rp2/5q2/4p1p1/3n1P2/P3N1Pp/1P5P/1B3R1K b - - 0 31",
-      solution: ["Qc6+", "Kg1", "Nf3+", "Rxf3", "Qxf3"],
-      gameUrl: "https://lichess.org/FM4TW7Xw/black#61",
-      white: "GidroCiclonSCBW",
-      black: "seregabogaty27",
-      wRating: 1601,
-      bRating: 1603,
-      id: 641,
-    },
-    {
-      date: "2024-03-24",
       fen: "2r2b1k/1bq2p1p/3p1p2/p3pP2/4P1R1/1N4Q1/P1PR2PP/1K6 b - - 3 25",
       solution: ["Bh6", "Qh4", "Bg5", "Rxg5", "fxg5"],
       gameUrl: "https://lichess.org/uFRjzYgG/black#49",
@@ -7647,7 +7636,7 @@ export async function getGames(): Promise<Array<GameType>> {
       bTitle: "FM",
       wRating: 2633,
       bRating: 2678,
-      id: 642,
+      id: 641,
     },
   ];
 }
