@@ -7649,5 +7649,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2323,
       id: 642,
     },
+    {
+      date: "2024-03-25",
+      fen: "1r6/2k5/1r1p2p1/4pp1p/1n2PP2/3PK1PP/1R2N3/1R6 b - - 1 31",
+      solution: ["Nd5+", "exd5", "Rxb2", "Rxb2", "Rxb2"],
+      gameUrl: "https://lichess.org/NuIDKNdD/black#61",
+      white: "andreu666",
+      black: "crestchess",
+      wRating: 2179,
+      bRating: 2256,
+      id: 643,
+    },
   ];
 }
