@@ -67,7 +67,7 @@ export const Footer = ({ trackEvent }: any) => {
         >
           <SiBuymeacoffee className="fill-current w-6 h-6" />
           <span className="mt-1 ml-1 text-xs hidden md:inline">
-            Support us & feature your game
+            Support Chessguessr
           </span>
         </a>
       </div>

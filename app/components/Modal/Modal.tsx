@@ -42,7 +42,25 @@ const Correct = ({ game, puzzleStats }) => {
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
         {game.bAka && ` (${game.bAka})`}
-        {game.event && ` in the ${game.event}`}.{" "}
+        {game.event && (
+          <>
+            {" "}
+            in the{" "}
+            {game.eventUrl ? (
+              <a
+                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                href={game.eventUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {game.event}
+              </a>
+            ) : (
+              game.event
+            )}
+          </>
+        )}
+        .{" "}
         {game.gameUrl && (
           <>
             Check out the game <GameLink game={game} />.

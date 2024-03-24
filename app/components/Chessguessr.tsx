@@ -18,6 +18,7 @@ import {
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { AuthContext } from "./AuthProvider/AuthProvider";
+import { useOutletContext } from "@remix-run/react";
 
 const ChessboardWrapper = styled.div`
   display: flex;
@@ -148,6 +149,8 @@ export const Chessguessr = ({
   useHotkeys("Enter", submitGuess, [currentGuess]);
   useHotkeys("Space", submitGuess, [currentGuess]);
 
+  const { trackEvent }: any = useOutletContext();
+
   return (
     <div>
       <div>
@@ -171,7 +174,7 @@ export const Chessguessr = ({
       <Game>
         <BoardWrapper>
           <Players>
-            <p className="sm:text-lg lg:text-2xl mb-4 font-semibold text-center">
+            <p className="sm:text-lg lg:text-2xl mb-2 font-semibold text-center">
               {wTitle && (
                 <span className="text-secondary-content">{wTitle}</span>
               )}{" "}

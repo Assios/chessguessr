@@ -3,7 +3,8 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - "**"
+      - master
+      - test
 
 jobs:
   deploy:
