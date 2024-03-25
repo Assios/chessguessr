@@ -7660,5 +7660,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2256,
       id: 643,
     },
+    {
+      date: "2024-03-26",
+      fen: "r3qr1k/pp2p1b1/2p1Qn1p/6p1/P3NB2/6P1/1PP2P1P/R3R1K1 w - - 0 24",
+      solution: ["Be5", "Nxe4", "Qxh6+", "Kg8", "Qxg7#"],
+      gameUrl: "https://lichess.org/nOEVaT7U/white#46",
+      white: "Fins",
+      black: "nor2009",
+      wAka: "John Bartholomew",
+      wTitle: "IM",
+      wRating: 2648,
+      bRating: 2009,
+      id: 644,
+    },
   ];
 }
