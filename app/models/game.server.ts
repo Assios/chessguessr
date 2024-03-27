@@ -7684,5 +7684,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1673,
       id: 645,
     },
+    {
+      date: "2024-03-28",
+      fen: "r1bqkb1r/pp1n1pp1/2p1pn1p/6N1/3P4/3B1N2/PPP2PPP/R1BQK2R w KQkq - 0 8",
+      solution: ["Nxe6", "fxe6", "Bg6+", "Ke7", "Bf4"],
+      gameUrl: "https://lichess.org/u4OccK9B/white#14",
+      white: "RomanSteblovskyi",
+      black: "doubleentendres",
+      wRating: 2149,
+      bRating: 2312,
+      id: 646,
+    },
   ];
 }
