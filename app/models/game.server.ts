@@ -7730,6 +7730,18 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2024-04-01",
+      fen: "4kb1r/p2r1ppp/4qn2/1B2p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 2 15",
+      solution: ["Bxd7+", "Nxd7", "Qb8+", "Nxb8", "Rd8#"],
+      gameUrl: "https://lichess.org/nO0C53Qs#28",
+      white: "Paul Morphy",
+      black: "Duke Karl",
+      event: "Opera Game, 1858",
+      wRating: null,
+      bRating: null,
+      id: 650,
+    },
+    {
+      date: "2024-04-02",
       fen: "8/5p1p/2RR2p1/1p2k3/7P/4p1P1/5r2/6K1 b - - 1 38",
       solution: ["Rd2", "Rf6", "Rd1+", "Kg2", "e2"],
       gameUrl: "https://lichess.org/vWJoS9hR/black#75",
@@ -7737,7 +7749,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Heliya",
       wRating: 1881,
       bRating: 1815,
-      id: 650,
+      id: 651,
     },
   ];
 }
