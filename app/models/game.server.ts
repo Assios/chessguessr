@@ -7824,5 +7824,20 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 657,
       event: "FIDE Candidates 2024",
     },
+    {
+      date: "2022-04-09",
+      fen: "r2qr1k1/pppbbpp1/3p3p/6N1/3B2nP/2PB4/PPPQ1PP1/2KR3R w - - 2 14",
+      solution: ["Nxf7", "Kxf7", "Bc4+", "Kf8", "Qd3"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-candidates-2024--women/round-3/iHJboPh9/BBYRpZNc#26",
+      white: "Rameshbabu Vaishali",
+      black: "Nurgyul Salimova",
+      wTitle: "IM",
+      bTitle: "IM",
+      wRating: 2475,
+      bRating: 2432,
+      id: 658,
+      event: "FIDE Women's Candidates 2024",
+    },
   ];
 }
