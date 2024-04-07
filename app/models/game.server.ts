@@ -7809,5 +7809,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2131,
       id: 656,
     },
+    {
+      date: "2022-04-08",
+      fen: "r1bq1rk1/pp2nppp/1bp2n2/4N3/4P3/2PB3P/PP3PP1/RNBQ1RK1 b - - 0 11",
+      solution: ["Bxh3", "Nc4", "Bg4", "Qc2", "Bc7"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-candidates-2024--open/round-2/GenKIJ8A/PK7eFTkz#21",
+      white: "Hikaru Nakamura",
+      black: "Santosh Gujrathi Vidit",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2789,
+      bRating: 2727,
+      id: 657,
+      event: "FIDE Candidates 2024",
+    },
   ];
 }
