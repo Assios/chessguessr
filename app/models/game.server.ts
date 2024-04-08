@@ -7810,7 +7810,7 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 656,
     },
     {
-      date: "2022-04-08",
+      date: "2024-04-08",
       fen: "r1bq1rk1/pp2nppp/1bp2n2/4N3/4P3/2PB3P/PP3PP1/RNBQ1RK1 b - - 0 11",
       solution: ["Bxh3", "Nc4", "Bg4", "Qc2", "Bc7"],
       gameUrl:
@@ -7825,7 +7825,7 @@ export async function getGames(): Promise<Array<GameType>> {
       event: "FIDE Candidates 2024",
     },
     {
-      date: "2022-04-09",
+      date: "2024-04-09",
       fen: "r2qr1k1/pppbbpp1/3p3p/6N1/3B2nP/2PB4/PPPQ1PP1/2KR3R w - - 2 14",
       solution: ["Nxf7", "Kxf7", "Bc4+", "Kf8", "Qd3"],
       gameUrl:
