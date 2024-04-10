@@ -7839,5 +7839,16 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 658,
       event: "FIDE Women's Candidates 2024",
     },
+    {
+      date: "2024-04-10",
+      fen: "2b3k1/4bp2/p3pnBQ/3pN1B1/PpnP4/4P1N1/1q3PPK/8 b - - 0 32",
+      solution: ["Nxe5", "Kh3", "Nxg6", "Bxf6", "Bxf6"],
+      gameUrl: "https://lichess.org/SBUMyQ8N/black#63",
+      white: "teachmehowtoXD",
+      black: "foremangeor",
+      wRating: 2667,
+      bRating: 2561,
+      id: 659,
+    },
   ];
 }
