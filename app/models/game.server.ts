@@ -7850,5 +7850,31 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2561,
       id: 659,
     },
+    {
+      date: "2024-04-11",
+      fen: "rn3rk1/p4pp1/1p1b3p/q2p2N1/8/1R5B/P4PPP/3Q1RK1 w - - 0 21",
+      solution: ["Nxf7", "Kxf7", "Rd3", "Nd7", "Rxd5"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-candidates-2024--open/round-5/MDiLWQ5M/MI1pR0AA#40",
+      white: "Praggnanandhaa",
+      black: "Ian Nepomniachtchi",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2747,
+      bRating: 2758,
+      id: 660,
+      event: "FIDE Candidates 2024",
+    },
+    {
+      date: "2024-04-12",
+      fen: "r4rk1/q3bppp/p3bn2/1p1N4/1P1Q4/P3PB2/1B3PPP/R4RK1 b - - 0 16",
+      solution: ["Bxd5", "Qxa7", "Rxa7", "Bxf6", "Bxf6"],
+      gameUrl: "https://lichess.org/i4frEEkG/black#31",
+      white: "Culiani",
+      black: "MilanVagovic",
+      wRating: 1719,
+      bRating: 1697,
+      id: 661,
+    },
   ];
 }
