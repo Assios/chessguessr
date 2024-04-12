@@ -7887,5 +7887,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1978,
       id: 662,
     },
+    {
+      date: "2024-04-14",
+      fen: "8/8/4p3/6k1/Pp1p4/5K1P/2P5/8 b - - 1 37",
+      solution: ["d3", "Ke3", "dxc2", "Kd2", "b3"],
+      gameUrl: "https://lichess.org/XmEIHKbe/black#73",
+      white: "Chess_Nomad",
+      black: "poliomax",
+      wTitle: "IM",
+      wRating: 2554,
+      bRating: 2511,
+      id: 663,
+    },
   ];
 }
