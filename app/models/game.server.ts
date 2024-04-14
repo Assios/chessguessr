@@ -7899,5 +7899,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2511,
       id: 663,
     },
+    {
+      date: "2024-04-15",
+      fen: "4Q3/p1p3pk/2pq4/3p4/3P2bp/5rPP/P4P2/R4RK1 b - - 0 29",
+      solution: ["Rxg3+", "fxg3", "Qxg3+", "Kh1", "Qxh3+"],
+      gameUrl: "https://lichess.org/vAvmIh8i/black#57",
+      white: "Gennadiy0209",
+      black: "AjedrezGallegos2019",
+      wRating: 1790,
+      bRating: 1800,
+      id: 664,
+    },
   ];
 }
