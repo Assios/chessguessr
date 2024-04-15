@@ -7910,5 +7910,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1800,
       id: 664,
     },
+    {
+      date: "2024-04-16",
+      fen: "2r5/1p2k3/3p4/p2P4/4PPp1/PBbK1bP1/R4R2/3r4 w - - 1 31",
+      solution: ["Bxd1", "Bxd1", "Rfc2", "Bxc2+", "Rxc2"],
+      gameUrl: "https://lichess.org/FcrZA8vF/white#60",
+      white: "kontosnik",
+      black: "Athanasios-Ioannis",
+      wRating: 2101,
+      bRating: 2025,
+      id: 665,
+    },
   ];
 }
