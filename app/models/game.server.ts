@@ -7921,5 +7921,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2025,
       id: 665,
     },
+    {
+      date: "2024-04-17",
+      fen: "3r4/1p3k2/p1bPR3/5p2/2B2P1p/8/PP4P1/3K4 w - - 5 37",
+      solution: ["Ke1", "Kg7", "Kf2", "a5", "a3"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-candidates-2024--open/round-10/vfqUR38R/HkcPdoKG#72",
+      white: "Fabiano Caruana",
+      black: "Alireza Firouzja",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2803,
+      bRating: 2760,
+      id: 666,
+      event: "FIDE Candidates 2024",
+    },
   ];
 }
