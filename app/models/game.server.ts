@@ -7936,5 +7936,17 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 666,
       event: "FIDE Candidates 2024",
     },
+    {
+      date: "2024-04-18",
+      fen: "2r5/pp2Qp2/6b1/3kpq2/1B1n4/P6R/5PP1/6K1 w - - 16 36",
+      solution: ["Qd6+", "Ke4", "Re3+", "Kf4", "Bd2"],
+      gameUrl: "https://lichess.org/BHxOkRir/white#70",
+      white: "hyo_lee",
+      black: "purzelbaumer",
+      bTitle: "IM",
+      wRating: 2629,
+      bRating: 2452,
+      id: 667,
+    },
   ];
 }
