@@ -7959,5 +7959,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2304,
       id: 668,
     },
+    {
+      date: "2024-04-20",
+      fen: "4k3/1p1r1pp1/p1nqb2p/P1p1R3/2P3P1/1P2QN1P/2B2PK1/8 w - - 2 34",
+      solution: ["Rd5", "Qc7", "Rxc5", "Re7", "Qc3"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-candidates-2024--open/round-12/eJghIBZe/KG8VAFPr#66",
+      white: "Fabiano Caruana",
+      black: "Santosh Gujrathi Vidit",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2803,
+      bRating: 2727,
+      id: 669,
+      event: "FIDE Candidates 2024",
+    },
   ];
 }
