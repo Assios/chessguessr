@@ -7987,5 +7987,28 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2673,
       id: 670,
     },
+    {
+      date: "2024-04-22",
+      fen: "r3r1k1/ppq2p2/2p1bn2/3p4/3Pn2Q/2PB1NPP/PP4P1/R4RK1 w - - 1 19",
+      solution: ["Ng5", "Qxg3", "Qxg3", "Nxg3", "Rxf6"],
+      gameUrl: "https://lichess.org/VKJ8iAJn/white#36",
+      white: "Art2man",
+      black: "entermemo",
+      wRating: 1539,
+      bRating: 1532,
+      id: 671,
+    },
+    {
+      date: "2024-04-23",
+      fen: "5B2/2r4k/6p1/1b1p1pQ1/3q4/1p6/5PP1/4R1K1 w - - 1 33",
+      solution: ["Qh6+", "Kg8", "Qxg6+", "Kxf8", "Qd6+"],
+      gameUrl: "https://lichess.org/SEqhGO7h/white#64",
+      white: "FMQuest",
+      black: "Riki1Riki1",
+      bTitle: "FM",
+      wRating: 2361,
+      bRating: 2401,
+      id: 672,
+    },
   ];
 }
