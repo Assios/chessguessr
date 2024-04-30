@@ -8076,5 +8076,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2016,
       id: 678,
     },
+    {
+      date: "2024-04-30",
+      fen: "r3k2r/1pp2ppp/p1b1p3/3nP3/3Pq3/1QP3N1/P4PPP/R1B2RK1 b kq - 2 14",
+      solution: ["Qxg2+", "Kxg2", "Nf4+", "Kg1", "Nh3#"],
+      gameUrl: "https://lichess.org/7KF8ttNS/black#27",
+      white: "Faceless_Knight",
+      black: "doimo",
+      wRating: 1774,
+      bRating: 2032,
+      id: 679,
+    },
   ];
 }
