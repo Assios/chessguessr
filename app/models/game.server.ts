@@ -8131,5 +8131,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1654,
       id: 683,
     },
+    {
+      date: "2024-05-05",
+      fen: "rnb1k2r/pp1nBpb1/3P2pp/q7/5P2/2p5/PPP1Q1PP/R3KBNR w KQkq - 0 11",
+      solution: ["Bd8+", "Qe5", "fxe5", "cxb2", "Rb1"],
+      gameUrl: "https://lichess.org/AVhvVUf6/white#20",
+      white: "mvanderbeeken",
+      black: "Nebula64",
+      bTitle: "FM",
+      wRating: 2381,
+      bRating: 2456,
+      id: 684,
+    },
   ];
 }
