@@ -8197,5 +8197,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2110,
       id: 689,
     },
+    {
+      date: "2024-05-11",
+      fen: "4r2k/3q1r1p/1p1bN1p1/3p1P2/1PbP2Q1/2P2R2/3B3P/4R2K b - - 0 34",
+      solution: ["gxf5", "Rxf5", "Rxe6", "Rxe6", "Qxe6"],
+      gameUrl: "https://lichess.org/z447HZVt/black#67",
+      white: "LeopoldHansa",
+      black: "NDIASSAKOS",
+      wRating: 1946,
+      bRating: 1943,
+      id: 690,
+    },
   ];
 }
