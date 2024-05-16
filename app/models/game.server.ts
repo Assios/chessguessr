@@ -8267,5 +8267,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2613,
       id: 695,
     },
+    {
+      date: "2024-05-17",
+      fen: "5rk1/4ppBp/6p1/1Np5/2B1n3/1P1Q1n1P/2PP1Pq1/3K1R2 b - - 0 19",
+      solution: ["Nxf2+", "Rxf2", "Qxf2", "Qe2", "Qg1+"],
+      gameUrl: "https://lichess.org/KRVOH5lG/black#37",
+      white: "Camilo7",
+      black: "nachtmar",
+      wRating: 1857,
+      bRating: 1799,
+      id: 696,
+    },
   ];
 }
