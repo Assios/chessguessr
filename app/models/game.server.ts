@@ -8289,5 +8289,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2720,
       id: 697,
     },
+    {
+      date: "2024-05-19",
+      fen: "3r1r1k/p1p1Q1p1/8/2p2p1p/2n3q1/P1P5/6PP/2B1RRK1 w - - 0 27",
+      solution: ["Rf4", "Qg6", "Rxc4", "Rfe8", "Qh4"],
+      gameUrl: "https://lichess.org/jvoYmsRF/white#52",
+      white: "matussalen",
+      black: "Gallito64",
+      bTitle: "FM",
+      wRating: 2234,
+      bRating: 2322,
+      id: 698,
+    },
   ];
 }
