@@ -8326,6 +8326,18 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       date: "2024-05-22",
+      fen: "2kr1b1r/1bqn1ppp/p2ppn2/1p4B1/3NP3/P1N2P2/1PPQ2PP/1K1R1B1R w - - 1 12",
+      solution: ["Ndxb5", "axb5", "Nxb5", "Qb6", "Be3"],
+      gameUrl: "https://lichess.org/9l2D8bh1/white#22",
+      white: "Assios",
+      black: "Pazito",
+      wTitle: "LM",
+      wRating: 2313,
+      bRating: 2257,
+      id: 701,
+    },
+    {
+      date: "2024-05-23",
       fen: "r1b2k1N/ppppq1bp/8/7n/4pP1Q/1P6/PB1P2PP/nN1K3R w - - 0 14",
       solution: ["Bxg7+", "Nxg7", "Qxh7", "Qf6", "Ng6+"],
       gameUrl: "https://lichess.org/maPTnFRQ/white#26",
@@ -8334,7 +8346,7 @@ export async function getGames(): Promise<Array<GameType>> {
       wTitle: "IM",
       wRating: 3096,
       bRating: 2512,
-      id: 701,
+      id: 702,
     },
   ];
 }
