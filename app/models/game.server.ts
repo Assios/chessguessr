@@ -8324,5 +8324,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2619,
       id: 700,
     },
+    {
+      date: "2024-05-22",
+      fen: "r1b2k1N/ppppq1bp/8/7n/4pP1Q/1P6/PB1P2PP/nN1K3R w - - 0 14",
+      solution: ["Bxg7+", "Nxg7", "Qxh7", "Qf6", "Ng6+"],
+      gameUrl: "https://lichess.org/maPTnFRQ/white#26",
+      white: "wateenellende",
+      black: "UnknownGM2800",
+      wTitle: "IM",
+      wRating: 3096,
+      bRating: 2512,
+      id: 701,
+    },
   ];
 }
