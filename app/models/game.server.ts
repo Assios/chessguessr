@@ -8348,5 +8348,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2512,
       id: 702,
     },
+    {
+      date: "2024-05-24",
+      fen: "2r3kb/pb1r3p/1qn1R1pB/1pp2pN1/3p1Q2/P1PP2P1/1P3PBP/R5K1 w - - 1 22",
+      solution: ["Rae1", "Qd8", "Qc7", "Rdxc7", "Re8+"],
+      gameUrl: "https://lichess.org/diT1uvfw/black#42",
+      white: "René Meier",
+      black: "Stefan Müller",
+      wRating: null,
+      bRating: null,
+      id: 703,
+    },
   ];
 }
