@@ -8359,5 +8359,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: null,
       id: 703,
     },
+    {
+      date: "2024-05-25",
+      fen: "7k/pb2p1bp/1pq3p1/8/2p1p3/2P3P1/PPQ1PKBP/3RR3 b - - 0 21",
+      solution: ["e3+", "Kxe3", "Bh6+", "Kd4", "Qc5#"],
+      gameUrl: "https://lichess.org/a5wVRJMe/black#41",
+      white: "Qizilbash",
+      black: "Agyzmal",
+      wTitle: "GM",
+      wRating: 2375,
+      bRating: 2255,
+      id: 704,
+    },
   ];
 }
