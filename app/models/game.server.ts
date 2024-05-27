@@ -8382,5 +8382,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2187,
       id: 705,
     },
+    {
+      date: "2024-05-27",
+      fen: "3r4/kbQ1n2p/3qp1p1/Pp3p2/3P4/8/5PPP/R1R3K1 w - - 2 27",
+      solution: ["a6", "Qxc7", "Rxc7", "Rxd4", "axb7+"],
+      gameUrl: "https://lichess.org/GaHKDNSF/white#52",
+      white: "JakSak",
+      black: "Ndricim-Allushi",
+      wRating: 1898,
+      bRating: 1837,
+      id: 706,
+    },
   ];
 }
