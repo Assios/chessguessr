@@ -8404,5 +8404,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1920,
       id: 707,
     },
+    {
+      date: "2024-05-29",
+      fen: "rnbqkbnr/ppp1ppp1/8/3p3p/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
+      solution: ["e5", "dxe5", "g5", "Bxg5", "Qxg5"],
+      gameUrl: "https://lichess.org/QRwU34oQ/black#5",
+      white: "Bestinblitz",
+      black: "DM_Bella",
+      wTitle: "GM",
+      wRating: 2958,
+      bRating: 2961,
+      id: 708,
+    },
   ];
 }
