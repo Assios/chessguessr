@@ -8426,5 +8426,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2117,
       id: 709,
     },
+    {
+      date: "2024-05-31",
+      fen: "8/p3ppkp/3p2p1/PP6/2r2r2/7P/6P1/R4R1K w - - 0 31",
+      solution: ["Rxf4", "Rxf4", "b6", "axb6", "a6"],
+      gameUrl: "https://lichess.org/xIaWNF5s/white#60",
+      white: "CHESS-PHILOSOPHER",
+      black: "fuzzy_reality",
+      wRating: 1992,
+      bRating: 2024,
+      id: 710,
+    },
   ];
 }
