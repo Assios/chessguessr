@@ -8461,5 +8461,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1645,
       id: 712,
     },
+    {
+      date: "2024-06-03",
+      fen: "r5k1/p1pQ2pp/1p1p3r/6q1/3pP3/5PbP/PPP2B2/R4R1K w - - 0 22",
+      solution: ["Rg1", "Rd8", "Rxg3", "Rxd7", "Rxg5"],
+      gameUrl: "https://lichess.org/e3I00kYO/white#42",
+      white: "cleverbutcareless",
+      black: "Cintialeao",
+      wRating: 2148,
+      bRating: 2169,
+      id: 713,
+    },
   ];
 }
