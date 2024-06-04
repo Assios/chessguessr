@@ -8483,5 +8483,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2148,
       id: 714,
     },
+    {
+      date: "2024-06-05",
+      fen: "5bk1/6pp/4b3/q2p1p1B/1p1Bn3/4Q3/PPr1N2P/6RK w - - 2 29",
+      solution: ["Qh6", "Qc7", "Qxe6+", "Kh8", "Ng3"],
+      gameUrl: "https://lichess.org/aGYku9sP/white#56",
+      white: "Pacothelegend",
+      black: "Geroniman",
+      wTitle: "FM",
+      wRating: 2465,
+      bRating: 2456,
+      id: 715,
+    },
   ];
 }
