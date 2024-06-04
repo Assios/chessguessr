@@ -8472,5 +8472,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2169,
       id: 713,
     },
+    {
+      date: "2024-06-04",
+      fen: "4q1k1/2p2b2/1p5Q/p1n3pP/8/2P5/P1B5/5RK1 b - - 0 34",
+      solution: ["Qe3+", "Rf2", "Qe1+", "Kg2", "Bd5+"],
+      gameUrl: "https://lichess.org/6oH1968V/black#67",
+      white: "SLyoshin",
+      black: "Zharylgasov",
+      wRating: 1828,
+      bRating: 2148,
+      id: 714,
+    },
   ];
 }
