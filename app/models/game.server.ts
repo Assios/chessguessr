@@ -8528,5 +8528,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2387,
       id: 718,
     },
+    {
+      date: "2024-06-09",
+      fen: "r5rk/bppq1p2/p2p3p/3PP3/5p2/1P1Q1N1P/1PP2PP1/R4RK1 b - - 0 22",
+      solution: ["Qxh3", "Ne1", "Qxd3", "Nxd3", "f3"],
+      gameUrl: "https://lichess.org/SfRnuDty/black#43",
+      white: "chessmasterGM5",
+      black: "aya_muslmani",
+      wRating: 1732,
+      bRating: 1797,
+      id: 719,
+    },
   ];
 }
