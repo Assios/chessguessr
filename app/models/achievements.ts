@@ -14,4 +14,11 @@ export const achievements: Achievement[] = [
     iconUrl: "achievements/first.svg",
     achieved: false,
   },
+  {
+    id: "solve-any",
+    title: "Guessr!",
+    description: "Solve a daily Chessguessr.",
+    iconUrl: "achievements/first.svg",
+    achieved: false,
+  },
 ];
