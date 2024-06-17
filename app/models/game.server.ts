@@ -8627,5 +8627,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1696,
       id: 727,
     },
+    {
+      date: "2024-06-18",
+      fen: "8/4qppk/p7/7b/1P1N1Q2/2P1p1P1/P2b1P2/5NK1 b - - 1 35",
+      solution: ["e2", "Qxd2", "e1=Q", "Qxe1", "Qxe1"],
+      gameUrl: "https://lichess.org/BaPkCfGi/black#69",
+      white: "mtg02",
+      black: "tan_turtle",
+      wRating: 2067,
+      bRating: 2065,
+      id: 728,
+    },
   ];
 }
