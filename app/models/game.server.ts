@@ -8793,5 +8793,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2151,
       id: 742,
     },
+    {
+      date: "2024-07-03",
+      fen: "rn1qkbnr/pp4pp/2p2p2/4p2b/2B5/3PNN2/PPPB1PPP/R2QK2R w KQkq - 4 10",
+      solution: ["Nxe5", "Bg6", "Nxg6", "hxg6", "Bxg8"],
+      gameUrl:
+        "https://lichess.org/broadcast/norwegian-championships-2024--other-classes/round-4/dq8GLzTr/XkrjPbnR#18",
+      white: "Lars Johan Brodtkorb",
+      black: "Torgeir Kjøita",
+      bTitle: "CM",
+      event: "Norwegian Chess Championship 2024",
+      wRating: 2075,
+      bRating: 2077,
+      id: 743,
+    },
   ];
 }
