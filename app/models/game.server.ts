@@ -8807,5 +8807,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2077,
       id: 743,
     },
+    {
+      date: "2024-07-04",
+      fen: "8/pk3ppp/8/2pr4/4r3/PKRbP1B1/1R3PPP/8 w - - 0 28",
+      solution: ["Rxd3", "Rxd3+", "Kc2+", "Kc6", "Kxd3"],
+      gameUrl: "https://lichess.org/UQ66Voay/white#54",
+      white: "Jaboder",
+      black: "Rehtori",
+      wTitle: "FM",
+      wRating: 2358,
+      bRating: 2432,
+      id: 744,
+    },
   ];
 }
