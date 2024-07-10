@@ -8885,5 +8885,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2172,
       id: 750,
     },
+    {
+      date: "2024-07-11",
+      fen: "2r2rk1/p4ppp/4b3/qpRp4/3QpN2/P5P1/1P2PPBP/5K1R b - - 0 18",
+      solution: ["Rxc5", "Qxc5", "Rc8", "Qe3", "d4"],
+      gameUrl: "https://lichess.org/QH2p8JUu/black#35",
+      white: "Fedor_Afanasiev",
+      black: "PusheenMeow",
+      bTitle: "CM",
+      wRating: 2624,
+      bRating: 2654,
+      id: 751,
+    },
   ];
 }
