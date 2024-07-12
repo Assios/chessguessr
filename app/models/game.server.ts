@@ -8908,5 +8908,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1833,
       id: 752,
     },
+    {
+      date: "2024-07-13",
+      fen: "2kr2r1/1p5p/2p1p3/4q1p1/8/1R3Q1P/5PK1/2R5 w - - 2 34",
+      solution: ["Rxc6+", "Kd7", "Rxb7+", "Ke8", "Qf7#"],
+      gameUrl: "https://lichess.org/IXX8MVjo/white#66",
+      white: "EatingEverything",
+      black: "UmenyaVseNorm",
+      wRating: 2018,
+      bRating: 2024,
+      id: 753,
+    },
   ];
 }
