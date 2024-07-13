@@ -57,7 +57,8 @@ export const incrementFailed = (id: number) => {
 };
 
 export async function isUsernameTaken(username: string): Promise<boolean> {
-  const usernameRef = doc(db, "usernames", username);
+  const normalizedUsername = username.toLowerCase();
+  const usernameRef = doc(db, "usernames", normalizedUsername);
   const docSnap = await getDoc(usernameRef);
   return docSnap.exists();
 }
@@ -69,7 +70,8 @@ export async function saveNewUser(
 ) {
   const emailHash = CryptoJS.MD5(email).toString();
   const userRef = doc(db, "users", uid);
-  const usernameRef = doc(db, "usernames", username);
+  const normalizedUsername = username.toLowerCase();
+  const usernameRef = doc(db, "usernames", normalizedUsername);
 
   const activityRef = doc(collection(db, "users", uid, "activities"));
 
