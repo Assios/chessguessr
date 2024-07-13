@@ -8919,5 +8919,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2024,
       id: 753,
     },
+    {
+      date: "2024-07-14",
+      fen: "5rk1/2N2ppp/4p3/R1b2q2/4b3/6Q1/5PPP/5RK1 b - - 4 27",
+      solution: ["Bxf2+", "Qxf2", "Qxa5", "Nxe6", "Bxg2"],
+      gameUrl: "https://lichess.org/EvHj9ix5#53",
+      white: "Francisco Vallejo Pons",
+      black: "Garry Kasparov",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Julius Baer Generation Cup",
+      wRating: 2686,
+      bRating: 2804,
+      id: 754,
+    },
   ];
 }
