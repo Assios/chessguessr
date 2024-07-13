@@ -141,8 +141,9 @@ export async function updateUsername(
   const oldUsername = oldUsernameData.get("username");
   console.log(`Current username for UID: ${uid} is: ${oldUsername}`);
 
+  const normalizedNewUsername = newUsername.toLowerCase();
   const oldUsernameRef = doc(db, "usernames", oldUsername);
-  const newUsernameRef = doc(db, "usernames", newUsername);
+  const newUsernameRef = doc(db, "usernames", normalizedNewUsername);
 
   const batch = writeBatch(db);
 
