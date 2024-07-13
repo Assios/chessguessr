@@ -208,13 +208,10 @@ const useChessguessr = (
         discardYellowArray[i] = null;
       }
     });
-       
+
     // mark all the yellow and blue moves
     formattedGuess.forEach((move, i) => {
-       if (
-        discardYellowArray.includes(move.move) &&
-        move.color !== "green"
-      ) {
+      if (discardYellowArray.includes(move.move) && move.color !== "green") {
         formattedGuess[i].color = "yellow";
         discardYellowArray[discardYellowArray.indexOf(move.move)] = null;
       }
@@ -262,19 +259,21 @@ const useChessguessr = (
         const puzzleUrl = `/games/${puzzleId}`;
         const playedMessage = `Played Chessguessr #${puzzleId}`;
 
-        const playedDaily = await hasPlayedDaily(user.uid);
+        if (user) {
+          const playedDaily = await hasPlayedDaily(user.uid);
 
-        if (!playedDaily) {
-          addActivityToFeed(
-            user.uid,
-            "playedDaily",
-            playedMessage,
-            game.id,
-            puzzleUrl,
-            "failed"
-          );
+          if (!playedDaily) {
+            addActivityToFeed(
+              user.uid,
+              "playedDaily",
+              playedMessage,
+              game.id,
+              puzzleUrl,
+              "failed"
+            );
 
-          updateXPAndLevel(user.uid, 50);
+            updateXPAndLevel(user.uid, 50);
+          }
         } else {
           console.log("This puzzle has already been played");
         }
@@ -320,27 +319,29 @@ const useChessguessr = (
 
         const playedMessage = `Played Chessguessr #${puzzleId}`;
 
-        const playedDaily = await hasPlayedDaily(user.uid);
+        if (user) {
+          const playedDaily = await hasPlayedDaily(user.uid);
 
-        if (!playedDaily) {
-          addActivityToFeed(
-            user.uid,
-            "playedDaily",
-            playedMessage,
-            game.id,
-            puzzleUrl,
-            "solved"
-          );
+          if (!playedDaily) {
+            addActivityToFeed(
+              user.uid,
+              "playedDaily",
+              playedMessage,
+              game.id,
+              puzzleUrl,
+              "solved"
+            );
 
-          await updateXPAndLevel(user.uid, 50);
-          const newLevel = user.progress.level;
+            await updateXPAndLevel(user.uid, 50);
+            const newLevel = user.progress.level;
 
-          toast.success(
-            `You gained 50 XP for solving today's Chessguessr! Your level is now ${newLevel}`,
-            {
-              duration: 2500,
-            }
-          );
+            toast.success(
+              `You gained 50 XP for solving today's Chessguessr! Your level is now ${newLevel}`,
+              {
+                duration: 2500,
+              }
+            );
+          }
         } else {
           console.log("This puzzle has already been played");
         }
