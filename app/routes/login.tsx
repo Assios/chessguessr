@@ -119,15 +119,18 @@ export default function Login() {
             </div>
           )}
 
-          <div>
-            <button
-              type="button"
-              onClick={handleGoogleSignIn}
-              className="flex w-full justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-700"
-            >
-              Sign in with Google
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={handleGoogleSignIn}
+            className="flex w-full items-center mt-4  justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+          >
+            <img
+              src="https://developers.google.com/identity/images/g-logo.png"
+              alt="Google logo"
+              className="mr-2 h-5 w-5"
+            />
+            Sign in with Google
+          </button>
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Don't have an account?{" "}
