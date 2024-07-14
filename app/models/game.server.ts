@@ -8928,7 +8928,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Garry Kasparov",
       wTitle: "GM",
       bTitle: "GM",
-      event: "Linared 2005",
+      event: "Linares 2005",
       wRating: 2686,
       bRating: 2804,
       id: 754,
