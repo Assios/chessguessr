@@ -8944,5 +8944,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1730,
       id: 755,
     },
+    {
+      date: "2024-07-16",
+      fen: "r2qr1k1/1pp2pp1/p1n4B/4P3/1b1P3R/3Q1N2/PP3PPP/R5K1 b - - 0 17",
+      solution: ["Nxe5", "Qh7+", "Kxh7", "Bg5+", "Kg8"],
+      gameUrl: "https://lichess.org/68n1Y7qe/black#33",
+      white: "AreaPostrema",
+      black: "earthsalter",
+      wRating: 1938,
+      bRating: 2032,
+      id: 756,
+    },
   ];
 }
