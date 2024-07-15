@@ -15,9 +15,11 @@ service cloud.firestore {
     // Usernames collection
     match /usernames/{username} {
       allow read;
-      allow create, update, delete: if request.auth != null &&
-                                    request.resource.data.uid == request.auth.uid &&
-                                    username.matches('^[a-zA-Z0-9_]{1,16}$');
+      allow create, update: if request.auth != null &&
+                            request.resource.data.uid == request.auth.uid &&
+                            username.matches('^[a-zA-Z0-9_]{1,16}$');
+      allow delete: if request.auth != null &&
+                    get(/databases/$(database)/documents/usernames/$(username)).data.uid == request.auth.uid;
     }
 
     // Puzzles collection

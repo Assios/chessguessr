@@ -152,7 +152,10 @@ export async function updateUsername(
     lastUpdatedUsername: serverTimestamp(),
   });
 
-  batch.delete(oldUsernameRef);
+  if (!oldUsername.startsWith("GoogleUser_")) {
+    batch.delete(oldUsernameRef);
+  }
+
   batch.set(newUsernameRef, { uid });
 
   await batch.commit();
