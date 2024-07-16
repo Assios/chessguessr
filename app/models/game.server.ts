@@ -8955,5 +8955,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2032,
       id: 756,
     },
+    {
+      date: "2024-07-17",
+      fen: "2r4k/1p3pbp/p1b2N2/4r1q1/2pN1R2/7P/PPP2QP1/3R2K1 b - - 1 26",
+      solution: ["Bxf6", "Rxf6", "Bxg2", "Kh2", "Re3"],
+      gameUrl: "https://lichess.org/pgn4BYIm#51",
+      white: "Garry Kasparov",
+      black: "Vasily Smyslov",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Leningrad, 1975",
+      wRating: null,
+      bRating: 2605,
+      id: 757,
+    },
   ];
 }
