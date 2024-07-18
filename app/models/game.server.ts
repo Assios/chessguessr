@@ -8980,5 +8980,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1875,
       id: 758,
     },
+    {
+      date: "2024-07-19",
+      fen: "3r2k1/pp3rpp/2n2b2/2P5/3BR1Q1/1NP4P/2q5/4R1K1 w - - 0 27",
+      solution: ["Re8+", "Rxe8", "Rxe8+", "Rf8", "Qe6+"],
+      gameUrl: "https://lichess.org/LvCtHKJM/white#52",
+      white: "insearchoflosttime",
+      black: "doreality",
+      wTitle: "IM",
+      wRating: 2819,
+      bRating: 2754,
+      id: 759,
+    },
   ];
 }
