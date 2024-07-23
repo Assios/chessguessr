@@ -9025,5 +9025,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2798,
       id: 762,
     },
+    {
+      date: "2024-07-23",
+      fen: "8/R7/p1B1k3/1pp3p1/8/4n1PK/PPP2r2/8 b - - 1 37",
+      solution: ["g4+", "Kh4", "Kf6", "Bg2", "Rxg2"],
+      gameUrl: "https://lichess.org/th6SlWRu/black#73",
+      white: "ArchinskyPoetry",
+      black: "Fatalerroor",
+      wRating: 2232,
+      bRating: 2210,
+      id: 763,
+    },
   ];
 }
