@@ -9036,5 +9036,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2210,
       id: 763,
     },
+    {
+      date: "2024-07-24",
+      fen: "8/1p6/3kp1b1/3p1p1p/2pP2pP/1rp1PP2/RP1NK1P1/8 w - - 0 33",
+      solution: ["Nxb3", "cxb3", "Ra3", "c2", "Kd2"],
+      gameUrl: "https://lichess.org/8qeDW1GV/white#64",
+      white: "S25980",
+      black: "thiago_verbi",
+      wRating: 1965,
+      bRating: 2009,
+      id: 764,
+    },
   ];
 }
