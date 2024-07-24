@@ -9047,5 +9047,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2009,
       id: 764,
     },
+    {
+      date: "2024-07-25",
+      fen: "1b3r1k/4Nppp/pn6/5QB1/3p4/6PP/q1P2P2/4R1K1 w - - 2 29",
+      solution: ["Re4", "Qxc2", "Qxh7+", "Kxh7", "Rh4#"],
+      gameUrl: "https://lichess.org/Ajy9M2HT/white#56",
+      white: "Assios",
+      black: "Robinev",
+      wTitle: "LM",
+      wRating: 2253,
+      bRating: 2278,
+      id: 765,
+    },
   ];
 }
