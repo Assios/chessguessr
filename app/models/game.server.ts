@@ -9226,5 +9226,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1834,
       id: 780,
     },
+    {
+      date: "2024-08-10",
+      fen: "r2r2k1/p2bnp1p/1p1q1bp1/1B1p4/3P1N2/PQ2B1P1/1P3P1P/2R1R1K1 w - - 2 19",
+      solution: ["Nh5", "g5", "h4", "Nf5", "Qxd5"],
+      gameUrl:
+        "https://lichess.org/broadcast/lewis-chess-legends-2024/round-3/Nfq8pL3q/jlew9GG8#36",
+      white: "Jon Ludvig Hammer",
+      black: "Jung Min Seo",
+      wTitle: "GM",
+      bTitle: "IM",
+      event: "Lewis Chess Legends 2024",
+      wRating: 2596,
+      bRating: 2478,
+      id: 781,
+    },
   ];
 }
