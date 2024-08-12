@@ -9275,5 +9275,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1796,
       id: 784,
     },
+    {
+      date: "2024-08-14",
+      fen: "1r5k/1Q4p1/P2q3p/8/2p5/5B1P/5PP1/6K1 w - - 1 36",
+      solution: ["a7", "Rxb7", "Bxb7", "Qa3", "a8=Q+"],
+      gameUrl: "https://lichess.org/HNTe9WPO/white#70",
+      white: "El_Redentor",
+      black: "Supergegs",
+      wRating: 1836,
+      bRating: 1903,
+      id: 785,
+    },
   ];
 }
