@@ -9386,5 +9386,19 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1685,
       id: 794,
     },
+    {
+      date: "2024-08-24",
+      fen: "r3rbk1/pp1q1p2/2p2p2/3Pp2Q/3P3N/6Pb/PPP2PB1/3RR1K1 b - - 0 21",
+      solution: ["Bg4", "Bh3", "Bxh3", "f3", "exd4"],
+      gameUrl: "https://lichess.org/AGgoz142/black#41",
+      white: "Riquelme93",
+      black: "Shaolin_Master",
+      wAka: "Sanan Sjugirov",
+      wTitle: "GM",
+      bTitle: "GM",
+      wRating: 2849,
+      bRating: 2562,
+      id: 795,
+    },
   ];
 }
