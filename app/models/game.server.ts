@@ -9400,5 +9400,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2562,
       id: 795,
     },
+    {
+      date: "2024-08-25",
+      fen: "2br1rk1/Q4pp1/1npb1p1p/8/Pq1P4/2NBPN2/1P3PPP/R2R2K1 b - - 0 17",
+      solution: ["Rd7", "Na2", "Rxa7", "Nxb4", "Bxb4"],
+      gameUrl: "https://lichess.org/J7XnFfCP/black#33",
+      white: "Recobachess",
+      black: "ChessTrain_YT",
+      wRating: 2608,
+      bRating: 2510,
+      id: 796,
+    },
   ];
 }
