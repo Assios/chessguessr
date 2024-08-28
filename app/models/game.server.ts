@@ -9433,5 +9433,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2005,
       id: 798,
     },
+    {
+      date: "2024-08-28",
+      fen: "8/p7/7N/1p2n3/1P2P2P/k1K3P1/8/8 b - - 0 42",
+      solution: ["a5", "bxa5", "b4+", "Kc2", "b3+"],
+      gameUrl: "https://lichess.org/XLJXKGWV/black#83",
+      white: "nissousspou",
+      black: "MagnusKasparov55",
+      wTitle: "FM",
+      wRating: 2484,
+      bRating: 2262,
+      id: 799,
+    },
   ];
 }
