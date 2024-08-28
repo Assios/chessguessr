@@ -9477,7 +9477,7 @@ export async function getGames(): Promise<Array<GameType>> {
       bTitle: "FM",
       wRating: 2599,
       bRating: 2654,
-      id: 801,
+      id: 802,
     },
     {
       date: "2024-09-01",
@@ -9488,7 +9488,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Quitschi1907",
       wRating: 1678,
       bRating: 1679,
-      id: 802,
+      id: 803,
     },
     {
       date: "2024-09-02",
@@ -9499,7 +9499,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "abedahed88",
       wRating: 1756,
       bRating: 1831,
-      id: 803,
+      id: 804,
     },
     {
       date: "2024-09-03",
@@ -9510,7 +9510,7 @@ export async function getGames(): Promise<Array<GameType>> {
       black: "Terhans",
       wRating: 2016,
       bRating: 2009,
-      id: 804,
+      id: 805,
     },
   ];
 }
