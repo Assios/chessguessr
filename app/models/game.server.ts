@@ -9678,5 +9678,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2256,
       id: 820,
     },
+    {
+      date: "2024-09-19",
+      fen: "1k4rR/bp3q2/p1p5/P3p1p1/1PN1Q3/2BP2P1/5PK1/2R5 b - - 0 28",
+      solution: ["Qxf2+", "Kh3", "g4+", "Kh4", "Qh2#"],
+      gameUrl: "https://lichess.org/mfwLqdte/black#55",
+      white: "PJatoba",
+      black: "Necati_Korbahtli",
+      wTitle: "FM",
+      wRating: 2403,
+      bRating: 2206,
+      id: 821,
+    },
   ];
 }
