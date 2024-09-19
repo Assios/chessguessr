@@ -9691,7 +9691,7 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 821,
     },
     {
-      date: "2024-09-19",
+      date: "2024-09-20",
       fen: "8/1p3R2/2pk3p/3p1Bp1/5P2/pq1N2P1/6P1/5K2 b - - 1 42",
       solution: ["Qxd3+", "Bxd3", "a2", "Rxb7", "a1=Q+"],
       gameUrl:
