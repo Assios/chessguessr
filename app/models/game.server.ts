@@ -9690,5 +9690,20 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2206,
       id: 821,
     },
+    {
+      date: "2024-09-19",
+      fen: "8/1p3R2/2pk3p/3p1Bp1/5P2/pq1N2P1/6P1/5K2 b - - 1 42",
+      solution: ["Qxd3+", "Bxd3", "a2", "Rxb7", "a1=Q+"],
+      gameUrl:
+        "https://lichess.org/broadcast/45th-chess-olympiad-budapest-2024--open-i/round-8/cAN0gyPi/W6FSYTud#83",
+      white: "Lê Quang Liêm",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "45th Chess Olympiad Budapest 2024",
+      wRating: 2741,
+      bRating: 2832,
+      id: 822,
+    },
   ];
 }
