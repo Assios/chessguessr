@@ -9716,5 +9716,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1838,
       id: 823,
     },
+    {
+      date: "2024-09-22",
+      fen: "rnbqkb1r/1p1p1ppp/p3pn2/8/3N1B2/6P1/PPP1PPBP/RN1QK2R b KQkq - 1 6",
+      solution: ["e5", "Bxe5", "Qa5+", "Nc3", "Qxe5"],
+      gameUrl: "https://lichess.org/bV3Ygemk/black#11",
+      white: "Mohammad-madadi",
+      black: "bluesus",
+      wRating: 2044,
+      bRating: 2049,
+      id: 824,
+    },
   ];
 }
