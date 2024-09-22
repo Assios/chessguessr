@@ -9727,5 +9727,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2049,
       id: 824,
     },
+    {
+      date: "2024-09-23",
+      fen: "7r/pp1kbR2/1np1p3/3pP1B1/3P4/8/PPP1N3/2K5 b - - 4 29",
+      solution: ["Rh1+", "Kd2", "Nc4+", "Kd3", "Rh3+"],
+      gameUrl: "https://lichess.org/rO8fccpC/black#57",
+      white: "SchachTalent2",
+      black: "Rudinator",
+      wRating: 2344,
+      bRating: 2298,
+      id: 825,
+    },
   ];
 }
