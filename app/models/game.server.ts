@@ -9738,5 +9738,18 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2298,
       id: 825,
     },
+    {
+      date: "2024-09-24",
+      fen: "3r2k1/1r2bpp1/p1p1pn1p/3PB3/2p5/1PNR1KPP/P4P2/3R4 w - - 0 27",
+      solution: ["dxc6", "cxd3", "cxb7", "Nd7", "Bc7"],
+      gameUrl: "https://lichess.org/HgwfxFuo/white#52",
+      white: "CashVampire",
+      black: "Jirkar",
+      wTitle: "GM",
+      bTitle: "FM",
+      wRating: 2773,
+      bRating: 2648,
+      id: 826,
+    },
   ];
 }
