@@ -9762,5 +9762,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1762,
       id: 827,
     },
+    {
+      date: "2024-09-26",
+      fen: "r1r2bk1/3B1p1p/3p2p1/3P2P1/5p1P/Pp1N1P2/1PqQ4/K2RR3 b - - 0 26",
+      solution: ["Rxa3+", "bxa3", "Bg7+", "Re5", "Bxe5+"],
+      gameUrl: "https://lichess.org/ux9296hl/black#51",
+      white: "Maybach77",
+      black: "SmellFungus2",
+      wRating: 2138,
+      bRating: 1899,
+      id: 828,
+    },
   ];
 }
