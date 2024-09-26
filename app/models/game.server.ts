@@ -9773,5 +9773,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1899,
       id: 828,
     },
+    {
+      date: "2024-09-27",
+      fen: "k7/3RP3/1K6/8/1p6/1P6/P3rp2/8 b - - 1 62",
+      solution: ["Re6+", "Kc5", "f1=Q", "Rd8+", "Kb7"],
+      gameUrl: "https://lichess.org/zv3s9DnQ/black#123",
+      white: "Muhammad-Waqar",
+      black: "Qiwiman",
+      wTitle: "FM",
+      wRating: 2238,
+      bRating: 2220,
+      id: 829,
+    },
   ];
 }
