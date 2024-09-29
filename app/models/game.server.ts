@@ -9796,5 +9796,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2317,
       id: 830,
     },
+    {
+      date: "2024-09-29",
+      fen: "1rb2rk1/p4ppp/2p1pb2/8/2B1Q3/2P2N2/P4PPP/1qBR2K1 w - - 0 17",
+      solution: ["Bd3", "Rd8", "Qxh7+", "Kf8", "Ba3+"],
+      gameUrl: "https://lichess.org/i9MkO725/white#32",
+      white: "ScissorGal69",
+      black: "Sigma_Tauri",
+      bTitle: "GM",
+      wRating: 2819,
+      bRating: 2511,
+      id: 831,
+    },
   ];
 }
