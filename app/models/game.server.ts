@@ -9842,5 +9842,17 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2044,
       id: 834,
     },
+    {
+      date: "2024-10-03",
+      fen: "r1b1kb1r/pp1n1pRp/2pp1qnB/5N2/4P3/2N5/PPPQBP1P/R3K3 w Qkq - 2 13",
+      solution: ["O-O-O", "Bxg7", "Bxg7", "Qe6", "Bxh8"],
+      gameUrl: "https://lichess.org/NDI0eDml/white#24",
+      white: "doreality1991",
+      black: "The_Machine04",
+      bTitle: "IM",
+      wRating: 2803,
+      bRating: 2803,
+      id: 835,
+    },
   ];
 }
