@@ -9877,5 +9877,16 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2638,
       id: 837,
     },
+    {
+      date: "2024-10-06",
+      fen: "2k5/1ppn4/p3qpb1/2P3p1/PP1Pp1Pr/4P1Q1/3N2K1/R6R b - - 6 33",
+      solution: ["Rxg4", "Rh8+", "Nf8", "Rxf8+", "Kd7"],
+      gameUrl: "https://lichess.org/L1xv4e8i/black#65",
+      white: "Iemile",
+      black: "almineschess",
+      wRating: 2059,
+      bRating: 2057,
+      id: 838,
+    },
   ];
 }
