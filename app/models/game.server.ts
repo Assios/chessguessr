@@ -9932,5 +9932,23 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1775,
       id: 842,
     },
+    {
+      "date": "2024-10-11",
+      "fen": "4k2r/2pp1ppp/4p3/3nP3/1b1n2Qq/2N1B2P/PP3P2/2R1K2R b Kk - 1 17",
+      "solution": [
+        "Nxe3",
+        "Qxh4",
+        "Ng2+",
+        "Kd2",
+        "Nxh4"
+      ],
+      "gameUrl": "https://lichess.org/U1M6JndR/black#33",
+      "white": "Starazagora",
+      "black": "Chesspirate_Channel",
+      "bTitle": "NM",
+      "wRating": 2377,
+      "bRating": 2378,
+      "id": 843
+    }
   ];
 }
