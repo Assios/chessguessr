@@ -9949,6 +9949,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2377,
       "bRating": 2378,
       "id": 843
+    },
+    {
+      "date": "2024-10-12",
+      "fen": "2rq1rk1/pp4pp/4b3/4B3/1n1QN3/8/PPP3PP/2KR1B1R b - - 0 19",
+      "solution": [
+        "Rxc2+",
+        "Kb1",
+        "Bxa2+",
+        "Ka1",
+        "Qa5"
+      ],
+      "gameUrl": "https://lichess.org/dN7hyBgq/black#37",
+      "white": "Vicky_lu",
+      "black": "heretopickupwomen",
+      "wRating": 1621,
+      "bRating": 1574,
+      "id": 844
     }
   ];
 }
