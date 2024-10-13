@@ -9983,6 +9983,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2287,
       "bRating": 2332,
       "id": 845
+    },
+    {
+      "date": "2024-10-14",
+      "fen": "4r3/pk4pQ/1p6/1Ppb4/3br2B/8/6PP/2R4K w - - 3 31",
+      "solution": [
+        "Qf5",
+        "R8e5",
+        "Qd7+",
+        "Kb8",
+        "Bg3"
+      ],
+      "gameUrl": "https://lichess.org/Zx9rUvKL/white#60",
+      "white": "DJ-khaled",
+      "black": "Tair71",
+      "wRating": 1918,
+      "bRating": 2019,
+      "id": 846
     }
   ];
 }
