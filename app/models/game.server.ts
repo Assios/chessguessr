@@ -10000,6 +10000,91 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1918,
       "bRating": 2019,
       "id": 846
+    },
+    {
+      "date": "2024-10-15",
+      "fen": "5rkr/pppPq1pp/8/2bp1QN1/1n1p4/8/PPPB1PPP/RN2R1K1 b - - 0 14",
+      "solution": [
+        "Rxf5",
+        "Rxe7",
+        "Bxe7",
+        "Bxb4",
+        "Bxg5"
+      ],
+      "gameUrl": "https://lichess.org/BFOTd1AK/black#27",
+      "white": "m_ganesan523",
+      "black": "Saganapriya",
+      "wRating": 2009,
+      "bRating": 1617,
+      "id": 847
+    },
+    {
+      "date": "2024-10-16",
+      "fen": "3r1rk1/1p4pp/p1p2q2/4pb2/8/2P1B1Q1/P1P2PPP/3R1RK1 w - - 4 17",
+      "solution": [
+        "Bg5",
+        "Rxd1",
+        "Bxf6",
+        "Rxf1+",
+        "Kxf1"
+      ],
+      "gameUrl": "https://lichess.org/jzEd1Nws/white#32",
+      "white": "Lopuh99",
+      "black": "Nikolaj_6",
+      "wRating": 2602,
+      "bRating": 2681,
+      "id": 848
+    },
+    {
+      "date": "2024-10-17",
+      "fen": "2r2r2/3n1p1k/4p1p1/3q2P1/1p1P1B2/pP4R1/P3RQ1K/8 w - - 0 41",
+      "solution": [
+        "Rh3+",
+        "Kg7",
+        "Be5+",
+        "Nxe5",
+        "Qf6+"
+      ],
+      "gameUrl": "https://lichess.org/uMxoQXbh/white#80",
+      "white": "GospodinPJ",
+      "black": "saeed1992",
+      "wRating": 2361,
+      "bRating": 2354,
+      "id": 849
+    },
+    {
+      "date": "2024-10-18",
+      "fen": "4rr1k/p1pq3p/1pnp4/3Bn1BN/2P5/2P3P1/P2Q3P/1b3RK1 w - - 0 20",
+      "solution": [
+        "Bf6+",
+        "Rxf6",
+        "Nxf6",
+        "Qe7",
+        "Nxe8"
+      ],
+      "gameUrl": "https://lichess.org/1hxqQgUP/white#38",
+      "white": "hesham-a",
+      "black": "DailyTornado",
+      "wRating": 2641,
+      "bRating": 2629,
+      "id": 850
+    },
+    {
+      "date": "2024-10-19",
+      "fen": "2r2rk1/5pbp/p5p1/1p1NPbB1/1n6/1p3N2/PP2QPPP/2R3K1 b - - 0 23",
+      "solution": [
+        "Rxc1+",
+        "Bxc1",
+        "bxa2",
+        "Nxb4",
+        "a1=Q"
+      ],
+      "gameUrl": "https://lichess.org/qf6qOyIU/black#45",
+      "white": "b33r3",
+      "black": "cmount13",
+      "wRating": 1735,
+      "bRating": 1652,
+      "id": 851
     }
   ];
 }
