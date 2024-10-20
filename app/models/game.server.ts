@@ -10085,6 +10085,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1735,
       "bRating": 1652,
       "id": 851
+    },
+    {
+      "date": "2024-10-20",
+      "fen": "2r3k1/q2bRp1p/p2Q1np1/b7/P7/6PP/5PB1/6K1 w - - 0 30",
+      "solution": [
+        "Qxf6",
+        "Rf8",
+        "Bd5",
+        "Be6",
+        "Bxe6"
+      ],
+      "gameUrl": "https://lichess.org/ln0PSked/white#58",
+      "white": "Akram_Eldabely",
+      "black": "megi21",
+      "wRating": 1797,
+      "bRating": 2026,
+      "id": 852
     }
   ];
 }
