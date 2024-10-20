@@ -10102,6 +10102,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1797,
       "bRating": 2026,
       "id": 852
+    },
+    {
+      "date": "2024-10-21",
+      "fen": "1r1k3r/p1pBpp1p/6p1/8/2P5/7P/P4PP1/bN1R2K1 w - - 0 18",
+      "solution": [
+        "Bb5+",
+        "Kc8",
+        "Ba6+",
+        "Rb7",
+        "Na3"
+      ],
+      "gameUrl": "https://lichess.org/rs76VXPM/white#34",
+      "white": "Muleskinner",
+      "black": "Achillesthewarrior",
+      "wRating": 2109,
+      "bRating": 2115,
+      "id": 853
     }
   ];
 }
