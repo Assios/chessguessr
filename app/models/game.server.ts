@@ -10153,6 +10153,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2072,
       "bRating": 2160,
       "id": 855
+    },
+    {
+      "date": "2024-10-24",
+      "fen": "rnb2rk1/pp2qpp1/2p4p/2n1Q3/8/PB3N1P/1PP2PP1/R1B1K2R b KQ - 0 13",
+      "solution": [
+        "Qxe5+",
+        "Nxe5",
+        "Nxb3",
+        "cxb3",
+        "Re8"
+      ],
+      "gameUrl": "https://lichess.org/4tSBBb6c/black#25",
+      "white": "anfieldroad305",
+      "black": "ranierineves",
+      "wRating": 1520,
+      "bRating": 1519,
+      "id": 856
     }
   ];
 }
