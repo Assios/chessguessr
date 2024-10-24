@@ -10187,6 +10187,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1822,
       "bRating": 1898,
       "id": 857
+    },
+    {
+      "date": "2024-10-26",
+      "fen": "3rnnk1/1p5p/1p3pp1/2p2b2/5PN1/1P6/1BPP3P/1K3BR1 w - - 2 24",
+      "solution": [
+        "Nh6+",
+        "Kh8",
+        "Nf7+",
+        "Kg7",
+        "Nxd8"
+      ],
+      "gameUrl": "https://lichess.org/Z6nibVv9/white#46",
+      "white": "LastBossKiller",
+      "black": "billwillett",
+      "wRating": 1821,
+      "bRating": 1756,
+      "id": 858
     }
   ];
 }
