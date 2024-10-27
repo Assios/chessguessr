@@ -10221,6 +10221,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1777,
       "bRating": 1797,
       "id": 859
+    },
+    {
+      "date": "2024-10-28",
+      "fen": "5rk1/pQ4pp/3bpq2/8/4p2P/2P1BrP1/PP2RPK1/R7 b - - 2 25",
+      "solution": [
+        "Rxe3",
+        "Rd2",
+        "Rxg3+",
+        "fxg3",
+        "Qf3+"
+      ],
+      "gameUrl": "https://lichess.org/Xs9tsxqx/black#49",
+      "white": "Birdmsc",
+      "black": "Assios",
+      "wTitle": "LM",
+      "wRating": 2328,
+      "bRating": 2286,
+      "id": 860
     }
   ];
 }
