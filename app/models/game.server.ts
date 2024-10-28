@@ -10235,10 +10235,28 @@ export async function getGames(): Promise<Array<GameType>> {
       "gameUrl": "https://lichess.org/Xs9tsxqx/black#49",
       "white": "Birdmsc",
       "black": "Assios",
-      "wTitle": "LM",
+      "bTitle": "LM",
       "wRating": 2328,
       "bRating": 2286,
       "id": 860
+    },
+    {
+      "date": "2024-10-29",
+      "fen": "r3k2r/pp3pp1/2pb4/3p4/6q1/1P5p/P1P1PP2/RNBQ2RK b kq - 1 17",
+      "solution": [
+        "Qe4+",
+        "f3",
+        "Qe5",
+        "f4",
+        "Qxa1"
+      ],
+      "gameUrl": "https://lichess.org/btz3GP0U/black#33",
+      "white": "coventry",
+      "black": "Noliferis",
+      "wTitle": "FM",
+      "wRating": 2474,
+      "bRating": 2578,
+      "id": 861
     }
   ];
 }
