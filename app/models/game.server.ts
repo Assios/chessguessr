@@ -10257,6 +10257,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2474,
       "bRating": 2578,
       "id": 861
+    },
+    {
+      "date": "2024-10-30",
+      "fen": "r3k2r/ppp2pp1/5n2/2b1p1B1/3nP2p/P1NP3q/1PP1B2N/R2Q1R1K b kq - 3 15",
+      "solution": [
+        "Nxe2",
+        "Qxe2",
+        "Nh5",
+        "Rf3",
+        "Ng3+"
+      ],
+      "gameUrl": "https://lichess.org/0ALqs3dr/black#29",
+      "white": "Phenomeno2000",
+      "black": "javescm",
+      "wRating": 1891,
+      "bRating": 1951,
+      "id": 862
+    },
+    {
+      "date": "2024-10-31",
+      "fen": "1n2k2r/rPqb1p1p/2pbpnp1/p2p4/Q4B2/2N2N2/P3PPPP/1R2KB1R w Kk - 7 15",
+      "solution": [
+        "Bxd6",
+        "Qxd6",
+        "Qd4",
+        "Rxb7",
+        "Rxb7"
+      ],
+      "gameUrl": "https://lichess.org/Yb9pLCrM/white#28",
+      "white": "valerapistols",
+      "black": "SJessin",
+      "wRating": 1807,
+      "bRating": 1808,
+      "id": 863
+    },
+    {
+      "date": "2024-11-01",
+      "fen": "2r2r2/p5pk/5b2/3Q4/3P4/1Pq4P/P5B1/R4RK1 b - - 0 31",
+      "solution": [
+        "Qxd4+",
+        "Qxd4",
+        "Bxd4+",
+        "Kh1",
+        "Bxa1"
+      ],
+      "gameUrl": "https://lichess.org/YhGK878M/black#61",
+      "white": "whiteagle60",
+      "black": "AlexanderKaizenevX5",
+      "wRating": 2365,
+      "bRating": 2307,
+      "id": 864
     }
   ];
 }
