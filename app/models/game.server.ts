@@ -10308,6 +10308,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2365,
       "bRating": 2307,
       "id": 864
+    },
+    {
+      "date": "2024-11-02",
+      "fen": "r2qkbnr/ppp3pp/2np4/4N3/2BP4/6N1/PPP2PPP/R1BbK2R w KQkq - 0 9",
+      "solution": [
+        "Bf7+",
+        "Ke7",
+        "Bg5+",
+        "Nf6",
+        "Nf5#"
+      ],
+      "gameUrl": "https://lichess.org/4hsYfqnI/white#16",
+      "white": "hillel978",
+      "black": "Ugly_Rat",
+      "wRating": 1588,
+      "bRating": 2048,
+      "id": 865
     }
   ];
 }
