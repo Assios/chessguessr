@@ -10325,6 +10325,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1588,
       "bRating": 2048,
       "id": 865
+    },
+    {
+      "date": "2024-11-03",
+      "fen": "1k6/5R2/1p3p1p/1N2p3/8/8/Pr5r/2R2K2 w - - 2 39",
+      "solution": [
+        "Rf8+",
+        "Kb7",
+        "Nd6+",
+        "Ka7",
+        "Rc7+"
+      ],
+      "gameUrl": "https://lichess.org/YkO6Wnsu/white#76",
+      "white": "Mike_s7",
+      "black": "TECHNOGENNY",
+      "wRating": 1745,
+      "bRating": 1722,
+      "id": 866
     }
   ];
 }
