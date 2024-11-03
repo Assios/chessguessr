@@ -10342,6 +10342,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1745,
       "bRating": 1722,
       "id": 866
+    },
+    {
+      "date": "2024-11-04",
+      "fen": "2k2b1r/ppp2pp1/4p1bp/2q3Q1/3N1BP1/1P5P/2P2P2/2KR4 w - - 0 21",
+      "solution": [
+        "Qd8+",
+        "Kxd8",
+        "Nc6+",
+        "Ke8",
+        "Rd8#"
+      ],
+      "gameUrl": "https://lichess.org/KCpEsY9z/white#40",
+      "white": "lebaines",
+      "black": "SOKOL_71",
+      "wRating": 1842,
+      "bRating": 1717,
+      "id": 867
     }
   ];
 }
