@@ -10359,6 +10359,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1842,
       "bRating": 1717,
       "id": 867
+    },
+    {
+      "date": "2024-11-05",
+      "fen": "r1bqkb1r/ppp2pp1/5n2/3pB3/2PP3p/1P5P/P3PPP1/RN1QKB1R b KQkq - 0 8",
+      "solution": [
+        "Bb4+",
+        "Nd2",
+        "Ne4",
+        "Bf4",
+        "Qf6"
+      ],
+      "gameUrl": "https://lichess.org/EfflxBX4/black#15",
+      "white": "bad-player123",
+      "black": "larso",
+      "bTitle": "GM",
+      "wRating": 2753,
+      "bRating": 2913,
+      "id": 868
     }
   ];
 }
