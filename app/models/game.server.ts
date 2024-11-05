@@ -10377,6 +10377,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2753,
       "bRating": 2913,
       "id": 868
+    },
+    {
+      "date": "2024-11-06",
+      "fen": "8/5R1p/6p1/3n4/3k2P1/3p1P2/7P/4K3 b - - 0 43",
+      "solution": [
+        "Ke3",
+        "Rd7",
+        "d2+",
+        "Kd1",
+        "Nc3+"
+      ],
+      "gameUrl": "https://lichess.org/WeBzg5Mc/black#85",
+      "white": "Aditya_balans",
+      "black": "Dianakorir",
+      "wRating": 1991,
+      "bRating": 1988,
+      "id": 869
     }
   ];
 }
