@@ -10430,6 +10430,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2363,
       "bRating": 2325,
       "id": 871
+    },
+    {
+      "date": "2024-11-09",
+      "fen": "3q2k1/p5p1/1p3p1p/3bN3/2BP2P1/r3P3/P2K1P1P/R1R5 w - - 2 26",
+      "solution": [
+        "Nc6",
+        "Qd6",
+        "Bxd5+",
+        "Kh7",
+        "Be4+"
+      ],
+      "gameUrl": "https://lichess.org/8nTlLii7/white#50",
+      "white": "gmjosecubas",
+      "black": "LuizMachado17",
+      "wTitle": "GM",
+      "wRating": 2392,
+      "bRating": 2065,
+      "id": 872
     }
   ];
 }
