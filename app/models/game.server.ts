@@ -10448,6 +10448,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2392,
       "bRating": 2065,
       "id": 872
+    },
+    {
+      "date": "2024-11-10",
+      "fen": "r3rqk1/pp1n1p2/2pb1n1Q/3p2NP/3P2b1/2NB4/PPP2PP1/R4K1R w - - 5 15",
+      "solution": [
+        "Bh7+",
+        "Kh8",
+        "Nxf7+",
+        "Qxf7",
+        "Bg6+"
+      ],
+      "gameUrl": "https://lichess.org/p5NCIb5q/white#28",
+      "white": "Mahmoudtamim",
+      "black": "corymao2019",
+      "wRating": 1648,
+      "bRating": 1974,
+      "id": 873
     }
   ];
 }
