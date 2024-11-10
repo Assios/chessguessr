@@ -10465,6 +10465,129 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1648,
       "bRating": 1974,
       "id": 873
+    },
+    {
+      "date": "2024-11-11",
+      "fen": "rnbq4/1p4k1/4p1rR/3p1pN1/3P4/pPPQ2P1/P2N2P1/2K4R b - - 0 21",
+      "solution": [
+        "Rxh6",
+        "Rxh6",
+        "Qxg5",
+        "Rh4",
+        "Nc6"
+      ],
+      "gameUrl": "https://lichess.org/CQUdbLcV/black#41",
+      "white": "Sagar112233",
+      "black": "Diman_Jung",
+      "wRating": 1790,
+      "bRating": 1791,
+      "id": 874
+    },
+    {
+      "date": "2024-11-12",
+      "fen": "8/3r4/4RPP1/2k5/2p4p/7P/1p6/6K1 w - - 0 46",
+      "solution": [
+        "Re1",
+        "c3",
+        "f7",
+        "Rd8",
+        "g7"
+      ],
+      "gameUrl": "https://lichess.org/LsUeGThl/white#90",
+      "white": "MaxFomin",
+      "black": "Kub_chess",
+      "bTitle": "WIM",
+      "wRating": 2140,
+      "bRating": 2288,
+      "id": 876
+    },
+    {
+      "date": "2024-11-13",
+      "fen": "6R1/5r1p/3pB2k/3Pq1b1/4p3/QP5r/P7/1K1R4 b - - 1 48",
+      "solution": [
+        "Bf6",
+        "Qc1+",
+        "Bg5",
+        "Rxg5",
+        "Qxg5"
+      ],
+      "gameUrl": "https://lichess.org/oGm1eJ2K/black#95",
+      "white": "JoeFr",
+      "black": "Banelevich",
+      "bTitle": "FM",
+      "wRating": 2486,
+      "bRating": 2442,
+      "id": 877
+    },
+    {
+      "date": "2024-11-14",
+      "fen": "rrR5/4ppkp/1p1p1bp1/1P1P4/1P2B3/q3Q2P/5PP1/2R3K1 w - - 9 27",
+      "solution": [
+        "Qxa3",
+        "Rxc8",
+        "Qe3",
+        "Rxc1+",
+        "Qxc1"
+      ],
+      "gameUrl": "https://lichess.org/gzCzRBl3/white#52",
+      "white": "Grigoriy1997",
+      "black": "PompeiusMagnus",
+      "wRating": 2103,
+      "bRating": 2079,
+      "id": 878
+    },
+    {
+      "date": "2024-11-15",
+      "fen": "2k5/1pp2p2/p2p1pr1/3NP3/3nP2p/P2P2r1/1PPQ3K/R5N1 b - - 0 23",
+      "solution": [
+        "Rxg1",
+        "Rxg1",
+        "Nf3+",
+        "Kh3",
+        "Nxg1+"
+      ],
+      "gameUrl": "https://lichess.org/vSqtZQjk/black#45",
+      "white": "marlon_moreno25",
+      "black": "Zachary_Song",
+      "wRating": 2102,
+      "bRating": 2097,
+      "id": 879
+    },
+    {
+      "date": "2024-11-16",
+      "fen": "5nk1/p6p/2p2P2/3p1B1Q/1P1P2P1/2P2p2/P2qbK2/8 w - - 0 33",
+      "solution": [
+        "Bxh7+",
+        "Nxh7",
+        "Qg6+",
+        "Kf8",
+        "Qg7+"
+      ],
+      "gameUrl": "https://lichess.org/oCbsv4B9/white#64",
+      "white": "NimzoMozart",
+      "black": "Louizor",
+      "wTitle": "FM",
+      "wRating": 2429,
+      "bRating": 2427,
+      "id": 880
+    },
+    {
+      "date": "2024-11-17",
+      "fen": "2rqrbk1/1b3ppp/p2p1n2/1p1N1N2/2nQP3/7P/PPB2PP1/R1B1R1K1 w - - 9 18",
+      "solution": [
+        "Nh6+",
+        "gxh6",
+        "Nxf6+",
+        "Kh8",
+        "Nxe8+"
+      ],
+      "gameUrl": "https://lichess.org/KjNBaojS/white#34",
+      "white": "MassterofMayhem",
+      "black": "Positional_game",
+      "wTitle": "IM",
+      "wRating": 2453,
+      "bRating": 2260,
+      "id": 881
     }
   ];
 }
