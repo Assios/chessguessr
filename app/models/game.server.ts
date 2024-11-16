@@ -10588,6 +10588,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2453,
       "bRating": 2260,
       "id": 881
+    },
+    {
+      "date": "2024-11-18",
+      "fen": "6rk/1p4qp/p2P4/2P1B2r/4R2b/1Q3pP1/PP3P1K/4R3 b - - 0 33",
+      "solution": [
+        "Bxg3+",
+        "Kg1",
+        "Bxe5+",
+        "Kf1",
+        "Qg1#"
+      ],
+      "gameUrl": "https://lichess.org/xEAHQPOS/black#65",
+      "white": "crackcubano",
+      "black": "Futurechess1672",
+      "wTitle": "GM",
+      "wRating": 2756,
+      "bRating": 2789,
+      "id": 882
     }
   ];
 }
