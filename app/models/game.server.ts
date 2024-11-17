@@ -10606,6 +10606,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2756,
       "bRating": 2789,
       "id": 882
+    },
+    {
+      "date": "2024-11-19",
+      "fen": "r1bqr3/ppp2kp1/2np3p/8/4Q2N/2Pn3P/P4PP1/RNB1R1K1 w - - 4 17",
+      "solution": [
+        "Qg6+",
+        "Kf8",
+        "Rxe8+",
+        "Qxe8",
+        "Qxd3"
+      ],
+      "gameUrl": "https://lichess.org/i3kgT33T/white#32",
+      "white": "Ijob",
+      "black": "rampart123123",
+      "wRating": 1553,
+      "bRating": 1594,
+      "id": 883
+    },
+    {
+      "date": "2024-11-20",
+      "fen": "1rq1nBk1/5p1p/3p2p1/p3b3/PpPpP3/1P1P1RNb/B5P1/1R1Q2K1 b - - 0 22",
+      "solution": [
+        "Bg4",
+        "Bh6",
+        "Bxg3",
+        "Qf1",
+        "Bxf3"
+      ],
+      "gameUrl": "https://lichess.org/EsZeOXzA/black#43",
+      "white": "torps1924",
+      "black": "KCZG82",
+      "wRating": 1934,
+      "bRating": 1847,
+      "id": 884
     }
   ];
 }
