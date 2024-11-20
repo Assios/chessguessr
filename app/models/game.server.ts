@@ -10640,6 +10640,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1934,
       "bRating": 1847,
       "id": 884
+    },
+    {
+      "date": "2024-11-21",
+      "fen": "3r1bk1/p2r3p/1pbNp1p1/4P3/3B4/2PR2P1/PP5P/5RK1 b - - 2 31",
+      "solution": [
+        "Bxd6",
+        "exd6",
+        "Bb5",
+        "Rdd1",
+        "Bxf1"
+      ],
+      "gameUrl": "https://lichess.org/Gu0Rh63I/black#61",
+      "white": "oncek",
+      "black": "ankit-1234",
+      "wRating": 1966,
+      "bRating": 2003,
+      "id": 885
+    },
+    {
+      "date": "2024-11-22",
+      "fen": "6k1/pbn2ppp/1p1P4/2p1q3/4N3/PP4P1/3Q1PBP/6K1 b - - 0 29",
+      "solution": [
+        "Qa1+",
+        "Bf1",
+        "Ba6",
+        "Kg2",
+        "Qxf1+"
+      ],
+      "gameUrl": "https://lichess.org/PpaDuP8o/black#57",
+      "white": "s-okla",
+      "black": "Eloist",
+      "wRating": 2389,
+      "bRating": 2443,
+      "id": 886
     }
   ];
 }
