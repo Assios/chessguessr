@@ -10499,7 +10499,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "WIM",
       "wRating": 2140,
       "bRating": 2288,
-      "id": 876
+      "id": 875
     },
     {
       "date": "2024-11-13",
@@ -10517,7 +10517,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "FM",
       "wRating": 2486,
       "bRating": 2442,
-      "id": 877
+      "id": 876
     },
     {
       "date": "2024-11-14",
@@ -10534,7 +10534,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "PompeiusMagnus",
       "wRating": 2103,
       "bRating": 2079,
-      "id": 878
+      "id": 877
     },
     {
       "date": "2024-11-15",
@@ -10551,7 +10551,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "Zachary_Song",
       "wRating": 2102,
       "bRating": 2097,
-      "id": 879
+      "id": 878
     },
     {
       "date": "2024-11-16",
@@ -10569,7 +10569,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "wTitle": "FM",
       "wRating": 2429,
       "bRating": 2427,
-      "id": 880
+      "id": 879
     },
     {
       "date": "2024-11-17",
@@ -10587,7 +10587,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "wTitle": "IM",
       "wRating": 2453,
       "bRating": 2260,
-      "id": 881
+      "id": 880
     },
     {
       "date": "2024-11-18",
@@ -10605,7 +10605,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "wTitle": "GM",
       "wRating": 2756,
       "bRating": 2789,
-      "id": 882
+      "id": 881
     },
     {
       "date": "2024-11-19",
@@ -10622,7 +10622,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "rampart123123",
       "wRating": 1553,
       "bRating": 1594,
-      "id": 883
+      "id": 882
     },
     {
       "date": "2024-11-20",
@@ -10639,7 +10639,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "KCZG82",
       "wRating": 1934,
       "bRating": 1847,
-      "id": 884
+      "id": 883
     },
     {
       "date": "2024-11-21",
@@ -10656,7 +10656,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "ankit-1234",
       "wRating": 1966,
       "bRating": 2003,
-      "id": 885
+      "id": 884
     },
     {
       "date": "2024-11-22",
@@ -10673,7 +10673,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "Eloist",
       "wRating": 2389,
       "bRating": 2443,
-      "id": 886
+      "id": 885
     },
     {
       "date": "2024-11-23",
@@ -10690,7 +10690,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "shayanaghaie",
       "wRating": 2282,
       "bRating": 2216,
-      "id": 887
+      "id": 886
     }
   ];
 }
