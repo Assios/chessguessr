@@ -10691,6 +10691,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2282,
       "bRating": 2216,
       "id": 886
+    },
+    {
+      "date": "2024-11-24",
+      "fen": "2r3k1/1b3pbp/p2p2p1/3n4/2p5/4N2P/PPBB1PP1/4R1K1 w - - 0 28",
+      "solution": [
+        "Be4",
+        "Bxb2",
+        "Bxd5",
+        "Bxd5",
+        "Nxd5"
+      ],
+      "gameUrl": "https://lichess.org/L2ylhRhv/white#54",
+      "white": "Tacticator",
+      "black": "Suffkopf97",
+      "wRating": 2516,
+      "bRating": 2583,
+      "id": 887
     }
   ];
 }
