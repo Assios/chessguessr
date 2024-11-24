@@ -10725,6 +10725,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2320,
       "bRating": 2255,
       "id": 888
+    },
+    {
+      "date": "2024-11-26",
+      "fen": "2r5/p3ppkp/2nq1bp1/1Q1p4/1N1P4/4PN1P/PP3PP1/2R3K1 b - - 9 23",
+      "solution": [
+        "Nxd4",
+        "Qf1",
+        "Rxc1",
+        "Qxc1",
+        "Ne2+"
+      ],
+      "gameUrl": "https://lichess.org/TyjEC9XH/black#45",
+      "white": "bosspotato",
+      "black": "Ewol",
+      "wRating": 2005,
+      "bRating": 1837,
+      "id": 889
     }
   ];
 }
