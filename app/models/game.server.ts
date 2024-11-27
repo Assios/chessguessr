@@ -10759,6 +10759,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1690,
       "bRating": 1691,
       "id": 890
+    },
+    {
+      "date": "2024-11-28",
+      "fen": "8/1p5p/p4pp1/1kr4R/1qr5/2P2Q2/P4P2/2K3R1 w - - 1 33",
+      "solution": [
+        "Qxb7+",
+        "Ka5",
+        "Qxb4+",
+        "Rxb4",
+        "Rxc5+"
+      ],
+      "gameUrl": "https://lichess.org/N4ND7O3K/white#64",
+      "white": "Ibrahim254200",
+      "black": "wildlion",
+      "wRating": 1912,
+      "bRating": 1884,
+      "id": 891
     }
   ];
 }
