@@ -10776,6 +10776,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1912,
       "bRating": 1884,
       "id": 891
+    },
+    {
+      "date": "2024-11-29",
+      "fen": "r4rk1/1ppn1ppp/8/p1bp1q1P/8/PP2Pn2/1BPPQ3/RN1K2R1 w - - 2 19",
+      "solution": [
+        "Rxg7+",
+        "Kh8",
+        "Rg5+",
+        "Qf6",
+        "Bxf6+"
+      ],
+      "gameUrl": "https://lichess.org/AUl3wAaT/white#36",
+      "white": "Trajko",
+      "black": "Anuciv",
+      "wRating": 1621,
+      "bRating": 1636,
+      "id": 892
     }
   ];
 }
