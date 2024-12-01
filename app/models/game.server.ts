@@ -10827,6 +10827,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2828,
       "bRating": 2755,
       "id": 894
+    },
+    {
+      "date": "2024-12-02",
+      "fen": "r1bqk2r/pp2Bpp1/2p1p2p/8/2BP4/P1n1P3/1P3PPP/2KR2NR w kq - 0 14",
+      "solution": [
+        "Bxd8",
+        "Nxd1",
+        "Bh4",
+        "b5",
+        "Be2"
+      ],
+      "gameUrl": "https://lichess.org/HaZqIuqK/white#26",
+      "white": "effefe",
+      "black": "hammdan_cadas",
+      "wTitle": "WIM",
+      "wRating": 2402,
+      "bRating": 2479,
+      "id": 895
     }
   ];
 }
