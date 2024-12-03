@@ -10953,19 +10953,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2024-12-09",
-      "fen": "r1bqkb2/pp2ppp1/8/7r/2B5/2n5/PP1Q1PPP/R3K1NR w KQq - 0 13",
+      "fen": "1r4k1/2pn2b1/3p4/1pnPpp1p/p1q4P/Q3BPP1/PPR5/1KNR4 b - - 1 25",
       "solution": [
-        "Bxf7+",
-        "Kxf7",
-        "Qxd8",
-        "Re5+",
-        "Kf1"
+        "Qxc2+",
+        "Kxc2",
+        "b4",
+        "Bxc5",
+        "bxa3"
       ],
-      "gameUrl": "https://lichess.org/3D0mcY0E/white#24",
-      "white": "ozolin_alexey",
-      "black": "azva",
-      "wRating": 2270,
-      "bRating": 2263,
+      "gameUrl": "https://lichess.org/8NWXYRkG/black#49",
+      "white": "hugebuber",
+      "black": "MaC_AmiNN",
+      "wRating": 2075,
+      "bRating": 2156,
       "id": 902
     },
     {
