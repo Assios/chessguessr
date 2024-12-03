@@ -10879,6 +10879,196 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1759,
       "bRating": 1753,
       "id": 897
+    },
+    {
+      "date": "2024-12-05",
+      "fen": "8/p3kp2/2p2pnQ/3p4/3P2r1/1PP4R/P6K/6r1 w - - 8 41",
+      "solution": [
+        "Qe3+",
+        "Kd7",
+        "Qxg1",
+        "Rxg1",
+        "Kxg1"
+      ],
+      "gameUrl": "https://lichess.org/dFgCM9Dh/white#80",
+      "white": "faysssal",
+      "black": "CaptainPlanet",
+      "bTitle": "NM",
+      "wRating": 2418,
+      "bRating": 2440,
+      "id": 898
+    },
+    {
+      "date": "2024-12-06",
+      "fen": "5r1k/pp5p/6p1/2n1q3/2PbN3/2N3P1/PP2QPKP/3R4 b - - 4 28",
+      "solution": [
+        "Nxe4",
+        "Nxe4",
+        "Rxf2+",
+        "Qxf2",
+        "Bxf2"
+      ],
+      "gameUrl": "https://lichess.org/Xv8xheLA/black#55",
+      "white": "Barbashinigor",
+      "black": "CblBOPOTKA",
+      "wTitle": "FM",
+      "wRating": 2351,
+      "bRating": 2120,
+      "id": 899
+    },
+    {
+      "date": "2024-12-07",
+      "fen": "5r2/5k2/p3r2p/1pQp4/P7/1PP2p2/2BBqP1P/3R3K b - - 1 33",
+      "solution": [
+        "Qxd2",
+        "Qc7+",
+        "Kf6",
+        "Qg3",
+        "Re1+"
+      ],
+      "gameUrl": "https://lichess.org/dHNF0Ca1/black#65",
+      "white": "Prettyfly",
+      "black": "Fiery_calm",
+      "wTitle": "IM",
+      "wRating": 2613,
+      "bRating": 2523,
+      "id": 900
+    },
+    {
+      "date": "2024-12-08",
+      "fen": "5rk1/p4ppp/PpP5/2q1P3/3Q1P2/6P1/6BP/6K1 w - - 1 31",
+      "solution": [
+        "Qxc5",
+        "bxc5",
+        "Bh3",
+        "f5",
+        "exf6"
+      ],
+      "gameUrl": "https://lichess.org/FmztVFCT/white#60",
+      "white": "Grigorich46",
+      "black": "No_soy_yo",
+      "wRating": 2213,
+      "bRating": 2212,
+      "id": 901
+    },
+    {
+      "date": "2024-12-09",
+      "fen": "r1bqkb2/pp2ppp1/8/7r/2B5/2n5/PP1Q1PPP/R3K1NR w KQq - 0 13",
+      "solution": [
+        "Bxf7+",
+        "Kxf7",
+        "Qxd8",
+        "Re5+",
+        "Kf1"
+      ],
+      "gameUrl": "https://lichess.org/3D0mcY0E/white#24",
+      "white": "ozolin_alexey",
+      "black": "azva",
+      "wRating": 2270,
+      "bRating": 2263,
+      "id": 902
+    },
+    {
+      "date": "2024-12-10",
+      "fen": "2N2r1k/2bQ1ppp/pp6/8/P5P1/1P3q1P/5B2/2Rb1BK1 b - - 2 26",
+      "solution": [
+        "Bh2+",
+        "Kxh2",
+        "Qxf2+",
+        "Bg2",
+        "Qf4+"
+      ],
+      "gameUrl": "https://lichess.org/9xqaJA8w/black#51",
+      "white": "ivana1000",
+      "black": "Volkano_Chess",
+      "wRating": 2198,
+      "bRating": 2271,
+      "id": 903
+    },
+    {
+      "date": "2024-12-11",
+      "fen": "1rr3k1/3bppbp/p2p1np1/qP6/2P1P3/1PN1BP2/1RNQ2PP/2R3K1 b - - 0 20",
+      "solution": [
+        "Nxe4",
+        "Nxe4",
+        "Qxd2",
+        "Bxd2",
+        "Bxb2"
+      ],
+      "gameUrl": "https://lichess.org/7wri5WUE/black#39",
+      "white": "DaVy_JoneSS-1703",
+      "black": "MassterofMayhem",
+      "wRating": 2592,
+      "bRating": 2673,
+      "id": 904
+    },
+    {
+      "date": "2024-12-12",
+      "fen": "7r/pp3pk1/2b1pqp1/4b3/4B3/7P/PP2QPP1/1R3RK1 b - - 0 20",
+      "solution": [
+        "Qf4",
+        "g3",
+        "Qxe4",
+        "Qxe4",
+        "Bxe4"
+      ],
+      "gameUrl": "https://lichess.org/YTn7Rlez/black#39",
+      "white": "Lez1995",
+      "black": "Thorini",
+      "wRating": 2248,
+      "bRating": 2110,
+      "id": 905
+    },
+    {
+      "date": "2024-12-13",
+      "fen": "5rk1/p1Q2b2/1p2p3/3pPp2/3P1R2/P3P2p/1P3KPq/5B2 b - - 1 36",
+      "solution": [
+        "Qxf4+",
+        "exf4",
+        "h2",
+        "Qe7",
+        "h1=Q"
+      ],
+      "gameUrl": "https://lichess.org/k8aahaqG/black#71",
+      "white": "Giselher",
+      "black": "VictorVic2574",
+      "wRating": 1868,
+      "bRating": 1960,
+      "id": 906
+    },
+    {
+      "date": "2024-12-14",
+      "fen": "r1rq2k1/1p3pp1/4pb1p/1PNp4/2nP4/1Q2PNP1/5P1P/R1R3K1 b - - 4 23",
+      "solution": [
+        "Rxa1",
+        "Rxa1",
+        "Rxc5",
+        "dxc5",
+        "Bxa1"
+      ],
+      "gameUrl": "https://lichess.org/8LMSyB1F/black#45",
+      "white": "ugs007",
+      "black": "nielca",
+      "wRating": 2303,
+      "bRating": 2350,
+      "id": 907
+    },
+    {
+      "date": "2024-12-15",
+      "fen": "r3r1k1/1p1b1ppp/7n/p1qpbP2/3N1N2/2PB1RQP/6P1/4R2K w - - 4 24",
+      "solution": [
+        "Rxe5",
+        "Rxe5",
+        "Nh5",
+        "Qf8",
+        "Nf6+"
+      ],
+      "gameUrl": "https://lichess.org/95OxoY94/white#46",
+      "white": "Zumaic-Exodus",
+      "black": "Alexsur81",
+      "wRating": 2235,
+      "bRating": 2777,
+      "id": 908
     }
   ];
 }
