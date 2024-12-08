@@ -11069,6 +11069,109 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2235,
       "bRating": 2777,
       "id": 908
+    },
+    {
+      "date": "2024-12-16",
+      "fen": "r7/4b1pk/pq4np/1p1RN2r/8/3Q4/PPP2PP1/2R3K1 w - - 1 26",
+      "solution": [
+        "Nxg6",
+        "Rxd5",
+        "Nf8+",
+        "Kg8",
+        "Qxd5+"
+      ],
+      "gameUrl": "https://lichess.org/1lVfvxCA/white#50",
+      "white": "Simplychess92",
+      "black": "Bogotolec",
+      "wTitle": "NM",
+      "wRating": 2254,
+      "bRating": 2200,
+      "id": 909
+    },
+    {
+      "date": "2024-12-17",
+      "fen": "r4r2/1p3n1k/2np1Pp1/p2Nq2p/3pP2R/7Q/PPP2R1P/6K1 w - - 2 30",
+      "solution": [
+        "Rf5",
+        "Qe8",
+        "Rfxh5+",
+        "gxh5",
+        "Rxh5+"
+      ],
+      "gameUrl": "https://lichess.org/RuWcApmU/white#58",
+      "white": "pratik1111",
+      "black": "AndreyBaunov",
+      "wRating": 1680,
+      "bRating": 1700,
+      "id": 910
+    },
+    {
+      "date": "2024-12-18",
+      "fen": "6k1/p1p1Rp2/2p3p1/3p1Bq1/1B4P1/1P3K2/P1P5/8 w - - 0 36",
+      "solution": [
+        "Re8+",
+        "Kg7",
+        "Bc3+",
+        "f6",
+        "Be6"
+      ],
+      "gameUrl": "https://lichess.org/eZrH7IZS/white#70",
+      "white": "Trolliolio",
+      "black": "cgungordu",
+      "wRating": 2017,
+      "bRating": 1903,
+      "id": 911
+    },
+    {
+      "date": "2024-12-19",
+      "fen": "r4b2/2pk1p1p/p1p5/3pN2q/2Q1R1r1/3P4/PPP2PPP/6RK b - - 0 21",
+      "solution": [
+        "Qxe5",
+        "Qxc6+",
+        "Kxc6",
+        "Rxe5",
+        "Bd6"
+      ],
+      "gameUrl": "https://lichess.org/EMsAHNRa/black#41",
+      "white": "Uniqking",
+      "black": "fdar",
+      "wRating": 1759,
+      "bRating": 1841,
+      "id": 912
+    },
+    {
+      "date": "2024-12-20",
+      "fen": "4rr1k/2p3p1/2pqpb1p/p2p4/6QP/1PN3P1/PBP5/1R2R1K1 b - - 2 28",
+      "solution": [
+        "Qc5+",
+        "Kh1",
+        "Bxc3",
+        "Bxc3",
+        "Qxc3"
+      ],
+      "gameUrl": "https://lichess.org/kcHEhd5O/black#55",
+      "white": "alfill93",
+      "black": "adi74",
+      "wRating": 2013,
+      "bRating": 1997,
+      "id": 913
+    },
+    {
+      "date": "2024-12-21",
+      "fen": "2kr4/1p5p/5R2/5P1P/2pp2P1/P2p1N2/1P4K1/8 b - - 0 40",
+      "solution": [
+        "c3",
+        "bxc3",
+        "dxc3",
+        "Rb6",
+        "c2"
+      ],
+      "gameUrl": "https://lichess.org/khN687VX/black#79",
+      "white": "reyjohnny11",
+      "black": "rezaghafuri",
+      "wRating": 1980,
+      "bRating": 2045,
+      "id": 914
     }
   ];
 }
