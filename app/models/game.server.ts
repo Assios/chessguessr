@@ -11292,6 +11292,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1819,
       "bRating": 1856,
       "id": 921
+    },
+    {
+      "date": "2024-12-29",
+      "fen": "8/7P/6K1/5p2/4kB2/3p2P1/7r/8 w - - 1 57",
+      "solution": [
+        "Bh6",
+        "d2",
+        "Bxd2",
+        "f4",
+        "Bxf4"
+      ],
+      "gameUrl": "https://lichess.org/DGia6QcM/white#112",
+      "white": "Darkmaul11",
+      "black": "korbul",
+      "wRating": 2590,
+      "bRating": 2505,
+      "id": 922
+    },
+    {
+      "date": "2024-12-30",
+      "fen": "r1b2rk1/5pp1/p7/3q2NQ/4n2R/3B4/6PP/7K b - - 1 26",
+      "solution": [
+        "Nf2+",
+        "Kg1",
+        "Nh3+",
+        "Rxh3",
+        "Qc5+"
+      ],
+      "gameUrl": "https://lichess.org/b8ISqcuo/black#51",
+      "white": "wilderbaer90",
+      "black": "layura",
+      "wRating": 2297,
+      "bRating": 2049,
+      "id": 923
+    },
+    {
+      "date": "2024-12-31",
+      "fen": "1r6/7p/P2k2p1/1P2ppP1/2B5/5P2/7P/1K6 w - - 1 39",
+      "solution": [
+        "a7",
+        "Ra8",
+        "b6",
+        "Kc6",
+        "Bd5+"
+      ],
+      "gameUrl": "https://lichess.org/A2w33bUU/white#76",
+      "white": "Tuzibaba",
+      "black": "MasteringHW",
+      "wTitle": "IM",
+      "wRating": 2500,
+      "bRating": 2437,
+      "id": 924
     }
   ];
 }
