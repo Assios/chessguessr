@@ -10864,5 +10864,23 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 1868,
       id: 925,
     },
+    {
+      "date": "2025-01-02",
+      "fen": "rnbq1rk1/ppp3pp/4pn2/2bp1p2/8/3P1NP1/PPPNPPBP/R1BQR1K1 b - - 5 7",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Ng4+",
+        "Kg1",
+        "Ne3"
+      ],
+      "gameUrl": "https://lichess.org/gDaWPMtJ/black#13",
+      "white": "SpiritELcaballo",
+      "black": "jacobomelendez",
+      "bTitle": "CM",
+      "wRating": 1950,
+      "bRating": 2408,
+      "id": 926
+    }
   ];
 }
