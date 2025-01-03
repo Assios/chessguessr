@@ -10898,6 +10898,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2091,
       "bRating": 2254,
       "id": 927
+    },
+    {
+      "date": "2025-01-04",
+      "fen": "r4rk1/1b1pq1pp/p1n1ppn1/1p2P1B1/8/1B3N2/PP2QPPP/R2R2K1 w - - 0 15",
+      "solution": [
+        "exf6",
+        "gxf6",
+        "Rxd7",
+        "Qxd7",
+        "Bxe6+"
+      ],
+      "gameUrl": "https://lichess.org/sMB4IneM/white#28",
+      "white": "fussi",
+      "black": "Dynamikus",
+      "wTitle": "FM",
+      "bTitle": "GM",
+      "wRating": 2581,
+      "bRating": 2738,
+      "id": 928
     }
   ];
 }
