@@ -10917,6 +10917,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2581,
       "bRating": 2738,
       "id": 928
+    },
+    {
+      "date": "2025-01-05",
+      "fen": "4r1k1/pp3p1p/2p1rPp1/2qp4/8/2P4R/PP1Qn1PP/5R1K w - - 0 26",
+      "solution": [
+        "Qh6",
+        "Rxf6",
+        "Qxh7+",
+        "Kf8",
+        "Qh8+"
+      ],
+      "gameUrl": "https://lichess.org/qr88bDTA/white#50",
+      "white": "Thepsyloop",
+      "black": "pawczyk",
+      "wRating": 2271,
+      "bRating": 2293,
+      "id": 929
     }
   ];
 }
