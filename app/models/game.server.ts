@@ -10881,6 +10881,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1950,
       "bRating": 2408,
       "id": 926
+    },
+    {
+      "date": "2025-01-03",
+      "fen": "2r2rk1/1p3ppp/8/p2P2P1/P4p1P/1qRQ1P2/1P2R3/1K6 b - - 0 25",
+      "solution": [
+        "Rxc3",
+        "Qxc3",
+        "Qd1+",
+        "Ka2",
+        "Qxa4+"
+      ],
+      "gameUrl": "https://lichess.org/HZ2iTqDi/black#49",
+      "white": "invinci7777",
+      "black": "Chesstrix01",
+      "wRating": 2091,
+      "bRating": 2254,
+      "id": 927
     }
   ];
 }
