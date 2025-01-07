@@ -10951,6 +10951,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1678,
       "bRating": 1566,
       "id": 930
+    },
+    {
+      "date": "2025-01-07",
+      "fen": "8/2pb2kp/3p4/1p1P4/p1Pr2P1/P2B1R1P/5K2/8 w - - 0 38",
+      "solution": [
+        "Ke3",
+        "Rxc4",
+        "Bxc4",
+        "bxc4",
+        "Kd4"
+      ],
+      "gameUrl": "https://lichess.org/wTr7wRKs/white#74",
+      "white": "Melnikov180687",
+      "black": "HGabor",
+      "wRating": 2345,
+      "bRating": 2354,
+      "id": 931
     }
   ];
 }
