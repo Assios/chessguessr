@@ -10985,6 +10985,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1698,
       "bRating": 1626,
       "id": 932
+    },
+    {
+      "date": "2025-01-09",
+      "fen": "r2r2k1/p3Qpbp/1q1Rb1p1/4P3/4PB2/6P1/P4PBP/R5K1 b - - 2 19",
+      "solution": [
+        "Rxd6",
+        "Qxd6",
+        "Qxd6",
+        "exd6",
+        "Bxa1"
+      ],
+      "gameUrl": "https://lichess.org/DASmnms6/black#37",
+      "white": "Christianneke2",
+      "black": "Gladyx",
+      "wRating": 2214,
+      "bRating": 2173,
+      "id": 933
     }
   ];
 }
