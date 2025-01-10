@@ -11021,7 +11021,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 934
     },
     {
-      "date": "2025-01-12",
+      "date": "2025-01-11",
       "fen": "5r1k/pR4p1/3p1q1p/3B2n1/P1P5/7P/P2Q3N/6K1 b - - 0 28",
       "solution": [
         "Nxh3+",
@@ -11035,7 +11035,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "Selimcal",
       "wRating": 1993,
       "bRating": 2042,
-      "id": 936
+      "id": 935
     }
   ];
 }
