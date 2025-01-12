@@ -11053,6 +11053,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1758,
       "bRating": 1756,
       "id": 936
+    },
+    {
+      "date": "2025-01-13",
+      "fen": "1r5k/p3Q1bp/2p3P1/3p4/8/P1N4P/1PKR3q/5R2 b - - 6 34",
+      "solution": [
+        "Rxb2+",
+        "Kxb2",
+        "Qxd2+",
+        "Kb3",
+        "Qxc3+"
+      ],
+      "gameUrl": "https://lichess.org/C8iUTu0i/black#67",
+      "white": "Magic_Man89",
+      "black": "buttonz",
+      "wRating": 1547,
+      "bRating": 1641,
+      "id": 937
     }
   ];
 }
