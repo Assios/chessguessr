@@ -11086,6 +11086,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2361,
       "bRating": 2362,
       "id": 938
+    },
+    {
+      "date": "2025-01-15",
+      "fen": "r2qk2r/pp1nbppp/5n2/1B6/3p2Q1/8/PPPP1PPP/R1B1R1K1 w kq - 4 12",
+      "solution": [
+        "Qxg7",
+        "Rg8",
+        "Qxf6",
+        "Kf8",
+        "Qh6+"
+      ],
+      "gameUrl": "https://lichess.org/sY7cqguW/white#22",
+      "white": "Jonatita",
+      "black": "buahapel",
+      "wRating": 1895,
+      "bRating": 1877,
+      "id": 939
     }
   ];
 }
