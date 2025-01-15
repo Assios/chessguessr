@@ -11103,6 +11103,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1895,
       "bRating": 1877,
       "id": 939
+    },
+    {
+      "date": "2025-01-16",
+      "fen": "2r4k/3R1Bbp/p4r2/1p3p2/P2BbP2/8/1PP4P/1R4K1 b - - 4 27",
+      "solution": [
+        "Rxf7",
+        "Bxg7+",
+        "Rxg7+",
+        "Rxg7",
+        "Kxg7"
+      ],
+      "gameUrl": "https://lichess.org/pyBtseWv/black#53",
+      "white": "strong_player_007",
+      "black": "Torvicio",
+      "bTitle": "FM",
+      "wRating": 2414,
+      "bRating": 2466,
+      "id": 940
     }
   ];
 }
