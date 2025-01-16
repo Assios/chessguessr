@@ -11135,6 +11135,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "gameUrl": "https://lichess.org/kUZZ0jiG/white#40",
       "white": "Miguelho67",
       "black": "thecarwith2wheels",
+      "wTitle": "IM",
       "wRating": 2572,
       "bRating": 2492,
       "id": 941
