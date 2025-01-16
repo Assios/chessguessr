@@ -11121,6 +11121,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2414,
       "bRating": 2466,
       "id": 940
+    },
+    {
+      "date": "2025-01-17",
+      "fen": "3qr1k1/pb3p2/1p4pp/n1rp4/P1pRnN2/2P2N1P/BPQ2PP1/3R2K1 w - - 3 21",
+      "solution": [
+        "Rxe4",
+        "dxe4",
+        "Rxd8",
+        "Rxd8",
+        "Nd4"
+      ],
+      "gameUrl": "https://lichess.org/kUZZ0jiG/white#40",
+      "white": "Miguelho67",
+      "black": "thecarwith2wheels",
+      "wRating": 2572,
+      "bRating": 2492,
+      "id": 941
     }
   ];
 }
