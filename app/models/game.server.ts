@@ -11139,6 +11139,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2572,
       "bRating": 2492,
       "id": 941
+    },
+    {
+      "date": "2025-01-18",
+      "fen": "2rr2k1/1p2pp1p/pq1p2p1/8/PPP1R1n1/B1Q2N2/5PPP/3R2K1 b - - 0 19",
+      "solution": [
+        "Nxf2",
+        "Qd4",
+        "Qxd4",
+        "Rdxd4",
+        "Nxe4"
+      ],
+      "gameUrl": "https://lichess.org/1bom6qDf/black#37",
+      "white": "Arad_Nazari",
+      "black": "JenderalDaniel",
+      "wTitle": "IM",
+      "bTitle": "FM",
+      "wRating": 2447,
+      "bRating": 2494,
+      "id": 942
     }
   ];
 }
