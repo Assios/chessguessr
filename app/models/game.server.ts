@@ -11193,6 +11193,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2553,
       "bRating": 2649,
       "id": 944
+    },
+    {
+      "date": "2025-01-21",
+      "fen": "3r2k1/1p4p1/p1ppP3/7p/2P1Q1n1/2NKPR2/PP4q1/3R4 b - - 0 28",
+      "solution": [
+        "Ne5+",
+        "Kd4",
+        "Nxf3+",
+        "Kd3",
+        "Ne5+"
+      ],
+      "gameUrl": "https://lichess.org/3U9szt3q/black#55",
+      "white": "GypsyDanger",
+      "black": "Sobolew",
+      "wTitle": "NM",
+      "wRating": 2291,
+      "bRating": 2256,
+      "id": 945
     }
   ];
 }
