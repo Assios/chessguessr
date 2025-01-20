@@ -11175,6 +11175,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1915,
       "bRating": 1944,
       "id": 943
+    },
+    {
+      "date": "2025-01-20",
+      "fen": "8/6p1/p4pP1/P1n1pP2/1k2P3/4B3/4K3/8 b - - 2 46",
+      "solution": [
+        "Nxe4",
+        "Kf3",
+        "Nd6",
+        "Kg4",
+        "Kxa5"
+      ],
+      "gameUrl": "https://lichess.org/ytRf9LPy/black#91",
+      "white": "Volk7777777",
+      "black": "labestia2017",
+      "bTitle": "FM",
+      "wRating": 2553,
+      "bRating": 2649,
+      "id": 944
     }
   ];
 }
