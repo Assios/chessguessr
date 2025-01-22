@@ -11228,6 +11228,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1915,
       "bRating": 1889,
       "id": 946
+    },
+    {
+      "date": "2025-01-23",
+      "fen": "2br2k1/5qpp/p1p2p2/1pP1p3/1P1NP2P/1Q4PB/P4P2/3R2K1 b - - 0 29",
+      "solution": [
+        "Qxb3",
+        "axb3",
+        "Bxh3",
+        "f3",
+        "Rxd4"
+      ],
+      "gameUrl": "https://lichess.org/MIqUXxtM/black#57",
+      "white": "Natasha-Romanoff",
+      "black": "miksa99",
+      "bTitle": "FM",
+      "wRating": 2440,
+      "bRating": 2410,
+      "id": 947
     }
   ];
 }
