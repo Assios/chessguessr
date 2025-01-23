@@ -11246,6 +11246,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2440,
       "bRating": 2410,
       "id": 947
+    },
+    {
+      "date": "2025-01-24",
+      "fen": "8/p1k2p2/2p3p1/2P2bP1/1P5P/PN1rp3/1K2R3/8 b - - 2 33",
+      "solution": [
+        "Bg4",
+        "Re1",
+        "e2",
+        "Nc1",
+        "Rd1"
+      ],
+      "gameUrl": "https://lichess.org/CIDJUIBR/black#65",
+      "white": "editarwoto",
+      "black": "MVL12357",
+      "wRating": 2072,
+      "bRating": 2204,
+      "id": 948
     }
   ];
 }
