@@ -11263,6 +11263,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2072,
       "bRating": 2204,
       "id": 948
+    },
+    {
+      "date": "2025-01-25",
+      "fen": "6k1/6pp/4b3/p5P1/2p4P/P1RN2K1/1P2r3/8 w - - 0 45",
+      "solution": [
+        "Nf4",
+        "Rxb2",
+        "Nxe6",
+        "Rb3",
+        "Rf3"
+      ],
+      "gameUrl": "https://lichess.org/QVogfZkj/white#88",
+      "white": "dieuguide-mespions",
+      "black": "jssotohMED",
+      "wRating": 1792,
+      "bRating": 1764,
+      "id": 949
+    },
+    {
+      "date": "2025-01-26",
+      "fen": "1br2rk1/1b2qppp/5n2/N1p5/4p3/PPN1P3/1B2QPPP/2RR2K1 b - - 0 21",
+      "solution": [
+        "Qc7",
+        "Qb5",
+        "Qxh2+",
+        "Kf1",
+        "Ba8"
+      ],
+      "gameUrl": "https://lichess.org/1tpavEVD/black#41",
+      "white": "DaniyarLatypov2008",
+      "black": "Ferrum89",
+      "wRating": 2342,
+      "bRating": 2581,
+      "id": 950
     }
   ];
 }
