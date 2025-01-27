@@ -11331,6 +11331,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1874,
       "bRating": 2002,
       "id": 952
+    },
+    {
+      "date": "2025-01-29",
+      "fen": "r1b2rk1/p3ppbp/1pNq1np1/2pn4/8/2N1B3/PPP1BPPP/R2Q1RK1 w - - 2 13",
+      "solution": [
+        "Nxd5",
+        "Nxd5",
+        "Qxd5",
+        "Qxd5",
+        "Nxe7+"
+      ],
+      "gameUrl": "https://lichess.org/jWqi58zw/white#24",
+      "white": "Accnoname",
+      "black": "Moshkara",
+      "wRating": 1842,
+      "bRating": 1828,
+      "id": 953
     }
   ];
 }
