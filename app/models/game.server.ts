@@ -11314,6 +11314,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1757,
       "bRating": 1755,
       "id": 951
+    },
+    {
+      "date": "2025-01-28",
+      "fen": "1r2r1k1/p3bppp/2p5/q1Pp4/3B4/2N2P1P/PP3QP1/4R1K1 w - - 7 21",
+      "solution": [
+        "Rxe7",
+        "Rxe7",
+        "Qg3",
+        "f5",
+        "Qxb8+"
+      ],
+      "gameUrl": "https://lichess.org/JWFEuLLs/white#40",
+      "white": "Tymanov_V",
+      "black": "Davidmtz",
+      "wRating": 1874,
+      "bRating": 2002,
+      "id": 952
     }
   ];
 }
