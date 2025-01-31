@@ -11382,6 +11382,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1990,
       "bRating": 2231,
       "id": 955
+    },
+    {
+      "date": "2025-02-01",
+      "fen": "8/p5pp/5p2/PP2p3/2B1P3/1K2kP2/5b1P/8 w - - 2 34",
+      "solution": [
+        "b6",
+        "axb6",
+        "a6",
+        "b5",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/zBFtMHpy/white#66",
+      "white": "Ueberraschungspaket",
+      "black": "Snak3doc",
+      "wRating": 1691,
+      "bRating": 1827,
+      "id": 956
     }
   ];
 }
