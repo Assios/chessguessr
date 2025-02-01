@@ -11399,6 +11399,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1691,
       "bRating": 1827,
       "id": 956
+    },
+    {
+      "date": "2025-02-02",
+      "fen": "r6k/7N/p3bq2/P2pb3/1p3p2/3B3P/1PP2P1K/4Q1R1 b - - 0 32",
+      "solution": [
+        "f3+",
+        "Kh1",
+        "Qf4",
+        "Rg3",
+        "Rg8"
+      ],
+      "gameUrl": "https://lichess.org/bY1kqwC2/black#63",
+      "white": "Beletko",
+      "black": "Castle_by_hand",
+      "wRating": 2349,
+      "bRating": 2356,
+      "id": 957
     }
   ];
 }
