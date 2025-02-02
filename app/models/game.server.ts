@@ -11416,6 +11416,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2349,
       "bRating": 2356,
       "id": 957
+    },
+    {
+      "date": "2025-02-03",
+      "fen": "5r1r/1p1kbQpp/1q2p3/p1pp4/P2n4/2N5/1PP2PPP/R1B1R1K1 w - - 4 16",
+      "solution": [
+        "Qxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Kd6",
+        "Nxb6"
+      ],
+      "gameUrl": "https://lichess.org/92DQ6apO/white#30",
+      "white": "Vosano",
+      "black": "PaquitoFIMO",
+      "wRating": 2145,
+      "bRating": 1976,
+      "id": 958
+    },
+    {
+      "date": "2025-02-04",
+      "fen": "8/8/1P5p/K4pp1/5P1B/5bP1/7k/8 w - - 1 49",
+      "solution": [
+        "Bxg5",
+        "hxg5",
+        "fxg5",
+        "Kxg3",
+        "g6"
+      ],
+      "gameUrl": "https://lichess.org/T3cMSU4M/white#96",
+      "white": "HelgeA",
+      "black": "Petfos",
+      "wTitle": "IM",
+      "wRating": 2454,
+      "bRating": 2188,
+      "id": 959
+    },
+    {
+      "date": "2025-02-05",
+      "fen": "6k1/1p3p1p/p1n5/8/2R5/1P2bPNP/r2r2PK/B5R1 w - - 4 29",
+      "solution": [
+        "Rg4+",
+        "Kf8",
+        "Bg7+",
+        "Kg8",
+        "Bd4+"
+      ],
+      "gameUrl": "https://lichess.org/X3b30WEV/white#56",
+      "white": "psantann",
+      "black": "KellyBundy",
+      "wRating": 2286,
+      "bRating": 2419,
+      "id": 960
     }
   ];
 }
