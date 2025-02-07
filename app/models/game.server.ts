@@ -11503,6 +11503,26 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1988,
       "bRating": 1855,
       "id": 962
-    }
+    },
+    {
+      "date": "2025-02-08",
+      "fen": "rkqrbbnn/pppppppp/8/8/8/8/PPPPPPPP/RKQRBBNN w DAda - 0 1",
+      "solution": [
+        "Qg1",
+        "Qd5",
+        "b4",
+        "Qe5+",
+        "Ka2"
+      ],
+      "gameUrl": "https://lichess.org/broadcast/freestyle-chess-grand-slam-tour-2025-weissenhaus--round-robin/round-1/SjKjf4b0/PUJFeMcl#58",
+      "white": "Magnus Carlsen",
+      "black": "Hikaru Nakamura",
+      "wTitle": "GM",
+      "bTitle": "GM",
+      "wRating": 2819,
+      "bRating": 2734,
+      "id": 963,
+      "event": "Freestyle Chess 2025 – Weissenhaus",
+    },
   ];
 }
