@@ -11524,5 +11524,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 963,
       "event": "Freestyle Chess 2025 – Weissenhaus",
     },
+    {
+      "date": "2025-02-09",
+      "fen": "8/8/7p/b3Pk2/8/4P1P1/p3K2P/B7 b - - 0 46",
+      "solution": [
+        "Bc7",
+        "g4+",
+        "Ke6",
+        "h4",
+        "Bxe5"
+      ],
+      "gameUrl": "https://lichess.org/o9rQxM2r/black#91",
+      "white": "OSAMA1000",
+      "black": "abdo1122",
+      "wRating": 1863,
+      "bRating": 1824,
+      "id": 964
+    }
   ];
 }
