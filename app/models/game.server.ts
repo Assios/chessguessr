@@ -11609,6 +11609,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2632,
       "bRating": 2611,
       "id": 968
+    },
+    {
+      "date": "2025-02-14",
+      "fen": "r1b1k2r/ppp4p/2n2p2/3qN3/1b1Pp3/2N5/PP3PPP/R2QK2R w KQkq - 0 12",
+      "solution": [
+        "Qh5+",
+        "Ke7",
+        "Ng6+",
+        "Kd6",
+        "Qxd5#"
+      ],
+      "gameUrl": "https://lichess.org/ZmLvTADS/white#22",
+      "white": "mohamadjavad_mosaei",
+      "black": "mohammadraeisi",
+      "wRating": 1807,
+      "bRating": 1775,
+      "id": 969
     }
   ];
 }
