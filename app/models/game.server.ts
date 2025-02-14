@@ -11626,6 +11626,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1807,
       "bRating": 1775,
       "id": 969
+    },
+    {
+      "date": "2025-02-15",
+      "fen": "5rk1/1b2b1pp/pp1p4/3Nn1q1/P7/5P2/1PP3PP/R2Q1R1K w - - 4 20",
+      "solution": [
+        "f4",
+        "Qh4",
+        "Nxe7+",
+        "Qxe7",
+        "fxe5"
+      ],
+      "gameUrl": "https://lichess.org/kXjNfNSs/white#38",
+      "white": "jamestsherwin",
+      "black": "pedrov2029",
+      "wRating": 2270,
+      "bRating": 2254,
+      "id": 970
     }
   ];
 }
