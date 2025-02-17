@@ -11694,6 +11694,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1590,
       "bRating": 1598,
       "id": 973
+    },
+    {
+      "date": "2025-02-19",
+      "fen": "rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 9",
+      "solution": [
+        "Qd8+",
+        "Kxd8",
+        "Bg5+",
+        "Kc7",
+        "Bd8#"
+      ],
+      "gameUrl": "https://lichess.org/OXMehW4X/white#16",
+      "white": "Triangle_h",
+      "black": "humanarium",
+      "wRating": 1939,
+      "bRating": 1838,
+      "id": 974
     }
   ];
 }
