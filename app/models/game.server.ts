@@ -11711,6 +11711,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2023,
       "bRating": 2142,
       "id": 974
+    },
+    {
+      "date": "2025-02-20",
+      "fen": "4r1k1/p4p1p/4q1p1/8/1Qn5/1R2P1Pb/P2r1P1P/B3R1KB b - - 5 28",
+      "solution": [
+        "Qf5",
+        "f4",
+        "Qc2",
+        "Qb7",
+        "Rxh2"
+      ],
+      "gameUrl": "https://lichess.org/TCi5AMTP/black#55",
+      "white": "marasmus01",
+      "black": "bouzidian",
+      "wTitle": "FM",
+      "bTitle": "CM",
+      "wRating": 2354,
+      "bRating": 2279,
+      "id": 975
     }
   ];
 }
