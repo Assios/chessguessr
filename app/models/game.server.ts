@@ -11697,19 +11697,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-02-19",
-      "fen": "rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 9",
+      "fen": "r4rk1/p3bp1p/6p1/2ppPp2/3q4/8/PP2Q1PP/R1B2R1K w - - 0 19",
       "solution": [
-        "Qd8+",
-        "Kxd8",
-        "Bg5+",
-        "Kc7",
-        "Bd8#"
+        "Rf4",
+        "Rfe8",
+        "Rxd4",
+        "cxd4",
+        "Bf4"
       ],
-      "gameUrl": "https://lichess.org/OXMehW4X/white#16",
-      "white": "Triangle_h",
-      "black": "humanarium",
-      "wRating": 1939,
-      "bRating": 1838,
+      "gameUrl": "https://lichess.org/kbztNHI1/white#36",
+      "white": "linail",
+      "black": "alaa1957",
+      "wRating": 2023,
+      "bRating": 2142,
       "id": 974
     }
   ];
