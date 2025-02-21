@@ -11747,6 +11747,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2353,
       "bRating": 2278,
       "id": 976
+    },
+    {
+      "date": "2025-02-22",
+      "fen": "7r/2q2Nkp/4p1pR/p2n2P1/2pP4/2r2QP1/5PK1/7R w - - 0 30",
+      "solution": [
+        "Nxh8",
+        "Rxf3",
+        "Rxh7+",
+        "Kf8",
+        "Rxc7"
+      ],
+      "gameUrl": "https://lichess.org/C0nV6yKj/white#58",
+      "white": "nemtsevguru",
+      "black": "semyi",
+      "wTitle": "FM",
+      "wRating": 2386,
+      "bRating": 2241,
+      "id": 977
     }
   ];
 }
