@@ -11765,6 +11765,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2386,
       "bRating": 2241,
       "id": 977
+    },
+    {
+      "date": "2025-02-23",
+      "fen": "5r2/6R1/3q3p/5b1k/p2B4/7P/5PP1/5RK1 w - - 1 32",
+      "solution": [
+        "g4+",
+        "Bxg4",
+        "hxg4+",
+        "Kh4",
+        "Kg2"
+      ],
+      "gameUrl": "https://lichess.org/4kvNQkpJ/white#62",
+      "white": "TheRagnarokchess",
+      "black": "Pomegranate_Hearts",
+      "wRating": 2308,
+      "bRating": 2386,
+      "id": 978
     }
   ];
 }
