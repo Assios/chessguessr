@@ -11782,6 +11782,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2308,
       "bRating": 2386,
       "id": 978
+    },
+    {
+      "date": "2025-02-24",
+      "fen": "r1b2rk1/p2ppp1p/2p3p1/q7/2B2Q2/2b3P1/PPP2PP1/2KR3R w - - 0 15",
+      "solution": [
+        "Qh6",
+        "Bxb2+",
+        "Kb1",
+        "Rd8",
+        "Qxh7+"
+      ],
+      "gameUrl": "https://lichess.org/VQceZAmV/white#28",
+      "white": "blukee",
+      "black": "magnus-almendrado",
+      "wRating": 1802,
+      "bRating": 1895,
+      "id": 979
+    },
+    {
+      "date": "2025-02-25",
+      "fen": "r1b1r1k1/p1p2ppp/2n2n2/1Q6/1B1Pq3/2N2N2/PP2BPPP/R3K2R b KQ - 0 12",
+      "solution": [
+        "Qc2",
+        "Qxc6",
+        "Rxe2+",
+        "Nxe2",
+        "Qxc6"
+      ],
+      "gameUrl": "https://lichess.org/0AjI5NFU/black#23",
+      "white": "Johny00",
+      "black": "arbz60",
+      "wRating": 1969,
+      "bRating": 2053,
+      "id": 980
     }
   ];
 }
