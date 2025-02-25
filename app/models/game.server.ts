@@ -11816,6 +11816,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1969,
       "bRating": 2053,
       "id": 980
+    },
+    {
+      "date": "2025-02-26",
+      "fen": "5k1r/ppp5/4r3/5p2/1P4p1/4P1q1/P1Q3B1/3R2K1 w - - 0 29",
+      "solution": [
+        "Qxf5+",
+        "Ke7",
+        "Qg5+",
+        "Rf6",
+        "Qg7+"
+      ],
+      "gameUrl": "https://lichess.org/isj8leVv/white#56",
+      "white": "mabumba",
+      "black": "SHAXMATNCT",
+      "wTitle": "IM",
+      "bTitle": "IM",
+      "wRating": 2499,
+      "bRating": 2477,
+      "id": 981
     }
   ];
 }
