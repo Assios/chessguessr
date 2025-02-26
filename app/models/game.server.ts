@@ -11835,6 +11835,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2499,
       "bRating": 2477,
       "id": 981
+    },
+    {
+      "date": "2025-02-27",
+      "fen": "2b5/2q1n1bk/p2p3p/1p1Ppp2/1P2P2N/3BPK1P/PQ1N4/8 b - - 1 30",
+      "solution": [
+        "Nxd5",
+        "exd5",
+        "e4+",
+        "Nxe4",
+        "Bxb2"
+      ],
+      "gameUrl": "https://lichess.org/hGAZlPwP/black#59",
+      "white": "Beltham",
+      "black": "Novocane",
+      "wRating": 2120,
+      "bRating": 2309,
+      "id": 982
     }
   ];
 }
