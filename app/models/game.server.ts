@@ -11869,6 +11869,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1661,
       "bRating": 1619,
       "id": 983
+    },
+{
+      "date": "2025-03-01",
+      "fen": "6B1/3b4/8/pp1KPkp1/8/P7/6P1/8 w - - 0 53",
+      "solution": [
+        "e6",
+        "Le8",
+        "Lf7",
+        "b4",
+        "axb4"
+      ],
+      "gameUrl": "https://lichess.org/8aZORoz5/white#104",
+      "white": "Jedi_Knight",
+      "black": "Zurabi1234",
+      "wRating": 1896,
+      "bRating": 1934,
+      "id": 984
     }
   ];
 }
