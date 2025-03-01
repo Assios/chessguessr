@@ -11875,8 +11875,8 @@ export async function getGames(): Promise<Array<GameType>> {
       "fen": "6B1/3b4/8/pp1KPkp1/8/P7/6P1/8 w - - 0 53",
       "solution": [
         "e6",
-        "Le8",
-        "Lf7",
+        "Be8",
+        "Bf7",
         "b4",
         "axb4"
       ],
