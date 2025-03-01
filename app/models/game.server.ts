@@ -11870,7 +11870,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1619,
       "id": 983
     },
-{
+    {
       "date": "2025-03-01",
       "fen": "6B1/3b4/8/pp1KPkp1/8/P7/6P1/8 w - - 0 53",
       "solution": [
@@ -11886,6 +11886,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1896,
       "bRating": 1934,
       "id": 984
+    },
+    {
+      "date": "2025-03-02",
+      "fen": "2r2rk1/pp2bppp/4p3/3p2P1/2nq3P/PQ6/NPPB1P2/1K1R3R w - - 0 20",
+      "solution": [
+        "Bb4",
+        "Qe4",
+        "Bxe7",
+        "Nd2+",
+        "Rxd2"
+      ],
+      "gameUrl": "https://lichess.org/eiZEh57E/white#38",
+      "white": "hectorluis2019",
+      "black": "Renehp",
+      "wTitle": "FM",
+      "bTitle": "FM",
+      "wRating": 2575,
+      "bRating": 2378,
+      "id": 985
     }
   ];
 }
