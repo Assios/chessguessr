@@ -15,6 +15,7 @@ import {
   GameLink,
   guessifySolution,
   useHotkeys,
+  wrongSolution
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { Tile } from "~/styles/styles";

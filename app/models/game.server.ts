@@ -11943,19 +11943,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-03-05",
-      "fen": "6k1/2p1q1p1/3pP2p/1bn5/r1B2Q2/7P/2P3PN/4R1K1 w - - 1 30",
+      "fen": "6k1/p1Q2pp1/3p1n1p/4rb2/PP2q3/8/1B3PPP/RN3RK1 b - - 2 18",
       "solution": [
-        "Qe3",
-        "Rxc4",
-        "Ng4",
-        "Re4",
-        "Qf2"
+        "Bh3",
+        "f3",
+        "Qe3+",
+        "Kh1",
+        "Bxg2+"
       ],
-      "gameUrl": "https://lichess.org/IOYbwy1B/white#58",
-      "white": "DocChicken",
-      "black": "Mas3292",
-      "wRating": 1753,
-      "bRating": 1739,
+      "gameUrl": "https://lichess.org/h6kT7PX0/black#35",
+      "white": "temo7734",
+      "black": "Anton_Kolmakov",
+      "wRating": 2038,
+      "bRating": 2059,
       "id": 988
     }
   ];
