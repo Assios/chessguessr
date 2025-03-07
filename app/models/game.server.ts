@@ -11993,6 +11993,21 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 990
     },
     {
+      date: "2025-03-08",
+      fen: "4rbk1/1p2qr1p/2p1b1p1/p1Pp1pP1/N4P1R/P2BP3/1PQ3P1/2K4R b - - 0 27",
+      solution: ["d4", "exd4", "Qd7", "g4", "Qxd4"],
+      gameUrl:
+        "https://lichess.org/broadcast/-/-/iZuBL9fM/sYp5xbrt",
+      white: "Simen Agdestein",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "Norwegian Team League",
+      wRating: 2725,
+      bRating: 2861,
+      id: 98,
+    },
+    {
       "date": "2025-03-08",
       "fen": "r3r1k1/pp5p/6p1/3P4/2Pbp3/qP2RQ2/6PP/5R1K w - - 0 25",
       "solution": [
