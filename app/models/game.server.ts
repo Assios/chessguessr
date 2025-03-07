@@ -12005,10 +12005,10 @@ export async function getGames(): Promise<Array<GameType>> {
       event: "Norwegian Team League",
       wRating: 2725,
       bRating: 2861,
-      id: 98,
+      id: 991,
     },
     {
-      "date": "2025-03-08",
+      "date": "2025-03-09",
       "fen": "r3r1k1/pp5p/6p1/3P4/2Pbp3/qP2RQ2/6PP/5R1K w - - 0 25",
       "solution": [
         "Qf7+",
@@ -12023,7 +12023,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "NM",
       "wRating": 2645,
       "bRating": 2500,
-      "id": 991
+      "id": 992
     }
   ];
 }
