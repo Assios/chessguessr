@@ -12023,7 +12023,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "NM",
       "wRating": 2645,
       "bRating": 2500,
-      "id": 993
+      "id": 992
     }
   ];
 }
