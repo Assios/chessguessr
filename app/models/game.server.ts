@@ -12003,8 +12003,8 @@ export async function getGames(): Promise<Array<GameType>> {
       wTitle: "GM",
       bTitle: "GM",
       event: "Norwegian Team League",
-      wRating: 2725,
-      bRating: 2861,
+      wRating: 2573,
+      bRating: 2833,
       id: 991,
     },
     {
@@ -12023,7 +12023,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "NM",
       "wRating": 2645,
       "bRating": 2500,
-      "id": 992
+      "id": 993
     }
   ];
 }
