@@ -12059,6 +12059,75 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2203,
       "bRating": 2314,
       "id": 994
+    },
+    {
+      "date": "2025-03-12",
+      "fen": "3rr1k1/pp3pp1/1bp4p/5N1P/5PP1/2nR1K2/P1P5/3R2B1 w - - 0 28",
+      "solution": [
+        "Bxb6",
+        "Rxd3+",
+        "Rxd3",
+        "Nd5",
+        "Bc5"
+      ],
+      "gameUrl": "https://lichess.org/t5PvgnQW/white#54",
+      "white": "Black_Winter_Day",
+      "black": "Three4",
+      "wTitle": "IM",
+      "wRating": 2511,
+      "bRating": 2250,
+      "id": 995
+    },
+    {
+      "date": "2025-03-13",
+      "fen": "6r1/1p3p1k/p1p2Pp1/6QP/8/P6q/1P3R2/6K1 w - - 2 37",
+      "solution": [
+        "Rh2",
+        "gxh5",
+        "Qxg8+",
+        "Kxg8",
+        "Rxh3"
+      ],
+      "gameUrl": "https://lichess.org/e2XfDQp2/white#72",
+      "white": "Bule_kw",
+      "black": "Valery37",
+      "wRating": 2160,
+      "bRating": 2322,
+      "id": 996
+    },
+    {
+      "date": "2025-03-14",
+      "fen": "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/BP3N2/P3PPPP/RN1QKB1R b KQkq - 2 5",
+      "solution": [
+        "Bxb1",
+        "Rxb1",
+        "Qa5+",
+        "b4",
+        "Qxa3"
+      ],
+      "gameUrl": "https://lichess.org/u6BfVJkF/black#9",
+      "white": "taillightsfade",
+      "black": "davood1354",
+      "wRating": 2345,
+      "bRating": 2292,
+      "id": 997
+    },
+    {
+      "date": "2025-03-15",
+      "fen": "r1bqr1k1/ppp2ppp/8/8/1bBQP3/5N2/PPpB1PPP/R3K2R b KQ - 1 13",
+      "solution": [
+        "Qxd4",
+        "Nxd4",
+        "Rxe4+",
+        "Be2",
+        "Rxd4"
+      ],
+      "gameUrl": "https://lichess.org/KmweiZ2n/black#25",
+      "white": "Tyluu",
+      "black": "andlind",
+      "wRating": 2093,
+      "bRating": 2168,
+      "id": 998
     }
   ];
 }
