@@ -12041,6 +12041,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1858,
       "bRating": 1908,
       "id": 993
+    },
+    {
+      "date": "2025-03-11",
+      "fen": "r2q1rk1/pp2nppp/1b6/4P2b/3BB3/5N1P/PP3PP1/R2Q1RK1 b - - 0 16",
+      "solution": [
+        "Bxf3",
+        "Bxb6",
+        "Qxd1",
+        "Raxd1",
+        "Bxd1"
+      ],
+      "gameUrl": "https://lichess.org/Kd9xhngm/black#31",
+      "white": "SamuChessZero",
+      "black": "RobertDowneyJr0111",
+      "bTitle": "FM",
+      "wRating": 2203,
+      "bRating": 2314,
+      "id": 994
     }
   ];
 }
