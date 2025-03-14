@@ -12128,6 +12128,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2093,
       "bRating": 2168,
       "id": 998
+    },
+    {
+      "date": "2025-03-16",
+      "fen": "8/p1p3k1/1p6/6p1/1b6/2RbrB1P/P5P1/RN4K1 b - - 0 30",
+      "solution": [
+        "Re1+",
+        "Kf2",
+        "Bxc3",
+        "Nxc3",
+        "Rxa1"
+      ],
+      "gameUrl": "https://lichess.org/MfNK3DO2/black#59",
+      "white": "Ati_Awesome",
+      "black": "alloisevankleef",
+      "wRating": 1863,
+      "bRating": 1588,
+      "id": 999
     }
   ];
 }
