@@ -12162,6 +12162,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2157,
       "bRating": 2092,
       "id": 1000
+    },
+    {
+      "date": "2025-03-18",
+      "fen": "r5k1/pp3pp1/5n2/3P4/2Q2B2/2NN4/P4KPP/q7 b - - 3 24",
+      "solution": [
+        "Qxc3",
+        "Qb5",
+        "Qd4+",
+        "Be3",
+        "Ng4+"
+      ],
+      "gameUrl": "https://lichess.org/qfsHr3ME/black#47",
+      "white": "brandonuriostegui",
+      "black": "ChessSD1",
+      "wRating": 1974,
+      "bRating": 1955,
+      "id": 1001
     }
   ];
 }
