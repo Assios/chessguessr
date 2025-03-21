@@ -12230,6 +12230,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1986,
       "bRating": 1934,
       "id": 1004
+    },
+    {
+      "date": "2025-03-22",
+      "fen": "8/8/3bpkp1/p1p2p1p/PpP1P1P1/1P1N1P1P/6K1/8 w - - 0 34",
+      "solution": [
+        "e5+",
+        "Bxe5",
+        "g5+",
+        "Kxg5",
+        "Nxe5"
+      ],
+      "gameUrl": "https://lichess.org/z23AANvR/white#66",
+      "white": "Tobu1997",
+      "black": "Filemon64",
+      "wRating": 2208,
+      "bRating": 2350,
+      "id": 1005
     }
   ];
 }
