@@ -12265,6 +12265,91 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2322,
       "bRating": 2346,
       "id": 1006
+    },
+    {
+      "date": "2025-03-24",
+      "fen": "r4r1k/ppp1npp1/3p1q1p/4pb2/2B4R/P1PP2QP/2PB1PP1/R5K1 w - - 4 17",
+      "solution": [
+        "Bg5",
+        "Qg6",
+        "Bxe7",
+        "Qxg3",
+        "fxg3"
+      ],
+      "gameUrl": "https://lichess.org/ZBMBpVaV/white#32",
+      "white": "Mindblow54",
+      "black": "JNY54",
+      "wRating": 1695,
+      "bRating": 1722,
+      "id": 1007
+    },
+    {
+      "date": "2025-03-25",
+      "fen": "r1q1kb1r/p3ppp1/2p1bn2/8/8/6P1/PPQPPPB1/R1B2RK1 w kq - 0 14",
+      "solution": [
+        "Qxc6+",
+        "Bd7",
+        "Qxa8",
+        "Qxa8",
+        "Bxa8"
+      ],
+      "gameUrl": "https://lichess.org/2QfggMUE/white#26",
+      "white": "Dr_Bledow",
+      "black": "Godfroi",
+      "wRating": 2585,
+      "bRating": 2594,
+      "id": 1008
+    },
+    {
+      "date": "2025-03-26",
+      "fen": "4r2k/2p3pp/p7/2Q4P/8/2P3b1/PP2BN1q/R4K2 b - - 0 27",
+      "solution": [
+        "Bxf2",
+        "Qxf2",
+        "Qh1+",
+        "Qg1",
+        "Rf8+"
+      ],
+      "gameUrl": "https://lichess.org/SXzqO5Qr/black#53",
+      "white": "yungbankov",
+      "black": "Gg2021",
+      "wRating": 1630,
+      "bRating": 1640,
+      "id": 1009
+    },
+    {
+      "date": "2025-03-27",
+      "fen": "r2q1rk1/ppp3pR/6P1/2b1p1B1/3nn1B1/3P4/PPP4P/R2Q3K w - - 0 20",
+      "solution": [
+        "Be6+",
+        "Nxe6",
+        "Rh8+",
+        "Kxh8",
+        "Qh5+"
+      ],
+      "gameUrl": "https://lichess.org/UyRJf174/white#38",
+      "white": "tafl",
+      "black": "Simon1993",
+      "wRating": 2180,
+      "bRating": 2076,
+      "id": 1010
+    },
+    {
+      "date": "2025-03-28",
+      "fen": "5k2/5pp1/7p/PN2p3/4P3/5P1P/1Pr3nK/1R6 b - - 0 36",
+      "solution": [
+        "Ne1+",
+        "Kh1",
+        "Nxf3",
+        "a6",
+        "Rh2#"
+      ],
+      "gameUrl": "https://lichess.org/NvGPFz84/black#71",
+      "white": "thomet",
+      "black": "F97X",
+      "wRating": 1776,
+      "bRating": 1814,
+      "id": 1011
     }
   ];
 }
