@@ -12247,6 +12247,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2208,
       "bRating": 2350,
       "id": 1005
+    },
+    {
+      "date": "2025-03-23",
+      "fen": "r2q1r1k/2p3b1/1p1pBn1n/3Pp1B1/1PP1P1P1/2N2pK1/5P2/1R1QR3 b - - 0 29",
+      "solution": [
+        "Nh5+",
+        "Kh4",
+        "Bf6",
+        "gxh5",
+        "Bxg5+"
+      ],
+      "gameUrl": "https://lichess.org/qh8cUpFj/black#57",
+      "white": "Stokksnes",
+      "black": "fsm666fsm",
+      "bTitle": "FM",
+      "wRating": 2322,
+      "bRating": 2346,
+      "id": 1006
     }
   ];
 }
