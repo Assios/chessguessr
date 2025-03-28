@@ -12350,6 +12350,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1776,
       "bRating": 1814,
       "id": 1011
+    },
+    {
+      "date": "2025-03-29",
+      "fen": "8/1q5k/p3pr1p/1p1nN3/2pP1P1Q/2P4P/P5K1/4RR2 b - - 0 32",
+      "solution": [
+        "Nxf4+",
+        "Kf2",
+        "Qg2+",
+        "Ke3",
+        "Nd5#"
+      ],
+      "gameUrl": "https://lichess.org/4Y4k06Ic/black#63",
+      "white": "MisterAnonymous",
+      "black": "ThePunisher00",
+      "wRating": 2216,
+      "bRating": 2037,
+      "id": 1012
+    },
+    {
+      "date": "2025-03-30",
+      "fen": "2r5/8/p3k2B/1p2p3/1P2P3/P2P3p/2r2R2/1R4K1 b - - 0 28",
+      "solution": [
+        "Rg8+",
+        "Kf1",
+        "h2",
+        "Rxh2",
+        "Rxh2"
+      ],
+      "gameUrl": "https://lichess.org/jwNnEG1J/black#55",
+      "white": "chessbeginner381",
+      "black": "Vladimirovich03",
+      "wRating": 1793,
+      "bRating": 1820,
+      "id": 1013
     }
   ];
 }
