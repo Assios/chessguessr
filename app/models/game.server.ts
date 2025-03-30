@@ -12384,6 +12384,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1793,
       "bRating": 1820,
       "id": 1013
+    },
+    {
+      "date": "2025-03-31",
+      "fen": "r3r2k/1p4pp/pq1pRp2/3P4/2Pp1P2/3B2Q1/PP4PP/6K1 w - - 3 25",
+      "solution": [
+        "Qh3",
+        "h6",
+        "Qf5",
+        "Kg8",
+        "Qh7+"
+      ],
+      "gameUrl": "https://lichess.org/dWxe6Zvm/white#48",
+      "white": "LukiZuki",
+      "black": "Palacios-LLera",
+      "wRating": 2350,
+      "bRating": 2434,
+      "id": 1014
+    },
+    {
+      "date": "2025-04-01",
+      "fen": "r6r/pbbn2k1/2pp4/1P2p3/2B1Ppp1/P1NQ4/2PNKPq1/3RR3 w - - 0 25",
+      "solution": [
+        "Rg1",
+        "f3+",
+        "Nxf3",
+        "gxf3+",
+        "Qxf3"
+      ],
+      "gameUrl": "https://lichess.org/IdeUaMsy/white#48",
+      "white": "tom95m",
+      "black": "cloudy88",
+      "wRating": 1945,
+      "bRating": 1959,
+      "id": 1015
+    },
+    {
+      "date": "2025-04-02",
+      "fen": "r1r3k1/1q3pbp/6p1/3Rp3/p3P3/2B3P1/PPP1Q2P/1K1R4 b - - 2 23",
+      "solution": [
+        "Rxc3",
+        "Rb5",
+        "Re3",
+        "Qxe3",
+        "Qxb5"
+      ],
+      "gameUrl": "https://lichess.org/GHe2LwSj/black#45",
+      "white": "yuraoffline",
+      "black": "ShriKrishanVasudev",
+      "wRating": 1962,
+      "bRating": 2109,
+      "id": 1016
     }
   ];
 }
