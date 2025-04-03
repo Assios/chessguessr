@@ -12452,6 +12452,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2235,
       "bRating": 2375,
       "id": 1017
+    },
+    {
+      "date": "2025-04-04",
+      "fen": "rnbqk2r/ppp2ppp/5n2/2bpp3/7P/3P2P1/PPPNPPB1/R1BQK1NR b KQkq - 2 5",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Ng4+",
+        "Kf3",
+        "Qf6#"
+      ],
+      "gameUrl": "https://lichess.org/IWVtv1Uq/black#9",
+      "white": "IMFAR",
+      "black": "TonyGazzo",
+      "wTitle": "IM",
+      "bTitle": "GM",
+      "wRating": 2964,
+      "bRating": 3065,
+      "id": 1018
     }
   ];
 }
