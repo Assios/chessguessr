@@ -12435,6 +12435,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1962,
       "bRating": 2109,
       "id": 1016
+    },
+    {
+      "date": "2025-04-03",
+      "fen": "r3k2r/1p3p2/p3b1Pp/q1n1Q3/4n2B/1RN5/P1P1B1PP/4K2R b Kkq - 0 19",
+      "solution": [
+        "Nd3+",
+        "Bxd3",
+        "Qxe5",
+        "Nxe4",
+        "Bxb3"
+      ],
+      "gameUrl": "https://lichess.org/a5qCzDnX/black#37",
+      "white": "heinz2020",
+      "black": "andro2",
+      "wRating": 2235,
+      "bRating": 2375,
+      "id": 1017
     }
   ];
 }
