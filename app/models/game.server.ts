@@ -12471,6 +12471,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2964,
       "bRating": 3065,
       "id": 1018
+    },
+    {
+      "date": "2025-04-05",
+      "fen": "5r2/p5Q1/Ppkb4/7p/2P1P3/6P1/7P/4qB1K w - - 1 36",
+      "solution": [
+        "Qb7+",
+        "Kc5",
+        "Qd5+",
+        "Kb4",
+        "Qxd6+"
+      ],
+      "gameUrl": "https://lichess.org/qpjv4QxW/white#70",
+      "white": "Okfianto",
+      "black": "kamal-sayed",
+      "wRating": 1854,
+      "bRating": 1971,
+      "id": 1019
     }
   ];
 }
