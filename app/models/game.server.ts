@@ -12488,6 +12488,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1854,
       "bRating": 1971,
       "id": 1019
+    },
+    {
+      "date": "2025-04-06",
+      "fen": "2bqr3/1p3Qpk/2p4p/p3P3/P1P5/1PN4P/6P1/4R2K b - - 0 33",
+      "solution": [
+        "Rf8",
+        "Qh5",
+        "Qd2",
+        "Qe2",
+        "Qxc3"
+      ],
+      "gameUrl": "https://lichess.org/LtfKYPPH/black#65",
+      "white": "bravadochess",
+      "black": "spaminacan",
+      "wRating": 2483,
+      "bRating": 2308,
+      "id": 1020
     }
   ];
 }
