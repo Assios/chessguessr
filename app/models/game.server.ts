@@ -12522,6 +12522,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2107,
       "bRating": 1978,
       "id": 1021
+    },
+    {
+      "date": "2025-04-08",
+      "fen": "3q1rk1/3n1pbp/p2pp1p1/3N4/4P3/4BP2/P2Q2PP/2R3K1 w - - 0 20",
+      "solution": [
+        "Rc8",
+        "Qh4",
+        "Bg5",
+        "Bd4+",
+        "Kh1"
+      ],
+      "gameUrl": "https://lichess.org/PCtY7uBj/white#38",
+      "white": "dejavu70",
+      "black": "lemon_sprite",
+      "wRating": 2138,
+      "bRating": 2223,
+      "id": 1022
     }
   ];
 }
