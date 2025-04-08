@@ -12539,6 +12539,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2138,
       "bRating": 2223,
       "id": 1022
+    },
+    {
+      "date": "2025-04-09",
+      "fen": "8/1p4rR/p3rbk1/2P1p1p1/PP3pP1/3PpN2/4K3/7R w - - 9 38",
+      "solution": [
+        "R1h6+",
+        "Kf7",
+        "Nxg5+",
+        "Bxg5",
+        "Rxg7+"
+      ],
+      "gameUrl": "https://lichess.org/LRnaBLkL/white#74",
+      "white": "Mojazimbh",
+      "black": "Felimare",
+      "wRating": 2216,
+      "bRating": 2232,
+      "id": 1023
     }
   ];
 }
