@@ -12556,6 +12556,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2216,
       "bRating": 2232,
       "id": 1023
+    },
+    {
+      "date": "2025-04-10",
+      "fen": "3q2k1/3n1ppp/1p6/8/2PpQ3/3P1PP1/r3BP1P/1R4K1 b - - 2 24",
+      "solution": [
+        "Nc5",
+        "Qe5",
+        "Nd7",
+        "Qxd4",
+        "Rxe2"
+      ],
+      "gameUrl": "https://lichess.org/jHGfE63Z/black#47",
+      "white": "Klavdia_Nik",
+      "black": "ArtemPetrovskiy36617",
+      "wTitle": "WGM",
+      "wRating": 2190,
+      "bRating": 2088,
+      "id": 1024
     }
   ];
 }
