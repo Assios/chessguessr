@@ -12574,6 +12574,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2190,
       "bRating": 2088,
       "id": 1024
+    },
+    {
+      "date": "2025-04-11",
+      "fen": "6B1/8/1p1p3p/2n1k2P/1KP5/P7/8/8 w - - 8 73",
+      "solution": [
+        "Kb5",
+        "Nd7",
+        "Kc6",
+        "Nf6",
+        "Bf7"
+      ],
+      "gameUrl": "https://lichess.org/1ONtMvke/white#144",
+      "white": "Carallot",
+      "black": "Unionspecial",
+      "wRating": 1901,
+      "bRating": 1848,
+      "id": 1025
     }
   ];
 }
