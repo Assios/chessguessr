@@ -12608,6 +12608,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1618,
       "bRating": 1707,
       "id": 1026
+    },
+    {
+      "date": "2025-04-13",
+      "fen": "rn1q2k1/pbp2p2/1p1br1pB/7p/3PP1N1/1QN2R2/PP4PP/R5K1 w - - 3 19",
+      "solution": [
+        "Rxf7",
+        "Kxf7",
+        "Rf1+",
+        "Ke7",
+        "Bg5+"
+      ],
+      "gameUrl": "https://lichess.org/uslngfoh/white#36",
+      "white": "DiogenesSinopeus",
+      "black": "bodoque50",
+      "wTitle": "FM",
+      "bTitle": "FM",
+      "wRating": 2569,
+      "bRating": 2586,
+      "id": 1027
     }
   ];
 }
