@@ -12644,6 +12644,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2211,
       "bRating": 2195,
       "id": 1028
+    },
+    {
+      "date": "2025-04-15",
+      "fen": "8/2k5/r5P1/7P/p1p5/8/4nP2/R5K1 w - - 1 44",
+      "solution": [
+        "Kf1",
+        "Nf4",
+        "g7",
+        "Ra8",
+        "h6"
+      ],
+      "gameUrl": "https://lichess.org/otygOiVY/white#86",
+      "white": "Nicah",
+      "black": "Dvoretski_son",
+      "wTitle": "IM",
+      "wRating": 2587,
+      "bRating": 2495,
+      "id": 1029
     }
   ];
 }
