@@ -12679,6 +12679,74 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2034,
       "bRating": 1988,
       "id": 1030
+    },
+    {
+      "date": "2025-04-17",
+      "fen": "6k1/8/2p2RpQ/1p1q4/p2P2PK/2P1r2P/PP6/8 b - - 2 32",
+      "solution": [
+        "Rxh3+",
+        "Kxh3",
+        "Qh1+",
+        "Kg3",
+        "Qxh6"
+      ],
+      "gameUrl": "https://lichess.org/gBzzUYzW/black#63",
+      "white": "egyptiansungod",
+      "black": "thomasbayern",
+      "wRating": 1722,
+      "bRating": 1843,
+      "id": 1031
+    },
+    {
+      "date": "2025-04-18",
+      "fen": "2kr3r/ppp2pp1/4b3/3P3p/2PN2Bq/8/PP3PP1/RNB1QRK1 b - - 0 14",
+      "solution": [
+        "hxg4",
+        "f4",
+        "g3",
+        "Qxg3",
+        "Qxg3"
+      ],
+      "gameUrl": "https://lichess.org/fC58kHco/black#27",
+      "white": "natax",
+      "black": "Teorema18",
+      "wRating": 1970,
+      "bRating": 1596,
+      "id": 1032
+    },
+    {
+      "date": "2025-04-19",
+      "fen": "2r1k2r/pp1n1p1p/2q1pb2/5n1Q/5B2/2N5/PPP2PPP/3RR1K1 w k - 5 21",
+      "solution": [
+        "Qxf5",
+        "Rg8",
+        "g3",
+        "Rg6",
+        "Nd5"
+      ],
+      "gameUrl": "https://lichess.org/SQvJrHss/white#40",
+      "white": "realitysurfer",
+      "black": "sushilmohata",
+      "wRating": 1957,
+      "bRating": 1825,
+      "id": 1033
+    },
+    {
+      "date": "2025-04-20",
+      "fen": "3r2k1/p1p2p1p/6p1/3b2q1/3Q4/1PP5/P4PPP/4RBK1 b - - 0 22",
+      "solution": [
+        "Bxg2",
+        "Qe3",
+        "Qxe3",
+        "Rxe3",
+        "Bxf1"
+      ],
+      "gameUrl": "https://lichess.org/D4I3RGuF/black#43",
+      "white": "Mr_yellow",
+      "black": "G_M_Dobov",
+      "wRating": 2601,
+      "bRating": 2450,
+      "id": 1034
     }
   ];
 }
