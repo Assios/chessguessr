@@ -12764,6 +12764,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2303,
       "bRating": 2323,
       "id": 1035
+    },
+    {
+      "date": "2025-04-22",
+      "fen": "5Q2/3kp3/3pNn2/3P3p/4P2P/1p2qP2/2nR4/5KR1 b - - 5 40",
+      "solution": [
+        "Qxf3+",
+        "Rf2",
+        "Ne3+",
+        "Ke1",
+        "Qd1#"
+      ],
+      "gameUrl": "https://lichess.org/HoRF2PUy/black#79",
+      "white": "JSopinka",
+      "black": "OrionBeltChess",
+      "wRating": 1947,
+      "bRating": 1947,
+      "id": 1036
     }
   ];
 }
