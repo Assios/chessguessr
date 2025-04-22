@@ -12781,6 +12781,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1947,
       "bRating": 1947,
       "id": 1036
+    },
+    {
+      "date": "2025-04-23",
+      "fen": "8/p5p1/4R3/k1b3p1/2PR4/P5P1/KP5P/2q5 w - - 1 46",
+      "solution": [
+        "b4+",
+        "Bxb4",
+        "Rd5+",
+        "Ka4",
+        "Ra6+"
+      ],
+      "gameUrl": "https://lichess.org/RSe60gOF/white#90",
+      "white": "Peyrock",
+      "black": "ContrerasSinuhe",
+      "wRating": 2137,
+      "bRating": 2135,
+      "id": 1037
     }
   ];
 }
