@@ -12832,6 +12832,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1854,
       "bRating": 1839,
       "id": 1039
+    },
+    {
+      "date": "2025-04-26",
+      "fen": "1k1r3r/1pn2Qp1/p3p2p/2NpP3/3q4/1P6/P1R2PP1/2K4R w - - 2 30",
+      "solution": [
+        "Qxc7+",
+        "Kxc7",
+        "Nxe6+",
+        "Kb8",
+        "Nxd4"
+      ],
+      "gameUrl": "https://lichess.org/JxSoebWU/white#58",
+      "white": "MySecretRepertoire48",
+      "black": "GaneshMawai",
+      "wRating": 1971,
+      "bRating": 1903,
+      "id": 1040
     }
   ];
 }
