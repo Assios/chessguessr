@@ -12849,6 +12849,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1971,
       "bRating": 1903,
       "id": 1040
+    },
+    {
+      "date": "2025-04-27",
+      "fen": "r4b1k/1r5p/3PQ1pP/1qp1NpP1/p3pP2/8/KPP5/1R3R2 b - - 6 40",
+      "solution": [
+        "Qb3+",
+        "Ka1",
+        "Qxe6",
+        "d7",
+        "Rxd7"
+      ],
+      "gameUrl": "https://lichess.org/OTpn0PBt/black#79",
+      "white": "Valeriya64",
+      "black": "Litke76",
+      "wTitle": "WFM",
+      "wRating": 2387,
+      "bRating": 2475,
+      "id": 1041
     }
   ];
 }
