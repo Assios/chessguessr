@@ -12884,6 +12884,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2144,
       "bRating": 1662,
       "id": 1042
+    },
+    {
+      "date": "2025-04-29",
+      "fen": "r1b1k2r/ppq1bppp/2n2n2/2pN4/2B5/3P3P/PPP2PPN/R1BQK2R b KQkq - 0 9",
+      "solution": [
+        "Nxd5",
+        "Bxd5",
+        "Qe5+",
+        "Be4",
+        "f5"
+      ],
+      "gameUrl": "https://lichess.org/nNCTuP22/black#17",
+      "white": "Giuliano17",
+      "black": "hushdog",
+      "wRating": 1602,
+      "bRating": 1653,
+      "id": 1043
     }
   ];
 }
