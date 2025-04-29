@@ -12901,6 +12901,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1602,
       "bRating": 1653,
       "id": 1043
+    },
+    {
+      "date": "2025-04-30",
+      "fen": "2r1qrk1/p2pb2p/1p2p1p1/3bB1Nn/3P4/7Q/PP3PPP/RB1R2K1 w - - 2 20",
+      "solution": [
+        "Qxh5",
+        "Bxg5",
+        "Qxg5",
+        "Qf7",
+        "Qg3"
+      ],
+      "gameUrl": "https://lichess.org/0xpXFi66/white#38",
+      "white": "smalugu",
+      "black": "pkrksingh",
+      "wTitle": "NM",
+      "wRating": 2236,
+      "bRating": 2251,
+      "id": 1044
     }
   ];
 }
