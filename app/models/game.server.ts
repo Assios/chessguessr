@@ -12919,6 +12919,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2236,
       "bRating": 2251,
       "id": 1044
+    },
+    {
+      "date": "2025-05-01",
+      "fen": "2k3r1/ppp2R2/8/3rP2p/1b1B4/1PN4b/P2R2P1/6K1 w - - 0 25",
+      "solution": [
+        "Nxd5",
+        "Bxd2",
+        "Ne7+",
+        "Kb8",
+        "Nxg8"
+      ],
+      "gameUrl": "https://lichess.org/9OSmgtvJ/white#48",
+      "white": "Hakomola",
+      "black": "hierapolis",
+      "wRating": 2085,
+      "bRating": 2114,
+      "id": 1045
     }
   ];
 }
