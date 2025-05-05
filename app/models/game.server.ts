@@ -12987,6 +12987,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1772,
       "bRating": 1818,
       "id": 1048
+    },
+    {
+      "date": "2025-05-05",
+      "fen": "r1b1kb1r/p1Q2ppp/1pp2n2/2q5/4P3/2N2P2/PPPP2PP/R1B1K1NR b KQkq - 1 8",
+      "solution": [
+        "Bd6",
+        "Na4",
+        "Bxc7",
+        "Nxc5",
+        "bxc5"
+      ],
+      "gameUrl": "https://lichess.org/REAqSinB/black#15",
+      "white": "zilvalie",
+      "black": "paraponera0clavata",
+      "wRating": 1544,
+      "bRating": 1548,
+      "id": 1049
     }
   ];
 }
