@@ -13021,6 +13021,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1805,
       "bRating": 1798,
       "id": 1050
+    },
+    {
+      "date": "2025-05-07",
+      "fen": "3r2k1/1pp2p2/6P1/p1P5/2QnP1q1/P3p1P1/1P4B1/4R1K1 b - - 0 27",
+      "solution": [
+        "Nf3+",
+        "Bxf3",
+        "Qxg3+",
+        "Bg2",
+        "Qxe1+"
+      ],
+      "gameUrl": "https://lichess.org/AnLcmNFH/black#53",
+      "white": "zdenkec50",
+      "black": "HighwayKing",
+      "wRating": 2213,
+      "bRating": 2146,
+      "id": 1051
     }
   ];
 }
