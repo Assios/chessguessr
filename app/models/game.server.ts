@@ -13038,6 +13038,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2213,
       "bRating": 2146,
       "id": 1051
+    },
+    {
+      "date": "2025-05-08",
+      "fen": "8/8/8/7p/8/1P4k1/P3K1p1/6R1 b - - 1 45",
+      "solution": [
+        "h4",
+        "Rd1",
+        "h3",
+        "Rd3+",
+        "Kh2"
+      ],
+      "gameUrl": "https://lichess.org/9LA7ejl3/black#89",
+      "white": "vikonoplev",
+      "black": "Soummyachess",
+      "wRating": 1874,
+      "bRating": 1866,
+      "id": 1052
+    },
+    {
+      "date": "2025-05-09",
+      "fen": "6k1/p5b1/1pp2B2/6K1/2P3pP/1P2RP2/P1N5/6r1 b - - 0 37",
+      "solution": [
+        "gxf3+",
+        "Kf5",
+        "f2",
+        "Re8+",
+        "Kh7"
+      ],
+      "gameUrl": "https://lichess.org/vwZMuDAU/black#73",
+      "white": "positionaloldman",
+      "black": "MassterofMayhem",
+      "bTitle": "IM",
+      "wRating": 2652,
+      "bRating": 2647,
+      "id": 1053
+    },
+    {
+      "date": "2025-05-10",
+      "fen": "r1b1k2r/1pp1qpp1/3p2n1/p1bP3p/4n2P/P1N3B1/1P2NPP1/R2QKB1R w KQkq - 0 14",
+      "solution": [
+        "Qa4+",
+        "Bd7",
+        "Qxe4",
+        "Qxe4",
+        "Nxe4"
+      ],
+      "gameUrl": "https://lichess.org/ZzVpX1Zx/white#26",
+      "white": "Rpopandopulos",
+      "black": "Karine222829",
+      "wRating": 1998,
+      "bRating": 1881,
+      "id": 1054
+    },
+    {
+      "date": "2025-05-11",
+      "fen": "3r3R/p1p1k1Q1/1p6/6n1/3PNq2/2P5/PP6/1K6 b - - 6 35",
+      "solution": [
+        "Nf7",
+        "Rxd8",
+        "Qxe4+",
+        "Kc1",
+        "Qe3+"
+      ],
+      "gameUrl": "https://lichess.org/YKkMrofc/black#69",
+      "white": "AttackSparrow",
+      "black": "Queen2027",
+      "wTitle": "FM",
+      "wRating": 2548,
+      "bRating": 1788,
+      "id": 1055
     }
   ];
 }
