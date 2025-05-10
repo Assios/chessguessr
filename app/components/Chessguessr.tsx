@@ -15,6 +15,7 @@ import {
   GameLink,
   guessifySolution,
   useHotkeys,
+  wrongSolution
 } from "~/utils/utils";
 import useCopyToClipboard from "~/hooks/useCopyToClipboard";
 import { AuthContext } from "./AuthProvider/AuthProvider";
@@ -182,7 +183,7 @@ export const Chessguessr = ({
               {bTitle && (
                 <span className="text-secondary-content">{bTitle}</span>
               )}{" "}
-               {black} {bRating && `(${bRating})`}
+              {black} {bRating && `(${bRating})`}
             </p>
             {position && (
               <div className="flex justify-between">

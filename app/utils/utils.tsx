@@ -91,6 +91,14 @@ export const useHotkeys = (
   );
 };
 
+export const wrongSolution = (guesses: any[]) => {
+  return guesses
+    .flatMap((g) => g)
+    .some((guess: any) => {
+      return guess?.move === "Qf7+" && guess?.color == "blue";
+    });
+};
+
 export const isValidPlayerStats = (stats: any): stats is PlayerStats => {
   if (!stats) return false;
 
