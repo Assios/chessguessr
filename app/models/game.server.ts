@@ -13108,6 +13108,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2548,
       "bRating": 1788,
       "id": 1055
+    },
+    {
+      "date": "2025-05-12",
+      "fen": "5bkr/1p4p1/p3Nn1p/5q2/3p4/3P2Q1/PPP3PP/4R2K w - - 0 23",
+      "solution": [
+        "Nxf8",
+        "Kf7",
+        "Qc7+",
+        "Kxf8",
+        "Qb8+"
+      ],
+      "gameUrl": "https://lichess.org/VciJMm2S/white#44",
+      "white": "AlejandroRivas",
+      "black": "BruceLee78",
+      "wRating": 2234,
+      "bRating": 2181,
+      "id": 1056
+    },
+    {
+      "date": "2025-05-13",
+      "fen": "8/2p5/1p4pk/3Br2p/P1P5/5Q2/5PK1/4q3 w - - 5 46",
+      "solution": [
+        "Qf8+",
+        "Kg5",
+        "f4+",
+        "Kg4",
+        "Bf3+"
+      ],
+      "gameUrl": "https://lichess.org/wbGkc1Am/white#90",
+      "white": "sergor",
+      "black": "Dodore59",
+      "wRating": 2273,
+      "bRating": 2128,
+      "id": 1057
+    },
+    {
+      "date": "2025-05-14",
+      "fen": "2kr2r1/pp6/2b1q3/2PpB1pQ/P2Pp3/7P/5PP1/R4RK1 b - - 0 23",
+      "solution": [
+        "g4",
+        "h4",
+        "Be8",
+        "Qh7",
+        "Rd7"
+      ],
+      "gameUrl": "https://lichess.org/SUpqYb7d/black#45",
+      "white": "Begimot_2020",
+      "black": "Flipper1x1",
+      "wRating": 2211,
+      "bRating": 2192,
+      "id": 1058
     }
   ];
 }
