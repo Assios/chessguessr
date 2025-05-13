@@ -13159,6 +13159,74 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2211,
       "bRating": 2192,
       "id": 1058
+    },
+    {
+      "date": "2025-05-15",
+      "fen": "r4r1k/ppp2p1p/3p1n1B/4P3/4P1q1/2P2NP1/PP2NPK1/2Q5 b - - 0 25",
+      "solution": [
+        "Nxe4",
+        "Bxf8",
+        "Rxf8",
+        "Qh6",
+        "Rg8"
+      ],
+      "gameUrl": "https://lichess.org/E3ASwMQf/black#49",
+      "white": "NicTrave",
+      "black": "juanesto",
+      "wRating": 1876,
+      "bRating": 1514,
+      "id": 1059
+    },
+    {
+      "date": "2025-05-16",
+      "fen": "r2qr2k/2p3pp/1p1pQ3/p5PR/3p1B2/P2P1nP1/1PP1KP2/R7 w - - 2 21",
+      "solution": [
+        "Rxh7+",
+        "Kxh7",
+        "Rh1+",
+        "Nh4",
+        "Rxh4#"
+      ],
+      "gameUrl": "https://lichess.org/p1gfhXlG/white#40",
+      "white": "Chess_N_Roses1",
+      "black": "hu14",
+      "wRating": 1773,
+      "bRating": 1775,
+      "id": 1060
+    },
+    {
+      "date": "2025-05-17",
+      "fen": "b2r3k/4q1pp/1p2Q3/n1p1P3/5P2/P1P1B1P1/B4K1P/R7 b - - 0 25",
+      "solution": [
+        "Qb7",
+        "Bd5",
+        "Qxd5",
+        "Qxd5",
+        "Rxd5"
+      ],
+      "gameUrl": "https://lichess.org/CllyZoXE/black#49",
+      "white": "vancho1966",
+      "black": "davidsolartediezmil",
+      "wRating": 2149,
+      "bRating": 2163,
+      "id": 1061
+    },
+    {
+      "date": "2025-05-18",
+      "fen": "4r1k1/3r1pbp/1Bqp2p1/p2Rp3/8/1QP4P/PP3PP1/3R2K1 b - - 0 25",
+      "solution": [
+        "Rb8",
+        "Rb5",
+        "Rdb7",
+        "Qd5",
+        "Qxd5"
+      ],
+      "gameUrl": "https://lichess.org/095GaSDw/black#49",
+      "white": "Austin1967",
+      "black": "ethanol420",
+      "wRating": 1591,
+      "bRating": 1601,
+      "id": 1062
     }
   ];
 }
