@@ -13227,6 +13227,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1591,
       "bRating": 1601,
       "id": 1062
+    },
+    {
+      "date": "2025-05-19",
+      "fen": "1q3rk1/pb2p2p/4pbp1/2R2r2/1p1p4/3P1RP1/PP1BP1BP/4Q1K1 w - - 0 26",
+      "solution": [
+        "Rfxf5",
+        "Bxg2",
+        "Rxf6",
+        "Rxf6",
+        "Kxg2"
+      ],
+      "gameUrl": "https://lichess.org/bRSxc6PO/white#50",
+      "white": "FantasyLife",
+      "black": "BardiaVeisi",
+      "wRating": 2752,
+      "bRating": 2654,
+      "id": 1063
     }
   ];
 }
