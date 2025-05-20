@@ -13261,6 +13261,91 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1709,
       "bRating": 1640,
       "id": 1064
+    },
+    {
+      "date": "2025-05-21",
+      "fen": "r5k1/4Qp1p/6pb/1r1b4/2qB4/P1P2P2/1P4PP/KB1R3R b - - 0 29",
+      "solution": [
+        "Bf8",
+        "Qf6",
+        "Rxa3+",
+        "bxa3",
+        "Rxb1+"
+      ],
+      "gameUrl": "https://lichess.org/A4PiDCtO/black#57",
+      "white": "jhaycenj",
+      "black": "SwitchAlt",
+      "wRating": 1893,
+      "bRating": 1893,
+      "id": 1065
+    },
+    {
+      "date": "2025-05-22",
+      "fen": "4r1r1/5pk1/4pRp1/4P3/1B1P2Q1/4b1R1/6PK/2q5 w - - 0 35",
+      "solution": [
+        "Rxg6+",
+        "Kh7",
+        "Rh3+",
+        "Bh6",
+        "Rhxh6+"
+      ],
+      "gameUrl": "https://lichess.org/7NcKVUeI/white#68",
+      "white": "Ars77",
+      "black": "Asanabdykerim",
+      "wRating": 2060,
+      "bRating": 2002,
+      "id": 1066
+    },
+    {
+      "date": "2025-05-23",
+      "fen": "2r1kbr1/pp2n1p1/n2R3p/3N4/q4BPP/8/PPP1QP2/2K1R3 w - - 7 22",
+      "solution": [
+        "Qxe7+",
+        "Bxe7",
+        "Rxe7+",
+        "Kf8",
+        "Rf6+"
+      ],
+      "gameUrl": "https://lichess.org/IrKen3i7/white#42",
+      "white": "OhioRizzler78",
+      "black": "verox05",
+      "wRating": 2159,
+      "bRating": 2199,
+      "id": 1067
+    },
+    {
+      "date": "2025-05-24",
+      "fen": "r1b2rk1/pppp1ppp/8/8/2n5/2P1B3/q1P1QP1P/2KR2R1 w - - 2 18",
+      "solution": [
+        "Rxg7+",
+        "Kxg7",
+        "Rg1+",
+        "Kh8",
+        "Bd4+"
+      ],
+      "gameUrl": "https://lichess.org/pfLsjTc2/white#34",
+      "white": "Butimarkalpsiz",
+      "black": "fawyfawy10",
+      "wRating": 2123,
+      "bRating": 2013,
+      "id": 1068
+    },
+    {
+      "date": "2025-05-25",
+      "fen": "2b2rk1/5ppp/2p2b2/1q2p2Q/rp2P3/1B1R3P/1PP2PP1/3R2K1 w - - 0 21",
+      "solution": [
+        "Qxf7+",
+        "Rxf7",
+        "Rd8+",
+        "Bxd8",
+        "Rxd8#"
+      ],
+      "gameUrl": "https://lichess.org/YFsSzr6D/white#40",
+      "white": "Phika85",
+      "black": "JFkennedy123",
+      "wRating": 2148,
+      "bRating": 2140,
+      "id": 1069
     }
   ];
 }
