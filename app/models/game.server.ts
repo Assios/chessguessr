@@ -13363,6 +13363,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2038,
       "bRating": 2030,
       "id": 1070
+    },
+    {
+      "date": "2025-05-27",
+      "fen": "r3k2r/1bbpn1p1/p2Bppq1/7p/P1N1PP1Q/3P3P/NP4P1/R4R1K b kq - 2 22",
+      "solution": [
+        "Nf5",
+        "Qe1",
+        "Nxd6",
+        "Qb4",
+        "Nxc4"
+      ],
+      "gameUrl": "https://lichess.org/nZxbyRGS/black#43",
+      "white": "licg",
+      "black": "ThunderWarrior",
+      "wRating": 2753,
+      "bRating": 2695,
+      "id": 1071
     }
   ];
 }
