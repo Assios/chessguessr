@@ -13380,6 +13380,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2753,
       "bRating": 2695,
       "id": 1071
+    },
+    {
+      "date": "2025-05-28",
+      "fen": "1r2r3/1bq2p1k/4p1pb/p1Bp3p/8/1P4P1/P2Q1PBP/2R1R1K1 w - - 6 27",
+      "solution": [
+        "Qxh6+",
+        "Kxh6",
+        "Be3+",
+        "Kg7",
+        "Rxc7"
+      ],
+      "gameUrl": "https://lichess.org/XNrQ4ufv/white#52",
+      "white": "FDT83",
+      "black": "laserbullet",
+      "wRating": 1917,
+      "bRating": 1921,
+      "id": 1072
     }
   ];
 }
