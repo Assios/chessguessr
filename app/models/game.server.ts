@@ -13397,6 +13397,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1917,
       "bRating": 1921,
       "id": 1072
+    },
+    {
+      "date": "2025-05-29",
+      "fen": "2k2r2/1pb3pp/p1p2q2/3pRr2/3P2Q1/2P4P/PP4P1/R6K w - - 6 26",
+      "solution": [
+        "Rxf5",
+        "Qxf5",
+        "Rf1",
+        "Qxg4",
+        "Rxf8+"
+      ],
+      "gameUrl": "https://lichess.org/boHa09V9/white#50",
+      "white": "trad69",
+      "black": "Artyom_Belyaev",
+      "wRating": 1966,
+      "bRating": 2014,
+      "id": 1073
     }
   ];
 }
