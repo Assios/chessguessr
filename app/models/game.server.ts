@@ -13414,6 +13414,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1966,
       "bRating": 2014,
       "id": 1073
+    },
+    {
+      "date": "2025-05-30",
+      "fen": "1rk3r1/p4R1p/1q2p3/1P1pP2p/P1pP3Q/7P/3N2P1/7K w - - 1 25",
+      "solution": [
+        "Qe7",
+        "Rd8",
+        "a5",
+        "Qxa5",
+        "Qxe6+"
+      ],
+      "gameUrl": "https://lichess.org/97wJ49a8/white#48",
+      "white": "volvoxglobator",
+      "black": "Varvara31",
+      "wRating": 2411,
+      "bRating": 2447,
+      "id": 1074
     }
   ];
 }
