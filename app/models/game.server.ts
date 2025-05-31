@@ -13449,6 +13449,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2122,
       "bRating": 2129,
       "id": 1075
+    },
+    {
+      "date": "2025-06-01",
+      "fen": "1k1r3r/pppq1pp1/2nbb3/3N3p/Q1P3n1/2B1PN2/PP2BPPP/2KR1R2 b - - 9 14",
+      "solution": [
+        "Nd4",
+        "Qxd7",
+        "Nxe2+",
+        "Kd2",
+        "Rxd7"
+      ],
+      "gameUrl": "https://lichess.org/5eEWCLB1/black#27",
+      "white": "changingiswinning",
+      "black": "GGTOURS",
+      "bTitle": "WFM",
+      "wRating": 2611,
+      "bRating": 2496,
+      "id": 1076
     }
   ];
 }
