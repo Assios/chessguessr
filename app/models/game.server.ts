@@ -13467,6 +13467,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2611,
       "bRating": 2496,
       "id": 1076
+    },
+    {
+      "date": "2025-06-02",
+      "fen": "r2q3k/b4prn/p1p2NbQ/4P1NB/1n6/7P/1P3PP1/R3R1K1 b - - 10 28",
+      "solution": [
+        "Qd2",
+        "Nxf7+",
+        "Bxf7",
+        "Qxd2",
+        "Nd5"
+      ],
+      "gameUrl": "https://lichess.org/9M981oM9/black#55",
+      "white": "JustAnotherChessTHUG",
+      "black": "MechanizedTechnique",
+      "wRating": 2250,
+      "bRating": 2187,
+      "id": 1077
     }
   ];
 }
