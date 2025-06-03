@@ -13501,6 +13501,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2121,
       "bRating": 1555,
       "id": 1078
+    },
+    {
+      "date": "2025-06-04",
+      "fen": "1r3rk1/1p1b2qp/pRn1p1pQ/P4pN1/2B5/8/5PPP/4R1K1 w - - 2 24",
+      "solution": [
+        "Bxe6+",
+        "Bxe6",
+        "Qxg7+",
+        "Kxg7",
+        "Nxe6+"
+      ],
+      "gameUrl": "https://lichess.org/s8sh5ndO/white#46",
+      "white": "ktjn",
+      "black": "avinashdante",
+      "wRating": 2078,
+      "bRating": 2116,
+      "id": 1079
     }
   ];
 }
