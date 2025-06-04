@@ -13518,6 +13518,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2078,
       "bRating": 2116,
       "id": 1079
+    },
+    {
+      "date": "2025-06-05",
+      "fen": "2r3k1/4bppp/R1b5/1p1pP3/2pB4/6P1/1P3PBP/6K1 w - - 3 21",
+      "solution": [
+        "Bh3",
+        "Rc7",
+        "Bb6",
+        "Bb7",
+        "Ra7"
+      ],
+      "gameUrl": "https://lichess.org/sDuJKcMj/white#40",
+      "white": "Steinarbeider",
+      "black": "CaptainGilles971",
+      "wRating": 1784,
+      "bRating": 1723,
+      "id": 1080
     }
   ];
 }
