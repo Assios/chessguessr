@@ -13535,6 +13535,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1784,
       "bRating": 1723,
       "id": 1080
+    },
+    {
+      "date": "2025-06-06",
+      "fen": "6rr/p1R5/2R1b3/3pknQ1/7P/P7/1q3PP1/6K1 w - - 1 31",
+      "solution": [
+        "f4+",
+        "Kd4",
+        "Qf6+",
+        "Ke4",
+        "Rxe6+"
+      ],
+      "gameUrl": "https://lichess.org/P18SlRAH/white#60",
+      "white": "akash_singh_deep",
+      "black": "DiletantMoscow",
+      "wRating": 2010,
+      "bRating": 2003,
+      "id": 1081
     }
   ];
 }
