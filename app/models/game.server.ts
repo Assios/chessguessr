@@ -13552,6 +13552,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2010,
       "bRating": 2003,
       "id": 1081
+    },
+    {
+      "date": "2025-06-07",
+      "fen": "r3r1k1/1p1q1p2/p6p/3pN1p1/P2Pnn2/7P/1PB2PP1/2R1RQK1 b - - 5 26",
+      "solution": [
+        "Rxe5",
+        "dxe5",
+        "Nd2",
+        "Qd3",
+        "Nxd3"
+      ],
+      "gameUrl": "https://lichess.org/Z9ichKnf/black#51",
+      "white": "Aquiles78",
+      "black": "Rey_Amarillo",
+      "wRating": 1913,
+      "bRating": 2008,
+      "id": 1082
     }
   ];
 }
