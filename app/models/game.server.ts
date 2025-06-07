@@ -13569,6 +13569,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1913,
       "bRating": 2008,
       "id": 1082
+    },
+    {
+      "date": "2025-06-08",
+      "fen": "r1b1k2r/pp3ppp/2n5/4n3/2B5/B1P2N2/P4PPP/R2K3R w kq - 0 13",
+      "solution": [
+        "Nxe5",
+        "Nxe5",
+        "Re1",
+        "f6",
+        "f4"
+      ],
+      "gameUrl": "https://lichess.org/pr5Ru3x9/white#24",
+      "white": "The_Radiance",
+      "black": "Bagvell",
+      "wRating": 2265,
+      "bRating": 1904,
+      "id": 1083
     }
   ];
 }
