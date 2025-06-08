@@ -13589,21 +13589,20 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-06-09",
-      "fen": "1r4k1/p4p1p/6p1/3rb3/K7/2PpB3/1P1R1PPP/3R4 b - - 2 25",
+      "fen": "8/4kppR/r1p1p2p/p3P2P/4P1P1/1pP2P2/3K2B1/8 b - - 1 29",
       "solution": [
-        "Rd6",
-        "b4",
-        "Bxc3",
-        "Bc5",
-        "Ra6+"
+        "a4",
+        "Bf1",
+        "a3",
+        "Bxa6",
+        "a2"
       ],
-      "gameUrl": "https://lichess.org/YRE2uOtG/black#49",
-      "white": "gogotaniye",
-      "black": "vizumatv4hoda",
-      "wTitle": "FM",
-      "bTitle": "GM",
-      "wRating": 2622,
-      "bRating": 2575,
+      "gameUrl": "https://lichess.org/cuQl3aZ8/black#57",
+      "white": "ronen1234",
+      "black": "fiddle_master",
+      "bTitle": "FM",
+      "wRating": 2379,
+      "bRating": 2420,
       "id": 1084
     }
   ];
