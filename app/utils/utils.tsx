@@ -88,13 +88,19 @@ export const useHotkeys = (
   );
 };
 
-export const wrongSolution = (guesses: any[]) => {
-  return guesses
-    .flatMap((g) => g)
-    .some((guess: any) => {
-      return (guess?.move === "b5" && guess?.color == "grey") || (guess?.move === "Qa5+" && guess?.color == "blue") || (guess?.move === "Qd8#" && guess?.color == "blue");
-    });
+export const wrongSolution = (guesses: any[][]) => {
+  const firstGuess = guesses?.[0]?.[0];
+  const firstIsWrong =
+    firstGuess?.move === "Qa5+" && firstGuess?.pieceColor === "blue";
+
+  const otherIsWrong = guesses.flatMap((g) => g).some((guess: any) =>
+    (guess?.move === "b5" && guess?.color === "grey") ||
+    (guess?.move === "Qd8#" && guess?.pieceColor === "blue")
+  );
+
+  return firstIsWrong || otherIsWrong;
 };
+
 
 export const convertToIcon = (move: string) => {
   return move;
