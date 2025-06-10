@@ -165,9 +165,9 @@ export const Chessguessr = ({
         />
       </div>
       <p className=" mb-4 font-semibold text-center">
-        There was an error in today's solution until ~6:50 UTC. If you did get
-        it wrong despite getting it right on move 4, we've cleared your guesses
-        and you can try again.
+        There was an error in today's initial position until ~6:50 UTC. If you did get
+        it wrong before that, we've cleared your guesses
+        and you can try again. 
       </p>
       <Game>
         <BoardWrapper>
