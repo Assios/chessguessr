@@ -13624,13 +13624,13 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-06-11",
-      "fen": "rn2kbnr/pp6/2p2p2/4P3/4P1pq/2N3N1/PPPB2B1/R2Q1RK1 w kq - 1 17",
+      "fen": "rn2kbnr/pp6/2p2p2/4P3/4P1pq/2N3N1/PPPB1KB1/R2Q1R2 b kq - 2 17",
       "solution": [
-        "f8c5",
+        "Bc5+",
         "Be3",
-        "c5e3",
-        "f2e3",
-        "Qxg3"
+        "Bxe3+",
+        "Kxe3",
+        "Qxg3+"
       ],
       "gameUrl": "https://lichess.org/hXAo4Q2j#33/white#33",
       "white": "totek1",
@@ -13641,13 +13641,13 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-06-12",
-      "fen": "3r1bnr/2p2ppp/2b5/R1k5/5P2/2N5/4N1PP/1R4K1 b - - 3 21",
+      "fen": "3r1bnr/2p2ppp/2bk4/R7/5P2/2N5/4N1PP/1R4K1 w - - 4 22",
       "solution": [
-        "b1d1",
-        "d6e7",
-        "a5e5",
-        "e7f6",
-        "d1d8"
+        "Rd1+",
+        "Ke7",
+        "Re5+",
+        "Kf6",
+        "Rxd8"
       ],
       "gameUrl": "https://lichess.org/JJiGlqDg/black#42",
       "white": "ari_suryadi",
@@ -13655,74 +13655,6 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1706,
       "bRating": 1681,
       "id": 1087
-    },
-    {
-      "date": "2025-06-13",
-      "fen": "2b2k2/6q1/pn4p1/1rp2p2/8/8/1P2Q1P1/1K2R2R b - - 3 32",
-      "solution": [
-        "h1h8",
-        "Qh8",
-        "Qe7+",
-        "Kg8",
-        "Qd8+"
-      ],
-      "gameUrl": "https://lichess.org/sTFSNjA5/black#64",
-      "white": "sembei",
-      "black": "lobo_darbuko",
-      "wRating": 1672,
-      "bRating": 1509,
-      "id": 1088
-    },
-    {
-      "date": "2025-06-14",
-      "fen": "1n5k/4r1p1/p2q1rPp/1ppB4/8/3P4/PPP1RPQ1/2K4R b - - 4 25",
-      "solution": [
-        "h1h6",
-        "g7h6",
-        "g6g7",
-        "h8h7",
-        "g7g8q"
-      ],
-      "gameUrl": "https://lichess.org/zcHeWRaO/black#50",
-      "white": "ZackarySemancik",
-      "black": "kpd_10",
-      "wRating": 2007,
-      "bRating": 1974,
-      "id": 1089
-    },
-    {
-      "date": "2025-06-15",
-      "fen": "r2qk3/5p1r/p1p1p3/1p1pP1p1/P1nP2Pn/2P2NB1/2P2P2/R1QR2K1 w q - 1 21",
-      "solution": [
-        "d8g5",
-        "Qxg5",
-        "Nxf3+",
-        "Kg2",
-        "Nxg5"
-      ],
-      "gameUrl": "https://lichess.org/o4K7aQsT#41/white#41",
-      "white": "Mamun8181",
-      "black": "jpula",
-      "wRating": 2043,
-      "bRating": 2054,
-      "id": 1090
-    },
-    {
-      "date": "2025-06-16",
-      "fen": "r4k2/pp3p2/2pNR2p/5Qp1/1P3n2/3P4/P1PK1qPP/8 w - - 6 31",
-      "solution": [
-        "f4d5",
-        "c3b3",
-        "f2f5",
-        "d6f5",
-        "f7e6"
-      ],
-      "gameUrl": "https://lichess.org/CcaXmpEd#61/white#61",
-      "white": "Roj82",
-      "black": "Florenzob",
-      "wRating": 1615,
-      "bRating": 1526,
-      "id": 1091
     },
   ];
 }
