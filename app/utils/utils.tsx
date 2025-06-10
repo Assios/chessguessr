@@ -92,7 +92,7 @@ export const wrongSolution = (guesses: any[]) => {
   return guesses
     .flatMap((g) => g)
     .some((guess: any) => {
-      return guess?.move === "Qf7+" && guess?.color == "blue";
+      return guess?.move === "b5" && guess?.color == "grey";
     });
 };
 
