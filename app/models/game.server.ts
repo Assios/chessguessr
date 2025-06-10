@@ -13613,7 +13613,7 @@ export async function getGames(): Promise<Array<GameType>> {
         "Kb7",
         "Nd6+",
         "Kb8",
-        "Qd8+"
+        "Qd8#"
       ],
       "gameUrl": "https://lichess.org/ruvbd9JW/black#52",
       "white": "erahal",
