@@ -158,8 +158,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
 
     if (
       gameState.turn > 0 &&
-      gameState.date === game.date &&
-      !wrongSolution(gameState.guesses)
+      gameState.date === game.date
     ) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
