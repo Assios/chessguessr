@@ -13656,5 +13656,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1681,
       "id": 1087
     },
+    {
+      "date": "2025-06-13",
+      "fen": "5rk1/pp5p/2p1b3/2b1B1p1/P2pB3/3P1Q2/1PP3PP/q4N1K w - - 2 23",
+      "solution": [
+        "Bxh7+",
+        "Kxh7",
+        "Qh5+",
+        "Kg8",
+        "Qg6#"
+      ],
+      "gameUrl": "https://lichess.org/1LRyjzD8/white#44",
+      "white": "Cuarterista23",
+      "black": "Shagdardash",
+      "wRating": 1893,
+      "bRating": 1914,
+      "id": 1088
+    }
   ];
 }
