@@ -13672,6 +13672,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1893,
       "bRating": 1914,
       "id": 1088
+    },
+    {
+      "date": "2025-06-14",
+      "fen": "2k5/8/2n5/2KN4/7p/8/1P6/8 w - - 0 39",
+      "solution": [
+        "Kxc6",
+        "h3",
+        "Ne7+",
+        "Kd8",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/Ei5hGhDl/white#76",
+      "white": "Amir-khan-shaib",
+      "black": "Akrij94",
+      "wRating": 2129,
+      "bRating": 2098,
+      "id": 1089
     }
   ];
 }
