@@ -13724,6 +13724,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2005,
       "bRating": 2005,
       "id": 1091
+    },
+    {
+      "date": "2025-06-17",
+      "fen": "r7/2RP3p/1B4p1/P7/2b5/1pk4P/6P1/6K1 b - - 0 44",
+      "solution": [
+        "b2",
+        "Rc8",
+        "b1=Q+",
+        "Kh2",
+        "Qf5"
+      ],
+      "gameUrl": "https://lichess.org/W0bHw1P0/black#87",
+      "white": "ShreeHariPragg123",
+      "black": "Buxir",
+      "wRating": 2195,
+      "bRating": 2127,
+      "id": 1092
     }
   ];
 }
