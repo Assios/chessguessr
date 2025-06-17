@@ -13741,6 +13741,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2195,
       "bRating": 2127,
       "id": 1092
+    },
+    {
+      "date": "2025-06-18",
+      "fen": "3r3k/pp3Q1p/2pq2p1/8/8/1B6/PP4Pb/5R1K w - - 0 28",
+      "solution": [
+        "Rd1",
+        "Qf8",
+        "Rxd8",
+        "Qxd8",
+        "Kxh2"
+      ],
+      "gameUrl": "https://lichess.org/LrbPXaTX/white#54",
+      "white": "Queen2027",
+      "black": "L12345123",
+      "wRating": 1702,
+      "bRating": 2022,
+      "id": 1093
     }
   ];
 }
