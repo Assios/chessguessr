@@ -13783,8 +13783,8 @@ export async function getGames(): Promise<Array<GameType>> {
         "Qxd4",
         "Nxd4",
         "Rxc7",
-        "Nb3",
-        "Rb7"
+        "Nxb3",
+        "Rxb7"
       ],
       "gameUrl": "https://lichess.org/knYvxXRq/white#40",
       "white": "MedvedevUnder",
