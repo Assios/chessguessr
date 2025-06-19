@@ -13775,6 +13775,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2386,
       "bRating": 2347,
       "id": 1094
-    }
+    },
+    {
+      "date": "2025-06-20",
+      "fen": "r4rk1/1bb2ppp/p1n1p3/4P3/Np1q4/1B2NP2/1P4PP/2RQ1RK1 w - - 0 21",
+      "solution": [
+        "Qxd4",
+        "Nxd4",
+        "Rxc7",
+        "Nb3",
+        "Rb7"
+      ],
+      "gameUrl": "https://lichess.org/knYvxXRq/white#40",
+      "white": "MedvedevUnder",
+      "black": "Reveran",
+      "wRating": 1994,
+      "bRating": 2005,
+      "id": 1095
+    },
   ];
 }
