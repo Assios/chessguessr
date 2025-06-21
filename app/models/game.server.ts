@@ -13812,7 +13812,7 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-06-22",
-      "fen": "5QR1/5p1p/1b3qp1/p6k/P2P4/8/1P2rPPP/5RK1 w - - 7 32",
+      "fen": "5Q1R/5p1p/1b3qp1/p6k/P2P4/8/1P2rPPP/5RK1 b - - 8 32",
       "solution": [
         "Qxf2+",
         "Rxf2",
