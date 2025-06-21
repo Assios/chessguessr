@@ -13793,5 +13793,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2005,
       "id": 1095
     },
+    {
+      "date": "2025-06-21",
+      "fen": "2r3k1/5p2/1qp3pp/1pb1p2N/4P3/6QP/1P3PP1/2R3K1 w - - 0 30",
+      "solution": [
+        "Nf6+",
+        "Kg7",
+        "Nd7",
+        "Qa7",
+        "Qxe5+"
+      ],
+      "gameUrl": "https://lichess.org/sVhuY4sV/white#58",
+      "white": "BurraAbhishek",
+      "black": "DrKnopp",
+      "wRating": 1843,
+      "bRating": 1604,
+      "id": 1096
+    }
   ];
 }
