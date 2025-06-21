@@ -13809,6 +13809,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1843,
       "bRating": 1604,
       "id": 1096
-    }
+    },
+    {
+      "date": "2025-06-22",
+      "fen": "5QR1/5p1p/1b3qp1/p6k/P2P4/8/1P2rPPP/5RK1 w - - 7 32",
+      "solution": [
+        "Qxf2+",
+        "Rxf2",
+        "Re1+",
+        "Rf1",
+        "Bxd4+"
+      ],
+      "gameUrl": "https://lichess.org/DKnGKRmQ#63/white#63",
+      "white": "danie3379",
+      "black": "GhengisClown",
+      "bTitle": "FM",
+      "wRating": 2218,
+      "bRating": 2388,
+      "id": 1097
+    },
   ];
 }
