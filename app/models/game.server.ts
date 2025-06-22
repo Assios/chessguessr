@@ -13820,7 +13820,7 @@ export async function getGames(): Promise<Array<GameType>> {
         "Rf1",
         "Bxd4+"
       ],
-      "gameUrl": "https://lichess.org/DKnGKRmQ#63/white#63",
+      "gameUrl": "https://lichess.org/DKnGKRmQ#63",
       "white": "danie3379",
       "black": "GhengisClown",
       "bTitle": "FM",
