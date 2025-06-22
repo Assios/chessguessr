@@ -13828,5 +13828,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2388,
       "id": 1097
     },
+    {
+      "date": "2025-06-23",
+      "fen": "R7/P5p1/5p1p/r4k2/7K/7P/6P1/8 b - - 6 50",
+      "solution": [
+          "g6",
+          "g4+",
+          "Kf4",
+          "Rf8",
+          "Rh5+"
+      ],
+      "gameUrl": "https://lichess.org/0PuzwzUQ/black#99",
+      "white": "DABHI-GEET-H",
+      "black": "Meki1",
+      "wRating": 2105,
+      "bRating": 2271,
+      "id": 1098
+    }
   ];
 }
