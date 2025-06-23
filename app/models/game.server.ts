@@ -13832,11 +13832,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-06-23",
       "fen": "R7/P5p1/5p1p/r4k2/7K/7P/6P1/8 b - - 6 50",
       "solution": [
-          "g6",
-          "g4+",
-          "Kf4",
-          "Rf8",
-          "Rh5+"
+        "g6",
+        "g4+",
+        "Kf4",
+        "Rf8",
+        "Rh5+"
       ],
       "gameUrl": "https://lichess.org/0PuzwzUQ/black#99",
       "white": "DABHI-GEET-H",
@@ -13844,6 +13844,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2105,
       "bRating": 2271,
       "id": 1098
+    },
+    {
+      "date": "2025-06-24",
+      "fen": "4r1k1/pp5p/2p3p1/r4p1Q/2P2P2/qPK1P1R1/2P5/4B1R1 b - - 2 27",
+      "solution": [
+        "Qa1+",
+        "Kd3",
+        "Rd8+",
+        "Ke2",
+        "Qd1+"
+      ],
+      "gameUrl": "https://lichess.org/W5LCCXEU/black#53",
+      "white": "Artist9940858",
+      "black": "Misteryk",
+      "wRating": 1654,
+      "bRating": 1639,
+      "id": 1099
     }
   ];
 }
