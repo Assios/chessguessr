@@ -13861,6 +13861,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1654,
       "bRating": 1639,
       "id": 1099
+    },
+    {
+      "date": "2025-06-25",
+      "fen": "r2q1rk1/4bpp1/p1ppp2p/7b/3Pn2B/2N2N1P/PP2QPP1/R3R1K1 w - - 0 15",
+      "solution": [
+        "Qxe4",
+        "Bxf3",
+        "Bxe7",
+        "Bxe4",
+        "Bxd8"
+      ],
+      "gameUrl": "https://lichess.org/HyJ4NXB8/white#28",
+      "white": "AntiLondres",
+      "black": "Q-erdenker01",
+      "wRating": 2184,
+      "bRating": 2217,
+      "id": 1100
     }
   ];
 }
