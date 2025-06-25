@@ -13881,7 +13881,7 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-06-26",
-      "fen": "k4r2/pp6/2p3Q1/3p2P1/4r2P/8/PPP2q2/2KR3R w - - 1 30",
+      "fen": "k4r2/pp6/2p3Q1/3p2P1/4r2P/8/PPP2q2/2KR1R2 b - - 2 30",
       "solution": [
         "Qe3+",
         "Kb1",
@@ -13895,6 +13895,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1743,
       "bRating": 1777,
       "id": 1101
+    },
+    {
+      "date": "2025-06-27",
+      "fen": "2r3k1/p4p1p/Pn2p1p1/3pP1P1/5P2/4B1P1/2r4R/R6K w - - 0 29",
+      "solution": [
+        "Rc2",
+        "R8xc2",
+        "Bxb6",
+        "axb6",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/eOhm3Aud/black#56",
+      "white": "ZANATE",
+      "black": "adel1373",
+      "wRating": 1803,
+      "bRating": 1737,
+      "id": 1102
     },
   ];
 }
