@@ -13900,8 +13900,8 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-06-27",
       "fen": "2r3k1/p4p1p/Pn2p1p1/3pP1P1/5P2/4B1P1/2r4R/R6K w - - 0 29",
       "solution": [
-        "Rc2",
-        "R8xc2",
+        "Rxc2",
+        "Rxc2",
         "Bxb6",
         "axb6",
         "a7"
