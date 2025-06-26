@@ -164,11 +164,6 @@ export const Chessguessr = ({
           setTutorial={setTutorial}
         />
       </div>
-      <p className=" mb-4 font-semibold text-center">
-        There was an error in today's initial position until ~5:21 UTC. If you did get
-        it wrong before that, we've cleared your guesses
-        and you can try again.
-      </p>
       <Game>
         <BoardWrapper>
           <Players>
