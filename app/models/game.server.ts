@@ -13913,5 +13913,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1737,
       "id": 1102
     },
+    {
+      "date": "2025-06-28",
+      "fen": "8/pp4bk/2q2npp/2P1Bp2/5P1P/4Q1P1/P3Pn2/3R1RK1 b - - 0 30",
+      "solution": [
+        "Nh3+",
+        "Kh2",
+        "Ng4+",
+        "Kxh3",
+        "Nxe3"
+      ],
+      "gameUrl": "https://lichess.org/THqBcNDR/black#59",
+      "white": "chess2351492137",
+      "black": "Khalilmousavii",
+      "bTitle": "GM",
+      "wRating": 2558,
+      "bRating": 2649,
+      "id": 1103
+    },
+    {
+      "date": "2025-06-29",
+      "fen": "2r3k1/5p2/p3p1nQ/3pPP2/2qN4/6BP/7K/4b3 w - - 0 34",
+      "solution": [
+          "f6",
+          "Bxg3+",
+          "Kxg3",
+          "Qd3+",
+          "Nf3"
+      ],
+      "gameUrl": "https://lichess.org/B294fXRo/white#66",
+      "white": "RedBear1983",
+      "black": "MordsMordreas",
+      "wRating": 1927,
+      "bRating": 2161,
+      "id": 1104
+    }
   ];
 }
