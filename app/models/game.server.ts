@@ -13947,6 +13947,126 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1927,
       "bRating": 2161,
       "id": 1104
-    }
+    },
+    {
+      "date": "2025-06-30",
+      "fen": "r3kb1r/1p1b1p2/p2ppp1p/2q2P1B/2nNP3/2N3R1/P1PQ2PP/1R4K1 w kq - 1 20",
+      "solution": [
+        "Qf2",
+        "e5",
+        "Ne6",
+        "Qxf2+",
+        "Kxf2"
+      ],
+      "gameUrl": "https://lichess.org/vbymThWp/white#38",
+      "white": "Vampilu",
+      "black": "CarlsenIsNext",
+      "wRating": 2483,
+      "bRating": 2425,
+      "id": 1105
+    },
+    {
+      "date": "2025-07-01",
+      "fen": "4Rbk1/p4p1p/6p1/8/1PQ1N3/2P4P/2rq1PP1/6K1 b - - 2 31",
+      "solution": [
+        "Rc1+",
+        "Kh2",
+        "Qf4+",
+        "g3",
+        "Qf3"
+      ],
+      "gameUrl": "https://lichess.org/l9CpsKKt/black#61",
+      "white": "smorris",
+      "black": "evanrthomas",
+      "wRating": 1707,
+      "bRating": 1737,
+      "id": 1106
+    },
+    {
+      "date": "2025-07-02",
+      "fen": "6qk/1p4p1/B1n2rQp/3p4/8/2P2P2/P6P/6RK w - - 1 30",
+      "solution": [
+        "Qxf6",
+        "gxf6",
+        "Rxg8+",
+        "Kxg8",
+        "Bxb7"
+      ],
+      "gameUrl": "https://lichess.org/VCcicFSZ/white#58",
+      "white": "MityshevS",
+      "black": "LUDVIG_CARLSSON",
+      "bTitle": "IM",
+      "wRating": 2364,
+      "bRating": 2602,
+      "id": 1107
+    },
+    {
+      "date": "2025-07-03",
+      "fen": "6k1/1p3r2/p1p1p3/4Pqpp/3P4/1P2R1QP/P4PP1/6K1 b - - 1 33",
+      "solution": [
+        "h4",
+        "Qf3",
+        "Qb1+",
+        "Kh2",
+        "Rxf3"
+      ],
+      "gameUrl": "https://lichess.org/HGBswAqB/black#65",
+      "white": "Orudolfovich",
+      "black": "schizzare_ovunque",
+      "wRating": 1993,
+      "bRating": 1896,
+      "id": 1108
+    },
+    {
+      "date": "2025-07-04",
+      "fen": "5rk1/5p1p/1qp2p2/p2pb2Q/P7/1r5P/4R1P1/4RN1K w - - 0 33",
+      "solution": [
+        "Rxe5",
+        "fxe5",
+        "Qg5+",
+        "Kh8",
+        "Qf6+"
+      ],
+      "gameUrl": "https://lichess.org/HlEcGBSh/white#64",
+      "white": "Lucin",
+      "black": "MatHermann",
+      "wRating": 1843,
+      "bRating": 1779,
+      "id": 1109
+    },
+    {
+      "date": "2025-07-05",
+      "fen": "2kr4/pp4R1/2p1p1P1/4P3/4p3/2P5/PP6/1K6 b - - 0 28",
+      "solution": [
+        "e3",
+        "Rh7",
+        "e2",
+        "Rh1",
+        "Rd1+"
+      ],
+      "gameUrl": "https://lichess.org/yFWOkPXm/black#55",
+      "white": "kamikaze88",
+      "black": "Scesny",
+      "wRating": 1905,
+      "bRating": 1946,
+      "id": 1110
+    },
+    {
+      "date": "2025-07-06",
+      "fen": "6k1/5pb1/p1p1p1pp/P1B2q2/2bP1Q2/1rP1RN1P/5PP1/6K1 w - - 1 24",
+      "solution": [
+        "Qxf5",
+        "gxf5",
+        "Nd2",
+        "f4",
+        "Rf3"
+      ],
+      "gameUrl": "https://lichess.org/pOyJVJho/white#46",
+      "white": "hunterchalid",
+      "black": "Faihadianti",
+      "wRating": 2191,
+      "bRating": 2251,
+      "id": 1111
+    },
   ];
 }
