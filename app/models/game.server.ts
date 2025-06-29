@@ -14019,23 +14019,6 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-07-04",
-      "fen": "5rk1/5p1p/1qp2p2/p2pb2Q/P7/1r5P/4R1P1/4RN1K w - - 0 33",
-      "solution": [
-        "Rxe5",
-        "fxe5",
-        "Qg5+",
-        "Kh8",
-        "Qf6+"
-      ],
-      "gameUrl": "https://lichess.org/HlEcGBSh/white#64",
-      "white": "Lucin",
-      "black": "MatHermann",
-      "wRating": 1843,
-      "bRating": 1779,
-      "id": 1109
-    },
-    {
-      "date": "2025-07-05",
       "fen": "2kr4/pp4R1/2p1p1P1/4P3/4p3/2P5/PP6/1K6 b - - 0 28",
       "solution": [
         "e3",
@@ -14049,10 +14032,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "Scesny",
       "wRating": 1905,
       "bRating": 1946,
-      "id": 1110
+      "id": 1109
     },
     {
-      "date": "2025-07-06",
+      "date": "2025-07-05",
       "fen": "6k1/5pb1/p1p1p1pp/P1B2q2/2bP1Q2/1rP1RN1P/5PP1/6K1 w - - 1 24",
       "solution": [
         "Qxf5",
@@ -14066,7 +14049,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "Faihadianti",
       "wRating": 2191,
       "bRating": 2251,
-      "id": 1111
+      "id": 1110
     },
   ];
 }
