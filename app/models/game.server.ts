@@ -14085,5 +14085,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1680,
       "id": 1112
     },
+    {
+      "date": "2025-07-08",
+      "fen": "1Q6/K4k2/8/5p2/8/8/1R2p3/2r5 b - - 0 56",
+      "solution": [
+        "Ra1+",
+        "Kb6",
+        "e1=Q",
+        "Qc7+",
+        "Qe7"
+      ],
+      "gameUrl": "https://lichess.org/j76CnG9Q/black#111",
+      "white": "zanbato",
+      "black": "umbabarauma",
+      "wTitle": "NM",
+      "wRating": 2231,
+      "bRating": 2027,
+      "id": 1113
+    },
   ];
 }
