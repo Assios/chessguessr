@@ -14154,5 +14154,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1687,
       "id": 1116
     },
+    {
+      "date": "2025-07-12",
+      "fen": "r1b2rk1/1p2bppp/pqnp4/3Np3/2B1PP2/PN6/1PP2nPP/R1BQ1RK1 b - - 6 13",
+      "solution": [
+        "Nh3+",
+        "Kh1",
+        "Qg1+",
+        "Rxg1",
+        "Nf2#"
+      ],
+      "gameUrl": "https://lichess.org/RIwXCRjL/black#25",
+      "white": "cavalote",
+      "black": "Six_of_Cows",
+      "wRating": 1724,
+      "bRating": 1698,
+      "id": 1117
+    },
   ];
 }
