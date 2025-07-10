@@ -14120,5 +14120,39 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1856,
       "id": 1114
     },
+    {
+      "date": "2025-07-10",
+      "fen": "r3r1k1/5ppp/b4n2/3pR3/1b1N4/P4N2/P4PPP/R1B3K1 b - - 0 22",
+      "solution": [
+        "Bc3",
+        "Rxe8+",
+        "Rxe8",
+        "Rb1",
+        "Bxd4"
+      ],
+      "gameUrl": "https://lichess.org/kwtJ5Dux/black#43",
+      "white": "stomasg",
+      "black": "CSBschaak",
+      "wRating": 1746,
+      "bRating": 1874,
+      "id": 1115
+    },
+    {
+      "date": "2025-07-11",
+      "fen": "r4rk1/pbp2ppp/1pnbp3/1B6/Q2P4/4PqP1/PP3P1P/RNB2RK1 w - - 0 14",
+      "solution": [
+        "Nd2",
+        "Qd5",
+        "e4",
+        "Qxd4",
+        "Bxc6"
+      ],
+      "gameUrl": "https://lichess.org/Bgmp2kSF/white#26",
+      "white": "bhim_jakhar",
+      "black": "GabrielNadeauDubois",
+      "wRating": 1684,
+      "bRating": 1687,
+      "id": 1116
+    },
   ];
 }
