@@ -14171,5 +14171,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1698,
       "id": 1117
     },
+    {
+      "date": "2025-07-13",
+      "fen": "r3r1k1/pp2qp1p/3b2p1/3p4/3P2n1/1PN4P/PBP1BPP1/R2QK2R b KQ - 0 15",
+      "solution": [
+        "Nxf2",
+        "Kxf2",
+        "Qe3+",
+        "Kf1",
+        "Bg3"
+      ],
+      "gameUrl": "https://lichess.org/WC1zB0Po/black#29",
+      "white": "Egerev_Dmitry_1205",
+      "black": "highchesslevel14",
+      "wRating": 2235,
+      "bRating": 2235,
+      "id": 1118
+    },
+    {
+      "date": "2025-07-14",
+      "fen": "8/8/1b2p3/1P1p3P/3P2k1/1K6/8/8 w - - 0 47",
+      "solution": [
+        "h6",
+        "Bxd4",
+        "h7",
+        "Kf5",
+        "b6"
+      ],
+      "gameUrl": "https://lichess.org/DIt9pXgs/white#92",
+      "white": "GlennTipton",
+      "black": "Ivn_2001",
+      "wTitle": "FM",
+      "bTitle": "CM",
+      "wRating": 2436,
+      "bRating": 2384,
+      "id": 1119
+    },
   ];
 }
