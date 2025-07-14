@@ -14207,5 +14207,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2384,
       "id": 1119
     },
+    {
+      "date": "2025-07-15",
+      "fen": "8/1p2qkpQ/p2p2rp/3Pp3/7P/3R4/PPr2P2/5RK1 w - - 2 27",
+      "solution": [
+        "Rg3",
+        "Qf6",
+        "h5",
+        "Rg5",
+        "Qxc2"
+      ],
+      "gameUrl": "https://lichess.org/yIYhwNlU/white#52",
+      "white": "MarkusMaischberger",
+      "black": "peluca2004",
+      "wRating": 2542,
+      "bRating": 2515,
+      "id": 1120
+    },
+    {
+      "date": "2025-07-16",
+      "fen": "3rr1k1/2p5/p7/1pP2p2/8/P1Q1n1q1/1P3RP1/1BR3K1 b - - 3 34",
+      "solution": [
+          "Rd1+",
+          "Rxd1",
+          "Qxf2+",
+          "Kxf2",
+          "Nxd1+"
+      ],
+      "gameUrl": "https://lichess.org/rB7Rc3Th/black#67",
+      "white": "DrunkViper",
+      "black": "Lastf",
+      "wTitle": "GM",
+      "wRating": 2532,
+      "bRating": 2310,
+      "id": 1121
+    },
+    {
+      "date": "2025-07-17",
+      "fen": "6rk/pp1q2rp/7Q/5P2/2p1P3/5nR1/PP1p1NRP/7K w - - 0 31",
+      "solution": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh3+",
+          "Nh4",
+          "Rxh4#"
+      ],
+      "gameUrl": "https://lichess.org/WY11yNRF/white#60",
+      "white": "queentrapper",
+      "black": "chessbroad",
+      "wRating": 2262,
+      "bRating": 2221,
+      "id": 1122
+    }
   ];
 }
