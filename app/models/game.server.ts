@@ -14275,6 +14275,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1973,
       "bRating": 2298,
       "id": 1123
-  }
+  },
+  {
+      "date": "2025-07-19",
+      "fen": "6k1/1bR2np1/p3q2p/1p6/1B3Q2/P2rp2P/1P2N1P1/7K b - - 3 34",
+      "solution": [
+          "Qxh3+",
+          "Qh2",
+          "Rd1+",
+          "Ng1",
+          "Bxg2#"
+      ],
+      "gameUrl": "https://lichess.org/1bkaFeKc/black#67",
+      "white": "four_season_chess",
+      "black": "Assios",
+      "bTitle": "LM",
+      "wRating": 2255,
+      "bRating": 2316,
+      "id": 1124
+    }
   ];
 }
