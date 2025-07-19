@@ -13935,11 +13935,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-06-29",
       "fen": "2r3k1/5p2/p3p1nQ/3pPP2/2qN4/6BP/7K/4b3 w - - 0 34",
       "solution": [
-          "f6",
-          "Bxg3+",
-          "Kxg3",
-          "Qd3+",
-          "Nf3"
+        "f6",
+        "Bxg3+",
+        "Kxg3",
+        "Qd3+",
+        "Nf3"
       ],
       "gameUrl": "https://lichess.org/B294fXRo/white#66",
       "white": "RedBear1983",
@@ -14228,11 +14228,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-07-16",
       "fen": "3rr1k1/2p5/p7/1pP2p2/8/P1Q1n1q1/1P3RP1/1BR3K1 b - - 3 34",
       "solution": [
-          "Rd1+",
-          "Rxd1",
-          "Qxf2+",
-          "Kxf2",
-          "Nxd1+"
+        "Rd1+",
+        "Rxd1",
+        "Qxf2+",
+        "Kxf2",
+        "Nxd1+"
       ],
       "gameUrl": "https://lichess.org/rB7Rc3Th/black#67",
       "white": "DrunkViper",
@@ -14246,11 +14246,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-07-17",
       "fen": "6rk/pp1q2rp/7Q/5P2/2p1P3/5nR1/PP1p1NRP/7K w - - 0 31",
       "solution": [
-          "Qxh7+",
-          "Kxh7",
-          "Rh3+",
-          "Nh4",
-          "Rxh4#"
+        "Qxh7+",
+        "Kxh7",
+        "Rh3+",
+        "Nh4",
+        "Rxh4#"
       ],
       "gameUrl": "https://lichess.org/WY11yNRF/white#60",
       "white": "queentrapper",
@@ -14263,11 +14263,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-07-18",
       "fen": "3r3r/5p1p/4p1pk/1q6/8/5PQ1/1P3PK1/R2R4 w - - 0 34",
       "solution": [
-          "Rxd8",
-          "Rxd8",
-          "Qh4+",
-          "Kg7",
-          "Qxd8"
+        "Rxd8",
+        "Rxd8",
+        "Qh4+",
+        "Kg7",
+        "Qxd8"
       ],
       "gameUrl": "https://lichess.org/Amn19Ykk/white#66",
       "white": "rudymirasol888",
@@ -14275,16 +14275,16 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1973,
       "bRating": 2298,
       "id": 1123
-  },
-  {
+    },
+    {
       "date": "2025-07-19",
       "fen": "6k1/1bR2np1/p3q2p/1p6/1B3Q2/P2rp2P/1P2N1P1/7K b - - 3 34",
       "solution": [
-          "Qxh3+",
-          "Qh2",
-          "Rd1+",
-          "Ng1",
-          "Bxg2#"
+        "Qxh3+",
+        "Qh2",
+        "Rd1+",
+        "Ng1",
+        "Bxg2#"
       ],
       "gameUrl": "https://lichess.org/1bkaFeKc/black#67",
       "white": "four_season_chess",
@@ -14293,6 +14293,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2255,
       "bRating": 2316,
       "id": 1124
+    },
+    {
+      "date": "2025-07-20",
+      "fen": "r5k1/p4rq1/2pBR1Qp/1p2Pn2/6R1/2b4P/P5P1/7K w - - 0 30",
+      "solution": [
+        "Qh5",
+        "Qxg4",
+        "Qxg4+",
+        "Rg7",
+        "Qxf5"
+      ],
+      "gameUrl": "https://lichess.org/GYSWcOR9/white#58",
+      "white": "masslos",
+      "black": "mrelko",
+      "wRating": 1705,
+      "bRating": 1736,
+      "id": 1125
     }
   ];
 }
