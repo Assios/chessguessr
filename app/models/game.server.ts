@@ -14327,6 +14327,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2169,
       "bRating": 2161,
       "id": 1126
+    },
+    {
+      "date": "2025-07-22",
+      "fen": "3rb1k1/5p1p/2p1p1p1/3P4/4r3/1B6/PKR3PP/3R4 w - - 0 26",
+      "solution": [
+        "dxc6",
+        "Rxd1",
+        "c7",
+        "Bd7",
+        "c8=Q+"
+      ],
+      "gameUrl": "https://lichess.org/cRI6zO31/white#50",
+      "white": "SchaakmeesterDeluxe",
+      "black": "gomaks",
+      "wRating": 2015,
+      "bRating": 2077,
+      "id": 1127
     }
   ];
 }
