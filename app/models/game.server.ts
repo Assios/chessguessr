@@ -14361,6 +14361,75 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1672,
       "bRating": 2096,
       "id": 1128
+    },
+    {
+      "date": "2025-07-24",
+      "fen": "8/6k1/B1P3p1/7p/1K6/8/8/6r1 w - - 1 46",
+      "solution": [
+        "c7",
+        "Rc1",
+        "Bc4",
+        "Rb1+",
+        "Kc5"
+      ],
+      "gameUrl": "https://lichess.org/6uyhyOj7/white#90",
+      "white": "e4-Training",
+      "black": "JaschaCL",
+      "wRating": 1960,
+      "bRating": 1964,
+      "id": 1129
+    },
+    {
+      "date": "2025-07-25",
+      "fen": "6k1/p4p2/1p1RrPrp/8/2R4p/8/P1P4K/8 w - - 1 33",
+      "solution": [
+        "Rc8+",
+        "Kh7",
+        "Rxe6",
+        "fxe6",
+        "f7"
+      ],
+      "gameUrl": "https://lichess.org/HMSGqROH/white#64",
+      "white": "Nima737",
+      "black": "antonio96",
+      "wRating": 2342,
+      "bRating": 2348,
+      "id": 1130
+    },
+    {
+      "date": "2025-07-26",
+      "fen": "8/8/1rP2k2/4pp2/8/3B4/2P3p1/R5Kb w - - 1 55",
+      "solution": [
+        "c7",
+        "Rc6",
+        "Ra6",
+        "Rxa6",
+        "Bxa6"
+      ],
+      "gameUrl": "https://lichess.org/m2i7WyCw/white#108",
+      "white": "K_KING9002",
+      "black": "Takacsbl",
+      "bTitle": "IM",
+      "wRating": 2603,
+      "bRating": 2608,
+      "id": 1131
+    },
+    {
+      "date": "2025-07-27",
+      "fen": "r5k1/6p1/p7/3pPp2/P1qN2B1/5K2/5PPQ/n6R b - - 6 32",
+      "solution": [
+        "Qd3+",
+        "Kf4",
+        "Qe4+",
+        "Kg5",
+        "Qxg4#"
+      ],
+      "gameUrl": "https://lichess.org/THNhyVWe/black#63",
+      "white": "sharingboxer",
+      "black": "Drakeche",
+      "wRating": 2094,
+      "bRating": 1931,
+      "id": 1132
     }
   ];
 }
