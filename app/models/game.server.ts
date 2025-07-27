@@ -14430,6 +14430,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2094,
       "bRating": 1931,
       "id": 1132
+    },
+    {
+      "date": "2025-07-28",
+      "fen": "rnbqkb1r/pp2pp1p/3p2p1/3N4/3Nn3/8/PPP2PPP/R1BQKB1R w KQkq - 0 7",
+      "solution": [
+        "Bb5+",
+        "Bd7",
+        "Qe2",
+        "Nc5",
+        "Nf6#"
+      ],
+      "gameUrl": "https://lichess.org/ISpxrXyk/white#12",
+      "white": "alinoorhadi2025",
+      "black": "Nabeltahsen",
+      "wRating": 2276,
+      "bRating": 2152,
+      "id": 1133
     }
   ];
 }
