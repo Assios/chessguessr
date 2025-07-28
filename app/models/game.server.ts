@@ -14447,6 +14447,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2276,
       "bRating": 2152,
       "id": 1133
+    },
+    {
+      "date": "2025-07-29",
+      "fen": "r5k1/1p3ppb/2p1q2p/6P1/pQ5P/2P1p3/PP2B2N/2KR3R b - - 0 27",
+      "solution": [
+        "Qxa2",
+        "Bd3",
+        "Bxd3",
+        "Rxd3",
+        "Qa1+"
+      ],
+      "gameUrl": "https://lichess.org/bTiaRBKG/black#53",
+      "white": "gangaykar",
+      "black": "Rabadan05",
+      "wRating": 1819,
+      "bRating": 1513,
+      "id": 1134
+    },
+    {
+      "date": "2025-07-30",
+      "fen": "r1bqkb1r/pp3p1p/2n1pnp1/2PpP3/2B5/1NP2N2/PP3PPP/R1BQK2R b KQkq - 0 10",
+      "solution": [
+        "dxc4",
+        "Qxd8+",
+        "Nxd8",
+        "exf6",
+        "cxb3"
+      ],
+      "gameUrl": "https://lichess.org/900QAgVs/black#19",
+      "white": "Pawn_Jovi",
+      "black": "Sash_koval",
+      "wRating": 1584,
+      "bRating": 1542,
+      "id": 1135
+    },
+    {
+      "date": "2025-07-31",
+      "fen": "1r1q1rk1/2p2pp1/p3pn1p/8/3P1b1P/3Q1PN1/PPB2P2/4RK1R w - - 3 23",
+      "solution": [
+        "Nh5",
+        "g6",
+        "Nxf4",
+        "Rxb2",
+        "Nxg6"
+      ],
+      "gameUrl": "https://lichess.org/fLHqb3lS/white#44",
+      "white": "mohamed188",
+      "black": "Mvlitovicius",
+      "bTitle": "FM",
+      "wRating": 2312,
+      "bRating": 2365,
+      "id": 1136
+    },
+    {
+      "date": "2025-08-01",
+      "fen": "2q3k1/6pp/b3p3/3nN3/3P4/P7/2r2PPP/1QBR2K1 b - - 0 29",
+      "solution": [
+        "Nc3",
+        "Qxc2",
+        "Ne2+",
+        "Qxe2",
+        "Bxe2"
+      ],
+      "gameUrl": "https://lichess.org/O74PpO2M/black#57",
+      "white": "TolTolEm",
+      "black": "WilliamTheDestroyer2",
+      "bTitle": "FM",
+      "wRating": 2293,
+      "bRating": 2293,
+      "id": 1137
     }
   ];
 }
