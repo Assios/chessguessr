@@ -14517,6 +14517,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2293,
       "bRating": 2293,
       "id": 1137
+    },
+    {
+      "date": "2025-08-02",
+      "fen": "rn1qr1k1/pp3ppp/2pb4/8/3P3R/3Q1N2/PP3PPP/R1B3K1 b - - 0 14",
+      "solution": [
+        "Qxh4",
+        "Nxh4",
+        "Re1+",
+        "Qf1",
+        "Rxf1+"
+      ],
+      "gameUrl": "https://lichess.org/VyNAW6F7/black#27",
+      "white": "Mrsolution",
+      "black": "mirivalusomodulo",
+      "wRating": 2215,
+      "bRating": 2268,
+      "id": 1138
     }
   ];
 }
