@@ -14534,6 +14534,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2215,
       "bRating": 2268,
       "id": 1138
+    },
+    {
+      "date": "2025-08-03",
+      "fen": "8/8/8/8/6p1/1kr1R1P1/6K1/8 w - - 2 44",
+      "solution": [
+        "Kf2",
+        "Kc2",
+        "Rxc3+",
+        "Kxc3",
+        "Ke3"
+      ],
+      "gameUrl": "https://lichess.org/hGpu4txG/white#86",
+      "white": "elvenking",
+      "black": "B-ron393",
+      "wRating": 1752,
+      "bRating": 1600,
+      "id": 1139
     }
   ];
 }
