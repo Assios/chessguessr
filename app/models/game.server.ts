@@ -14568,6 +14568,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1974,
       "bRating": 2162,
       "id": 1140
+    },
+    {
+      "date": "2025-08-05",
+      "fen": "r3r1k1/pp1qBb1p/2ppnQpP/3Np3/4Pp2/1P1P4/1PP2PP1/R3K2R w KQ - 0 22",
+      "solution": [
+        "Qg7+",
+        "Nxg7",
+        "Nf6+",
+        "Kh8",
+        "hxg7+"
+      ],
+      "gameUrl": "https://lichess.org/K5hriYp4/white#42",
+      "white": "Vahid_119",
+      "black": "raikar",
+      "wRating": 1814,
+      "bRating": 1973,
+      "id": 1141
     }
   ];
 }
