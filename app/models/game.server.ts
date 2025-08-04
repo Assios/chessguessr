@@ -14551,6 +14551,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1752,
       "bRating": 1600,
       "id": 1139
+    },
+    {
+      "date": "2025-08-04",
+      "fen": "7k/6p1/3Q1r1p/p7/1p6/4R1P1/P4PKP/2q5 w - - 2 37",
+      "solution": [
+        "Re8+",
+        "Kh7",
+        "Qd3+",
+        "Rg6",
+        "Re6"
+      ],
+      "gameUrl": "https://lichess.org/wTFx1fxu/white#72",
+      "white": "Rahul0007",
+      "black": "NoToSzach",
+      "wRating": 1974,
+      "bRating": 2162,
+      "id": 1140
     }
   ];
 }
