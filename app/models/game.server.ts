@@ -14585,6 +14585,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1814,
       "bRating": 1973,
       "id": 1141
+    },
+    {
+      "date": "2025-08-06",
+      "fen": "1k1r1b2/1p2n1p1/p4pP1/2P2q1Q/1P6/P2pB3/3N1PB1/5K2 w - - 5 34",
+      "solution": [
+        "Qh2+",
+        "Ka8",
+        "Qc7",
+        "Qc8",
+        "Bxb7+"
+      ],
+      "gameUrl": "https://lichess.org/RNBN6Dbz/white#66",
+      "white": "skirazer",
+      "black": "Noor_02",
+      "wRating": 2158,
+      "bRating": 2158,
+      "id": 1142
     }
   ];
 }
