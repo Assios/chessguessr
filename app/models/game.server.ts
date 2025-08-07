@@ -14619,6 +14619,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1905,
       "bRating": 1919,
       "id": 1143
+    },
+    {
+      "date": "2025-08-08",
+      "fen": "4nrk1/3p1rpp/3P3Q/p1p5/2P5/1PB5/P3p1RP/2K2qR1 w - - 2 41",
+      "solution": [
+        "Kb2",
+        "e1=Q",
+        "Rxg7+",
+        "Nxg7",
+        "Rxg7+"
+      ],
+      "gameUrl": "https://lichess.org/E6umnzuJ/white#80",
+      "white": "DarkAlekhine",
+      "black": "skandalaros",
+      "wTitle": "GM",
+      "wRating": 2666,
+      "bRating": 2279,
+      "id": 1144
     }
   ];
 }
