@@ -14671,6 +14671,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1923,
       "bRating": 1647,
       "id": 1146
+    },
+    {
+      "date": "2025-08-11",
+      "fen": "2rr2k1/4bppp/2p5/pbN1P3/4P3/3p2P1/PP3PBP/2RR2K1 b - - 1 21",
+      "solution": [
+        "d2",
+        "Rc2",
+        "Bxc5",
+        "Rxc5",
+        "Be2"
+      ],
+      "gameUrl": "https://lichess.org/kVBk0qnj/black#41",
+      "white": "Paff-Morris",
+      "black": "PeterTheGreat38",
+      "wRating": 2293,
+      "bRating": 2318,
+      "id": 1147
     }
   ];
 }
