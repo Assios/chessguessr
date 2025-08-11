@@ -14688,6 +14688,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2293,
       "bRating": 2318,
       "id": 1147
+    },
+    {
+      "date": "2025-08-12",
+      "fen": "4k3/5p2/2q1bQ2/1p4P1/2p1p3/4N3/PP1r1PK1/7R b - - 1 32",
+      "solution": [
+        "Qb6",
+        "g6",
+        "Bh3+",
+        "Rxh3",
+        "Qxf6"
+      ],
+      "gameUrl": "https://lichess.org/MgSRUppc/black#63",
+      "white": "Yerba_on_the_Board",
+      "black": "bayad2016",
+      "wRating": 2575,
+      "bRating": 2509,
+      "id": 1148
     }
   ];
 }
