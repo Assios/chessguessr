@@ -14705,6 +14705,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2575,
       "bRating": 2509,
       "id": 1148
+    },
+    {
+      "date": "2025-08-13",
+      "fen": "4k3/1p2P1p1/p4p1p/5P2/6K1/2P3P1/r6P/4R3 w - - 0 31",
+      "solution": [
+        "Kh5",
+        "Rxh2+",
+        "Kg6",
+        "Rg2",
+        "Kxg7"
+      ],
+      "gameUrl": "https://lichess.org/Q376bVFL/white#60",
+      "white": "eintracht75",
+      "black": "Rafa_Fischer",
+      "wRating": 1709,
+      "bRating": 1754,
+      "id": 1149
     }
   ];
 }
