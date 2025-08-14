@@ -14756,6 +14756,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1896,
       "bRating": 1908,
       "id": 1151
+    },
+    {
+      "date": "2025-08-16",
+      "fen": "r5k1/1p3rb1/p1p1Q3/4n3/2P1P3/3B4/PP1Kpq2/6RR w - - 0 27",
+      "solution": [
+        "Rxg7+",
+        "Kxg7",
+        "Qxe5+",
+        "Kg8",
+        "Qh8#"
+      ],
+      "gameUrl": "https://lichess.org/UvEjfijs/white#52",
+      "white": "quaracique77",
+      "black": "samiao",
+      "wRating": 1800,
+      "bRating": 1858,
+      "id": 1152
     }
   ];
 }
