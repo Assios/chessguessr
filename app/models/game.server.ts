@@ -14773,6 +14773,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1800,
       "bRating": 1858,
       "id": 1152
+    },
+    {
+      "date": "2025-08-17",
+      "fen": "8/8/4k1pp/3pP3/p4P2/3K2PP/8/8 b - - 0 45",
+      "solution": [
+        "a3",
+        "Kc3",
+        "d4+",
+        "Kb3",
+        "d3"
+      ],
+      "gameUrl": "https://lichess.org/7wuDZD0i/black#89",
+      "white": "k-007",
+      "black": "PatzimusPrime",
+      "wRating": 1525,
+      "bRating": 1553,
+      "id": 1153
     }
   ];
 }
