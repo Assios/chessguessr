@@ -14824,6 +14824,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2105,
       "bRating": 2052,
       "id": 1155
+    },
+    {
+      "date": "2025-08-20",
+      "fen": "1Q6/3r4/2p1p3/p2kq1p1/4n3/6RP/2P2PPK/8 w - - 3 34",
+      "solution": [
+        "c4+",
+        "Kd4",
+        "Qb2+",
+        "Kxc4",
+        "Qxe5"
+      ],
+      "gameUrl": "https://lichess.org/kIz6vAnR/white#66",
+      "white": "NicoleChanHuiXing",
+      "black": "pankajjayshwal",
+      "wRating": 1882,
+      "bRating": 1944,
+      "id": 1156
     }
   ];
 }
