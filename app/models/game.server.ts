@@ -14859,6 +14859,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2281,
       "bRating": 2295,
       "id": 1157
+    },
+    {
+      "date": "2025-08-22",
+      "fen": "1k3q2/2p5/1p1p2p1/P2Qp2b/2P1P3/3P2RP/1r4NK/8 b - - 0 36",
+      "solution": [
+        "Bf3",
+        "axb6",
+        "Bxg2",
+        "bxc7+",
+        "Kxc7"
+      ],
+      "gameUrl": "https://lichess.org/YBd3FHaY/black#71",
+      "white": "SimonMkrtchyan",
+      "black": "kingph31",
+      "wTitle": "FM",
+      "wRating": 2346,
+      "bRating": 2262,
+      "id": 1158
+    },
+    {
+      "date": "2025-08-23",
+      "fen": "rn2kr2/ppp2pQp/8/3P1b2/2P1q3/5N2/P2B1PPP/3K1B1R w q - 5 14",
+      "solution": [
+        "Bd3",
+        "Qxd3",
+        "Re1+",
+        "Be4",
+        "Qe5+"
+      ],
+      "gameUrl": "https://lichess.org/SkF2wSxD/white#26",
+      "white": "ramesses2",
+      "black": "ChessGeauxld",
+      "wRating": 1672,
+      "bRating": 1680,
+      "id": 1159
+    },
+    {
+      "date": "2025-08-24",
+      "fen": "r2q3k/3n1Q1p/1p1N2p1/pP6/8/r7/5PPP/4R1K1 w - - 0 28",
+      "solution": [
+        "Ne8",
+        "Qxe8",
+        "Rxe8+",
+        "Rxe8",
+        "Qxe8+"
+      ],
+      "gameUrl": "https://lichess.org/HnE0N3qs/white#54",
+      "white": "billdong123",
+      "black": "bushwacker8",
+      "wRating": 2115,
+      "bRating": 1991,
+      "id": 1160
     }
   ];
 }
