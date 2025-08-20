@@ -14841,6 +14841,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1882,
       "bRating": 1944,
       "id": 1156
+    },
+    {
+      "date": "2025-08-21",
+      "fen": "4qn1k/6pp/p1r5/2bN4/Q6P/6B1/P4PP1/2R3K1 b - - 2 26",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Rf6+",
+        "Qf4",
+        "Rxf4+"
+      ],
+      "gameUrl": "https://lichess.org/lsWehGbz/black#51",
+      "white": "Cadiz81",
+      "black": "PranavBobbySekhar",
+      "wTitle": "FM",
+      "wRating": 2281,
+      "bRating": 2295,
+      "id": 1157
     }
   ];
 }
