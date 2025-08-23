@@ -14911,6 +14911,75 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2115,
       "bRating": 1991,
       "id": 1160
+    },
+    {
+      "date": "2025-08-25",
+      "fen": "2rq1rk1/Qp3p1p/3p1npb/4pP2/4P3/1PN1B2P/1PP3P1/R4RK1 b - - 0 17",
+      "solution": [
+        "Ra8",
+        "Qb6",
+        "Rxa1",
+        "Rxa1",
+        "gxf5"
+      ],
+      "gameUrl": "https://lichess.org/7OSXgh0R/black#33",
+      "white": "alin101",
+      "black": "Luis-E-Salerno89",
+      "wRating": 2117,
+      "bRating": 2158,
+      "id": 1161
+    },
+    {
+      "date": "2025-08-26",
+      "fen": "1rbq3k/1pnnrQNp/p2p2p1/2pP4/P1P5/2NB3P/1P4P1/R1B2R1K b - - 0 20",
+      "solution": [
+        "Rxf7",
+        "Rxf7",
+        "Ne5",
+        "Rxc7",
+        "Qxc7"
+      ],
+      "gameUrl": "https://lichess.org/IyzioH1Y/black#39",
+      "white": "Falafel85",
+      "black": "izel2",
+      "bTitle": "FM",
+      "wRating": 2603,
+      "bRating": 2607,
+      "id": 1162
+    },
+    {
+      "date": "2025-08-27",
+      "fen": "r1br2k1/5ppp/p2bpq2/1p1p4/8/2PQBN2/PP3PPP/R3R1K1 w - - 0 16",
+      "solution": [
+        "Bg5",
+        "Qg6",
+        "Qxg6",
+        "hxg6",
+        "Bxd8"
+      ],
+      "gameUrl": "https://lichess.org/zfh6S117/white#30",
+      "white": "Fedor2016",
+      "black": "FilthyBishop",
+      "wRating": 1750,
+      "bRating": 2015,
+      "id": 1163
+    },
+    {
+      "date": "2025-08-28",
+      "fen": "3rr1k1/pp3ppp/8/8/2p1b1QN/2q1P1PP/P4P2/R2R2K1 w - - 0 27",
+      "solution": [
+        "Qxe4",
+        "g5",
+        "Qg4",
+        "h6",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/mAYmBFHt/white#52",
+      "white": "Yuvanesh_a",
+      "black": "ASHWINSAIRAM",
+      "wRating": 1935,
+      "bRating": 2508,
+      "id": 1164
     }
   ];
 }
