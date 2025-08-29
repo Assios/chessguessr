@@ -14997,6 +14997,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1952,
       "bRating": 1842,
       "id": 1165
+    },
+    {
+      "date": "2025-08-30",
+      "fen": "r1b2r2/ppp1q1pk/2n1p2p/4Np2/3P4/1PKB2Q1/P1PN4/R6R b - - 1 19",
+      "solution": [
+        "Qb4+",
+        "Kb2",
+        "Qxd4+",
+        "Kb1",
+        "Nxe5"
+      ],
+      "gameUrl": "https://lichess.org/R5Sa8hsH/black#37",
+      "white": "zidnou",
+      "black": "Dietrh-2",
+      "wRating": 1736,
+      "bRating": 1708,
+      "id": 1166
+    },
+    {
+      "date": "2025-08-31",
+      "fen": "8/p7/8/PP5p/4kp1K/8/8/8 w - - 0 38",
+      "solution": [
+        "b6",
+        "axb6",
+        "a6",
+        "f3",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/vvpaRTlb/white#74",
+      "white": "JevynJoe",
+      "black": "Nirupam12",
+      "wRating": 1982,
+      "bRating": 2072,
+      "id": 1167
     }
   ];
 }
