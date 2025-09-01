@@ -15048,6 +15048,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1749,
       "bRating": 1734,
       "id": 1168
+    },
+    {
+      "date": "2025-09-02",
+      "fen": "2rr2k1/1pq1bppp/pQ2pn2/n7/2P5/2N1BN1P/PP3PP1/3R1RK1 w - - 12 19",
+      "solution": [
+        "Qxc7",
+        "Rxc7",
+        "Bb6",
+        "Rxd1",
+        "Rxd1"
+      ],
+      "gameUrl": "https://lichess.org/CD7PFost/white#36",
+      "white": "djenggotmerah",
+      "black": "grinpavl",
+      "bTitle": "FM",
+      "wRating": 2080,
+      "bRating": 2086,
+      "id": 1169
+    },
+    {
+      "date": "2025-09-03",
+      "fen": "r4b1r/ppk1pQ2/n1p1Pp1p/3p4/7P/2N2R2/PPq5/3R1KN1 w - - 0 22",
+      "solution": [
+        "Nxd5+",
+        "cxd5",
+        "Rc3+",
+        "Qxc3",
+        "bxc3"
+      ],
+      "gameUrl": "https://lichess.org/2uvdrQ4g/white#42",
+      "white": "DerEchteOwenEvans",
+      "black": "MaratZab",
+      "wRating": 1776,
+      "bRating": 1829,
+      "id": 1170
     }
   ];
 }
