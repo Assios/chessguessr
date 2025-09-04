@@ -15100,6 +15100,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1844,
       "bRating": 1937,
       "id": 1171
+    },
+    {
+      "date": "2025-09-05",
+      "fen": "r2qkb1r/1b1n1p2/p1n1p1p1/1p1pP2p/3N1P2/P1NBB3/1PP3PP/R2Q1R1K w kq - 2 13",
+      "solution": [
+        "Nxe6",
+        "fxe6",
+        "Bxg6+",
+        "Ke7",
+        "f5"
+      ],
+      "gameUrl": "https://lichess.org/V1gxPph3/white#24",
+      "white": "Assios",
+      "black": "kareNsimFe",
+      "wTitle": "LM",
+      "wRating": 2282,
+      "bRating": 2206,
+      "id": 1172
     }
   ];
 }
