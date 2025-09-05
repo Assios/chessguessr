@@ -15118,6 +15118,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2282,
       "bRating": 2206,
       "id": 1172
+    },
+    {
+      "date": "2025-09-06",
+      "fen": "rn1k3r/pbpp1ppp/1p3n2/3PQ3/4P2q/2P5/P4PPP/R1B1KBNR w KQ - 3 10",
+      "solution": [
+        "Bg5",
+        "d6",
+        "Qxf6+",
+        "gxf6",
+        "Bxh4"
+      ],
+      "gameUrl": "https://lichess.org/mTTqHeeJ/white#18",
+      "white": "george49er",
+      "black": "jjaramir",
+      "wRating": 1615,
+      "bRating": 1592,
+      "id": 1173
     }
   ];
 }
