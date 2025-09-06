@@ -76,20 +76,32 @@ export function ChessgroundBoard({
           rookCastle: true,
           events: {
             after: (orig: string, dest: string) => {
-              const piece = chess.get(orig);
-              const destRank = dest[1];
-              const isPromo =
-                piece &&
-                piece.type === 'p' &&
-                ((piece.color === 'w' && destRank === '8') ||
-                  (piece.color === 'b' && destRank === '1'));
+              let isPromo = false;
+              let color: Orientation = 'white';
+              try {
+                const uiPieceAtDest = apiRef.current?.state?.pieces?.get(dest);
+                if (uiPieceAtDest) color = uiPieceAtDest.color as Orientation;
+                const destRank = dest[1];
+                if (
+                  uiPieceAtDest &&
+                  uiPieceAtDest.role === 'pawn' &&
+                  ((uiPieceAtDest.color === 'white' && destRank === '8') ||
+                    (uiPieceAtDest.color === 'black' && destRank === '1'))
+                ) {
+                  isPromo = true;
+                } else {
+                  const ms = chess.moves({ square: orig, verbose: true }) as Array<any>;
+                  const match = ms.find((m) => m.to === dest);
+                  if (match && (match.flags?.includes('p') || typeof match.promotion === 'string')) isPromo = true;
+                }
+              } catch {}
 
               if (isPromo) {
                 try {
                   // Keep current visual position; just block input while choosing.
                   apiRef.current?.set({ draggable: { enabled: false } });
                 } catch {}
-                setPromotion({ from: orig, to: dest, color: piece.color === 'w' ? 'white' : 'black' });
+                setPromotion({ from: orig, to: dest, color });
                 return;
               }
 
