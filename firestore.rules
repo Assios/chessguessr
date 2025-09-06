@@ -2,9 +2,9 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Users collection
+    
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, update, create: if request.auth != null && request.auth.uid == userId;
 
       // Activities subcollection
       match /activities/{activityId} {
@@ -12,31 +12,42 @@ service cloud.firestore {
       }
     }
 
-    // Usernames collection
     match /usernames/{username} {
-      allow read;
-      allow create, update: if request.auth != null &&
-                            request.resource.data.uid == request.auth.uid &&
-                            username.matches('^[a-zA-Z0-9_]{1,16}$');
-      allow delete: if request.auth != null &&
-                    get(/databases/$(database)/documents/usernames/$(username)).data.uid == request.auth.uid;
+      allow read: if true;
+
+      allow create: if request.auth != null
+                    && !exists(/databases/$(database)/documents/usernames/$(username))
+                    && request.resource.data.keys().hasOnly(['uid'])
+                    && request.resource.data.uid == request.auth.uid
+                    && username.matches('^[a-zA-Z0-9]{1,16}$');
+
+      allow update, delete: if request.auth != null
+                            && exists(/databases/$(database)/documents/usernames/$(username))
+                            && resource.data.uid == request.auth.uid
+                            && (!('uid' in request.resource.data) || request.resource.data.uid == request.auth.uid)
+                            && request.resource.data.diff(resource.data).changedKeys().hasOnly(['uid']);
     }
 
     // Puzzles collection
     match /puzzles/{puzzleId} {
       allow read, write: if request.auth != null;
     }
-
+    
     // Stats collection
     match /stats/{statId} {
       allow read;
       allow write: if 
+                   // If the firstSolver is being set, 
+                   // it must match the user's username 
+                   // and the current firstSolver must be null
                    (request.auth != null &&
                     request.resource.data.keys().hasAny(['firstSolver']) &&
                     request.resource.data.firstSolver == get(/databases/$(database)/documents/users/$(request.auth.uid)).data.username &&
                     resource.data.firstSolver == null)
                    || 
+                   // This condition allows "failed", "solved", and "turns" to be updated/written to even if the user isn't online.
                    (!request.resource.data.keys().hasAny(['firstSolver']));
     }
+
   }
 }

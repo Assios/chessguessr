@@ -176,6 +176,23 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    // Dev convenience: if opened via LAN IP, redirect to localhost so
+    // Firebase Auth authorized domains work out-of-the-box.
+    if (process.env.NODE_ENV === "development") {
+      const host = window.location.hostname;
+      const isLan =
+        /^192\.168\./.test(host) ||
+        /^10\./.test(host) ||
+        /^172\.(1[6-9]|2\d|3[0-1])\./.test(host);
+      if (isLan) {
+        const port = window.location.port ? `:${window.location.port}` : "";
+        const url = `${window.location.protocol}//localhost${port}${window.location.pathname}${window.location.search}${window.location.hash}`;
+        window.location.replace(url);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     if (localStorage.getItem("theme") === "light") {
       localStorage.setItem("theme", "corporate");
       setWrongTheme(true);

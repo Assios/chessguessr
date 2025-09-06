@@ -41,12 +41,20 @@ export default function SignUp() {
       return;
     }
 
-    const ERROR_MAP = {
+    const ERROR_MAP: Record<string, string> = {
       "auth/email-already-in-use":
         "There was an issue with your sign-up. Please try again later, or contact support@chessguessr.com if the problem persists.",
       "auth/invalid-email": "Please provide a valid email address.",
       "auth/weak-password":
         "The password is too weak. Please choose a stronger one.",
+      "auth/operation-not-allowed":
+        "Email/password sign-in is disabled for this project. Please enable it in Firebase Console → Authentication → Sign-in method.",
+      "auth/unauthorized-domain":
+        "This origin is not authorized for Firebase Auth. Please use http://localhost:3000 in development or add this domain in Firebase Console → Authentication → Settings → Authorized domains.",
+      "auth/invalid-api-key":
+        "The Firebase API key is invalid or restricted. Verify the key in app/firebase/firebaseConfig.ts and API restrictions in Google Cloud Console.",
+      "auth/network-request-failed":
+        "Network error while contacting Firebase. Check your connection and try again.",
     };
 
     setLoading(true);
@@ -56,8 +64,9 @@ export default function SignUp() {
       await signUpWithEmailPasswordAndUsername(email, password, username);
       setMessage("Successfully signed up!");
       window.location.href = "/profile";
-    } catch (error) {
-      setMessage(ERROR_MAP[error.code] || `Error: ${error.message}`);
+    } catch (error: any) {
+      console.error("Signup error", error);
+      setMessage(ERROR_MAP[error?.code] || `Error: ${error?.message || String(error)}`);
     } finally {
       setLoading(false);
     }

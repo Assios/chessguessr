@@ -12,7 +12,7 @@
     "dev:remix": "remix dev",
     "generate:css": "npx tailwindcss -o ./app/tailwind.css",
     "start": "remix-serve build",
-    "emulators:start": "firebase emulators:start --only firestore,auth --import=./emulator-data --export-on-exit=./emulator-data",
+    "emulators:start": "npx firebase emulators:start --only firestore,auth --import=./emulator-data --export-on-exit=./emulator-data",
     "emulators:export": "firebase emulators:export ./emulator-data"
   },
   "dependencies": {

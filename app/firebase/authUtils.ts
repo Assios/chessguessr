@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { onAuthStateChanged, User } from "firebase/auth";
+import { onAuthStateChanged, onIdTokenChanged, User } from "firebase/auth";
 import { signOut } from "firebase/auth";
 import { isUsernameTaken, saveNewUser } from "./utils";
 import { getDoc, doc } from "firebase/firestore";
@@ -11,6 +11,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
+import { generateRandomUsername } from "~/utils/username";
 
 export const signIn = async (email: string, password: string) => {
   try {
@@ -98,9 +99,50 @@ export async function signUpWithEmailPasswordAndUsername(
 
     await sendEmailVerification(user);
 
+    await new Promise<void>((resolve) => {
+      let settled = false;
+      const timeout = setTimeout(() => {
+        if (!settled) {
+          settled = true;
+          resolve();
+        }
+      }, 1500);
+      const unsub1 = onAuthStateChanged(auth, (u) => {
+        if (!settled && u?.uid === user.uid) {
+          settled = true;
+          clearTimeout(timeout);
+          unsub1();
+          resolve();
+        }
+      });
+    });
+    const ensureToken = async () => {
+      try {
+        await user.getIdToken(true);
+      } catch {}
+    };
+
     const uid = user.uid;
 
-    await saveNewUser(uid, email, username);
+    let lastErr: any = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        await ensureToken();
+        await saveNewUser(uid, email, username);
+        lastErr = null;
+        break;
+      } catch (e: any) {
+        lastErr = e;
+        const msg = String(e?.code || e?.message || e);
+        if (msg.includes("permission") || msg.includes("unauth")) {
+          await new Promise((r) => setTimeout(r, 400 * Math.pow(2, attempt)));
+          continue;
+        } else {
+          break;
+        }
+      }
+    }
+    if (lastErr) throw lastErr;
   } else {
     throw new Error("Failed to create a user");
   }
@@ -135,11 +177,20 @@ export const signInWithGoogle = async () => {
     const docSnap = await getDoc(userRef);
 
     if (!docSnap.exists()) {
-      await saveNewUser(
-        user.uid,
-        user.email,
-        "GoogleUser_" + user.uid.slice(0, 5)
-      );
+      let candidate = generateRandomUsername(16, user.uid);
+      let attempts = 0;
+      while (await isUsernameTaken(candidate.toLowerCase())) {
+        attempts++;
+        const n = Math.floor(Math.random() * 1679616).toString(36).toUpperCase();
+        const baseMax = Math.max(3, 16 - n.length);
+        candidate = (generateRandomUsername(baseMax, user.uid + attempts) + n).slice(0, 16);
+        if (attempts > 25) break;
+      }
+
+      try {
+        await user.getIdToken(true);
+      } catch {}
+      await saveNewUser(user.uid, user.email!, candidate);
     }
 
     return user;

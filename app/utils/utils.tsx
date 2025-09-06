@@ -158,6 +158,9 @@ export const getGravatarUrlWithDefault = (user: AppUser, size: number) => {
 };
 
 export const generateBackground = (emailHash: string) => {
+  if (typeof window === "undefined") {
+    return "";
+  }
   const seedNumber = Array.from(emailHash).reduce(
     (acc, char) => acc + char.charCodeAt(0),
     0

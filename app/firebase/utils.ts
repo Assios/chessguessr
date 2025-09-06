@@ -73,8 +73,6 @@ export async function saveNewUser(
   const normalizedUsername = username.toLowerCase();
   const usernameRef = doc(db, "usernames", normalizedUsername);
 
-  const activityRef = doc(collection(db, "users", uid, "activities"));
-
   const batch = writeBatch(db);
 
   batch.set(userRef, {
@@ -91,13 +89,26 @@ export async function saveNewUser(
 
   batch.set(usernameRef, { uid });
 
-  batch.set(activityRef, {
-    type: "signup",
-    message: "Signed up",
-    timestamp: serverTimestamp(),
-  });
+  try {
+    await batch.commit();
 
-  await batch.commit();
+    const check = await getDoc(userRef);
+    if (!check.exists()) {
+      throw new Error("firestore/write-failed: user doc missing after commit");
+    }
+    try {
+      await addDoc(collection(db, "users", uid, "activities"), {
+        type: "signup",
+        message: "Signed up",
+        timestamp: serverTimestamp(),
+      });
+    } catch (e) {
+      console.warn("failed to write signup activity", e);
+    }
+  } catch (err: any) {
+    console.error("saveNewUser Firestore error", err);
+    throw err;
+  }
 }
 
 export async function getUserFromFirestore(
@@ -142,8 +153,13 @@ export async function updateUsername(
   console.log(`Current username for UID: ${uid} is: ${oldUsername}`);
 
   const normalizedNewUsername = newUsername.toLowerCase();
-  const oldUsernameRef = doc(db, "usernames", oldUsername);
+  const oldUsernameRef = doc(db, "usernames", (oldUsername || "").toLowerCase());
   const newUsernameRef = doc(db, "usernames", normalizedNewUsername);
+
+  if ((oldUsername || "").toLowerCase() === normalizedNewUsername) {
+    console.log("Username unchanged; skipping update.");
+    return;
+  }
 
   const batch = writeBatch(db);
 
@@ -152,9 +168,7 @@ export async function updateUsername(
     lastUpdatedUsername: serverTimestamp(),
   });
 
-  if (!oldUsername.startsWith("GoogleUser_")) {
-    batch.delete(oldUsernameRef);
-  }
+  batch.delete(oldUsernameRef);
 
   batch.set(newUsernameRef, { uid });
 

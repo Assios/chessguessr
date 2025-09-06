@@ -42,6 +42,7 @@ export default function Profile() {
   const [canUpdateUsername, setCanUpdateUsername] = useState(true);
   const [timeLeftToUpdate, setTimeLeftToUpdate] = useState("");
   const [localStats, setLocalStats] = useLocalStorage("cg-stats", null);
+  const validLocalStats = isValidPlayerStats(localStats) ? localStats : null;
   const [userAchievements, setUserAchievements] = useState<Achievement[]>([]);
 
   const [importedDate, setImportedDate] = useState<string | null>(null);
@@ -84,6 +85,8 @@ export default function Profile() {
     }
   }, [user]);
 
+  const [importing, setImporting] = useState(false);
+
   const importLocalStorageStats = async () => {
     if (importedDate) {
       toast.error(
@@ -94,28 +97,26 @@ export default function Profile() {
       return;
     }
 
-    const localStatsStr = localStorage.getItem("cg-stats");
-    if (!localStatsStr) {
-      toast.error("No stats found in localStorage.");
-      return;
-    }
-
-    const parsedLocalStats = JSON.parse(localStatsStr);
-
-    if (!isValidPlayerStats(parsedLocalStats)) {
-      toast.error("Invalid or missing stats in local storage.");
+    if (!validLocalStats) {
+      toast.error("No valid stats found in this browser.");
       return;
     }
 
     try {
-      await importStatsFromLocalStorage(user.uid, parsedLocalStats);
-      setImportedDate(new Date().toISOString());
+      setImporting(true);
+      await importStatsFromLocalStorage(user.uid, validLocalStats);
+      const nowIso = new Date().toISOString();
+      setImportedDate(nowIso);
+      updateUser({ importedLocalStorageDate: nowIso, stats: validLocalStats });
 
       toast.success(
         "Your game stats have been successfully imported to your account!"
       );
     } catch (error) {
-      toast.error(`Error: ${error.message}`);
+      const msg = (error as any)?.message || String(error);
+      toast.error(`Error: ${msg}`);
+    } finally {
+      setImporting(false);
     }
   };
 
@@ -257,7 +258,7 @@ export default function Profile() {
           </div>
 
           <div className="mt-8">
-            {!importedDate && localStats && (
+            {!importedDate && validLocalStats && (
               <div className="p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl font-bold mb-4">
                   Import your game stats
@@ -271,24 +272,25 @@ export default function Profile() {
                 <div className="mt-4">
                   <h3 className="font-semibold mb-2">Your Local Stats:</h3>
                   <ul className="list-disc ml-4">
-                    <li>Games Played: {localStats.gamesPlayed}</li>
-                    <li>Current Streak: {localStats.currentStreak}</li>
+                    <li>Games Played: {validLocalStats.gamesPlayed}</li>
+                    <li>Current Streak: {validLocalStats.currentStreak}</li>
                     <li>Guess distribution:</li>
                     <ul className="list-disc ml-6">
-                      <li>1: {localStats.guesses["1"]}</li>
-                      <li>2: {localStats.guesses["2"]}</li>
-                      <li>3: {localStats.guesses["3"]}</li>
-                      <li>4: {localStats.guesses["4"]}</li>
-                      <li>5: {localStats.guesses["5"]}</li>
+                      <li>1: {validLocalStats.guesses["1"]}</li>
+                      <li>2: {validLocalStats.guesses["2"]}</li>
+                      <li>3: {validLocalStats.guesses["3"]}</li>
+                      <li>4: {validLocalStats.guesses["4"]}</li>
+                      <li>5: {validLocalStats.guesses["5"]}</li>
                     </ul>
                   </ul>
                 </div>
                 <div className="mt-4">
                   <button
-                    className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2 mb-4"
+                    className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2 mb-4 disabled:opacity-60"
+                    disabled={importing}
                     onClick={importLocalStorageStats}
                   >
-                    Import stats to Account
+                    {importing ? "Importing..." : "Import stats to Account"}
                   </button>
                 </div>
               </div>
