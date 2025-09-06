@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { arraysEqual, wrongSolution } from "../utils/utils";
 import * as ChessJS from "chess.js";
-import { Square } from "react-chessboard";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
 import {
@@ -96,12 +95,14 @@ const useNavigableGuessAndFenHistory = () => {
       };
   };
 
+
   return {
     currentGuess,
     setCurrentGuess,
     fenHistory,
     setFenHistory,
     nextHistoryStep,
+    
   };
 };
 
@@ -127,6 +128,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     fenHistory,
     setFenHistory,
     nextHistoryStep,
+    
   } = useNavigableGuessAndFenHistory();
   const [position, setPosition] = useState(null);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
@@ -314,20 +316,30 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     setFenHistory(() => []);
   };
 
-  const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
+  const onDrop = (
+    sourceSquare: string,
+    targetSquare: string,
+    promotion?: "q" | "r" | "b" | "n"
+  ): boolean => {
     let move = null;
+    let fenAfter: string | null = null;
 
     updateChessBoard((game: any) => {
       move = game.move({
         from: sourceSquare,
         to: targetSquare,
-        promotion: "q",
+        promotion: promotion || "q",
       });
+      if (move) {
+        try {
+          fenAfter = game.fen();
+        } catch {}
+      }
     });
 
     if (move) {
       if (currentGuess.length < 5 && position) {
-        setFenHistory((prev): any => [...prev, position.fen()]);
+        setFenHistory((prev): any => [...prev, (fenAfter as string) || position.fen()]);
         setCurrentGuess((prev): any => [...prev, move.san]);
       }
 
@@ -361,11 +373,8 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       return;
     }
     const { move, fen } = nextStep;
-
     setPosition(new Chess(fen));
-
     setCurrentGuess((prev) => [...prev, move]);
-
     setFenHistory((prev) => [...prev, fen]);
   };
 
