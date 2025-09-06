@@ -15136,5 +15136,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1592,
       "id": 1173
     },
+    {
+      "date": "2025-09-07",
+      "fen": "4r3/p4pkp/1p1RPqp1/8/3Q1P2/1P6/P5PK/8 w - - 1 36",
+      "solution": [
+        "exf7",
+        "Qxd4",
+        "fxe8=N+",
+        "Kf7",
+        "Rxd4"
+      ],
+      "gameUrl": "https://lichess.org/h6DPTkP6/white#70",
+      "white": "SweetDisaster",
+      "black": "HardcoreGock",
+      "wRating": 2121,
+      "bRating": 2124,
+      "id": 1174
+    }
   ];
 }
