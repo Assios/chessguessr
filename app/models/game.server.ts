@@ -13108,6 +13108,2050 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2548,
       "bRating": 1788,
       "id": 1055
+    },
+    {
+      "date": "2025-05-12",
+      "fen": "5bkr/1p4p1/p3Nn1p/5q2/3p4/3P2Q1/PPP3PP/4R2K w - - 0 23",
+      "solution": [
+        "Nxf8",
+        "Kf7",
+        "Qc7+",
+        "Kxf8",
+        "Qb8+"
+      ],
+      "gameUrl": "https://lichess.org/VciJMm2S/white#44",
+      "white": "AlejandroRivas",
+      "black": "BruceLee78",
+      "wRating": 2234,
+      "bRating": 2181,
+      "id": 1056
+    },
+    {
+      "date": "2025-05-13",
+      "fen": "8/2p5/1p4pk/3Br2p/P1P5/5Q2/5PK1/4q3 w - - 5 46",
+      "solution": [
+        "Qf8+",
+        "Kg5",
+        "f4+",
+        "Kg4",
+        "Bf3+"
+      ],
+      "gameUrl": "https://lichess.org/wbGkc1Am/white#90",
+      "white": "sergor",
+      "black": "Dodore59",
+      "wRating": 2273,
+      "bRating": 2128,
+      "id": 1057
+    },
+    {
+      "date": "2025-05-14",
+      "fen": "2kr2r1/pp6/2b1q3/2PpB1pQ/P2Pp3/7P/5PP1/R4RK1 b - - 0 23",
+      "solution": [
+        "g4",
+        "h4",
+        "Be8",
+        "Qh7",
+        "Rd7"
+      ],
+      "gameUrl": "https://lichess.org/SUpqYb7d/black#45",
+      "white": "Begimot_2020",
+      "black": "Flipper1x1",
+      "wRating": 2211,
+      "bRating": 2192,
+      "id": 1058
+    },
+    {
+      "date": "2025-05-15",
+      "fen": "r4r1k/ppp2p1p/3p1n1B/4P3/4P1q1/2P2NP1/PP2NPK1/2Q5 b - - 0 25",
+      "solution": [
+        "Nxe4",
+        "Bxf8",
+        "Rxf8",
+        "Qh6",
+        "Rg8"
+      ],
+      "gameUrl": "https://lichess.org/E3ASwMQf/black#49",
+      "white": "NicTrave",
+      "black": "juanesto",
+      "wRating": 1876,
+      "bRating": 1514,
+      "id": 1059
+    },
+    {
+      "date": "2025-05-16",
+      "fen": "r2qr2k/2p3pp/1p1pQ3/p5PR/3p1B2/P2P1nP1/1PP1KP2/R7 w - - 2 21",
+      "solution": [
+        "Rxh7+",
+        "Kxh7",
+        "Rh1+",
+        "Nh4",
+        "Rxh4#"
+      ],
+      "gameUrl": "https://lichess.org/p1gfhXlG/white#40",
+      "white": "Chess_N_Roses1",
+      "black": "hu14",
+      "wRating": 1773,
+      "bRating": 1775,
+      "id": 1060
+    },
+    {
+      "date": "2025-05-17",
+      "fen": "b2r3k/4q1pp/1p2Q3/n1p1P3/5P2/P1P1B1P1/B4K1P/R7 b - - 0 25",
+      "solution": [
+        "Qb7",
+        "Bd5",
+        "Qxd5",
+        "Qxd5",
+        "Rxd5"
+      ],
+      "gameUrl": "https://lichess.org/CllyZoXE/black#49",
+      "white": "vancho1966",
+      "black": "davidsolartediezmil",
+      "wRating": 2149,
+      "bRating": 2163,
+      "id": 1061
+    },
+    {
+      "date": "2025-05-18",
+      "fen": "4r1k1/3r1pbp/1Bqp2p1/p2Rp3/8/1QP4P/PP3PP1/3R2K1 b - - 0 25",
+      "solution": [
+        "Rb8",
+        "Rb5",
+        "Rdb7",
+        "Qd5",
+        "Qxd5"
+      ],
+      "gameUrl": "https://lichess.org/095GaSDw/black#49",
+      "white": "Austin1967",
+      "black": "ethanol420",
+      "wRating": 1591,
+      "bRating": 1601,
+      "id": 1062
+    },
+    {
+      "date": "2025-05-19",
+      "fen": "1q3rk1/pb2p2p/4pbp1/2R2r2/1p1p4/3P1RP1/PP1BP1BP/4Q1K1 w - - 0 26",
+      "solution": [
+        "Rfxf5",
+        "Bxg2",
+        "Rxf6",
+        "Rxf6",
+        "Kxg2"
+      ],
+      "gameUrl": "https://lichess.org/bRSxc6PO/white#50",
+      "white": "FantasyLife",
+      "black": "BardiaVeisi",
+      "wRating": 2752,
+      "bRating": 2654,
+      "id": 1063
+    },
+    {
+      "date": "2025-05-20",
+      "fen": "r3r1k1/1b1p1p1p/p7/1p1N1pq1/3Q4/1B6/PPP3PP/5RK1 w - - 4 19",
+      "solution": [
+        "Nf6+",
+        "Kf8",
+        "Nxh7+",
+        "Ke7",
+        "Nxg5"
+      ],
+      "gameUrl": "https://lichess.org/OAyiHigZ/white#36",
+      "white": "CrasyMG",
+      "black": "onido19822",
+      "wRating": 1709,
+      "bRating": 1640,
+      "id": 1064
+    },
+    {
+      "date": "2025-05-21",
+      "fen": "r5k1/4Qp1p/6pb/1r1b4/2qB4/P1P2P2/1P4PP/KB1R3R b - - 0 29",
+      "solution": [
+        "Bf8",
+        "Qf6",
+        "Rxa3+",
+        "bxa3",
+        "Rxb1+"
+      ],
+      "gameUrl": "https://lichess.org/A4PiDCtO/black#57",
+      "white": "jhaycenj",
+      "black": "SwitchAlt",
+      "wRating": 1893,
+      "bRating": 1893,
+      "id": 1065
+    },
+    {
+      "date": "2025-05-22",
+      "fen": "4r1r1/5pk1/4pRp1/4P3/1B1P2Q1/4b1R1/6PK/2q5 w - - 0 35",
+      "solution": [
+        "Rxg6+",
+        "Kh7",
+        "Rh3+",
+        "Bh6",
+        "Rhxh6+"
+      ],
+      "gameUrl": "https://lichess.org/7NcKVUeI/white#68",
+      "white": "Ars77",
+      "black": "Asanabdykerim",
+      "wRating": 2060,
+      "bRating": 2002,
+      "id": 1066
+    },
+    {
+      "date": "2025-05-23",
+      "fen": "2r1kbr1/pp2n1p1/n2R3p/3N4/q4BPP/8/PPP1QP2/2K1R3 w - - 7 22",
+      "solution": [
+        "Qxe7+",
+        "Bxe7",
+        "Rxe7+",
+        "Kf8",
+        "Rf6+"
+      ],
+      "gameUrl": "https://lichess.org/IrKen3i7/white#42",
+      "white": "OhioRizzler78",
+      "black": "verox05",
+      "wRating": 2159,
+      "bRating": 2199,
+      "id": 1067
+    },
+    {
+      "date": "2025-05-24",
+      "fen": "r1b2rk1/pppp1ppp/8/8/2n5/2P1B3/q1P1QP1P/2KR2R1 w - - 2 18",
+      "solution": [
+        "Rxg7+",
+        "Kxg7",
+        "Rg1+",
+        "Kh8",
+        "Bd4+"
+      ],
+      "gameUrl": "https://lichess.org/pfLsjTc2/white#34",
+      "white": "Butimarkalpsiz",
+      "black": "fawyfawy10",
+      "wRating": 2123,
+      "bRating": 2013,
+      "id": 1068
+    },
+    {
+      "date": "2025-05-25",
+      "fen": "2b2rk1/5ppp/2p2b2/1q2p2Q/rp2P3/1B1R3P/1PP2PP1/3R2K1 w - - 0 21",
+      "solution": [
+        "Qxf7+",
+        "Rxf7",
+        "Rd8+",
+        "Bxd8",
+        "Rxd8#"
+      ],
+      "gameUrl": "https://lichess.org/YFsSzr6D/white#40",
+      "white": "Phika85",
+      "black": "JFkennedy123",
+      "wRating": 2148,
+      "bRating": 2140,
+      "id": 1069
+    },
+    {
+      "date": "2025-05-26",
+      "fen": "8/5R2/8/r3N2k/8/8/2r3PK/8 w - - 0 40",
+      "solution": [
+        "Rf5+",
+        "Kh6",
+        "Ng4+",
+        "Kg6",
+        "Rxa5"
+      ],
+      "gameUrl": "https://lichess.org/jUOD11X4/white#78",
+      "white": "chainsaw101",
+      "black": "Kraparov75",
+      "wRating": 2038,
+      "bRating": 2030,
+      "id": 1070
+    },
+    {
+      "date": "2025-05-27",
+      "fen": "r3k2r/1bbpn1p1/p2Bppq1/7p/P1N1PP1Q/3P3P/NP4P1/R4R1K b kq - 2 22",
+      "solution": [
+        "Nf5",
+        "Qe1",
+        "Nxd6",
+        "Qb4",
+        "Nxc4"
+      ],
+      "gameUrl": "https://lichess.org/nZxbyRGS/black#43",
+      "white": "licg",
+      "black": "ThunderWarrior",
+      "wRating": 2753,
+      "bRating": 2695,
+      "id": 1071
+    },
+    {
+      "date": "2025-05-28",
+      "fen": "1r2r3/1bq2p1k/4p1pb/p1Bp3p/8/1P4P1/P2Q1PBP/2R1R1K1 w - - 6 27",
+      "solution": [
+        "Qxh6+",
+        "Kxh6",
+        "Be3+",
+        "Kg7",
+        "Rxc7"
+      ],
+      "gameUrl": "https://lichess.org/XNrQ4ufv/white#52",
+      "white": "FDT83",
+      "black": "laserbullet",
+      "wRating": 1917,
+      "bRating": 1921,
+      "id": 1072
+    },
+    {
+      "date": "2025-05-29",
+      "fen": "2k2r2/1pb3pp/p1p2q2/3pRr2/3P2Q1/2P4P/PP4P1/R6K w - - 6 26",
+      "solution": [
+        "Rxf5",
+        "Qxf5",
+        "Rf1",
+        "Qxg4",
+        "Rxf8+"
+      ],
+      "gameUrl": "https://lichess.org/boHa09V9/white#50",
+      "white": "trad69",
+      "black": "Artyom_Belyaev",
+      "wRating": 1966,
+      "bRating": 2014,
+      "id": 1073
+    },
+    {
+      "date": "2025-05-30",
+      "fen": "1rk3r1/p4R1p/1q2p3/1P1pP2p/P1pP3Q/7P/3N2P1/7K w - - 1 25",
+      "solution": [
+        "Qe7",
+        "Rd8",
+        "a5",
+        "Qxa5",
+        "Qxe6+"
+      ],
+      "gameUrl": "https://lichess.org/97wJ49a8/white#48",
+      "white": "volvoxglobator",
+      "black": "Varvara31",
+      "bTitle": "WFM",
+      "wRating": 2411,
+      "bRating": 2447,
+      "id": 1074
+    },
+    {
+      "date": "2025-05-31",
+      "fen": "2r3k1/3r2pp/p2Pp3/1ppbp3/6B1/1P4BP/P5P1/3R2K1 w - - 0 25",
+      "solution": [
+        "Rxd5",
+        "exd5",
+        "Bxd7",
+        "Rd8",
+        "Be6+"
+      ],
+      "gameUrl": "https://lichess.org/1Q1Vm4JI/white#48",
+      "white": "othello1",
+      "black": "MSL66",
+      "wRating": 2122,
+      "bRating": 2129,
+      "id": 1075
+    },
+    {
+      "date": "2025-06-01",
+      "fen": "1k1r3r/pppq1pp1/2nbb3/3N3p/Q1P3n1/2B1PN2/PP2BPPP/2KR1R2 b - - 9 14",
+      "solution": [
+        "Nd4",
+        "Qxd7",
+        "Nxe2+",
+        "Kd2",
+        "Rxd7"
+      ],
+      "gameUrl": "https://lichess.org/5eEWCLB1/black#27",
+      "white": "changingiswinning",
+      "black": "GGTOURS",
+      "bTitle": "WFM",
+      "wRating": 2611,
+      "bRating": 2496,
+      "id": 1076
+    },
+    {
+      "date": "2025-06-02",
+      "fen": "r2q3k/b4prn/p1p2NbQ/4P1NB/1n6/7P/1P3PP1/R3R1K1 b - - 10 28",
+      "solution": [
+        "Qd2",
+        "Nxf7+",
+        "Bxf7",
+        "Qxd2",
+        "Nd5"
+      ],
+      "gameUrl": "https://lichess.org/9M981oM9/black#55",
+      "white": "JustAnotherChessTHUG",
+      "black": "MechanizedTechnique",
+      "wRating": 2250,
+      "bRating": 2187,
+      "id": 1077
+    },
+    {
+      "date": "2025-06-03",
+      "fen": "3rb1k1/1R3pp1/2p2n1p/q2p4/p2Q4/2N3P1/P4PBP/6K1 w - - 2 30",
+      "solution": [
+        "Ra7",
+        "c5",
+        "Qxf6",
+        "gxf6",
+        "Rxa5"
+      ],
+      "gameUrl": "https://lichess.org/mhWNJd0S/white#58",
+      "white": "ahmadelhendawi123",
+      "black": "sslhv",
+      "wRating": 2121,
+      "bRating": 1555,
+      "id": 1078
+    },
+    {
+      "date": "2025-06-04",
+      "fen": "1r3rk1/1p1b2qp/pRn1p1pQ/P4pN1/2B5/8/5PPP/4R1K1 w - - 2 24",
+      "solution": [
+        "Bxe6+",
+        "Bxe6",
+        "Qxg7+",
+        "Kxg7",
+        "Nxe6+"
+      ],
+      "gameUrl": "https://lichess.org/s8sh5ndO/white#46",
+      "white": "ktjn",
+      "black": "avinashdante",
+      "wRating": 2078,
+      "bRating": 2116,
+      "id": 1079
+    },
+    {
+      "date": "2025-06-05",
+      "fen": "2r3k1/4bppp/R1b5/1p1pP3/2pB4/6P1/1P3PBP/6K1 w - - 3 21",
+      "solution": [
+        "Bh3",
+        "Rc7",
+        "Bb6",
+        "Bb7",
+        "Ra7"
+      ],
+      "gameUrl": "https://lichess.org/sDuJKcMj/white#40",
+      "white": "Steinarbeider",
+      "black": "CaptainGilles971",
+      "wRating": 1784,
+      "bRating": 1723,
+      "id": 1080
+    },
+    {
+      "date": "2025-06-06",
+      "fen": "6rr/p1R5/2R1b3/3pknQ1/7P/P7/1q3PP1/6K1 w - - 1 31",
+      "solution": [
+        "f4+",
+        "Kd4",
+        "Qf6+",
+        "Ke4",
+        "Rxe6+"
+      ],
+      "gameUrl": "https://lichess.org/P18SlRAH/white#60",
+      "white": "akash_singh_deep",
+      "black": "DiletantMoscow",
+      "wRating": 2010,
+      "bRating": 2003,
+      "id": 1081
+    },
+    {
+      "date": "2025-06-07",
+      "fen": "r3r1k1/1p1q1p2/p6p/3pN1p1/P2Pnn2/7P/1PB2PP1/2R1RQK1 b - - 5 26",
+      "solution": [
+        "Rxe5",
+        "dxe5",
+        "Nd2",
+        "Qd3",
+        "Nxd3"
+      ],
+      "gameUrl": "https://lichess.org/Z9ichKnf/black#51",
+      "white": "Aquiles78",
+      "black": "Rey_Amarillo",
+      "wRating": 1913,
+      "bRating": 2008,
+      "id": 1082
+    },
+    {
+      "date": "2025-06-08",
+      "fen": "r1b1k2r/pp3ppp/2n5/4n3/2B5/B1P2N2/P4PPP/R2K3R w kq - 0 13",
+      "solution": [
+        "Nxe5",
+        "Nxe5",
+        "Re1",
+        "f6",
+        "f4"
+      ],
+      "gameUrl": "https://lichess.org/pr5Ru3x9/white#24",
+      "white": "The_Radiance",
+      "black": "Bagvell",
+      "wRating": 2265,
+      "bRating": 1904,
+      "id": 1083
+    },
+    {
+      "date": "2025-06-09",
+      "fen": "8/4kppR/r1p1p2p/p3P2P/4P1P1/1pP2P2/3K2B1/8 b - - 1 29",
+      "solution": [
+        "a4",
+        "Bf1",
+        "a3",
+        "Bxa6",
+        "a2"
+      ],
+      "gameUrl": "https://lichess.org/cuQl3aZ8/black#57",
+      "white": "ronen1234",
+      "black": "fiddle_master",
+      "bTitle": "FM",
+      "wRating": 2379,
+      "bRating": 2420,
+      "id": 1084
+    },
+    {
+      "date": "2025-06-10",
+      "fen": "6nr/p4p1p/k1p5/1p6/1QN5/2P1P3/4KPqP/8 w - - 0 27",
+      "solution": [
+        "Qa5+",
+        "Kb7",
+        "Nd6+",
+        "Kb8",
+        "Qd8#"
+      ],
+      "gameUrl": "https://lichess.org/ruvbd9JW/black#52",
+      "white": "erahal",
+      "black": "lextop",
+      "wRating": 1501,
+      "bRating": 1547,
+      "id": 1085
+    },
+    {
+      "date": "2025-06-11",
+      "fen": "rn2kbnr/pp6/2p2p2/4P3/4P1pq/2N3N1/PPPB1KB1/R2Q1R2 b kq - 2 17",
+      "solution": [
+        "Bc5+",
+        "Be3",
+        "Bxe3+",
+        "Kxe3",
+        "Qxg3+"
+      ],
+      "gameUrl": "https://lichess.org/hXAo4Q2j#33/white#33",
+      "white": "totek1",
+      "black": "yomoime",
+      "wRating": 1867,
+      "bRating": 1515,
+      "id": 1086
+    },
+    {
+      "date": "2025-06-12",
+      "fen": "3r1bnr/2p2ppp/2bk4/R7/5P2/2N5/4N1PP/1R4K1 w - - 4 22",
+      "solution": [
+        "Rd1+",
+        "Ke7",
+        "Re5+",
+        "Kf6",
+        "Rxd8"
+      ],
+      "gameUrl": "https://lichess.org/JJiGlqDg/black#42",
+      "white": "ari_suryadi",
+      "black": "detune",
+      "wRating": 1706,
+      "bRating": 1681,
+      "id": 1087
+    },
+    {
+      "date": "2025-06-13",
+      "fen": "5rk1/pp5p/2p1b3/2b1B1p1/P2pB3/3P1Q2/1PP3PP/q4N1K w - - 2 23",
+      "solution": [
+        "Bxh7+",
+        "Kxh7",
+        "Qh5+",
+        "Kg8",
+        "Qg6#"
+      ],
+      "gameUrl": "https://lichess.org/1LRyjzD8/white#44",
+      "white": "Cuarterista23",
+      "black": "Shagdardash",
+      "wRating": 1893,
+      "bRating": 1914,
+      "id": 1088
+    },
+    {
+      "date": "2025-06-14",
+      "fen": "2k5/8/2n5/2KN4/7p/8/1P6/8 w - - 0 39",
+      "solution": [
+        "Kxc6",
+        "h3",
+        "Ne7+",
+        "Kd8",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/Ei5hGhDl/white#76",
+      "white": "Amir-khan-shaib",
+      "black": "Akrij94",
+      "wRating": 2129,
+      "bRating": 2098,
+      "id": 1089
+    },
+    {
+      "date": "2025-06-15",
+      "fen": "4r1k1/pp3ppp/2p2P2/7Q/8/8/Prq3PP/3R1R1K w - - 1 26",
+      "solution": [
+        "Rg1",
+        "Qg6",
+        "Qe5",
+        "gxf6",
+        "Qxb2"
+      ],
+      "gameUrl": "https://lichess.org/Rq5QeoEL/white#50",
+      "white": "ElGordo",
+      "black": "Rockstar83",
+      "bTitle": "GM",
+      "wRating": 2467,
+      "bRating": 2567,
+      "id": 1090
+    },
+    {
+      "date": "2025-06-16",
+      "fen": "r7/pp1bQ3/1bk1p3/3pP3/8/2P5/P1K3P1/RN3q2 w - - 2 22",
+      "solution": [
+        "Qd6+",
+        "Kb5",
+        "Na3+",
+        "Ka6",
+        "Rxf1"
+      ],
+      "gameUrl": "https://lichess.org/Ok6BXaJd/white#42",
+      "white": "Rogii_Gaziro",
+      "black": "edwingr1202",
+      "wRating": 2005,
+      "bRating": 2005,
+      "id": 1091
+    },
+    {
+      "date": "2025-06-17",
+      "fen": "r7/2RP3p/1B4p1/P7/2b5/1pk4P/6P1/6K1 b - - 0 44",
+      "solution": [
+        "b2",
+        "Rc8",
+        "b1=Q+",
+        "Kh2",
+        "Qf5"
+      ],
+      "gameUrl": "https://lichess.org/W0bHw1P0/black#87",
+      "white": "ShreeHariPragg123",
+      "black": "Buxir",
+      "wRating": 2195,
+      "bRating": 2127,
+      "id": 1092
+    },
+    {
+      "date": "2025-06-18",
+      "fen": "3r3k/pp3Q1p/2pq2p1/8/8/1B6/PP4Pb/5R1K w - - 0 28",
+      "solution": [
+        "Rd1",
+        "Qf8",
+        "Rxd8",
+        "Qxd8",
+        "Kxh2"
+      ],
+      "gameUrl": "https://lichess.org/LrbPXaTX/white#54",
+      "white": "Queen2027",
+      "black": "L12345123",
+      "wRating": 1702,
+      "bRating": 2022,
+      "id": 1093
+    },
+    {
+      "date": "2025-06-19",
+      "fen": "r1r3k1/6pp/R4p2/1p2p3/1P6/8/1PbB1PPP/R5K1 b - - 0 22",
+      "solution": [
+        "Rxa6",
+        "Rxa6",
+        "Rd8",
+        "Be1",
+        "Rd1"
+      ],
+      "gameUrl": "https://lichess.org/9TC7yfJF/black#43",
+      "white": "GMshooter96",
+      "black": "Tsukuru",
+      "wRating": 2386,
+      "bRating": 2347,
+      "id": 1094
+    },
+    {
+      "date": "2025-06-20",
+      "fen": "r4rk1/1bb2ppp/p1n1p3/4P3/Np1q4/1B2NP2/1P4PP/2RQ1RK1 w - - 0 21",
+      "solution": [
+        "Qxd4",
+        "Nxd4",
+        "Rxc7",
+        "Nxb3",
+        "Rxb7"
+      ],
+      "gameUrl": "https://lichess.org/knYvxXRq/white#40",
+      "white": "MedvedevUnder",
+      "black": "Reveran",
+      "wRating": 1994,
+      "bRating": 2005,
+      "id": 1095
+    },
+    {
+      "date": "2025-06-21",
+      "fen": "2r3k1/5p2/1qp3pp/1pb1p2N/4P3/6QP/1P3PP1/2R3K1 w - - 0 30",
+      "solution": [
+        "Nf6+",
+        "Kg7",
+        "Nd7",
+        "Qa7",
+        "Qxe5+"
+      ],
+      "gameUrl": "https://lichess.org/sVhuY4sV/white#58",
+      "white": "BurraAbhishek",
+      "black": "DrKnopp",
+      "wRating": 1843,
+      "bRating": 1604,
+      "id": 1096
+    },
+    {
+      "date": "2025-06-22",
+      "fen": "5Q1R/5p1p/1b3qp1/p6k/P2P4/8/1P2rPPP/5RK1 b - - 8 32",
+      "solution": [
+        "Qxf2+",
+        "Rxf2",
+        "Re1+",
+        "Rf1",
+        "Bxd4+"
+      ],
+      "gameUrl": "https://lichess.org/DKnGKRmQ#63",
+      "white": "danie3379",
+      "black": "GhengisClown",
+      "bTitle": "FM",
+      "wRating": 2218,
+      "bRating": 2388,
+      "id": 1097
+    },
+    {
+      "date": "2025-06-23",
+      "fen": "R7/P5p1/5p1p/r4k2/7K/7P/6P1/8 b - - 6 50",
+      "solution": [
+        "g6",
+        "g4+",
+        "Kf4",
+        "Rf8",
+        "Rh5+"
+      ],
+      "gameUrl": "https://lichess.org/0PuzwzUQ/black#99",
+      "white": "DABHI-GEET-H",
+      "black": "Meki1",
+      "wRating": 2105,
+      "bRating": 2271,
+      "id": 1098
+    },
+    {
+      "date": "2025-06-24",
+      "fen": "4r1k1/pp5p/2p3p1/r4p1Q/2P2P2/qPK1P1R1/2P5/4B1R1 b - - 2 27",
+      "solution": [
+        "Qa1+",
+        "Kd3",
+        "Rd8+",
+        "Ke2",
+        "Qd1+"
+      ],
+      "gameUrl": "https://lichess.org/W5LCCXEU/black#53",
+      "white": "Artist9940858",
+      "black": "Misteryk",
+      "wRating": 1654,
+      "bRating": 1639,
+      "id": 1099
+    },
+    {
+      "date": "2025-06-25",
+      "fen": "r2q1rk1/4bpp1/p1ppp2p/7b/3Pn2B/2N2N1P/PP2QPP1/R3R1K1 w - - 0 15",
+      "solution": [
+        "Qxe4",
+        "Bxf3",
+        "Bxe7",
+        "Bxe4",
+        "Bxd8"
+      ],
+      "gameUrl": "https://lichess.org/HyJ4NXB8/white#28",
+      "white": "AntiLondres",
+      "black": "Q-erdenker01",
+      "wRating": 2184,
+      "bRating": 2217,
+      "id": 1100
+    },
+    {
+      "date": "2025-06-26",
+      "fen": "k4r2/pp6/2p3Q1/3p2P1/4r2P/8/PPP2q2/2KR1R2 b - - 2 30",
+      "solution": [
+        "Qe3+",
+        "Kb1",
+        "Rxf1",
+        "Qg8+",
+        "Re8"
+      ],
+      "gameUrl": "https://lichess.org/bjvSXgAE/white#59",
+      "white": "GatelxD",
+      "black": "CiscoAHL",
+      "wRating": 1743,
+      "bRating": 1777,
+      "id": 1101
+    },
+    {
+      "date": "2025-06-27",
+      "fen": "2r3k1/p4p1p/Pn2p1p1/3pP1P1/5P2/4B1P1/2r4R/R6K w - - 0 29",
+      "solution": [
+        "Rxc2",
+        "Rxc2",
+        "Bxb6",
+        "axb6",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/eOhm3Aud/black#56",
+      "white": "ZANATE",
+      "black": "adel1373",
+      "wRating": 1803,
+      "bRating": 1737,
+      "id": 1102
+    },
+    {
+      "date": "2025-06-28",
+      "fen": "8/pp4bk/2q2npp/2P1Bp2/5P1P/4Q1P1/P3Pn2/3R1RK1 b - - 0 30",
+      "solution": [
+        "Nh3+",
+        "Kh2",
+        "Ng4+",
+        "Kxh3",
+        "Nxe3"
+      ],
+      "gameUrl": "https://lichess.org/THqBcNDR/black#59",
+      "white": "chess2351492137",
+      "black": "Khalilmousavii",
+      "bTitle": "GM",
+      "wRating": 2558,
+      "bRating": 2649,
+      "id": 1103
+    },
+    {
+      "date": "2025-06-29",
+      "fen": "2r3k1/5p2/p3p1nQ/3pPP2/2qN4/6BP/7K/4b3 w - - 0 34",
+      "solution": [
+        "f6",
+        "Bxg3+",
+        "Kxg3",
+        "Qd3+",
+        "Nf3"
+      ],
+      "gameUrl": "https://lichess.org/B294fXRo/white#66",
+      "white": "RedBear1983",
+      "black": "MordsMordreas",
+      "wRating": 1927,
+      "bRating": 2161,
+      "id": 1104
+    },
+    {
+      "date": "2025-06-30",
+      "fen": "r3kb1r/1p1b1p2/p2ppp1p/2q2P1B/2nNP3/2N3R1/P1PQ2PP/1R4K1 w kq - 1 20",
+      "solution": [
+        "Qf2",
+        "e5",
+        "Ne6",
+        "Qxf2+",
+        "Kxf2"
+      ],
+      "gameUrl": "https://lichess.org/vbymThWp/white#38",
+      "white": "Vampilu",
+      "black": "CarlsenIsNext",
+      "wRating": 2483,
+      "bRating": 2425,
+      "id": 1105
+    },
+    {
+      "date": "2025-07-01",
+      "fen": "4Rbk1/p4p1p/6p1/8/1PQ1N3/2P4P/2rq1PP1/6K1 b - - 2 31",
+      "solution": [
+        "Rc1+",
+        "Kh2",
+        "Qf4+",
+        "g3",
+        "Qf3"
+      ],
+      "gameUrl": "https://lichess.org/l9CpsKKt/black#61",
+      "white": "smorris",
+      "black": "evanrthomas",
+      "wRating": 1707,
+      "bRating": 1737,
+      "id": 1106
+    },
+    {
+      "date": "2025-07-02",
+      "fen": "6qk/1p4p1/B1n2rQp/3p4/8/2P2P2/P6P/6RK w - - 1 30",
+      "solution": [
+        "Qxf6",
+        "gxf6",
+        "Rxg8+",
+        "Kxg8",
+        "Bxb7"
+      ],
+      "gameUrl": "https://lichess.org/VCcicFSZ/white#58",
+      "white": "MityshevS",
+      "black": "LUDVIG_CARLSSON",
+      "bTitle": "IM",
+      "wRating": 2364,
+      "bRating": 2602,
+      "id": 1107
+    },
+    {
+      "date": "2025-07-03",
+      "fen": "6k1/1p3r2/p1p1p3/4Pqpp/3P4/1P2R1QP/P4PP1/6K1 b - - 1 33",
+      "solution": [
+        "h4",
+        "Qf3",
+        "Qb1+",
+        "Kh2",
+        "Rxf3"
+      ],
+      "gameUrl": "https://lichess.org/HGBswAqB/black#65",
+      "white": "Orudolfovich",
+      "black": "schizzare_ovunque",
+      "wRating": 1993,
+      "bRating": 1896,
+      "id": 1108
+    },
+    {
+      "date": "2025-07-04",
+      "fen": "2kr4/pp4R1/2p1p1P1/4P3/4p3/2P5/PP6/1K6 b - - 0 28",
+      "solution": [
+        "e3",
+        "Rh7",
+        "e2",
+        "Rh1",
+        "Rd1+"
+      ],
+      "gameUrl": "https://lichess.org/yFWOkPXm/black#55",
+      "white": "kamikaze88",
+      "black": "Scesny",
+      "wRating": 1905,
+      "bRating": 1946,
+      "id": 1109
+    },
+    {
+      "date": "2025-07-05",
+      "fen": "6k1/5pb1/p1p1p1pp/P1B2q2/2bP1Q2/1rP1RN1P/5PP1/6K1 w - - 1 24",
+      "solution": [
+        "Qxf5",
+        "gxf5",
+        "Nd2",
+        "f4",
+        "Rf3"
+      ],
+      "gameUrl": "https://lichess.org/pOyJVJho/white#46",
+      "white": "hunterchalid",
+      "black": "Faihadianti",
+      "wRating": 2191,
+      "bRating": 2251,
+      "id": 1110
+    },
+    {
+      "date": "2025-07-06",
+      "fen": "r5k1/pppb2p1/1bnp1q2/6N1/8/2NQ2B1/PP4PP/7K w - - 0 20",
+      "solution": [
+        "Qh7+",
+        "Kf8",
+        "Qh8+",
+        "Ke7",
+        "Nd5#"
+      ],
+      "gameUrl": "https://lichess.org/IoUBUxjr/white#38",
+      "white": "fall7rise8",
+      "black": "above4u",
+      "wRating": 1725,
+      "bRating": 1638,
+      "id": 1111
+    },
+    {
+      "date": "2025-07-07",
+      "fen": "r4r1k/ppp4p/2n5/2b5/8/6N1/PPPP2PP/R1B2R1K b - - 8 18",
+      "solution": [
+        "Rxf1+",
+        "Nxf1",
+        "Rf8",
+        "Ng3",
+        "Re8"
+      ],
+      "gameUrl": "https://lichess.org/xBiZzLMA/black#35",
+      "white": "zlodey4ik",
+      "black": "nameless2",
+      "wRating": 1720,
+      "bRating": 1680,
+      "id": 1112
+    },
+    {
+      "date": "2025-07-08",
+      "fen": "1Q6/K4k2/8/5p2/8/8/1R2p3/2r5 b - - 0 56",
+      "solution": [
+        "Ra1+",
+        "Kb6",
+        "e1=Q",
+        "Qc7+",
+        "Qe7"
+      ],
+      "gameUrl": "https://lichess.org/j76CnG9Q/black#111",
+      "white": "zanbato",
+      "black": "umbabarauma",
+      "wTitle": "NM",
+      "wRating": 2231,
+      "bRating": 2027,
+      "id": 1113
+    },
+    {
+      "date": "2025-07-09",
+      "fen": "r3k2r/pppqbppp/2n1b3/3p2PQ/PP1Pp2P/2P1P3/5PB1/RNB1K1NR b KQkq - 0 11",
+      "solution": [
+        "Bg4",
+        "Bh3",
+        "Bxh5",
+        "Bxd7+",
+        "Kxd7"
+      ],
+      "gameUrl": "https://lichess.org/yEhL5ybm/black#21",
+      "white": "avi20072008",
+      "black": "daninstantane",
+      "wRating": 1832,
+      "bRating": 1856,
+      "id": 1114
+    },
+    {
+      "date": "2025-07-10",
+      "fen": "r3r1k1/5ppp/b4n2/3pR3/1b1N4/P4N2/P4PPP/R1B3K1 b - - 0 22",
+      "solution": [
+        "Bc3",
+        "Rxe8+",
+        "Rxe8",
+        "Rb1",
+        "Bxd4"
+      ],
+      "gameUrl": "https://lichess.org/kwtJ5Dux/black#43",
+      "white": "stomasg",
+      "black": "CSBschaak",
+      "wRating": 1746,
+      "bRating": 1874,
+      "id": 1115
+    },
+    {
+      "date": "2025-07-11",
+      "fen": "r4rk1/pbp2ppp/1pnbp3/1B6/Q2P4/4PqP1/PP3P1P/RNB2RK1 w - - 0 14",
+      "solution": [
+        "Nd2",
+        "Qd5",
+        "e4",
+        "Qxd4",
+        "Bxc6"
+      ],
+      "gameUrl": "https://lichess.org/Bgmp2kSF/white#26",
+      "white": "bhim_jakhar",
+      "black": "GabrielNadeauDubois",
+      "wRating": 1684,
+      "bRating": 1687,
+      "id": 1116
+    },
+    {
+      "date": "2025-07-12",
+      "fen": "r1b2rk1/1p2bppp/pqnp4/3Np3/2B1PP2/PN6/1PP2nPP/R1BQ1RK1 b - - 6 13",
+      "solution": [
+        "Nh3+",
+        "Kh1",
+        "Qg1+",
+        "Rxg1",
+        "Nf2#"
+      ],
+      "gameUrl": "https://lichess.org/RIwXCRjL/black#25",
+      "white": "cavalote",
+      "black": "Six_of_Cows",
+      "wRating": 1724,
+      "bRating": 1698,
+      "id": 1117
+    },
+    {
+      "date": "2025-07-13",
+      "fen": "r3r1k1/pp2qp1p/3b2p1/3p4/3P2n1/1PN4P/PBP1BPP1/R2QK2R b KQ - 0 15",
+      "solution": [
+        "Nxf2",
+        "Kxf2",
+        "Qe3+",
+        "Kf1",
+        "Bg3"
+      ],
+      "gameUrl": "https://lichess.org/WC1zB0Po/black#29",
+      "white": "Egerev_Dmitry_1205",
+      "black": "highchesslevel14",
+      "wRating": 2235,
+      "bRating": 2235,
+      "id": 1118
+    },
+    {
+      "date": "2025-07-14",
+      "fen": "8/8/1b2p3/1P1p3P/3P2k1/1K6/8/8 w - - 0 47",
+      "solution": [
+        "h6",
+        "Bxd4",
+        "h7",
+        "Kf5",
+        "b6"
+      ],
+      "gameUrl": "https://lichess.org/DIt9pXgs/white#92",
+      "white": "GlennTipton",
+      "black": "Ivn_2001",
+      "wTitle": "FM",
+      "bTitle": "CM",
+      "wRating": 2436,
+      "bRating": 2384,
+      "id": 1119
+    },
+    {
+      "date": "2025-07-15",
+      "fen": "8/1p2qkpQ/p2p2rp/3Pp3/7P/3R4/PPr2P2/5RK1 w - - 2 27",
+      "solution": [
+        "Rg3",
+        "Qf6",
+        "h5",
+        "Rg5",
+        "Qxc2"
+      ],
+      "gameUrl": "https://lichess.org/yIYhwNlU/white#52",
+      "white": "MarkusMaischberger",
+      "black": "peluca2004",
+      "wRating": 2542,
+      "bRating": 2515,
+      "id": 1120
+    },
+    {
+      "date": "2025-07-16",
+      "fen": "3rr1k1/2p5/p7/1pP2p2/8/P1Q1n1q1/1P3RP1/1BR3K1 b - - 3 34",
+      "solution": [
+        "Rd1+",
+        "Rxd1",
+        "Qxf2+",
+        "Kxf2",
+        "Nxd1+"
+      ],
+      "gameUrl": "https://lichess.org/rB7Rc3Th/black#67",
+      "white": "DrunkViper",
+      "black": "Lastf",
+      "wTitle": "GM",
+      "wRating": 2532,
+      "bRating": 2310,
+      "id": 1121
+    },
+    {
+      "date": "2025-07-17",
+      "fen": "6rk/pp1q2rp/7Q/5P2/2p1P3/5nR1/PP1p1NRP/7K w - - 0 31",
+      "solution": [
+        "Qxh7+",
+        "Kxh7",
+        "Rh3+",
+        "Nh4",
+        "Rxh4#"
+      ],
+      "gameUrl": "https://lichess.org/WY11yNRF/white#60",
+      "white": "queentrapper",
+      "black": "chessbroad",
+      "wRating": 2262,
+      "bRating": 2221,
+      "id": 1122
+    },
+    {
+      "date": "2025-07-18",
+      "fen": "3r3r/5p1p/4p1pk/1q6/8/5PQ1/1P3PK1/R2R4 w - - 0 34",
+      "solution": [
+        "Rxd8",
+        "Rxd8",
+        "Qh4+",
+        "Kg7",
+        "Qxd8"
+      ],
+      "gameUrl": "https://lichess.org/Amn19Ykk/white#66",
+      "white": "rudymirasol888",
+      "black": "glyba666",
+      "wRating": 1973,
+      "bRating": 2298,
+      "id": 1123
+    },
+    {
+      "date": "2025-07-19",
+      "fen": "6k1/1bR2np1/p3q2p/1p6/1B3Q2/P2rp2P/1P2N1P1/7K b - - 3 34",
+      "solution": [
+        "Qxh3+",
+        "Qh2",
+        "Rd1+",
+        "Ng1",
+        "Bxg2#"
+      ],
+      "gameUrl": "https://lichess.org/1bkaFeKc/black#67",
+      "white": "four_season_chess",
+      "black": "Assios",
+      "bTitle": "LM",
+      "wRating": 2255,
+      "bRating": 2316,
+      "id": 1124
+    },
+    {
+      "date": "2025-07-20",
+      "fen": "r5k1/p4rq1/2pBR1Qp/1p2Pn2/6R1/2b4P/P5P1/7K w - - 0 30",
+      "solution": [
+        "Qh5",
+        "Qxg4",
+        "Qxg4+",
+        "Rg7",
+        "Qxf5"
+      ],
+      "gameUrl": "https://lichess.org/GYSWcOR9/white#58",
+      "white": "masslos",
+      "black": "mrelko",
+      "wRating": 1705,
+      "bRating": 1736,
+      "id": 1125
+    },
+    {
+      "date": "2025-07-21",
+      "fen": "2r1q1k1/1R3pp1/7B/1P1n2Q1/3PB3/6Pb/5P1P/6K1 b - - 2 26",
+      "solution": [
+        "Rc1+",
+        "Qxc1",
+        "Qxe4",
+        "f3",
+        "Qe2"
+      ],
+      "gameUrl": "https://lichess.org/jE05puJz/black#51",
+      "white": "YousefMsam",
+      "black": "mozartinho",
+      "wRating": 2169,
+      "bRating": 2161,
+      "id": 1126
+    },
+    {
+      "date": "2025-07-22",
+      "fen": "3rb1k1/5p1p/2p1p1p1/3P4/4r3/1B6/PKR3PP/3R4 w - - 0 26",
+      "solution": [
+        "dxc6",
+        "Rxd1",
+        "c7",
+        "Bd7",
+        "c8=Q+"
+      ],
+      "gameUrl": "https://lichess.org/cRI6zO31/white#50",
+      "white": "SchaakmeesterDeluxe",
+      "black": "gomaks",
+      "wRating": 2015,
+      "bRating": 2077,
+      "id": 1127
+    },
+    {
+      "date": "2025-07-23",
+      "fen": "5r2/6k1/p3p1pp/p1pQb3/2P1N1P1/3K3P/1q6/5R2 w - - 0 37",
+      "solution": [
+        "Qd7+",
+        "Kg8",
+        "Qxe6+",
+        "Kg7",
+        "Qe7+"
+      ],
+      "gameUrl": "https://lichess.org/FLqbW4pj/white#72",
+      "white": "Gigabytee1214",
+      "black": "Alex107",
+      "wRating": 1672,
+      "bRating": 2096,
+      "id": 1128
+    },
+    {
+      "date": "2025-07-24",
+      "fen": "8/6k1/B1P3p1/7p/1K6/8/8/6r1 w - - 1 46",
+      "solution": [
+        "c7",
+        "Rc1",
+        "Bc4",
+        "Rb1+",
+        "Kc5"
+      ],
+      "gameUrl": "https://lichess.org/6uyhyOj7/white#90",
+      "white": "e4-Training",
+      "black": "JaschaCL",
+      "wRating": 1960,
+      "bRating": 1964,
+      "id": 1129
+    },
+    {
+      "date": "2025-07-25",
+      "fen": "6k1/p4p2/1p1RrPrp/8/2R4p/8/P1P4K/8 w - - 1 33",
+      "solution": [
+        "Rc8+",
+        "Kh7",
+        "Rxe6",
+        "fxe6",
+        "f7"
+      ],
+      "gameUrl": "https://lichess.org/HMSGqROH/white#64",
+      "white": "Nima737",
+      "black": "antonio96",
+      "wRating": 2342,
+      "bRating": 2348,
+      "id": 1130
+    },
+    {
+      "date": "2025-07-26",
+      "fen": "8/8/1rP2k2/4pp2/8/3B4/2P3p1/R5Kb w - - 1 55",
+      "solution": [
+        "c7",
+        "Rc6",
+        "Ra6",
+        "Rxa6",
+        "Bxa6"
+      ],
+      "gameUrl": "https://lichess.org/m2i7WyCw/white#108",
+      "white": "K_KING9002",
+      "black": "Takacsbl",
+      "bTitle": "IM",
+      "wRating": 2603,
+      "bRating": 2608,
+      "id": 1131
+    },
+    {
+      "date": "2025-07-27",
+      "fen": "r5k1/6p1/p7/3pPp2/P1qN2B1/5K2/5PPQ/n6R b - - 6 32",
+      "solution": [
+        "Qd3+",
+        "Kf4",
+        "Qe4+",
+        "Kg5",
+        "Qxg4#"
+      ],
+      "gameUrl": "https://lichess.org/THNhyVWe/black#63",
+      "white": "sharingboxer",
+      "black": "Drakeche",
+      "wRating": 2094,
+      "bRating": 1931,
+      "id": 1132
+    },
+    {
+      "date": "2025-07-28",
+      "fen": "rnbqkb1r/pp2pp1p/3p2p1/3N4/3Nn3/8/PPP2PPP/R1BQKB1R w KQkq - 0 7",
+      "solution": [
+        "Bb5+",
+        "Bd7",
+        "Qe2",
+        "Nc5",
+        "Nf6#"
+      ],
+      "gameUrl": "https://lichess.org/ISpxrXyk/white#12",
+      "white": "alinoorhadi2025",
+      "black": "Nabeltahsen",
+      "wRating": 2276,
+      "bRating": 2152,
+      "id": 1133
+    },
+    {
+      "date": "2025-07-29",
+      "fen": "r5k1/1p3ppb/2p1q2p/6P1/pQ5P/2P1p3/PP2B2N/2KR3R b - - 0 27",
+      "solution": [
+        "Qxa2",
+        "Bd3",
+        "Bxd3",
+        "Rxd3",
+        "Qa1+"
+      ],
+      "gameUrl": "https://lichess.org/bTiaRBKG/black#53",
+      "white": "gangaykar",
+      "black": "Rabadan05",
+      "wRating": 1819,
+      "bRating": 1513,
+      "id": 1134
+    },
+    {
+      "date": "2025-07-30",
+      "fen": "r1bqkb1r/pp3p1p/2n1pnp1/2PpP3/2B5/1NP2N2/PP3PPP/R1BQK2R b KQkq - 0 10",
+      "solution": [
+        "dxc4",
+        "Qxd8+",
+        "Nxd8",
+        "exf6",
+        "cxb3"
+      ],
+      "gameUrl": "https://lichess.org/900QAgVs/black#19",
+      "white": "Pawn_Jovi",
+      "black": "Sash_koval",
+      "wRating": 1584,
+      "bRating": 1542,
+      "id": 1135
+    },
+    {
+      "date": "2025-07-31",
+      "fen": "1r1q1rk1/2p2pp1/p3pn1p/8/3P1b1P/3Q1PN1/PPB2P2/4RK1R w - - 3 23",
+      "solution": [
+        "Nh5",
+        "g6",
+        "Nxf4",
+        "Rxb2",
+        "Nxg6"
+      ],
+      "gameUrl": "https://lichess.org/fLHqb3lS/white#44",
+      "white": "mohamed188",
+      "black": "Mvlitovicius",
+      "bTitle": "FM",
+      "wRating": 2312,
+      "bRating": 2365,
+      "id": 1136
+    },
+    {
+      "date": "2025-08-01",
+      "fen": "2q3k1/6pp/b3p3/3nN3/3P4/P7/2r2PPP/1QBR2K1 b - - 0 29",
+      "solution": [
+        "Nc3",
+        "Qxc2",
+        "Ne2+",
+        "Qxe2",
+        "Bxe2"
+      ],
+      "gameUrl": "https://lichess.org/O74PpO2M/black#57",
+      "white": "TolTolEm",
+      "black": "WilliamTheDestroyer2",
+      "bTitle": "FM",
+      "wRating": 2293,
+      "bRating": 2293,
+      "id": 1137
+    },
+    {
+      "date": "2025-08-02",
+      "fen": "rn1qr1k1/pp3ppp/2pb4/8/3P3R/3Q1N2/PP3PPP/R1B3K1 b - - 0 14",
+      "solution": [
+        "Qxh4",
+        "Nxh4",
+        "Re1+",
+        "Qf1",
+        "Rxf1+"
+      ],
+      "gameUrl": "https://lichess.org/VyNAW6F7/black#27",
+      "white": "Mrsolution",
+      "black": "mirivalusomodulo",
+      "wRating": 2215,
+      "bRating": 2268,
+      "id": 1138
+    },
+    {
+      "date": "2025-08-03",
+      "fen": "8/8/8/8/6p1/1kr1R1P1/6K1/8 w - - 2 44",
+      "solution": [
+        "Kf2",
+        "Kc2",
+        "Rxc3+",
+        "Kxc3",
+        "Ke3"
+      ],
+      "gameUrl": "https://lichess.org/hGpu4txG/white#86",
+      "white": "elvenking",
+      "black": "B-ron393",
+      "wRating": 1752,
+      "bRating": 1600,
+      "id": 1139
+    },
+    {
+      "date": "2025-08-04",
+      "fen": "7k/6p1/3Q1r1p/p7/1p6/4R1P1/P4PKP/2q5 w - - 2 37",
+      "solution": [
+        "Re8+",
+        "Kh7",
+        "Qd3+",
+        "Rg6",
+        "Re6"
+      ],
+      "gameUrl": "https://lichess.org/wTFx1fxu/white#72",
+      "white": "Rahul0007",
+      "black": "NoToSzach",
+      "wRating": 1974,
+      "bRating": 2162,
+      "id": 1140
+    },
+    {
+      "date": "2025-08-05",
+      "fen": "r3r1k1/pp1qBb1p/2ppnQpP/3Np3/4Pp2/1P1P4/1PP2PP1/R3K2R w KQ - 0 22",
+      "solution": [
+        "Qg7+",
+        "Nxg7",
+        "Nf6+",
+        "Kh8",
+        "hxg7+"
+      ],
+      "gameUrl": "https://lichess.org/K5hriYp4/white#42",
+      "white": "Vahid_119",
+      "black": "raikar",
+      "wRating": 1814,
+      "bRating": 1973,
+      "id": 1141
+    },
+    {
+      "date": "2025-08-06",
+      "fen": "1k1r1b2/1p2n1p1/p4pP1/2P2q1Q/1P6/P2pB3/3N1PB1/5K2 w - - 5 34",
+      "solution": [
+        "Qh2+",
+        "Ka8",
+        "Qc7",
+        "Qc8",
+        "Bxb7+"
+      ],
+      "gameUrl": "https://lichess.org/RNBN6Dbz/white#66",
+      "white": "skirazer",
+      "black": "Noor_02",
+      "wRating": 2158,
+      "bRating": 2158,
+      "id": 1142
+    },
+    {
+      "date": "2025-08-07",
+      "fen": "5rk1/pp3p2/4pQpn/3pP1N1/3q4/1P5P/P1r3P1/R4R1K w - - 1 28",
+      "solution": [
+        "Nxe6",
+        "fxe6",
+        "Qxf8+",
+        "Kh7",
+        "Qe7+"
+      ],
+      "gameUrl": "https://lichess.org/IGy2Wu58/white#54",
+      "white": "Nicolosse1",
+      "black": "DJRhino",
+      "wRating": 1905,
+      "bRating": 1919,
+      "id": 1143
+    },
+    {
+      "date": "2025-08-08",
+      "fen": "4nrk1/3p1rpp/3P3Q/p1p5/2P5/1PB5/P3p1RP/2K2qR1 w - - 2 41",
+      "solution": [
+        "Kb2",
+        "e1=Q",
+        "Rxg7+",
+        "Nxg7",
+        "Rxg7+"
+      ],
+      "gameUrl": "https://lichess.org/E6umnzuJ/white#80",
+      "white": "DarkAlekhine",
+      "black": "skandalaros",
+      "wTitle": "GM",
+      "wRating": 2666,
+      "bRating": 2279,
+      "id": 1144
+    },
+    {
+      "date": "2025-08-09",
+      "fen": "2rq1rk1/pb3ppp/1p6/3n4/3N4/1B1Q1P2/PPP3PP/R4RK1 b - - 0 17",
+      "solution": [
+        "Nf4",
+        "Qd2",
+        "Qxd4+",
+        "Qxd4",
+        "Ne2+"
+      ],
+      "gameUrl": "https://lichess.org/XfgLyLe2/black#33",
+      "white": "songming1",
+      "black": "BALEKOZ_BKD",
+      "wRating": 1597,
+      "bRating": 1821,
+      "id": 1145
+    },
+    {
+      "date": "2025-08-10",
+      "fen": "6r1/pp3R1Q/3kq1r1/3p4/3B4/4P3/PP4P1/6K1 w - - 5 32",
+      "solution": [
+        "Qh2+",
+        "Kc6",
+        "Qc7+",
+        "Kb5",
+        "Qxb7+"
+      ],
+      "gameUrl": "https://lichess.org/uT6KpEO2/white#62",
+      "white": "marat722",
+      "black": "Mannsi13",
+      "wRating": 1923,
+      "bRating": 1647,
+      "id": 1146
+    },
+    {
+      "date": "2025-08-11",
+      "fen": "2rr2k1/4bppp/2p5/pbN1P3/4P3/3p2P1/PP3PBP/2RR2K1 b - - 1 21",
+      "solution": [
+        "d2",
+        "Rc2",
+        "Bxc5",
+        "Rxc5",
+        "Be2"
+      ],
+      "gameUrl": "https://lichess.org/kVBk0qnj/black#41",
+      "white": "Paff-Morris",
+      "black": "PeterTheGreat38",
+      "wRating": 2293,
+      "bRating": 2318,
+      "id": 1147
+    },
+    {
+      "date": "2025-08-12",
+      "fen": "4k3/5p2/2q1bQ2/1p4P1/2p1p3/4N3/PP1r1PK1/7R b - - 1 32",
+      "solution": [
+        "Qb6",
+        "g6",
+        "Bh3+",
+        "Rxh3",
+        "Qxf6"
+      ],
+      "gameUrl": "https://lichess.org/MgSRUppc/black#63",
+      "white": "Yerba_on_the_Board",
+      "black": "bayad2016",
+      "wRating": 2575,
+      "bRating": 2509,
+      "id": 1148
+    },
+    {
+      "date": "2025-08-13",
+      "fen": "4k3/1p2P1p1/p4p1p/5P2/6K1/2P3P1/r6P/4R3 w - - 0 31",
+      "solution": [
+        "Kh5",
+        "Rxh2+",
+        "Kg6",
+        "Rg2",
+        "Kxg7"
+      ],
+      "gameUrl": "https://lichess.org/Q376bVFL/white#60",
+      "white": "eintracht75",
+      "black": "Rafa_Fischer",
+      "wRating": 1709,
+      "bRating": 1754,
+      "id": 1149
+    },
+    {
+      "date": "2025-08-14",
+      "fen": "2b5/1p5k/1q1r4/8/2BppNpP/1Q4P1/5PK1/8 w - - 0 53",
+      "solution": [
+        "Bg8+",
+        "Kh6",
+        "Qf7",
+        "Rd7",
+        "Qh5+"
+      ],
+      "gameUrl": "https://lichess.org/ou83if56/white#104",
+      "white": "dalbasus",
+      "black": "Georgii64ru",
+      "wRating": 2051,
+      "bRating": 2156,
+      "id": 1150
+    },
+    {
+      "date": "2025-08-15",
+      "fen": "r4rk1/2q1bRpp/4p3/4P3/6N1/2p4P/5QP1/5RK1 w - - 0 35",
+      "solution": [
+        "Nh6+",
+        "gxh6",
+        "Qg3+",
+        "Kh8",
+        "Qg7#"
+      ],
+      "gameUrl": "https://lichess.org/k3A02v21/white#68",
+      "white": "sumitdas8128",
+      "black": "jlmg",
+      "wRating": 1896,
+      "bRating": 1908,
+      "id": 1151
+    },
+    {
+      "date": "2025-08-16",
+      "fen": "r5k1/1p3rb1/p1p1Q3/4n3/2P1P3/3B4/PP1Kpq2/6RR w - - 0 27",
+      "solution": [
+        "Rxg7+",
+        "Kxg7",
+        "Qxe5+",
+        "Kg8",
+        "Qh8#"
+      ],
+      "gameUrl": "https://lichess.org/UvEjfijs/white#52",
+      "white": "quaracique77",
+      "black": "samiao",
+      "wRating": 1800,
+      "bRating": 1858,
+      "id": 1152
+    },
+    {
+      "date": "2025-08-17",
+      "fen": "8/8/4k1pp/3pP3/p4P2/3K2PP/8/8 b - - 0 45",
+      "solution": [
+        "a3",
+        "Kc3",
+        "d4+",
+        "Kb3",
+        "d3"
+      ],
+      "gameUrl": "https://lichess.org/7wuDZD0i/black#89",
+      "white": "k-007",
+      "black": "PatzimusPrime",
+      "wRating": 1525,
+      "bRating": 1553,
+      "id": 1153
+    },
+    {
+      "date": "2025-08-18",
+      "fen": "rnbq1rk1/p3bNpp/2p5/8/1p2n3/1B6/PPPP2PP/RNBQ1RK1 b - - 0 11",
+      "solution": [
+        "Qd4+",
+        "Kh1",
+        "Nf2+",
+        "Rxf2",
+        "Qxf2"
+      ],
+      "gameUrl": "https://lichess.org/7bNTIddr/black#21",
+      "white": "M4i_S4kur4jim4",
+      "black": "sogor_1055",
+      "wRating": 1539,
+      "bRating": 1534,
+      "id": 1154
+    },
+    {
+      "date": "2025-08-19",
+      "fen": "2rq1rk1/4bppp/p3b3/1p1pPp2/2nP1P2/1PN2N2/P2B2PP/R2Q1RK1 b - - 0 18",
+      "solution": [
+        "Nxd2",
+        "Qxd2",
+        "Bb4",
+        "Rfc1",
+        "Qa5"
+      ],
+      "gameUrl": "https://lichess.org/KlUCqXmz/black#35",
+      "white": "Nikolay271176",
+      "black": "Oleg_Sh",
+      "wRating": 2105,
+      "bRating": 2052,
+      "id": 1155
+    },
+    {
+      "date": "2025-08-20",
+      "fen": "1Q6/3r4/2p1p3/p2kq1p1/4n3/6RP/2P2PPK/8 w - - 3 34",
+      "solution": [
+        "c4+",
+        "Kd4",
+        "Qb2+",
+        "Kxc4",
+        "Qxe5"
+      ],
+      "gameUrl": "https://lichess.org/kIz6vAnR/white#66",
+      "white": "NicoleChanHuiXing",
+      "black": "pankajjayshwal",
+      "wRating": 1882,
+      "bRating": 1944,
+      "id": 1156
+    },
+    {
+      "date": "2025-08-21",
+      "fen": "4qn1k/6pp/p1r5/2bN4/Q6P/6B1/P4PP1/2R3K1 b - - 2 26",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Rf6+",
+        "Qf4",
+        "Rxf4+"
+      ],
+      "gameUrl": "https://lichess.org/lsWehGbz/black#51",
+      "white": "Cadiz81",
+      "black": "PranavBobbySekhar",
+      "wTitle": "FM",
+      "wRating": 2281,
+      "bRating": 2295,
+      "id": 1157
+    },
+    {
+      "date": "2025-08-22",
+      "fen": "1k3q2/2p5/1p1p2p1/P2Qp2b/2P1P3/3P2RP/1r4NK/8 b - - 0 36",
+      "solution": [
+        "Bf3",
+        "axb6",
+        "Bxg2",
+        "bxc7+",
+        "Kxc7"
+      ],
+      "gameUrl": "https://lichess.org/YBd3FHaY/black#71",
+      "white": "SimonMkrtchyan",
+      "black": "kingph31",
+      "wTitle": "FM",
+      "wRating": 2346,
+      "bRating": 2262,
+      "id": 1158
+    },
+    {
+      "date": "2025-08-23",
+      "fen": "rn2kr2/ppp2pQp/8/3P1b2/2P1q3/5N2/P2B1PPP/3K1B1R w q - 5 14",
+      "solution": [
+        "Bd3",
+        "Qxd3",
+        "Re1+",
+        "Be4",
+        "Qe5+"
+      ],
+      "gameUrl": "https://lichess.org/SkF2wSxD/white#26",
+      "white": "ramesses2",
+      "black": "ChessGeauxld",
+      "wRating": 1672,
+      "bRating": 1680,
+      "id": 1159
+    },
+    {
+      "date": "2025-08-24",
+      "fen": "r2q3k/3n1Q1p/1p1N2p1/pP6/8/r7/5PPP/4R1K1 w - - 0 28",
+      "solution": [
+        "Ne8",
+        "Qxe8",
+        "Rxe8+",
+        "Rxe8",
+        "Qxe8+"
+      ],
+      "gameUrl": "https://lichess.org/HnE0N3qs/white#54",
+      "white": "billdong123",
+      "black": "bushwacker8",
+      "wRating": 2115,
+      "bRating": 1991,
+      "id": 1160
+    },
+    {
+      "date": "2025-08-25",
+      "fen": "2rq1rk1/Qp3p1p/3p1npb/4pP2/4P3/1PN1B2P/1PP3P1/R4RK1 b - - 0 17",
+      "solution": [
+        "Ra8",
+        "Qb6",
+        "Rxa1",
+        "Rxa1",
+        "gxf5"
+      ],
+      "gameUrl": "https://lichess.org/7OSXgh0R/black#33",
+      "white": "alin101",
+      "black": "Luis-E-Salerno89",
+      "wRating": 2117,
+      "bRating": 2158,
+      "id": 1161
+    },
+    {
+      "date": "2025-08-26",
+      "fen": "1rbq3k/1pnnrQNp/p2p2p1/2pP4/P1P5/2NB3P/1P4P1/R1B2R1K b - - 0 20",
+      "solution": [
+        "Rxf7",
+        "Rxf7",
+        "Ne5",
+        "Rxc7",
+        "Qxc7"
+      ],
+      "gameUrl": "https://lichess.org/IyzioH1Y/black#39",
+      "white": "Falafel85",
+      "black": "izel2",
+      "bTitle": "FM",
+      "wRating": 2603,
+      "bRating": 2607,
+      "id": 1162
+    },
+    {
+      "date": "2025-08-27",
+      "fen": "r1br2k1/5ppp/p2bpq2/1p1p4/8/2PQBN2/PP3PPP/R3R1K1 w - - 0 16",
+      "solution": [
+        "Bg5",
+        "Qg6",
+        "Qxg6",
+        "hxg6",
+        "Bxd8"
+      ],
+      "gameUrl": "https://lichess.org/zfh6S117/white#30",
+      "white": "Fedor2016",
+      "black": "FilthyBishop",
+      "wRating": 1750,
+      "bRating": 2015,
+      "id": 1163
+    },
+    {
+      "date": "2025-08-28",
+      "fen": "3rr1k1/pp3ppp/8/8/2p1b1QN/2q1P1PP/P4P2/R2R2K1 w - - 0 27",
+      "solution": [
+        "Qxe4",
+        "g5",
+        "Qg4",
+        "h6",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/mAYmBFHt/white#52",
+      "white": "Yuvanesh_a",
+      "black": "ASHWINSAIRAM",
+      "wRating": 1935,
+      "bRating": 2508,
+      "id": 1164
+    },
+    {
+      "date": "2025-08-29",
+      "fen": "7r/1ppq1pk1/p2p2p1/3Pp2r/PPP1PnN1/R4R1P/5PP1/Q5K1 b - - 8 24",
+      "solution": [
+        "Qxg4",
+        "Rg3",
+        "Ne2+",
+        "Kh2",
+        "Qf4"
+      ],
+      "gameUrl": "https://lichess.org/vhmI02lC/black#47",
+      "white": "Guru_das",
+      "black": "serhaneroglu1",
+      "wRating": 1952,
+      "bRating": 1842,
+      "id": 1165
+    },
+    {
+      "date": "2025-08-30",
+      "fen": "r1b2r2/ppp1q1pk/2n1p2p/4Np2/3P4/1PKB2Q1/P1PN4/R6R b - - 1 19",
+      "solution": [
+        "Qb4+",
+        "Kb2",
+        "Qxd4+",
+        "Kb1",
+        "Nxe5"
+      ],
+      "gameUrl": "https://lichess.org/R5Sa8hsH/black#37",
+      "white": "zidnou",
+      "black": "Dietrh-2",
+      "wRating": 1736,
+      "bRating": 1708,
+      "id": 1166
+    },
+    {
+      "date": "2025-08-31",
+      "fen": "8/p7/8/PP5p/4kp1K/8/8/8 w - - 0 38",
+      "solution": [
+        "b6",
+        "axb6",
+        "a6",
+        "f3",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/vvpaRTlb/white#74",
+      "white": "JevynJoe",
+      "black": "Nirupam12",
+      "wRating": 1982,
+      "bRating": 2072,
+      "id": 1167
+    },
+    {
+      "date": "2025-09-01",
+      "fen": "8/6p1/4p2p/p3P3/3Pp3/r7/2k1K1PP/3R4 w - - 0 44",
+      "solution": [
+        "d5",
+        "Rd3",
+        "dxe6",
+        "Rxd1",
+        "e7"
+      ],
+      "gameUrl": "https://lichess.org/yg3uF0mt/white#86",
+      "white": "OrionNebula1976",
+      "black": "GPBegazo",
+      "wRating": 1749,
+      "bRating": 1734,
+      "id": 1168
+    },
+    {
+      "date": "2025-09-02",
+      "fen": "2rr2k1/1pq1bppp/pQ2pn2/n7/2P5/2N1BN1P/PP3PP1/3R1RK1 w - - 12 19",
+      "solution": [
+        "Qxc7",
+        "Rxc7",
+        "Bb6",
+        "Rxd1",
+        "Rxd1"
+      ],
+      "gameUrl": "https://lichess.org/CD7PFost/white#36",
+      "white": "djenggotmerah",
+      "black": "grinpavl",
+      "bTitle": "FM",
+      "wRating": 2080,
+      "bRating": 2086,
+      "id": 1169
+    },
+    {
+      "date": "2025-09-03",
+      "fen": "r4b1r/ppk1pQ2/n1p1Pp1p/3p4/7P/2N2R2/PPq5/3R1KN1 w - - 0 22",
+      "solution": [
+        "Nxd5+",
+        "cxd5",
+        "Rc3+",
+        "Qxc3",
+        "bxc3"
+      ],
+      "gameUrl": "https://lichess.org/2uvdrQ4g/white#42",
+      "white": "DerEchteOwenEvans",
+      "black": "MaratZab",
+      "wRating": 1776,
+      "bRating": 1829,
+      "id": 1170
+    },
+    {
+      "date": "2025-09-04",
+      "fen": "6k1/p1R5/3p2p1/2b1Pq2/2P4p/1KPQ4/P4r1P/8 w - - 5 39",
+      "solution": [
+        "Qd5+",
+        "Kh8",
+        "Qa8+",
+        "Qf8",
+        "Rc8"
+      ],
+      "gameUrl": "https://lichess.org/wgH5obSL/white#76",
+      "white": "doublej125",
+      "black": "Jh477756",
+      "wRating": 1844,
+      "bRating": 1937,
+      "id": 1171
+    },
+    {
+      "date": "2025-09-05",
+      "fen": "r2qkb1r/1b1n1p2/p1n1p1p1/1p1pP2p/3N1P2/P1NBB3/1PP3PP/R2Q1R1K w kq - 2 13",
+      "solution": [
+        "Nxe6",
+        "fxe6",
+        "Bxg6+",
+        "Ke7",
+        "f5"
+      ],
+      "gameUrl": "https://lichess.org/V1gxPph3/white#24",
+      "white": "Assios",
+      "black": "kareNsimFe",
+      "wTitle": "LM",
+      "wRating": 2282,
+      "bRating": 2206,
+      "id": 1172
+    },
+    {
+      "date": "2025-09-06",
+      "fen": "rn1k3r/pbpp1ppp/1p3n2/3PQ3/4P2q/2P5/P4PPP/R1B1KBNR w KQ - 3 10",
+      "solution": [
+        "Bg5",
+        "d6",
+        "Qxf6+",
+        "gxf6",
+        "Bxh4"
+      ],
+      "gameUrl": "https://lichess.org/mTTqHeeJ/white#18",
+      "white": "george49er",
+      "black": "jjaramir",
+      "wRating": 1615,
+      "bRating": 1592,
+      "id": 1173
+    },
+    {
+      "date": "2025-09-07",
+      "fen": "4r3/p4pkp/1p1RPqp1/8/3Q1P2/1P6/P5PK/8 w - - 1 36",
+      "solution": [
+        "exf7",
+        "Qxd4",
+        "fxe8=N+",
+        "Kf7",
+        "Rxd4"
+      ],
+      "gameUrl": "https://lichess.org/h6DPTkP6/white#70",
+      "white": "SweetDisaster",
+      "black": "HardcoreGock",
+      "wRating": 2121,
+      "bRating": 2124,
+      "id": 1174
     }
   ];
 }

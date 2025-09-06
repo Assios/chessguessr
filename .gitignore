@@ -1,5 +1,8 @@
 node_modules
 
+# Ignore build outputs and API build folder
+api/
+
 .cache
 .env
 .vercel
@@ -8,8 +11,7 @@ node_modules
 
 /build/
 /public/build
-/api/index.js
-/api/index.js.map
+#/api files are now ignored by directory rule above
 
 app/tailwind.css
 

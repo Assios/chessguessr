@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import useChessguessr from "../hooks/useChessguessr";
-import { Chessboard } from "react-chessboard";
+import ChessgroundBoard from "./ChessgroundBoard";
 import { Grid } from "./Grid";
 import { Row } from "./Row";
 import styled from "styled-components";
@@ -227,17 +227,17 @@ export const Chessguessr = ({
 
           <ChessboardWrapper>
             {position && (
-              <Chessboard
-                arePiecesDraggable={
+              <ChessgroundBoard
+                fen={position.fen()}
+                orientation={colorToPlay === "b" ? "black" : "white"}
+                width={getBoardWidth()}
+                draggable={
                   currentGuess.length < 5 &&
                   gameStatus === GameStatus.IN_PROGRESS
                 }
-                position={position.fen()}
-                onPieceDrop={onDrop}
-                areArrowsAllowed={true}
-                boardWidth={getBoardWidth()}
-                boardOrientation={colorToPlay === "b" ? "black" : "white"}
-                customArrowColor={"rgba(98, 155, 35, 0.9)"}
+                onDrop={(from, to, promotion) => {
+                  onDrop(from, to, promotion);
+                }}
               />
             )}
           </ChessboardWrapper>

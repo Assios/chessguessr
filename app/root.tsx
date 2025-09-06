@@ -13,6 +13,10 @@ import {
   useCatch,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
+import chessgroundBase from "chessground/assets/chessground.base.css";
+import chessgroundTheme from "chessground/assets/chessground.brown.css";
+import chessgroundPieces from "chessground/assets/chessground.cburnett.css";
+import chessgroundOverrides from "./styles/chessground.overrides.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
@@ -29,6 +33,10 @@ export const links: LinksFunction = () => [
     type: "image/png",
   },
   { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: chessgroundBase },
+  { rel: "stylesheet", href: chessgroundTheme },
+  { rel: "stylesheet", href: chessgroundPieces },
+  { rel: "stylesheet", href: chessgroundOverrides },
 ];
 
 export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
