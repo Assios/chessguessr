@@ -1,0 +1,15 @@
+/* Force Lichess default brown board colors and prevent theme overrides */
+cg-board {
+  background-color: #f0d9b5 !important;
+  background-image: conic-gradient(#b58863 25%, #f0d9b5 0 50%, #b58863 0 75%, #f0d9b5 0) 0 0/12.5% 12.5% !important;
+}
+
+/* Ensure highlight colors are not dimmed by theme layers */
+cg-board square.last-move { background-color: rgba(155, 199, 0, 0.41) !important; }
+cg-board square.selected { background-color: rgba(20, 85, 30, 0.5) !important; }
+cg-board square.move-dest { background: radial-gradient(rgba(20, 85, 30, 0.5) 22%, #208530 0, rgba(0,0,0,0.3) 0, rgba(0,0,0,0) 0) !important; }
+cg-board square.move-dest:hover { background: rgba(20, 85, 30, 0.3) !important; }
+cg-board square.check { background: radial-gradient(ellipse at center, rgba(255,0,0,1) 0%, rgba(231,0,0,1) 25%, rgba(169,0,0,0) 89%, rgba(158,0,0,0) 100%) !important; }
+
+/* Slightly increase saturation to match lichess appearance */
+cg-board { filter: none; }

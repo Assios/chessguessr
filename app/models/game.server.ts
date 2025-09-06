@@ -15135,6 +15135,6 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1615,
       "bRating": 1592,
       "id": 1173
-    }
+    },
   ];
 }
