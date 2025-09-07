@@ -71,7 +71,7 @@ export function ChessgroundBoard({
         premovable: { enabled: false },
         movable: {
           free: false,
-          color: turnColor,
+          color: draggable ? turnColor : null,
           dests,
           rookCastle: true,
           events: {
@@ -144,7 +144,7 @@ export function ChessgroundBoard({
       coordinates: false,
       draggable: { enabled: draggable },
       premovable: { enabled: false },
-      movable: { free: false, color: turnColor, dests, rookCastle: true },
+      movable: { free: false, color: draggable ? turnColor : null, dests, rookCastle: true },
     };
     // Clear lastMove when the position is set externally (undo/reset/submit).
     // Keep lastMove when it originated from a user drag this render cycle.
