@@ -15152,6 +15152,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2121,
       "bRating": 2124,
       "id": 1174
+    },
+    {
+      "date": "2025-09-08",
+      "fen": "r4rk1/1pq1ppbp/p1bp2p1/3n4/2PQ4/1PN1P1P1/PB3P1P/2R2RK1 w - - 0 15",
+      "solution": [
+        "Qxg7+",
+        "Kxg7",
+        "Nxd5+",
+        "Kg8",
+        "Nxc7"
+      ],
+      "gameUrl": "https://lichess.org/NFN9JSzk/white#28",
+      "white": "King2262",
+      "black": "puig53",
+      "wRating": 2151,
+      "bRating": 2077,
+      "id": 1175
     }
   ];
 }
