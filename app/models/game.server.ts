@@ -15169,6 +15169,27 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2151,
       "bRating": 2077,
       "id": 1175
+    },
+    {
+      "date": "2025-09-09",
+      "fen": "5n2/pp2q1k1/1rr1bRp1/3pP1Pp/3P1N1P/8/PP2Q3/1K3R2 w - - 0 31",
+      "solution": [
+        "Rxf8",
+        "Qxf8",
+        "Nxe6+",
+        "Rxe6",
+        "Rxf8"
+      ],
+      "gameUrl": "https://lichess.org/8Th5UmHs/white#60",
+      "white": "DrNykterstein",
+      "black": "penguingim1",
+      "wAka": "Magnus Carlsen",
+      "bAka": "Andrew Tang",
+      "wTitle": "GM",
+      "bTitle": "GM",
+      "wRating": 3146,
+      "bRating": 3064,
+      "id": 1176
     }
   ];
 }
