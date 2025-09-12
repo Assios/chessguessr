@@ -191,8 +191,8 @@ export function ChessgroundBoard({
   };
 
   return (
-    <div style={{ width, height: width }} className="relative">
-      <div ref={containerRef} className="w-full h-full" />
+    <div style={{ width, height: width, touchAction: 'none' }} className="relative">
+      <div ref={containerRef} className="w-full h-full" style={{ touchAction: 'none' }} />
       {promotion && wrapEl && createPortal(
         (() => {
           const to = promotion.to;
