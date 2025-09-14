@@ -15258,6 +15258,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1667,
       "bRating": 1743,
       "id": 1180
+    },
+    {
+      "date": "2025-09-14",
+      "fen": "2rqr1k1/p4Rpp/2n1pn2/2B3N1/6Q1/8/P5PP/4R1K1 w - - 12 28",
+      "solution": [
+        "Rxg7+",
+        "Kxg7",
+        "Nxe6+",
+        "Kh8",
+        "Qg7#"
+      ],
+      "gameUrl": "https://lichess.org/uyrQ4C9d/white#54",
+      "white": "Unkreativ3",
+      "black": "Muhamedlika",
+      "wTitle": "FM",
+      "wRating": 2496,
+      "bRating": 2443,
+      "id": 1181
     }
   ];
 }
