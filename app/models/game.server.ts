@@ -15276,6 +15276,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2496,
       "bRating": 2443,
       "id": 1181
+    },
+    {
+      "date": "2025-09-15",
+      "fen": "1r3nk1/p3Qp1p/1p1p2p1/1BpP4/5q2/2P1R3/P5PP/6K1 w - - 0 29",
+      "solution": [
+        "Rf3",
+        "Qe5",
+        "Qxf7+",
+        "Kh8",
+        "Qxa7"
+      ],
+      "gameUrl": "https://lichess.org/lhFvjm4M/white#56",
+      "white": "Moryachok",
+      "black": "anandha-kumar001",
+      "wRating": 1844,
+      "bRating": 2085,
+      "id": 1182
     }
   ];
 }
