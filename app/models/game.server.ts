@@ -15293,6 +15293,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1844,
       "bRating": 2085,
       "id": 1182
+    },
+    {
+      "date": "2025-09-16",
+      "fen": "r5k1/3p2pp/p3p3/2p1P3/Pp2Qq2/1P1P1rbP/5P2/1R3RK1 w - - 0 25",
+      "solution": [
+        "Qxa8+",
+        "Kf7",
+        "fxg3",
+        "Qxg3+",
+        "Kh1"
+      ],
+      "gameUrl": "https://lichess.org/HorL265x/white#48",
+      "white": "sadecebeyaz",
+      "black": "Laberintos",
+      "wRating": 1643,
+      "bRating": 1858,
+      "id": 1183
     }
   ];
 }
