@@ -15310,6 +15310,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1643,
       "bRating": 1858,
       "id": 1183
+    },
+    {
+      "date": "2025-09-17",
+      "fen": "2r2rk1/p4pbp/4b1p1/1qNp4/3P4/1P1QRN2/P4PPP/R5K1 b - - 2 19",
+      "solution": [
+        "Rxc5",
+        "dxc5",
+        "Qxd3",
+        "Rxd3",
+        "Bxa1"
+      ],
+      "gameUrl": "https://lichess.org/jyn9h8sv/black#37",
+      "white": "Feuerschreiner",
+      "black": "JCM17",
+      "wRating": 1739,
+      "bRating": 1802,
+      "id": 1184
+    },
+    {
+      "date": "2025-09-18",
+      "fen": "2kr3r/pp3p1p/2p1pp2/1q6/1b6/1Q2BB2/PP3PPP/R1K4R b - - 6 16",
+      "solution": [
+        "Rd7",
+        "a3",
+        "Bd2+",
+        "Kc2",
+        "Qf5+"
+      ],
+      "gameUrl": "https://lichess.org/9QpwhJbd/black#31",
+      "white": "AndreyKostin",
+      "black": "Argaluno",
+      "bTitle": "GM",
+      "wRating": 2359,
+      "bRating": 2522,
+      "id": 1185
+    },
+    {
+      "date": "2025-09-19",
+      "fen": "4rrk1/pp4pp/1qn5/2p2p2/3pB3/1P1P2P1/PBP1R2P/4R1K1 w - - 0 22",
+      "solution": [
+        "Bd5+",
+        "Re6",
+        "Rxe6",
+        "Kh8",
+        "Re8"
+      ],
+      "gameUrl": "https://lichess.org/tvi3hY94/white#42",
+      "white": "AhmadUsama",
+      "black": "kh-khan",
+      "wRating": 1551,
+      "bRating": 1534,
+      "id": 1186
     }
   ];
 }
