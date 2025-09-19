@@ -15362,6 +15362,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1551,
       "bRating": 1534,
       "id": 1186
+    },
+    {
+      "date": "2025-09-20",
+      "fen": "3r1rk1/bpp2ppp/2n5/p1P1P3/4b3/PN2BN2/1P3PPP/3R1RK1 b - - 1 16",
+      "solution": [
+        "Rxd1",
+        "Rxd1",
+        "Bc2",
+        "Rd2",
+        "Bxb3"
+      ],
+      "gameUrl": "https://lichess.org/otAAjFet/black#31",
+      "white": "herszt15",
+      "black": "kareem98",
+      "wRating": 1677,
+      "bRating": 1558,
+      "id": 1187
     }
   ];
 }
