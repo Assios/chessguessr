@@ -15396,6 +15396,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2139,
       "bRating": 2139,
       "id": 1188
+    },
+    {
+      "date": "2025-09-22",
+      "fen": "3r2k1/pp6/3r1R2/4p1q1/8/2P2Q2/PP4P1/1K3R2 b - - 1 30",
+      "solution": [
+        "Rxf6",
+        "Qxf6",
+        "Rd1+",
+        "Kc2",
+        "Qc1+"
+      ],
+      "gameUrl": "https://lichess.org/aKSC1BCc/black#59",
+      "white": "superior2017",
+      "black": "chessajedrezz2020",
+      "wTitle": "NM",
+      "bTitle": "IM",
+      "wRating": 2312,
+      "bRating": 2503,
+      "id": 1189
     }
   ];
 }
