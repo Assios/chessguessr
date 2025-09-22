@@ -15415,6 +15415,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2312,
       "bRating": 2503,
       "id": 1189
+    },
+    {
+      "date": "2025-09-23",
+      "fen": "8/p5p1/6k1/1p6/6N1/2P3QP/PP1nq1P1/6K1 b - - 14 42",
+      "solution": [
+        "Qd1+",
+        "Kh2",
+        "Nf1+",
+        "Kg1",
+        "Nxg3+"
+      ],
+      "gameUrl": "https://lichess.org/vfJxSY0A/black#83",
+      "white": "mohamad_kk7",
+      "black": "HomelessWizard",
+      "wRating": 2144,
+      "bRating": 2242,
+      "id": 1190
     }
   ];
 }
