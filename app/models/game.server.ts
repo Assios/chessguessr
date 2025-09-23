@@ -15432,6 +15432,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2144,
       "bRating": 2242,
       "id": 1190
+    },
+    {
+      "date": "2025-09-24",
+      "fen": "r4rk1/1bqn1p1N/p2b2p1/P1pPp3/1pP5/1P1BB2P/5PP1/R2QR1K1 b - - 0 19",
+      "solution": [
+        "Kxh7",
+        "Qh5+",
+        "Kg8",
+        "Bxg6",
+        "Nf6"
+      ],
+      "gameUrl": "https://lichess.org/RAPuohBS/black#37",
+      "white": "GreatGodPratik",
+      "black": "dart7272",
+      "wTitle": "CM",
+      "wRating": 2512,
+      "bRating": 2426,
+      "id": 1191
     }
   ];
 }
