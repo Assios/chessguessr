@@ -15450,6 +15450,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2512,
       "bRating": 2426,
       "id": 1191
+    },
+    {
+      "date": "2025-09-25",
+      "fen": "4rk2/6p1/2pq1n2/P4Q1b/3p4/P6P/2PB1Pp1/4R1K1 w - - 1 28",
+      "solution": [
+        "Bb4",
+        "Rxe1+",
+        "Kxg2",
+        "Qxb4",
+        "axb4"
+      ],
+      "gameUrl": "https://lichess.org/SsOdOPCC/white#54",
+      "white": "MARL0N",
+      "black": "kevinteixeira",
+      "wRating": 1844,
+      "bRating": 1799,
+      "id": 1192
+    },
+    {
+      "date": "2025-09-26",
+      "fen": "r6r/1q4p1/6k1/4Pp1p/2Q3nP/8/PPP5/1K1R2R1 w - - 2 28",
+      "solution": [
+        "Qe6+",
+        "Kh7",
+        "Qxf5+",
+        "Kg8",
+        "Rd7"
+      ],
+      "gameUrl": "https://lichess.org/Nh2rjbNp/white#54",
+      "white": "JHZukertort",
+      "black": "basamosiret",
+      "wRating": 2210,
+      "bRating": 2076,
+      "id": 1193
+    },
+    {
+      "date": "2025-09-27",
+      "fen": "r2r4/5pkp/4b1p1/1Q6/3qP3/4NP2/P1P3PP/R3R1K1 b - - 0 24",
+      "solution": [
+        "Ra3",
+        "Kf2",
+        "Rxe3",
+        "Rxe3",
+        "Qxa1"
+      ],
+      "gameUrl": "https://lichess.org/u8MPc2jI/black#47",
+      "white": "LLE3APb",
+      "black": "agsjgm",
+      "wRating": 2235,
+      "bRating": 2368,
+      "id": 1194
     }
   ];
 }
