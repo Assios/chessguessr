@@ -15518,6 +15518,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1949,
       "bRating": 1973,
       "id": 1195
+    },
+    {
+      "date": "2025-09-29",
+      "fen": "r4rk1/1pp1q1p1/pbn4p/3p4/PP2n3/2P2N1P/5PP1/R1BQRNK1 w - - 0 17",
+      "solution": [
+        "Qxd5+",
+        "Kh8",
+        "Qxe4",
+        "Qf6",
+        "Bb2"
+      ],
+      "gameUrl": "https://lichess.org/ZThuIMFJ/white#32",
+      "white": "wagenormal",
+      "black": "A-septic",
+      "wRating": 1546,
+      "bRating": 1548,
+      "id": 1196
     }
   ];
 }
