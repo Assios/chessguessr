@@ -15552,6 +15552,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2301,
       "bRating": 2327,
       "id": 1197
+    },
+    {
+      "date": "2025-10-01",
+      "fen": "r1b4k/pp5p/2p1pn2/2Pp4/3P1b2/1NNB1PPq/PP2Q3/R4RK1 b - - 0 21",
+      "solution": [
+        "Qxg3+",
+        "Qg2",
+        "Qh4",
+        "Rae1",
+        "Bd7"
+      ],
+      "gameUrl": "https://lichess.org/hGckghIk/black#41",
+      "white": "VCSQuangMinh2012",
+      "black": "NeverGive-up",
+      "wRating": 2112,
+      "bRating": 2073,
+      "id": 1198
     }
   ];
 }
