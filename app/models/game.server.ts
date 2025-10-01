@@ -15569,6 +15569,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2112,
       "bRating": 2073,
       "id": 1198
+    },
+    {
+      "date": "2025-10-02",
+      "fen": "3r1rk1/pR2Rpb1/6p1/q7/2pp1B1Q/7P/P1P2PP1/6K1 w - - 0 28",
+      "solution": [
+        "Bc7",
+        "Qd5",
+        "Bxd8",
+        "Qxd8",
+        "Rbd7"
+      ],
+      "gameUrl": "https://lichess.org/b1ql2qgE/white#54",
+      "white": "Mannysen",
+      "black": "Gillamenace",
+      "wTitle": "IM",
+      "wRating": 2426,
+      "bRating": 2355,
+      "id": 1199
     }
   ];
 }
