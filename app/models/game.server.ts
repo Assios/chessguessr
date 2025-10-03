@@ -15604,6 +15604,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2183,
       "bRating": 2141,
       "id": 1200
+    },
+    {
+      "date": "2025-10-04",
+      "fen": "3R1bk1/2q2n1p/rn2rPp1/2pNp3/p3P3/1P3N1P/PBQ2P2/3R2K1 b - - 2 32",
+      "solution": [
+        "Qxd8",
+        "Ne7+",
+        "Bxe7",
+        "Rxd8+",
+        "Bxd8"
+      ],
+      "gameUrl": "https://lichess.org/ppQl8hai/black#63",
+      "white": "mestespanou",
+      "black": "Koki_King7",
+      "wRating": 2190,
+      "bRating": 1955,
+      "id": 1201
     }
   ];
 }
