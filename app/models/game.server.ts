@@ -15626,11 +15626,11 @@ export async function getGames(): Promise<Array<GameType>> {
       "date": "2025-10-05",
       "fen": "r4rk1/1p3ppp/p4n2/6Q1/1q6/6N1/PP3PPP/n1B2RK1 w - - 0 22",
       "solution": [
-          "Nf5",
-          "Qg4",
-          "Nh6+",
-          "Kh8",
-          "Nxg4"
+        "Nf5",
+        "Qg4",
+        "Nh6+",
+        "Kh8",
+        "Nxg4"
       ],
       "gameUrl": "https://lichess.org/kUP36cEz/white#42",
       "white": "tango_tango",
@@ -15638,6 +15638,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1745,
       "bRating": 1857,
       "id": 1202
+    },
+    {
+      "date": "2025-10-06",
+      "fen": "8/2rkb1p1/3pp2p/1P1n4/Q7/6P1/1P1p1P1P/6K1 w - - 0 31",
+      "solution": [
+        "b6+",
+        "Rc6",
+        "b7",
+        "Nb6",
+        "b8=N+"
+      ],
+      "gameUrl": "https://lichess.org/HxIuzVtw/white#60",
+      "white": "SalvadorReynosoI",
+      "black": "TOPT",
+      "wRating": 1835,
+      "bRating": 1850,
+      "id": 1203
     }
   ];
 }
