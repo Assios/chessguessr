@@ -15655,6 +15655,110 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1835,
       "bRating": 1850,
       "id": 1203
+    },
+    {
+      "date": "2025-10-07",
+      "fen": "rn2k2r/pp3ppp/2p1p3/8/1b6/1BB2Q2/PqP3PP/R3K2R w KQkq - 2 14",
+      "solution": [
+        "O-O",
+        "Qxc3",
+        "Qxf7+",
+        "Kd8",
+        "Rad1+"
+      ],
+      "gameUrl": "https://lichess.org/Uvp4LNT3/white#26",
+      "white": "Aprendiz00001",
+      "black": "Hennesy",
+      "wRating": 1848,
+      "bRating": 1852,
+      "id": 1204
+    },
+    {
+      "date": "2025-10-08",
+      "fen": "8/R1pr4/1p6/1PpPp2p/P3k3/6P1/6K1/8 w - - 1 50",
+      "solution": [
+        "a5",
+        "bxa5",
+        "b6",
+        "cxb6",
+        "Rxd7"
+      ],
+      "gameUrl": "https://lichess.org/3Jl9ldYM/white#98",
+      "white": "Ken_Killinger",
+      "black": "Ronny1223",
+      "wRating": 2053,
+      "bRating": 1978,
+      "id": 1205
+    },
+    {
+      "date": "2025-10-09",
+      "fen": "r4r1k/pp4bp/4Rp2/2p2p2/3q4/3PB2P/PPP2PP1/R2Q2K1 b - - 1 21",
+      "solution": [
+        "Qd7",
+        "Bxc5",
+        "Qxe6",
+        "Bxf8",
+        "Rxf8"
+      ],
+      "gameUrl": "https://lichess.org/x8Ky8HJV/black#41",
+      "white": "Aydin_jb",
+      "black": "jaquechessy",
+      "wRating": 1831,
+      "bRating": 1871,
+      "id": 1206
+    },
+    {
+      "date": "2025-10-10",
+      "fen": "4q1k1/pp4pp/4pr1r/PP1pQn2/3P4/2N2N1P/5PRK/6R1 b - - 0 29",
+      "solution": [
+        "Rxh3+",
+        "Kxh3",
+        "Qh5+",
+        "Nh4",
+        "Qxh4#"
+      ],
+      "gameUrl": "https://lichess.org/rhzJPvI4/black#57",
+      "white": "Iwan1951",
+      "black": "mathu21",
+      "wRating": 1829,
+      "bRating": 1783,
+      "id": 1207
+    },
+    {
+      "date": "2025-10-11",
+      "fen": "7R/8/1r5P/4p3/8/5k2/8/6K1 w - - 1 49",
+      "solution": [
+        "h7",
+        "Rg6+",
+        "Kf1",
+        "Rh6",
+        "Rf8+"
+      ],
+      "gameUrl": "https://lichess.org/rbg47N8C/white#96",
+      "white": "sewin16",
+      "black": "Katinbakkie",
+      "wTitle": "FM",
+      "bTitle": "IM",
+      "wRating": 2496,
+      "bRating": 2452,
+      "id": 1208
+    },
+    {
+      "date": "2025-10-12",
+      "fen": "2rr2k1/ppq2ppp/2nbpn2/3pN3/3P4/1PPQ1NBP/P1R2PP1/5RK1 b - - 10 18",
+      "solution": [
+        "Nb4",
+        "Qd2",
+        "Nxc2",
+        "Qxc2",
+        "Qxc3"
+      ],
+      "gameUrl": "https://lichess.org/Q6Lz45vQ/black#35",
+      "white": "mohamadkasmaii",
+      "black": "Heisenberg_1729",
+      "wRating": 2208,
+      "bRating": 2295,
+      "id": 1209
     }
   ];
 }
