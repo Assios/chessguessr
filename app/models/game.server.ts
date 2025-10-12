@@ -15759,6 +15759,42 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2208,
       "bRating": 2295,
       "id": 1209
+    },
+    {
+      "date": "2025-10-13",
+      "fen": "4rrk1/p4pBp/b2ppb2/q6P/2p1P3/2N3Q1/PPP2PP1/2KR3R b - - 0 18",
+      "solution": [
+        "Qg5+",
+        "Qxg5",
+        "Bxg5+",
+        "Kb1",
+        "Kxg7"
+      ],
+      "gameUrl": "https://lichess.org/kJ8vF9aH/black#35",
+      "white": "Rud_Makarian",
+      "black": "Korchmar_Vasiliy",
+      "wTitle": "IM",
+      "bTitle": "IM",
+      "wRating": 2495,
+      "bRating": 2602,
+      "id": 1210
+    },
+    {
+      "date": "2025-10-14",
+      "fen": "8/3n1Q2/6pk/6p1/P7/2p3PP/4qN2/6K1 b - - 1 44",
+      "solution": [
+        "c2",
+        "Ng4+",
+        "Qxg4",
+        "hxg4",
+        "c1=Q+"
+      ],
+      "gameUrl": "https://lichess.org/4L2K3Q8F/black#87",
+      "white": "matthew_bajo",
+      "black": "Caddalool2",
+      "wRating": 2055,
+      "bRating": 1940,
+      "id": 1211
     }
   ];
 }
