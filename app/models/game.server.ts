@@ -15795,6 +15795,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2055,
       "bRating": 1940,
       "id": 1211
+    },
+    {
+      "date": "2025-10-15",
+      "fen": "5r2/p2rNk1p/1p4p1/4Rb2/8/8/P4PPP/3R2K1 w - - 3 29",
+      "solution": [
+        "Rxf5+",
+        "gxf5",
+        "Rxd7",
+        "Ke6",
+        "Rxa7"
+      ],
+      "gameUrl": "https://lichess.org/GFlCh4sv/white#56",
+      "white": "thehighpriestess",
+      "black": "DonFulgenzio",
+      "bTitle": "FM",
+      "wRating": 2396,
+      "bRating": 2425,
+      "id": 1212
     }
   ];
 }
