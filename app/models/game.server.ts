@@ -15813,6 +15813,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2396,
       "bRating": 2425,
       "id": 1212
+    },
+    {
+      "date": "2025-10-16",
+      "fen": "2rr4/p4kpp/5pp1/1p6/2pP2P1/1PR1P2P/P4P2/2R3K1 b - - 0 23",
+      "solution": [
+        "cxb3",
+        "Rxc8",
+        "Rxc8",
+        "Rxc8",
+        "b2"
+      ],
+      "gameUrl": "https://lichess.org/yuTSNhW6/black#45",
+      "white": "zhuk-70",
+      "black": "Talep",
+      "wRating": 1967,
+      "bRating": 2068,
+      "id": 1213
     }
   ];
 }
