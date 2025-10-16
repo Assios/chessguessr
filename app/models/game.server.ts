@@ -15830,6 +15830,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1967,
       "bRating": 2068,
       "id": 1213
+    },
+    {
+      "date": "2025-10-17",
+      "fen": "r4rk1/1pp4p/p5p1/3pP1R1/3P1R2/P1PQ3K/3n2PP/3q4 w - - 2 26",
+      "solution": [
+        "Rxg6+",
+        "hxg6",
+        "Qxg6+",
+        "Kh8",
+        "Rh4+"
+      ],
+      "gameUrl": "https://lichess.org/SrtoItHT/white#50",
+      "white": "Shivkumar786",
+      "black": "batters2",
+      "wRating": 1867,
+      "bRating": 1856,
+      "id": 1214
+    },
+    {
+      "date": "2025-10-18",
+      "fen": "4r1kr/ppp1q1pp/2n5/2bp3R/6P1/1P3Q2/PBPP1PP1/R2K4 w - - 5 15",
+      "solution": [
+        "Qxd5+",
+        "Qe6",
+        "Qxe6+",
+        "Rxe6",
+        "Rxc5"
+      ],
+      "gameUrl": "https://lichess.org/HJKUZBtm/white#28",
+      "white": "Black_knight007",
+      "black": "MrLang",
+      "wRating": 1775,
+      "bRating": 1808,
+      "id": 1215
     }
   ];
 }
