@@ -15915,6 +15915,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1639,
       "bRating": 1640,
       "id": 1218
+    },
+    {
+      "date": "2025-10-22",
+      "fen": "1r1Rb1k1/1B3p1p/pB4p1/8/1b2P3/5P2/P4KPP/8 b - - 2 27",
+      "solution": [
+        "Bc5+",
+        "Kg3",
+        "Bxb6",
+        "Rxb8",
+        "Bc7+"
+      ],
+      "gameUrl": "https://lichess.org/O2Fqf4Ia/black#53",
+      "white": "Ata628",
+      "black": "HenryRearden",
+      "wRating": 2141,
+      "bRating": 2281,
+      "id": 1219
     }
   ];
 }
