@@ -15932,6 +15932,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2141,
       "bRating": 2281,
       "id": 1219
+    },
+    {
+      "date": "2025-10-23",
+      "fen": "8/8/5k2/3Bp3/5pp1/8/5K2/8 b - - 1 44",
+      "solution": [
+        "Kf5",
+        "Kg2",
+        "e4",
+        "Kf2",
+        "Ke5"
+      ],
+      "gameUrl": "https://lichess.org/MCYlFpQT/black#87",
+      "white": "SpR_01",
+      "black": "LEPET",
+      "wRating": 1955,
+      "bRating": 2098,
+      "id": 1220
     }
   ];
 }
