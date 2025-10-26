@@ -16000,6 +16000,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1981,
       "bRating": 1955,
       "id": 1223
+    },
+    {
+      "date": "2025-10-27",
+      "fen": "4r3/4r1k1/p2q1p1p/1p1pP1p1/6P1/P3QP2/1PP1R1KP/5R2 b - - 0 33",
+      "solution": [
+        "Rxe5",
+        "Qa7+",
+        "R8e7",
+        "Qxe7+",
+        "Rxe7"
+      ],
+      "gameUrl": "https://lichess.org/Isk9lSbY/black#65",
+      "white": "Maksim-333",
+      "black": "polloBaruc",
+      "wRating": 1727,
+      "bRating": 2122,
+      "id": 1224
     }
   ];
 }
