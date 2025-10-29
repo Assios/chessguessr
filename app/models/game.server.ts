@@ -16051,6 +16051,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2118,
       "bRating": 2154,
       "id": 1226
+    },
+    {
+      "date": "2025-10-30",
+      "fen": "8/n4pk1/4rqp1/3Q4/3p3R/1Pb3P1/2P2P2/3R2K1 w - - 3 34",
+      "solution": [
+        "Qa8",
+        "g5",
+        "Qh8+",
+        "Kg6",
+        "Qh7#"
+      ],
+      "gameUrl": "https://lichess.org/G3Q7DJKF/white#66",
+      "white": "mrjoat",
+      "black": "NEEEEEEEEEEEK",
+      "wRating": 1698,
+      "bRating": 1680,
+      "id": 1227
     }
   ];
 }
