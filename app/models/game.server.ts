@@ -16068,6 +16068,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1698,
       "bRating": 1680,
       "id": 1227
+    },
+    {
+      "date": "2025-10-31",
+      "fen": "4N3/pp5k/2p1p3/4b3/3r2Q1/7P/Pq2n1P1/4R2K w - - 2 30",
+      "solution": [
+        "Qh5+",
+        "Kg8",
+        "Qxe5",
+        "Rd2",
+        "Qg5+"
+      ],
+      "gameUrl": "https://lichess.org/KCeVuiX0/white#58",
+      "white": "abrito99",
+      "black": "Algorithym123",
+      "wTitle": "IM",
+      "wRating": 2690,
+      "bRating": 2381,
+      "id": 1228
     }
   ];
 }
