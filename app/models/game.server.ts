@@ -16086,6 +16086,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2690,
       "bRating": 2381,
       "id": 1228
+    },
+    {
+    "date": "2025-11-01",
+    "fen": "4k3/PR4b1/3p4/3Pp3/4P1Pq/1B3p1r/PP4Q1/5NK1 b - - 0 33",
+    "solution": [
+        "f2+",
+        "Qxf2",
+        "Rh1+",
+        "Kg2",
+        "Qh3#"
+    ],
+    "gameUrl": "https://lichess.org/qwsd8Fw1/black#65",
+    "white": "Elias2604",
+    "black": "Pamboo",
+    "wRating": 1916,
+    "bRating": 1856,
+    "id": 1229
     }
   ];
 }
