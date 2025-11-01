@@ -16088,21 +16088,38 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1228
     },
     {
-    "date": "2025-11-01",
-    "fen": "4k3/PR4b1/3p4/3Pp3/4P1Pq/1B3p1r/PP4Q1/5NK1 b - - 0 33",
-    "solution": [
+      "date": "2025-11-01",
+      "fen": "4k3/PR4b1/3p4/3Pp3/4P1Pq/1B3p1r/PP4Q1/5NK1 b - - 0 33",
+      "solution": [
         "f2+",
         "Qxf2",
         "Rh1+",
         "Kg2",
         "Qh3#"
-    ],
-    "gameUrl": "https://lichess.org/qwsd8Fw1/black#65",
-    "white": "Elias2604",
-    "black": "Pamboo",
-    "wRating": 1916,
-    "bRating": 1856,
-    "id": 1229
+      ],
+      "gameUrl": "https://lichess.org/qwsd8Fw1/black#65",
+      "white": "Elias2604",
+      "black": "Pamboo",
+      "wRating": 1916,
+      "bRating": 1856,
+      "id": 1229
+    },
+    {
+      "date": "2025-11-02",
+      "fen": "r4rk1/1Q3ppp/p1pp4/2q5/2P2P2/8/1P4PP/R4RK1 w - - 1 24",
+      "solution": [
+        "Kh1",
+        "Rfb8",
+        "Rxa6",
+        "Qxc4",
+        "Rfa1"
+      ],
+      "gameUrl": "https://lichess.org/J1i4mWwE/white#46",
+      "white": "iamwinordrawonly",
+      "black": "sharno",
+      "wRating": 2130,
+      "bRating": 2086,
+      "id": 1230
     }
   ];
 }
