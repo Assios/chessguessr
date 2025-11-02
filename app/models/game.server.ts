@@ -16120,6 +16120,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2130,
       "bRating": 2086,
       "id": 1230
-    }
+    },
+    {
+    "date": "2025-11-03",
+    "fen": "6k1/4q3/1p5p/p2pP1p1/2rQ4/P7/1P3PPP/1B4K1 w - - 0 27",
+    "solution": [
+        "Qxd5+",
+        "Qf7",
+        "Qxf7+",
+        "Kxf7",
+        "Ba2"
+    ],
+    "gameUrl": "https://lichess.org/PpRViJgs/white#52",
+    "white": "Moritz2311",
+    "black": "shamsypayar1391",
+    "wRating": 1970,
+    "bRating": 1894,
+    "id": 1231
+   }
   ];
 }
