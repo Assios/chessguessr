@@ -16137,6 +16137,42 @@ export async function getGames(): Promise<Array<GameType>> {
     "wRating": 1970,
     "bRating": 1894,
     "id": 1231
-   }
+   },
+    {
+    "date": "2025-11-04",
+    "fen": "r2q1rk1/p3bppp/1pb1p3/3n2B1/2B5/2N5/PP3PPP/R2QR1K1 w - - 0 14",
+    "solution": [
+        "Bxd5",
+        "Bxd5",
+        "Bxe7",
+        "Qxe7",
+        "Nxd5"
+    ],
+    "gameUrl": "https://lichess.org/dL6nte63/white#26",
+    "white": "DaniloBesedes",
+    "black": "Chesspattern_on_IG",
+    "wTitle": "FM",
+    "bTitle": "CM",
+    "wRating": 2586,
+    "bRating": 2483,
+    "id": 1232
+},
+    {
+    "date": "2025-11-05",
+    "fen": "6k1/pp2Qr1p/1q3Pp1/8/8/4R3/PPr4P/5RK1 w - - 1 27",
+    "solution": [
+        "Qe8+",
+        "Rf8",
+        "f7+",
+        "Kg7",
+        "Qe5+"
+    ],
+    "gameUrl": "https://lichess.org/pvZk6HZi/white#52",
+    "white": "Alisamsa",
+    "black": "imabaddie",
+    "wRating": 1710,
+    "bRating": 1671,
+    "id": 1233
+}
   ];
 }
