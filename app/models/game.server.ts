@@ -16173,6 +16173,23 @@ export async function getGames(): Promise<Array<GameType>> {
     "wRating": 1710,
     "bRating": 1671,
     "id": 1233
+},
+{
+    "date": "2025-11-06",
+    "fen": "r5k1/6pp/pnNp2r1/1p1P4/1Pp1N2q/P3R2b/2Q2PP1/R5K1 w - - 0 23",
+    "solution": [
+        "Rxh3",
+        "Qxh3",
+        "Ne7+",
+        "Kh8",
+        "Nxg6+"
+    ],
+    "gameUrl": "https://lichess.org/5EhZgB4g/white#44",
+    "white": "MessaSan",
+    "black": "revanant1000",
+    "wRating": 1735,
+    "bRating": 1703,
+    "id": 1234
 }
   ];
 }
