@@ -16122,74 +16122,91 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1230
     },
     {
-    "date": "2025-11-03",
-    "fen": "6k1/4q3/1p5p/p2pP1p1/2rQ4/P7/1P3PPP/1B4K1 w - - 0 27",
-    "solution": [
+      "date": "2025-11-03",
+      "fen": "6k1/4q3/1p5p/p2pP1p1/2rQ4/P7/1P3PPP/1B4K1 w - - 0 27",
+      "solution": [
         "Qxd5+",
         "Qf7",
         "Qxf7+",
         "Kxf7",
         "Ba2"
-    ],
-    "gameUrl": "https://lichess.org/PpRViJgs/white#52",
-    "white": "Moritz2311",
-    "black": "shamsypayar1391",
-    "wRating": 1970,
-    "bRating": 1894,
-    "id": 1231
-   },
+      ],
+      "gameUrl": "https://lichess.org/PpRViJgs/white#52",
+      "white": "Moritz2311",
+      "black": "shamsypayar1391",
+      "wRating": 1970,
+      "bRating": 1894,
+      "id": 1231
+    },
     {
-    "date": "2025-11-04",
-    "fen": "r2q1rk1/p3bppp/1pb1p3/3n2B1/2B5/2N5/PP3PPP/R2QR1K1 w - - 0 14",
-    "solution": [
+      "date": "2025-11-04",
+      "fen": "r2q1rk1/p3bppp/1pb1p3/3n2B1/2B5/2N5/PP3PPP/R2QR1K1 w - - 0 14",
+      "solution": [
         "Bxd5",
         "Bxd5",
         "Bxe7",
         "Qxe7",
         "Nxd5"
-    ],
-    "gameUrl": "https://lichess.org/dL6nte63/white#26",
-    "white": "DaniloBesedes",
-    "black": "Chesspattern_on_IG",
-    "wTitle": "FM",
-    "bTitle": "CM",
-    "wRating": 2586,
-    "bRating": 2483,
-    "id": 1232
-},
+      ],
+      "gameUrl": "https://lichess.org/dL6nte63/white#26",
+      "white": "DaniloBesedes",
+      "black": "Chesspattern_on_IG",
+      "wTitle": "FM",
+      "bTitle": "CM",
+      "wRating": 2586,
+      "bRating": 2483,
+      "id": 1232
+    },
     {
-    "date": "2025-11-05",
-    "fen": "6k1/pp2Qr1p/1q3Pp1/8/8/4R3/PPr4P/5RK1 w - - 1 27",
-    "solution": [
+      "date": "2025-11-05",
+      "fen": "6k1/pp2Qr1p/1q3Pp1/8/8/4R3/PPr4P/5RK1 w - - 1 27",
+      "solution": [
         "Qe8+",
         "Rf8",
         "f7+",
         "Kg7",
         "Qe5+"
-    ],
-    "gameUrl": "https://lichess.org/pvZk6HZi/white#52",
-    "white": "Alisamsa",
-    "black": "imabaddie",
-    "wRating": 1710,
-    "bRating": 1671,
-    "id": 1233
-},
-{
-    "date": "2025-11-06",
-    "fen": "r5k1/6pp/pnNp2r1/1p1P4/1Pp1N2q/P3R2b/2Q2PP1/R5K1 w - - 0 23",
-    "solution": [
+      ],
+      "gameUrl": "https://lichess.org/pvZk6HZi/white#52",
+      "white": "Alisamsa",
+      "black": "imabaddie",
+      "wRating": 1710,
+      "bRating": 1671,
+      "id": 1233
+    },
+    {
+      "date": "2025-11-06",
+      "fen": "r5k1/6pp/pnNp2r1/1p1P4/1Pp1N2q/P3R2b/2Q2PP1/R5K1 w - - 0 23",
+      "solution": [
         "Rxh3",
         "Qxh3",
         "Ne7+",
         "Kh8",
         "Nxg6+"
-    ],
-    "gameUrl": "https://lichess.org/5EhZgB4g/white#44",
-    "white": "MessaSan",
-    "black": "revanant1000",
-    "wRating": 1735,
-    "bRating": 1703,
-    "id": 1234
-}
+      ],
+      "gameUrl": "https://lichess.org/5EhZgB4g/white#44",
+      "white": "MessaSan",
+      "black": "revanant1000",
+      "wRating": 1735,
+      "bRating": 1703,
+      "id": 1234
+    },
+    {
+      "date": "2025-11-07",
+      "fen": "4R3/1pKBP1k1/6p1/5p1p/4bP1P/3r2P1/8/8 b - - 0 62",
+      "solution": [
+        "Kf7",
+        "Kd8",
+        "Rxd7+",
+        "Kxd7",
+        "Bc6+"
+      ],
+      "gameUrl": "https://lichess.org/ViXW2aVC/black#123",
+      "white": "Mginsburg",
+      "black": "speedempo",
+      "wRating": 2518,
+      "bRating": 2423,
+      "id": 1235
+    }
   ];
 }
