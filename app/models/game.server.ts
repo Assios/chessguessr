@@ -16224,7 +16224,25 @@ export async function getGames(): Promise<Array<GameType>> {
     "wRating": 1897,
     "bRating": 1888,
     "id": 1236
+},
+    {
+    "date": "2025-11-09",
+    "fen": "4rq1k/1pp1brpn/p2pQ2p/8/3BP3/2P4P/PP1N1PP1/R4RK1 b - - 2 19",
+    "solution": [
+        "Bg5",
+        "Qg6",
+        "Bxd2",
+        "Rad1",
+        "Bg5"
+    ],
+    "gameUrl": "https://lichess.org/sH0LHuyG/black#37",
+    "white": "MrDuchesne",
+    "black": "marsamek",
+    "wRating": 2366,
+    "bRating": 2240,
+    "id": 1237
 }
+
 
   ];
 }
