@@ -16209,40 +16209,55 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1235
     },
     {
-    "date": "2025-11-08",
-    "fen": "6r1/4Rk2/p1b2B2/2PN1p2/3P4/P4q2/2Q2PP1/6K1 b - - 1 40",
-    "solution": [
+      "date": "2025-11-08",
+      "fen": "6r1/4Rk2/p1b2B2/2PN1p2/3P4/P4q2/2Q2PP1/6K1 b - - 1 40",
+      "solution": [
         "Kf8",
         "Ne3",
         "Rxg2+",
         "Kf1",
         "Rg1+"
-    ],
-    "gameUrl": "https://lichess.org/maGgFt5e/black#79",
-    "white": "gillesg324",
-    "black": "MonkeyZK",
-    "wRating": 1897,
-    "bRating": 1888,
-    "id": 1236
-},
+      ],
+      "gameUrl": "https://lichess.org/maGgFt5e/black#79",
+      "white": "gillesg324",
+      "black": "MonkeyZK",
+      "wRating": 1897,
+      "bRating": 1888,
+      "id": 1236
+    },
     {
-    "date": "2025-11-09",
-    "fen": "4rq1k/1pp1brpn/p2pQ2p/8/3BP3/2P4P/PP1N1PP1/R4RK1 b - - 2 19",
-    "solution": [
+      "date": "2025-11-09",
+      "fen": "4rq1k/1pp1brpn/p2pQ2p/8/3BP3/2P4P/PP1N1PP1/R4RK1 b - - 2 19",
+      "solution": [
         "Bg5",
         "Qg6",
         "Bxd2",
         "Rad1",
         "Bg5"
-    ],
-    "gameUrl": "https://lichess.org/sH0LHuyG/black#37",
-    "white": "MrDuchesne",
-    "black": "marsamek",
-    "wRating": 2366,
-    "bRating": 2240,
-    "id": 1237
-}
-
-
+      ],
+      "gameUrl": "https://lichess.org/sH0LHuyG/black#37",
+      "white": "MrDuchesne",
+      "black": "marsamek",
+      "wRating": 2366,
+      "bRating": 2240,
+      "id": 1237
+    },
+    {
+      "date": "2025-11-10",
+      "fen": "r1r3k1/5ppp/2PBp3/1p1nPP2/8/Pqp5/Rp3QPP/5RK1 w - - 2 33",
+      "solution": [
+        "fxe6",
+        "fxe6",
+        "Qf7+",
+        "Kh8",
+        "Bf8"
+      ],
+      "gameUrl": "https://lichess.org/HPZImUeL/white#64",
+      "white": "morshed82",
+      "black": "determinedalways",
+      "wRating": 2314,
+      "bRating": 2408,
+      "id": 1238
+    }
   ];
 }
