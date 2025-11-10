@@ -16258,6 +16258,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2314,
       "bRating": 2408,
       "id": 1238
+    },
+    {
+      "date": "2025-11-11",
+      "fen": "r1b1r3/1p1k1p2/p1p1pQ2/4P1P1/5P2/7R/Pq3P1P/6K1 w - - 0 24",
+      "solution": [
+        "Qxf7+",
+        "Re7",
+        "Rd3+",
+        "Kc7",
+        "Qxe7+"
+      ],
+      "gameUrl": "https://lichess.org/FaymG8SZ/white#46",
+      "white": "Braaxdesfaax",
+      "black": "elgatoguapo",
+      "wRating": 1854,
+      "bRating": 1831,
+      "id": 1239
     }
   ];
 }
