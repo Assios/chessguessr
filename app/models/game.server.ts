@@ -16275,6 +16275,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1854,
       "bRating": 1831,
       "id": 1239
+    },
+    {
+      "date": "2025-11-12",
+      "fen": "1rr2k2/4qpR1/p2p1n2/3b4/1Pp5/2Q1P3/1B3P1P/2K3R1 w - - 0 25",
+      "solution": [
+        "Rg8+",
+        "Nxg8",
+        "Rxg8+",
+        "Kxg8",
+        "Qg7#"
+      ],
+      "gameUrl": "https://lichess.org/duKyGFIw/white#48",
+      "white": "psychic_ability",
+      "black": "MaiconOliv",
+      "wRating": 1973,
+      "bRating": 1955,
+      "id": 1240
     }
   ];
 }
