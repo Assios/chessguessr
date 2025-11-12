@@ -16292,6 +16292,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1973,
       "bRating": 1955,
       "id": 1240
+    },
+    {
+      "date": "2025-11-13",
+      "fen": "2kr3r/pp2qQ2/2n1p3/8/3PP1pp/2PR4/PP1N3P/5RK1 b - - 0 25",
+      "solution": [
+        "Qxf7",
+        "Rxf7",
+        "Ne5",
+        "Re3",
+        "Nxf7"
+      ],
+      "gameUrl": "https://lichess.org/o8xd2lae/black#49",
+      "white": "Figo13",
+      "black": "Flash0410",
+      "wRating": 2259,
+      "bRating": 2205,
+      "id": 1241
     }
   ];
 }
