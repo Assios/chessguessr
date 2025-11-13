@@ -16309,6 +16309,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2259,
       "bRating": 2205,
       "id": 1241
+    },
+    {
+      "date": "2025-11-14",
+      "fen": "r2q1rk1/3bbpp1/4p3/n1p1P2n/ppPpN2B/P2P3P/1P1N2P1/R3QRK1 w - - 1 23",
+      "solution": [
+        "Bxe7",
+        "Qxe7",
+        "Nf6+",
+        "gxf6",
+        "Qh4"
+      ],
+      "gameUrl": "https://lichess.org/IISgBenW/white#44",
+      "white": "TNT777821345",
+      "black": "jimmycalifornia",
+      "wRating": 1875,
+      "bRating": 1779,
+      "id": 1242
     }
   ];
 }
