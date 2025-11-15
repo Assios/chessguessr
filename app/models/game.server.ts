@@ -16343,6 +16343,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2194,
       "bRating": 2217,
       "id": 1243
-    }
+    },
+    {
+    "date": "2025-11-16",
+    "fen": "1k1rr3/ppb5/2pqp2p/5p2/3P1R2/2PBQ3/PP1BK3/4R3 b - - 0 24",
+    "solution": [
+        "e5",
+        "dxe5",
+        "Rxe5",
+        "Qxe5",
+        "Qxd3+"
+    ],
+    "gameUrl": "https://lichess.org/520xPNNZ/black#47",
+    "white": "Juggles8",
+    "black": "chaplainp",
+    "wRating": 2364,
+    "bRating": 2064,
+    "id": 1244
+}
   ];
 }
