@@ -16345,21 +16345,141 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1243
     },
     {
-    "date": "2025-11-16",
-    "fen": "1k1rr3/ppb5/2pqp2p/5p2/3P1R2/2PBQ3/PP1BK3/4R3 b - - 0 24",
-    "solution": [
+      "date": "2025-11-16",
+      "fen": "1k1rr3/ppb5/2pqp2p/5p2/3P1R2/2PBQ3/PP1BK3/4R3 b - - 0 24",
+      "solution": [
         "e5",
         "dxe5",
         "Rxe5",
         "Qxe5",
         "Qxd3+"
-    ],
-    "gameUrl": "https://lichess.org/520xPNNZ/black#47",
-    "white": "Juggles8",
-    "black": "chaplainp",
-    "wRating": 2364,
-    "bRating": 2064,
-    "id": 1244
-}
+      ],
+      "gameUrl": "https://lichess.org/520xPNNZ/black#47",
+      "white": "Juggles8",
+      "black": "chaplainp",
+      "wRating": 2364,
+      "bRating": 2064,
+      "id": 1244
+    },
+    {
+      "date": "2025-11-17",
+      "fen": "r1b2rk1/ppq4p/2p1p1p1/4Nn2/3PNn2/6P1/PP1QBP1P/2R2RK1 b - - 0 22",
+      "solution": [
+        "Nxe2+",
+        "Qxe2",
+        "Nxd4",
+        "Qd3",
+        "Qxe5"
+      ],
+      "gameUrl": "https://lichess.org/euXFM5Se/black#43",
+      "white": "ssssssssss29012901",
+      "black": "Tamilguna",
+      "wRating": 2060,
+      "bRating": 2085,
+      "id": 1245
+    },
+    {
+      "date": "2025-11-18",
+      "fen": "1R3rk1/p4p1p/b1p1pbp1/8/3n4/5P2/P2B2PP/1R5K w - - 0 24",
+      "solution": [
+        "Bh6",
+        "Rd8",
+        "Rxd8+",
+        "Bxd8",
+        "Rb8"
+      ],
+      "gameUrl": "https://lichess.org/s3Zr9Pmz/white#46",
+      "white": "PyMarci",
+      "black": "savgi07",
+      "wRating": 1938,
+      "bRating": 2188,
+      "id": 1246
+    },
+    {
+      "date": "2025-11-19",
+      "fen": "r2q1rk1/1bpnbppp/p2p4/1p1np1B1/4P3/1B3N1P/PPP1QPP1/RN3RK1 w - - 0 13",
+      "solution": [
+        "Bxd5",
+        "Bxd5",
+        "Bxe7",
+        "Qxe7",
+        "exd5"
+      ],
+      "gameUrl": "https://lichess.org/JMWSaWiB/white#24",
+      "white": "Yanic16",
+      "black": "cowsareinvading",
+      "wRating": 1626,
+      "bRating": 1613,
+      "id": 1247
+    },
+    {
+      "date": "2025-11-20",
+      "fen": "rnbqkb1r/pp2pp1p/2p2np1/6N1/8/2NB4/PPP2PPP/R1BQK2R w KQkq - 0 7",
+      "solution": [
+        "Nxf7",
+        "Kxf7",
+        "Bxg6+",
+        "hxg6",
+        "Qxd8"
+      ],
+      "gameUrl": "https://lichess.org/dZsrTY29/white#12",
+      "white": "SkyHigh2023",
+      "black": "al037493",
+      "wRating": 2527,
+      "bRating": 2566,
+      "id": 1248
+    },
+    {
+      "date": "2025-11-21",
+      "fen": "8/8/p6p/1pp1k1p1/2P1P3/1P2K2P/P7/8 w - - 1 34",
+      "solution": [
+        "cxb5",
+        "axb5",
+        "a4",
+        "bxa4",
+        "bxa4"
+      ],
+      "gameUrl": "https://lichess.org/AImDYqBD/white#66",
+      "white": "jamalsabry",
+      "black": "epi-mytheuzz",
+      "wRating": 1886,
+      "bRating": 1926,
+      "id": 1249
+    },
+    {
+      "date": "2025-11-22",
+      "fen": "2q5/p4k2/2b3r1/2p3pQ/2Pp1P2/1P6/P5P1/R5K1 w - - 0 31",
+      "solution": [
+        "f5",
+        "Qxf5",
+        "Rf1",
+        "Be4",
+        "Qh7+"
+      ],
+      "gameUrl": "https://lichess.org/7p77UEsH/white#60",
+      "white": "ChristopherChabris",
+      "black": "badplayer_CM",
+      "wRating": 2214,
+      "bRating": 2267,
+      "id": 1250
+    },
+    {
+      "date": "2025-11-23",
+      "fen": "r3r2k/1R4bp/p1QB2p1/8/3p4/3q3P/P4PP1/5RK1 b - - 0 23",
+      "solution": [
+        "Rac8",
+        "Qd7",
+        "Qxf1+",
+        "Kh2",
+        "Rg8"
+      ],
+      "gameUrl": "https://lichess.org/TkH3vcML/black#45",
+      "white": "GG1223334444",
+      "black": "Rad2607x",
+      "wTitle": "CM",
+      "wRating": 2225,
+      "bRating": 2228,
+      "id": 1251
+    }
   ];
 }
