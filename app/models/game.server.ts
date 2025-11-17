@@ -16414,23 +16414,6 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2025-11-20",
-      "fen": "rnbqkb1r/pp2pp1p/2p2np1/6N1/8/2NB4/PPP2PPP/R1BQK2R w KQkq - 0 7",
-      "solution": [
-        "Nxf7",
-        "Kxf7",
-        "Bxg6+",
-        "hxg6",
-        "Qxd8"
-      ],
-      "gameUrl": "https://lichess.org/dZsrTY29/white#12",
-      "white": "SkyHigh2023",
-      "black": "al037493",
-      "wRating": 2527,
-      "bRating": 2566,
-      "id": 1248
-    },
-    {
-      "date": "2025-11-21",
       "fen": "8/8/p6p/1pp1k1p1/2P1P3/1P2K2P/P7/8 w - - 1 34",
       "solution": [
         "cxb5",
@@ -16444,10 +16427,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "epi-mytheuzz",
       "wRating": 1886,
       "bRating": 1926,
-      "id": 1249
+      "id": 1248
     },
     {
-      "date": "2025-11-22",
+      "date": "2025-11-21",
       "fen": "2q5/p4k2/2b3r1/2p3pQ/2Pp1P2/1P6/P5P1/R5K1 w - - 0 31",
       "solution": [
         "f5",
@@ -16461,10 +16444,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "badplayer_CM",
       "wRating": 2214,
       "bRating": 2267,
-      "id": 1250
+      "id": 1249
     },
     {
-      "date": "2025-11-23",
+      "date": "2025-11-22",
       "fen": "r3r2k/1R4bp/p1QB2p1/8/3p4/3q3P/P4PP1/5RK1 b - - 0 23",
       "solution": [
         "Rac8",
@@ -16479,7 +16462,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "wTitle": "CM",
       "wRating": 2225,
       "bRating": 2228,
-      "id": 1251
+      "id": 1250
     }
   ];
 }
