@@ -16463,6 +16463,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2225,
       "bRating": 2228,
       "id": 1250
+    },
+    {
+      "date": "2025-11-23",
+      "fen": "1k4r1/p1q1bp1b/2Bp1n2/5P1p/Q1P5/1PN3rP/P3R2K/4R3 w - - 2 27",
+      "solution": [
+        "Qb5+",
+        "Qb6",
+        "Rxe7",
+        "Qxb5",
+        "Nxb5"
+      ],
+      "gameUrl": "https://lichess.org/BDOxuoVD/white#52",
+      "white": "viniciusponzi",
+      "black": "Gilmergrc",
+      "wRating": 1919,
+      "bRating": 1910,
+      "id": 1251
     }
   ];
 }
