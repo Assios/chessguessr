@@ -16480,6 +16480,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1919,
       "bRating": 1910,
       "id": 1251
-    }
+    },
+    {
+    "date": "2025-11-24",
+    "fen": "1n1k4/4q2p/1p2P1p1/1P3r2/2QP4/2B1bN2/6PP/7K w - - 1 42",
+    "solution": [
+        "Bb4",
+        "Qc7",
+        "e7+",
+        "Ke8",
+        "Qg8+"
+    ],
+    "gameUrl": "https://lichess.org/EKSZzCVQ/white#82",
+    "white": "mutante_XXX",
+    "black": "kazeo_sado",
+    "wRating": 1716,
+    "bRating": 1763,
+    "id": 1252
+}
+
   ];
 }
