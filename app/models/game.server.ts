@@ -16511,6 +16511,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "gameUrl": "https://lichess.org/vLRLZSOM/white#60",
       "white": "Maksat-94",
       "black": "ChessClock99",
+      "wTitle": "GM",
       "wRating": 2487,
       "bRating": 2485,
       "id": 1253
