@@ -16482,22 +16482,38 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1251
     },
     {
-    "date": "2025-11-24",
-    "fen": "1n1k4/4q2p/1p2P1p1/1P3r2/2QP4/2B1bN2/6PP/7K w - - 1 42",
-    "solution": [
+      "date": "2025-11-24",
+      "fen": "1n1k4/4q2p/1p2P1p1/1P3r2/2QP4/2B1bN2/6PP/7K w - - 1 42",
+      "solution": [
         "Bb4",
         "Qc7",
         "e7+",
         "Ke8",
         "Qg8+"
-    ],
-    "gameUrl": "https://lichess.org/EKSZzCVQ/white#82",
-    "white": "mutante_XXX",
-    "black": "kazeo_sado",
-    "wRating": 1716,
-    "bRating": 1763,
-    "id": 1252
-}
-
+      ],
+      "gameUrl": "https://lichess.org/EKSZzCVQ/white#82",
+      "white": "mutante_XXX",
+      "black": "kazeo_sado",
+      "wRating": 1716,
+      "bRating": 1763,
+      "id": 1252
+    },
+    {
+      "date": "2025-11-25",
+      "fen": "3r1k2/5p2/p3pQ1p/4P1rP/P1pNq3/1pP3P1/1P3P2/6K1 w - - 0 31",
+      "solution": [
+        "Nxe6+",
+        "Kg8",
+        "Qxd8+",
+        "Kh7",
+        "Nxg5+"
+      ],
+      "gameUrl": "https://lichess.org/vLRLZSOM/white#60",
+      "white": "Maksat-94",
+      "black": "ChessClock99",
+      "wRating": 2487,
+      "bRating": 2485,
+      "id": 1253
+    }
   ];
 }
