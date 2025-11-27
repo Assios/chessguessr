@@ -16549,6 +16549,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1800,
       "bRating": 1742,
       "id": 1255
+    },
+    {
+      "date": "2025-11-28",
+      "fen": "r2q1rk1/1p1nbpp1/2p1p2p/3n1b2/p2N3B/2NPQ3/PPP1BPPP/R2R2K1 w - - 2 15",
+      "solution": [
+        "Nxd5",
+        "cxd5",
+        "Bxe7",
+        "Qxe7",
+        "Nxf5"
+      ],
+      "gameUrl": "https://lichess.org/DZBgHpU3/white#28",
+      "white": "gennady_geenovich",
+      "black": "pdeldom",
+      "wRating": 1675,
+      "bRating": 1713,
+      "id": 1256
+    },
+    {
+      "date": "2025-11-29",
+      "fen": "4r2k/2p3p1/pp5p/2pP4/P1P2Pq1/1P2r3/2Q2RPP/R5K1 b - - 2 33",
+      "solution": [
+        "Re1+",
+        "Rxe1",
+        "Rxe1+",
+        "Rf1",
+        "Re2"
+      ],
+      "gameUrl": "https://lichess.org/s2husWf3/black#65",
+      "white": "Abdelmoneima",
+      "black": "iVkohli",
+      "wRating": 1536,
+      "bRating": 1639,
+      "id": 1257
     }
   ];
 }
