@@ -16600,6 +16600,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1873,
       "bRating": 1887,
       "id": 1258
+    },
+    {
+      "date": "2025-12-01",
+      "fen": "r1bq4/p2kb3/1pnpprB1/2pP2N1/2P5/2N5/PPQ2PPP/R3K2R b KQ - 0 17",
+      "solution": [
+        "Nd4",
+        "dxe6+",
+        "Rxe6+",
+        "Qe4",
+        "Rxe4+"
+      ],
+      "gameUrl": "https://lichess.org/G1dZiYYd/black#33",
+      "white": "Mim23",
+      "black": "Zakata",
+      "wRating": 1702,
+      "bRating": 1620,
+      "id": 1259
     }
   ];
 }
