@@ -165,6 +165,28 @@ export const Chessguessr = ({
         />
       </div>
       <Game>
+        <div className="flex justify-center items-center w-full px-4 sm:px-0">
+          <a
+            href="https://adventofchess.com"
+            target="_blank"
+            className="inline-block bg-gray-900 px-6 py-2.5 rounded-xl text-white text-sm mb-4 text-center border-2 border-white"
+            onClick={() => {
+              trackEvent("Click Advent");
+            }}
+          >
+            <strong>Advent of Chess</strong>
+            <svg
+              viewBox="0 0 2 2"
+              className="mx-2 inline h-0.5 w-0.5 fill-current"
+              aria-hidden="true"
+            >
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            A chess advent calendar by the creator of Chessguessr! &nbsp;
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
         <BoardWrapper>
           <Players>
             <p className="sm:text-lg lg:text-2xl mb-2 font-semibold text-center">
