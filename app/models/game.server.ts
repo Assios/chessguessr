@@ -16634,6 +16634,91 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1798,
       "bRating": 1752,
       "id": 1260
+    },
+    {
+      "date": "2025-12-03",
+      "fen": "7k/1p4p1/p4q1p/8/3P2b1/P2Q1BP1/1P1R2KP/4r3 b - - 5 29",
+      "solution": [
+        "Bxf3+",
+        "Qxf3",
+        "Rg1+",
+        "Kxg1",
+        "Qxf3"
+      ],
+      "gameUrl": "https://lichess.org/23NSsNu7/black#57",
+      "white": "taran6996",
+      "black": "chesschek25",
+      "wRating": 1878,
+      "bRating": 1928,
+      "id": 1261
+    },
+    {
+      "date": "2025-12-04",
+      "fen": "8/2R2p2/2P1k2p/1P2P2P/4K3/5Pp1/6r1/8 b - - 0 45",
+      "solution": [
+        "Re2+",
+        "Kd3",
+        "g2",
+        "Kxe2",
+        "g1=Q"
+      ],
+      "gameUrl": "https://lichess.org/24wWHlDj/black#89",
+      "white": "anand68",
+      "black": "KKlie4",
+      "wRating": 2735,
+      "bRating": 2864,
+      "id": 1262
+    },
+    {
+      "date": "2025-12-05",
+      "fen": "r1r3k1/6b1/3Q3p/pP1Pp2n/4Pp2/B4P2/P2q3P/1RR2K2 w - - 0 30",
+      "solution": [
+        "Rxc8+",
+        "Rxc8",
+        "Qe6+",
+        "Kh7",
+        "Qxc8"
+      ],
+      "gameUrl": "https://lichess.org/WNeo0C1w/white#58",
+      "white": "greentao",
+      "black": "kavo12",
+      "wRating": 1881,
+      "bRating": 1893,
+      "id": 1263
+    },
+    {
+      "date": "2025-12-06",
+      "fen": "r1bqk2r/pppp1Npp/2n2n2/2b1p3/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 0 5",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Nxe4+",
+        "Ke3",
+        "Qh4"
+      ],
+      "gameUrl": "https://lichess.org/vmi6x6pR/black#9",
+      "white": "SpeedyGonzales7",
+      "black": "Alex37ak",
+      "wRating": 2375,
+      "bRating": 2325,
+      "id": 1264
+    },
+    {
+      "date": "2025-12-07",
+      "fen": "r4rk1/pb3pbp/1p4p1/4p3/2Pqn3/P1NB4/1P4PP/R1BQ1R1K w - - 0 16",
+      "solution": [
+        "Bxe4",
+        "Bxe4",
+        "Qxd4",
+        "Bxg2+",
+        "Kxg2"
+      ],
+      "gameUrl": "https://lichess.org/OLfGwNa6/white#30",
+      "white": "FYAssahi",
+      "black": "joaqui10",
+      "wRating": 1850,
+      "bRating": 1786,
+      "id": 1265
     }
   ];
 }
