@@ -16719,6 +16719,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1850,
       "bRating": 1786,
       "id": 1265
+    },
+    {
+      "date": "2025-12-08",
+      "fen": "1B6/4bpp1/7p/2pk4/p1p2KP1/P1P4P/1P3P2/8 b - - 1 26",
+      "solution": [
+        "Bg5+",
+        "Kf3",
+        "Bc1",
+        "Bf4",
+        "Bxb2"
+      ],
+      "gameUrl": "https://lichess.org/qb8oFDND/black#51",
+      "white": "Konst777",
+      "black": "tolichach",
+      "bTitle": "FM",
+      "wRating": 1700,
+      "bRating": 2227,
+      "id": 1266
     }
   ];
 }
