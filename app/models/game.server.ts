@@ -16754,6 +16754,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2130,
       "bRating": 2189,
       "id": 1267
+    },
+    {
+      "date": "2025-12-10",
+      "fen": "5rk1/2q2ppp/p2bb3/4R3/2pBP3/P4NQ1/2r3PP/5RK1 w - - 0 23",
+      "solution": [
+        "Qxg7+",
+        "Kxg7",
+        "Rg5+",
+        "Kh6",
+        "Bg7#"
+      ],
+      "gameUrl": "https://lichess.org/Jx3r9hTa/white#44",
+      "white": "PIKOLIPSIIS",
+      "black": "Kalenderides",
+      "wRating": 1884,
+      "bRating": 1978,
+      "id": 1268
     }
   ];
 }
