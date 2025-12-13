@@ -16806,6 +16806,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1899,
       "bRating": 1917,
       "id": 1270
-    }
+    },
+    {
+    "date": "2025-12-13",
+    "fen": "5rk1/pp3p1p/1q1r1Pp1/8/2Pp3Q/P7/6PP/3R1R1K w - - 0 24",
+    "solution": [
+        "c5",
+        "Qxc5",
+        "Qh6",
+        "Rxf6",
+        "Rxf6"
+    ],
+    "gameUrl": "https://lichess.org/0jSlB3mB/white#46",
+    "white": "Naboy77",
+    "black": "HamTheKiller",
+    "wRating": 1788,
+    "bRating": 1884,
+    "id": 1271
+}
   ];
 }
