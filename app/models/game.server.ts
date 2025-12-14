@@ -16840,6 +16840,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1730,
       "bRating": 1945,
       "id": 1272
+    },
+    {
+      "date": "2025-12-15",
+      "fen": "5qk1/2Q2pbp/p1N1p1p1/4P3/p1P1bP2/7P/Br4P1/3R2K1 w - - 9 33",
+      "solution": [
+        "Ne7+",
+        "Kh8",
+        "Rd8",
+        "Rxg2+",
+        "Kf1"
+      ],
+      "gameUrl": "https://lichess.org/p7gdcjcq/white#64",
+      "white": "Chizhov_Roman",
+      "black": "KillerQueen2004",
+      "wRating": 1964,
+      "bRating": 1905,
+      "id": 1273
     }
   ];
 }
