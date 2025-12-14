@@ -16808,21 +16808,38 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1270
     },
     {
-    "date": "2025-12-13",
-    "fen": "5rk1/pp3p1p/1q1r1Pp1/8/2Pp3Q/P7/6PP/3R1R1K w - - 0 24",
-    "solution": [
+      "date": "2025-12-13",
+      "fen": "5rk1/pp3p1p/1q1r1Pp1/8/2Pp3Q/P7/6PP/3R1R1K w - - 0 24",
+      "solution": [
         "c5",
         "Qxc5",
         "Qh6",
         "Rxf6",
         "Rxf6"
-    ],
-    "gameUrl": "https://lichess.org/0jSlB3mB/white#46",
-    "white": "Naboy77",
-    "black": "HamTheKiller",
-    "wRating": 1788,
-    "bRating": 1884,
-    "id": 1271
-}
+      ],
+      "gameUrl": "https://lichess.org/0jSlB3mB/white#46",
+      "white": "Naboy77",
+      "black": "HamTheKiller",
+      "wRating": 1788,
+      "bRating": 1884,
+      "id": 1271
+    },
+    {
+      "date": "2025-12-14",
+      "fen": "rn3rk1/pp3ppp/2pb4/3p4/2Pn1PR1/1B5q/PP3P2/R1BQ1NK1 w - - 0 19",
+      "solution": [
+        "Rg3",
+        "Qxg3+",
+        "fxg3",
+        "Bc5",
+        "Be3"
+      ],
+      "gameUrl": "https://lichess.org/oijGNy3h/white#36",
+      "white": "ymr1396000",
+      "black": "abbasgooliy",
+      "wRating": 1730,
+      "bRating": 1945,
+      "id": 1272
+    }
   ];
 }
