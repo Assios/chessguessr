@@ -16857,6 +16857,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1964,
       "bRating": 1905,
       "id": 1273
+    },
+    {
+      "date": "2025-12-16",
+      "fen": "2r2rk1/2R2Rpp/p3p3/1p4q1/8/1P1Q4/1P3PPP/6K1 b - - 0 23",
+      "solution": [
+        "Qc1+",
+        "Qf1",
+        "Rxc7",
+        "Rxc7",
+        "Qxc7"
+      ],
+      "gameUrl": "https://lichess.org/G0HAmuPa/black#45",
+      "white": "anonjayce",
+      "black": "Woodpecker1",
+      "wRating": 1885,
+      "bRating": 1865,
+      "id": 1274
+    },
+    {
+      "date": "2025-12-17",
+      "fen": "4r1k1/1p3p2/8/1Q6/1PBp1n2/4q3/P5PK/5R2 b - - 1 36",
+      "solution": [
+        "Re5",
+        "Qd7",
+        "Rh5+",
+        "Qh3",
+        "Nxh3"
+      ],
+      "gameUrl": "https://lichess.org/uSrT1sfv/black#71",
+      "white": "novik70",
+      "black": "Nurettiniler890",
+      "wTitle": "GM",
+      "wRating": 2445,
+      "bRating": 2457,
+      "id": 1275,
     }
   ];
 }
