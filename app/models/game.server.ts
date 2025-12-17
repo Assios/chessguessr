@@ -16892,6 +16892,74 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2445,
       "bRating": 2457,
       "id": 1275,
+    },
+    {
+      "date": "2025-12-18",
+      "fen": "8/R7/3p3k/4b3/4r3/8/P1P5/1K4R1 b - - 0 40",
+      "solution": [
+        "Rb4+",
+        "Kc1",
+        "Bf4+",
+        "Kd1",
+        "Rb1+"
+      ],
+      "gameUrl": "https://lichess.org/7jMijSh8/black#79",
+      "white": "alat-the-king",
+      "black": "x9668",
+      "wRating": 2237,
+      "bRating": 2409,
+      "id": 1276
+    },
+    {
+      "date": "2025-12-19",
+      "fen": "r3r1k1/pp3pp1/2p4p/3p4/3PnN2/2PQ2qP/PP4P1/4RRK1 w - - 0 20",
+      "solution": [
+        "Rxe4",
+        "Qg5",
+        "Rxe8+",
+        "Rxe8",
+        "Qf3"
+      ],
+      "gameUrl": "https://lichess.org/HCz5xyVv/white#38",
+      "white": "abo_Noah",
+      "black": "Drotciv",
+      "wRating": 1940,
+      "bRating": 1938,
+      "id": 1277
+    },
+    {
+      "date": "2025-12-20",
+      "fen": "6k1/1p4pp/p1p5/2P2p2/PP3n2/3r2qP/3r2B1/4RQRK w - - 0 33",
+      "solution": [
+        "Bd5+",
+        "Nxd5",
+        "Rxg3",
+        "Rxg3",
+        "Re8+"
+      ],
+      "gameUrl": "https://lichess.org/EiVuM91l/white#64",
+      "white": "phantom10",
+      "black": "thewilq",
+      "wRating": 1513,
+      "bRating": 1516,
+      "id": 1278
+    },
+    {
+      "date": "2025-12-21",
+      "fen": "1r3rk1/p2qpp2/b2p2p1/2p3Bp/2n1PP2/1Bb4P/PPP1Q1P1/1R2R2K w - - 0 19",
+      "solution": [
+        "bxc3",
+        "Na3",
+        "Qxa6",
+        "Nxb1",
+        "Rxb1"
+      ],
+      "gameUrl": "https://lichess.org/rxt4VOyS/white#36",
+      "white": "Ayoup_Alok_2003",
+      "black": "e1234chess",
+      "wRating": 2051,
+      "bRating": 2035,
+      "id": 1279
     }
   ];
 }
