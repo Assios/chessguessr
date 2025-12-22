@@ -16960,6 +16960,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2051,
       "bRating": 2035,
       "id": 1279
+    },
+    {
+      "date": "2025-12-22",
+      "fen": "4r1rk/7p/R7/1p1p1p1q/3P1P2/2P5/1P1NbQ1P/4R2K b - - 4 27",
+      "solution": [
+        "Bf3+",
+        "Nxf3",
+        "Qxf3+",
+        "Qxf3",
+        "Rxe1+"
+      ],
+      "gameUrl": "https://lichess.org/UJ5Lt2VB/black#53",
+      "white": "Michael_C_Price",
+      "black": "jublabo",
+      "wRating": 1909,
+      "bRating": 1995,
+      "id": 1280
     }
   ];
 }
