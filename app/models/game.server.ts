@@ -17011,6 +17011,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2196,
       "bRating": 2128,
       "id": 1282
+    },
+    {
+      "date": "2025-12-25",
+      "fen": "8/ppr2k2/r3n2R/8/2P1R1PK/7P/8/8 w - - 4 48",
+      "solution": [
+        "Rexe6",
+        "Rxe6",
+        "Rh7+",
+        "Kg8",
+        "Rxc7"
+      ],
+      "gameUrl": "https://lichess.org/5JczwYtw/white#94",
+      "white": "Vigilante25",
+      "black": "crayala",
+      "wRating": 1966,
+      "bRating": 1929,
+      "id": 1283
     }
   ];
 }
