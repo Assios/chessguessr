@@ -16994,6 +16994,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1897,
       "bRating": 2385,
       "id": 1281
+    },
+    {
+      "date": "2025-12-24",
+      "fen": "rn2k2r/pp3ppB/4pn2/2bpq2b/8/2P2PN1/P1Q1N1PP/R1B1K2R w KQkq - 4 16",
+      "solution": [
+        "Bf4",
+        "Qxf4",
+        "Nxf4",
+        "Rxh7",
+        "Nfxh5"
+      ],
+      "gameUrl": "https://lichess.org/OChaMkjS/white#30",
+      "white": "razormoves",
+      "black": "petrovich142",
+      "wRating": 2196,
+      "bRating": 2128,
+      "id": 1282
     }
   ];
 }
