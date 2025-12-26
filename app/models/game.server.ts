@@ -17028,6 +17028,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1966,
       "bRating": 1929,
       "id": 1283
+    },
+    {
+      "date": "2025-12-26",
+      "fen": "8/1kp5/1p6/3N1R2/p1nP4/P1P2P2/1P2q3/1KQ5 b - - 0 39",
+      "solution": [
+        "Qd3+",
+        "Qc2",
+        "Nd2+",
+        "Kc1",
+        "Nb3+"
+      ],
+      "gameUrl": "https://lichess.org/TFS9IUX4/black#77",
+      "white": "altayskiy_shahmatist",
+      "black": "paintingmoves",
+      "wRating": 2549,
+      "bRating": 2495,
+      "id": 1284
     }
   ];
 }
