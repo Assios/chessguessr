@@ -17045,6 +17045,21 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2549,
       "bRating": 2495,
       "id": 1284
-    }
+    },
+    {
+      date: "2025-12-27",
+      fen: "1r1qr1k1/5pbp/1n4p1/Q1p5/3pN3/1P3PP1/PB2P1KP/R4R2 b - - 2 21",
+      solution: ["c4", "bxc4", "Nxc4", "Qxd8", "Rbxd8"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-rapid--blitz-championships-2025--rapid-open-1-30/round-4/AwyhhS4t/miOVp9tl",
+      white: "David Anton Guijarro",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2025 FIDE World Rapid Championship",
+      wRating: 2619,
+      bRating: 2824,
+      id: 1285,
+    },
   ];
 }
