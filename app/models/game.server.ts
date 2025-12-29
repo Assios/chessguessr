@@ -17077,6 +17077,21 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2290,
       "bRating": 2289,
       "id": 1286
-    }
+    },
+    {
+      date: "2025-12-29",
+      fen: "8/3q2k1/1Rp2pp1/2P1p2p/p2rn3/4N2P/PQ3PP1/6K1 b - - 7 40",
+      solution: ["Rd2", "Qb4", "Qd4", "Rb7+", "Kh6"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-rapid--blitz-championships-2025--rapid-open-1-30/round-12/1VhdCewl/FRAkWJgX#79",
+      white: "Yagiz Kaan Erdogmus",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2025 FIDE World Rapid Championship",
+      wRating: 2446,
+      bRating: 2824,
+      id: 1287,
+    },
   ];
 }
