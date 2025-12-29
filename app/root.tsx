@@ -17,6 +17,7 @@ import chessgroundBase from "chessground/assets/chessground.base.css";
 import chessgroundTheme from "chessground/assets/chessground.brown.css";
 import chessgroundPieces from "chessground/assets/chessground.cburnett.css";
 import chessgroundOverrides from "./styles/chessground.overrides.css";
+import tileAnimations from "./styles/tile-animations.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
@@ -36,6 +37,7 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: chessgroundTheme },
   { rel: "stylesheet", href: chessgroundPieces },
   { rel: "stylesheet", href: chessgroundOverrides },
+  { rel: "stylesheet", href: tileAnimations },
 ];
 
 export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
@@ -45,8 +47,7 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
-        {typeof document === "undefined" ? "__STYLES__" : null}
-      </head>
+              </head>
       <div className="mt-10 mb-20 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
           <h1 className="text-center text-4xl mb-8 font-semibold">
@@ -89,8 +90,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
-        {typeof document === "undefined" ? "__STYLES__" : null}
-      </head>
+              </head>
       <div className="mt-10 mb-20 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
           <h1 className="text-center text-4xl mb-8 font-semibold">
@@ -189,8 +189,7 @@ export default function App() {
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
         <Meta />
         <Links />
-        {typeof document === "undefined" ? "__STYLES__" : null}
-      </head>
+              </head>
       <body className="min-h-screen flex flex-col">
         <div className="flex-1">
           <Toaster />

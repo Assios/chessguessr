@@ -1,0 +1,214 @@
+/* Tile animations for guess feedback */
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes bounce-tile {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flip-green {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #787C7E;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #787C7E;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: #12B980;
+    border: none;
+    color: #fff;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: #12B980;
+    border: none;
+    color: #fff;
+  }
+}
+
+@keyframes flip-yellow {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #787C7E;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #787C7E;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: #FBBF23;
+    border: none;
+    color: #fff;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: #FBBF23;
+    border: none;
+    color: #fff;
+  }
+}
+
+@keyframes flip-grey {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #787C7E;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #787C7E;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: #9CA3AF;
+    border: none;
+    color: #fff;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: #9CA3AF;
+    border: none;
+    color: #fff;
+  }
+}
+
+@keyframes flip-blue {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #787C7E;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #787C7E;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: #4b6bfc;
+    border: none;
+    color: #fff;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: #4b6bfc;
+    border: none;
+    color: #fff;
+  }
+}
+
+@keyframes flip-yellow-blue {
+  0% {
+    transform: rotateX(0deg);
+    border-color: #787C7E;
+  }
+  45% {
+    transform: rotateX(90deg);
+    border-color: #787C7E;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: -webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
+    border: none;
+    color: #fff;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: -webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
+    border: none;
+    color: #fff;
+  }
+}
+
+/* Animation classes */
+.animate-shake {
+  animation: shake 0.5s ease forwards;
+}
+
+.animate-bounce-tile {
+  animation: bounce-tile 0.2s ease-in-out forwards;
+}
+
+.animate-flip-green {
+  animation: flip-green 0.5s ease forwards;
+}
+
+.animate-flip-yellow {
+  animation: flip-yellow 0.5s ease forwards;
+}
+
+.animate-flip-grey {
+  animation: flip-grey 0.5s ease forwards;
+}
+
+.animate-flip-blue {
+  animation: flip-blue 0.5s ease forwards;
+}
+
+.animate-flip-yellow-blue {
+  animation: flip-yellow-blue 0.5s ease forwards;
+}
+
+/* Tile base styles */
+.tile {
+  width: 107px;
+  height: 107px;
+  line-height: 107px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d3d6da;
+  border-color: #787c7e;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.tile-tutorial {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1rem;
+}
+
+@media (max-width: 580px) {
+  .tile {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .tile {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 0.9rem;
+  }
+}

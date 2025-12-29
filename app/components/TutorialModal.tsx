@@ -1,23 +1,20 @@
-import { useEffect } from "react";
-import { Tile } from "~/styles/styles";
-import styled from "styled-components";
-import { convertToIcon } from "~/utils/utils";
-
-const TutorialVariation = styled.div`
-  display: flex;
-
-  flex-direction: row;
-  margin-top: 0.5rem;
-`;
+import { useEffect } from 'react';
+import { Tile } from './Tile';
+import { convertToIcon } from '~/utils/utils';
 
 export default function TutorialModal({
   setShowTutorial,
   showTutorial,
   setTutorial,
+}: {
+  setShowTutorial: (show: boolean) => void;
+  showTutorial: boolean;
+  setTutorial: (val: boolean) => void;
 }) {
   useEffect(() => {
     setTutorial(true);
   }, []);
+
   return (
     <>
       {showTutorial ? (
@@ -38,7 +35,9 @@ export default function TutorialModal({
                   </p>
                   <div className="divider" />
                   <h3 className="text-xl font-semibold mb-2">Examples</h3>
-                  <TutorialVariation>
+
+                  {/* Example 1: Green tile */}
+                  <div className="flex flex-row mt-2">
                     <Tile
                       className="m-[3px]"
                       color="green"
@@ -46,27 +45,29 @@ export default function TutorialModal({
                       animationIndex={1}
                       tutorial={true}
                     >
-                      {convertToIcon("Nd5")}
+                      {convertToIcon('Nd5')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Nbxd5")}
+                      {convertToIcon('Nbxd5')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("exd5")}
+                      {convertToIcon('exd5')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Qd6")}
+                      {convertToIcon('Qd6')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Rxd4")}
+                      {convertToIcon('Rxd4')}
                     </Tile>
-                  </TutorialVariation>
+                  </div>
                   <p className="text-lg mb-6">
                     Nd5 is the correct move in the correct spot.
                   </p>
-                  <TutorialVariation>
+
+                  {/* Example 2: Yellow tile */}
+                  <div className="flex flex-row mt-2">
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Be6")}
+                      {convertToIcon('Be6')}
                     </Tile>
                     <Tile
                       className="m-[3px]"
@@ -75,30 +76,32 @@ export default function TutorialModal({
                       animationIndex={3}
                       tutorial={true}
                     >
-                      {convertToIcon("Bxb6")}
+                      {convertToIcon('Bxb6')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Bxc4+")}
+                      {convertToIcon('Bxc4+')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Kg1")}
+                      {convertToIcon('Kg1')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Ne2+")}
+                      {convertToIcon('Ne2+')}
                     </Tile>
-                  </TutorialVariation>
+                  </div>
                   <p className="text-lg mb-6">
                     The move Bxb6 is in the played line, but in the wrong spot.
                   </p>
-                  <TutorialVariation>
+
+                  {/* Example 3: Blue tile */}
+                  <div className="flex flex-row mt-2">
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Nxg7")}
+                      {convertToIcon('Nxg7')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Kd8")}
+                      {convertToIcon('Kd8')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Qf6+")}
+                      {convertToIcon('Qf6+')}
                     </Tile>
                     <Tile
                       className="m-[3px]"
@@ -108,17 +111,18 @@ export default function TutorialModal({
                       animationIndex={2}
                       tutorial={true}
                     >
-                      {convertToIcon("Nxf6")}
+                      {convertToIcon('Nxf6')}
                     </Tile>
                     <Tile className="m-[3px]" tutorial={true}>
-                      {convertToIcon("Be7#")}
+                      {convertToIcon('Be7#')}
                     </Tile>
-                  </TutorialVariation>
+                  </div>
                   <p className="text-lg mb-6">
                     The same piece-type was played in this spot, but the move is
                     wrong. In this case, a knight was played, but not
                     necessarily the same knight.
                   </p>
+
                   <p className="text-lg mb-6">
                     <span className="font-bold">NB!</span> The notation has to
                     be identical for the moves to be considered the same (

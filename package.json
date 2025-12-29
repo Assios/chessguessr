@@ -32,7 +32,6 @@
     "react-hot-toast": "^2.2.0",
     "react-hotkeys-hook": "^3.4.7",
     "react-icons": "^4.11.0",
-    "styled-components": "^5.3.5",
     "theme-change": "^2.1.0"
   },
   "devDependencies": {
@@ -41,7 +40,6 @@
     "@remix-run/serve": "^1.16.0",
     "@types/react": "^17.0.45",
     "@types/react-dom": "^17.0.17",
-    "@types/styled-components": "^5.1.25",
     "eslint": "^8.20.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.0.3",

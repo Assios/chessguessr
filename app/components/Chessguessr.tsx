@@ -1,67 +1,22 @@
-import { useEffect } from "react";
-import useChessguessr from "../hooks/useChessguessr";
-import ChessgroundBoard from "./ChessgroundBoard";
-import { Grid } from "./Grid";
-import { Row } from "./Row";
-import styled from "styled-components";
-import Modal from "./Modal/Modal";
-import { GameType, GameStatus } from "~/utils/types";
-import { useWindowSize } from "~/hooks/useWindowSize";
-import TutorialModal from "./TutorialModal";
-import Countdown from "react-countdown";
+import { useEffect } from 'react';
+import useChessguessr from '../hooks/useChessguessr';
+import ChessgroundBoard from './ChessgroundBoard';
+import { Grid } from './Grid';
+import { Row } from './Row';
+import Modal from './Modal/Modal';
+import { GameType, GameStatus } from '~/utils/types';
+import { useWindowSize } from '~/hooks/useWindowSize';
+import TutorialModal from './TutorialModal';
+import Countdown from 'react-countdown';
 import {
   countdownRenderer,
   midnightUtcTomorrow,
   GameLink,
   guessifySolution,
   useHotkeys,
-  wrongSolution
-} from "~/utils/utils";
-import useCopyToClipboard from "~/hooks/useCopyToClipboard";
-import { Tile } from "~/styles/styles";
-import { useOutletContext } from "@remix-run/react";
-
-const ChessboardWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 1rem;
-
-  touch-action: manipulation;
-`;
-
-const Game = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-const Buttons = styled.div`
-  display: flex;
-
-  justify-content: center;
-
-  touch-action: manipulation;
-`;
-
-const BoardWrapper = styled.div``;
-
-const Players = styled.div`
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-`;
-
-const SolutionWrapper = styled.div`
-  margin-left: 1rem;
-  margin-bottom: -1.3rem;
-
-  @media (max-width: 1140px) {
-    margin-bottom: 0rem;
-  }
-`;
+} from '~/utils/utils';
+import useCopyToClipboard from '~/hooks/useCopyToClipboard';
+import { useOutletContext } from '@remix-run/react';
 
 export const Chessguessr = ({
   game,
@@ -107,8 +62,6 @@ export const Chessguessr = ({
     bRating,
     wTitle,
     bTitle,
-    wAka,
-    bAka,
     event,
     variant,
   } = game;
@@ -136,11 +89,11 @@ export const Chessguessr = ({
 
   const nextDate = midnightUtcTomorrow();
 
-  useHotkeys("Backspace", takeback, [currentGuess, fenHistory]);
-  useHotkeys("Left", takeback, [currentGuess, fenHistory]);
-  useHotkeys("Right", goForwards, [currentGuess, fenHistory]);
-  useHotkeys("Enter", submitGuess, [currentGuess]);
-  useHotkeys("Space", submitGuess, [currentGuess]);
+  useHotkeys('Backspace', takeback, [currentGuess, fenHistory]);
+  useHotkeys('Left', takeback, [currentGuess, fenHistory]);
+  useHotkeys('Right', goForwards, [currentGuess, fenHistory]);
+  useHotkeys('Enter', submitGuess, [currentGuess]);
+  useHotkeys('Space', submitGuess, [currentGuess]);
 
   const { trackEvent }: any = useOutletContext();
 
@@ -164,50 +117,29 @@ export const Chessguessr = ({
           setTutorial={setTutorial}
         />
       </div>
-      <Game>
-        <div className="flex justify-center items-center w-full px-4 sm:px-0">
-          <a
-            href="https://adventofchess.com"
-            target="_blank"
-            className="inline-block bg-gray-900 px-6 py-2.5 rounded-xl text-white text-sm mb-4 text-center border-2 border-white"
-            onClick={() => {
-              trackEvent("Click Advent");
-            }}
-          >
-            <strong>Advent of Chess</strong>
-            <svg
-              viewBox="0 0 2 2"
-              className="mx-2 inline h-0.5 w-0.5 fill-current"
-              aria-hidden="true"
-            >
-              <circle cx="1" cy="1" r="1" />
-            </svg>
-            A chess advent calendar by the creator of Chessguessr! &nbsp;
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-
-        <BoardWrapper>
-          <Players>
-            <p className="sm:text-lg lg:text-2xl mb-2 font-semibold text-center">
+      <div className="flex justify-center flex-wrap">
+        <div>
+          <div className="flex flex-col justify-center px-2 sm:px-0">
+            <p className="text-sm sm:text-lg lg:text-2xl mb-2 font-semibold text-center leading-relaxed">
               {wTitle && (
                 <span className="text-secondary-content">{wTitle}</span>
-              )}{" "}
-              {white} {wRating && `(${wRating})`} –{" "}
+              )}{' '}
+              {white} {wRating && `(${wRating})`}
+              <span className="mx-1">–</span>
               {bTitle && (
                 <span className="text-secondary-content">{bTitle}</span>
-              )}{" "}
+              )}{' '}
               {black} {bRating && `(${bRating})`}
             </p>
             {position && (
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center mb-4">
                 {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (
-                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
-                    {colorToPlay === "b" ? "Black" : "White"} to play
+                  <p className="text-sm sm:text-lg font-semibold">
+                    {colorToPlay === 'b' ? 'Black' : 'White'} to play
                   </p>
                 ) : (
-                  <p className="sm:text-lg lg:text-md mb-4 font-semibold">
-                    New game in{" "}
+                  <p className="text-sm sm:text-lg font-semibold">
+                    New game in{' '}
                     <Countdown
                       date={nextDate}
                       zeroPadTime={2}
@@ -215,35 +147,33 @@ export const Chessguessr = ({
                     />
                   </p>
                 )}
-                <div className="flex flex-row">
+                <div className="flex flex-row items-center gap-1">
                   {variant && (
-                    <span className="mt-2 mr-1 badge badge-accent">
+                    <span className="badge badge-accent badge-sm sm:badge-md">
                       {variant}
                     </span>
                   )}
                   <div
-                    className="tooltip hidden md:block"
+                    className="tooltip tooltip-left"
                     data-tip="Event or website where the game was played"
                   >
-                    <span className="mt-2 badge badge-accent">
-                      {event ? event : "lichess.org"}
-                    </span>
-                  </div>
-                  <div className="block md:hidden">
-                    <span className="mt-2 badge badge-accent">
-                      {event ? event : "lichess.org"}
+                    <span className="badge badge-accent badge-sm sm:badge-md">
+                      {event ? event : 'lichess.org'}
                     </span>
                   </div>
                 </div>
               </div>
             )}
-          </Players>
+          </div>
 
-          <ChessboardWrapper>
+          <div
+            className="flex justify-center mb-4"
+            style={{ touchAction: 'manipulation' }}
+          >
             {position && (
               <ChessgroundBoard
                 fen={position.fen()}
-                orientation={colorToPlay === "b" ? "black" : "white"}
+                orientation={colorToPlay === 'b' ? 'black' : 'white'}
                 width={getBoardWidth()}
                 draggable={
                   currentGuess.length < 5 &&
@@ -254,48 +184,50 @@ export const Chessguessr = ({
                 }}
               />
             )}
-          </ChessboardWrapper>
-          <Buttons>
+          </div>
+          <div
+            className="flex justify-center gap-2 sm:gap-4 px-2 sm:px-0"
+            style={{ touchAction: 'manipulation' }}
+          >
             <button
-              className="py-2 px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mr-2 mb-4"
+              className="py-2 px-3 sm:px-4 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-accent-focus focus:outline-none focus:ring-opacity-75 mb-4 text-sm sm:text-base flex items-center"
               onClick={takeback}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 inline mr-1"
+                className="h-4 w-4 sm:h-5 sm:w-5 mr-1"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
                 <path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z" />
               </svg>
-              Undo last move
+              <span className="hidden sm:inline">Undo last move</span>
+              <span className="sm:hidden">Undo</span>
             </button>
 
             <button
-              className="py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 ml-2 mb-4"
+              className="py-2 px-4 sm:px-6 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-opacity-75 mb-4 text-sm sm:text-base"
               onClick={submitGuess}
             >
               Submit
             </button>
-          </Buttons>
-        </BoardWrapper>
-        <div className="flex flex-col">
+          </div>
+        </div>
+        <div className="flex flex-col px-2 sm:px-0">
           {gameStatus === GameStatus.FAILED && (
-            <>
-              <SolutionWrapper className="flex flex-col justify-end pl-3 border-b-5 border-b-zinc-500">
-                <div className="flex flex-row justify-between">
-                  <p className="sm:text-lg lg:text-2xl mb-3 font-semibold">
-                    Game over! Solution:
-                  </p>
-                  <span>
-                    See game <GameLink game={game} />
-                  </span>
-                </div>
-                <div className="flex flex-row mt-1">
-                  <Row guess={guessifySolution(game)} />
-                </div>
-              </SolutionWrapper>
-            </>
+            <div className="ml-0 sm:ml-4 mb-4 lg:mb-0 flex flex-col">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2">
+                <p className="text-base sm:text-lg lg:text-2xl font-semibold">
+                  Game over! Solution:
+                </p>
+                <span className="text-sm sm:text-base">
+                  See game <GameLink game={game} />
+                </span>
+              </div>
+              <div className="flex flex-row">
+                <Row guess={guessifySolution(game)} />
+              </div>
+            </div>
           )}
           <Grid
             currentGuess={currentGuess}
@@ -303,17 +235,18 @@ export const Chessguessr = ({
             turn={turn}
             insufficientMoves={insufficientMoves}
           />
-          <div className="flex mb-4 flex-row justify-end">
+          <div className="flex mb-4 flex-row justify-end items-center gap-1 mt-2">
             <input
               type="text"
-              className="input input-bordered input-sm w-full max-w-xs mt-2 mr-1 w-56"
+              className="input input-bordered input-sm w-44 sm:w-56 text-xs sm:text-sm"
               readOnly={true}
-              value={"https://chessguessr.com/games/" + game.id}
+              value={'https://chessguessr.com/games/' + game.id}
               onFocus={(event) => event.target.select()}
             />
             <button
-              className="btn btn-square btn-sm bg-primary border-primary mt-2"
-              onClick={() => copy("https://chessguessr.com/games/" + game.id)}
+              className="btn btn-square btn-sm bg-primary border-primary"
+              onClick={() => copy('https://chessguessr.com/games/' + game.id)}
+              aria-label={linkValue ? 'Copied' : 'Copy link'}
             >
               {linkValue ? (
                 <svg
@@ -349,7 +282,7 @@ export const Chessguessr = ({
             </button>
           </div>
         </div>
-      </Game>
+      </div>
     </div>
   );
 };

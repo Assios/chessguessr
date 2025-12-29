@@ -1,6 +1,6 @@
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import StatsCards from "./StatsCards";
-import { Tile } from "~/styles/styles";
+import { Tile } from '~/components/Tile';
 import { GameStatus } from "~/utils/types";
 import Distribution from "./Distribution";
 import Countdown, { zeroPad } from "react-countdown";
