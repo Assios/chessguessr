@@ -17093,5 +17093,22 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2824,
       id: 1287,
     },
+    {
+      "date": "2025-12-30",
+      "fen": "1kr5/2q5/2pb3B/r3p3/p3P3/P1QP1p1b/1P1K1P2/2R3R1 w - - 1 28",
+      "solution": [
+        "Rg7",
+        "Bd7",
+        "Rxd7",
+        "Qxd7",
+        "Qxa5"
+      ],
+      "gameUrl": "https://lichess.org/IBy9OqSJ/white#54",
+      "white": "haythammed",
+      "black": "MonsterZknight",
+      "wRating": 2058,
+      "bRating": 2023,
+      "id": 1288
+    }
   ];
 }
