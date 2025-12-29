@@ -1,18 +1,16 @@
-import { SiBuymeacoffee } from 'react-icons/si';
+import { Link } from '@remix-run/react';
 
-export const Footer = ({ trackEvent }: any) => {
+export const Footer = () => {
   return (
     <footer className="footer p-4 bg-primary text-primary-content">
-      <div className="grid grid-cols-3 w-full items-center">
-        {/* Left: Email */}
-        <div className="justify-self-start">
-          <span className="text-xs hidden md:inline-block">
-            mail@chessguessr.com
-          </span>
-        </div>
+      <div className="flex w-full items-center justify-between">
+        {/* Left: Privacy link */}
+        <Link to="/privacy" className="text-xs opacity-60 hover:opacity-100">
+          Privacy
+        </Link>
 
         {/* Center: Social icons */}
-        <div className="flex flex-row gap-3 justify-self-center items-center">
+        <div className="flex flex-row gap-3 items-center">
           <a
             href="https://twitter.com/chessguessr"
             target="_blank"
@@ -21,8 +19,8 @@ export const Footer = ({ trackEvent }: any) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               className="fill-current"
             >
@@ -37,8 +35,8 @@ export const Footer = ({ trackEvent }: any) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               className="fill-current"
             >
@@ -54,8 +52,8 @@ export const Footer = ({ trackEvent }: any) => {
             <svg
               viewBox="0 0 50 54"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               className="fill-current"
             >
               <path d="M38.956.5c-3.53.418-6.452.902-9.286 2.984C5.534 1.786-.692 18.533.68 29.364 3.493 50.214 31.918 55.785 41.329 41.7c-7.444 7.696-19.276 8.752-28.323 3.084S-.506 27.392 4.683 17.567C9.873 7.742 18.996 4.535 29.03 6.405c2.43-1.418 5.225-3.22 7.655-3.187l-1.694 4.86 12.752 21.37c-.439 5.654-5.459 6.112-5.459 6.112-.574-1.47-1.634-2.942-4.842-6.036-3.207-3.094-17.465-10.177-15.788-16.207-2.001 6.967 10.311 14.152 14.04 17.663 3.73 3.51 5.426 6.04 5.795 6.756 0 0 9.392-2.504 7.838-8.927L37.4 7.171z" />
@@ -63,20 +61,8 @@ export const Footer = ({ trackEvent }: any) => {
           </a>
         </div>
 
-        {/* Right: Buy me a coffee */}
-        <a
-          className="flex flex-row items-center gap-1 justify-self-end"
-          href="https://www.buymeacoffee.com/assios"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Support Chessguessr"
-          onClick={() => {
-            trackEvent('Click buymeacoffee');
-          }}
-        >
-          <SiBuymeacoffee className="fill-current w-5 h-5" />
-          <span className="text-xs hidden md:inline">Support Chessguessr</span>
-        </a>
+        {/* Right: Empty for balance */}
+        <div className="w-12" />
       </div>
     </footer>
   );

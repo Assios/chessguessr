@@ -212,3 +212,11 @@
     font-size: 0.9rem;
   }
 }
+
+/* Scale down Buy Me a Coffee widget on mobile */
+@media (max-width: 640px) {
+  #bmc-wbtn {
+    transform: scale(0.75);
+    transform-origin: bottom right;
+  }
+}
