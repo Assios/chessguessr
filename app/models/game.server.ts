@@ -17109,6 +17109,21 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2058,
       "bRating": 2023,
       "id": 1288
-    }
+    },
+    {
+      date: "2025-12-31",
+      fen: "8/8/5ppB/7p/3bp2P/3k2P1/5P2/5K2 b - - 3 59",
+      solution: ["Be5", "Bc1", "e3", "Bxe3", "Bxg3"],
+      gameUrl:
+        "https://lichess.org/broadcast/fide-world-rapid--blitz-championships-2025--blitz-open-knockout/final--game-4/Ryg8095l/4l7jde4e",
+      white: "Nodirbek Abdusattorov",
+      black: "Magnus Carlsen",
+      wTitle: "GM",
+      bTitle: "GM",
+      event: "2025 FIDE World Blitz Championship",
+      wRating: 2768,
+      bRating: 2881,
+      id: 1289,
+    },
   ];
 }

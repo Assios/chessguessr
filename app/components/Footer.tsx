@@ -4,10 +4,21 @@ export const Footer = () => {
   return (
     <footer className="footer p-4 bg-primary text-primary-content">
       <div className="flex w-full items-center justify-between">
-        {/* Left: Privacy link */}
-        <Link to="/privacy" className="text-xs opacity-60 hover:opacity-100">
-          Privacy
-        </Link>
+        {/* Left: Privacy + Credit */}
+        <div className="flex items-center gap-2 text-xs opacity-60">
+          <Link to="/privacy" className="hover:opacity-100">
+            Privacy
+          </Link>
+          <span>·</span>
+          <a
+            href="https://assios.no"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-100"
+          >
+            By Assios
+          </a>
+        </div>
 
         {/* Center: Social icons */}
         <div className="flex flex-row gap-3 items-center">
@@ -62,7 +73,7 @@ export const Footer = () => {
         </div>
 
         {/* Right: Empty for balance */}
-        <div className="w-12" />
+        <div className="w-20" />
       </div>
     </footer>
   );
