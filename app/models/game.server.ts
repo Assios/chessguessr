@@ -17115,7 +17115,7 @@ export async function getGames(): Promise<Array<GameType>> {
       fen: "8/8/5ppB/7p/3bp2P/3k2P1/5P2/5K2 b - - 3 59",
       solution: ["Be5", "Bc1", "e3", "Bxe3", "Bxg3"],
       gameUrl:
-        "https://lichess.org/broadcast/fide-world-rapid--blitz-championships-2025--blitz-open-knockout/final--game-4/Ryg8095l/4l7jde4e",
+        "https://lichess.org/broadcast/fide-world-rapid--blitz-championships-2025--blitz-open-knockout/final--game-4/Ryg8095l/4l7jde4e#118",
       white: "Nodirbek Abdusattorov",
       black: "Magnus Carlsen",
       wTitle: "GM",
