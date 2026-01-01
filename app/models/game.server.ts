@@ -17125,5 +17125,22 @@ export async function getGames(): Promise<Array<GameType>> {
       bRating: 2881,
       id: 1289,
     },
+    {
+      "date": "2026-01-01",
+      "fen": "8/p4rpk/6Qp/1p5P/2b5/P5R1/5n2/6K1 b - - 1 39",
+      "solution": [
+        "Kg8",
+        "Qxh6",
+        "Nh3+",
+        "Rxh3",
+        "gxh6"
+      ],
+      "gameUrl": "https://lichess.org/sCw2bqFX/black#77",
+      "white": "SISCHESSAR",
+      "black": "crackking07",
+      "wRating": 2133,
+      "bRating": 2252,
+      "id": 1290
+    }
   ];
 }
