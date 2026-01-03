@@ -17190,7 +17190,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "gameUrl": "https://lichess.org/5noPLiyw/white#30",
       "white": "Arrowlimit",
       "black": "max22maxqaz",
-      "wTitlte": "IM",
+      "wTitle": "IM",
       "wRating": 2548,
       "bRating": 2590,
       "id": 1293
