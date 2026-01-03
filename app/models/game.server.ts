@@ -17158,6 +17158,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1916,
       "bRating": 1908,
       "id": 1291
+    },
+    {
+      "date": "2026-01-03",
+      "fen": "2r2k1r/1p3pp1/p3p2n/1b2P2p/1P3P2/Pp1B2PP/4Q1K1/1R6 b - - 1 25",
+      "solution": [
+        "Rc2",
+        "Bxb5",
+        "Rxe2+",
+        "Bxe2",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/2rUkSpWh/black#49",
+      "white": "blobica",
+      "black": "Arsen724522",
+      "wTitle": "IM",
+      "wRating": 2507,
+      "bRating": 2217,
+      "id": 1292
     }
   ];
 }
