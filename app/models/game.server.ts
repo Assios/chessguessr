@@ -17176,6 +17176,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2507,
       "bRating": 2217,
       "id": 1292
+    },
+    {
+      "date": "2026-01-04",
+      "fen": "r2qrbk1/pp3ppp/2p2n2/5N2/8/3P1Q2/PB3PPP/R4RK1 w - - 3 16",
+      "solution": [
+        "Nh6+",
+        "Kh8",
+        "Nxf7+",
+        "Kg8",
+        "Nxd8"
+      ],
+      "gameUrl": "https://lichess.org/5noPLiyw/white#30",
+      "white": "Arrowlimit",
+      "black": "max22maxqaz",
+      "wTitlte": "IM",
+      "wRating": 2548,
+      "bRating": 2590,
+      "id": 1293
     }
   ];
 }
