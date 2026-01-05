@@ -17211,6 +17211,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1960,
       "bRating": 1936,
       "id": 1294
+    },
+    {
+      "date": "2026-01-06",
+      "fen": "r3k2r/bppq1ppp/p1n1b3/8/3P1n2/2N1B1P1/PP3PBP/R2Q1RK1 w kq - 0 13",
+      "solution": [
+        "gxf4",
+        "O-O-O",
+        "d5",
+        "Bxe3",
+        "fxe3"
+      ],
+      "gameUrl": "https://lichess.org/699xQNjG/white#24",
+      "white": "A_R_KATANA",
+      "black": "Cureton",
+      "wRating": 2026,
+      "bRating": 2087,
+      "id": 1295
     }
   ];
 }
