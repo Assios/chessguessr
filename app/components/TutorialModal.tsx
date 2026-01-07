@@ -19,14 +19,34 @@ export default function TutorialModal({
     <>
       {showTutorial ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto mx-auto max-w-3xl">
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none">
-                <div className="flex items-start justify-between pl-5 pt-5 rounded-t">
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none px-4 py-8">
+            <div className="relative w-auto mx-auto max-w-3xl max-h-[calc(100vh-4rem)] flex flex-col">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none max-h-full">
+                <div className="flex items-start justify-between pl-5 pr-4 pt-5 rounded-t flex-shrink-0">
                   <h3 className="text-3xl font-semibold">How to play</h3>
+                  <button
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-base-200 hover:bg-base-300 text-gray-500 hover:text-gray-700 transition-colors"
+                    type="button"
+                    onClick={() => setShowTutorial(false)}
+                    aria-label="Close"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                  </button>
                 </div>
-                <div className="divider" />
-                <div className="relative pl-6 flex-auto">
+                <div className="divider flex-shrink-0" />
+                <div className="relative pl-6 pr-6 flex-auto overflow-y-auto">
                   <p className="mb-2 text-lg leading-relaxed">
                     You will be shown a position from a chess game. Guess the 5
                     next moves played in the game. After each guess, the color
@@ -129,11 +149,11 @@ export default function TutorialModal({
                     <i>Nxf7</i> and <i>Nxf7+</i> aren't considered the same
                     moves).
                   </p>
-                  <p className="my-4 text-lg leading-relaxed font-bold">
+                  <p className="my-4 text-lg leading-relaxed font-bold pb-2">
                     A new position will appear every day at midnight UTC.
                   </p>
                 </div>
-                <div className="flex items-center justify-end p-6 rounded-b">
+                <div className="flex items-center justify-end p-6 rounded-b flex-shrink-0 border-t border-base-300">
                   <button
                     className="text-red-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"

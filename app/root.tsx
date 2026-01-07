@@ -183,6 +183,18 @@ export default function App() {
     }
   }, []);
 
+  // Hide BMC widget when modals are open
+  useEffect(() => {
+    const bmcWidget = document.getElementById("bmc-wbtn");
+    if (bmcWidget) {
+      if (showModal || showTutorial) {
+        bmcWidget.style.visibility = "hidden";
+      } else {
+        bmcWidget.style.removeProperty("visibility");
+      }
+    }
+  }, [showModal, showTutorial]);
+
   return (
     <html data-theme="corporate" lang="en">
       <head>
