@@ -17245,6 +17245,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2006,
       "bRating": 1584,
       "id": 1296
+    },
+    {
+      "date": "2026-01-08",
+      "fen": "r1bq1r2/pp2npk1/4p3/1np1N3/4P2Q/3P4/P1P3PP/R4RK1 w - - 2 19",
+      "solution": [
+        "Qg5+",
+        "Ng6",
+        "Rxf7+",
+        "Rxf7",
+        "Qxg6+"
+      ],
+      "gameUrl": "https://lichess.org/d3ntI0Cg/white#36",
+      "white": "samstar1404",
+      "black": "Terrible_storm89",
+      "wRating": 2265,
+      "bRating": 2174,
+      "id": 1297
     }
   ];
 }
