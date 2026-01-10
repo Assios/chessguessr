@@ -17296,6 +17296,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1572,
       "bRating": 1580,
       "id": 1299
+    },
+    {
+      "date": "2026-01-11",
+      "fen": "2b2rk1/4np1p/pq2p1pb/1p2P1N1/3nQ3/1BN5/PP4PP/R1B2RK1 b - - 4 16",
+      "solution": [
+        "Bb7",
+        "Qe3",
+        "Bxg5",
+        "Qxg5",
+        "Nf3+"
+      ],
+      "gameUrl": "https://lichess.org/Sbf430D1/black#31",
+      "white": "AlexanderOdintsov55",
+      "black": "Ahmed_Seif_ElDin",
+      "wRating": 1554,
+      "bRating": 1585,
+      "id": 1300
     }
   ];
 }
