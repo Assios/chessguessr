@@ -17313,6 +17313,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1554,
       "bRating": 1585,
       "id": 1300
+    },
+    {
+      "date": "2026-01-12",
+      "fen": "8/1p1r1k1p/pQ2rB2/3p4/2P3R1/PP5P/6PK/2q5 w - - 5 36",
+      "solution": [
+        "Rg7+",
+        "Kxf6",
+        "Qd4+",
+        "Kf5",
+        "g4#"
+      ],
+      "gameUrl": "https://lichess.org/qd7Vimo7/white#70",
+      "white": "fe1907",
+      "black": "totoff",
+      "bTitle": "NM",
+      "wRating": 2320,
+      "bRating": 2414,
+      "id": 1301
+    },
+    {
+      "date": "2026-01-13",
+      "fen": "2r2q2/1b1nr1pk/4p1R1/p2pN3/Pb1P1B2/1PpBPP1P/8/2R3K1 w - - 0 32",
+      "solution": [
+        "Rh6+",
+        "Kg8",
+        "Bh7+",
+        "Kh8",
+        "Ng6#"
+      ],
+      "gameUrl": "https://lichess.org/zPPy1R5v/white#62",
+      "white": "Navian_King01",
+      "black": "jdom78",
+      "wRating": 1995,
+      "bRating": 2003,
+      "id": 1302
     }
   ];
 }
