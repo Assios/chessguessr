@@ -17348,6 +17348,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1995,
       "bRating": 2003,
       "id": 1302
+    },
+    {
+      "date": "2026-01-14",
+      "fen": "5r1k/6p1/8/pP6/P6p/2P2qPP/R2Q1R1K/8 b - - 0 36",
+      "solution": [
+        "hxg3+",
+        "Kg1",
+        "gxf2+",
+        "Qxf2",
+        "Qd1+"
+      ],
+      "gameUrl": "https://lichess.org/GKOcqc9P/black#71",
+      "white": "LittleFairyPrincess",
+      "black": "dadangh",
+      "wRating": 2283,
+      "bRating": 1810,
+      "id": 1303
     }
   ];
 }
