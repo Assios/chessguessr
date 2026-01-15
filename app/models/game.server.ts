@@ -17365,6 +17365,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2283,
       "bRating": 1810,
       "id": 1303
+    },
+    {
+      "date": "2026-01-15",
+      "fen": "1r1qrnk1/1b2Pp1p/p1p3p1/1p3P2/2P5/1PNPp1NP/P2Q2B1/4RRK1 b - - 0 20",
+      "solution": [
+        "exd2",
+        "exd8=Q",
+        "dxe1=Q",
+        "Qg5",
+        "Qxc3"
+      ],
+      "gameUrl": "https://lichess.org/aYbdfplA/black#39",
+      "white": "Halil",
+      "black": "spillan",
+      "wTitle": "CM",
+      "wRating": 2179,
+      "bRating": 2223,
+      "id": 1304
     }
   ];
 }
