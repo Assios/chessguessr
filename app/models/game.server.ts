@@ -17400,6 +17400,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1852,
       "bRating": 1844,
       "id": 1305
+    },
+    {
+      "date": "2026-01-17",
+      "fen": "2kn2r1/pp1qn2Q/3b3B/3p4/3P4/2P4P/PP3PP1/R3R1K1 b - - 0 22",
+      "solution": [
+        "Qxh3",
+        "Qxg8",
+        "Qh2+",
+        "Kf1",
+        "Nxg8"
+      ],
+      "gameUrl": "https://lichess.org/eMG4Vse7/black#43",
+      "white": "Aleksandrvk",
+      "black": "TheTap",
+      "wRating": 1935,
+      "bRating": 2070,
+      "id": 1306
     }
   ];
 }
