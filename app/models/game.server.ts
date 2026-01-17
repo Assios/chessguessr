@@ -17417,6 +17417,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1935,
       "bRating": 2070,
       "id": 1306
+    },
+    {
+      "date": "2026-01-18",
+      "fen": "5rk1/1p4r1/p3p1b1/2PpPq2/P2P1R1p/7P/3B2P1/1Q3RK1 b - - 0 37",
+      "solution": [
+        "Qxf4",
+        "Bxf4",
+        "Bxb1",
+        "Bh6",
+        "Rxf1+"
+      ],
+      "gameUrl": "https://lichess.org/4ofZKBFw/black#73",
+      "white": "Salibeg",
+      "black": "Muhammadismail",
+      "wRating": 1805,
+      "bRating": 1783,
+      "id": 1307
     }
   ];
 }
