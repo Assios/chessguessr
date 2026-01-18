@@ -17451,6 +17451,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1974,
       "bRating": 1793,
       "id": 1308
+    },
+    {
+      "date": "2026-01-20",
+      "fen": "5rk1/p5p1/3bRr1p/1Pp4q/3p4/1P1Q1N2/P4PPP/4R1K1 b - - 0 22",
+      "solution": [
+        "Rxf3",
+        "gxf3",
+        "Qxh2+",
+        "Kf1",
+        "Qh3+"
+      ],
+      "gameUrl": "https://lichess.org/OWe6M5dF/black#42",
+      "white": "victorwemby",
+      "black": "Fastchess2345",
+      "wRating": 2589,
+      "bRating": 2722,
+      "id": 1309
+    },
+    {
+      "date": "2026-01-21",
+      "fen": "8/7R/8/5p2/4bk1P/8/2r5/5KR1 b - - 8 51",
+      "solution": [
+        "Kf3",
+        "Ke1",
+        "Rc1+",
+        "Kd2",
+        "Rxg1"
+      ],
+      "gameUrl": "https://lichess.org/r4xUR6fC/black#100",
+      "white": "prdec1337",
+      "black": "Lichugues",
+      "wRating": 1784,
+      "bRating": 1773,
+      "id": 1310
+    },
+    {
+      "date": "2026-01-22",
+      "fen": "Q1b2rk1/2q2p1p/1p2pbp1/pP6/2P5/P2B1N2/5PPP/3R1RK1 b - - 0 20",
+      "solution": [
+        "Bb7",
+        "Qa7",
+        "Ra8",
+        "Qxa8+",
+        "Bxa8"
+      ],
+      "gameUrl": "https://lichess.org/9PjjgfVE/black#38",
+      "white": "d3rocks",
+      "black": "leva1958",
+      "bTitle": "GM",
+      "wRating": 2619,
+      "bRating": 2583,
+      "id": 1311
     }
   ];
 }
