@@ -17434,6 +17434,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1805,
       "bRating": 1783,
       "id": 1307
+    },
+    {
+      "date": "2026-01-19",
+      "fen": "7k/4B2p/5p2/p3p1q1/3p4/1P1PnQrP/P7/7K w - - 0 45",
+      "solution": [
+        "Bxf6+",
+        "Kg8",
+        "Qa8+",
+        "Kf7",
+        "Bxg5"
+      ],
+      "gameUrl": "https://lichess.org/jDzfxJfI/white#88",
+      "white": "gattino",
+      "black": "Marchofthepawnguins",
+      "wRating": 1974,
+      "bRating": 1793,
+      "id": 1308
     }
   ];
 }
