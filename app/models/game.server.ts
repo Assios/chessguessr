@@ -17520,6 +17520,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1785,
       "bRating": 1869,
       "id": 1312
+    },
+    {
+      "date": "2026-01-24",
+      "fen": "3r2k1/pp1P1p1p/6p1/2R1P2r/5P2/6Pq/3Q3P/3R2K1 b - - 2 33",
+      "solution": [
+        "Rxd7",
+        "Qxd7",
+        "Qxh2+",
+        "Kf1",
+        "Qh1+"
+      ],
+      "gameUrl": "https://lichess.org/R6IG9d87/black#64",
+      "white": "Genlikho",
+      "black": "LukaDoncic14",
+      "bTitle": "CM",
+      "wRating": 2353,
+      "bRating": 2352,
+      "id": 1313
     }
   ];
 }
