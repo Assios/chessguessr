@@ -17503,6 +17503,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2619,
       "bRating": 2583,
       "id": 1311
+    },
+    {
+      "date": "2026-01-23",
+      "fen": "8/5P1P/1p5K/8/6P1/8/8/k1q5 w - - 0 64",
+      "solution": [
+        "g5",
+        "Qc6+",
+        "Kg7",
+        "Qc3+",
+        "Kg8"
+      ],
+      "gameUrl": "https://lichess.org/u5HjwjcV/white#126",
+      "white": "blazeken8",
+      "black": "Gambiters_19",
+      "wRating": 1785,
+      "bRating": 1869,
+      "id": 1312
     }
   ];
 }
