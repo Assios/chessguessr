@@ -17531,13 +17531,30 @@ export async function getGames(): Promise<Array<GameType>> {
         "Kf1",
         "Qh1+"
       ],
-      "gameUrl": "https://lichess.org/R6IG9d87/black#64",
+      "gameUrl": "https://lichess.org/R6IG9d87/black#65",
       "white": "Genlikho",
       "black": "LukaDoncic14",
       "bTitle": "CM",
       "wRating": 2353,
       "bRating": 2352,
       "id": 1313
+    },
+    {
+      "date": "2026-01-25",
+      "fen": "1k3b1r/3rq3/QBpp4/4p3/4P2p/5p2/P5PP/4R1K1 w - - 1 29",
+      "solution": [
+        "Rb1",
+        "Rb7",
+        "Ba7+",
+        "Kc8",
+        "Qxc6+"
+      ],
+      "gameUrl": "https://lichess.org/Yg1J59NW/white#56",
+      "white": "under_7",
+      "black": "sangotrunks",
+      "wRating": 1668,
+      "bRating": 1573,
+      "id": 1314
     }
   ];
 }
