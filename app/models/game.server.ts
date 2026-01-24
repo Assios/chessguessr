@@ -17541,19 +17541,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-01-25",
-      "fen": "1k3b1r/3rq3/QBpp4/4p3/4P2p/5p2/P5PP/4R1K1 w - - 1 29",
+      "fen": "8/3r2kp/P5p1/8/4P3/R2n1R1P/3r1PP1/5K2 b - - 0 38",
       "solution": [
-        "Rb1",
-        "Rb7",
-        "Ba7+",
-        "Kc8",
-        "Qxc6+"
+        "Rd1+",
+        "Ke2",
+        "Nc1+",
+        "Ke3",
+        "g5"
       ],
-      "gameUrl": "https://lichess.org/Yg1J59NW/white#56",
-      "white": "under_7",
-      "black": "sangotrunks",
-      "wRating": 1668,
-      "bRating": 1573,
+      "gameUrl": "https://lichess.org/jpcpDSdw/black#75",
+      "white": "Lichu2",
+      "black": "Akiba82",
+      "wRating": 1648,
+      "bRating": 1641,
       "id": 1314
     }
   ];
