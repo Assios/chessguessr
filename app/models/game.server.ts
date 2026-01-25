@@ -17555,6 +17555,129 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1648,
       "bRating": 1641,
       "id": 1314
+    },
+    {
+      "date": "2026-01-26",
+      "fen": "r1b2bnr/pppp2p1/2nk1q1p/4pQ2/3PP3/5N2/PPP2PPP/RNB1K2R w KQ - 1 8",
+      "solution": [
+        "dxe5+",
+        "Nxe5",
+        "Bf4",
+        "Qxf5",
+        "exf5"
+      ],
+      "gameUrl": "https://lichess.org/vmmMR2b1/white#14",
+      "white": "Ermak68",
+      "black": "SpaceCowboy28",
+      "wRating": 1692,
+      "bRating": 1707,
+      "id": 1315
+    },
+    {
+      "date": "2026-01-27",
+      "fen": "3r1b2/6kp/3P2p1/RP3p2/1q2pP1P/1B1p2P1/Q6K/8 w - - 1 43",
+      "solution": [
+        "Ra7+",
+        "Kh6",
+        "Bg8",
+        "Bg7",
+        "Rxg7"
+      ],
+      "gameUrl": "https://lichess.org/IU4Qd45l/white#84",
+      "white": "Jazzyjef",
+      "black": "vanyogt",
+      "wTitle": "FM",
+      "wRating": 2584,
+      "bRating": 2553,
+      "id": 1316
+    },
+    {
+      "date": "2026-01-28",
+      "fen": "2r2r2/p4N1k/4q3/3pn1p1/4p1RQ/2P1P2P/PP4P1/5RK1 b - - 0 27",
+      "solution": [
+        "gxh4",
+        "Ng5+",
+        "Kh6",
+        "Nxe6",
+        "Rxf1+"
+      ],
+      "gameUrl": "https://lichess.org/aa99iASm/black#53",
+      "white": "FerdRcndl",
+      "black": "Razriv",
+      "wRating": 1834,
+      "bRating": 2139,
+      "id": 1317
+    },
+    {
+      "date": "2026-01-29",
+      "fen": "8/P1k5/5R2/1P4p1/7p/7P/6PK/rr3B2 w - - 3 51",
+      "solution": [
+        "Ra6",
+        "Rxf1",
+        "b6+",
+        "Kd7",
+        "Rxa1"
+      ],
+      "gameUrl": "https://lichess.org/0bfpkeuY/white#100",
+      "white": "Chesstoday",
+      "black": "Aliakbarov_Anar",
+      "wTitle": "GM",
+      "bTitle": "FM",
+      "wRating": 2718,
+      "bRating": 2514,
+      "id": 1318
+    },
+    {
+      "date": "2026-01-30",
+      "fen": "5rk1/p1p2ppp/1pn5/5N2/3qnBQ1/P7/2P3PP/4R2K w - - 1 20",
+      "solution": [
+        "Nxd4",
+        "Nf2+",
+        "Kg1",
+        "Nxg4",
+        "Nxc6"
+      ],
+      "gameUrl": "https://lichess.org/WTFLBo2s/white#38",
+      "white": "redeglisaccchi",
+      "black": "Starzyk",
+      "wRating": 1620,
+      "bRating": 1699,
+      "id": 1319
+    },
+    {
+      "date": "2026-01-31",
+      "fen": "r6k/ppp4p/2n5/2b5/8/8/PPPP2PP/R1B2N1K b - - 0 19",
+      "solution": [
+        "Rf8",
+        "Ng3",
+        "Re8",
+        "h4",
+        "Re1+"
+      ],
+      "gameUrl": "https://lichess.org/xBiZzLMA/black#37",
+      "white": "zlodey4ik",
+      "black": "nameless2",
+      "wRating": 1720,
+      "bRating": 1680,
+      "id": 1320
+    },
+    {
+      "date": "2026-02-01",
+      "fen": "8/pp4bk/2q2npp/2P1Bp2/5P1P/4Q1P1/P3Pn2/3R1RK1 b - - 0 30",
+      "solution": [
+        "Nh3+",
+        "Kh2",
+        "Ng4+",
+        "Kxh3",
+        "Nxe3"
+      ],
+      "gameUrl": "https://lichess.org/THqBcNDR/black#59",
+      "white": "chess2351492137",
+      "black": "Khalilmousavii",
+      "bTitle": "GM",
+      "wRating": 2558,
+      "bRating": 2649,
+      "id": 1321
     }
   ];
 }
