@@ -17660,24 +17660,6 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1720,
       "bRating": 1680,
       "id": 1320
-    },
-    {
-      "date": "2026-02-01",
-      "fen": "8/pp4bk/2q2npp/2P1Bp2/5P1P/4Q1P1/P3Pn2/3R1RK1 b - - 0 30",
-      "solution": [
-        "Nh3+",
-        "Kh2",
-        "Ng4+",
-        "Kxh3",
-        "Nxe3"
-      ],
-      "gameUrl": "https://lichess.org/THqBcNDR/black#59",
-      "white": "chess2351492137",
-      "black": "Khalilmousavii",
-      "bTitle": "GM",
-      "wRating": 2558,
-      "bRating": 2649,
-      "id": 1321
     }
   ];
 }
