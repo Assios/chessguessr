@@ -17660,6 +17660,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1720,
       "bRating": 1680,
       "id": 1320
+    },
+    {
+      "date": "2026-02-01",
+      "fen": "3r1knr/p4ppp/8/1p1NPb2/2Pn4/P4N2/1P3PPP/2RK1B1R b - - 1 16",
+      "solution": [
+        "Nxf3",
+        "gxf3",
+        "bxc4",
+        "Bxc4",
+        "Ne7"
+      ],
+      "gameUrl": "https://lichess.org/cbUv6ClT/black#31",
+      "white": "EmmanuelVindas",
+      "black": "Giamu",
+      "wRating": 1759,
+      "bRating": 1601,
+      "id": 1321
     }
   ];
 }
