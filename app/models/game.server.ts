@@ -17781,6 +17781,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2281,
       "bRating": 2410,
       "id": 1327
+    },
+    {
+      "date": "2026-02-08",
+      "fen": "r3rnk1/ppq2pp1/3b1p2/3P3N/2p3b1/2PB2P1/PPQ2PK1/R1B4R w - - 0 18",
+      "solution": [
+        "Nxf6+",
+        "gxf6",
+        "Bh7+",
+        "Nxh7",
+        "Qxh7+"
+      ],
+      "gameUrl": "https://lichess.org/hdYAzfQJ/white#34",
+      "white": "MrOlka",
+      "black": "tinotinotino",
+      "wTitle": "GM",
+      "wRating": 2622,
+      "bRating": 2542,
+      "id": 1328
     }
   ];
 }
