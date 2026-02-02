@@ -17731,19 +17731,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-02-05",
-      "fen": "r5k1/pppb2p1/1bnp1q2/6N1/8/2NQ2B1/PP4PP/7K w - - 0 20",
+      "fen": "6k1/pb1p1pp1/1p6/3P4/7K/P1N2BQP/1n3qP1/4R3 b - - 2 30",
       "solution": [
-        "Qh7+",
-        "Kf8",
-        "Qh8+",
-        "Ke7",
-        "Nd5#"
+        "g5+",
+        "Kg4",
+        "f5+",
+        "Kxf5",
+        "Qxg3"
       ],
-      "gameUrl": "https://lichess.org/IoUBUxjr/white#38",
-      "white": "fall7rise8",
-      "black": "above4u",
-      "wRating": 1725,
-      "bRating": 1638,
+      "gameUrl": "https://lichess.org/8ZUI9GbT/black#59",
+      "white": "Darklab",
+      "black": "Sakr00",
+      "wRating": 1689,
+      "bRating": 1683,
       "id": 1325
     },
     {
