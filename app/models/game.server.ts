@@ -17697,24 +17697,6 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-02-03",
-      "fen": "1Q6/K4k2/8/5p2/8/8/1R2p3/2r5 b - - 0 56",
-      "solution": [
-        "Ra1+",
-        "Kb6",
-        "e1=Q",
-        "Qc7+",
-        "Qe7"
-      ],
-      "gameUrl": "https://lichess.org/j76CnG9Q/black#111",
-      "white": "zanbato",
-      "black": "umbabarauma",
-      "wTitle": "NM",
-      "wRating": 2231,
-      "bRating": 2027,
-      "id": 1323
-    },
-    {
-      "date": "2026-02-04",
       "fen": "r1b2rk1/6pp/p1pp4/4n3/1PP1p1pq/P1N1P1P1/1B2BP2/2RQ1RK1 b - - 0 17",
       "solution": [
         "Qh3",
@@ -17728,10 +17710,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "ThorwalaHulk",
       "wRating": 1910,
       "bRating": 2048,
-      "id": 1324
+      "id": 1323
     },
     {
-      "date": "2026-02-05",
+      "date": "2026-02-04",
       "fen": "2r3k1/3n1pp1/pq2r1p1/2p5/3b4/1P5P/PB1N1PP1/R1Q1R1K1 b - - 1 23",
       "solution": [
         "Rxe1+",
@@ -17745,10 +17727,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "raptor69",
       "wRating": 1721,
       "bRating": 1889,
-      "id": 1325
+      "id": 1324
     },
     {
-      "date": "2026-02-06",
+      "date": "2026-02-05",
       "fen": "r5k1/pppb2p1/1bnp1q2/6N1/8/2NQ2B1/PP4PP/7K w - - 0 20",
       "solution": [
         "Qh7+",
@@ -17762,10 +17744,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "above4u",
       "wRating": 1725,
       "bRating": 1638,
-      "id": 1326
+      "id": 1325
     },
     {
-      "date": "2026-02-07",
+      "date": "2026-02-06",
       "fen": "r3k2r/ppQ1n1p1/1p1R4/6p1/8/P3qP2/BPP4P/5b1K w kq - 0 23",
       "solution": [
         "Qd7+",
@@ -17779,10 +17761,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "mazorra",
       "wRating": 1926,
       "bRating": 1752,
-      "id": 1327
+      "id": 1326
     },
     {
-      "date": "2026-02-08",
+      "date": "2026-02-07",
       "fen": "8/8/8/P1b3kp/6p1/1PN2pK1/8/8 w - - 0 44",
       "solution": [
         "Ne4+",
@@ -17798,7 +17780,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "bTitle": "FM",
       "wRating": 2281,
       "bRating": 2410,
-      "id": 1328
+      "id": 1327
     }
   ];
 }
