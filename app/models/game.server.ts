@@ -17816,6 +17816,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1844,
       "bRating": 1862,
       "id": 1329
+    },
+    {
+      "date": "2026-02-10",
+      "fen": "2r3k1/5p2/p3p1nQ/3pPP2/2qN4/6BP/7K/4b3 w - - 0 34",
+      "solution": [
+        "f6",
+        "Bxg3+",
+        "Kxg3",
+        "Qd3+",
+        "Nf3"
+      ],
+      "gameUrl": "https://lichess.org/B294fXRo/white#66",
+      "white": "RedBear1983",
+      "black": "MordsMordreas",
+      "wRating": 1927,
+      "bRating": 2161,
+      "id": 1330
     }
   ];
 }
