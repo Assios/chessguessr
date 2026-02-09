@@ -17799,6 +17799,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2622,
       "bRating": 2542,
       "id": 1328
+    },
+    {
+      "date": "2026-02-09",
+      "fen": "8/8/1p4p1/p2p4/3k4/1P3PP1/P2K4/8 b - - 0 36",
+      "solution": [
+        "b5",
+        "a3",
+        "b4",
+        "a4",
+        "g5"
+      ],
+      "gameUrl": "https://lichess.org/elu1UymC/black#71",
+      "white": "KingCrud",
+      "black": "woutvanveen",
+      "wRating": 1844,
+      "bRating": 1862,
+      "id": 1329
     }
   ];
 }
