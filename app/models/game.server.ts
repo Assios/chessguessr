@@ -17850,6 +17850,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1846,
       "bRating": 2122,
       "id": 1331
+    },
+    {
+      "date": "2026-02-12",
+      "fen": "2r3k1/1p3p1p/p4Bp1/3bPp2/1q1P3Q/6R1/Pr4PP/6RK w - - 4 28",
+      "solution": [
+        "Qxh7+",
+        "Kxh7",
+        "Rh3+",
+        "Kg8",
+        "Rh8#"
+      ],
+      "gameUrl": "https://lichess.org/MxqJ2b1a/white#54",
+      "white": "ussucc",
+      "black": "XocasLT",
+      "bTitle": "FM",
+      "wRating": 2410,
+      "bRating": 2532,
+      "id": 1332
     }
   ];
 }
