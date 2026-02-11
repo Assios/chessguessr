@@ -17833,6 +17833,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1711,
       "bRating": 1836,
       "id": 1330
+    },
+    {
+      "date": "2026-02-11",
+      "fen": "3rk3/2q2p1Q/1p2pnr1/p2p2p1/8/P2R1NP1/2P1R1PP/4K3 w - - 7 32",
+      "solution": [
+        "Rxe6+",
+        "Kf8",
+        "Qh8+",
+        "Ng8",
+        "Rxg6"
+      ],
+      "gameUrl": "https://lichess.org/nFfliuKq/white#62",
+      "white": "MMcy",
+      "black": "jambocomeon",
+      "wRating": 1846,
+      "bRating": 2122,
+      "id": 1331
     }
   ];
 }
