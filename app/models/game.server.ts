@@ -17868,6 +17868,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2410,
       "bRating": 2532,
       "id": 1332
+    },
+    {
+      "date": "2026-02-13",
+      "fen": "r1bq1r2/2p2B1k/pb1p1pnp/1p2p2Q/1P2P2N/P1PP1N2/5PPP/R4RK1 b - - 0 17",
+      "solution": [
+        "Nf4",
+        "Bg6+",
+        "Kg7",
+        "Nf5+",
+        "Bxf5"
+      ],
+      "gameUrl": "https://lichess.org/KMvmskSd/black#33",
+      "white": "inviousss",
+      "black": "WenKeNai",
+      "wRating": 1617,
+      "bRating": 1619,
+      "id": 1333
+    },
+    {
+      "date": "2026-02-14",
+      "fen": "2rr4/p4kp1/1p2pn1p/5n2/2N2P2/2P1b3/PPB3PP/R1B2R1K b - - 0 21",
+      "solution": [
+        "Rxc4",
+        "Bxf5",
+        "Bxc1",
+        "Bxe6+",
+        "Kxe6"
+      ],
+      "gameUrl": "https://lichess.org/eqRuQUYk/black#41",
+      "white": "gmhasaan",
+      "black": "ng3ngekz",
+      "wRating": 1664,
+      "bRating": 1677,
+      "id": 1334
     }
   ];
 }
