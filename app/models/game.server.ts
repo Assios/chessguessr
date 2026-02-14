@@ -17902,6 +17902,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1664,
       "bRating": 1677,
       "id": 1334
+    },
+    {
+      "date": "2026-02-15",
+      "fen": "3qr1k1/1b2bp1p/p3p1pQ/4P3/1p2N3/8/PPr2PPP/2R2RK1 w - - 0 23",
+      "solution": [
+        "Nf6+",
+        "Bxf6",
+        "exf6",
+        "Qxf6",
+        "Rxc2"
+      ],
+      "gameUrl": "https://lichess.org/VJKWlbR4/white#44",
+      "white": "feuer_drache",
+      "black": "wienerman9000",
+      "wRating": 1554,
+      "bRating": 1584,
+      "id": 1335
     }
   ];
 }
