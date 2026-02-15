@@ -17922,21 +17922,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-02-16",
-      "fen": "1r4k1/p4p1p/6p1/3rb3/K7/2PpB3/1P1R1PPP/3R4 b - - 2 25",
+      "fen": "rn3rk1/pp3ppp/4p3/3p1b2/2PP3P/q1PB1N2/P1QB1nP1/1K1R3R w - - 0 15",
       "solution": [
-        "Rd6",
-        "b4",
-        "Bxc3",
-        "Bc5",
-        "Ra6+"
+        "Bxf5",
+        "exf5",
+        "Bc1",
+        "Qa5",
+        "Qxf2"
       ],
-      "gameUrl": "https://lichess.org/YRE2uOtG/black#49",
-      "white": "gogotaniye",
-      "black": "vizumatv4hoda",
-      "wTitle": "FM",
-      "bTitle": "GM",
-      "wRating": 2622,
-      "bRating": 2575,
+      "gameUrl": "https://lichess.org/CYeYG4HS/white#28",
+      "white": "EvokingGames7",
+      "black": "Sim-on-Fire",
+      "wRating": 1814,
+      "bRating": 1861,
       "id": 1336
     }
   ];
