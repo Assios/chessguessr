@@ -17970,6 +17970,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2229,
       "bRating": 1973,
       "id": 1338
+    },
+    {
+      "date": "2026-02-19",
+      "fen": "r2q1rk1/pp1n1pbp/3B2p1/2pN4/Q3P3/8/PPP2PPP/R4RK1 b - - 0 13",
+      "solution": [
+        "Nb6",
+        "Nxb6",
+        "axb6",
+        "Qxa8",
+        "Qxa8"
+      ],
+      "gameUrl": "https://lichess.org/Uu5kbZPv/black#25",
+      "white": "Mido66673736367",
+      "black": "gregoryr",
+      "wRating": 1636,
+      "bRating": 1658,
+      "id": 1339
     }
   ];
 }
