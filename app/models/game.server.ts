@@ -17953,6 +17953,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2129,
       "bRating": 2139,
       "id": 1337
+    },
+    {
+      "date": "2026-02-18",
+      "fen": "4R3/r1pk1p2/1pbp4/6qp/3N4/7P/PPP5/1K2R3 w - - 0 33",
+      "solution": [
+        "R1e7+",
+        "Qxe7",
+        "Rxe7+",
+        "Kxe7",
+        "Nxc6+"
+      ],
+      "gameUrl": "https://lichess.org/l0VrjJfX/white#64",
+      "white": "flfw666",
+      "black": "Kaiser_Pangilinan",
+      "wRating": 2229,
+      "bRating": 1973,
+      "id": 1338
     }
   ];
 }
