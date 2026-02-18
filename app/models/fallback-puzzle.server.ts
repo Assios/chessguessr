@@ -168,14 +168,14 @@ function evalToCp(e: LichessEval | undefined): number | null {
 
 // ─── Puzzle detection ─────────────────────────────────────────────────────────
 
-interface BlunderResult {
+export interface BlunderResult {
   solutionStartIndex: number;  // half-move index where solver plays from
   solutionMoves: string[];
   preBlunderEval: number;
   postBlunderEval: number;
 }
 
-function findBlunderSequence(
+export function findBlunderSequence(
   analysis: LichessEval[],
   moves: string[]
 ): BlunderResult | null {
@@ -234,7 +234,7 @@ function findBlunderSequence(
 }
 
 /** Compute the FEN after replaying a sequence of UCI/SAN moves from the starting position. */
-function fenAfterMoves(moves: string[]): string | null {
+export function fenAfterMoves(moves: string[]): string | null {
   const chess = new Chess();
   for (const move of moves) {
     const result = chess.move(move, { sloppy: true });
