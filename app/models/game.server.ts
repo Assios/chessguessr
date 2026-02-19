@@ -17987,6 +17987,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1636,
       "bRating": 1658,
       "id": 1339
+    },
+    {
+      "date": "2026-02-20",
+      "fen": "r1b3k1/ppq1brp1/4Qn1p/2n2N2/8/1NP5/PP3PPP/R1BR2K1 w - - 3 18",
+      "solution": [
+        "Nxe7+",
+        "Qxe7",
+        "Qxe7",
+        "Rxe7",
+        "Nxc5"
+      ],
+      "gameUrl": "https://lichess.org/kGoo7xWy/white#34",
+      "white": "pirolo72",
+      "black": "Minskois",
+      "wRating": 1558,
+      "bRating": 1677,
+      "id": 1340
     }
   ];
 }
