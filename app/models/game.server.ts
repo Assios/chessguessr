@@ -18004,6 +18004,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1558,
       "bRating": 1677,
       "id": 1340
+    },
+    {
+      "date": "2026-02-21",
+      "fen": "8/8/1b2p3/1P1p3P/3P2k1/1K6/8/8 w - - 0 47",
+      "solution": [
+        "h6",
+        "Bxd4",
+        "h7",
+        "Kf5",
+        "b6"
+      ],
+      "gameUrl": "https://lichess.org/DIt9pXgs/white#92",
+      "white": "GlennTipton",
+      "black": "Ivn_2001",
+      "wTitle": "FM",
+      "bTitle": "CM",
+      "wRating": 2436,
+      "bRating": 2384,
+      "id": 1341
     }
   ];
 }
