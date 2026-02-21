@@ -4,6 +4,9 @@
   "scripts": {
     "prepare": "husky install",
     "check-duplicates": "npx ts-node ./tests/checkDuplicates.ts",
+    "test:unit": "npx ts-node ./tests/testBlunderDetection.ts",
+    "test:integration": "npx ts-node ./tests/testFallbackPuzzle.ts",
+    "test": "npm run test:unit && npm run check-duplicates",
     "build": "run-s build:*",
     "build:css": "npm run generate:css -- --minify",
     "build:remix": "remix build",
@@ -14,19 +17,18 @@
     "start": "remix-serve build"
   },
   "dependencies": {
-    "chessground": "^8.3.5",
     "@remix-run/node": "^1.16.1",
     "@remix-run/react": "^1.16.1",
     "@remix-run/vercel": "^1.16.1",
     "@tailwindcss/typography": "^0.5.4",
     "@vercel/node": "^2.0.0",
     "chess.js": "^0.12.1",
+    "chessground": "^8.3.5",
     "daisyui": "^2.17.0",
     "dayjs": "^1.11.5",
     "firebase": "^9.8.4",
     "plausible-tracker": "^0.3.8",
     "react": "^17.0.2",
-    
     "react-countdown": "^2.3.2",
     "react-dom": "^17.0.2",
     "react-hot-toast": "^2.2.0",
@@ -38,6 +40,7 @@
     "@remix-run/dev": "^1.16.1",
     "@remix-run/eslint-config": "^1.6.5",
     "@remix-run/serve": "^1.16.0",
+    "@types/node": "^25.2.3",
     "@types/react": "^17.0.45",
     "@types/react-dom": "^17.0.17",
     "eslint": "^8.20.0",
