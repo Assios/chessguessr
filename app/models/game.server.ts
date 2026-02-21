@@ -18007,21 +18007,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-02-21",
-      "fen": "8/8/1b2p3/1P1p3P/3P2k1/1K6/8/8 w - - 0 47",
+      "fen": "6k1/1P1B1p2/4p3/3pP1Pp/P4K1P/2r5/1R1Q2P1/2q5 b - - 6 39",
       "solution": [
-        "h6",
-        "Bxd4",
-        "h7",
-        "Kf5",
-        "b6"
+        "Qf1+",
+        "Qf2",
+        "Qc4+",
+        "Qd4",
+        "Qxd4#"
       ],
-      "gameUrl": "https://lichess.org/DIt9pXgs/white#92",
-      "white": "GlennTipton",
-      "black": "Ivn_2001",
-      "wTitle": "FM",
-      "bTitle": "CM",
-      "wRating": 2436,
-      "bRating": 2384,
+      "gameUrl": "https://lichess.org/4SBlrc5J/black#77",
+      "white": "ErkebaiKz",
+      "black": "NotBrazilian",
+      "wRating": 2002,
+      "bRating": 1996,
       "id": 1341
     }
   ];
