@@ -18021,6 +18021,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2002,
       "bRating": 1996,
       "id": 1341
+    },
+    {
+      "date": "2026-02-22",
+      "fen": "r1q3k1/1pb3pp/p1b5/3p1pB1/4N1NQ/8/PPP2PPP/2K5 w - - 0 22",
+      "solution": [
+        "Ngf6+",
+        "Kf7",
+        "Qh5+",
+        "Ke6",
+        "Nc5+"
+      ],
+      "gameUrl": "https://lichess.org/Xc1xIAXR/white#42",
+      "white": "TacticNinja_2010",
+      "black": "mikhail3451",
+      "wRating": 2402,
+      "bRating": 2214,
+      "id": 1342
     }
   ];
 }
