@@ -18055,6 +18055,25 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1591,
       "bRating": 1581,
       "id": 1343
+    },
+    {
+      "date": "2026-02-24",
+      "fen": "4r2k/2R3b1/6p1/p2qn1P1/1p1pN3/1P1Q4/P4PP1/6K1 w - - 1 30",
+      "solution": [
+        "Qh3+",
+        "Kg8",
+        "Nf6+",
+        "Bxf6",
+        "Qh7+"
+      ],
+      "gameUrl": "https://lichess.org/Crduc3Ns/white#59",
+      "white": "Oganian_Miran",
+      "black": "painkiller3",
+      "wTitle": "IM",
+      "bTitle": "IM",
+      "wRating": 2665,
+      "bRating": 2503,
+      "id": 1344
     }
   ];
 }
