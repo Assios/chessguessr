@@ -18108,6 +18108,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1703,
       "bRating": 1739,
       "id": 1346
+    },
+    {
+      "date": "2026-02-27",
+      "fen": "r7/pppbr1k1/1q2pnpp/4Np2/5P1Q/3B4/P1P1R1PP/4R2K w - - 4 21",
+      "solution": [
+        "Qg3",
+        "Be8",
+        "Nxg6",
+        "Bxg6",
+        "Bxf5"
+      ],
+      "gameUrl": "https://lichess.org/Zxeyzc8V/white#40",
+      "white": "Darya8888",
+      "black": "Vladimir_Krakhmal",
+      "wRating": 1986,
+      "bRating": 2045,
+      "id": 1347
+    },
+    {
+      "date": "2026-02-28",
+      "fen": "6r1/5p2/k2p1Q2/p1rP1P2/2p1P3/2P2b2/P5B1/6K1 b - - 0 36",
+      "solution": [
+        "Rxg2+",
+        "Kf1",
+        "Rb5",
+        "Qxd6+",
+        "Rb6"
+      ],
+      "gameUrl": "https://lichess.org/6OAx1i0K/black#72",
+      "white": "DonD97",
+      "black": "Kevin_Baumann",
+      "wRating": 2383,
+      "bRating": 2331,
+      "id": 1348
+    },
+    {
+      "date": "2026-03-01",
+      "fen": "3r2k1/2p3b1/q5pp/3b4/3B4/2P2N2/PP1Q2PP/6RK b - - 6 28",
+      "solution": [
+        "Bxf3",
+        "gxf3",
+        "c5",
+        "Qc2",
+        "cxd4"
+      ],
+      "gameUrl": "https://lichess.org/hg16HvCZ/black#55",
+      "white": "lagodiseo",
+      "black": "nurlan101094",
+      "wRating": 1890,
+      "bRating": 1724,
+      "id": 1349
     }
   ];
 }
