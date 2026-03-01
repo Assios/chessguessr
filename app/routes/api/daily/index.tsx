@@ -1,14 +1,21 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { getGames } from "~/models/game.server";
+import { generateFallbackGame } from "~/models/fallback-puzzle.server";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
 
   const games = await getGames();
 
-  const dailyGame = games.find((game) => {
-    return game.date === d;
-  });
+  let dailyGame = games.find((game) => game.date === d);
+
+  if (!dailyGame) {
+    dailyGame = (await generateFallbackGame()) ?? undefined;
+  }
+
+  if (!dailyGame) {
+    throw new Response("No puzzle available for today", { status: 404 });
+  }
 
   const dailyGameWithPlayers = {
     ...dailyGame,

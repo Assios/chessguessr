@@ -3,6 +3,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { generateFallbackGame } from "~/models/fallback-puzzle.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { useOutletContext } from "@remix-run/react";
@@ -13,14 +14,28 @@ export const loader: LoaderFunction = async () => {
 
   const games = await getGames();
 
-  const dailyGame = games.find((game) => {
-    return game.date === d;
-  });
+  let dailyGame = games.find((game) => game.date === d);
 
-  const docRef = doc(db, "stats", dailyGame.id.toString());
-  const docSnap = await getDoc(docRef);
+  if (!dailyGame) {
+    dailyGame = (await generateFallbackGame()) ?? undefined;
+  }
 
-  return json({ game: dailyGame, stats: docSnap.data() });
+  if (!dailyGame) {
+    throw new Response("No puzzle available for today", { status: 404 });
+  }
+
+  // Fallback games use a synthetic ID and won't have Firebase stats — skip
+  // gracefully rather than crashing on `dailyGame.id.toString()`.
+  let stats = null;
+  try {
+    const docRef = doc(db, "stats", dailyGame.id.toString());
+    const docSnap = await getDoc(docRef);
+    stats = docSnap.data() ?? null;
+  } catch {
+    stats = null;
+  }
+
+  return json({ game: dailyGame, stats });
 };
 
 export default function Index() {
