@@ -18193,6 +18193,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2562,
       "bRating": 2516,
       "id": 1351
+    },
+    {
+      "date": "2026-03-04",
+      "fen": "2r1r1k1/3b1p1p/p5p1/1p1Qq3/1P2n3/1NP1N2P/P3RPP1/2R3K1 b - - 0 23",
+      "solution": [
+        "Nxc3",
+        "Rxc3",
+        "Qxd5",
+        "Nxd5",
+        "Rxe2"
+      ],
+      "gameUrl": "https://lichess.org/Unj9Dcdy/black#45",
+      "white": "Dolgorukij",
+      "black": "pocket-ace",
+      "wTitle": "FM",
+      "wRating": 2490,
+      "bRating": 2556,
+      "id": 1352
     }
   ];
 }
