@@ -18211,6 +18211,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2490,
       "bRating": 2556,
       "id": 1352
+    },
+    {
+      "date": "2026-03-05",
+      "fen": "2r2r2/1b3pk1/pq2p1p1/1p1p2Np/2nP3Q/4P3/P1B3PP/R4RK1 w - - 0 26",
+      "solution": [
+        "Nxf7",
+        "Rxf7",
+        "Bxg6",
+        "Kxg6",
+        "Qg3+"
+      ],
+      "gameUrl": "https://lichess.org/AgaTGgW1/white#50",
+      "white": "said-higzy",
+      "black": "pancher_q",
+      "wRating": 1664,
+      "bRating": 1675,
+      "id": 1353
+    },
+    {
+      "date": "2026-03-06",
+      "fen": "2Q5/6p1/7k/8/1P2npKP/4q2P/2Q5/8 b - - 0 60",
+      "solution": [
+        "Qg3+",
+        "Kf5",
+        "Nd6+",
+        "Ke5",
+        "f3+"
+      ],
+      "gameUrl": "https://lichess.org/FBESL7lt/black#119",
+      "white": "roberto835877",
+      "black": "Aborigen100500",
+      "wTitle": "IM",
+      "bTitle": "NM",
+      "wRating": 2435,
+      "bRating": 2683,
+      "id": 1354
+    },
+    {
+      "date": "2026-03-07",
+      "fen": "2kr3r/Qbpp1p2/1p2pq2/2b1N1pp/2P5/2P3B1/PP1N1PPP/R3R1K1 b - - 0 17",
+      "solution": [
+        "h4",
+        "Ne4",
+        "Qf5",
+        "Nxc5",
+        "bxc5"
+      ],
+      "gameUrl": "https://lichess.org/u7bwVx4w/black#33",
+      "white": "Yurdakul",
+      "black": "Darkestduck",
+      "wRating": 1725,
+      "bRating": 1730,
+      "id": 1355
+    },
+    {
+      "date": "2026-03-08",
+      "fen": "6rk/3b1prp/p2Q4/2pPp3/3qP1P1/5B1P/5PK1/R6R b - - 0 26",
+      "solution": [
+        "Bxg4",
+        "hxg4",
+        "Rxg4+",
+        "Bxg4",
+        "Qxe4+"
+      ],
+      "gameUrl": "https://lichess.org/mya3BFq3/black#51",
+      "white": "MbSen",
+      "black": "boudoukhakhier",
+      "wRating": 1521,
+      "bRating": 1549,
+      "id": 1356
     }
   ];
 }
