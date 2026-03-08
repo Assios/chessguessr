@@ -18281,6 +18281,75 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1521,
       "bRating": 1549,
       "id": 1356
+    },
+    {
+      "date": "2026-03-09",
+      "fen": "1r4nr/2p1kppp/p1B5/1pb1p3/8/5P2/PP3P1P/R1B1R1K1 w - - 0 18",
+      "solution": [
+        "Rxe5+",
+        "Kd6",
+        "Bf4",
+        "Kxc6",
+        "Rc1"
+      ],
+      "gameUrl": "https://lichess.org/kU5rkqwZ/white#34",
+      "white": "bunyod85",
+      "black": "canyilmaz",
+      "wRating": 1751,
+      "bRating": 1912,
+      "id": 1357
+    },
+    {
+      "date": "2026-03-10",
+      "fen": "6k1/pp3pp1/4r2p/1Q6/8/4qN1P/KPP1n1P1/3R4 w - - 2 26",
+      "solution": [
+        "Rd8+",
+        "Kh7",
+        "Qf5+",
+        "Rg6",
+        "Ne5"
+      ],
+      "gameUrl": "https://lichess.org/eDUBce3f/white#50",
+      "white": "vesseli",
+      "black": "Cobra2017",
+      "wRating": 1994,
+      "bRating": 1964,
+      "id": 1358
+    },
+    {
+      "date": "2026-03-11",
+      "fen": "5rk1/pp4p1/2n4p/3pp2Q/P7/2Pbq2N/1P1N1bPP/R1BK3R b - - 0 20",
+      "solution": [
+        "Nd4",
+        "Rc8",
+        "Nc4",
+        "Bc2+",
+        "Kxc2",
+      ],
+      "gameUrl": "https://lichess.org/ezBpSX2D/black#39",
+      "white": "wanphrang",
+      "black": "Aydzzz",
+      "wRating": 1876,
+      "bRating": 1877,
+      "id": 1359
+    },
+    {
+      "date": "2026-03-12",
+      "fen": "r1r3k1/pp2ppb1/3p2p1/3N4/3nP2R/3B1P2/qPPQ1P2/2K4R w - - 0 18",
+      "solution": [
+        "Rh8+",
+        "Bxh8",
+        "Rxh8+",
+        "Kxh8",
+        "Qh6+"
+      ],
+      "gameUrl": "https://lichess.org/YzXjhzvC/white#34",
+      "white": "husnuloke",
+      "black": "IncredibleFast",
+      "bTitle": "CM",
+      "wRating": 2152,
+      "bRating": 2426,
+      "id": 1360
     }
   ];
 }
