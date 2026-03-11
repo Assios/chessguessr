@@ -88,12 +88,20 @@ export const useHotkeys = (
   );
 };
 
-export const wrongSolution = (guesses: any[]) => {
-  return guesses
+export const wrongSolution = (guesses: any[], gameStatus: string) => {
+  if (gameStatus === "SOLVED") return false;
+
+  const greyCxd4 = guesses
     .flatMap((g) => g)
-    .some((guess: any) => {
-      return guess?.move === "cxd4" && guess?.color === "grey";
-    });
+    .some((guess: any) => guess?.move === "cxd4" && guess?.color === "grey");
+
+  const greyPawnOnMove2 = guesses.some((row: any[]) => {
+    const move2 = row?.[1];
+    const isPawnMove = move2?.move && move2.move[0] === move2.move[0].toLowerCase();
+    return isPawnMove && move2?.color === "grey";
+  });
+
+  return greyCxd4 || greyPawnOnMove2;
 };
 
 
