@@ -18321,10 +18321,10 @@ export async function getGames(): Promise<Array<GameType>> {
       "fen": "5rk1/pp4p1/2n4p/3pp2Q/P7/2Pbq2N/1P1N1bPP/R1BK3R b - - 0 20",
       "solution": [
         "Nd4",
+        "cxd4",
         "Rc8",
         "Nc4",
         "Bc2+",
-        "Kxc2",
       ],
       "gameUrl": "https://lichess.org/ezBpSX2D/black#39",
       "white": "wanphrang",
