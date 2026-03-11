@@ -88,7 +88,8 @@ export const useHotkeys = (
   );
 };
 
-export const wrongSolution = (guesses: any[], gameStatus: string) => {
+export const wrongSolution = (guesses: any[], gameStatus: string, date: string) => {
+  if (date !== "2026-03-11") return false;
   if (gameStatus === "SOLVED") return false;
 
   const greyCxd4 = guesses

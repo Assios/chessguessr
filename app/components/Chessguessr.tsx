@@ -165,9 +165,6 @@ export const Chessguessr = ({
               </div>
             )}
           </div>
-          <p className="mb-3 text-sm font-medium text-center">
-            Today's solution was corrected. Affected guesses have been cleared.
-          </p>
           <div
             className="flex justify-center mb-4"
             style={{ touchAction: 'manipulation' }}
