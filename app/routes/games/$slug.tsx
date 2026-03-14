@@ -28,40 +28,6 @@ export const meta: MetaFunction = ({ data }) => {
 export const CatchBoundary: CatchBoundaryComponent = () => {
   const caught = useCatch();
 
-  if (caught.status === 404) {
-    return (
-      <div className="mt-10 mb-20 content-center lg:mb-0">
-        <div className="flex flex-row justify-center">
-          <h1 className="text-center text-4xl mb-8 font-semibold">
-            No puzzle today (yet!)
-          </h1>
-        </div>
-        <p className="max-w-prose m-auto text-center text-lg">
-          It looks like today's puzzle hasn't been added yet. Please{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://lichess.org/inbox/Assios"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            message Assios on Lichess
-          </a>{" "}
-          to let me know!
-        </p>
-        <p className="max-w-prose m-auto text-center text-lg mt-4">
-          In the meantime, you can play previous puzzles in the{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="/games"
-          >
-            archive
-          </a>
-          .
-        </p>
-      </div>
-    );
-  }
-
   return (
     <div className="mt-10 mb-20 content-center lg:mb-0">
       <div className="flex flex-row justify-center">
