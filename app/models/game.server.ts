@@ -18384,6 +18384,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1686,
       "bRating": 1730,
       "id": 1362
+    },
+    {
+      "date": "2026-03-15",
+      "fen": "R7/8/P7/4p2P/6p1/r3k3/6PK/8 b - - 0 38",
+      "solution": [
+        "Kf2",
+        "a7",
+        "Rh3+",
+        "gxh3",
+        "g3+"
+      ],
+      "gameUrl": "https://lichess.org/tcwGFPFf/black#75",
+      "white": "HL7",
+      "black": "robertsamvelyan",
+      "wRating": 2332,
+      "bRating": 2007,
+      "id": 1363
     }
   ];
 }
