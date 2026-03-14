@@ -1,4 +1,6 @@
-const StatsCards = ({ playerStats }) => {
+import { PlayerStats } from "~/utils/types";
+
+const StatsCards = ({ playerStats }: { playerStats: PlayerStats }) => {
   let numWins = 0;
 
   for (let i = 1; i < 6; i++) {

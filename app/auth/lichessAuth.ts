@@ -1,12 +1,14 @@
 // lichessAuth.ts
 import { useState } from "react";
-import { HttpClient, OAuth2AuthCodePKCE } from "@bity/oauth2-auth-code-pkce";
+import { OAuth2AuthCodePKCE } from "@bity/oauth2-auth-code-pkce";
+
+type HttpClientFn = (url: string, init?: RequestInit) => Promise<Response>;
 
 interface Me {
   id: string;
   username: string;
-  httpClient: HttpClient; // with pre-set Authorization header
-  perfs: { [key: string]: any };
+  httpClient: HttpClientFn;
+  perfs: { [key: string]: unknown };
 }
 
 const lichessHost = "https://lichess.org";
@@ -23,7 +25,7 @@ export function useLichessAuth() {
     clientId,
     scopes,
     redirectUrl: clientUrl,
-    onAccessTokenExpiry: (refreshAccessToken) => refreshAccessToken(),
+    onAccessTokenExpiry: (refreshAccessToken: () => Promise<string>) => refreshAccessToken(),
     onInvalidGrant: console.warn,
   });
 

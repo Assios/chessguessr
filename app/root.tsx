@@ -25,6 +25,7 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import { OutletContextType } from "./utils/types";
 
 export const links: LinksFunction = () => [
   {
@@ -40,11 +41,11 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tileAnimations },
 ];
 
-export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+export const ErrorBoundary: ErrorBoundaryComponent = ({ error }: { error: Error }) => {
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
               </head>
@@ -89,7 +90,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
               </head>
@@ -162,7 +163,7 @@ export default function App() {
     apiHost: "https://chessguessr-proxy.vercel.app",
   });
 
-  const context: any = {
+  const context: OutletContextType = {
     showTutorial,
     showModal,
     setShowModal,
@@ -202,7 +203,7 @@ export default function App() {
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
               </head>

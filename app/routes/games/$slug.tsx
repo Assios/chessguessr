@@ -6,15 +6,20 @@ import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import { OutletContextType } from "~/utils/types";
 
 export const meta: MetaFunction = ({ data }) => {
+  if (!data?.game) {
+    return { title: "Chessguessr" };
+  }
+
   const fen = data.game.fen.split(" ")[0];
   const imageUrl =
     "https://images.weserv.nl/?url=fen-to-image.com/image/36/" + fen;
 
-  const players = data?.game?.white + " vs. " + data?.game?.black;
+  const players = data.game.white + " vs. " + data.game.black;
   return {
-    title: `Chessguessr – ${players}`,
+    title: `Chessguessr – ${players}`,
     "og:image": imageUrl,
     "twitter:image": imageUrl,
   };
@@ -43,7 +48,7 @@ export const loader: LoaderFunction = async ({ params, request }) => {
   const d = new Date().toISOString().split("T")[0];
 
   const games = await getGames();
-  const index = parseInt(params.slug) - 1;
+  const index = parseInt(params.slug || "0") - 1;
   const currentGame = games[index];
 
   if (!currentGame) {
@@ -75,7 +80,7 @@ export default function Index() {
     setShowTutorial,
     setTutorial,
     setShowNavbarStats,
-  }: any = useOutletContext();
+  } = useOutletContext<OutletContextType>();
 
   useEffect(() => {
     setShowNavbarStats(true);
