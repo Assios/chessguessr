@@ -9,13 +9,17 @@ import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 import { OutletContextType } from "~/utils/types";
 
 export const meta: MetaFunction = ({ data }) => {
+  if (!data?.game) {
+    return { title: "Chessguessr" };
+  }
+
   const fen = data.game.fen.split(" ")[0];
   const imageUrl =
     "https://images.weserv.nl/?url=fen-to-image.com/image/36/" + fen;
 
-  const players = data?.game?.white + " vs. " + data?.game?.black;
+  const players = data.game.white + " vs. " + data.game.black;
   return {
-    title: `Chessguessr – ${players}`,
+    title: `Chessguessr – ${players}`,
     "og:image": imageUrl,
     "twitter:image": imageUrl,
   };
@@ -23,6 +27,40 @@ export const meta: MetaFunction = ({ data }) => {
 
 export const CatchBoundary: CatchBoundaryComponent = () => {
   const caught = useCatch();
+
+  if (caught.status === 404) {
+    return (
+      <div className="mt-10 mb-20 content-center lg:mb-0">
+        <div className="flex flex-row justify-center">
+          <h1 className="text-center text-4xl mb-8 font-semibold">
+            No puzzle today (yet!)
+          </h1>
+        </div>
+        <p className="max-w-prose m-auto text-center text-lg">
+          It looks like today's puzzle hasn't been added yet. Please{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="https://lichess.org/inbox/Assios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            message Assios on Lichess
+          </a>{" "}
+          to let me know!
+        </p>
+        <p className="max-w-prose m-auto text-center text-lg mt-4">
+          In the meantime, you can play previous puzzles in the{" "}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href="/games"
+          >
+            archive
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="mt-10 mb-20 content-center lg:mb-0">
