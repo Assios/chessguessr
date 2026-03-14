@@ -9,7 +9,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
   if (currentGuess) {
     return (
       <div className={rowClasses}>
-        {currentGuess.map((g: any, i: number) => (
+        {currentGuess.map((g, i: number) => (
           <Tile className="m-[3px]" key={i} current={true}>
             {g}
           </Tile>
@@ -24,7 +24,7 @@ export const Row = ({ guess, currentGuess, insufficientMoves }: RowProps) => {
   if (guess) {
     return (
       <div className={rowClasses}>
-        {guess.map((move: any, i: number) => {
+        {guess.map((move, i: number) => {
           if (move) {
             return (
               <Tile

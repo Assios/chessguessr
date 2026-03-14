@@ -1,7 +1,15 @@
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import StatsCards from "./StatsCards";
 import { Tile } from '~/components/Tile';
-import { GameStatus } from "~/utils/types";
+import {
+  GameStatus,
+  GameType,
+  FormattedGuessRow,
+  FormattedGuessMove,
+  PlayerStats,
+  PuzzleStats,
+  OutletContextType,
+} from "~/utils/types";
 import Distribution from "./Distribution";
 import Countdown, { zeroPad } from "react-countdown";
 import {
@@ -12,7 +20,7 @@ import {
 } from "~/utils/utils";
 import { useOutletContext } from "@remix-run/react";
 
-const getSolvedPercentage = (puzzleStats) => {
+const getSolvedPercentage = (puzzleStats: PuzzleStats | undefined) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {
     return null;
   }
@@ -22,17 +30,24 @@ const getSolvedPercentage = (puzzleStats) => {
   );
 };
 
-const getAverageNumberOfTurns = (puzzleStats) => {
-  if (!(puzzleStats?.solved > 0 && puzzleStats?.turns > 0)) {
+const getAverageNumberOfTurns = (puzzleStats: PuzzleStats | undefined) => {
+  if (!(puzzleStats?.solved && puzzleStats.solved > 0 && puzzleStats?.turns && puzzleStats.turns > 0)) {
     return null;
   }
 
   return Math.round((puzzleStats.turns / puzzleStats.solved) * 100) / 100;
 };
 
-const Correct = ({ game, puzzleStats }) => {
+const GameResult = ({
+  game,
+  puzzleStats,
+  showEventDetails,
+}: {
+  game: GameType;
+  puzzleStats: PuzzleStats | undefined;
+  showEventDetails: boolean;
+}) => {
   const solvedPercentage = getSolvedPercentage(puzzleStats);
-
   const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
 
   return (
@@ -42,7 +57,7 @@ const Correct = ({ game, puzzleStats }) => {
         This game was played between {game.white}{" "}
         {game.wAka && `(${game.wAka})`} and {game.black}
         {game.bAka && ` (${game.bAka})`}
-        {game.event && (
+        {showEventDetails && game.event && (
           <>
             {" "}
             in the{" "}
@@ -83,61 +98,26 @@ const Correct = ({ game, puzzleStats }) => {
         ))}
       </div>
       {solvedPercentage && averageNumberOfTurns && (
-        <>
-          <p className="my-4 text-lg leading-relaxed">
-            {solvedPercentage}% got this one right. For the people that got it
-            right, the average number of turns was {averageNumberOfTurns}.
-          </p>
-        </>
+        <p className="my-4 text-lg leading-relaxed">
+          {solvedPercentage}% got this one right. For the people that got it
+          right, the average number of turns was {averageNumberOfTurns}.
+        </p>
       )}
     </div>
   );
 };
 
-const Failed = ({ game, puzzleStats }) => {
-  const solvedPercentage = getSolvedPercentage(puzzleStats);
-
-  const averageNumberOfTurns = getAverageNumberOfTurns(puzzleStats);
-
-  return (
-    <div className="relative pl-6 pr-6 flex-auto">
-      <div className="divider" />
-      <p className="my-4 text-lg leading-relaxed">
-        This game was played between {game.white}{" "}
-        {game.wAka && `(${game.wAka})`} and {game.black}
-        {game.bAka && ` (${game.bAka})`}.{" "}
-        {game.gameUrl && (
-          <>
-            Check out the game <GameLink game={game} />.
-          </>
-        )}
-      </p>
-      <span className="font-semibold">Solution</span>
-      <div className="flex flex-row mt-1">
-        {game.solution?.map((move, i) => (
-          <Tile
-            className="mr-[6px]"
-            color="green"
-            flipTile={true}
-            animationIndex={i * 0.2}
-            tutorial={true}
-            key={`${move}-${i}`}
-          >
-            {convertToIcon(move)}
-          </Tile>
-        ))}
-      </div>
-      {solvedPercentage && averageNumberOfTurns && (
-        <>
-          <h1 className="my-4  text-lg leading-relaxed">
-            {solvedPercentage}% got this one right. For the people that got it
-            right, the average number of turns was {averageNumberOfTurns}.
-          </h1>
-        </>
-      )}
-    </div>
-  );
-};
+interface ModalProps {
+  showModal: boolean;
+  setShowModal: (show: boolean) => void;
+  game: GameType;
+  guesses: FormattedGuessRow[];
+  turn: number;
+  playerStats: PlayerStats;
+  puzzleStats: PuzzleStats | undefined;
+  gameStatus: GameStatus;
+  shouldUpdateStats: boolean;
+}
 
 export default function Modal({
   showModal,
@@ -149,16 +129,14 @@ export default function Modal({
   puzzleStats,
   gameStatus,
   shouldUpdateStats,
-}) {
-  const { trackEvent }: any = useOutletContext();
+}: ModalProps) {
+  const { trackEvent } = useOutletContext<OutletContextType>();
 
   const [value, copy] = useCopyToClipboard();
 
-  const solvedPercentage = getSolvedPercentage(puzzleStats);
-
   const getShareGameText = (
-    guesses: any,
-    game: any,
+    guesses: FormattedGuessRow[],
+    game: GameType,
     turn: number,
     correct: boolean
   ) => {
@@ -170,15 +148,15 @@ export default function Modal({
       guess.forEach((move) => {
         if (move && move.color && move.pieceColor) {
           if (move.color === "green") {
-            text += "🟩";
+            text += "\u{1F7E9}";
           } else if (move.color === "yellow" && move.pieceColor === "blue") {
-            text += "🇺🇦";
+            text += "\u{1F1FA}\u{1F1E6}";
           } else if (move.color === "yellow") {
-            text += "🟨";
+            text += "\u{1F7E8}";
           } else if (move.pieceColor === "blue") {
-            text += "🟦";
+            text += "\u{1F7E6}";
           } else if (move.color === "grey") {
-            text += "⬜";
+            text += "\u2B1C";
           }
         }
       });
@@ -281,13 +259,11 @@ export default function Modal({
                 )}
 
                 {gameStatus !== GameStatus.IN_PROGRESS ? (
-                  <>
-                    {gameStatus === GameStatus.SOLVED ? (
-                      <Correct game={game} puzzleStats={puzzleStats} />
-                    ) : (
-                      <Failed game={game} puzzleStats={puzzleStats} />
-                    )}
-                  </>
+                  <GameResult
+                    game={game}
+                    puzzleStats={puzzleStats}
+                    showEventDetails={gameStatus === GameStatus.SOLVED}
+                  />
                 ) : null}
 
                 <div className="relative pl-6 flex-auto">

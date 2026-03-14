@@ -6,6 +6,7 @@ import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import { OutletContextType } from "~/utils/types";
 
 export const meta: MetaFunction = ({ data }) => {
   const fen = data.game.fen.split(" ")[0];
@@ -43,7 +44,7 @@ export const loader: LoaderFunction = async ({ params, request }) => {
   const d = new Date().toISOString().split("T")[0];
 
   const games = await getGames();
-  const index = parseInt(params.slug) - 1;
+  const index = parseInt(params.slug || "0") - 1;
   const currentGame = games[index];
 
   if (!currentGame) {
@@ -75,7 +76,7 @@ export default function Index() {
     setShowTutorial,
     setTutorial,
     setShowNavbarStats,
-  }: any = useOutletContext();
+  } = useOutletContext<OutletContextType>();
 
   useEffect(() => {
     setShowNavbarStats(true);

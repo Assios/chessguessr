@@ -1,4 +1,6 @@
-const Distribution = ({ guessDistribution }) => {
+import { GuessDistribution } from "~/utils/types";
+
+const Distribution = ({ guessDistribution }: { guessDistribution: GuessDistribution }) => {
   const distributionArray = [
     guessDistribution[1],
     guessDistribution[2],

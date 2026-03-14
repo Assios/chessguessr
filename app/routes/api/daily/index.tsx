@@ -10,6 +10,10 @@ export const loader: LoaderFunction = async () => {
     return game.date === d;
   });
 
+  if (!dailyGame) {
+    throw new Response("No game found for today", { status: 404 });
+  }
+
   const dailyGameWithPlayers = {
     ...dailyGame,
     boardImage:
@@ -49,6 +53,7 @@ export const loader: LoaderFunction = async () => {
   return new Response(body, {
     headers: {
       "Content-Type": "application/json",
+      "Cache-Control": "public, max-age=300, s-maxage=3600, stale-while-revalidate=600",
     },
   });
 };

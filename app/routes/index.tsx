@@ -1,12 +1,12 @@
 import { Chessguessr } from "../components/Chessguessr";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
-import { useOutletContext } from "@remix-run/react";
 import { useEffect } from "react";
+import type { OutletContextType } from "~/utils/types";
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
@@ -16,6 +16,10 @@ export const loader: LoaderFunction = async () => {
   const dailyGame = games.find((game) => {
     return game.date === d;
   });
+
+  if (!dailyGame) {
+    throw new Response("No game found for today", { status: 404 });
+  }
 
   const docRef = doc(db, "stats", dailyGame.id.toString());
   const docSnap = await getDoc(docRef);
@@ -33,7 +37,7 @@ export default function Index() {
     setShowTutorial,
     setTutorial,
     setShowNavbarStats,
-  }: any = useOutletContext();
+  } = useOutletContext<OutletContextType>();
 
   useEffect(() => {
     setShowNavbarStats(true);

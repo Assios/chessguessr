@@ -1,10 +1,16 @@
 import { NavLink } from "@remix-run/react";
 
-export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
+interface NavbarProps {
+  setShowModal: (value: boolean | ((prev: boolean) => boolean)) => void;
+  setShowTutorial: (value: boolean | ((prev: boolean) => boolean)) => void;
+  showNavbarStats: boolean;
+}
+
+export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }: NavbarProps) => {
   return (
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
-        <button className="btn btn-ghost btn-circle" onClick={setShowTutorial} aria-label="Help">
+        <button className="btn btn-ghost btn-circle" onClick={() => setShowTutorial(true)} aria-label="Help">
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +87,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
         </label>
 
         {showNavbarStats && (
-          <button className="btn btn-ghost btn-circle" onClick={setShowModal} aria-label="Statistics">
+          <button className="btn btn-ghost btn-circle" onClick={() => setShowModal(true)} aria-label="Statistics">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5 md:w-6 md:h-6"

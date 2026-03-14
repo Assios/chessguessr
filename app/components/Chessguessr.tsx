@@ -4,7 +4,7 @@ import ChessgroundBoard from './ChessgroundBoard';
 import { Grid } from './Grid';
 import { Row } from './Row';
 import Modal from './Modal/Modal';
-import { GameType, GameStatus } from '~/utils/types';
+import { GameType, GameStatus, PuzzleStats, OutletContextType } from '~/utils/types';
 import { useWindowSize } from '~/hooks/useWindowSize';
 import TutorialModal from './TutorialModal';
 import Countdown from 'react-countdown';
@@ -29,12 +29,12 @@ export const Chessguessr = ({
   shouldUpdateStats,
 }: {
   game: GameType;
-  stats?: any;
+  stats?: PuzzleStats;
   showModal: boolean;
-  setShowModal: any;
+  setShowModal: (show: boolean) => void;
   showTutorial: boolean;
-  setShowTutorial: any;
-  setTutorial: any;
+  setShowTutorial: (show: boolean) => void;
+  setTutorial: (val: boolean) => void;
   shouldUpdateStats: boolean;
 }) => {
   const {
@@ -79,8 +79,8 @@ export const Chessguessr = ({
   const getBoardWidth = () => {
     let width = 560;
 
-    if (size.width < 581) width = 370;
-    if (size.width < 451) width = 310;
+    if (size.width !== undefined && size.width < 581) width = 370;
+    if (size.width !== undefined && size.width < 451) width = 310;
 
     return width;
   };
@@ -95,7 +95,7 @@ export const Chessguessr = ({
   useHotkeys('Enter', submitGuess, [currentGuess]);
   useHotkeys('Space', submitGuess, [currentGuess]);
 
-  const { trackEvent }: any = useOutletContext();
+  const { trackEvent } = useOutletContext<OutletContextType>();
 
   return (
     <div>

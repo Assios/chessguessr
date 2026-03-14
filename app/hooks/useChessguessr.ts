@@ -8,7 +8,12 @@ import {
   GameStatus,
   FullFenHistory,
   GuessWithHistory,
-  Guess,
+  ChessInstance,
+  FormattedGuessMove,
+  FormattedGuessRow,
+  OutletContextType,
+  GameState,
+  PlayerStats,
 } from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
 import { useOutletContext } from "@remix-run/react";
@@ -102,13 +107,13 @@ const useNavigableGuessAndFenHistory = () => {
     fenHistory,
     setFenHistory,
     nextHistoryStep,
-    
+
   };
 };
 
 const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   const [turn, setTurn] = useState(0);
-  const [guesses, setGuesses] = useState([
+  const [guesses, setGuesses] = useState<FormattedGuessRow[]>([
     [null, null, null, null, null],
     [null, null, null, null, null],
     [null, null, null, null, null],
@@ -116,7 +121,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     [null, null, null, null, null],
   ]);
 
-  const { trackEvent }: any = useOutletContext();
+  const { trackEvent } = useOutletContext<OutletContextType>();
 
   const [gameStatus, setGameStatus] = useState<GameStatus>(
     GameStatus.IN_PROGRESS
@@ -128,20 +133,20 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     fenHistory,
     setFenHistory,
     nextHistoryStep,
-    
+
   } = useNavigableGuessAndFenHistory();
-  const [position, setPosition] = useState(null);
+  const [position, setPosition] = useState<ChessInstance | null>(null);
   const [insufficientMoves, setInsufficientMoves] = useState(false);
   const [colorToPlay, setColorToPlay] = useState("white");
 
-  const [gameState, setGameState] = useLocalStorage("cg-state", {
+  const [gameState, setGameState] = useLocalStorage<GameState>("cg-state", {
     guesses: guesses,
     turn: turn,
     gameStatus: gameStatus,
     date: game.date,
   });
 
-  const [playerStats, setPlayerStats] = useLocalStorage("cg-stats", {
+  const [playerStats, setPlayerStats] = useLocalStorage<PlayerStats>("cg-stats", {
     gamesPlayed: 0,
     currentStreak: 1,
     lastPlayed: null,
@@ -178,26 +183,27 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
 
   useEffect(() => {
     if (game) {
-      const pos = new Chess(game.fen);
+      const pos = new Chess(game.fen) as unknown as ChessInstance;
       setPosition(pos);
       setColorToPlay(pos.turn());
     }
   }, [game]);
 
-  const updateChessBoard = (modify: any) => {
-    setPosition((g: any) => {
-      const update = { ...g };
+  const updateChessBoard = (modify: (game: ChessInstance) => void) => {
+    setPosition((g) => {
+      if (!g) return g;
+      const update = { ...g } as ChessInstance;
       modify(update);
       return update;
     });
   };
 
   const formatGuess = () => {
-    let solutionArray = [...game.solution];
-    let discardYellowArray = [...game.solution];
+    const solutionArray: (string | null)[] = [...game.solution];
+    const discardYellowArray: (string | null)[] = [...game.solution];
 
-    let formattedGuess = [...currentGuess].map((move) => {
-      return { move: move, color: "grey", pieceColor: "regular" };
+    const formattedGuess: FormattedGuessMove[] = [...currentGuess].map((move) => {
+      return { move: move, color: "grey" as const, pieceColor: "regular" as const };
     });
 
     // mark all the green moves
@@ -208,25 +214,25 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
         discardYellowArray[i] = null;
       }
     });
-       
+
     // mark all the yellow and blue moves
     formattedGuess.forEach((move, i) => {
        if (
-        discardYellowArray.includes(move.move) &&
+        discardYellowArray.includes(move.move as string) &&
         move.color !== "green"
       ) {
         formattedGuess[i].color = "yellow";
-        discardYellowArray[discardYellowArray.indexOf(move.move)] = null;
+        discardYellowArray[discardYellowArray.indexOf(move.move as string)] = null;
       }
 
       if (
         move.color !== "green" &&
         solutionArray[i] !== null &&
-        (solutionArray[i][0] === move.move[0] ||
-          (chessCols.includes(solutionArray[i][0]) &&
-            chessCols.includes(move.move[0])) ||
-          (kingMove.includes(solutionArray[i][0]) &&
-            kingMove.includes(move.move[0])))
+        ((solutionArray[i] as string)[0] === (move.move as string)[0] ||
+          (chessCols.includes((solutionArray[i] as string)[0]) &&
+            chessCols.includes((move.move as string)[0])) ||
+          (kingMove.includes((solutionArray[i] as string)[0]) &&
+            kingMove.includes((move.move as string)[0])))
       ) {
         formattedGuess[i].pieceColor = "blue";
       }
@@ -235,7 +241,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     return formattedGuess;
   };
 
-  const addGuess = (formattedGuess: any) => {
+  const addGuess = (formattedGuess: FormattedGuessMove[]) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
@@ -299,7 +305,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
         trackEvent("Submit daily", { props: { result: "Success" } });
       }
     } else {
-      setPosition(new Chess(game.fen));
+      setPosition(new Chess(game.fen) as unknown as ChessInstance);
     }
 
     if (shouldUpdateStats) {
@@ -322,10 +328,10 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     targetSquare: string,
     promotion?: "q" | "r" | "b" | "n"
   ): boolean => {
-    let move = null;
+    let move: { san: string } | null = null;
     let fenAfter: string | null = null;
 
-    updateChessBoard((game: any) => {
+    updateChessBoard((game: ChessInstance) => {
       move = game.move({
         from: sourceSquare,
         to: targetSquare,
@@ -340,8 +346,8 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
 
     if (move) {
       if (currentGuess.length < 5 && position) {
-        setFenHistory((prev): any => [...prev, (fenAfter as string) || position.fen()]);
-        setCurrentGuess((prev): any => [...prev, move.san]);
+        setFenHistory((prev) => [...prev, (fenAfter as string) || position.fen()]);
+        setCurrentGuess((prev) => [...prev, (move as { san: string }).san]);
       }
 
       return true;
@@ -357,9 +363,9 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     }
 
     if (fenHistory.length < 2) {
-      setPosition(new Chess(game.fen));
+      setPosition(new Chess(game.fen) as unknown as ChessInstance);
     } else {
-      setPosition(new Chess(fenHistory[fenHistory.length - 2]));
+      setPosition(new Chess(fenHistory[fenHistory.length - 2]) as unknown as ChessInstance);
     }
 
     setCurrentGuess((prev) => prev.filter((_, i) => i !== prev.length - 1));
@@ -374,7 +380,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       return;
     }
     const { move, fen } = nextStep;
-    setPosition(new Chess(fen));
+    setPosition(new Chess(fen) as unknown as ChessInstance);
     setCurrentGuess((prev) => [...prev, move]);
     setFenHistory((prev) => [...prev, fen]);
   };

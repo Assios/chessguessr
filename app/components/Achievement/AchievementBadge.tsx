@@ -1,16 +1,23 @@
-import { Achievement } from "../AuthProvider/AuthProvider";
+interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  iconUrl?: string;
+  achieved: boolean;
+}
 
 interface AchievementBadgeProps {
     achievement: Achievement;
     achievedAchievements: string[];
   }
-  
+
   export default function AchievementBadge({
     achievement,
     achievedAchievements,
   }: AchievementBadgeProps) {
     const isAchieved = achievedAchievements.includes(achievement.id);
-  
+
+    return (
     <div className="achievement-element relative m-4 hover:scale-105 transition-transform duration-200">
       <div className="flex justify-between items-center px-2">
         <p className="achievement-title text-center rounded-md py-1 px-2">
@@ -30,7 +37,5 @@ interface AchievementBadgeProps {
           : "Secret until achieved!"}
       </p>
     </div>
-  );
+    );
 }
-
-export default AchievementBadge;

@@ -1,5 +1,5 @@
 import { Row } from './Row';
-import { GridProps } from '../utils/types';
+import { GridProps, FormattedGuessMove } from '../utils/types';
 import { convertToIcon } from '~/utils/utils';
 
 export const Grid = ({
@@ -16,7 +16,7 @@ export const Grid = ({
   });
 
   const iconifiedGuesses = guesses.map((row) => {
-    return row.map((move: any) => {
+    return row.map((move) => {
       if (move === null) {
         return null;
       }
@@ -31,7 +31,7 @@ export const Grid = ({
   return (
     <div className="ml-0 sm:ml-4 mt-6 lg:mt-[3.3rem]">
       <p className="text-base sm:text-lg lg:text-2xl mb-2 font-semibold">Your guesses:</p>
-      {iconifiedGuesses.map((guess: any, i: number) => {
+      {iconifiedGuesses.map((guess, i: number) => {
         if (turn === i) {
           return (
             <Row

@@ -8,8 +8,9 @@ import {
   FaChessQueen,
   FaChessRook,
 } from "react-icons/fa";
+import type { FormattedGuessRow, GameType } from "./types";
 
-export const arraysEqual = (a: any, b: any) => {
+export const arraysEqual = (a: string[], b: string[]) => {
   if (a === b) return true;
   if (a == null || b == null) return false;
   if (a.length !== b.length) return false;
@@ -38,13 +39,21 @@ export const midnightUtcTomorrow = () => {
   );
 };
 
-export const countdownRenderer = ({ hours, minutes, seconds }) => (
+export const countdownRenderer = ({
+  hours,
+  minutes,
+  seconds,
+}: {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}) => (
   <span>
     {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
   </span>
 );
 
-const gameUrlText = (game) => {
+const gameUrlText = (game: GameType) => {
   if (game.gameUrl.includes("lichess.org")) {
     return "on lichess";
   }
@@ -52,7 +61,7 @@ const gameUrlText = (game) => {
   return "here";
 };
 
-export const GameLink = ({ game }) => {
+export const GameLink = ({ game }: { game: GameType }) => {
   return (
     <a
       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
@@ -65,11 +74,11 @@ export const GameLink = ({ game }) => {
   );
 };
 
-export const guessifySolution = (game) => {
+export const guessifySolution = (game: GameType) => {
   return game.solution.map((move) => ({
     move: convertToIcon(move),
-    color: "green",
-    pieceColor: "regular",
+    color: "green" as const,
+    pieceColor: "regular" as const,
   }));
 };
 
@@ -77,7 +86,7 @@ export const guessifySolution = (game) => {
 export const useHotkeys = (
   key: string,
   callback: () => void,
-  deps: any[] = []
+  deps: unknown[] = []
 ) => {
   return _useHotkeys(
     key,
@@ -89,7 +98,7 @@ export const useHotkeys = (
   );
 };
 
-export const wrongSolution = (_guesses: any[], _gameStatus: string, _date: string) => {
+export const wrongSolution = (_guesses: FormattedGuessRow[], _gameStatus: string, _date: string) => {
   return false;
 };
 

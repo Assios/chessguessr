@@ -1,6 +1,7 @@
 import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { OutletContextType } from "~/utils/types";
 import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
@@ -33,7 +34,7 @@ const index = () => {
     setShowTutorial,
     setTutorial,
     setShowNavbarStats,
-  }: any = useOutletContext();
+  } = useOutletContext<OutletContextType>();
 
   const { games } = useLoaderData();
 
@@ -76,7 +77,7 @@ const index = () => {
         </p>
 
         <div className="p-12 margin-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-          {gamesSorted.map((game, i) => {
+          {gamesSorted.map((game: { id: number; fen: string; white: string; black: string; date: string }, i: number) => {
             return (
               <div key={game.id} className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
                 <figure>
