@@ -121,6 +121,7 @@ const Failed = ({ game, puzzleStats }) => {
             flipTile={true}
             animationIndex={i * 0.2}
             tutorial={true}
+            key={`${move}-${i}`}
           >
             {convertToIcon(move)}
           </Tile>
@@ -202,7 +203,7 @@ export default function Modal({
   const nextDate =
     utcTomorrow.getFullYear().toString() +
     "-" +
-    (utcTomorrow.getMonth() + 1).toString().padStart(2, 0) +
+    (utcTomorrow.getMonth() + 1).toString().padStart(2, '0') +
     "-" +
     utcTomorrow.getDate().toString();
 
@@ -230,9 +231,12 @@ export default function Modal({
                     />
                   </svg>
                   <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    className="p-1 ml-auto bg-transparent border-0 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
-                  ></button>
+                    aria-label="Close"
+                  >
+                    &times;
+                  </button>
                 </div>
 
                 <div>
@@ -301,13 +305,14 @@ export default function Modal({
                   </p>
                   <p className="text-md">
                     {" "}
-                    Now also on Twitter! Follow{" "}
+                    Follow{" "}
                     <a
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
                       href="https://twitter.com/chessguessr"
                     >
-                      Chessguessr
+                      Chessguessr on X
                     </a>{" "}
                     for updates.
                   </p>
@@ -341,7 +346,7 @@ export default function Modal({
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black" onClick={() => setShowModal(false)}></div>
         </>
       ) : null}
     </>

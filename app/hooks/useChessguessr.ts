@@ -221,6 +221,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
 
       if (
         move.color !== "green" &&
+        solutionArray[i] !== null &&
         (solutionArray[i][0] === move.move[0] ||
           (chessCols.includes(solutionArray[i][0]) &&
             chessCols.includes(move.move[0])) ||
@@ -390,12 +391,9 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       setInsufficientMoves(true);
       toast.error("5 moves needed.", { duration: 2000 });
 
-      setTimeout(
-        function () {
-          setInsufficientMoves(false);
-        }.bind(this),
-        1000
-      );
+      setTimeout(() => {
+        setInsufficientMoves(false);
+      }, 1000);
 
       return;
     }

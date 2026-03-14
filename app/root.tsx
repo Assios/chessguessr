@@ -63,6 +63,7 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="https://github.com/Assios/chessguessr/issues"
             target="_blank"
+            rel="noopener noreferrer"
           >
             file an issue
           </a>{" "}
@@ -71,6 +72,7 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="https://lichess.org/inbox/Assios"
             target="_blank"
+            rel="noopener noreferrer"
           >
             contact Assios on Lichess
           </a>
@@ -106,6 +108,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="https://github.com/Assios/chessguessr/issues"
             target="_blank"
+            rel="noopener noreferrer"
           >
             file an issue
           </a>{" "}
@@ -114,6 +117,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="https://lichess.org/inbox/Assios"
             target="_blank"
+            rel="noopener noreferrer"
           >
             contact Assios on Lichess
           </a>

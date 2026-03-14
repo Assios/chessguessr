@@ -3,6 +3,8 @@ import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
+import advancedFormat from "dayjs/plugin/advancedFormat";
+dayjs.extend(advancedFormat);
 import { useNavigate } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
 import { useEffect } from "react";
@@ -76,13 +78,14 @@ const index = () => {
         <div className="p-12 margin-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {gamesSorted.map((game, i) => {
             return (
-              <div className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
+              <div key={game.id} className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
                 <figure>
                   <img
                     src={
                       "//images.weserv.nl/?url=fen-to-image.com/image/36/" +
                       game.fen
                     }
+                    alt={`${game.white} vs ${game.black}`}
                   />
                 </figure>
                 <div className="card-body">
@@ -91,7 +94,7 @@ const index = () => {
                     {game.white} – {game.black}
                   </h2>
                   <div className="badge badge-primary">
-                    {dayjs(game.date).format("MMMM D[th], YYYY")}
+                    {dayjs(game.date).format("MMMM Do, YYYY")}
                   </div>
                   <div className="card-actions justify-end">
                     <button

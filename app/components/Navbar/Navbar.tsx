@@ -4,7 +4,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
   return (
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
-        <button className="btn btn-ghost btn-circle" onClick={setShowTutorial}>
+        <button className="btn btn-ghost btn-circle" onClick={setShowTutorial} aria-label="Help">
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +26,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
           prefetch="intent"
           to="games"
           className="btn btn-ghost btn-circle"
+          aria-label="Archive"
         >
           <div className="indicator">
             <svg
@@ -80,7 +81,7 @@ export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }) => {
         </label>
 
         {showNavbarStats && (
-          <button className="btn btn-ghost btn-circle" onClick={setShowModal}>
+          <button className="btn btn-ghost btn-circle" onClick={setShowModal} aria-label="Statistics">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5 md:w-6 md:h-6"

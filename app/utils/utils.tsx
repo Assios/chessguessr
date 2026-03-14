@@ -58,6 +58,7 @@ export const GameLink = ({ game }) => {
       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
       href={game.gameUrl}
       target="_blank"
+      rel="noopener noreferrer"
     >
       {gameUrlText(game)}
     </a>
@@ -88,21 +89,8 @@ export const useHotkeys = (
   );
 };
 
-export const wrongSolution = (guesses: any[], gameStatus: string, date: string) => {
-  if (date !== "2026-03-11") return false;
-  if (gameStatus === "SOLVED") return false;
-
-  const greyCxd4 = guesses
-    .flatMap((g) => g)
-    .some((guess: any) => guess?.move === "cxd4" && guess?.color === "grey");
-
-  const greyPawnOnMove2 = guesses.some((row: any[]) => {
-    const move2 = row?.[1];
-    const isPawnMove = move2?.move && move2.move[0] === move2.move[0].toLowerCase();
-    return isPawnMove && move2?.color === "grey";
-  });
-
-  return greyCxd4 || greyPawnOnMove2;
+export const wrongSolution = (_guesses: any[], _gameStatus: string, _date: string) => {
+  return false;
 };
 
 
