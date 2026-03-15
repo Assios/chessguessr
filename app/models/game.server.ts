@@ -18401,6 +18401,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2332,
       "bRating": 2007,
       "id": 1363
+    },
+    {
+      "date": "2026-03-16",
+      "fen": "r2q1r2/pbp1bpk1/1pn1p1p1/4Pn2/3PN3/2PB3Q/PP4PP/R1B2RK1 w - - 6 16",
+      "solution": [
+        "Rxf5",
+        "exf5",
+        "Qh6+",
+        "Kg8",
+        "Bg5"
+      ],
+      "gameUrl": "https://lichess.org/lMm7Puyg/white#30",
+      "white": "Nicola_Tesla1856",
+      "black": "fallen_champs",
+      "wRating": 1863,
+      "bRating": 1700,
+      "id": 1364
+    },
+    {
+      "date": "2026-03-17",
+      "fen": "r1b3qk/pp3Qp1/1n2Pb1p/3p4/8/P4R2/1PP3PP/5RK1 w - - 4 21",
+      "solution": [
+        "Rxf6",
+        "gxf6",
+        "Qxf6+",
+        "Qg7",
+        "Qd8+"
+      ],
+      "gameUrl": "https://lichess.org/mA4VaCNY/white#40",
+      "white": "Xano2008",
+      "black": "B_Ilies",
+      "wRating": 2194,
+      "bRating": 2283,
+      "id": 1365
+    },
+    {
+      "date": "2026-03-18",
+      "fen": "1n3r1k/p5pp/3rQb2/1qp1N3/8/8/P4PPP/3R2K1 w - - 0 29",
+      "solution": [
+        "Nf7+",
+        "Rxf7",
+        "Qc8+",
+        "Rd8",
+        "Rxd8+"
+      ],
+      "gameUrl": "https://lichess.org/ACOo7Hq9/white#56",
+      "white": "Vinz007",
+      "black": "Omar_Mohamed_Ali",
+      "wRating": 1988,
+      "bRating": 1995,
+      "id": 1366
     }
   ];
 }
