@@ -18469,6 +18469,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1614,
       "bRating": 1605,
       "id": 1367
+    },
+    {
+      "date": "2026-03-20",
+      "fen": "8/2P3pk/p2Q3p/1p1p4/1B3nPK/P4P2/1q5P/8 w - - 5 46",
+      "solution": [
+        "Qxf4",
+        "g5+",
+        "Kh3",
+        "gxf4",
+        "c8=Q"
+      ],
+      "gameUrl": "https://lichess.org/6KEEKLXb/white#90",
+      "white": "myrcellatoc8",
+      "black": "Anita_Hailey",
+      "wTitle": "CM",
+      "wRating": 2157,
+      "bRating": 2091,
+      "id": 1368
+    },
+    {
+      "date": "2026-03-21",
+      "fen": "4k3/rb1pb2p/p4B1n/1pp5/3p1P2/1Q6/PPPN2rP/4RR1K b - - 1 19",
+      "solution": [
+        "Rxd2+",
+        "Rf3",
+        "Rd1",
+        "Rxd1",
+        "c4"
+      ],
+      "gameUrl": "https://lichess.org/agftepPb/black#37",
+      "white": "OhDidIBlunder",
+      "black": "yourreadyyyyyyyy",
+      "wRating": 1597,
+      "bRating": 1587,
+      "id": 1369
+    },
+    {
+      "date": "2026-03-22",
+      "fen": "r3r1k1/pp4bN/2p2p1p/3pqB2/2n5/7Q/P1P4P/6RK w - - 4 24",
+      "solution": [
+        "Qxh6",
+        "Re7",
+        "Nxf6+",
+        "Kf8",
+        "Rxg7"
+      ],
+      "gameUrl": "https://lichess.org/nhnAe5kI/white#46",
+      "white": "raidernarek",
+      "black": "fatagrawe",
+      "wRating": 1637,
+      "bRating": 1650,
+      "id": 1370
     }
   ];
 }
