@@ -18521,6 +18521,108 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1637,
       "bRating": 1650,
       "id": 1370
+    },
+    {
+      "date": "2026-03-23",
+      "fen": "1r3r2/pb3pkp/1p1np1p1/2p5/2PnP3/PPN2NP1/5PBP/1R1R2K1 b - - 4 19",
+      "solution": [
+        "Nxe4",
+        "Nxe4",
+        "Bxe4",
+        "Nxd4",
+        "Bxb1"
+      ],
+      "gameUrl": "https://lichess.org/A3h8ijgd/black#37",
+      "white": "abhayforchess",
+      "black": "klezmerelda",
+      "wRating": 1784,
+      "bRating": 1720,
+      "id": 1371
+    },
+    {
+      "date": "2026-03-24",
+      "fen": "3rr1k1/1p3ppp/2n2n2/pB6/P3p3/1NB1Q2q/1PP2P2/3RR1K1 b - - 1 20",
+      "solution": [
+        "Qg4+",
+        "Qg3",
+        "Rxd1",
+        "Qxg4",
+        "Rxe1+"
+      ],
+      "gameUrl": "https://lichess.org/M19saSS1/black#39",
+      "white": "Mashmalo4",
+      "black": "asjeevaa",
+      "wRating": 2228,
+      "bRating": 2252,
+      "id": 1372
+    },
+    {
+      "date": "2026-03-25",
+      "fen": "8/4Q3/7r/6k1/3P1pp1/8/4K2p/8 b - - 6 71",
+      "solution": [
+        "Kh5",
+        "Qe4",
+        "f3+",
+        "Kf2",
+        "h1=N+"
+      ],
+      "gameUrl": "https://lichess.org/4zNx6KxE/black#141",
+      "white": "duupa",
+      "black": "FerdinandElpedes",
+      "wRating": 1977,
+      "bRating": 2294,
+      "id": 1373
+    },
+    {
+      "date": "2026-03-26",
+      "fen": "2q2b2/5r1k/7p/2p1Q3/1pP1N1Pn/pP5P/P1B5/6K1 w - - 2 41",
+      "solution": [
+        "Nd6+",
+        "Kg8",
+        "Bh7+",
+        "Kxh7",
+        "Qe4+"
+      ],
+      "gameUrl": "https://lichess.org/hDEPgFaT/white#80",
+      "white": "johany1208",
+      "black": "Freddiec57",
+      "wRating": 1744,
+      "bRating": 1635,
+      "id": 1374
+    },
+    {
+      "date": "2026-03-27",
+      "fen": "2r5/p4kp1/b2qpr1p/5p2/3p3R/1BP1R2Q/PP3PPP/6K1 w - - 0 24",
+      "solution": [
+        "Rxe6",
+        "Rxe6",
+        "Qxf5+",
+        "Ke7",
+        "Bxe6"
+      ],
+      "gameUrl": "https://lichess.org/6JYqZhdM/white#46",
+      "white": "LucianoBrasil",
+      "black": "DidierHatz",
+      "wRating": 1958,
+      "bRating": 1782,
+      "id": 1375
+    },
+    {
+      "date": "2026-03-28",
+      "fen": "4br1k/4R1pp/1qp3p1/3pQ3/6P1/1BP4P/P1PR1P1K/1r6 b - - 9 28",
+      "solution": [
+        "Rxf2+",
+        "Kg3",
+        "Rg1+",
+        "Kh4",
+        "g5+"
+      ],
+      "gameUrl": "https://lichess.org/SYy1HAhs/black#55",
+      "white": "br12",
+      "black": "Subzeroxxx0",
+      "wRating": 1870,
+      "bRating": 1865,
+      "id": 1376
     }
   ];
 }
