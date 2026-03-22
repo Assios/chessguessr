@@ -15,8 +15,16 @@ import {
   GameState,
   PlayerStats,
 } from "~/utils/types";
-import { incrementFailed, incrementSolved } from "../firebase/utils";
-import { useOutletContext } from "@remix-run/react";
+import { ConvexHttpClient } from "convex/browser";
+import { api } from "../../convex/_generated/api";
+
+function getConvexClient() {
+  if (typeof window === "undefined") return null;
+  const url = (window as any).__CONVEX_URL;
+  if (!url) return null;
+  return new ConvexHttpClient(url);
+}
+import { useOutletContext } from "react-router";
 
 const chessCols = "abcdefgh";
 const kingMove = "OK";
@@ -139,7 +147,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   const [insufficientMoves, setInsufficientMoves] = useState(false);
   const [colorToPlay, setColorToPlay] = useState("white");
 
-  const [gameState, setGameState] = useLocalStorage<GameState>("cg-state", {
+  const [gameState, setGameState, gameStateLoaded] = useLocalStorage<GameState>("cg-state", {
     guesses: guesses,
     turn: turn,
     gameStatus: gameStatus,
@@ -161,7 +169,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   });
 
   useEffect(() => {
-    if (!shouldUpdateStats) return;
+    if (!gameStateLoaded || !shouldUpdateStats) return;
 
     if (
       gameState.turn > 0 &&
@@ -179,7 +187,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
         date: game.date,
       });
     }
-  }, []);
+  }, [gameStateLoaded]);
 
   useEffect(() => {
     if (game) {
@@ -188,15 +196,6 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       setColorToPlay(pos.turn());
     }
   }, [game]);
-
-  const updateChessBoard = (modify: (game: ChessInstance) => void) => {
-    setPosition((g) => {
-      if (!g) return g;
-      const update = { ...g } as ChessInstance;
-      modify(update);
-      return update;
-    });
-  };
 
   const formatGuess = () => {
     const solutionArray: (string | null)[] = [...game.solution];
@@ -265,7 +264,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
           };
         });
 
-        incrementFailed(game.id);
+        getConvexClient()?.mutation(api.functions.incrementFailed, { puzzleId: game.id });
         trackEvent("Submit daily", { props: { result: "Failed" } });
       }
     }
@@ -301,7 +300,7 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
           };
         });
 
-        incrementSolved(game.id, turn + 1);
+        getConvexClient()?.mutation(api.functions.incrementSolved, { puzzleId: game.id, turns: turn + 1 });
         trackEvent("Submit daily", { props: { result: "Success" } });
       }
     } else {
@@ -328,32 +327,25 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     targetSquare: string,
     promotion?: "q" | "r" | "b" | "n"
   ): boolean => {
-    let move: { san: string } | null = null;
-    let fenAfter: string | null = null;
+    if (!position) return false;
 
-    updateChessBoard((game: ChessInstance) => {
-      move = game.move({
-        from: sourceSquare,
-        to: targetSquare,
-        promotion: promotion || "q",
-      });
-      if (move) {
-        try {
-          fenAfter = game.fen();
-        } catch {}
-      }
+    const move = position.move({
+      from: sourceSquare,
+      to: targetSquare,
+      promotion: promotion || "q",
     });
 
-    if (move) {
-      if (currentGuess.length < 5 && position) {
-        setFenHistory((prev) => [...prev, (fenAfter as string) || position.fen()]);
-        setCurrentGuess((prev) => [...prev, (move as { san: string }).san]);
-      }
+    if (!move) return false;
 
-      return true;
+    const fenAfter = position.fen();
+    setPosition(new Chess(fenAfter) as unknown as ChessInstance);
+
+    if (currentGuess.length < 5) {
+      setFenHistory((prev) => [...prev, fenAfter]);
+      setCurrentGuess((prev) => [...prev, move.san]);
     }
 
-    return false;
+    return true;
   };
 
   const takeback = () => {

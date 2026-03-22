@@ -1,167 +1,210 @@
-import type {
-  ErrorBoundaryComponent,
-  LinksFunction,
-  MetaFunction,
-} from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
-} from "@remix-run/react";
-import styles from "./tailwind.css";
-import chessgroundBase from "chessground/assets/chessground.base.css";
-import chessgroundTheme from "chessground/assets/chessground.brown.css";
-import chessgroundPieces from "chessground/assets/chessground.cburnett.css";
-import chessgroundOverrides from "./styles/chessground.overrides.css";
-import tileAnimations from "./styles/tile-animations.css";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Toaster } from "react-hot-toast";
-import { Footer } from "./components/Footer";
-import { useEffect, useState } from "react";
-import { useLocalStorage } from "./hooks/useLocalStorage";
-import Plausible from "plausible-tracker";
-import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
-import { OutletContextType } from "./utils/types";
+  useLoaderData,
+  isRouteErrorResponse,
+  useRouteError,
+} from 'react-router';
+import type { LinksFunction, LoaderFunctionArgs, MetaFunction } from 'react-router';
+import styles from './tailwind.css?url';
+import chessgroundBase from 'chessground/assets/chessground.base.css?url';
+import chessgroundTheme from 'chessground/assets/chessground.brown.css?url';
+import chessgroundPieces from 'chessground/assets/chessground.cburnett.css?url';
+import chessgroundOverrides from './styles/chessground.overrides.css?url';
+import tileAnimations from './styles/tile-animations.css?url';
+import { Navbar } from './components/Navbar/Navbar';
+import { Toaster } from 'react-hot-toast';
+import { Footer } from './components/Footer';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import type PlausibleType from 'plausible-tracker';
+import { OutletContextType } from './utils/types';
 
 export const links: LinksFunction = () => [
-  {
-    rel: "icon",
-    href: "/favicon.png",
-    type: "image/png",
-  },
-  { rel: "stylesheet", href: styles },
-  { rel: "stylesheet", href: chessgroundBase },
-  { rel: "stylesheet", href: chessgroundTheme },
-  { rel: "stylesheet", href: chessgroundPieces },
-  { rel: "stylesheet", href: chessgroundOverrides },
-  { rel: "stylesheet", href: tileAnimations },
+  { rel: 'icon', href: '/favicon.png', type: 'image/png' },
+  { rel: 'stylesheet', href: styles },
+  { rel: 'stylesheet', href: chessgroundBase },
+  { rel: 'stylesheet', href: chessgroundTheme },
+  { rel: 'stylesheet', href: chessgroundPieces },
+  { rel: 'stylesheet', href: chessgroundOverrides },
+  { rel: 'stylesheet', href: tileAnimations },
 ];
 
-export const ErrorBoundary: ErrorBoundaryComponent = ({ error }: { error: Error }) => {
+export const meta: MetaFunction = () => [
+  { charSet: 'utf-8' },
+  { title: 'Chessguessr – Wordle for Chess Games' },
+  {
+    name: 'description',
+    content:
+      'Solve chess puzzles from real games, with the help of Wordle-like hints.',
+  },
+  { name: 'viewport', content: 'width=device-width,initial-scale=1' },
+  { property: 'og:title', content: 'Chessguessr – Wordle for Chess Games' },
+  {
+    property: 'og:description',
+    content:
+      'In this Wordle-inspired game, your task is to guess the continuation of a chess game.',
+  },
+  {
+    property: 'og:image',
+    content:
+      'https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png',
+  },
+  {
+    name: 'twitter:title',
+    content: 'Chessguessr – Wordle for Chess Games',
+  },
+  {
+    name: 'twitter:description',
+    content:
+      'Solve chess puzzles from real games, with the help of Wordle-like hints.',
+  },
+  {
+    name: 'twitter:image',
+    content:
+      'https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png',
+  },
+  { name: 'twitter:card', content: 'summary_large_image' },
+];
+
+export function loader() {
+  return {
+    ENV: {
+      CONVEX_URL: process.env.CONVEX_URL,
+    },
+  };
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    return (
+      <html data-theme="corporate" lang="en">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body>
+          <div className="mt-10 mb-20 content-center lg:mb-0">
+            <div className="flex flex-row justify-center">
+              <h1 className="text-center text-4xl mb-8 font-semibold">
+                {error.status}
+              </h1>
+            </div>
+            <p className="max-w-prose m-auto text-center text-lg">
+              {error.statusText}
+            </p>
+            <p className="max-w-prose m-auto text-center text-lg">
+              If you think this is an error, you can{' '}
+              <a
+                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                href="https://github.com/Assios/chessguessr/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                file an issue
+              </a>{' '}
+              on Github or{' '}
+              <a
+                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                href="https://lichess.org/inbox/Assios"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                contact Assios on Lichess
+              </a>
+              .
+            </p>
+          </div>
+          <Scripts />
+        </body>
+      </html>
+    );
+  }
+
+  const errorObj = error instanceof Error ? error : new Error('Unknown error');
+
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
-              </head>
-      <div className="mt-10 mb-20 content-center lg:mb-0">
-        <div className="flex flex-row justify-center">
-          <h1 className="text-center text-4xl mb-8 font-semibold">
-            {error.name}
-          </h1>
+      </head>
+      <body>
+        <div className="mt-10 mb-20 content-center lg:mb-0">
+          <div className="flex flex-row justify-center">
+            <h1 className="text-center text-4xl mb-8 font-semibold">
+              {errorObj.name}
+            </h1>
+          </div>
+          <p className="max-w-prose m-auto text-center text-lg">
+            {errorObj.message}
+          </p>
+          <p className="max-w-prose m-auto text-center text-lg">
+            If this error persists, please{' '}
+            <a
+              className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              href="https://github.com/Assios/chessguessr/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              file an issue
+            </a>{' '}
+            on Github or{' '}
+            <a
+              className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              href="https://lichess.org/inbox/Assios"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              contact Assios on Lichess
+            </a>
+            .
+          </p>
         </div>
-        <p className="max-w-prose m-auto text-center text-lg">
-          {error.message}
-        </p>
-        <p className="max-w-prose m-auto text-center text-lg">
-          If this error persists, please{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://github.com/Assios/chessguessr/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            file an issue
-          </a>{" "}
-          on Github or{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://lichess.org/inbox/Assios"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            contact Assios on Lichess
-          </a>
-          .
-        </p>
-      </div>
+        <Scripts />
+      </body>
     </html>
   );
-};
-
-export const CatchBoundary: CatchBoundaryComponent = () => {
-  const caught = useCatch();
-
-  return (
-    <html data-theme="corporate" lang="en">
-      <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
-        <Meta />
-        <Links />
-              </head>
-      <div className="mt-10 mb-20 content-center lg:mb-0">
-        <div className="flex flex-row justify-center">
-          <h1 className="text-center text-4xl mb-8 font-semibold">
-            {caught.status}
-          </h1>
-        </div>
-        <p className="max-w-prose m-auto text-center text-lg">
-          {caught.statusText}
-        </p>
-        <p className="max-w-prose m-auto text-center text-lg">
-          If you think this is an error, you can{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://github.com/Assios/chessguessr/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            file an issue
-          </a>{" "}
-          on Github or{" "}
-          <a
-            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            href="https://lichess.org/inbox/Assios"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            contact Assios on Lichess
-          </a>
-          .
-        </p>
-      </div>
-    </html>
-  );
-};
-
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Chessguessr – Wordle for Chess Games",
-  description:
-    "Solve chess puzzles from real games, with the help of Wordle-like hints.",
-  "og:title": "Chessguessr – Wordle for Chess Games",
-  "og:description":
-    "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
-  "og:image":
-    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
-  "twitter:title": "Chessguessr – Wordle for Chess Games",
-  "twitter:description":
-    "Solve chess puzzles from real games, with the help of Wordle-like hints.",
-  "twitter:image":
-    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
-  "twitter:card": "summary_large_image",
-  viewport: "width=device-width,initial-scale=1",
-});
+}
 
 export default function App() {
+  const data = useLoaderData<typeof loader>();
   const [showModal, setShowModal] = useState(false);
-  const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
+  const [tutorial, setTutorial] = useLocalStorage('cg-tutorial', false);
 
   const [showNavbarStats, setShowNavbarStats] = useState(true);
 
   const [wrongTheme, setWrongTheme] = useState(false);
 
-  const [showTutorial, setShowTutorial] = useState(!tutorial);
+  // Start hidden on server, check localStorage directly on client to avoid race
+  const [showTutorial, setShowTutorial] = useState(false);
 
-  const { trackPageview, trackEvent } = Plausible({
-    domain: "chessguessr.com",
-    apiHost: "https://chessguessr-proxy.vercel.app",
-  });
+  useEffect(() => {
+    const saved = localStorage.getItem('cg-tutorial');
+    if (!saved || saved === 'false') {
+      setShowTutorial(true);
+    }
+  }, []);
+
+  const [plausible, setPlausible] = useState<ReturnType<typeof PlausibleType> | null>(null);
+
+  useEffect(() => {
+    import('plausible-tracker').then((mod) => {
+      const Plausible = mod.default;
+      setPlausible(Plausible({
+        domain: 'chessguessr.com',
+        apiHost: 'https://chessguessr-proxy.vercel.app',
+      }));
+    });
+  }, []);
+
+  const trackPageview = plausible?.trackPageview ?? (() => {});
+  const trackEvent = plausible?.trackEvent ?? (() => {});
 
   const context: OutletContextType = {
     showTutorial,
@@ -180,33 +223,36 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (localStorage.getItem("theme") === "light") {
-      localStorage.setItem("theme", "corporate");
+    if (localStorage.getItem('theme') === 'light') {
+      localStorage.setItem('theme', 'corporate');
       setWrongTheme(true);
-
-      trackEvent("Wrong theme");
+      trackEvent('Wrong theme');
     }
+
+    // Load theme-change after hydration to avoid DOM mismatch
+    import('theme-change').then((mod) => {
+      mod.themeChange(false);
+    });
   }, []);
 
   // Hide BMC widget when modals are open
   useEffect(() => {
-    const bmcWidget = document.getElementById("bmc-wbtn");
+    const bmcWidget = document.getElementById('bmc-wbtn');
     if (bmcWidget) {
       if (showModal || showTutorial) {
-        bmcWidget.style.visibility = "hidden";
+        bmcWidget.style.visibility = 'hidden';
       } else {
-        bmcWidget.style.removeProperty("visibility");
+        bmcWidget.style.removeProperty('visibility');
       }
     }
   }, [showModal, showTutorial]);
 
   return (
-    <html data-theme="corporate" lang="en">
+    <html data-theme="corporate" lang="en" suppressHydrationWarning>
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
-              </head>
+      </head>
       <body className="min-h-screen flex flex-col">
         <div className="flex-1">
           <Toaster />
@@ -242,8 +288,12 @@ export default function App() {
 
           <Outlet context={context} />
           <ScrollRestoration />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.__CONVEX_URL = ${JSON.stringify(data.ENV.CONVEX_URL)};`,
+            }}
+          />
           <Scripts />
-          <LiveReload />
         </div>
         <Footer />
         <script

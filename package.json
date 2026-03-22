@@ -1,53 +1,46 @@
 {
   "private": true,
-  "sideEffects": false,
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "check-duplicates": "npx ts-node ./tests/checkDuplicates.ts",
-    "build": "run-s build:*",
-    "build:css": "npm run generate:css -- --minify",
-    "build:remix": "remix build",
-    "dev": "run-p dev:*",
-    "dev:css": "npm run generate:css -- --watch",
-    "dev:remix": "remix dev",
-    "generate:css": "npx tailwindcss -o ./app/tailwind.css",
-    "start": "remix-serve build"
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "chessground": "^8.3.5",
-    "@remix-run/node": "^1.16.1",
-    "@remix-run/react": "^1.16.1",
-    "@remix-run/vercel": "^1.16.1",
+    "@react-router/fs-routes": "^7.13.1",
+    "@react-router/node": "^7.13.1",
+    "@react-router/serve": "^7.13.1",
     "@tailwindcss/typography": "^0.5.4",
-    "@vercel/node": "^2.0.0",
     "chess.js": "^0.12.1",
+    "chessground": "^8.3.5",
+    "convex": "^1.34.0",
     "daisyui": "^2.17.0",
     "dayjs": "^1.11.5",
-    "firebase": "^9.8.4",
+    "isbot": "^5.1.36",
     "plausible-tracker": "^0.3.8",
-    "react": "^17.0.2",
-    
+    "react": "^18.3.1",
     "react-countdown": "^2.3.2",
-    "react-dom": "^17.0.2",
-    "react-hot-toast": "^2.2.0",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.6.0",
     "react-hotkeys-hook": "^3.4.7",
     "react-icons": "^4.11.0",
+    "react-router": "^7.13.1",
     "theme-change": "^2.1.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.16.1",
-    "@remix-run/eslint-config": "^1.6.5",
-    "@remix-run/serve": "^1.16.0",
-    "@types/react": "^17.0.45",
-    "@types/react-dom": "^17.0.17",
+    "@react-router/dev": "^7.13.1",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
     "eslint": "^8.20.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.0.3",
-    "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.1.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   }
 }

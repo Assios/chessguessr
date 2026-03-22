@@ -46,6 +46,8 @@ export function ChessgroundBoard({
   const apiRef = useRef<any>(null);
   const userMovedRef = useRef<boolean>(false);
   const lastMoveRef = useRef<[string, string] | null>(null);
+  const onDropRef = useRef(onDrop);
+  onDropRef.current = onDrop;
   const [promotion, setPromotion] = useState<
     { from: string; to: string; color: Orientation } | null
   >(null);
@@ -110,7 +112,7 @@ export function ChessgroundBoard({
               try {
                 apiRef.current?.set({ lastMove: [orig, dest] });
               } catch {}
-              onDrop(orig, dest);
+              onDropRef.current(orig, dest);
             },
           },
         },
@@ -187,7 +189,7 @@ export function ChessgroundBoard({
     try {
       apiRef.current?.set({ lastMove: [from, to] });
     } catch {}
-    onDrop(from, to, role);
+    onDropRef.current(from, to, role);
   };
 
   return (

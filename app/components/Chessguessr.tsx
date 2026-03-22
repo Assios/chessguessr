@@ -16,7 +16,7 @@ import {
   useHotkeys,
 } from '~/utils/utils';
 import useCopyToClipboard from '~/hooks/useCopyToClipboard';
-import { useOutletContext } from '@remix-run/react';
+import { useOutletContext } from 'react-router';
 
 export const Chessguessr = ({
   game,

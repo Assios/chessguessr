@@ -1,21 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const useLocalStorage = <T>(
   key: string,
   initialValue: T
-): [T, (value: T | ((prev: T) => T)) => void] => {
-  const [storedValue, setStoredValue] = useState<T>(() => {
-    if (typeof window === "undefined") {
-      return initialValue;
-    }
+): [T, (value: T | ((prev: T) => T)) => void, boolean] => {
+  const [storedValue, setStoredValue] = useState<T>(initialValue);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
+      if (item) {
+        setStoredValue(JSON.parse(item));
+      }
     } catch (error) {
       console.log(error);
-      return initialValue;
     }
-  });
+    setLoaded(true);
+  }, [key]);
+
   const setValue = (value: T | ((prev: T) => T)) => {
     try {
       const valueToStore =
@@ -28,5 +31,5 @@ export const useLocalStorage = <T>(
       console.log(error);
     }
   };
-  return [storedValue, setValue];
+  return [storedValue, setValue, loaded];
 };

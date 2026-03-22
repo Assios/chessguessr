@@ -14,3 +14,5 @@ api/
 #/api files are now ignored by directory rule above
 
 app/tailwind.css
+
+.env.local

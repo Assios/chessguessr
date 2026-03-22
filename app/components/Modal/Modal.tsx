@@ -18,7 +18,7 @@ import {
   GameLink,
   convertToIcon,
 } from "~/utils/utils";
-import { useOutletContext } from "@remix-run/react";
+import { useOutletContext } from "react-router";
 
 const getSolvedPercentage = (puzzleStats: PuzzleStats | undefined) => {
   if (!puzzleStats?.solved || !puzzleStats?.failed) {

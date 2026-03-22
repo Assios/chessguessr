@@ -1,34 +1,36 @@
-import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { useLoaderData, useOutletContext } from "@remix-run/react";
-import { getGames } from "~/models/game.server";
-import { GameType, OutletContextType } from "~/utils/types";
-import { sortBy } from "../../utils/sort";
-import dayjs from "dayjs";
-import advancedFormat from "dayjs/plugin/advancedFormat";
+import { useLoaderData, useOutletContext, useNavigate } from 'react-router';
+import type { MetaFunction } from 'react-router';
+import { GameType, OutletContextType } from '~/utils/types';
+import { sortBy } from '../utils/sort';
+import dayjs from 'dayjs';
+import advancedFormat from 'dayjs/plugin/advancedFormat';
 dayjs.extend(advancedFormat);
-import { useNavigate } from "@remix-run/react";
-import TutorialModal from "~/components/TutorialModal";
-import { useEffect, useMemo, useState } from "react";
+import TutorialModal from '~/components/TutorialModal';
+import { useEffect, useMemo, useState } from 'react';
+import { convexClient } from '~/convex.server';
+import { api } from '../../convex/_generated/api';
+import { toGameType } from '~/utils/convex-helpers';
 
-export const meta: MetaFunction = () => ({
-  title: "Chessguessr Archive – Play through all previous puzzles",
-  description:
-    "On this page, you can play through all of the previous Chessguessr puzzles at your leisure. Whether you're looking to brush up on your chess skills or just enjoy a fun and challenging puzzle, our archive has something for everyone.",
-});
+export const meta: MetaFunction = () => [
+  { title: 'Chessguessr Archive – Play through all previous puzzles' },
+  {
+    name: 'description',
+    content:
+      'On this page, you can play through all of the previous Chessguessr puzzles at your leisure. Whether you\'re looking to brush up on your chess skills or just enjoy a fun and challenging puzzle, our archive has something for everyone.',
+  },
+];
 
-export const loader: LoaderFunction = async () => {
-  const d = new Date().toISOString().split("T")[0];
+export async function loader() {
+  const d = new Date().toISOString().split('T')[0];
 
-  const games = await getGames();
+  const puzzles = await convexClient.query(api.functions.getAllPuzzles, {});
 
-  const previousGames = games.filter((game) => {
-    return game.date <= d;
-  });
+  const games = puzzles.map(toGameType).filter((game) => game.date <= d);
 
-  return json({ games: previousGames });
-};
+  return { games };
+}
 
-const index = () => {
+export default function GamesIndex() {
   const {
     showTutorial,
     setShowTutorial,
@@ -36,17 +38,17 @@ const index = () => {
     setShowNavbarStats,
   } = useOutletContext<OutletContextType>();
 
-  const { games } = useLoaderData();
+  const { games } = useLoaderData<typeof loader>();
 
   useEffect(() => {
     setShowNavbarStats(false);
   }, []);
 
-  const gamesSorted = games.sort(sortBy("-date"));
+  const gamesSorted = games.sort(sortBy('-date'));
 
   const navigate = useNavigate();
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const filteredGames = useMemo(() => {
     const q = search.toLowerCase().trim();
@@ -85,7 +87,7 @@ const index = () => {
           puzzles at your leisure. Whether you're looking to brush up on your
           chess skills or just enjoy a fun and challenging puzzle, our archive
           has something for everyone. Your stats will only update for today's
-          puzzle, though. Play today's Chessguessr{" "}
+          puzzle, though. Play today's Chessguessr{' '}
           <a
             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             href="/"
@@ -119,7 +121,7 @@ const index = () => {
             {search && (
               <button
                 className="absolute right-3 top-1/2 -translate-y-1/2 opacity-40 hover:opacity-70"
-                onClick={() => setSearch("")}
+                onClick={() => setSearch('')}
                 aria-label="Clear search"
               >
                 <svg
@@ -135,8 +137,8 @@ const index = () => {
           </div>
           {isFiltering && (
             <p className="mt-3 text-sm opacity-60">
-              {filteredGames.length}{" "}
-              {filteredGames.length === 1 ? "game" : "games"} found
+              {filteredGames.length}{' '}
+              {filteredGames.length === 1 ? 'game' : 'games'} found
             </p>
           )}
         </div>
@@ -144,11 +146,14 @@ const index = () => {
         <div className="p-12 margin-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {filteredGames.map((game: GameType, i: number) => {
             return (
-              <div key={game.id} className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
+              <div
+                key={game.id}
+                className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6"
+              >
                 <figure>
                   <img
                     src={
-                      "//images.weserv.nl/?url=fen-to-image.com/image/36/" +
+                      '//images.weserv.nl/?url=fen-to-image.com/image/36/' +
                       game.fen
                     }
                     alt={`${game.white} vs ${game.black}`}
@@ -162,10 +167,10 @@ const index = () => {
                     {game.white} – {game.black}
                   </h2>
                   <div className="badge badge-primary">
-                    {dayjs(game.date).format("MMMM Do, YYYY")}
+                    {dayjs(game.date).format('MMMM Do, YYYY')}
                   </div>
                   {game.event && (
-                    <div className="badge badge-secondary text-xs">
+                    <div className="badge badge-outline text-xs">
                       {game.event}
                     </div>
                   )}
@@ -192,6 +197,4 @@ const index = () => {
       </div>
     </div>
   );
-};
-
-export default index;
+}

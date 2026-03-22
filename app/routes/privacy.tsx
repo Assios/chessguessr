@@ -1,8 +1,8 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from 'react-router';
 
-export const meta: MetaFunction = () => ({
-  title: 'Privacy Policy - Chessguessr',
-});
+export const meta: MetaFunction = () => [
+  { title: 'Privacy Policy - Chessguessr' },
+];
 
 export default function Privacy() {
   return (

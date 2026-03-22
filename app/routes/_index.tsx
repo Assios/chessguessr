@@ -1,34 +1,30 @@
-import { Chessguessr } from "../components/Chessguessr";
-import type { LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
-import { getGames } from "~/models/game.server";
-import { db } from "../firebase/firebaseConfig";
-import { getDoc, doc } from "firebase/firestore";
-import { useEffect } from "react";
-import type { OutletContextType } from "~/utils/types";
-import type { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import { Chessguessr } from '../components/Chessguessr';
+import { data } from 'react-router';
+import { useLoaderData, useOutletContext } from 'react-router';
+import type { MetaFunction } from 'react-router';
+import { useEffect } from 'react';
+import type { OutletContextType } from '~/utils/types';
+import { convexClient } from '~/convex.server';
+import { api } from '../../convex/_generated/api';
+import { toGameType, toPuzzleStats } from '~/utils/convex-helpers';
 
-export const loader: LoaderFunction = async () => {
-  const d = new Date().toISOString().split("T")[0];
+export const meta: MetaFunction = () => [];
 
-  const games = await getGames();
+export async function loader() {
+  const d = new Date().toISOString().split('T')[0];
 
-  const dailyGame = games.find((game) => {
-    return game.date === d;
+  const puzzle = await convexClient.query(api.functions.getDailyPuzzle, {
+    date: d,
   });
 
-  if (!dailyGame) {
-    throw new Response("No game found for today", { status: 404 });
+  if (!puzzle) {
+    throw data('No game found for today', { status: 404 });
   }
 
-  const docRef = doc(db, "stats", dailyGame.id.toString());
-  const docSnap = await getDoc(docRef);
+  return { game: toGameType(puzzle), stats: toPuzzleStats(puzzle) };
+}
 
-  return json({ game: dailyGame, stats: docSnap.data() });
-};
-
-export const CatchBoundary: CatchBoundaryComponent = () => {
+export function ErrorBoundary() {
   return (
     <div className="mt-10 mb-20 content-center lg:mb-0">
       <div className="flex flex-row justify-center">
@@ -37,7 +33,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
         </h1>
       </div>
       <p className="max-w-prose m-auto text-center text-lg">
-        It looks like today's puzzle hasn't been added yet. Please{" "}
+        It looks like today's puzzle hasn't been added yet. Please{' '}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href="https://lichess.org/inbox/Assios"
@@ -45,11 +41,11 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
           rel="noopener noreferrer"
         >
           message Assios on Lichess
-        </a>{" "}
+        </a>{' '}
         to let me know!
       </p>
       <p className="max-w-prose m-auto text-center text-lg mt-4">
-        In the meantime, you can play previous puzzles in the{" "}
+        In the meantime, you can play previous puzzles in the{' '}
         <a
           className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href="/games"
@@ -60,10 +56,10 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
       </p>
     </div>
   );
-};
+}
 
 export default function Index() {
-  const { game, stats } = useLoaderData();
+  const { game, stats } = useLoaderData<typeof loader>();
 
   const {
     showModal,
