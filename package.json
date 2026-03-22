@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
-    "check-duplicates": "npx ts-node ./tests/checkDuplicates.ts",
+    "check-duplicates": "npx tsx ./tests/checkDuplicates.ts",
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js"
