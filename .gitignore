@@ -16,3 +16,13 @@ api/
 app/tailwind.css
 
 .env.local
+
+# Generated / IDE
+.react-router/
+convex/_generated/
+.agents/
+.claude/
+.factory/
+skills/
+skills-lock.json
+AGENTS.md
