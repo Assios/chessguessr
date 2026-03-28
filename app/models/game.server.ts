@@ -18623,6 +18623,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1870,
       "bRating": 1865,
       "id": 1376
+    },
+    {
+      "date": "2026-03-29",
+      "fen": "r1b2rk1/1pp1np2/p6p/5np1/3qNpB1/7P/PPQ3PN/R1B2R1K b - - 1 17",
+      "solution": [
+        "Qxe4",
+        "Qxe4",
+        "Ng3+",
+        "Kg1",
+        "Nxe4"
+      ],
+      "gameUrl": "https://lichess.org/NuZTIxZj/black#33",
+      "white": "MatadordeMonstertube",
+      "black": "topchessrita",
+      "wRating": 2019,
+      "bRating": 2035,
+      "id": 1377
     }
   ];
 }
