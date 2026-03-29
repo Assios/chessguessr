@@ -18640,6 +18640,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2019,
       "bRating": 2035,
       "id": 1377
+    },
+    {
+      "date": "2026-03-30",
+      "fen": "1q2r1k1/1b3ppp/p2bp3/1p4Q1/2rN3P/2P2P2/PP3BP1/3RR2K w - - 0 27",
+      "solution": [
+        "Nf5",
+        "exf5",
+        "Rxe8+",
+        "Qxe8",
+        "Rxd6"
+      ],
+      "gameUrl": "https://lichess.org/3dSF3GcU/white#52",
+      "white": "hlchess",
+      "black": "Hades532",
+      "wRating": 2415,
+      "bRating": 2355,
+      "id": 1378
+    },
+    {
+      "date": "2026-03-31",
+      "fen": "r5k1/1pp3b1/2n5/4q3/7Q/1PP5/2P5/BK4RR b - - 0 31",
+      "solution": [
+        "Rxa1+",
+        "Kxa1",
+        "Qxc3+",
+        "Kb1",
+        "Qb2#"
+      ],
+      "gameUrl": "https://lichess.org/uvxTHhbM/black#61",
+      "white": "catire02",
+      "black": "DemOn-z",
+      "wRating": 2115,
+      "bRating": 1987,
+      "id": 1379
     }
   ];
 }
