@@ -18674,6 +18674,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2115,
       "bRating": 1987,
       "id": 1379
+    },
+    {
+      "date": "2026-04-01",
+      "fen": "5b2/5ppk/4qB2/pp1pPp1P/1r1r4/2Q5/P4PR1/6RK w - - 2 32",
+      "solution": [
+        "Rxg7+",
+        "Bxg7",
+        "Rxg7+",
+        "Kh6",
+        "Qc1+"
+      ],
+      "gameUrl": "https://lichess.org/SWtRDGlJ/white#62",
+      "white": "zabivol_mc",
+      "black": "ghost",
+      "wTitle": "IM",
+      "wRating": 2505,
+      "bRating": 2436,
+      "id": 1380
     }
   ];
 }
