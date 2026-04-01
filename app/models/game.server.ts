@@ -18692,6 +18692,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2505,
       "bRating": 2436,
       "id": 1380
+    },
+    {
+      "date": "2026-04-02",
+      "fen": "3r1rk1/4q2p/Q1bp2p1/2P1p3/1p6/1P6/PB4PP/3RR2K b - - 0 29",
+      "solution": [
+        "Bxg2+",
+        "Kxg2",
+        "Qg5+",
+        "Kh1",
+        "Rf2"
+      ],
+      "gameUrl": "https://lichess.org/rV8Fz1AQ/black#57",
+      "white": "STL_2005",
+      "black": "MassterofMayhem",
+      "bTitle": "IM",
+      "wRating": 2550,
+      "bRating": 2642,
+      "id": 1381
     }
   ];
 }
