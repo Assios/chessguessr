@@ -18710,6 +18710,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2550,
       "bRating": 2642,
       "id": 1381
+    },
+    {
+      "date": "2026-04-03",
+      "fen": "3r2k1/p4pp1/7p/3n1P2/N2R2P1/1P5P/P1q1r1BK/5RQ1 b - - 0 38",
+      "solution": [
+        "Ne3",
+        "Rxd8+",
+        "Kh7",
+        "Kg3",
+        "Rxg2+"
+      ],
+      "gameUrl": "https://lichess.org/k2mOpOMf/black#75",
+      "white": "leeds_manc",
+      "black": "Selenamohammadi",
+      "wRating": 1716,
+      "bRating": 1713,
+      "id": 1382
     }
   ];
 }
