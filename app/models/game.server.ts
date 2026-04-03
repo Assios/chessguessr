@@ -18727,6 +18727,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1716,
       "bRating": 1713,
       "id": 1382
+    },
+    {
+      "date": "2026-04-04",
+      "fen": "4k3/8/p4R2/2P5/2P2N2/P1KP4/2n1r1p1/6Rr b - - 3 42",
+      "solution": [
+        "Rxg1",
+        "Nxe2",
+        "Re1",
+        "Rf2",
+        "Ne3"
+      ],
+      "gameUrl": "https://lichess.org/nWguIoP2/black#83",
+      "white": "Ranko963",
+      "black": "DODO0777",
+      "wRating": 1946,
+      "bRating": 1936,
+      "id": 1383
+    },
+    {
+      "date": "2026-04-05",
+      "fen": "r1b1r2k/ppp2Qn1/8/3Pq3/2Pp3p/7P/PP1B2P1/5RKN w - - 2 25",
+      "solution": [
+        "Rf6",
+        "Bf5",
+        "Rh6+",
+        "Bh7",
+        "Qg6"
+      ],
+      "gameUrl": "https://lichess.org/1QQcDrDk/white#48",
+      "white": "SnatenkovaMaria",
+      "black": "Silent-Worker",
+      "wRating": 2433,
+      "bRating": 2430,
+      "id": 1384
+    },
+    {
+      "date": "2026-04-06",
+      "fen": "2r2b1r/1bq1n1pp/1p1k4/3Pp1p1/4P1Q1/P7/2P2PPP/3R1RK1 w - - 0 20",
+      "solution": [
+        "Qe6+",
+        "Kc5",
+        "d6",
+        "Qc6",
+        "Qxe5+"
+      ],
+      "gameUrl": "https://lichess.org/9cOUdX94/white#38",
+      "white": "mmmza",
+      "black": "StranacJug",
+      "wRating": 2132,
+      "bRating": 2258,
+      "id": 1385
     }
   ];
 }
