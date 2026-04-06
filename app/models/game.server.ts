@@ -18778,6 +18778,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2132,
       "bRating": 2258,
       "id": 1385
+    },
+    {
+      "date": "2026-04-07",
+      "fen": "rn2k3/6p1/P4r1p/1Q2np2/3pb3/P5q1/BPP2RN1/RNB3K1 b q - 2 22",
+      "solution": [
+        "Nbd7",
+        "Bf4",
+        "Nf3+",
+        "Rxf3",
+        "Qxf3"
+      ],
+      "gameUrl": "https://lichess.org/TYHGDaAg/black#43",
+      "white": "ChristianGrieb",
+      "black": "humzah000286",
+      "wRating": 1607,
+      "bRating": 1630,
+      "id": 1386
     }
   ];
 }
