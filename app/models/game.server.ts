@@ -18829,6 +18829,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1968,
       "bRating": 1983,
       "id": 1388
+    },
+    {
+      "date": "2026-04-10",
+      "fen": "5r1k/p1p4B/2b1pbQ1/6N1/3P4/q1P3B1/Pr3PPP/R3K2R b KQ - 0 21",
+      "solution": [
+        "Qxc3+",
+        "Kf1",
+        "Rxf2+",
+        "Bxf2",
+        "Qxa1+"
+      ],
+      "gameUrl": "https://lichess.org/82p6pXPQ/black#41",
+      "white": "stro22",
+      "black": "Kostya_Od",
+      "wRating": 1901,
+      "bRating": 1982,
+      "id": 1389
+    },
+    {
+      "date": "2026-04-11",
+      "fen": "1r4k1/p4r1p/3R4/3Pp3/4Pp1q/7P/P2Q1RP1/6K1 b - - 0 29",
+      "solution": [
+        "Rb1+",
+        "Rf1",
+        "Rxf1+",
+        "Kxf1",
+        "f3"
+      ],
+      "gameUrl": "https://lichess.org/xCegX8oW/black#57",
+      "white": "TheMechanic89",
+      "black": "therewillbeblunder",
+      "wRating": 2123,
+      "bRating": 2122,
+      "id": 1390
+    },
+    {
+      "date": "2026-04-12",
+      "fen": "5k2/pp2pPb1/2qp2p1/6N1/5Pn1/P2Q2PB/1rr4P/4RRK1 w - - 1 29",
+      "solution": [
+        "Ne6+",
+        "Kxf7",
+        "Nd8+",
+        "Kf8",
+        "Nxc6"
+      ],
+      "gameUrl": "https://lichess.org/AYGvVjBG/white#56",
+      "white": "Silvermist15",
+      "black": "Arvinbetonio40",
+      "wTitle": "WGM",
+      "wRating": 2440,
+      "bRating": 2404,
+      "id": 1391
     }
   ];
 }
