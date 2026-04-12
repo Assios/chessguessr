@@ -18881,6 +18881,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2440,
       "bRating": 2404,
       "id": 1391
+    },
+    {
+      "date": "2026-04-13",
+      "fen": "1qr3k1/3Q2pp/5p2/8/3N4/p3P1PP/P1p2P1K/8 w - - 0 34",
+      "solution": [
+        "Ne6",
+        "Rc7",
+        "Nxc7",
+        "c1=Q",
+        "Ne6"
+      ],
+      "gameUrl": "https://lichess.org/0pVHop1e/white#66",
+      "white": "hate2seeit",
+      "black": "changeofwind",
+      "wRating": 1824,
+      "bRating": 1858,
+      "id": 1392
+    },
+    {
+      "date": "2026-04-14",
+      "fen": "r4rk1/pp4pp/2n1b3/2b3NQ/3pq3/1B6/PPP2PPP/R1B2K1R b - - 3 14",
+      "solution": [
+        "Rxf2+",
+        "Kxf2",
+        "d3+",
+        "Kg3",
+        "Bd6+"
+      ],
+      "gameUrl": "https://lichess.org/jWGk21mH/black#27",
+      "white": "Esdoger",
+      "black": "boeycw",
+      "wRating": 1936,
+      "bRating": 2236,
+      "id": 1393
     }
   ];
 }
