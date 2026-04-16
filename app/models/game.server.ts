@@ -18949,6 +18949,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2302,
       "bRating": 2086,
       "id": 1395
+    },
+    {
+      "date": "2026-04-17",
+      "fen": "3r1rk1/pp2bppp/8/2p1NP2/P1Qn4/1P6/1Bq3PP/4RRK1 w - - 0 22",
+      "solution": [
+        "Bxd4",
+        "Qxc4",
+        "Nxc4",
+        "cxd4",
+        "Rxe7"
+      ],
+      "gameUrl": "https://lichess.org/0haNTzCo/white#42",
+      "white": "Denisov_Roman",
+      "black": "Chess-2005F",
+      "wRating": 2358,
+      "bRating": 2333,
+      "id": 1396
     }
   ];
 }
