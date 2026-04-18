@@ -18966,6 +18966,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2358,
       "bRating": 2333,
       "id": 1396
+    },
+    {
+      "date": "2026-04-18",
+      "fen": "6k1/4rrp1/p3Q3/2ppB3/4q3/2P3RP/P5PK/8 w - - 6 39",
+      "solution": [
+        "Rxg7+",
+        "Kf8",
+        "Qc8+",
+        "Re8",
+        "Qxc5+"
+      ],
+      "gameUrl": "https://lichess.org/0cHPjkXb/white#76",
+      "white": "Isselmou1",
+      "black": "ChessPlayerUSSR",
+      "wRating": 2167,
+      "bRating": 2205,
+      "id": 1397
     }
   ];
 }
