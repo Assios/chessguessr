@@ -19000,6 +19000,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1796,
       "bRating": 1874,
       "id": 1398
+    },
+    {
+      "date": "2026-04-20",
+      "fen": "r1b2rk1/5ppp/2p1pb2/4n3/1N2P3/8/1pB1QP1P/1KBR2R1 b - - 0 23",
+      "solution": [
+        "Ra1+",
+        "Kxb2",
+        "Nc4+",
+        "Kb3",
+        "Na5#"
+      ],
+      "gameUrl": "https://lichess.org/qxXM6QNA/black#45",
+      "white": "Anasurimbor",
+      "black": "ivanburgos",
+      "wTitle": "IM",
+      "wRating": 2447,
+      "bRating": 2362,
+      "id": 1399
+    },
+    {
+      "date": "2026-04-21",
+      "fen": "8/p1P2p2/5k2/3B1P1p/3p2n1/P4KP1/3r3P/2R5 b - - 0 41",
+      "solution": [
+        "Ke5",
+        "Re1+",
+        "Kxd5",
+        "Re2",
+        "Rd3+"
+      ],
+      "gameUrl": "https://lichess.org/KmKS8F2I/black#81",
+      "white": "Chas77",
+      "black": "wanay1801",
+      "wRating": 2070,
+      "bRating": 2088,
+      "id": 1400
+    },
+    {
+      "date": "2026-04-22",
+      "fen": "r4r2/1bp3bk/6pp/pqNP1n2/3NRP2/8/3Q1BPP/R5K1 b - - 3 30",
+      "solution": [
+        "Qxc5",
+        "Nxf5",
+        "Qxd5",
+        "Qxd5",
+        "Bxd5"
+      ],
+      "gameUrl": "https://lichess.org/zLN5OdO0/black#59",
+      "white": "Marcia2911",
+      "black": "vldfm",
+      "wTitle": "WFM",
+      "wRating": 2343,
+      "bRating": 2265,
+      "id": 1401
+    },
+    {
+      "date": "2026-04-23",
+      "fen": "rnb2rk1/ppp1b1pp/3p4/3Q3q/1PP1p1n1/P1N1PNP1/5PBP/R1B2RK1 b - - 1 12",
+      "solution": [
+        "Qxd5",
+        "Nxd5",
+        "exf3",
+        "Nxe7+",
+        "Kf7"
+      ],
+      "gameUrl": "https://lichess.org/1nmO4ruh/black#23",
+      "white": "daniel86rdz",
+      "black": "daphnis",
+      "wRating": 1790,
+      "bRating": 1792,
+      "id": 1402
     }
   ];
 }
