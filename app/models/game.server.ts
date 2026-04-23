@@ -19015,7 +19015,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "white": "Anasurimbor",
       "black": "ivanburgos",
       "wTitle": "IM",
-      "wRating": 2447,
+      "wRating": 2,
       "bRating": 2362,
       "id": 1399
     },
@@ -19070,6 +19070,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1790,
       "bRating": 1792,
       "id": 1402
+    },
+    {
+      "date": "2026-04-24",
+      "fen": "6k1/1p1n1p1p/p5pQ/3pn3/P4P2/7P/4q1P1/1B3RK1 b - - 4 28",
+      "solution": [
+        "Nc4",
+        "Qh4",
+        "Ne3",
+        "Qf2",
+        "Qxf1+"
+      ],
+      "gameUrl": "https://lichess.org/Om6duz6G/black#55",
+      "white": "juliocesa284",
+      "black": "Sarfarazkhan",
+      "wRating": 1889,
+      "bRating": 1860,
+      "id": 1403
     }
   ];
 }
