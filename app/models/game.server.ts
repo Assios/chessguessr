@@ -19087,6 +19087,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1889,
       "bRating": 1860,
       "id": 1403
+    },
+    {
+      "date": "2026-04-25",
+      "fen": "5r1k/R1Q3p1/3p2q1/4n3/1P6/2Pb1PN1/7K/2BR4 b - - 0 28",
+      "solution": [
+        "Nxf3+",
+        "Kg2",
+        "Nh4+",
+        "Kh3",
+        "Bf5+"
+      ],
+      "gameUrl": "https://lichess.org/dOxjx6YG/black#55",
+      "white": "ESchess_TCC",
+      "black": "Hatsune-Miku",
+      "wRating": 2295,
+      "bRating": 2373,
+      "id": 1404
+    },
+    {
+      "date": "2026-04-26",
+      "fen": "r1bk1r2/ppp3Q1/7B/2bp4/2BpP3/3P1P1P/PPP2qP1/RN5K b - - 0 16",
+      "solution": [
+        "Qe1+",
+        "Kh2",
+        "Bd6+",
+        "f4",
+        "Rxf4"
+      ],
+      "gameUrl": "https://lichess.org/muAfs4FH/black#31",
+      "white": "OlanDy_2",
+      "black": "alexwarde",
+      "wRating": 1910,
+      "bRating": 1898,
+      "id": 1405
     }
   ];
 }
