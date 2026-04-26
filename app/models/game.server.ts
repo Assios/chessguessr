@@ -19121,6 +19121,128 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1910,
       "bRating": 1898,
       "id": 1405
+    },
+    {
+      "date": "2026-04-27",
+      "fen": "r1b1k2r/2qnb3/2p3pB/p3pp2/Pp2n2N/1B2Q2P/1PP1NPP1/2KR3R w kq - 0 17",
+      "solution": [
+        "Nxg6",
+        "Bc5",
+        "Bf7+",
+        "Kxf7",
+        "Nxh8+"
+      ],
+      "gameUrl": "https://lichess.org/eyooPFGJ/white#32",
+      "white": "FitimK33",
+      "black": "krzywywest",
+      "wRating": 1857,
+      "bRating": 1793,
+      "id": 1406
+    },
+    {
+      "date": "2026-04-28",
+      "fen": "4r3/1k2r1b1/pq5p/1p3Q2/4pP2/1P6/P5PP/2RR3K w - - 6 34",
+      "solution": [
+        "Qd5+",
+        "Kb8",
+        "Rc6",
+        "Qb7",
+        "Qd6+"
+      ],
+      "gameUrl": "https://lichess.org/DaaU5MCe/white#66",
+      "white": "belayaliniya04",
+      "black": "pluto76",
+      "wRating": 2353,
+      "bRating": 2086,
+      "id": 1407
+    },
+    {
+      "date": "2026-04-29",
+      "fen": "4rk1r/5pp1/1p6/pP1P2Pp/2PpQ3/1P4q1/8/1R3R1K w - - 3 31",
+      "solution": [
+        "Rxf7+",
+        "Kxf7",
+        "Rf1+",
+        "Kg8",
+        "Qxe8+"
+      ],
+      "gameUrl": "https://lichess.org/gyrwY4If/white#60",
+      "white": "Srchesschilango",
+      "black": "robertoyepez",
+      "wTitle": "CM",
+      "bTitle": "NM",
+      "wRating": 2319,
+      "bRating": 2317,
+      "id": 1408
+    },
+    {
+      "date": "2026-04-30",
+      "fen": "2r1r1k1/pp3ppp/5q2/5N2/1P2p1Q1/P2nP2P/5PP1/3R1RK1 b - - 3 23",
+      "solution": [
+        "h5",
+        "Qxh5",
+        "g6",
+        "Nh6+",
+        "Kg7"
+      ],
+      "gameUrl": "https://lichess.org/sgqgCC7y/black#45",
+      "white": "Maksat-94",
+      "black": "Hawkeye_A",
+      "wTitle": "GM",
+      "wRating": 2569,
+      "bRating": 2624,
+      "id": 1409
+    },
+    {
+      "date": "2026-05-01",
+      "fen": "8/1p6/1P3kp1/7p/4R1Pr/8/2n2KB1/8 w - - 0 43",
+      "solution": [
+        "g5+",
+        "Kxg5",
+        "Rxh4",
+        "Kxh4",
+        "Bxb7"
+      ],
+      "gameUrl": "https://lichess.org/eYKdALMc/white#84",
+      "white": "realmadridfan2005",
+      "black": "Chess_CMS-09_113",
+      "wRating": 2234,
+      "bRating": 2349,
+      "id": 1410
+    },
+    {
+      "date": "2026-05-02",
+      "fen": "r4rk1/1pp3pp/4p3/p2qP1PB/1b1pN3/3Q4/PP1B3P/n2K2R1 w - - 2 21",
+      "solution": [
+        "Nf6+",
+        "gxf6",
+        "gxf6+",
+        "Kh8",
+        "Bh6"
+      ],
+      "gameUrl": "https://lichess.org/8HeqTCy9/white#40",
+      "white": "Alequis1991",
+      "black": "Bonyfation",
+      "wRating": 1935,
+      "bRating": 1939,
+      "id": 1411
+    },
+    {
+      "date": "2026-05-03",
+      "fen": "8/5p2/3kpP1p/1p1p4/pP1P2PP/2P5/2K5/8 w - - 1 38",
+      "solution": [
+        "h5",
+        "e5",
+        "g5",
+        "hxg5",
+        "h6"
+      ],
+      "gameUrl": "https://lichess.org/ilT1vMgC/white#74",
+      "white": "ajedrez9815",
+      "black": "LIS25",
+      "wRating": 1752,
+      "bRating": 1784,
+      "id": 1412
     }
   ];
 }
