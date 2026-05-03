@@ -19243,6 +19243,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1752,
       "bRating": 1784,
       "id": 1412
+    },
+    {
+      "date": "2026-05-04",
+      "fen": "r1b3k1/pp1n2pp/4p3/3pP3/3Pp1RQ/2P1q3/PP1N1rPP/R1B4K w - - 11 21",
+      "solution": [
+        "h3",
+        "Nf8",
+        "Nf3",
+        "Rf1+",
+        "Kh2"
+      ],
+      "gameUrl": "https://lichess.org/uJBeae2E/white#40",
+      "white": "Diego-Alexander",
+      "black": "oberschlumpf",
+      "bTitle": "NM",
+      "wRating": 2270,
+      "bRating": 2336,
+      "id": 1413
+    },
+    {
+      "date": "2026-05-05",
+      "fen": "6k1/5p1p/3p1q2/p1p3p1/P3P3/2RPB1PP/2Q4K/5r2 b - - 1 36",
+      "solution": [
+        "Qf3",
+        "Qg2",
+        "Qxe3",
+        "Qxf1",
+        "Qd2+"
+      ],
+      "gameUrl": "https://lichess.org/wWWeRfdG/black#71",
+      "white": "hmsfenix",
+      "black": "SymantecSK",
+      "wRating": 1815,
+      "bRating": 1848,
+      "id": 1414
+    },
+    {
+      "date": "2026-05-06",
+      "fen": "2kr3r/1pp2N2/p3pbp1/1b1pN3/3P1P2/PqP5/1P1Q2PP/R3K2R b KQ - 4 22",
+      "solution": [
+        "Bh4+",
+        "g3",
+        "Bxg3+",
+        "hxg3",
+        "Rxh1+"
+      ],
+      "gameUrl": "https://lichess.org/Gx6gUfA1/black#43",
+      "white": "evgenivenge",
+      "black": "M_ALBUKHAYTAN",
+      "wRating": 1715,
+      "bRating": 1794,
+      "id": 1415
     }
   ];
 }
