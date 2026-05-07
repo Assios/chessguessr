@@ -19312,6 +19312,77 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1882,
       "bRating": 1879,
       "id": 1416
+    },
+    {
+      "date": "2026-05-08",
+      "fen": "8/2kb4/8/1p3Rp1/1P4P1/3pPK2/5P2/8 b - - 1 44",
+      "solution": [
+        "Bxf5",
+        "gxf5",
+        "g4+",
+        "Kxg4",
+        "d2"
+      ],
+      "gameUrl": "https://lichess.org/TOt1JZJ3/black#87",
+      "white": "agustinv04",
+      "black": "Khalilmousavii",
+      "wTitle": "FM",
+      "bTitle": "GM",
+      "wRating": 2449,
+      "bRating": 2658,
+      "id": 1417
+    },
+    {
+      "date": "2026-05-09",
+      "fen": "6k1/3q1p2/1p4p1/2p1R2p/6P1/1P2QP1K/2r4P/8 w - - 0 30",
+      "solution": [
+        "Re8+",
+        "Kh7",
+        "Qe5",
+        "hxg4+",
+        "Kg3"
+      ],
+      "gameUrl": "https://lichess.org/OLDUTHkA/white#58",
+      "white": "IrrelevantAgain",
+      "black": "AbasnavatMiAra",
+      "wTitle": "IM",
+      "wRating": 2680,
+      "bRating": 2757,
+      "id": 1418
+    },
+    {
+      "date": "2026-05-10",
+      "fen": "r4r2/1pp2k2/p2p1q1Q/4pP2/3n4/P1NP1P2/1PPK1P2/7R w - - 3 23",
+      "solution": [
+        "Qh5+",
+        "Ke7",
+        "Nd5+",
+        "Kd7",
+        "Nxf6+"
+      ],
+      "gameUrl": "https://lichess.org/cr6TTSrh/white#44",
+      "white": "lgnmxm",
+      "black": "apollo017",
+      "wRating": 1850,
+      "bRating": 1927,
+      "id": 1419
+    },
+    {
+      "date": "2026-05-11",
+      "fen": "r2qk2r/p4ppp/b1p2n2/n1b1p1N1/B7/P1N4P/1PPP1PP1/R1BQK2R b KQkq - 0 11",
+      "solution": [
+        "Bxf2+",
+        "Kxf2",
+        "Qd4+",
+        "Ke1",
+        "Qh4+"
+      ],
+      "gameUrl": "https://lichess.org/UYcAD8bM/black#21",
+      "white": "LIk3az0mbY",
+      "black": "Heborik",
+      "wRating": 1620,
+      "bRating": 1541,
+      "id": 1420
     }
   ];
 }
