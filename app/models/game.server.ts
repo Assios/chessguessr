@@ -19383,6 +19383,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1620,
       "bRating": 1541,
       "id": 1420
+    },
+    {
+      "date": "2026-05-12",
+      "fen": "r2Bk2r/ppp2ppp/2np4/8/4n1b1/1NNK4/PPP2bPP/R2Q1B1R b kq - 3 10",
+      "solution": [
+        "Ne5+",
+        "Kxe4",
+        "f5+",
+        "Kf4",
+        "Ng6+"
+      ],
+      "gameUrl": "https://lichess.org/alSuOmEu/black#19",
+      "white": "lososo42",
+      "black": "Klaudia_Vinklemein",
+      "wRating": 1731,
+      "bRating": 1746,
+      "id": 1421
     }
   ];
 }
