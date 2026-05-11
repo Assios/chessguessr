@@ -19400,6 +19400,93 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1731,
       "bRating": 1746,
       "id": 1421
+    },
+    {
+      "date": "2026-05-13",
+      "fen": "3rr1k1/1bq2pbp/p3p1p1/2p1n2n/2P3P1/2NB1N1P/PP2Q2B/1R2R2K w - - 0 21",
+      "solution": [
+        "Be4",
+        "f5",
+        "Bxb7",
+        "Qxb7",
+        "Bxe5"
+      ],
+      "gameUrl": "https://lichess.org/3ITL3UP6/white#40",
+      "white": "Goldfinger007",
+      "black": "BdoQ",
+      "wTitle": "NM",
+      "wRating": 2200,
+      "bRating": 2115,
+      "id": 1422
+    },
+    {
+      "date": "2026-05-14",
+      "fen": "1r2B1k1/5Qb1/3p2p1/5p1q/P1PP2n1/2N1P1P1/4NP2/5RK1 b - - 0 23",
+      "solution": [
+        "Kh8",
+        "Kg2",
+        "Qh2+",
+        "Kf3",
+        "Qh3"
+      ],
+      "gameUrl": "https://lichess.org/vfirpgLj/black#45",
+      "white": "arkchess1963",
+      "black": "JAIngvaldsen",
+      "wRating": 2189,
+      "bRating": 2282,
+      "id": 1423
+    },
+    {
+      "date": "2026-05-15",
+      "fen": "2kr1b1r/ppp2p2/2n2pq1/1P6/3p4/P1N1Q1B1/2P2PpP/R2R2K1 w - - 0 20",
+      "solution": [
+        "bxc6",
+        "dxe3",
+        "Rxd8+",
+        "Kxd8",
+        "cxb7"
+      ],
+      "gameUrl": "https://lichess.org/pejJYbgS/white#38",
+      "white": "Zeveraar-Glen",
+      "black": "Vetrolom",
+      "wTitle": "IM",
+      "wRating": 2672,
+      "bRating": 2739,
+      "id": 1424
+    },
+    {
+      "date": "2026-05-16",
+      "fen": "r3rbk1/3n3p/ppNp3B/2qPnQ2/2P5/8/P5PP/2R2R1K w - - 1 26",
+      "solution": [
+        "Qg5+",
+        "Ng6",
+        "Rxf8+",
+        "Rxf8",
+        "Ne7+"
+      ],
+      "gameUrl": "https://lichess.org/rrJIliUp/white#50",
+      "white": "mma0105",
+      "black": "matemator",
+      "wRating": 2330,
+      "bRating": 2210,
+      "id": 1425
+    },
+    {
+      "date": "2026-05-17",
+      "fen": "3q1k2/1b3p2/pp2pNp1/2b1P3/8/6QP/P1R2PP1/6K1 b - - 2 35",
+      "solution": [
+        "Qd1+",
+        "Kh2",
+        "Qxc2",
+        "Qh4",
+        "Ke7"
+      ],
+      "gameUrl": "https://lichess.org/r706r8mN/black#69",
+      "white": "Judeaxlee",
+      "black": "AMIRKHag",
+      "wRating": 1753,
+      "bRating": 1782,
+      "id": 1426
     }
   ];
 }
