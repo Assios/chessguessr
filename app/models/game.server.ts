@@ -19487,6 +19487,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1753,
       "bRating": 1782,
       "id": 1426
+    },
+    {
+      "date": "2026-05-18",
+      "fen": "2q1rrk1/pp4pp/1n3pb1/2bp4/3N1B1Q/P6R/1PB2PPP/3R2K1 w - - 7 26",
+      "solution": [
+        "Bxg6",
+        "hxg6",
+        "Qh7+",
+        "Kf7",
+        "Rg3"
+      ],
+      "gameUrl": "https://lichess.org/GWYwVmuK/white#50",
+      "white": "AndreySemenov",
+      "black": "dkasamy",
+      "wRating": 1940,
+      "bRating": 1958,
+      "id": 1427
     }
   ];
 }
