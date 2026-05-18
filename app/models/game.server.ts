@@ -19504,6 +19504,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1940,
       "bRating": 1958,
       "id": 1427
+    },
+    {
+      "date": "2026-05-19",
+      "fen": "3rr1k1/pp3ppp/2pP4/6Pb/3Q4/1B5q/P1P2P2/3RR1K1 w - - 3 22",
+      "solution": [
+        "Rxe8+",
+        "Rxe8",
+        "d7",
+        "Rd8",
+        "Re1"
+      ],
+      "gameUrl": "https://lichess.org/zR0dy13V/white#42",
+      "white": "Albanian_Fischer",
+      "black": "Karthik_a81",
+      "wRating": 1873,
+      "bRating": 1917,
+      "id": 1428
+    },
+    {
+      "date": "2026-05-20",
+      "fen": "3r2qk/2r3pp/p4p2/1p3P2/2pn2NQ/P6R/6PP/5R1K w - - 8 39",
+      "solution": [
+        "Nxf6",
+        "gxf6",
+        "Qxf6+",
+        "Rg7",
+        "Rxh7+"
+      ],
+      "gameUrl": "https://lichess.org/FsdwV3il/white#76",
+      "white": "Horth_wind",
+      "black": "Hulscher_1979",
+      "wRating": 2265,
+      "bRating": 2259,
+      "id": 1429
     }
   ];
 }
