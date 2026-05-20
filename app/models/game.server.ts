@@ -19538,6 +19538,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2265,
       "bRating": 2259,
       "id": 1429
+    },
+    {
+      "date": "2026-05-21",
+      "fen": "8/p2k1Pb1/4p1P1/8/2p1KP2/2pn4/Pp5P/1R3R2 b - - 0 33",
+      "solution": [
+        "Ke7",
+        "f5",
+        "exf5+",
+        "Kxf5",
+        "c2"
+      ],
+      "gameUrl": "https://lichess.org/TYWad8MG/black#65",
+      "white": "Dvoretski_son",
+      "black": "IMAndrasToth",
+      "bTitle": "IM",
+      "wRating": 2489,
+      "bRating": 2565,
+      "id": 1430
+    },
+    {
+      "date": "2026-05-22",
+      "fen": "3r4/5p1k/2p2Ppp/1p2P2P/pP2Q3/2P5/P2q4/1K2R3 b - - 0 36",
+      "solution": [
+        "a3",
+        "hxg6+",
+        "fxg6",
+        "Qe2",
+        "Qxc3"
+      ],
+      "gameUrl": "https://lichess.org/4SxlB8rl/black#71",
+      "white": "vanet",
+      "black": "Ernestokc",
+      "wRating": 1610,
+      "bRating": 1590,
+      "id": 1431
+    },
+    {
+      "date": "2026-05-23",
+      "fen": "r5k1/1p2bp2/1qp1p1p1/6PR/1P1PpQ2/2P1P3/1R3P2/rNK5 w - - 0 28",
+      "solution": [
+        "Rh7",
+        "Kxh7",
+        "Qxf7+",
+        "Kh8",
+        "f4"
+      ],
+      "gameUrl": "https://lichess.org/m5ICRCYZ/white#54",
+      "white": "Espntheocho",
+      "black": "pupilochess86",
+      "bTitle": "FM",
+      "wRating": 2660,
+      "bRating": 2696,
+      "id": 1432
+    },
+    {
+      "date": "2026-05-24",
+      "fen": "4r1k1/3n1ppp/B1p5/3pr3/N5b1/8/PPP2PPP/R3RK2 b - - 0 19",
+      "solution": [
+        "Rxe1+",
+        "Rxe1",
+        "Ra8",
+        "Bb7",
+        "Rxa4"
+      ],
+      "gameUrl": "https://lichess.org/F5NaTKzM/black#37",
+      "white": "TimurPonomarev",
+      "black": "Natasha-Romanoff",
+      "wRating": 2423,
+      "bRating": 2362,
+      "id": 1433
     }
   ];
 }
