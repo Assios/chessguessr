@@ -19608,6 +19608,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2423,
       "bRating": 2362,
       "id": 1433
+    },
+    {
+      "date": "2026-05-25",
+      "fen": "2rq1rk1/1pn1bppp/4p3/p2n4/P1QP1N2/2P2N1P/1P3PP1/R1B2RK1 b - - 0 17",
+      "solution": [
+        "Nxf4",
+        "Bxf4",
+        "Nd5",
+        "Qb5",
+        "Nxf4"
+      ],
+      "gameUrl": "https://lichess.org/Iu0tE9It/black#33",
+      "white": "roi_canard",
+      "black": "GeorGh14",
+      "wRating": 2054,
+      "bRating": 1944,
+      "id": 1434
+    },
+    {
+      "date": "2026-05-26",
+      "fen": "r1b1r3/pp1n1pkp/2pq1np1/6B1/8/1NbBQ2P/PPP1RPP1/4R1K1 w - - 0 18",
+      "solution": [
+        "Bh6+",
+        "Kg8",
+        "Qxe8+",
+        "Nxe8",
+        "Rxe8+"
+      ],
+      "gameUrl": "https://lichess.org/DJmhesXi/white#34",
+      "white": "NePochuvstvoval",
+      "black": "Hidayat_Sasambo",
+      "wRating": 2389,
+      "bRating": 1706,
+      "id": 1435
     }
   ];
 }
