@@ -19642,6 +19642,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2389,
       "bRating": 1706,
       "id": 1435
+    },
+    {
+      "date": "2026-05-27",
+      "fen": "2r3k1/5pp1/p1b1pq1p/Pp1r4/1PpP1BQ1/2P3RP/5PP1/4R1K1 b - - 5 31",
+      "solution": [
+        "h5",
+        "Bg5",
+        "hxg4",
+        "Bxf6",
+        "gxf6"
+      ],
+      "gameUrl": "https://lichess.org/eBdu7ExJ/black#61",
+      "white": "fathermother",
+      "black": "vvchessli",
+      "bTitle": "IM",
+      "wRating": 2613,
+      "bRating": 2703,
+      "id": 1436
     }
   ];
 }
