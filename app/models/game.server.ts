@@ -19660,6 +19660,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2613,
       "bRating": 2703,
       "id": 1436
+    },
+    {
+      "date": "2026-05-28",
+      "fen": "r1bqkb1r/ppn2ppp/3p1n2/1NpPp3/4P3/Q4P2/2PB2PP/1R2KBNR w Kkq - 2 12",
+      "solution": [
+        "Ba5",
+        "b6",
+        "Bxb6",
+        "axb6",
+        "Nxc7+"
+      ],
+      "gameUrl": "https://lichess.org/vONw4prD/white#22",
+      "white": "Sandarus",
+      "black": "AnasBit",
+      "wRating": 1890,
+      "bRating": 1807,
+      "id": 1437
     }
   ];
 }
