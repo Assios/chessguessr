@@ -19677,6 +19677,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1890,
       "bRating": 1807,
       "id": 1437
+    },
+    {
+      "date": "2026-05-29",
+      "fen": "r1b4k/N1R1b3/3p2r1/p2Pp2p/P3Pp1q/B4PpP/1R4P1/5Q1K b - - 4 31",
+      "solution": [
+        "Bxh3",
+        "gxh3",
+        "g2+",
+        "Rxg2",
+        "Qxh3+"
+      ],
+      "gameUrl": "https://lichess.org/juKTcGIa/black#61",
+      "white": "newauto888",
+      "black": "Burn_It_Down",
+      "wTitle": "NM",
+      "wRating": 1977,
+      "bRating": 2131,
+      "id": 1438
+    },
+    {
+      "date": "2026-05-30",
+      "fen": "r2q3r/1p3p2/p1np2k1/4p1PN/P3PnQP/8/1PP3K1/R4R2 w - - 0 26",
+      "solution": [
+        "Rxf4",
+        "exf4",
+        "Qf5+",
+        "Kxh5",
+        "Qxf7+"
+      ],
+      "gameUrl": "https://lichess.org/S5HSz2AR/white#50",
+      "white": "abelo-07",
+      "black": "KING_BIMBO",
+      "wRating": 2255,
+      "bRating": 2184,
+      "id": 1439
+    },
+    {
+      "date": "2026-05-31",
+      "fen": "8/6k1/p4p2/1p4p1/2p1N1P1/2Rr1PK1/8/8 b - - 1 34",
+      "solution": [
+        "Rxc3",
+        "Nxc3",
+        "Kf7",
+        "Kf2",
+        "Ke6"
+      ],
+      "gameUrl": "https://lichess.org/x2unxTjC/black#67",
+      "white": "EL_PROFETA_777",
+      "black": "danielfri",
+      "wRating": 1800,
+      "bRating": 1777,
+      "id": 1440
     }
   ];
 }
