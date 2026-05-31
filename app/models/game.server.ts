@@ -19729,6 +19729,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1800,
       "bRating": 1777,
       "id": 1440
+    },
+    {
+      "date": "2026-06-01",
+      "fen": "r6r/pp1n1kp1/2pB3p/3n1R2/2BP3P/8/PP4P1/2R3K1 b - - 0 20",
+      "solution": [
+        "Ke6",
+        "Bxd5+",
+        "cxd5",
+        "Rf3",
+        "Kxd6"
+      ],
+      "gameUrl": "https://lichess.org/BpytGeLh/black#39",
+      "white": "toto85",
+      "black": "SpArK-ReVenge",
+      "wRating": 2078,
+      "bRating": 2216,
+      "id": 1441
     }
   ];
 }
