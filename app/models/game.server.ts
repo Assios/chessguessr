@@ -19746,6 +19746,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2078,
       "bRating": 2216,
       "id": 1441
+    },
+    {
+      "date": "2026-06-02",
+      "fen": "1r3rk1/3q1ppp/1p2b3/p1p1P2Q/P2pNP2/3n2P1/1P4BP/R3R1K1 w - - 0 23",
+      "solution": [
+        "Nf6+",
+        "gxf6",
+        "exf6",
+        "Kh8",
+        "Be4"
+      ],
+      "gameUrl": "https://lichess.org/BUYD4B7h/white#44",
+      "white": "MANETOS",
+      "black": "Galina931949",
+      "wRating": 1813,
+      "bRating": 1823,
+      "id": 1442
     }
   ];
 }
