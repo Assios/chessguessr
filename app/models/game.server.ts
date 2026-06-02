@@ -19763,6 +19763,92 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1813,
       "bRating": 1823,
       "id": 1442
+    },
+    {
+      "date": "2026-06-03",
+      "fen": "1r1r2k1/qBR2p2/1R4bp/p2p4/P1nP2P1/4P3/1Q5P/6K1 w - - 1 37",
+      "solution": [
+        "Rxg6+",
+        "fxg6",
+        "Qf2",
+        "Rf8",
+        "Bxd5+"
+      ],
+      "gameUrl": "https://lichess.org/gMzO7J9M/white#72",
+      "white": "murashkoVL1953",
+      "black": "IlyHan",
+      "wTitle": "IM",
+      "wRating": 2220,
+      "bRating": 2000,
+      "id": 1443
+    },
+    {
+      "date": "2026-06-04",
+      "fen": "5k1r/p4ppp/Pp2p3/3pP3/1R6/Q7/4rPPP/q1B3K1 w - - 0 23",
+      "solution": [
+        "Re4+",
+        "Qxa3",
+        "Bxa3+",
+        "Ke8",
+        "Rxe2"
+      ],
+      "gameUrl": "https://lichess.org/GmS5f3OE/white#44",
+      "white": "Alen1982",
+      "black": "lukic7",
+      "wRating": 1890,
+      "bRating": 1873,
+      "id": 1444
+    },
+    {
+      "date": "2026-06-05",
+      "fen": "4r2k/ppq2pp1/1np5/4N2n/2Pr1Bb1/3B2Q1/P4PPP/1R3RK1 w - - 4 24",
+      "solution": [
+        "Qxg4",
+        "Nxf4",
+        "Qh4+",
+        "Kg8",
+        "Qh7+"
+      ],
+      "gameUrl": "https://lichess.org/GvBBKiol/white#46",
+      "white": "victortoyosi06",
+      "black": "Huey_FreeMan",
+      "wRating": 2090,
+      "bRating": 2059,
+      "id": 1445
+    },
+    {
+      "date": "2026-06-06",
+      "fen": "1Q3nk1/5p2/4p2p/3p1P2/1P1B3p/P2PP2P/q1r3P1/5RK1 b - - 0 30",
+      "solution": [
+        "Rxg2+",
+        "Kh1",
+        "Rg3",
+        "Rg1",
+        "Qf2"
+      ],
+      "gameUrl": "https://lichess.org/KNLTJxxQ/black#59",
+      "white": "nopita69",
+      "black": "Hinamatsuri",
+      "wRating": 1990,
+      "bRating": 2103,
+      "id": 1446
+    },
+    {
+      "date": "2026-06-07",
+      "fen": "1r4k1/1P3pp1/4p2p/8/QR6/p2qP2P/5PP1/6K1 b - - 3 37",
+      "solution": [
+        "a2",
+        "Qxa2",
+        "Qd1+",
+        "Kh2",
+        "Qd6+"
+      ],
+      "gameUrl": "https://lichess.org/vQypMdds/black#73",
+      "white": "putchuon",
+      "black": "MephistoXP",
+      "wRating": 1985,
+      "bRating": 1971,
+      "id": 1447
     }
   ];
 }
