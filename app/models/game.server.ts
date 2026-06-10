@@ -19900,6 +19900,74 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1975,
       "bRating": 1979,
       "id": 1450
+    },
+    {
+      "date": "2026-06-11",
+      "fen": "r3r1k1/pp3Bpp/5q2/n1p1N3/b2P4/P1P5/3Q1PPP/R1K1R3 b - - 0 18",
+      "solution": [
+        "Qxf7",
+        "Nxf7",
+        "Nb3+",
+        "Kc2",
+        "Nxd2+"
+      ],
+      "gameUrl": "https://lichess.org/bc6imO8i/black#35",
+      "white": "alba21",
+      "black": "pygmyhippopotamus",
+      "wRating": 1545,
+      "bRating": 1594,
+      "id": 1451
+    },
+    {
+      "date": "2026-06-12",
+      "fen": "r4rk1/pp4pp/3q4/2p2p2/2PpnR2/1B3P1P/P2B2P1/1R1Q2K1 b - - 0 23",
+      "solution": [
+        "Nxd2",
+        "Qxd2",
+        "g5",
+        "Rxf5",
+        "Rxf5"
+      ],
+      "gameUrl": "https://lichess.org/4iSlfBOW/black#45",
+      "white": "neoser",
+      "black": "Domra4evVladimir",
+      "wRating": 1592,
+      "bRating": 1593,
+      "id": 1452
+    },
+    {
+      "date": "2026-06-13",
+      "fen": "7r/p2qppk1/1p6/4P1BQ/3n1P2/1P1B4/P7/4K3 w - - 1 32",
+      "solution": [
+        "Bf6+",
+        "exf6",
+        "exf6+",
+        "Kg8",
+        "Qg5+"
+      ],
+      "gameUrl": "https://lichess.org/CjqnPElA/white#62",
+      "white": "eduard-tejada",
+      "black": "Heckerschwili",
+      "wRating": 2234,
+      "bRating": 2277,
+      "id": 1453
+    },
+    {
+      "date": "2026-06-14",
+      "fen": "8/8/5pk1/4P2p/5K1P/8/8/8 w - - 0 58",
+      "solution": [
+        "e6",
+        "f5",
+        "Ke5",
+        "f4",
+        "Kd6"
+      ],
+      "gameUrl": "https://lichess.org/M22gnswB/white#114",
+      "white": "Tohir235",
+      "black": "Trofimov1951",
+      "wRating": 2167,
+      "bRating": 1978,
+      "id": 1454
     }
   ];
 }
