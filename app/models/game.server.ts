@@ -19883,6 +19883,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2424,
       "bRating": 2465,
       "id": 1449
+    },
+    {
+      "date": "2026-06-10",
+      "fen": "8/pb2r2Q/1p5p/4qppk/2p2R2/4P1RP/P5P1/6K1 w - - 0 36",
+      "solution": [
+        "Rh4+",
+        "Kxh4",
+        "Qxh6+",
+        "Kxg3",
+        "Qxg5#"
+      ],
+      "gameUrl": "https://lichess.org/KbSlcuIf/white#70",
+      "white": "dvaise_leva",
+      "black": "MaxP0w3r_0100",
+      "wRating": 1975,
+      "bRating": 1979,
+      "id": 1450
     }
   ];
 }
