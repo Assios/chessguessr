@@ -19968,6 +19968,126 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2167,
       "bRating": 1978,
       "id": 1454
+    },
+    {
+      "date": "2026-06-15",
+      "fen": "5r1k/p5bp/Q5p1/6B1/3q2n1/8/Pr2NPPP/2R2RK1 b - - 3 22",
+      "solution": [
+        "Qe5",
+        "Bf4",
+        "Qxe2",
+        "Qxe2",
+        "Rxe2"
+      ],
+      "gameUrl": "https://lichess.org/BGg2ibaB/black#43",
+      "white": "Principatibus",
+      "black": "randy_segarra",
+      "wTitle": "IM",
+      "wRating": 2599,
+      "bRating": 2560,
+      "id": 1455
+    },
+    {
+      "date": "2026-06-16",
+      "fen": "2kr4/2q2p2/3p2p1/NQp4r/5b2/P2RnP2/1PP4P/1K5R w - - 5 29",
+      "solution": [
+        "Rb3",
+        "c4",
+        "Qa6+",
+        "Kd7",
+        "Rb7"
+      ],
+      "gameUrl": "https://lichess.org/e9TbJ3lJ/white#56",
+      "white": "heyfilho",
+      "black": "Bijikumar",
+      "wRating": 1780,
+      "bRating": 1924,
+      "id": 1456
+    },
+    {
+      "date": "2026-06-17",
+      "fen": "8/8/k7/Ppp1p1p1/1P2P1P1/3K4/8/8 w - - 0 53",
+      "solution": [
+        "bxc5",
+        "Kxa5",
+        "Kc3",
+        "b4+",
+        "Kc4"
+      ],
+      "gameUrl": "https://lichess.org/VlY8LZlc/white#104",
+      "white": "l_u_c_c_i",
+      "black": "LamprosKing",
+      "wRating": 1808,
+      "bRating": 1746,
+      "id": 1457
+    },
+    {
+      "date": "2026-06-18",
+      "fen": "8/3B4/8/5p2/6p1/4k2p/7K/8 b - - 3 61",
+      "solution": [
+        "Kf2",
+        "Bxf5",
+        "g3+",
+        "Kxh3",
+        "g2"
+      ],
+      "gameUrl": "https://lichess.org/uwkMmpVT/black#121",
+      "white": "alight",
+      "black": "bobby102",
+      "wRating": 2080,
+      "bRating": 2121,
+      "id": 1458
+    },
+    {
+      "date": "2026-06-19",
+      "fen": "5k2/5r2/4p1R1/p4pR1/8/2B2bP1/1Pr2P2/5K2 b - - 0 39",
+      "solution": [
+        "Rc1+",
+        "Be1",
+        "Rh7",
+        "Rg8+",
+        "Kf7"
+      ],
+      "gameUrl": "https://lichess.org/ObODqGo1/black#77",
+      "white": "Ajannnn",
+      "black": "SamIskandar",
+      "wRating": 1864,
+      "bRating": 1884,
+      "id": 1459
+    },
+    {
+      "date": "2026-06-20",
+      "fen": "2r1kbnr/1p1q1p2/p3b1pp/3pBB1Q/P7/8/1P3PPP/R3R1K1 w k - 0 21",
+      "solution": [
+        "Bxe6",
+        "gxh5",
+        "Bxd7+",
+        "Kxd7",
+        "Bxh8"
+      ],
+      "gameUrl": "https://lichess.org/Gf3uo3rt/white#40",
+      "white": "Kuechenschwamm",
+      "black": "Zauberhase",
+      "wRating": 2323,
+      "bRating": 2223,
+      "id": 1460
+    },
+    {
+      "date": "2026-06-21",
+      "fen": "r4rk1/pp2qppp/2np1n2/2p1N1B1/2P1P1b1/3P4/PP2BPPP/R2Q1RK1 b - - 0 11",
+      "solution": [
+        "Qxe5",
+        "Bxf6",
+        "Bxe2",
+        "Bxe5",
+        "Bxd1"
+      ],
+      "gameUrl": "https://lichess.org/hb15PcSi/black#21",
+      "white": "SHINCAN_MAROS",
+      "black": "harrisontoppenryan20",
+      "wRating": 2223,
+      "bRating": 2421,
+      "id": 1461
     }
   ];
 }
