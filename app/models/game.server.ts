@@ -20091,19 +20091,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-06-22",
-      "fen": "r1bq2k1/pppp1ppp/8/4P2r/Q4Pn1/2P5/P1P1B1PP/R1B2RK1 b - - 2 13",
+      "fen": "r1bq1r2/1p4p1/pbn1p2k/5pNP/1P1p2Q1/P1N1P3/6P1/R4RK1 w - - 1 20",
       "solution": [
-        "Rxh2",
-        "Bxg4",
-        "Qh4",
-        "Bh3",
-        "Rxh3"
+        "Nf7+",
+        "Kh7",
+        "Qg6+",
+        "Kg8",
+        "Nxd8"
       ],
-      "gameUrl": "https://lichess.org/K6Ojp5xQ/black#25",
-      "white": "sneakiercactus",
-      "black": "Muathbh",
-      "wRating": 1796,
-      "bRating": 1874,
+      "gameUrl": "https://lichess.org/E2iWINnn/white#38",
+      "white": "soccerfreak1213",
+      "black": "gaborhoga",
+      "wRating": 2011,
+      "bRating": 1971,
       "id": 1462
     }
   ];
