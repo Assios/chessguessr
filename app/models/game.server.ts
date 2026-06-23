@@ -20105,6 +20105,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2011,
       "bRating": 1971,
       "id": 1462
+    },
+    {
+      "date": "2026-06-23",
+      "fen": "r3k1nr/6pq/p1n1Pp1p/1p1p4/3P4/PQBb1P2/1P4B1/2R1R1K1 w kq - 0 22",
+      "solution": [
+        "Qxd5",
+        "Nge7",
+        "Qd7+",
+        "Kf8",
+        "d5"
+      ],
+      "gameUrl": "https://lichess.org/o0vUPv0q/white#42",
+      "white": "BrianBlindfold",
+      "black": "DIGMOP",
+      "wRating": 1712,
+      "bRating": 1598,
+      "id": 1403
     }
   ];
 }
