@@ -20108,20 +20108,21 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-06-23",
-      "fen": "r3k1nr/6pq/p1n1Pp1p/1p1p4/3P4/PQBb1P2/1P4B1/2R1R1K1 w kq - 0 22",
+      "fen": "2r1kb1r/p1q2pp1/3p1n1p/1p2p3/1Pb1P3/2N5/PBQN1PPP/R1R3K1 w k - 0 16",
       "solution": [
-        "Qxd5",
-        "Nge7",
-        "Qd7+",
-        "Kf8",
-        "d5"
+        "Nxb5",
+        "Bxb5",
+        "Qxc7",
+        "Rxc7",
+        "Rxc7"
       ],
-      "gameUrl": "https://lichess.org/o0vUPv0q/white#42",
-      "white": "BrianBlindfold",
-      "black": "DIGMOP",
-      "wRating": 1712,
-      "bRating": 1598,
-      "id": 1403
+      "gameUrl": "https://lichess.org/n5LjADJf/white#30",
+      "white": "readycash",
+      "black": "Attila-72",
+      "wTitle": "IM",
+      "wRating": 2534,
+      "bRating": 2046,
+      "id": 1463
     }
   ];
 }
