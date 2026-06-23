@@ -20123,6 +20123,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2534,
       "bRating": 2046,
       "id": 1463
+    },
+    {
+      "date": "2026-06-24",
+      "fen": "2k2b1r/B1p2pp1/1pq5/8/7p/8/PP2QPPP/3R2K1 w - - 2 21",
+      "solution": [
+        "Qa6+",
+        "Qb7",
+        "Rd8+",
+        "Kxd8",
+        "Qxb7"
+      ],
+      "gameUrl": "https://lichess.org/dn32FlrY/white#40",
+      "white": "Valerios1910534t545",
+      "black": "Sam071",
+      "wRating": 1929,
+      "bRating": 1691,
+      "id": 1464
     }
   ];
 }
