@@ -20157,6 +20157,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2101,
       "bRating": 2259,
       "id": 1465
+    },
+    {
+      "date": "2026-06-26",
+      "fen": "5r2/p1p1q1kp/2p3p1/6n1/2PPP3/1PN4P/P3B2P/R2Q2K1 b - - 0 20",
+      "solution": [
+        "Nxh3+",
+        "Kg2",
+        "Qh4",
+        "Qe1",
+        "Rf2+"
+      ],
+      "gameUrl": "https://lichess.org/dGPUzyQ1/black#39",
+      "white": "DR-BOSCONOVICH",
+      "black": "ucaac-55",
+      "wRating": 2041,
+      "bRating": 2044,
+      "id": 1466
+    },
+    {
+      "date": "2026-06-27",
+      "fen": "r2q2k1/pp4b1/3p2p1/2pPp3/2P2r2/2BB2Q1/PP5P/5RK1 w - - 0 22",
+      "solution": [
+        "Rxf4",
+        "exf4",
+        "Qxg6",
+        "Qe7",
+        "Bf5"
+      ],
+      "gameUrl": "https://lichess.org/TgBXKUZg/white#42",
+      "white": "Agaricus-Bisporus",
+      "black": "rekordi",
+      "wRating": 2159,
+      "bRating": 2186,
+      "id": 1467
+    },
+    {
+      "date": "2026-06-28",
+      "fen": "1k4r1/p1pR4/1ppb4/4BB2/4P2p/7P/q1P2PP1/5RK1 w - - 4 28",
+      "solution": [
+        "Ra1",
+        "Qxc2",
+        "Bxd6",
+        "cxd6",
+        "Rdxa7"
+      ],
+      "gameUrl": "https://lichess.org/l64jcG3N/white#54",
+      "white": "TheEnd936",
+      "black": "L4P4",
+      "wRating": 1757,
+      "bRating": 1747,
+      "id": 1468
     }
   ];
 }
