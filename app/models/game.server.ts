@@ -20208,6 +20208,42 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1757,
       "bRating": 1747,
       "id": 1468
+    },
+    {
+      "date": "2026-06-29",
+      "fen": "2r4r/p2R1pk1/6p1/4p2p/5q1P/1B2Q3/PP1K1PP1/6R1 b - - 6 28",
+      "solution": [
+        "Qb4+",
+        "Ke2",
+        "Qg4+",
+        "f3",
+        "Qxd7"
+      ],
+      "gameUrl": "https://lichess.org/UaGVPZPI/black#55",
+      "white": "ProtasBad",
+      "black": "hemat222",
+      "wRating": 1721,
+      "bRating": 1731,
+      "id": 1469
+    },
+    {
+      "date": "2026-06-30",
+      "fen": "8/1k1b2Q1/1q2p3/3pP3/r2NnP1P/Pp6/1P6/1KR4R b - - 4 31",
+      "solution": [
+        "Nd2+",
+        "Ka1",
+        "Rxa3+",
+        "bxa3",
+        "Qxd4+"
+      ],
+      "gameUrl": "https://lichess.org/9CZkj4ah/black#61",
+      "white": "BadAsMe",
+      "black": "VihaanDumir",
+      "wTitle": "IM",
+      "bTitle": "CM",
+      "wRating": 2527,
+      "bRating": 2183,
+      "id": 1470
     }
   ];
 }
