@@ -20244,6 +20244,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2527,
       "bRating": 2183,
       "id": 1470
-    }
+    },
+    {
+  "date": "2026-07-01",
+  "fen": "5rk1/p5p1/3bRr1p/1Pp4q/3p4/1P1Q1N2/P4PPP/4R1K1 b - - 0 22",
+  "solution": [
+    "Rxf3",
+    "gxf3",
+    "Qxh2+",
+    "Kf1",
+    "Qh3+"
+  ],
+  "gameUrl": "https://lichess.org/OWe6M5dF/black#43",
+  "white": "victorwemby",
+  "black": "Fastchess2345",
+  "wRating": 2589,
+  "bRating": 2722,
+  "id": 1471
+}
   ];
 }
