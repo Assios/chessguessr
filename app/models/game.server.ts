@@ -20264,19 +20264,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-07-02",
-      "fen": "7k/3p1rpB/4p1P1/3nP1N1/RP3rp1/5p1P/4nq2/7K w - - 0 39",
+      "fen": "r2qk2r/pp1n1ppp/4p3/3p4/1b1N4/1Pn5/P1P1RPPP/RNBQ2K1 w kq - 3 12",
       "solution": [
-        "Nxf7+",
-        "Rxf7",
-        "Ra8+",
-        "Rf8",
-        "Rxf8#"
+        "Nxc3",
+        "Bxc3",
+        "Nxe6",
+        "fxe6",
+        "Rxe6+"
       ],
-      "gameUrl": "https://lichess.org/BtE1nXT6/white#76",
-      "white": "Dan-Sho",
-      "black": "aricanari",
-      "wRating": 2194,
-      "bRating": 2189,
+      "gameUrl": "https://lichess.org/s4rmbjpM/white#22",
+      "white": "Pascal47",
+      "black": "mor1stef",
+      "wRating": 1530,
+      "bRating": 1606,
       "id": 1472
     }
   ];
