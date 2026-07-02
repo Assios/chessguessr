@@ -20278,6 +20278,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1530,
       "bRating": 1606,
       "id": 1472
+    },
+    {
+      "date": "2026-07-03",
+      "fen": "8/1p4pp/2b1r3/1p2P3/2Pr4/P1R2P2/4RK1P/3k4 w - - 4 32",
+      "solution": [
+        "Re1+",
+        "Kd2",
+        "Rcc1",
+        "Bxf3",
+        "Kxf3"
+      ],
+      "gameUrl": "https://lichess.org/TJ03jOCR/white#62",
+      "white": "sasvatha_chess",
+      "black": "Thorwald5",
+      "bTitle": "FM",
+      "wRating": 2138,
+      "bRating": 2540,
+      "id": 1473
     }
   ];
 }
