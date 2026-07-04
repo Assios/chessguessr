@@ -20330,6 +20330,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2101,
       "bRating": 2098,
       "id": 1475
+    },
+    {
+      "date": "2026-07-06",
+      "fen": "2r2rk1/p1qnbppp/1p2p3/6N1/2pP1n2/2P2N2/PP2QPPP/2BRR1K1 w - - 9 17",
+      "solution": [
+        "Bxf4",
+        "Qxf4",
+        "Nxe6",
+        "fxe6",
+        "Qxe6+"
+      ],
+      "gameUrl": "https://lichess.org/Qjnd4djQ/white#32",
+      "white": "MauroVillarreal",
+      "black": "ziroki",
+      "wRating": 1877,
+      "bRating": 1941,
+      "id": 1476
     }
   ];
 }
