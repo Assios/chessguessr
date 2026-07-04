@@ -20296,6 +20296,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2138,
       "bRating": 2540,
       "id": 1473
+    },
+    {
+      "date": "2026-07-04",
+      "fen": "2b3rk/5Qp1/p1p4p/1pP1q2P/1P3p2/P7/2B2P2/5K1R w - - 0 44",
+      "solution": [
+        "Qg6",
+        "Qa1+",
+        "Bb1",
+        "Qxb1+",
+        "Qxb1"
+      ],
+      "gameUrl": "https://lichess.org/rJ8d1wUu/white#86",
+      "white": "tandoori_knights",
+      "black": "AMRook",
+      "wRating": 1801,
+      "bRating": 1761,
+      "id": 1474
+    },
+    {
+      "date": "2026-07-05",
+      "fen": "rr5k/3b3p/2nP1ppB/q1p1p2P/2B5/pp3P2/PPP3Q1/1K1R2R1 w - - 0 26",
+      "solution": [
+        "hxg6",
+        "bxa2+",
+        "Bxa2",
+        "Rxb2+",
+        "Kc1"
+      ],
+      "gameUrl": "https://lichess.org/VtWaBpxk/white#50",
+      "white": "Vito_Andolini13",
+      "black": "thatoneguy38",
+      "wRating": 2101,
+      "bRating": 2098,
+      "id": 1475
     }
   ];
 }
