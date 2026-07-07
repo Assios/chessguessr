@@ -20364,6 +20364,93 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2047,
       "bRating": 2037,
       "id": 1477
+    },
+    {
+      "date": "2026-07-08",
+      "fen": "1r4k1/2p3pp/P1Qp4/1P4q1/5r2/7b/3N1PPP/R4RK1 b - - 0 24",
+      "solution": [
+        "Bxg2",
+        "Qxg2",
+        "Rg4",
+        "Qxg4",
+        "Qxg4+"
+      ],
+      "gameUrl": "https://lichess.org/gVn7ft54/black#47",
+      "white": "Ruishh02",
+      "black": "felixderchef",
+      "wRating": 1892,
+      "bRating": 1927,
+      "id": 1478
+    },
+    {
+      "date": "2026-07-09",
+      "fen": "5r1k/1p4p1/3p1q1p/p1b1nb2/2P1BP2/P1B3P1/1PQ2P2/R4RK1 b - - 2 25",
+      "solution": [
+        "Qg6",
+        "Bxf5",
+        "Qxg3+",
+        "Kh1",
+        "Qh4+"
+      ],
+      "gameUrl": "https://lichess.org/kHQaR2du/black#49",
+      "white": "BillieJoe",
+      "black": "Siya01",
+      "wTitle": "FM",
+      "wRating": 2449,
+      "bRating": 2277,
+      "id": 1479
+    },
+    {
+      "date": "2026-07-10",
+      "fen": "2kr3r/ppp2pp1/2nb1qbp/4P3/5PP1/2N5/PPPQ3P/2KR1BNR b - - 0 13",
+      "solution": [
+        "Bxe5",
+        "fxe5",
+        "Rxd2",
+        "exf6",
+        "Rxd1+"
+      ],
+      "gameUrl": "https://lichess.org/ZAueKOCs/black#25",
+      "white": "WoLeder",
+      "black": "kamelhammod",
+      "wRating": 1623,
+      "bRating": 1671,
+      "id": 1480
+    },
+    {
+      "date": "2026-07-11",
+      "fen": "8/p7/1p2B3/2p1b1pp/2P1P3/1P2K1kP/P7/8 b - - 3 49",
+      "solution": [
+        "g4",
+        "hxg4",
+        "h4",
+        "g5",
+        "h3"
+      ],
+      "gameUrl": "https://lichess.org/JdcWPbm4/black#97",
+      "white": "Avaz_KBPL",
+      "black": "DrMelekess",
+      "bTitle": "IM",
+      "wRating": 2315,
+      "bRating": 2719,
+      "id": 1481
+    },
+    {
+      "date": "2026-07-12",
+      "fen": "r1b1r1k1/pp5p/2p2nNB/3p4/1P3K2/P3P1RQ/6PP/3qq3 w - - 2 27",
+      "solution": [
+        "Ne7+",
+        "Kf7",
+        "Rg7+",
+        "Kf8",
+        "Rxh7#"
+      ],
+      "gameUrl": "https://lichess.org/usDSrFAI/white#52",
+      "white": "aamir7",
+      "black": "moe82",
+      "wRating": 1535,
+      "bRating": 1523,
+      "id": 1482
     }
   ];
 }
