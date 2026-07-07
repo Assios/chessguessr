@@ -20347,6 +20347,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1877,
       "bRating": 1941,
       "id": 1476
+    },
+    {
+      "date": "2026-07-07",
+      "fen": "R2Q4/1r6/2pR4/p1k1n3/1r2P3/1Pq5/2P5/3K4 w - - 4 39",
+      "solution": [
+        "Rd5+",
+        "cxd5",
+        "Qxd5+",
+        "Kb6",
+        "Qxa5+"
+      ],
+      "gameUrl": "https://lichess.org/WGxCtql5/white#76",
+      "white": "Hero-10",
+      "black": "caballo4m",
+      "wRating": 2047,
+      "bRating": 2037,
+      "id": 1477
     }
   ];
 }
