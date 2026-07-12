@@ -20451,6 +20451,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1535,
       "bRating": 1523,
       "id": 1482
+    },
+    {
+      "date": "2026-07-13",
+      "fen": "5rk1/6p1/2RN2Qp/4q1n1/5p2/7P/5PPK/8 b - - 0 35",
+      "solution": [
+        "f3+",
+        "g3",
+        "Qe2",
+        "Qc2",
+        "Qf1"
+      ],
+      "gameUrl": "https://lichess.org/9kF6q7zj/black#69",
+      "white": "Dhuerta1",
+      "black": "gupu13",
+      "wRating": 2031,
+      "bRating": 2053,
+      "id": 1483
+    },
+    {
+      "date": "2026-07-14",
+      "fen": "1r6/5Qpk/p3p3/3qN3/P2p3P/6P1/4PP2/1r2R1K1 w - - 3 29",
+      "solution": [
+        "Qg6+",
+        "Kg8",
+        "Rxb1",
+        "Rxb1+",
+        "Qxb1"
+      ],
+      "gameUrl": "https://lichess.org/naxyIv4E/white#56",
+      "white": "Yatatu408Empire",
+      "black": "Kroker",
+      "bTitle": "CM",
+      "wRating": 2587,
+      "bRating": 2603,
+      "id": 1484
     }
   ];
 }
