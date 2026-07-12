@@ -14,19 +14,18 @@
     "start": "remix-serve build"
   },
   "dependencies": {
-    "chessground": "^8.3.5",
     "@remix-run/node": "^1.16.1",
     "@remix-run/react": "^1.16.1",
     "@remix-run/vercel": "^1.16.1",
     "@tailwindcss/typography": "^0.5.4",
     "@vercel/node": "^2.0.0",
     "chess.js": "^0.12.1",
+    "chessground": "^8.3.5",
     "daisyui": "^2.17.0",
     "dayjs": "^1.11.5",
     "firebase": "^9.8.4",
     "plausible-tracker": "^0.3.8",
     "react": "^17.0.2",
-    
     "react-countdown": "^2.3.2",
     "react-dom": "^17.0.2",
     "react-hot-toast": "^2.2.0",
@@ -45,6 +44,7 @@
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   },
   "engines": {
