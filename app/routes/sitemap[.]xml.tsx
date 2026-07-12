@@ -1,7 +1,7 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { getGames } from "~/models/game.server";
 
-const ORIGIN = "https://chessguessr.com";
+const ORIGIN = "https://www.chessguessr.com";
 
 type SitemapUrl = {
   loc: string;

@@ -14,7 +14,7 @@ import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 import { OutletContextType } from "~/utils/types";
 import { boardOgImage } from "~/utils/ogImage";
 
-const ORIGIN = "https://chessguessr.com";
+const ORIGIN = "https://www.chessguessr.com";
 
 export const meta: MetaFunction = ({ data }) => {
   if (!data?.game) {

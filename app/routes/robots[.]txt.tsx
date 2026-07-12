@@ -1,6 +1,6 @@
 import type { LoaderFunction } from "@remix-run/node";
 
-const ORIGIN = "https://chessguessr.com";
+const ORIGIN = "https://www.chessguessr.com";
 
 export const loader: LoaderFunction = () => {
   const body = `User-agent: *

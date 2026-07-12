@@ -239,12 +239,12 @@ export const Chessguessr = ({
               type="text"
               className="input input-bordered input-sm w-44 sm:w-56 text-xs sm:text-sm"
               readOnly={true}
-              value={'https://chessguessr.com/games/' + game.id}
+              value={'https://www.chessguessr.com/games/' + game.id}
               onFocus={(event) => event.target.select()}
             />
             <button
               className="btn btn-square btn-sm bg-primary border-primary"
-              onClick={() => copy('https://chessguessr.com/games/' + game.id)}
+              onClick={() => copy('https://www.chessguessr.com/games/' + game.id)}
               aria-label={linkValue ? 'Copied' : 'Copy link'}
             >
               {linkValue ? (

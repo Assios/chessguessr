@@ -28,7 +28,7 @@ import Plausible from "plausible-tracker";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 import { OutletContextType } from "./utils/types";
 
-export const CANONICAL_ORIGIN = "https://chessguessr.com";
+export const CANONICAL_ORIGIN = "https://www.chessguessr.com";
 
 const structuredData = {
   "@context": "https://schema.org",

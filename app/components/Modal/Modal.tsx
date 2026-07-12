@@ -165,8 +165,8 @@ export default function Modal({
     });
 
     text += shouldUpdateStats
-      ? "\nhttps://chessguessr.com"
-      : `\nhttps://chessguessr.com/games/${game.id}`;
+      ? "\nhttps://www.chessguessr.com"
+      : `\nhttps://www.chessguessr.com/games/${game.id}`;
 
     return text;
   };
