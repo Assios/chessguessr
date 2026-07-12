@@ -11,6 +11,7 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLocation,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
 import chessgroundBase from "chessground/assets/chessground.base.css";
@@ -26,6 +27,42 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 import { OutletContextType } from "./utils/types";
+
+export const CANONICAL_ORIGIN = "https://chessguessr.com";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${CANONICAL_ORIGIN}/#website`,
+      url: `${CANONICAL_ORIGIN}/`,
+      name: "Chessguessr",
+      description:
+        "Solve chess puzzles from real games, with the help of Wordle-like hints.",
+    },
+    {
+      "@type": "VideoGame",
+      name: "Chessguessr",
+      url: `${CANONICAL_ORIGIN}/`,
+      applicationCategory: "GameApplication",
+      genre: "Puzzle",
+      gamePlatform: "Web browser",
+      operatingSystem: "Any",
+      description:
+        "A daily Wordle-inspired chess game: guess the next five moves played in a real game.",
+      author: { "@type": "Person", name: "Assios" },
+    },
+  ],
+};
+
+// Escape "<" so the JSON can't break out of the <script> tag.
+const jsonLd = (data: unknown) =>
+  JSON.stringify(data).replace(/</g, "\\u003c");
+
+// Applies the saved theme before first paint so deferring the theme-change
+// library below doesn't cause a flash of the default theme.
+const themeInit = `(function(){try{var t=localStorage.getItem('theme');if(t==='corporate'||t==='lichess-dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}})()`;
 
 export const links: LinksFunction = () => [
   {
@@ -129,7 +166,7 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
   );
 };
 
-export const meta: MetaFunction = () => ({
+export const meta: MetaFunction = ({ location }) => ({
   charset: "utf-8",
   title: "Chessguessr – Wordle for Chess Games",
   description:
@@ -137,18 +174,23 @@ export const meta: MetaFunction = () => ({
   "og:title": "Chessguessr – Wordle for Chess Games",
   "og:description":
     "In this Wordle-inspired game, your task is to guess the continuation of a chess game.",
-  "og:image":
-    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
+  "og:image": `${CANONICAL_ORIGIN}/og-image.png`,
+  "og:url": `${CANONICAL_ORIGIN}${location?.pathname ?? "/"}`,
+  "og:type": "website",
+  "og:site_name": "Chessguessr",
   "twitter:title": "Chessguessr – Wordle for Chess Games",
   "twitter:description":
     "Solve chess puzzles from real games, with the help of Wordle-like hints.",
-  "twitter:image":
-    "https://user-images.githubusercontent.com/1413265/179962925-46c12915-e99d-40c0-b92b-82960bdffb16.png",
+  "twitter:image": `${CANONICAL_ORIGIN}/og-image.png`,
   "twitter:card": "summary_large_image",
+  "twitter:site": "@chessguessr",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export default function App() {
+  const location = useLocation();
+  const canonical = `${CANONICAL_ORIGIN}${location.pathname}`;
+
   const [showModal, setShowModal] = useState(false);
   const [tutorial, setTutorial] = useLocalStorage("cg-tutorial", false);
 
@@ -203,8 +245,19 @@ export default function App() {
   return (
     <html data-theme="corporate" lang="en">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"
+          integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb"
+          crossOrigin="anonymous"
+        ></script>
         <Meta />
+        <link rel="canonical" href={canonical} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }}
+        />
         <Links />
               </head>
       <body className="min-h-screen flex flex-col">

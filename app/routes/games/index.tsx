@@ -6,7 +6,7 @@ import { sortBy } from "../../utils/sort";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 dayjs.extend(advancedFormat);
-import { useNavigate } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import TutorialModal from "~/components/TutorialModal";
 import { useEffect, useMemo, useState } from "react";
 
@@ -43,8 +43,6 @@ const index = () => {
   }, []);
 
   const gamesSorted = games.sort(sortBy("-date"));
-
-  const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
 
@@ -152,6 +150,7 @@ const index = () => {
                       game.fen
                     }
                     alt={`${game.white} vs ${game.black}`}
+                    loading="lazy"
                   />
                 </figure>
                 <div className="card-body">
@@ -161,6 +160,11 @@ const index = () => {
                   <h2 className="card-title">
                     {game.white} – {game.black}
                   </h2>
+                  {(game.wAka || game.bAka) && (
+                    <p className="text-sm opacity-60 -mt-1">
+                      {game.wAka || game.white} vs. {game.bAka || game.black}
+                    </p>
+                  )}
                   <div className="badge badge-primary">
                     {dayjs(game.date).format("MMMM Do, YYYY")}
                   </div>
@@ -170,14 +174,9 @@ const index = () => {
                     </div>
                   )}
                   <div className="card-actions justify-end">
-                    <button
-                      className="btn"
-                      onClick={() => {
-                        navigate(`/games/${game.id}`);
-                      }}
-                    >
+                    <Link className="btn" to={`/games/${game.id}`}>
                       Play
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

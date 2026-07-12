@@ -120,7 +120,7 @@ export const Chessguessr = ({
       <div className="flex justify-center flex-wrap">
         <div>
           <div className="flex flex-col justify-center px-2 sm:px-0">
-            <p className="text-sm sm:text-lg lg:text-2xl mb-2 font-semibold text-center leading-relaxed">
+            <h1 className="text-sm sm:text-lg lg:text-2xl mb-2 font-semibold text-center leading-relaxed">
               {wTitle && (
                 <span className="text-secondary-content">{wTitle}</span>
               )}{' '}
@@ -130,7 +130,7 @@ export const Chessguessr = ({
                 <span className="text-secondary-content">{bTitle}</span>
               )}{' '}
               {black} {bRating && `(${bRating})`}
-            </p>
+            </h1>
             {position && (
               <div className="flex justify-between items-center mb-4">
                 {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (

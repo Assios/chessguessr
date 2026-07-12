@@ -1,13 +1,32 @@
 import { Chessguessr } from "../components/Chessguessr";
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
+import { boardOgImage } from "~/utils/ogImage";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { useEffect } from "react";
 import type { OutletContextType } from "~/utils/types";
 import type { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+
+export const meta: MetaFunction = ({ data }) => {
+  if (!data?.game) return {};
+
+  const g = data.game;
+  const white = g.wAka || g.white;
+  const black = g.bAka || g.black;
+  const description = `Today's puzzle: guess the next five moves ${white} played against ${black}. A new puzzle from a real chess game every day.`;
+  const image = boardOgImage(g.fen);
+
+  return {
+    description,
+    "og:description": description,
+    "twitter:description": description,
+    "og:image": image,
+    "twitter:image": image,
+  };
+};
 
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];

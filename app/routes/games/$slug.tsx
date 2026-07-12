@@ -1,26 +1,46 @@
 import { Chessguessr } from "../../components/Chessguessr";
-import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import type {
+  HeadersFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import { json } from "@remix-run/node";
+import dayjs from "dayjs";
 import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
 import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
 import { OutletContextType } from "~/utils/types";
+import { boardOgImage } from "~/utils/ogImage";
+
+const ORIGIN = "https://chessguessr.com";
 
 export const meta: MetaFunction = ({ data }) => {
   if (!data?.game) {
     return { title: "Chessguessr" };
   }
 
-  const fen = data.game.fen.split(" ")[0];
-  const imageUrl =
-    "https://images.weserv.nl/?url=fen-to-image.com/image/36/" + fen;
+  const g = data.game;
+  const imageUrl = boardOgImage(g.fen);
 
-  const players = data.game.white + " vs. " + data.game.black;
+  const white = g.wAka || g.white;
+  const black = g.bAka || g.black;
+  const players = `${white} vs. ${black}`;
+  const title = `Chessguessr #${g.id} – ${players}`;
+  const description = `Guess the next five moves ${white} played against ${black}${g.event ? ` at ${g.event}` : ""
+    } on ${dayjs(g.date).format(
+      "MMMM D, YYYY"
+    )} — a Wordle-style puzzle from a real chess game.`;
+
   return {
-    title: `Chessguessr – ${players}`,
+    title,
+    description,
+    "og:title": title,
+    "og:description": description,
     "og:image": imageUrl,
+    "twitter:title": title,
+    "twitter:description": description,
     "twitter:image": imageUrl,
   };
 };
@@ -40,6 +60,13 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
       </p>
     </div>
   );
+};
+
+export const headers: HeadersFunction = ({ loaderHeaders }) => {
+  const headers: Record<string, string> = {};
+  const cacheControl = loaderHeaders.get("Cache-Control");
+  if (cacheControl) headers["Cache-Control"] = cacheControl;
+  return headers;
 };
 
 export const loader: LoaderFunction = async ({ params, request }) => {
@@ -67,7 +94,19 @@ export const loader: LoaderFunction = async ({ params, request }) => {
     });
   }
 
-  return json({ game: games[index] });
+  if (currentGame.date < d) {
+    return json(
+      { game: currentGame },
+      {
+        headers: {
+          "Cache-Control":
+            "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800",
+        },
+      }
+    );
+  }
+
+  return json({ game: currentGame });
 };
 
 export default function Index() {
@@ -88,6 +127,28 @@ export default function Index() {
 
   return (
     <div className="mt-10 mb-20 lg:mb-0">
+      {game && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: `${ORIGIN}/` },
+                { "@type": "ListItem", position: 2, name: "Archive", item: `${ORIGIN}/games` },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: `${game.wAka || game.white} vs. ${game.bAka || game.black
+                    }`,
+                  item: `${ORIGIN}/games/${game.id}`,
+                },
+              ],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       {game && (
         <Chessguessr
           showModal={showModal}
