@@ -1,7 +1,8 @@
 node_modules
 
-# Ignore build outputs and API build folder
-api/
+# Ignore build outputs and API build folder (api/* so !api/og.ts can re-include)
+api/*
+!api/og.ts
 
 .cache
 .env

@@ -19,6 +19,7 @@
     "@remix-run/vercel": "^1.16.1",
     "@tailwindcss/typography": "^0.5.4",
     "@vercel/node": "^2.0.0",
+    "@vercel/og": "^0.11.1",
     "chess.js": "^0.12.1",
     "chessground": "^8.3.5",
     "daisyui": "^2.17.0",
