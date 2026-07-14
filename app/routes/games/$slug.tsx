@@ -22,7 +22,7 @@ export const meta: MetaFunction = ({ data }) => {
   }
 
   const g = data.game;
-  const imageUrl = boardOgImage(g.fen);
+  const imageUrl = boardOgImage(g);
 
   const white = g.wAka || g.white;
   const black = g.bAka || g.black;

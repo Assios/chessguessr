@@ -17,7 +17,7 @@ export const meta: MetaFunction = ({ data }) => {
   const white = g.wAka || g.white;
   const black = g.bAka || g.black;
   const description = `Today's puzzle: guess the next five moves ${white} played against ${black}. A new puzzle from a real chess game every day.`;
-  const image = boardOgImage(g.fen);
+  const image = boardOgImage(g);
 
   return {
     description,
