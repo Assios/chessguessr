@@ -20503,6 +20503,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2269,
       "bRating": 2112,
       "id": 1485
+    },
+    {
+      "date": "2026-07-16",
+      "fen": "4b2r/pk5q/NpR2pn1/1R1Pp3/4P1p1/6P1/2Q1N1Br/6K1 b - - 0 36",
+      "solution": [
+        "Rxg2+",
+        "Kxg2",
+        "Qh1+",
+        "Kf2",
+        "Rh2+"
+      ],
+      "gameUrl": "https://lichess.org/jlLNZtBU/black#71",
+      "white": "IvanW-HTHS",
+      "black": "WesleySo1979",
+      "wRating": 2130,
+      "bRating": 2238,
+      "id": 1486
     }
   ];
 }
