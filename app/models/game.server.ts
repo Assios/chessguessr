@@ -20520,6 +20520,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2130,
       "bRating": 2238,
       "id": 1486
+    },
+    {
+      "date": "2026-07-17",
+      "fen": "r4rk1/ppp2ppp/8/8/6Q1/q3B3/1b1R1PPP/5RK1 w - - 2 18",
+      "solution": [
+        "Rxb2",
+        "Qxb2",
+        "Bd4",
+        "Qxd4",
+        "Qxd4"
+      ],
+      "gameUrl": "https://lichess.org/XntetrLJ/white#34",
+      "white": "shn1000",
+      "black": "penhold_vk",
+      "wRating": 2343,
+      "bRating": 2407,
+      "id": 1487
     }
   ];
 }
