@@ -20571,6 +20571,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1832,
       "bRating": 1817,
       "id": 1489
+    },
+    {
+      "date": "2026-07-20",
+      "fen": "4r1k1/p4pp1/1p3P1p/8/3Nq3/P1P1n1Q1/1P4PP/4R2K b - - 0 36",
+      "solution": [
+        "Nf5",
+        "Rxe4",
+        "Nxg3+",
+        "hxg3",
+        "Rxe4"
+      ],
+      "gameUrl": "https://lichess.org/o3DGYfkR/black#71",
+      "white": "AWildPuppy",
+      "black": "Toropov_Pavel",
+      "bTitle": "FM",
+      "wRating": 2532,
+      "bRating": 2501,
+      "id": 1490
     }
   ];
 }
