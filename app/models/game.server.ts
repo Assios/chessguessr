@@ -20589,6 +20589,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2532,
       "bRating": 2501,
       "id": 1490
+    },
+    {
+      "date": "2026-07-21",
+      "fen": "r5k1/1pp2p2/p3r1pQ/4n3/1q5N/1P5P/P4PP1/3RR1K1 w - - 3 25",
+      "solution": [
+        "Rxe5",
+        "Rxe5",
+        "Nxg6",
+        "Re1+",
+        "Kh2"
+      ],
+      "gameUrl": "https://lichess.org/gSRxEPf5/white#48",
+      "white": "saeiddr",
+      "black": "Mohammad_Garadaghy",
+      "wRating": 2126,
+      "bRating": 2182,
+      "id": 1491
     }
   ];
 }
