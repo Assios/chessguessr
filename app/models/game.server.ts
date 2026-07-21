@@ -20606,6 +20606,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2126,
       "bRating": 2182,
       "id": 1491
+    },
+    {
+      "date": "2026-07-22",
+      "fen": "6k1/2q2ppp/1pn1p2n/3pP2N/2bP2P1/4QN1P/rr3PB1/2R1R1K1 w - - 16 26",
+      "solution": [
+        "Qg5",
+        "f6",
+        "exf6",
+        "Rxf2",
+        "Nf4"
+      ],
+      "gameUrl": "https://lichess.org/8r3aWidO/white#50",
+      "white": "AdrianAyalaAranibar",
+      "black": "guorunbiao",
+      "wRating": 2060,
+      "bRating": 2068,
+      "id": 1492
     }
   ];
 }
