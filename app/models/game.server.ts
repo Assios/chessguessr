@@ -20623,6 +20623,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2060,
       "bRating": 2068,
       "id": 1492
+    },
+    {
+      "date": "2026-07-23",
+      "fen": "r1b3k1/1p2b1p1/1qn1p2p/p2pN3/3P2P1/P2Q4/1PB1N2P/R1B2r1K w - - 0 19",
+      "solution": [
+        "Kg2",
+        "Nxe5",
+        "Qh7+",
+        "Kf8",
+        "Kxf1"
+      ],
+      "gameUrl": "https://lichess.org/UJqkC0Ef/white#36",
+      "white": "Mingzbozorg",
+      "black": "Jbs_72",
+      "wTitle": "CM",
+      "wRating": 2237,
+      "bRating": 2001,
+      "id": 1493
     }
   ];
 }
