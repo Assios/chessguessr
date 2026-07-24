@@ -20641,6 +20641,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2237,
       "bRating": 2001,
       "id": 1493
+    },
+    {
+      "date": "2026-07-24",
+      "fen": "r3k2r/pp3ppp/2n4n/2B5/4N1b1/3Q4/PqP3PP/R3KB1R w KQkq - 0 15",
+      "solution": [
+        "Nd6+",
+        "Kf8",
+        "Nc4+",
+        "Kg8",
+        "Nxb2"
+      ],
+      "gameUrl": "https://lichess.org/AIeoGlKk/white#28",
+      "white": "bonama19",
+      "black": "sofatraetmat",
+      "wRating": 1527,
+      "bRating": 1512,
+      "id": 1494
     }
   ];
 }
