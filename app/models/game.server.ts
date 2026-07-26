@@ -20692,6 +20692,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2165,
       "bRating": 2113,
       "id": 1496
+    },
+    {
+      "date": "2026-07-27",
+      "fen": "5r1k/p5Rp/2p2p2/2q4b/2B2P2/1PQ1r3/P6P/5R1K w - - 1 27",
+      "solution": [
+        "Rxh7+",
+        "Kxh7",
+        "Bd3+",
+        "Rxd3",
+        "Qxc5"
+      ],
+      "gameUrl": "https://lichess.org/5dvdGFMY/white#52",
+      "white": "ediasey",
+      "black": "Mateintwo2",
+      "wRating": 1829,
+      "bRating": 1883,
+      "id": 1497
+    },
+    {
+      "date": "2026-07-28",
+      "fen": "8/pp6/8/3P2k1/2P2pp1/5p1p/PP1N3K/8 b - - 1 44",
+      "solution": [
+        "f2",
+        "Ne4+",
+        "Kh4",
+        "Nxf2",
+        "g3+"
+      ],
+      "gameUrl": "https://lichess.org/OSlpUa3J/black#87",
+      "white": "joesal",
+      "black": "Los5hermanos",
+      "bTitle": "FM",
+      "wRating": 1799,
+      "bRating": 2306,
+      "id": 1498
     }
   ];
 }
