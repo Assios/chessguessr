@@ -20727,6 +20727,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1799,
       "bRating": 2306,
       "id": 1498
+    },
+    {
+      "date": "2026-07-29",
+      "fen": "4r1k1/pp3pb1/2p1qn1p/8/2P1N2P/1P1P2R1/P2Q2P1/2K5 w - - 1 30",
+      "solution": [
+        "Qxh6",
+        "Ng4",
+        "Qxe6",
+        "Rxe6",
+        "Rxg4"
+      ],
+      "gameUrl": "https://lichess.org/rIDDoD8D/white#58",
+      "white": "NURIDDIN_ABDULLAEV",
+      "black": "pavelrusakov1951",
+      "wRating": 1828,
+      "bRating": 1642,
+      "id": 1499
     }
   ];
 }
