@@ -20744,6 +20744,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1828,
       "bRating": 1642,
       "id": 1499
+    },
+    {
+      "date": "2026-07-30",
+      "fen": "2rr2k1/1b1q1pp1/p2b3p/1p1Bn3/1P6/P1Q2N1P/1B3PP1/2RR2K1 w - - 5 22",
+      "solution": [
+        "Nxe5",
+        "Rxc3",
+        "Nxd7",
+        "Rxc1",
+        "Bxc1"
+      ],
+      "gameUrl": "https://lichess.org/gEoIpkRC/white#42",
+      "white": "Derberoi",
+      "black": "legends22001177",
+      "wRating": 1867,
+      "bRating": 1683,
+      "id": 1500
     }
   ];
 }
