@@ -20761,6 +20761,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1867,
       "bRating": 1683,
       "id": 1500
+    },
+    {
+      "date": "2026-07-31",
+      "fen": "2b2q1k/8/p2pQ1P1/1p2P1p1/5p2/1P2b2P/P1B5/5K2 w - - 1 39",
+      "solution": [
+        "g7+",
+        "Qxg7",
+        "Qe8+",
+        "Qg8",
+        "Qh5+"
+      ],
+      "gameUrl": "https://lichess.org/GE087ZO8/white#76",
+      "white": "Iskuri",
+      "black": "NoMate4u",
+      "bTitle": "FM",
+      "wRating": 2449,
+      "bRating": 2441,
+      "id": 1501
     }
   ];
 }
