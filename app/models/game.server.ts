@@ -20779,6 +20779,42 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2449,
       "bRating": 2441,
       "id": 1501
+    },
+    {
+      "date": "2026-08-01",
+      "fen": "r5k1/1p1qb1p1/p1p2rP1/P2p4/4p3/7R/1P4PP/3Q1RK1 w - - 0 29",
+      "solution": [
+        "Rh8+",
+        "Kxh8",
+        "Qh5+",
+        "Kg8",
+        "Qh7+"
+      ],
+      "gameUrl": "https://lichess.org/MRoQpeGn/white#56",
+      "white": "TNL_1984",
+      "black": "tafl",
+      "wRating": 2198,
+      "bRating": 2148,
+      "id": 1502
+    },
+    {
+      "date": "2026-08-02",
+      "fen": "r1q1k2r/ppp1bppp/4p3/6P1/2BPnN2/2P2Q2/P1b2P1P/R1B2RK1 w kq - 1 13",
+      "solution": [
+        "Qe2",
+        "Nd6",
+        "Qxc2",
+        "Nxc4",
+        "Qa4+"
+      ],
+      "gameUrl": "https://lichess.org/rVp46kWc/white#24",
+      "white": "tactinhos2900",
+      "black": "Kondor75",
+      "wTitle": "FM",
+      "bTitle": "IM",
+      "wRating": 2564,
+      "bRating": 2409,
+      "id": 1503
     }
   ];
 }
