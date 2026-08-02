@@ -20815,6 +20815,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2564,
       "bRating": 2409,
       "id": 1503
+    },
+    {
+      "date": "2026-08-03",
+      "fen": "2r4r/4kpp1/p3p2p/q2pP2Q/pRbP3P/8/3N1PP1/2R3K1 w - - 2 25",
+      "solution": [
+        "Rb7+",
+        "Rc7",
+        "Nxc4",
+        "dxc4",
+        "Qf3"
+      ],
+      "gameUrl": "https://lichess.org/4AR2sTHg/white#48",
+      "white": "The-cookie-monster",
+      "black": "nihilator",
+      "wTitle": "FM",
+      "wRating": 2378,
+      "bRating": 1990,
+      "id": 1504
     }
   ];
 }
