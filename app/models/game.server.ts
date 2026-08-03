@@ -20833,6 +20833,111 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2378,
       "bRating": 1990,
       "id": 1504
+    },
+    {
+      "date": "2026-08-04",
+      "fen": "r2qr1k1/p4ppp/2p5/n3p3/1b4b1/P1NPBNPn/1PP2PBP/R2QK2R b KQ - 0 16",
+      "solution": [
+        "Bxc3+",
+        "bxc3",
+        "Qf6",
+        "Bxh3",
+        "Bxf3"
+      ],
+      "gameUrl": "https://lichess.org/1t37QrCV/black#31",
+      "white": "Samandar04",
+      "black": "BraveHe1art",
+      "wTitle": "FM",
+      "wRating": 2539,
+      "bRating": 2523,
+      "id": 1505
+    },
+    {
+      "date": "2026-08-05",
+      "fen": "r1bq1rk1/p4ppp/2p5/2b5/6B1/2N5/PPPP1PPP/R1BQK2R b KQ - 0 10",
+      "solution": [
+        "Qd4",
+        "O-O",
+        "Bxg4",
+        "Ne2",
+        "Qe4"
+      ],
+      "gameUrl": "https://lichess.org/Kr3cRHJ2/black#19",
+      "white": "Viktoriachess",
+      "black": "ACStasian",
+      "bTitle": "IM",
+      "wRating": 2140,
+      "bRating": 2597,
+      "id": 1506
+    },
+    {
+      "date": "2026-08-06",
+      "fen": "2r3k1/6q1/1P5p/1BB1ppp1/P3p3/8/6PP/3R2K1 w - - 2 37",
+      "solution": [
+        "Rd7",
+        "Qf6",
+        "b7",
+        "Rb8",
+        "a5"
+      ],
+      "gameUrl": "https://lichess.org/icg3dfFF/white#72",
+      "white": "Subhayan_1",
+      "black": "manash72",
+      "wTitle": "IM",
+      "wRating": 2430,
+      "bRating": 1909,
+      "id": 1507
+    },
+    {
+      "date": "2026-08-07",
+      "fen": "7k/3r1q2/3P1PR1/pp2p1K1/4N3/4N3/8/8 w - - 1 41",
+      "solution": [
+        "Nf5",
+        "Qa2",
+        "Ne7",
+        "Qg2+",
+        "Kf5"
+      ],
+      "gameUrl": "https://lichess.org/1rj1PM0S/white#80",
+      "white": "KILL_KING_QUEEN",
+      "black": "Grafchikov58",
+      "wRating": 1667,
+      "bRating": 1829,
+      "id": 1508
+    },
+    {
+      "date": "2026-08-08",
+      "fen": "2qb1rk1/5pp1/p2P3p/2p1PN2/8/2Q1B3/P5PP/5K2 w - - 1 30",
+      "solution": [
+        "e6",
+        "Bf6",
+        "Qxf6",
+        "gxf6",
+        "Ne7+"
+      ],
+      "gameUrl": "https://lichess.org/rspq82S7/white#58",
+      "white": "MOSHEN_89288819",
+      "black": "fuchser",
+      "wRating": 1752,
+      "bRating": 1658,
+      "id": 1509
+    },
+    {
+      "date": "2026-08-09",
+      "fen": "6r1/Rpk4q/2ppbp2/4p3/B3P3/2PPQ1p1/1P3r2/R5K1 w - - 4 32",
+      "solution": [
+        "Rxb7+",
+        "Kxb7",
+        "Bxc6+",
+        "Kxc6",
+        "Ra6+"
+      ],
+      "gameUrl": "https://lichess.org/oNICquhS/white#62",
+      "white": "Kenny_c",
+      "black": "ozzykkaya",
+      "wRating": 1897,
+      "bRating": 1877,
+      "id": 1510
     }
   ];
 }
