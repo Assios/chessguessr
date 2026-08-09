@@ -20938,6 +20938,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1897,
       "bRating": 1877,
       "id": 1510
+    },
+    {
+      "date": "2026-08-10",
+      "fen": "2r5/5k1p/q4n2/p2PPP2/Pp1Q4/1n3p2/7P/6RK w - - 0 37",
+      "solution": [
+        "e6+",
+        "Ke7",
+        "d6+",
+        "Qxd6",
+        "Rg7+"
+      ],
+      "gameUrl": "https://lichess.org/04EaNcfe/white#72",
+      "white": "AceBonaventura",
+      "black": "justinzz",
+      "wRating": 2485,
+      "bRating": 2514,
+      "id": 1511
     }
   ];
 }
