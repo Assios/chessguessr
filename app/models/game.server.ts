@@ -20975,20 +20975,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-08-12",
-      "fen": "2r3k1/6q1/1P5p/1BB1ppp1/P3p3/8/6PP/3R2K1 w - - 2 37",
+      "fen": "2q1r2k/p3r1pn/Pp5p/1Pp1BQbP/6P1/2P5/6B1/4RRK1 b - - 6 35",
       "solution": [
-        "Rd7",
-        "Qf6",
-        "b7",
-        "Rb8",
-        "a5"
+        "Qxf5",
+        "Rxf5",
+        "Bf6",
+        "Bc6",
+        "Rxe5"
       ],
-      "gameUrl": "https://lichess.org/icg3dfFF/white#72",
-      "white": "Subhayan_1",
-      "black": "manash72",
-      "wTitle": "IM",
-      "wRating": 2430,
-      "bRating": 1909,
+      "gameUrl": "https://lichess.org/Xu2Nlh2B/black#69",
+      "white": "leiermatsch",
+      "black": "nevereverreally",
+      "wRating": 2130,
+      "bRating": 2312,
       "id": 1513
     }
   ];
