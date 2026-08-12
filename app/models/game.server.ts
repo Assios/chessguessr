@@ -20972,6 +20972,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1622,
       "bRating": 1842,
       "id": 1512
+    },
+    {
+      "date": "2026-08-12",
+      "fen": "2r3k1/6q1/1P5p/1BB1ppp1/P3p3/8/6PP/3R2K1 w - - 2 37",
+      "solution": [
+        "Rd7",
+        "Qf6",
+        "b7",
+        "Rb8",
+        "a5"
+      ],
+      "gameUrl": "https://lichess.org/icg3dfFF/white#72",
+      "white": "Subhayan_1",
+      "black": "manash72",
+      "wTitle": "IM",
+      "wRating": 2430,
+      "bRating": 1909,
+      "id": 1513
     }
   ];
 }
