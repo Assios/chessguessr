@@ -20989,6 +20989,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2130,
       "bRating": 2312,
       "id": 1513
+    },
+    {
+      "date": "2026-08-13",
+      "fen": "r4rk1/1b4b1/1q2pnp1/p4P2/PpBpN1P1/1P1P1Q2/1B1P4/R4RK1 b - - 0 25",
+      "solution": [
+        "Nxe4",
+        "dxe4",
+        "d3+",
+        "Kg2",
+        "Bxb2"
+      ],
+      "gameUrl": "https://lichess.org/w1O74sVq/black#49",
+      "white": "Luu77",
+      "black": "Pourya3552",
+      "wTitle": "FM",
+      "wRating": 2370,
+      "bRating": 2415,
+      "id": 1514
     }
   ];
 }
