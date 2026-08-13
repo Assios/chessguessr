@@ -21024,6 +21024,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2009,
       "bRating": 2168,
       "id": 1515
+    },
+    {
+      "date": "2026-08-15",
+      "fen": "3b1rk1/1p3ppp/8/2r3P1/1nN1Pp1P/pPQ2P1B/q1PK4/3R3R w - - 4 26",
+      "solution": [
+        "Qxb4",
+        "Ba5",
+        "Qxa5",
+        "Rxa5",
+        "Ra1"
+      ],
+      "gameUrl": "https://lichess.org/HahlcX5n/white#50",
+      "white": "Tobbe326",
+      "black": "PresidentGM",
+      "wRating": 2418,
+      "bRating": 2512,
+      "id": 1516
+    },
+    {
+      "date": "2026-08-16",
+      "fen": "r6k/p3q2p/1p1p4/n1pPnPRQ/2P5/P1PB4/8/7K w - - 0 32",
+      "solution": [
+        "f6",
+        "Qf7",
+        "Rxe5",
+        "Qxh5+",
+        "Rxh5"
+      ],
+      "gameUrl": "https://lichess.org/V9zyEyQ0/white#62",
+      "white": "RuiMarques69",
+      "black": "NotTodayXD",
+      "wRating": 2361,
+      "bRating": 2425,
+      "id": 1517
     }
   ];
 }
