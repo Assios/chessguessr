@@ -21092,6 +21092,41 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2006,
       "bRating": 2007,
       "id": 1519
+    },
+    {
+      "date": "2026-08-19",
+      "fen": "8/1p6/2p1p2p/5kp1/3P3P/5KP1/PP6/8 w - - 0 38",
+      "solution": [
+        "g4+",
+        "Kf6",
+        "h5",
+        "e5",
+        "Ke4"
+      ],
+      "gameUrl": "https://lichess.org/AOa5u6kg/white#74",
+      "white": "euan_r",
+      "black": "Luvidiel",
+      "wRating": 1991,
+      "bRating": 2002,
+      "id": 1520
+    },
+    {
+      "date": "2026-08-20",
+      "fen": "1r2kb1r/3n1ppp/4pq2/3p4/2pQP3/2PP1P2/PP2KP1P/RNB4R b k - 1 13",
+      "solution": [
+        "cxd3+",
+        "Qxd3",
+        "Ne5",
+        "Qe3",
+        "Bc5"
+      ],
+      "gameUrl": "https://lichess.org/eYZy14yi/black#25",
+      "white": "pedromachin",
+      "black": "Blueagle",
+      "bTitle": "CM",
+      "wRating": 2293,
+      "bRating": 2368,
+      "id": 1521
     }
   ];
 }
