@@ -21127,6 +21127,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2293,
       "bRating": 2368,
       "id": 1521
-    }
+    },
+    {
+      "date": "2026-08-21",
+      "fen": "8/8/6p1/P4p1p/2kp1P1K/3p3P/3R2r1/4B3 b - - 4 42",
+      "solution": [
+        "Rg1",
+        "Rd1",
+        "d2",
+        "Rxd2",
+        "Rxe1"
+      ],
+      "gameUrl": "https://lichess.org/o5zBYQYZ/black#83",
+      "white": "alvarors",
+      "black": "SebasChess14",
+      "wRating": 1886,
+      "bRating": 1941,
+      "id": 1522
+    },
+    {
+      "date": "2026-08-22",
+      "fen": "3q1r1k/1p4pp/8/p7/Pb1r4/7Q/1P3RPP/R1B2NK1 b - - 0 25",
+      "solution": [
+        "Rd1",
+        "Bg5",
+        "Bc5",
+        "Bxd8",
+        "Bxf2+"
+      ],
+      "gameUrl": "https://lichess.org/uWXqGVlE/black#49",
+      "white": "RASHID1968",
+      "black": "Qamer2",
+      "wRating": 2236,
+      "bRating": 2136,
+      "id": 1523
+    },
+    {
+      "date": "2026-08-23",
+      "fen": "r1b2rk1/pp1pppbp/6p1/q7/1nP1P3/PNN1B3/3Q2PP/R3KB1R b KQ - 0 13",
+      "solution": [
+        "Bxc3",
+        "Qxc3",
+        "Nc2+",
+        "Kd2",
+        "Qxc3+"
+      ],
+      "gameUrl": "https://lichess.org/OohBJyhg/black#25",
+      "white": "Godmichel",
+      "black": "julius996",
+      "wRating": 2048,
+      "bRating": 2016,
+      "id": 1524
+    },
   ];
 }
