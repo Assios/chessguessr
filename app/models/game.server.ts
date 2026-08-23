@@ -21179,5 +21179,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2016,
       "id": 1524
     },
+    {
+      "date": "2026-08-24",
+      "fen": "r2qr1k1/5pp1/p1bb3p/1p2p2P/2p1P3/P3B3/1PQRBPP1/2K4R w - - 0 21",
+      "solution": [
+        "Rhd1",
+        "Re6",
+        "Bg4",
+        "Rf6",
+        "Bc5"
+      ],
+      "gameUrl": "https://lichess.org/ADTdxVS7/white#40",
+      "white": "zeepeebee",
+      "black": "AlexandrC",
+      "wRating": 1787,
+      "bRating": 1783,
+      "id": 1525
+    }
   ];
 }
