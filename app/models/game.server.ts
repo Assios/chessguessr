@@ -21195,6 +21195,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1787,
       "bRating": 1783,
       "id": 1525
+    },
+    {
+      "date": "2026-08-25",
+      "fen": "2k5/5p2/2PKn3/1P2P1P1/7p/8/8/8 w - - 0 59",
+      "solution": [
+        "g6",
+        "fxg6",
+        "b6",
+        "h3",
+        "b7+"
+      ],
+      "gameUrl": "https://lichess.org/mcX0IfsI/white#116",
+      "white": "jeigoth",
+      "black": "mariosel",
+      "wRating": 2182,
+      "bRating": 1920,
+      "id": 1526
     }
   ];
 }
