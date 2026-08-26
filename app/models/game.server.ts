@@ -21212,6 +21212,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2182,
       "bRating": 1920,
       "id": 1526
+    },
+    {
+      "date": "2026-08-26",
+      "fen": "8/4r1bk/6p1/6Bp/2R1P2P/p1P3P1/5RK1/r7 b - - 1 56",
+      "solution": [
+        "Ra7",
+        "Be3",
+        "a2",
+        "Bxa7",
+        "Rg1+"
+      ],
+      "gameUrl": "https://lichess.org/vH6PPlWe/black#111",
+      "white": "sumsar42",
+      "black": "ciudadajedrezescolar",
+      "wTitle": "GM",
+      "wRating": 2734,
+      "bRating": 2578,
+      "id": 1527
     }
   ];
 }
