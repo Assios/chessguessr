@@ -21230,6 +21230,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2734,
       "bRating": 2578,
       "id": 1527
+    },
+    {
+      "date": "2026-08-27",
+      "fen": "1r2r1k1/1p3pb1/p2B2p1/2pP4/P3P1np/1P5q/2Q1BP2/2RN1RK1 b - - 0 25",
+      "solution": [
+        "Re5",
+        "Bxg4",
+        "Qxg4+",
+        "Kh2",
+        "Qf4+"
+      ],
+      "gameUrl": "https://lichess.org/kK4H2G2r/black#49",
+      "white": "novik70",
+      "black": "supertolchok",
+      "wTitle": "GM",
+      "wRating": 2544,
+      "bRating": 2475,
+      "id": 1528
     }
   ];
 }
