@@ -21248,6 +21248,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2544,
       "bRating": 2475,
       "id": 1528
+    },
+    {
+      "date": "2026-08-28",
+      "fen": "5b1r/1pk2pR1/p6P/2Nbp3/1n5p/4B2B/PPP2P2/2K5 w - - 8 25",
+      "solution": [
+        "Nd7",
+        "Bxg7",
+        "hxg7",
+        "Rg8",
+        "Nf6"
+      ],
+      "gameUrl": "https://lichess.org/tGVW1lgW/white#48",
+      "white": "Ragned93",
+      "black": "aaryan_varshney",
+      "bTitle": "GM",
+      "wRating": 2831,
+      "bRating": 2757,
+      "id": 1529
     }
   ];
 }
