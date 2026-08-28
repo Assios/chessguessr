@@ -21266,6 +21266,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2831,
       "bRating": 2757,
       "id": 1529
+    },
+    {
+      "date": "2026-08-29",
+      "fen": "r1b2rk1/pp2np1p/4pBp1/q2pP1Q1/3n2P1/P1Pp4/2P1NP1P/R3K2R w KQ - 0 14",
+      "solution": [
+        "Nxd4",
+        "Qxc3+",
+        "Kf1",
+        "Qxa1+",
+        "Kg2"
+      ],
+      "gameUrl": "https://lichess.org/aQomDTUD/white#26",
+      "white": "X1r0sawak",
+      "black": "BestWhiteWineIsRed",
+      "wRating": 2323,
+      "bRating": 2404,
+      "id": 1530
+    },
+    {
+      "date": "2026-08-30",
+      "fen": "r1b1kb1r/1p3pp1/p3pn2/2q1P1Bp/3Q4/1BN4P/P1P3P1/1R2K1R1 w kq - 1 17",
+      "solution": [
+        "Qxc5",
+        "Bxc5",
+        "exf6",
+        "Bxg1",
+        "fxg7"
+      ],
+      "gameUrl": "https://lichess.org/jD83Tfcd/white#32",
+      "white": "YvurrekPaulin29",
+      "black": "b_Nn_T",
+      "wRating": 2283,
+      "bRating": 2443,
+      "id": 1531
     }
   ];
 }
