@@ -21300,6 +21300,42 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2283,
       "bRating": 2443,
       "id": 1531
+    },
+    {
+      "date": "2026-08-31",
+      "fen": "2rq1rk1/4p1bp/p3P1p1/np1N1pN1/3p4/PQ6/5PPP/2R1R1K1 w - - 2 23",
+      "solution": [
+        "Rxc8",
+        "Nxb3",
+        "Rxd8",
+        "Rxd8",
+        "Nxe7+"
+      ],
+      "gameUrl": "https://lichess.org/RjeuEQh0/white#44",
+      "white": "Furrumba",
+      "black": "PurposeLife",
+      "wTitle": "IM",
+      "wRating": 2562,
+      "bRating": 2582,
+      "id": 1532
+    },
+    {
+      "date": "2026-09-01",
+      "fen": "1r4k1/5p1p/4p1pQ/p2pP3/P2R4/2q4P/1r3PPK/4R3 w - - 0 30",
+      "solution": [
+        "Rh4",
+        "Qxe1",
+        "Qxh7+",
+        "Kf8",
+        "Qh8+"
+      ],
+      "gameUrl": "https://lichess.org/C0ApoAxW/white#58",
+      "white": "GingerGM",
+      "black": "Davenogood",
+      "wTitle": "GM",
+      "wRating": 2562,
+      "bRating": 2570,
+      "id": 1533
     }
   ];
 }
