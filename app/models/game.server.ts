@@ -21336,6 +21336,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2562,
       "bRating": 2570,
       "id": 1533
+    },
+    {
+      "date": "2026-09-02",
+      "fen": "q5k1/2R5/4P1p1/p7/3B2p1/P4P2/6KP/1r6 w - - 0 38",
+      "solution": [
+        "Rg7+",
+        "Kf8",
+        "e7+",
+        "Ke8",
+        "Rg8+"
+      ],
+      "gameUrl": "https://lichess.org/Arq1GFdY/white#74",
+      "white": "UkrainianGopnik",
+      "black": "Flamenguista",
+      "wRating": 2080,
+      "bRating": 2180,
+      "id": 1534
     }
   ];
 }
