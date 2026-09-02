@@ -21353,6 +21353,126 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2080,
       "bRating": 2180,
       "id": 1534
+    },
+    {
+      "date": "2026-09-03",
+      "fen": "1r6/1p4PK/pR6/8/1P2k3/8/5p2/8 w - - 0 67",
+      "solution": [
+        "Rf6",
+        "Ke3",
+        "Rf8",
+        "Ke2",
+        "Rxb8"
+      ],
+      "gameUrl": "https://lichess.org/YMZJFnpx/white#132",
+      "white": "kayctins",
+      "black": "Sephyr1906",
+      "wRating": 1875,
+      "bRating": 1810,
+      "id": 1535
+    },
+    {
+      "date": "2026-09-04",
+      "fen": "r5k1/2p2Npp/3p4/p7/1p1Pq3/2P1r3/P1PQ2PP/1K1R1R2 b - - 0 23",
+      "solution": [
+        "bxc3",
+        "Qc1",
+        "Rb8+",
+        "Ka1",
+        "Rb2"
+      ],
+      "gameUrl": "https://lichess.org/LXLkB71R/black#45",
+      "white": "Ryba-Trin",
+      "black": "dafruhe",
+      "wRating": 2325,
+      "bRating": 1792,
+      "id": 1536
+    },
+    {
+      "date": "2026-09-05",
+      "fen": "4rr1k/p3Nppn/2p2n2/1p6/7R/qP5P/P1P1Q1P1/5R1K w - - 4 24",
+      "solution": [
+        "Rxf6",
+        "Qxe7",
+        "Qh5",
+        "Qe1+",
+        "Rf1"
+      ],
+      "gameUrl": "https://lichess.org/Fgjp5tHR/white#46",
+      "white": "foguetada",
+      "black": "GlennTipton",
+      "bTitle": "FM",
+      "wRating": 2315,
+      "bRating": 2473,
+      "id": 1537
+    },
+    {
+      "date": "2026-09-06",
+      "fen": "4rrk1/pp1q2p1/2pp3p/6n1/5N1P/P1Q2pP1/1P3P1K/R1B2R2 b - - 0 26",
+      "solution": [
+        "Rxf4",
+        "hxg5",
+        "Rh4+",
+        "gxh4",
+        "Qg4"
+      ],
+      "gameUrl": "https://lichess.org/y7RRy3jo/black#51",
+      "white": "KarlAugust",
+      "black": "chessbi",
+      "wRating": 2337,
+      "bRating": 2238,
+      "id": 1538
+    },
+    {
+      "date": "2026-09-07",
+      "fen": "r4rk1/1b2bpn1/p1n1p3/3qP3/3pNP1P/P2P1NQ1/1pP5/R2B1RK1 w - - 0 24",
+      "solution": [
+        "Nf6+",
+        "Kh8",
+        "Qg5",
+        "Bxf6",
+        "Qh6+"
+      ],
+      "gameUrl": "https://lichess.org/bwm9PVVa/white#46",
+      "white": "bonae_fides21",
+      "black": "CheezPh",
+      "wRating": 1975,
+      "bRating": 1994,
+      "id": 1539
+    },
+    {
+      "date": "2026-09-08",
+      "fen": "r2b1rk1/p2b2p1/2pP4/2N1pq2/1Q6/P7/1P3PPP/R4RK1 w - - 0 29",
+      "solution": [
+        "Qb7",
+        "Bb6",
+        "Nxd7",
+        "Bxf2+",
+        "Kh1"
+      ],
+      "gameUrl": "https://lichess.org/USjVEKXU/white#56",
+      "white": "drAAxxxxx",
+      "black": "PAWANAGRAWAL",
+      "wRating": 1917,
+      "bRating": 1949,
+      "id": 1540
+    },
+    {
+      "date": "2026-09-09",
+      "fen": "5k2/1Rp2pp1/p1p2b2/3p1N2/8/6QP/P4PPK/2q1r3 w - - 7 26",
+      "solution": [
+        "Rb8+",
+        "Re8",
+        "Rxe8+",
+        "Kxe8",
+        "Qxc7"
+      ],
+      "gameUrl": "https://lichess.org/bThXXJ14/white#50",
+      "white": "superdren",
+      "black": "gab-Z",
+      "wRating": 1806,
+      "bRating": 1914,
+      "id": 1541
     }
   ];
 }
