@@ -21473,6 +21473,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1806,
       "bRating": 1914,
       "id": 1541
+    },
+    {
+      "date": "2026-09-10",
+      "fen": "4r1k1/p3r1p1/2p3RB/2pq1p2/3p2b1/3P2P1/PPP5/4RQK1 w - - 5 25",
+      "solution": [
+        "Rxg7+",
+        "Rxg7",
+        "Rxe8+",
+        "Kf7",
+        "Qe1"
+      ],
+      "gameUrl": "https://lichess.org/9n3K2kOl/white#48",
+      "white": "azizahanulugbekowa",
+      "black": "Sardarbek97",
+      "wRating": 1622,
+      "bRating": 2021,
+      "id": 1542
+    },
+    {
+      "date": "2026-09-11",
+      "fen": "1r6/1p4PK/pR6/8/1P2k3/8/5p2/8 w - - 0 67",
+      "solution": [
+        "Rf6",
+        "Ke3",
+        "Rf8",
+        "Ke2",
+        "Rxb8"
+      ],
+      "gameUrl": "https://lichess.org/YMZJFnpx/white#132",
+      "white": "kayctins",
+      "black": "Sephyr1906",
+      "wRating": 1875,
+      "bRating": 1810,
+      "id": 1543
     }
   ];
 }
