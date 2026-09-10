@@ -21491,22 +21491,5 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2021,
       "id": 1542
     },
-    {
-      "date": "2026-09-11",
-      "fen": "1r6/1p4PK/pR6/8/1P2k3/8/5p2/8 w - - 0 67",
-      "solution": [
-        "Rf6",
-        "Ke3",
-        "Rf8",
-        "Ke2",
-        "Rxb8"
-      ],
-      "gameUrl": "https://lichess.org/YMZJFnpx/white#132",
-      "white": "kayctins",
-      "black": "Sephyr1906",
-      "wRating": 1875,
-      "bRating": 1810,
-      "id": 1543
-    }
   ];
 }
