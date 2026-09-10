@@ -21491,5 +21491,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2021,
       "id": 1542
     },
+    {
+      "date": "2026-09-11",
+      "fen": "3r4/8/p7/kp6/7q/P3QP2/1PP1K2b/5R1R b - - 0 29",
+      "solution": [
+        "Qc4+",
+        "Ke1",
+        "Bg3+",
+        "Rf2",
+        "Bxf2+"
+      ],
+      "gameUrl": "https://lichess.org/Ov8cVhgY/black#57",
+      "white": "Koltypin",
+      "black": "emmanueldanjuma1",
+      "wRating": 1909,
+      "bRating": 1971,
+      "id": 1543
+    },
+    {
+      "date": "2026-09-12",
+      "fen": "8/p3p1P1/3k4/4R3/3P4/8/p3p1K1/5r2 w - - 0 38",
+      "solution": [
+        "g8=Q",
+        "Rg1+",
+        "Kxg1",
+        "a1=Q+",
+        "Kh2"
+      ],
+      "gameUrl": "https://lichess.org/SzkUOfx3/white#74",
+      "white": "Chessibague",
+      "black": "FuegoPreciso",
+      "wTitle": "IM",
+      "wRating": 2504,
+      "bRating": 2573,
+      "id": 1544
+    },
+    {
+      "date": "2026-09-13",
+      "fen": "2r2b1k/4R1pb/p3R2Q/1p1p4/2qB2P1/P1P2r2/1P6/7K w - - 4 54",
+      "solution": [
+        "Bxg7+",
+        "Kg8",
+        "Qxh7+",
+        "Kxh7",
+        "Rh6+"
+      ],
+      "gameUrl": "https://lichess.org/VYqScKZQ/white#106",
+      "white": "monopin",
+      "black": "cleitonino",
+      "wRating": 2247,
+      "bRating": 2280,
+      "id": 1545
+    }
   ];
 }
