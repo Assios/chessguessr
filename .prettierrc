@@ -2,5 +2,11 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "tabWidth": 2,
-  "semi": true
+  "semi": true,
+  "overrides": [
+    {
+      "files": "app/models/game.server.ts",
+      "options": { "singleQuote": false }
+    }
+  ]
 }
