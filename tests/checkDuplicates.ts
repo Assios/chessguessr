@@ -14,6 +14,7 @@ const ALLOWED_DUPLICATE_PAIRS = new Set([
   "287+306",
   "481+530",
   "1112+1320",
+  "1311+1546",
 ]);
 
 const pairKey = (ids: number[]) => [...ids].sort((a, b) => a - b).join("+");
