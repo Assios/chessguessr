@@ -17861,15 +17861,21 @@ export async function getGames(): Promise<Array<GameType>> {
       id: 1546,
     },
     {
-      date: "2026-09-15",
-      fen: "5Q2/pp5p/2b3p1/2p4k/P1Bq4/1Pb4P/2P2PP1/6K1 w - - 5 27",
-      solution: ["Be2+", "Kg5", "h4+", "Qxh4", "Qxc5+"],
-      gameUrl: "https://lichess.org/O8iHzj61/white#52",
-      white: "Skari10",
-      black: "petrovich5398",
-      wRating: 2022,
-      bRating: 1999,
-      id: 1547,
-    },
+      "date": "2026-09-15",
+      "fen": "2r1rknR/1p4p1/p2q1p2/3N1Pp1/1PnP4/P2BPQ2/7P/2R3K1 b - - 0 28",
+      "solution": [
+        "Ne5",
+        "dxe5",
+        "Rxc1+",
+        "Kg2",
+        "Qxe5"
+      ],
+      "gameUrl": "https://lichess.org/RpTAKAik/black#55",
+      "white": "aRes007",
+      "black": "kianguan1230",
+      "wRating": 2353,
+      "bRating": 2370,
+      "id": 1547
+    }
   ];
 }
