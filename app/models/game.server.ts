@@ -17876,6 +17876,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2353,
       "bRating": 2370,
       "id": 1547
+    },
+    {
+      "date": "2026-09-16",
+      "fen": "1r2r1kn/4q1b1/4ppQ1/p2p4/Pp1P2N1/1P2R3/2P2PPP/R5K1 w - - 5 24",
+      "solution": [
+        "Nh6+",
+        "Kf8",
+        "Qh7",
+        "Bxh6",
+        "Qxh8+"
+      ],
+      "gameUrl": "https://lichess.org/m9c1ts67/white#46",
+      "white": "adarshwick",
+      "black": "SchachSchneider",
+      "wTitle": "IM",
+      "wRating": 2587,
+      "bRating": 2588,
+      "id": 1548
     }
   ];
 }
