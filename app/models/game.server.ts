@@ -17894,6 +17894,93 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2587,
       "bRating": 2588,
       "id": 1548
+    },
+    {
+      "date": "2026-09-17",
+      "fen": "2kr1b1r/1pp1pp2/p1P5/6p1/Q7/2PpBq1p/P4P2/1R3RK1 w - - 0 24",
+      "solution": [
+        "cxb7+",
+        "Kb8",
+        "Ba7+",
+        "Kxa7",
+        "Qd4+"
+      ],
+      "gameUrl": "https://lichess.org/PyimCHT4/white#46",
+      "white": "Samarth_Namdev",
+      "black": "shesoloveu000",
+      "wRating": 1546,
+      "bRating": 1545,
+      "id": 1549
+    },
+    {
+      "date": "2026-09-18",
+      "fen": "r2q1rk1/pbp1bp1p/1p2pp2/4P1B1/1n6/3B4/PPPQ1PPP/3R1RK1 w - - 0 15",
+      "solution": [
+        "Bxf6",
+        "Bxf6",
+        "Qh6",
+        "Qxd3",
+        "Rxd3"
+      ],
+      "gameUrl": "https://lichess.org/uTWtFPAa/white#28",
+      "white": "saint_revenge",
+      "black": "Serg_01",
+      "wRating": 2379,
+      "bRating": 2572,
+      "id": 1550
+    },
+    {
+      "date": "2026-09-19",
+      "fen": "2kr3r/pp1bbppp/1q2p2n/3PP3/8/3BB3/Pp2Q1PP/RN3RK1 w - - 0 15",
+      "solution": [
+        "Bxb6",
+        "bxa1=Q",
+        "Bxa7",
+        "exd5",
+        "Qc2+"
+      ],
+      "gameUrl": "https://lichess.org/vXAycQlC/white#28",
+      "white": "Bayek7388",
+      "black": "Ruslan37",
+      "wRating": 1933,
+      "bRating": 1852,
+      "id": 1551
+    },
+    {
+      "date": "2026-09-20",
+      "fen": "r6r/1p2kp1p/2pbN1q1/p7/P1P1n3/1P2N1PB/1B3P1K/R4R2 w - - 3 22",
+      "solution": [
+        "Nf5+",
+        "Kd7",
+        "Nf4",
+        "Bxf4",
+        "Nh4+"
+      ],
+      "gameUrl": "https://lichess.org/7qcDLATn/white#42",
+      "white": "Snuggybubu",
+      "black": "hombredeexito",
+      "wRating": 1746,
+      "bRating": 1656,
+      "id": 1552
+    },
+    {
+      "date": "2026-09-21",
+      "fen": "k5r1/1p5p/p1p2N2/4Q3/1P2P1rP/P3RRP1/2q3PK/8 b - - 4 33",
+      "solution": [
+        "Rxh4+",
+        "Kg1",
+        "Qc1+",
+        "Kf2",
+        "Rh1"
+      ],
+      "gameUrl": "https://lichess.org/OqzYHoyg/black#65",
+      "white": "ArdianJashari",
+      "black": "Fighter89",
+      "wTitle": "FM",
+      "bTitle": "IM",
+      "wRating": 2536,
+      "bRating": 2558,
+      "id": 1553
     }
   ];
 }
