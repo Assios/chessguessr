@@ -17981,6 +17981,108 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2536,
       "bRating": 2558,
       "id": 1553
+    },
+    {
+      "date": "2026-09-22",
+      "fen": "2bq1rk1/pr4pp/5P2/b2p1PB1/3p4/3p2QP/PPP1N3/R4RK1 w - - 0 21",
+      "solution": [
+        "f7+",
+        "Rbxf7",
+        "Bxd8",
+        "dxe2",
+        "Bxa5"
+      ],
+      "gameUrl": "https://lichess.org/tsAxbvIK/white#40",
+      "white": "Qapi",
+      "black": "z00albin",
+      "wRating": 1887,
+      "bRating": 1839,
+      "id": 1554
+    },
+    {
+      "date": "2026-09-23",
+      "fen": "r1b1kb1r/n2p1ppp/2qP4/2p4n/P4B2/2P2N2/1P3PPP/R2QK2R w KQkq - 3 15",
+      "solution": [
+        "Qe2+",
+        "Kd8",
+        "Ne5",
+        "Qd5",
+        "Qxh5"
+      ],
+      "gameUrl": "https://lichess.org/3LTe4sj4/white#28",
+      "white": "fred857",
+      "black": "Furkan0445",
+      "wRating": 1705,
+      "bRating": 1717,
+      "id": 1555
+    },
+    {
+      "date": "2026-09-24",
+      "fen": "2r1r1k1/pp3p1p/6p1/5bBN/2q5/2b3R1/P4PPP/2Q2RK1 w - - 0 22",
+      "solution": [
+        "Rxc3",
+        "Qxc3",
+        "Qxc3",
+        "Rxc3",
+        "Nf6+"
+      ],
+      "gameUrl": "https://lichess.org/XVwpobsh/white#42",
+      "white": "Boskep_TCC",
+      "black": "Ahmad_BKD",
+      "wRating": 2512,
+      "bRating": 2542,
+      "id": 1556
+    },
+    {
+      "date": "2026-09-25",
+      "fen": "r3k2r/pppBqp2/5n2/4p1B1/3nP3/3P1Q1P/PPP2PP1/R3K2R b KQkq - 0 14",
+      "solution": [
+        "Nxd7",
+        "Bxe7",
+        "Nxf3+",
+        "gxf3",
+        "Kxe7"
+      ],
+      "gameUrl": "https://lichess.org/hVt7LBaB/black#27",
+      "white": "Heisenbergscat68",
+      "black": "JuulBlom1512",
+      "wRating": 1777,
+      "bRating": 1787,
+      "id": 1557
+    },
+    {
+      "date": "2026-09-26",
+      "fen": "5r2/4p1bk/q2pP1pp/2pP1r2/ppP2PQ1/5N1R/PP4P1/1K5R w - - 4 29",
+      "solution": [
+        "Ng5+",
+        "Kg8",
+        "Nf7",
+        "R8xf7",
+        "exf7+"
+      ],
+      "gameUrl": "https://lichess.org/AhYiSh3X/white#56",
+      "white": "chessnocturno",
+      "black": "capaverde2015",
+      "wRating": 1862,
+      "bRating": 1791,
+      "id": 1558
+    },
+    {
+      "date": "2026-09-27",
+      "fen": "5k2/1Q4p1/p3pb2/5rp1/5q2/2B2B1r/PP4K1/3R4 w - - 0 34",
+      "solution": [
+        "Rd8+",
+        "Bxd8",
+        "Qxg7+",
+        "Ke8",
+        "Bc6#"
+      ],
+      "gameUrl": "https://lichess.org/d3ek4wiu/white#66",
+      "white": "ooowooo",
+      "black": "arnaldosdevera22",
+      "wRating": 2108,
+      "bRating": 2168,
+      "id": 1559
     }
   ];
 }
