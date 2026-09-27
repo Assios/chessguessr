@@ -18083,6 +18083,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2108,
       "bRating": 2168,
       "id": 1559
+    },
+    {
+      "date": "2026-09-28",
+      "fen": "3r4/1kp3p1/ppn5/3q4/3p4/P1PQ1N2/1P3PPP/3R2K1 b - - 0 24",
+      "solution": [
+        "dxc3",
+        "Qxd5",
+        "Rxd5",
+        "Rxd5",
+        "c2"
+      ],
+      "gameUrl": "https://lichess.org/vLPNfp5q/black#47",
+      "white": "Dennis1989",
+      "black": "Iwasinelectrical",
+      "bTitle": "NM",
+      "wRating": 2199,
+      "bRating": 2360,
+      "id": 1560
+    },
+    {
+      "date": "2026-09-29",
+      "fen": "r2nk3/2R2pp1/3Bpb2/p1P4r/3P3p/4P2P/P7/5R1K w q - 0 27",
+      "solution": [
+        "Rxf6",
+        "gxf6",
+        "Re7+",
+        "Kf8",
+        "Ra7+"
+      ],
+      "gameUrl": "https://lichess.org/882BNnqL/white#52",
+      "white": "senis973",
+      "black": "Kvarta",
+      "wRating": 2298,
+      "bRating": 1911,
+      "id": 1561
+    },
+    {
+      "date": "2026-09-30",
+      "fen": "r4Bk1/p1b2pp1/2Q5/3pq3/P5n1/1PN1P1P1/2P2P2/R4RK1 b - - 0 19",
+      "solution": [
+        "Qh5",
+        "Kg2",
+        "Qh2+",
+        "Kf3",
+        "Ne5+"
+      ],
+      "gameUrl": "https://lichess.org/yapfgnFu/black#37",
+      "white": "DalMor0",
+      "black": "Requieem-For-A-Dream",
+      "wRating": 1725,
+      "bRating": 1605,
+      "id": 1562
     }
   ];
 }
