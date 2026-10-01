@@ -18135,6 +18135,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1725,
       "bRating": 1605,
       "id": 1562
+    },
+    {
+      "date": "2026-10-01",
+      "fen": "q1k1r3/1p1n3p/1Bp1N1p1/6Pn/2B1P3/1P5P/P1P2r2/1K1R2R1 w - - 2 30",
+      "solution": [
+        "Rxd7",
+        "Kxd7",
+        "Rd1+",
+        "Kc8",
+        "Nc7"
+      ],
+      "gameUrl": "https://lichess.org/PnTxggji/white#58",
+      "white": "gidkir",
+      "black": "chims",
+      "wRating": 1710,
+      "bRating": 2057,
+      "id": 1561
     }
   ];
 }
