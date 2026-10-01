@@ -18151,7 +18151,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "chims",
       "wRating": 1710,
       "bRating": 2057,
-      "id": 1561
+      "id": 1563
     }
   ];
 }
