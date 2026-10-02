@@ -18169,6 +18169,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2020,
       "bRating": 2279,
       "id": 1564
+    },
+    {
+      "date": "2026-10-03",
+      "fen": "8/1p3k2/p2p2p1/2pP1pPP/2P2K2/1P6/b2N4/8 w - - 1 40",
+      "solution": [
+        "h6",
+        "b5",
+        "Ke3",
+        "bxc4",
+        "bxc4"
+      ],
+      "gameUrl": "https://lichess.org/zkzKXfQJ/white#78",
+      "white": "KSVKSV",
+      "black": "JUAN_HUARCAYA",
+      "wRating": 2214,
+      "bRating": 1580,
+      "id": 1565
+    },
+    {
+      "date": "2026-10-04",
+      "fen": "5k2/pb3q2/1p3np1/4Q2p/7R/2P5/PP3rPP/4R1K1 w - - 0 26",
+      "solution": [
+        "Qd6+",
+        "Kg7",
+        "Re7",
+        "Rxg2+",
+        "Kf1"
+      ],
+      "gameUrl": "https://lichess.org/n2vn4smQ/white#50",
+      "white": "christin_b",
+      "black": "LuenoOne",
+      "wRating": 2135,
+      "bRating": 2103,
+      "id": 1566
     }
   ];
 }
