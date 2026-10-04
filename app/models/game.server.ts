@@ -18203,6 +18203,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2135,
       "bRating": 2103,
       "id": 1566
+    },
+    {
+      "date": "2026-10-05",
+      "fen": "r4rk1/ppq2pbp/4p1pB/1bpp2N1/6nQ/3P4/PPP1N2P/R4RK1 w - - 0 18",
+      "solution": [
+        "Bxg7",
+        "Qxh2+",
+        "Qxh2",
+        "Nxh2",
+        "Bxf8"
+      ],
+      "gameUrl": "https://lichess.org/cMkkfSz3/white#34",
+      "white": "Amirfer",
+      "black": "Cybermemere",
+      "wRating": 2190,
+      "bRating": 2277,
+      "id": 1567
+    },
+    {
+      "date": "2026-10-06",
+      "fen": "6qr/5p2/pp1R4/4kP2/1P3p1b/2P2K2/P1Q3P1/3R4 b - - 4 37",
+      "solution": [
+        "Qg3+",
+        "Ke2",
+        "Qxg2+",
+        "Kd3",
+        "Qe4+"
+      ],
+      "gameUrl": "https://lichess.org/hxx44Now/black#73",
+      "white": "DoroUpholstery",
+      "black": "russiansplashinface",
+      "wRating": 1631,
+      "bRating": 1988,
+      "id": 1568
+    },
+    {
+      "date": "2026-10-07",
+      "fen": "6k1/5p1p/p2Q2pb/1p6/3Bqn2/8/P6P/5BK1 w - - 0 30",
+      "solution": [
+        "Qd8+",
+        "Bf8",
+        "Qf6",
+        "Qxd4+",
+        "Qxd4"
+      ],
+      "gameUrl": "https://lichess.org/U0fVN2ni/white#58",
+      "white": "PetrHollan99",
+      "black": "Phenomeno777",
+      "wTitle": "FM",
+      "wRating": 2518,
+      "bRating": 2565,
+      "id": 1569
     }
   ];
 }
