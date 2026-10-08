@@ -18255,6 +18255,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2518,
       "bRating": 2565,
       "id": 1569
+    },
+    {
+      "date": "2026-10-08",
+      "fen": "r4rk1/p2n1ppp/1p2pn2/8/2P1N3/8/qBQ1BPPP/5RK1 w - - 1 18",
+      "solution": [
+        "Nxf6+",
+        "Nxf6",
+        "Ra1",
+        "Qxa1+",
+        "Bxa1"
+      ],
+      "gameUrl": "https://lichess.org/Dfq8AUnx/white#34",
+      "white": "blackbishop71",
+      "black": "Abdallah_alkhanji",
+      "wRating": 1859,
+      "bRating": 1851,
+      "id": 1570
     }
   ];
 }
