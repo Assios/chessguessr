@@ -18272,6 +18272,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1859,
       "bRating": 1851,
       "id": 1570
+    },
+    {
+      "date": "2026-10-09",
+      "fen": "8/5n2/P1p1pB2/1p2p3/4P3/5kp1/1K6/8 w - - 0 58",
+      "solution": [
+        "Be7",
+        "g2",
+        "Bc5",
+        "Nd6",
+        "a7"
+      ],
+      "gameUrl": "https://lichess.org/t0rJX67m/white#114",
+      "white": "Mapangasi",
+      "black": "rdarruda",
+      "bTitle": "FM",
+      "wRating": 2402,
+      "bRating": 2545,
+      "id": 1571
     }
   ];
 }
