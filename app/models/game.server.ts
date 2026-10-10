@@ -18308,5 +18308,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 1904,
       "id": 1572
     },
+    {
+      "date": "2026-10-11",
+      "fen": "5r2/pbq1npk1/1p2pNp1/2p3Q1/6P1/2PP4/PP3PBb/R4R1K b - - 3 21",
+      "solution": [
+        "Rh8",
+        "Nh5+",
+        "Kf8",
+        "Bxb7",
+        "gxh5"
+      ],
+      "gameUrl": "https://lichess.org/IadnYcjS/black#41",
+      "white": "fabsylla",
+      "black": "Gatomalo2",
+      "wTitle": "WFM",
+      "wRating": 1982,
+      "bRating": 1939,
+      "id": 1573
+    }
   ];
 }
