@@ -50,10 +50,21 @@ export const loader: LoaderFunction = async () => {
 
   const body = JSON.stringify(response);
 
+  const now = new Date();
+  const secondsUntilMidnightUtc = Math.floor(
+    (Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) -
+      now.getTime()) /
+      1000
+  );
+  const sMaxAge = Math.min(3600, secondsUntilMidnightUtc);
+
   return new Response(body, {
     headers: {
       "Content-Type": "application/json",
-      "Cache-Control": "public, max-age=300, s-maxage=3600, stale-while-revalidate=600",
+      "Cache-Control": `public, max-age=${Math.min(
+        300,
+        sMaxAge
+      )}, s-maxage=${sMaxAge}`,
     },
   });
 };
