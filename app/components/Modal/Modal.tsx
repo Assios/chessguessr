@@ -20,13 +20,13 @@ import {
 import { useOutletContext } from "@remix-run/react";
 
 const getSolvedPercentage = (puzzleStats: PuzzleStats | undefined) => {
-  if (!puzzleStats?.solved || !puzzleStats?.failed) {
+  if (!puzzleStats?.solved) {
     return null;
   }
 
-  return Math.round(
-    (puzzleStats.solved / (puzzleStats.solved + puzzleStats.failed)) * 100
-  );
+  const failed = puzzleStats.failed ?? 0;
+
+  return Math.round((puzzleStats.solved / (puzzleStats.solved + failed)) * 100);
 };
 
 const getAverageNumberOfTurns = (puzzleStats: PuzzleStats | undefined) => {
@@ -96,7 +96,7 @@ const GameResult = ({
           </Tile>
         ))}
       </div>
-      {solvedPercentage && averageNumberOfTurns && (
+      {solvedPercentage !== null && averageNumberOfTurns !== null && (
         <p className="my-4 text-lg leading-relaxed">
           {solvedPercentage}% got this one right. For the people that got it
           right, the average number of turns was {averageNumberOfTurns}.
