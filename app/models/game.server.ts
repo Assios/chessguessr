@@ -18325,6 +18325,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1982,
       "bRating": 1939,
       "id": 1573
+    },
+    {
+      "date": "2026-10-12",
+      "fen": "r4rk1/pp3qp1/4p3/4n1P1/3pN3/P2B1nP1/1P3PK1/R6Q w - - 2 29",
+      "solution": [
+        "Qh7+",
+        "Kxh7",
+        "Nf6+",
+        "Kh8",
+        "Rh1+"
+      ],
+      "gameUrl": "https://lichess.org/RiL1ApVY/white#56",
+      "white": "AntonielLima",
+      "black": "atsiri01",
+      "wRating": 2217,
+      "bRating": 2177,
+      "id": 1574
     }
   ];
 }
