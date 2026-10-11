@@ -22,20 +22,10 @@ export const arraysEqual = (a: string[], b: string[]) => {
 };
 
 export const midnightUtcTomorrow = () => {
-  let tomorrow = new Date();
-
-  tomorrow.setDate(new Date().getDate() + 1);
+  const now = new Date();
 
   return new Date(
-    Date.UTC(
-      tomorrow.getFullYear(),
-      tomorrow.getMonth(),
-      tomorrow.getDate(),
-      0,
-      0,
-      0,
-      0
-    )
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)
   );
 };
 

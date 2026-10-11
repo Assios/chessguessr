@@ -14,7 +14,6 @@ import Distribution from "./Distribution";
 import Countdown, { zeroPad } from "react-countdown";
 import {
   countdownRenderer,
-  midnightUtcTomorrow,
   GameLink,
   convertToIcon,
 } from "~/utils/utils";
@@ -177,15 +176,6 @@ export default function Modal({
     turn,
     gameStatus === GameStatus.SOLVED
   );
-
-  const utcTomorrow = midnightUtcTomorrow();
-
-  const nextDate =
-    utcTomorrow.getFullYear().toString() +
-    "-" +
-    (utcTomorrow.getMonth() + 1).toString().padStart(2, '0') +
-    "-" +
-    utcTomorrow.getDate().toString();
 
   return (
     <>
