@@ -85,8 +85,9 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }: { error: Error 
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
-              </head>
-      <div className="mt-10 mb-20 content-center lg:mb-0">
+      </head>
+      <body>
+        <div className="mt-10 mb-20 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
           <h1 className="text-center text-4xl mb-8 font-semibold">
             {error.name}
@@ -116,7 +117,8 @@ export const ErrorBoundary: ErrorBoundaryComponent = ({ error }: { error: Error 
           </a>
           .
         </p>
-      </div>
+        </div>
+      </body>
     </html>
   );
 };
@@ -130,8 +132,9 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
         <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js" integrity="sha384-9l0HtvnB08o05/gpJ0/s/MH6b4qnQsdwaxyvtOJY/j8yiQWS1kAmsRQVMgKxcREb" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
-              </head>
-      <div className="mt-10 mb-20 content-center lg:mb-0">
+      </head>
+      <body>
+        <div className="mt-10 mb-20 content-center lg:mb-0">
         <div className="flex flex-row justify-center">
           <h1 className="text-center text-4xl mb-8 font-semibold">
             {caught.status}
@@ -161,7 +164,8 @@ export const CatchBoundary: CatchBoundaryComponent = () => {
           </a>
           .
         </p>
-      </div>
+        </div>
+      </body>
     </html>
   );
 };
