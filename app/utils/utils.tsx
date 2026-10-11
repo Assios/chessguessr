@@ -8,7 +8,7 @@ import {
   FaChessQueen,
   FaChessRook,
 } from "react-icons/fa";
-import type { FormattedGuessRow, GameType } from "./types";
+import type { FormattedGuessRow, GameType, PlayerStats } from "./types";
 
 export const arraysEqual = (a: string[], b: string[]) => {
   if (a === b) return true;
@@ -27,6 +27,24 @@ export const midnightUtcTomorrow = () => {
   return new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)
   );
+};
+
+export const getCurrentStreak = (playerStats: PlayerStats) => {
+  if (playerStats.gamesPlayed === 0 || !playerStats.lastPlayed) return 0;
+
+  const now = new Date();
+  const today = now.toISOString().split("T")[0];
+  const yesterday = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1)
+  )
+    .toISOString()
+    .split("T")[0];
+
+  if (playerStats.lastPlayed !== today && playerStats.lastPlayed !== yesterday) {
+    return 0;
+  }
+
+  return playerStats.currentStreak;
 };
 
 export const countdownRenderer = ({

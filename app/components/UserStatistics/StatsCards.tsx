@@ -1,4 +1,5 @@
 import { PlayerStats } from "~/utils/types";
+import { getCurrentStreak } from "~/utils/utils";
 
 const StatsCards = ({ playerStats }: { playerStats: PlayerStats }) => {
   let numWins = 0;
@@ -60,7 +61,7 @@ const StatsCards = ({ playerStats }: { playerStats: PlayerStats }) => {
         </div>
         <div className="stat-title">Current streak</div>
         <div className="stat-value text-success">
-          {playerStats.gamesPlayed > 0 ? playerStats.currentStreak : 0}
+          {getCurrentStreak(playerStats)}
         </div>
         <div className="stat-desc">Number of games solved in a row</div>
       </div>
