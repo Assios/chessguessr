@@ -18342,6 +18342,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2217,
       "bRating": 2177,
       "id": 1574
+    },
+    {
+      "date": "2026-10-13",
+      "fen": "3k1b1r/1b1p3p/1pnn1q2/4p1p1/5p2/1BNQ4/PPPP1PPP/R1B2RK1 b - - 1 15",
+      "solution": [
+        "Nb4",
+        "Qe2",
+        "f3",
+        "Qe3",
+        "Nf5"
+      ],
+      "gameUrl": "https://lichess.org/uGKIyrh2/black#29",
+      "white": "shahruh94",
+      "black": "Hamo_Stepanyan77",
+      "wRating": 2318,
+      "bRating": 2369,
+      "id": 1575
     }
   ];
 }
