@@ -18362,19 +18362,19 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-10-14",
-      "fen": "r4r1k/1p3pp1/2p2n1p/p4B2/2n2p1B/q1P4P/P1Q2P2/1K2R1R1 w - - 0 21",
+      "fen": "1b1r3k/1p2r1pp/p3B3/3P4/1PR1p3/P5P1/5P1P/3R2K1 b - - 1 26",
       "solution": [
-        "Rxg7",
-        "Rfe8",
-        "Reg1",
-        "Re1+",
-        "Rxe1"
+        "Rxe6",
+        "dxe6",
+        "Rxd1+",
+        "Kg2",
+        "Rd8"
       ],
-      "gameUrl": "https://lichess.org/O4swlQNO/white#40",
-      "white": "YaroslavKolodiy",
-      "black": "gek76",
-      "wRating": 2020,
-      "bRating": 2279,
+      "gameUrl": "https://lichess.org/MhkTI5ck/black#51",
+      "white": "bkseok6016",
+      "black": "sg2210",
+      "wRating": 1948,
+      "bRating": 1926,
       "id": 1576
     }
   ];
