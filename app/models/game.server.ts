@@ -18359,6 +18359,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2318,
       "bRating": 2369,
       "id": 1575
+    },
+    {
+      "date": "2026-10-14",
+      "fen": "r4r1k/1p3pp1/2p2n1p/p4B2/2n2p1B/q1P4P/P1Q2P2/1K2R1R1 w - - 0 21",
+      "solution": [
+        "Rxg7",
+        "Rfe8",
+        "Reg1",
+        "Re1+",
+        "Rxe1"
+      ],
+      "gameUrl": "https://lichess.org/O4swlQNO/white#40",
+      "white": "YaroslavKolodiy",
+      "black": "gek76",
+      "wRating": 2020,
+      "bRating": 2279,
+      "id": 1576
     }
   ];
 }
