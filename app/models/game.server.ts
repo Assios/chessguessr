@@ -18376,6 +18376,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1948,
       "bRating": 1926,
       "id": 1576
+    },
+    {
+      "date": "2026-10-15",
+      "fen": "Q1b2b2/2pq1Npp/p7/1p1B2R1/5k2/1P6/PB1P2pP/nN1K4 b - - 5 20",
+      "solution": [
+        "Qg4+",
+        "Rxg4+",
+        "Bxg4+",
+        "Bf3",
+        "g1=Q+"
+      ],
+      "gameUrl": "https://lichess.org/w78HiWI4/black#39",
+      "white": "TheSMI",
+      "black": "LittleHorse78",
+      "wRating": 1623,
+      "bRating": 1650,
+      "id": 1577
     }
   ];
 }
