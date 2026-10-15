@@ -18393,6 +18393,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1623,
       "bRating": 1650,
       "id": 1577
+    },
+    {
+      "date": "2026-10-16",
+      "fen": "r1b1kb1r/pp1p2pp/2p2n2/4q3/B7/2N2p2/PPP3PP/R1BQ1RK1 w kq - 0 11",
+      "solution": [
+        "Re1",
+        "f2+",
+        "Kxf2",
+        "Bc5+",
+        "Kf1"
+      ],
+      "gameUrl": "https://lichess.org/j4RI54pe/white#20",
+      "white": "mahdizahir91",
+      "black": "beremiz_samir",
+      "wRating": 2018,
+      "bRating": 2049,
+      "id": 1578
     }
   ];
 }
