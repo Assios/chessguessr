@@ -18410,6 +18410,44 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2018,
       "bRating": 2049,
       "id": 1578
+    },
+    {
+      "date": "2026-10-17",
+      "fen": "8/1p3p2/p1kpr3/2p1nQ2/P1P2B1P/1P3qP1/5r2/3R1RK1 w - - 0 34",
+      "solution": [
+        "Rxd6+",
+        "Rxd6",
+        "Qc8+",
+        "Kb6",
+        "a5+"
+      ],
+      "gameUrl": "https://lichess.org/6tMf5laP/white#66",
+      "white": "Tigran-Harutyunyan",
+      "black": "agus_k",
+      "wTitle": "GM",
+      "bTitle": "FM",
+      "wRating": 2611,
+      "bRating": 2474,
+      "id": 1579
+    },
+    {
+      "date": "2026-10-18",
+      "fen": "5r2/7p/3kp1p1/pp1p4/3K1P2/1PP2R2/P5PP/8 b - - 1 38",
+      "solution": [
+        "Rxf4+",
+        "Rxf4",
+        "e5+",
+        "Ke3",
+        "exf4+"
+      ],
+      "gameUrl": "https://lichess.org/6bWyK2kP/black#75",
+      "white": "mmMMZG",
+      "black": "Piterskii_KMC",
+      "wTitle": "IM",
+      "bTitle": "FM",
+      "wRating": 2568,
+      "bRating": 2426,
+      "id": 1580
     }
   ];
 }
