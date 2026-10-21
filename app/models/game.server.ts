@@ -18482,6 +18482,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1953,
       "bRating": 1970,
       "id": 1582
+    },
+    {
+      "date": "2026-10-21",
+      "fen": "r3k2r/ppqb1ppp/2nb1n2/1N6/4p3/8/PPPPBPPP/R1BQNRK1 b kq - 5 10",
+      "solution": [
+        "Bxh2+",
+        "Kh1",
+        "Qf4",
+        "d4",
+        "Qh4"
+      ],
+      "gameUrl": "https://lichess.org/RQDKqNuc/black#19",
+      "white": "Luke_Owen",
+      "black": "ASIGintoki",
+      "wRating": 2191,
+      "bRating": 2206,
+      "id": 1583
     }
   ];
 }
