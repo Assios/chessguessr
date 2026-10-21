@@ -18499,6 +18499,58 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2191,
       "bRating": 2206,
       "id": 1583
+    },
+    {
+      "date": "2026-10-22",
+      "fen": "6k1/p2q1pbp/Q1r1p1p1/3p4/3P4/4B2P/P4PP1/1R4K1 w - - 1 26",
+      "solution": [
+        "Rb8+",
+        "Bf8",
+        "Bh6",
+        "Qd6",
+        "Rxf8+"
+      ],
+      "gameUrl": "https://lichess.org/ah2EvuRA/white#50",
+      "white": "Samriddho2512",
+      "black": "parth_1700",
+      "wRating": 1827,
+      "bRating": 2200,
+      "id": 1584
+    },
+    {
+      "date": "2026-10-23",
+      "fen": "1r4k1/1p3ppp/3q4/pP1n1Q2/P2P4/4rB2/3n2PP/2R2RK1 w - - 0 26",
+      "solution": [
+        "Bxd5",
+        "Nxf1",
+        "Bxf7+",
+        "Kh8",
+        "Rc8+"
+      ],
+      "gameUrl": "https://lichess.org/IMJUttwH/white#50",
+      "white": "Mile196296",
+      "black": "MOiSTRussian",
+      "wRating": 1897,
+      "bRating": 1879,
+      "id": 1585
+    },
+    {
+      "date": "2026-10-24",
+      "fen": "6k1/4pp1p/3p2p1/1QnPr1P1/5N2/1p4PK/rb5P/1R6 w - - 2 35",
+      "solution": [
+        "Qe8+",
+        "Kg7",
+        "Rf1",
+        "Rxg5",
+        "Ne6+"
+      ],
+      "gameUrl": "https://lichess.org/I08vNb8R/white#68",
+      "white": "nhattan185",
+      "black": "ivandrade22",
+      "bTitle": "FM",
+      "wRating": 2577,
+      "bRating": 2422,
+      "id": 1586
     }
   ];
 }
