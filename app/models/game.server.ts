@@ -18585,6 +18585,94 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1753,
       "bRating": 1756,
       "id": 1588
+    },
+    {
+      "date": "2026-10-27",
+      "fen": "5rk1/3Nbppp/b3pn2/p1pp4/Pq3P2/1P2P1Q1/1B4PP/1R4K1 w - - 2 22",
+      "solution": [
+        "Nxf6+",
+        "Bxf6",
+        "Bxf6",
+        "g6",
+        "Qg5"
+      ],
+      "gameUrl": "https://lichess.org/hfY7EAzS/white#42",
+      "white": "Bionaut",
+      "black": "dedera",
+      "wRating": 2095,
+      "bRating": 1884,
+      "id": 1589
+    },
+    {
+      "date": "2026-10-28",
+      "fen": "3q3k/r3b1pp/2P5/3B4/2Pp1P2/3P3b/4PP1P/1R1QK2R b K - 0 20",
+      "solution": [
+        "Ra2",
+        "Rb5",
+        "Qa5+",
+        "Rxa5",
+        "Bb4+"
+      ],
+      "gameUrl": "https://lichess.org/pVlLdbe8/black#39",
+      "white": "dinde",
+      "black": "kalounardo",
+      "bTitle": "IM",
+      "wRating": 2429,
+      "bRating": 2405,
+      "id": 1590
+    },
+    {
+      "date": "2026-10-29",
+      "fen": "6k1/1p2q2p/p4rB1/4p2Q/1Pbp4/P7/6PP/5RK1 w - - 0 27",
+      "solution": [
+        "Bxh7+",
+        "Qxh7",
+        "Qxh7+",
+        "Kxh7",
+        "Rxf6"
+      ],
+      "gameUrl": "https://lichess.org/JMmlGoA8/white#52",
+      "white": "dmitry-lavrik",
+      "black": "Gettingold72",
+      "wTitle": "IM",
+      "bTitle": "GM",
+      "wRating": 2671,
+      "bRating": 2668,
+      "id": 1591
+    },
+    {
+      "date": "2026-10-30",
+      "fen": "4R3/3r4/4kp2/8/3p1P1P/7K/8/8 b - - 7 63",
+      "solution": [
+        "Kf5",
+        "Kg3",
+        "d3",
+        "Re1",
+        "d2"
+      ],
+      "gameUrl": "https://lichess.org/tBkKZeNx/black#125",
+      "white": "IL1002",
+      "black": "madprofesor",
+      "wRating": 1974,
+      "bRating": 1870,
+      "id": 1592
+    },
+    {
+      "date": "2026-11-01",
+      "fen": "8/8/2p2Bk1/5pP1/2PK4/b7/8/8 b - - 8 39",
+      "solution": [
+        "Bb2+",
+        "Kc5",
+        "Bxf6",
+        "gxf6",
+        "f4"
+      ],
+      "gameUrl": "https://lichess.org/bUD5cf2y/black#77",
+      "white": "Chesspampa",
+      "black": "TorVik-1",
+      "wRating": 2384,
+      "bRating": 2555,
+      "id": 1593
     }
   ];
 }
