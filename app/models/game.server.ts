@@ -18658,6 +18658,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "id": 1592
     },
     {
+      "date": "2026-10-31",
+      "fen": "R7/1p2kp2/n1p4P/8/5N2/2P5/p5PK/r7 w - - 2 38",
+      "solution": [
+        "h7",
+        "Rh1+",
+        "Kxh1",
+        "a1=Q+",
+        "Kh2"
+      ],
+      "gameUrl": "https://lichess.org/CG3x451j/white#74",
+      "white": "phiba",
+      "black": "Korolenko",
+      "wRating": 2425,
+      "bRating": 2378,
+      "id": 1593
+    },
+    {
       "date": "2026-11-01",
       "fen": "8/8/2p2Bk1/5pP1/2PK4/b7/8/8 b - - 8 39",
       "solution": [
@@ -18672,7 +18689,7 @@ export async function getGames(): Promise<Array<GameType>> {
       "black": "TorVik-1",
       "wRating": 2384,
       "bRating": 2555,
-      "id": 1593
-    }
+      "id": 1594
+    },
   ];
 }
