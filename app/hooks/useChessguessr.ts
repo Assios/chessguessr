@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { arraysEqual, wrongSolution } from "../utils/utils";
+import { arraysEqual } from "../utils/utils";
 import * as ChessJS from "chess.js";
 import toast from "react-hot-toast";
 import { useLocalStorage } from "./useLocalStorage";
@@ -9,17 +9,15 @@ import {
   FullFenHistory,
   GuessWithHistory,
   ChessInstance,
-  FormattedGuessMove,
   FormattedGuessRow,
   OutletContextType,
   GameState,
   PlayerStats,
 } from "~/utils/types";
 import { incrementFailed, incrementSolved } from "../firebase/utils";
+import { scoreGuess } from "~/utils/scoring";
+import { historyEntry, recordResult } from "~/utils/history";
 import { useOutletContext } from "@remix-run/react";
-
-const chessCols = "abcdefgh";
-const kingMove = "OK";
 
 const Chess = typeof ChessJS === "function" ? ChessJS : ChessJS.Chess;
 
@@ -163,11 +161,16 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
   useEffect(() => {
     if (!shouldUpdateStats) return;
 
-    if (
-      gameState.turn > 0 &&
-      gameState.date === game.date &&
-      !wrongSolution(gameState.guesses, gameState.gameStatus, gameState.date)
-    ) {
+    // Backfill the result history from the last saved daily before it's
+    // replaced, so players who finished a puzzle before history existed keep it.
+    if (gameState.date && gameState.gameStatus !== GameStatus.IN_PROGRESS) {
+      recordResult(
+        gameState.date,
+        historyEntry(gameState.guesses, gameState.gameStatus, false)
+      );
+    }
+
+    if (gameState.turn > 0 && gameState.date === game.date) {
       setGuesses(gameState.guesses);
       setTurn(gameState.turn);
       setGameStatus(gameState.gameStatus);
@@ -198,50 +201,9 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
     });
   };
 
-  const formatGuess = () => {
-    const solutionArray: (string | null)[] = [...game.solution];
-    const discardYellowArray: (string | null)[] = [...game.solution];
+  const formatGuess = () => scoreGuess(currentGuess, game.solution);
 
-    const formattedGuess: FormattedGuessMove[] = [...currentGuess].map((move) => {
-      return { move: move, color: "grey" as const, pieceColor: "regular" as const };
-    });
-
-    // mark all the green moves
-    formattedGuess.forEach((move, i) => {
-      if (solutionArray[i] === move.move) {
-        formattedGuess[i].color = "green";
-        solutionArray[i] = null;
-        discardYellowArray[i] = null;
-      }
-    });
-
-    // mark all the yellow and blue moves
-    formattedGuess.forEach((move, i) => {
-       if (
-        discardYellowArray.includes(move.move as string) &&
-        move.color !== "green"
-      ) {
-        formattedGuess[i].color = "yellow";
-        discardYellowArray[discardYellowArray.indexOf(move.move as string)] = null;
-      }
-
-      if (
-        move.color !== "green" &&
-        solutionArray[i] !== null &&
-        ((solutionArray[i] as string)[0] === (move.move as string)[0] ||
-          (chessCols.includes((solutionArray[i] as string)[0]) &&
-            chessCols.includes((move.move as string)[0])) ||
-          (kingMove.includes((solutionArray[i] as string)[0]) &&
-            kingMove.includes((move.move as string)[0])))
-      ) {
-        formattedGuess[i].pieceColor = "blue";
-      }
-    });
-
-    return formattedGuess;
-  };
-
-  const addGuess = (formattedGuess: FormattedGuessMove[]) => {
+  const addGuess = (formattedGuess: FormattedGuessRow) => {
     const newGuesses = [...guesses];
     const newTurn = turn + 1;
     const solved = arraysEqual(currentGuess, game.solution);
@@ -306,6 +268,13 @@ const useChessguessr = (game: GameType, shouldUpdateStats: boolean) => {
       }
     } else {
       setPosition(new Chess(game.fen) as unknown as ChessInstance);
+    }
+
+    if (currentGameStatus !== GameStatus.IN_PROGRESS) {
+      recordResult(
+        game.date,
+        historyEntry(newGuesses, currentGameStatus, !shouldUpdateStats)
+      );
     }
 
     if (shouldUpdateStats) {

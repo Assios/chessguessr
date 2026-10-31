@@ -63,13 +63,13 @@
     transform: rotateX(90deg);
     background: #FBBF23;
     border: none;
-    color: #fff;
+    color: #1F2937;
   }
   100% {
     transform: rotateX(0deg);
     background: #FBBF23;
     border: none;
-    color: #fff;
+    color: #1F2937;
   }
 }
 
@@ -130,15 +130,17 @@
   }
   55% {
     transform: rotateX(90deg);
-    background: -webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
+    background: linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
     border: none;
     color: #fff;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.7);
   }
   100% {
     transform: rotateX(0deg);
-    background: -webkit-linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
+    background: linear-gradient(45deg, #FBBF23 50%, #4b6bfc 50%);
     border: none;
     color: #fff;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.7);
   }
 }
 
@@ -171,52 +173,43 @@
   animation: flip-yellow-blue 0.5s ease forwards;
 }
 
-/* Tile base styles */
+/* Tile base styles. Sizes come from the surrounding layout (styles/ui.css);
+   the fallbacks are for tiles outside the game grid. */
 .tile {
-  width: 107px;
-  height: 107px;
-  line-height: 107px;
+  width: var(--tile-w, 107px);
+  height: var(--tile-h, 107px);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #d3d6da;
-  border-color: #787c7e;
+  border: 2px solid #787c7e;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: var(--tile-font, 1.5rem);
+  line-height: 1;
   user-select: none;
   box-sizing: border-box;
 }
 
 .tile-tutorial {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 1rem;
+  width: min(3.75rem, calc((100vw - 4rem) / 5));
+  height: min(3.75rem, calc((100vw - 4rem) / 5));
+  font-size: 0.95rem;
 }
 
-@media (max-width: 580px) {
-  .tile {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 1rem;
+.tile-legend {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-bounce-tile {
+    animation: none;
   }
-}
 
-@media (max-width: 450px) {
-  .tile {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Scale down Buy Me a Coffee widget on mobile */
-@media (max-width: 640px) {
-  #bmc-wbtn {
-    transform: scale(0.75);
-    transform-origin: bottom right;
+  [class*='animate-flip-'] {
+    animation-duration: 0.01s;
+    animation-delay: 0s !important;
   }
 }

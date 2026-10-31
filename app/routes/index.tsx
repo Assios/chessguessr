@@ -1,9 +1,8 @@
 import { Chessguessr } from "../components/Chessguessr";
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
+import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { boardOgImage } from "~/utils/ogImage";
 import { db } from "../firebase/firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { useEffect } from "react";
@@ -17,14 +16,13 @@ export const meta: MetaFunction = ({ data }) => {
   const white = g.wAka || g.white;
   const black = g.bAka || g.black;
   const description = `Today's puzzle: guess the next five moves ${white} played against ${black}. A new puzzle from a real chess game every day.`;
-  const image = boardOgImage(g);
 
+  // og:image falls back to the static card in root.tsx: the per-puzzle
+  // /api/og renderer 404s in production (docs/audit-2026-10.md, H1).
   return {
     description,
     "og:description": description,
     "twitter:description": description,
-    "og:image": image,
-    "twitter:image": image,
   };
 };
 
@@ -89,7 +87,6 @@ export default function Index() {
     setShowModal,
     showTutorial,
     setShowTutorial,
-    setTutorial,
     setShowNavbarStats,
   } = useOutletContext<OutletContextType>();
 
@@ -99,14 +96,13 @@ export default function Index() {
 
   return (
     <div>
-      <div className="mt-10 mb-20 lg:mb-0">
+      <div className="mb-8">
         {game && (
           <Chessguessr
             showModal={showModal}
             setShowModal={setShowModal}
             showTutorial={showTutorial}
             setShowTutorial={setShowTutorial}
-            setTutorial={setTutorial}
             game={game}
             stats={stats}
             shouldUpdateStats={true}

@@ -65,7 +65,6 @@ export type OutletContextType = {
   showModal: boolean;
   setShowModal: (show: boolean) => void;
   setShowTutorial: (show: boolean) => void;
-  setTutorial: (val: boolean) => void;
   trackPageview: () => void;
   trackEvent: (
     eventName: string,

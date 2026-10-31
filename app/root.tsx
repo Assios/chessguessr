@@ -19,10 +19,11 @@ import chessgroundTheme from "chessground/assets/chessground.brown.css";
 import chessgroundPieces from "chessground/assets/chessground.cburnett.css";
 import chessgroundOverrides from "./styles/chessground.overrides.css";
 import tileAnimations from "./styles/tile-animations.css";
+import ui from "./styles/ui.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import Plausible from "plausible-tracker";
 import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
@@ -76,6 +77,7 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: chessgroundPieces },
   { rel: "stylesheet", href: chessgroundOverrides },
   { rel: "stylesheet", href: tileAnimations },
+  { rel: "stylesheet", href: ui },
 ];
 
 export const ErrorBoundary: ErrorBoundaryComponent = ({ error }: { error: Error }) => {
@@ -202,28 +204,42 @@ export default function App() {
 
   const [wrongTheme, setWrongTheme] = useState(false);
 
-  const [showTutorial, setShowTutorial] = useState(!tutorial);
+  // Starts closed on the server and the client alike; first-time visitors get
+  // it after hydration, so returning players no longer see it flash.
+  const [showTutorial, setShowTutorial] = useState(false);
 
-  const { trackPageview, trackEvent } = Plausible({
-    domain: "chessguessr.com",
-    apiHost: "https://chessguessr-proxy.vercel.app",
-  });
+  useEffect(() => {
+    if (!tutorial) {
+      setShowTutorial(true);
+      setTutorial(true);
+    }
+  }, []);
+
+  const { trackPageview, trackEvent } = useMemo(
+    () =>
+      Plausible({
+        domain: "chessguessr.com",
+        apiHost: "https://chessguessr-proxy.vercel.app",
+      }),
+    []
+  );
 
   const context: OutletContextType = {
     showTutorial,
     showModal,
     setShowModal,
     setShowTutorial,
-    setTutorial,
     trackPageview,
     trackEvent,
     showNavbarStats,
     setShowNavbarStats,
   };
 
+  // Client-side navigations (archive, /games/:id) don't remount the root,
+  // so track on every path change rather than once.
   useEffect(() => {
     trackPageview();
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (localStorage.getItem("theme") === "light") {

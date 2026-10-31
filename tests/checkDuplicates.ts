@@ -1,3 +1,5 @@
+// ts-node only sees the ambient declarations (chess.js) through this reference.
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
 /// <reference path="../app/declarations.d.ts" />
 import { getGames } from "../app/models/game.server";
 import { GameType } from "../app/utils/types";

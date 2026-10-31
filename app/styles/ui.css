@@ -1,0 +1,249 @@
+/* ---------- Dialog (components/Dialog.tsx) ---------- */
+
+/* Bottom sheet on phones, centred card from 640px. */
+.cg-dialog {
+  width: 100%;
+  max-width: 100%;
+  max-height: 92vh;
+  max-height: 92dvh;
+  margin: auto 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 1rem 1rem 0 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: 0 -8px 32px rgb(0 0 0 / 0.25);
+}
+
+.cg-dialog::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+.cg-dialog[open] {
+  animation: cg-sheet-in 0.22s ease-out;
+}
+
+.cg-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.25rem 1.25rem;
+}
+
+.cg-dialog-body {
+  padding: 0 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .cg-dialog {
+    width: min(34rem, calc(100% - 2rem));
+    max-height: calc(100vh - 4rem);
+    max-height: calc(100dvh - 4rem);
+    margin: auto;
+    border-radius: 1rem;
+  }
+
+  .cg-dialog[open] {
+    animation-name: cg-dialog-in;
+  }
+}
+
+@keyframes cg-sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes cg-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-dialog[open] {
+    animation: none;
+  }
+}
+
+/* The page behind an open dialog shouldn't scroll. */
+html:has(.cg-dialog[open]) {
+  overflow: hidden;
+}
+
+/* ---------- Game layout (components/Chessguessr.tsx) ---------- */
+
+/*
+ * Phone portrait: one column. The board is as wide as the screen allows, but
+ * shrinks (down to 320px) so all five guess rows and the action bar fit on
+ * typical phones without scrolling.
+ */
+.cg-game {
+  --tile-gap: 4px;
+  --board: min(calc(100vw - 24px), 560px, max(320px, calc(100vh - 384px)));
+  --board: min(calc(100vw - 24px), 560px, max(320px, calc(100dvh - 384px)));
+  --tile-w: calc((var(--board) - 4 * var(--tile-gap)) / 5);
+  --tile-h: 36px;
+  --tile-font: clamp(0.8rem, calc(var(--tile-w) * 0.22), 1.5rem);
+
+  display: grid;
+  grid-template-columns: var(--board);
+  grid-template-areas:
+    'header'
+    'board'
+    'guesses'
+    'actions'
+    'link';
+  justify-content: center;
+  row-gap: 8px;
+  padding: 8px 12px 0;
+}
+
+.cg-game-header {
+  grid-area: header;
+}
+
+.cg-game-board {
+  grid-area: board;
+  width: var(--board);
+  height: var(--board);
+}
+
+/* Board colours in the server render, before the board mounts. Not shown
+   behind chessground, which snaps to whole device pixels per square. */
+.cg-game-board:empty {
+  background: conic-gradient(#b58863 25%, #f0d9b5 0 50%, #b58863 0 75%, #f0d9b5 0) 0 0 / 25% 25%;
+}
+
+.cg-game-guesses {
+  grid-area: guesses;
+}
+
+.cg-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tile-gap);
+}
+
+.cg-grid-label {
+  /* Visually hidden on phones, where every pixel goes to the board. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.cg-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--tile-gap);
+  /* Clears the sticky action bar when scrolled into view. */
+  scroll-margin-bottom: 76px;
+}
+
+/* Sticky at the bottom when the page is taller than the screen. */
+.cg-game-actions {
+  grid-area: actions;
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px 0 calc(6px + env(safe-area-inset-bottom));
+}
+
+.cg-game-link {
+  grid-area: link;
+  padding: 8px 0 16px;
+}
+
+/* Phone landscape: board on the left, everything else beside it. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .cg-game {
+    /* Leaves room for the navbar (3.25rem on phones) above the board. */
+    --board: min(560px, calc(100vh - 3.25rem - 24px));
+    --board: min(560px, calc(100dvh - 3.25rem - 24px));
+    --tile-w: min(96px, calc((100vw - var(--board) - 40px - 4 * var(--tile-gap)) / 5));
+    --tile-h: max(30px, calc((var(--board) - 150px) / 5));
+
+    grid-template-columns: var(--board) minmax(0, max-content);
+    grid-template-areas:
+      'board header'
+      'board guesses'
+      'board actions'
+      'board link';
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: 16px;
+    align-items: start;
+    padding-top: 12px;
+  }
+
+  .cg-game-actions {
+    position: static;
+    padding-bottom: 0;
+  }
+}
+
+/* Desktop and tablet landscape: board and guesses side by side. */
+@media (min-width: 900px) and (min-height: 501px) {
+  .cg-game {
+    --tile-gap: 6px;
+    --board: min(560px, calc(100vh - 220px), calc((100vw - 96px) / 2));
+    --board: min(560px, calc(100dvh - 220px), calc((100vw - 96px) / 2));
+    --tile-h: calc((var(--board) - 4 * var(--tile-gap)) / 5);
+
+    grid-template-columns: var(--board) var(--board);
+    grid-template-areas:
+      'header guesses'
+      'board guesses'
+      'actions link';
+    column-gap: 32px;
+    row-gap: 12px;
+    padding-top: 24px;
+  }
+
+  .cg-game-guesses {
+    align-self: end;
+  }
+
+  .cg-grid-label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .cg-game-actions {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .cg-game-link {
+    align-self: start;
+    padding: 0;
+  }
+}
+
+/* ---------- Buy Me a Coffee ---------- */
+
+/* The floating button covers the guess grid on phones (portrait and
+   landscape); the footer links to it instead. */
+@media (max-width: 640px), (max-height: 500px) {
+  #bmc-wbtn,
+  #bmc-wbtn + div {
+    display: none !important;
+  }
+}

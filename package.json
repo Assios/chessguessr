@@ -4,6 +4,9 @@
   "scripts": {
     "prepare": "husky install",
     "check-duplicates": "npx ts-node ./tests/checkDuplicates.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint app tests --ext .ts,.tsx",
+    "test": "node --require ts-node/register/transpile-only --test tests/scoring.test.ts",
     "build": "run-s build:*",
     "build:css": "npm run generate:css -- --minify",
     "build:remix": "remix build",
@@ -17,7 +20,6 @@
     "@remix-run/node": "^1.16.1",
     "@remix-run/react": "^1.16.1",
     "@remix-run/vercel": "^1.16.1",
-    "@tailwindcss/typography": "^0.5.4",
     "@vercel/node": "^2.0.0",
     "@vercel/og": "^0.11.1",
     "chess.js": "^0.12.1",
@@ -30,9 +32,7 @@
     "react-countdown": "^2.3.2",
     "react-dom": "^17.0.2",
     "react-hot-toast": "^2.2.0",
-    "react-hotkeys-hook": "^3.4.7",
-    "react-icons": "^4.11.0",
-    "theme-change": "^2.1.0"
+    "react-hotkeys-hook": "^3.4.7"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.16.1",
