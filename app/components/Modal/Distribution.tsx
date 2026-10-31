@@ -12,7 +12,7 @@ const Distribution = ({
 
   return (
     <div className="mt-4">
-      <h3 className="mb-2 text-sm font-semibold">Guess distribution</h3>
+      <h3 className="mb-2 text-sm sm:text-base font-semibold">Guess distribution</h3>
       <ol className="space-y-1">
         {counts.map((count, i) => (
           <li key={i} className="flex items-center gap-2 text-sm">
@@ -22,7 +22,7 @@ const Distribution = ({
                 className={`flex justify-end rounded px-2 py-0.5 font-semibold tabular-nums ${
                   highlight === i + 1
                     ? 'text-white'
-                    : 'bg-base-300 text-base-content'
+                    : 'bg-base-content/10'
                 }`}
                 style={{
                   width: `max(1.75rem, ${(count / max) * 100}%)`,

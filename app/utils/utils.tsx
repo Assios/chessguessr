@@ -70,7 +70,7 @@ const gameUrlText = (game: GameType) => {
 export const GameLink = ({ game }: { game: GameType }) => {
   return (
     <a
-      className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+      className="link"
       href={game.gameUrl}
       target="_blank"
       rel="noopener noreferrer"

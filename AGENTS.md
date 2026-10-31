@@ -116,6 +116,9 @@ migration, never a reset. Only the daily puzzle (`shouldUpdateStats`) writes
   UTC but doesn't reload the puzzle when it hits zero.
 - The full solution ships to the client in loader data. Fine for anonymous play,
   but anything competitive (leaderboards) must verify server-side.
+- In `lichess-dark`, daisyUI's `base-200`/`base-300` are darker than the
+  page (`base-100`), so cards or bars on them disappear inside a dialog. For
+  raised surfaces use `bg-base-content/5` or `/10`, which work in both themes.
 - Local development writes real stats: finishing the daily puzzle on localhost
   increments the production Firestore counters. Test end states by seeding
   `cg-state` in localStorage, or play archive puzzles (which never write stats).

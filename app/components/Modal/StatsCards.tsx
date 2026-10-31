@@ -2,9 +2,9 @@ import type { PlayerStats } from '~/utils/types';
 import { getCurrentStreak } from '~/utils/utils';
 
 const Stat = ({ label, value }: { label: string; value: number | string }) => (
-  <div className="flex flex-col-reverse rounded-lg bg-base-200 px-2 py-3 text-center">
-    <dt className="text-xs opacity-70">{label}</dt>
-    <dd className="text-2xl font-bold tabular-nums">{value}</dd>
+  <div className="flex flex-col-reverse rounded-lg bg-base-content/5 px-2 py-3 text-center">
+    <dt className="text-xs sm:text-sm opacity-70">{label}</dt>
+    <dd className="text-2xl sm:text-3xl font-bold tabular-nums">{value}</dd>
   </div>
 );
 

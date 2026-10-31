@@ -46,7 +46,7 @@ const GameDetails = ({
   game: GameType;
   showEventDetails: boolean;
 }) => (
-  <p className="mt-6 text-sm leading-relaxed">
+  <p className="mt-6 text-sm sm:text-base leading-relaxed">
     This game was played between {game.white}
     {game.wAka && ` (${game.wAka})`} and {game.black}
     {game.bAka && ` (${game.bAka})`}
@@ -152,7 +152,7 @@ export default function Modal({
       labelId="result-title"
     >
       {!shouldUpdateStats && (
-        <p className="mb-4 rounded-lg bg-base-200 px-3 py-2 text-sm">
+        <p className="mb-4 rounded-lg bg-base-content/5 px-3 py-2 text-sm sm:text-base">
           This is an archive puzzle, so it won't change your stats.{' '}
           <a className="link" href="/">
             Play today's puzzle
@@ -163,14 +163,14 @@ export default function Modal({
 
       {isOver && (
         <section>
-          <p className="mb-1 text-sm font-semibold">Solution</p>
-          <div className="flex gap-1.5">
+          <p className="mb-1 text-sm sm:text-base font-semibold">Solution</p>
+          <div className="grid grid-cols-5 gap-1.5">
             {game.solution.map((move, i) => (
               <Tile
                 color="green"
                 flipTile={true}
                 animationIndex={i}
-                tutorial={true}
+                className="tile-solution"
                 key={`${move}-${i}`}
               >
                 {move}
@@ -180,20 +180,20 @@ export default function Modal({
 
           <button
             type="button"
-            className="btn btn-primary btn-block normal-case mt-5"
+            className="btn btn-primary btn-block normal-case text-base mt-5"
             onClick={share}
           >
             {copied ? 'Copied to clipboard' : 'Share result'}
           </button>
 
           {solvedPercentage !== null && averageNumberOfTurns !== null && (
-            <p className="mt-3 text-sm">
+            <p className="mt-3 text-sm sm:text-base">
               {solvedPercentage}% solved this puzzle · average{' '}
               {averageNumberOfTurns} tries
             </p>
           )}
           {shouldUpdateStats && (
-            <p className="mt-1 text-sm">
+            <p className="mt-1 text-sm sm:text-base">
               Next puzzle in{' '}
               <span className="font-semibold tabular-nums">
                 <Countdown
@@ -219,7 +219,7 @@ export default function Modal({
 
       {isOver && <GameDetails game={game} showEventDetails={solved} />}
 
-      <p className="mt-4 text-sm">
+      <p className="mt-4 text-sm sm:text-base">
         More puzzles in the{' '}
         <Link
           className="link"

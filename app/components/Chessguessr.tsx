@@ -118,24 +118,24 @@ export const Chessguessr = ({
       />
       <div className="cg-game">
         <header className="cg-game-header">
-          <h1 className="text-sm sm:text-lg lg:text-xl font-semibold text-center leading-snug">
+          <h1 className="text-sm sm:text-lg lg:text-2xl font-semibold text-center leading-snug">
             {wTitle && (
-              <span className="text-secondary-content">{wTitle}</span>
-            )}{' '}
+              <span className="text-secondary-content">{wTitle} </span>
+            )}
             {white} {wRating && `(${wRating})`}
             <span className="mx-1">–</span>
             {bTitle && (
-              <span className="text-secondary-content">{bTitle}</span>
-            )}{' '}
+              <span className="text-secondary-content">{bTitle} </span>
+            )}
             {black} {bRating && `(${bRating})`}
           </h1>
           <div className="flex justify-between items-center gap-2 mt-1">
             {gameStatus === GameStatus.IN_PROGRESS || !shouldUpdateStats ? (
-              <p className="text-sm sm:text-base font-semibold">
+              <p className="text-sm sm:text-lg font-semibold">
                 {colorToPlay === 'b' ? 'Black' : 'White'} to play
               </p>
             ) : (
-              <p className="text-sm sm:text-base font-semibold">
+              <p className="text-sm sm:text-lg font-semibold">
                 New game in{' '}
                 <span className="tabular-nums">
                   <Countdown
@@ -204,7 +204,7 @@ export const Chessguessr = ({
         >
           <button
             type="button"
-            className="btn btn-accent normal-case gap-1"
+            className="btn btn-accent normal-case text-base gap-1"
             onClick={takeback}
           >
             <svg
@@ -216,11 +216,12 @@ export const Chessguessr = ({
             >
               <path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z" />
             </svg>
-            Undo
+            <span className="hidden sm:inline">Undo last move</span>
+            <span className="sm:hidden">Undo</span>
           </button>
           <button
             type="button"
-            className="btn btn-primary normal-case"
+            className="btn btn-primary normal-case text-base"
             onClick={submit}
           >
             Submit

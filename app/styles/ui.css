@@ -8,7 +8,9 @@
   max-height: 92dvh;
   margin: auto 0 0;
   padding: 0;
-  border: 0;
+  /* Sets the dialog off from the dimmed page in the dark theme. */
+  border: 1px solid hsl(var(--bc) / 0.1);
+  border-bottom: 0;
   border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -44,6 +46,7 @@
     max-height: calc(100vh - 4rem);
     max-height: calc(100dvh - 4rem);
     margin: auto;
+    border-bottom: 1px solid hsl(var(--bc) / 0.1);
     border-radius: 1rem;
   }
 
@@ -196,8 +199,8 @@ html:has(.cg-dialog[open]) {
 @media (min-width: 900px) and (min-height: 501px) {
   .cg-game {
     --tile-gap: 6px;
-    --board: min(560px, calc(100vh - 220px), calc((100vw - 96px) / 2));
-    --board: min(560px, calc(100dvh - 220px), calc((100vw - 96px) / 2));
+    --board: min(560px, calc(100vh - 236px), calc((100vw - 96px) / 2));
+    --board: min(560px, calc(100dvh - 236px), calc((100vw - 96px) / 2));
     --tile-h: calc((var(--board) - 4 * var(--tile-gap)) / 5);
 
     grid-template-columns: var(--board) var(--board);
@@ -220,7 +223,8 @@ html:has(.cg-dialog[open]) {
     height: auto;
     overflow: visible;
     clip: auto;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     margin-bottom: 4px;
   }
 
@@ -231,8 +235,11 @@ html:has(.cg-dialog[open]) {
     padding: 0;
   }
 
+  /* Compact and right-aligned under the guesses, level with the buttons. */
   .cg-game-link {
-    align-self: start;
+    align-self: center;
+    justify-self: end;
+    width: min(100%, 22rem);
     padding: 0;
   }
 }

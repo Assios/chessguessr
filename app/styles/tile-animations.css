@@ -202,6 +202,19 @@
   flex-shrink: 0;
 }
 
+/* The solution in the result dialog: five columns across the full width. */
+.tile-solution {
+  width: 100%;
+  height: 3rem;
+  font-size: clamp(0.8rem, 4vw, 1.125rem);
+}
+
+@media (min-width: 640px) {
+  .tile-solution {
+    height: 3.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-shake,
   .animate-bounce-tile {
