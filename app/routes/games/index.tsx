@@ -1,14 +1,16 @@
-import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { useLoaderData, useOutletContext } from "@remix-run/react";
-import { getGames } from "~/models/game.server";
-import { GameType, OutletContextType } from "~/utils/types";
-import { sortBy } from "../../utils/sort";
+import { json } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { Link, useLoaderData, useOutletContext } from "@remix-run/react";
+import { useEffect, useMemo, useState } from "react";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
-dayjs.extend(advancedFormat);
-import { Link } from "@remix-run/react";
+import { getGames } from "~/models/game.server";
+import type { GameType, OutletContextType } from "~/utils/types";
+import { readHistory } from "~/utils/history";
+import type { HistoryEntry } from "~/utils/history";
 import TutorialModal from "~/components/TutorialModal";
-import { useEffect, useMemo, useState } from "react";
+
+dayjs.extend(advancedFormat);
 
 export const meta: MetaFunction = () => ({
   title: "Chessguessr Archive – Play through all previous puzzles",
@@ -16,40 +18,63 @@ export const meta: MetaFunction = () => ({
     "On this page, you can play through all of the previous Chessguessr puzzles at your leisure. Whether you're looking to brush up on your chess skills or just enjoy a fun and challenging puzzle, our archive has something for everyone.",
 });
 
+type ArchiveGame = Pick<
+  GameType,
+  "id" | "date" | "fen" | "white" | "black" | "wAka" | "bAka" | "event"
+>;
+
 export const loader: LoaderFunction = async () => {
   const d = new Date().toISOString().split("T")[0];
 
   const games = await getGames();
 
-  const previousGames = games.filter((game) => {
-    return game.date <= d;
-  });
+  // Only what the cards need: no solutions, newest first.
+  const previousGames: ArchiveGame[] = games
+    .filter((game) => game.date <= d)
+    .map(({ id, date, fen, white, black, wAka, bAka, event }) => ({
+      id,
+      date,
+      fen,
+      white,
+      black,
+      wAka,
+      bAka,
+      event,
+    }))
+    .reverse();
 
   return json({ games: previousGames });
 };
 
-const index = () => {
-  const {
-    showTutorial,
-    setShowTutorial,
-    setTutorial,
-    setShowNavbarStats,
-  } = useOutletContext<OutletContextType>();
+const ResultBadge = ({ entry }: { entry?: HistoryEntry }) => {
+  if (!entry) return null;
+  return entry.s === "W" ? (
+    <div className="badge badge-success gap-1">Solved in {entry.t}/5</div>
+  ) : (
+    <div className="badge badge-ghost gap-1">Not solved</div>
+  );
+};
 
-  const { games } = useLoaderData();
+export default function Archive() {
+  const { showTutorial, setShowTutorial, setShowNavbarStats } =
+    useOutletContext<OutletContextType>();
+
+  const { games } = useLoaderData<{ games: ArchiveGame[] }>();
+
+  // Read after mount: the server has no access to the player's history.
+  const [history, setHistory] = useState<Record<string, HistoryEntry>>({});
 
   useEffect(() => {
     setShowNavbarStats(false);
+    setHistory(readHistory());
   }, []);
-
-  const gamesSorted = games.sort(sortBy("-date"));
 
   const [search, setSearch] = useState("");
 
   const filteredGames = useMemo(() => {
     const q = search.toLowerCase().trim();
-    if (!q) return gamesSorted;
-    return gamesSorted.filter((game: GameType) => {
+    if (!q) return games;
+    return games.filter((game) => {
       const fields = [
         game.white,
         game.black,
@@ -59,7 +84,7 @@ const index = () => {
       ];
       return fields.some((f) => f && f.toLowerCase().includes(q));
     });
-  }, [gamesSorted, search]);
+  }, [games, search]);
 
   const isFiltering = search.trim().length > 0;
 
@@ -69,7 +94,6 @@ const index = () => {
         <TutorialModal
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
-          setTutorial={setTutorial}
         />
       </div>
       <div className="mt-10 mb-20 content-center lg:mb-0">
@@ -140,7 +164,7 @@ const index = () => {
         </div>
 
         <div className="p-12 margin-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-          {filteredGames.map((game: GameType, i: number) => {
+          {filteredGames.map((game, i) => {
             return (
               <div key={game.id} className="card lg:w-96 border-2 bg-base-100 shadow-xl mb-6">
                 <figure>
@@ -151,6 +175,8 @@ const index = () => {
                     }
                     alt={`${game.white} vs ${game.black}`}
                     loading="lazy"
+                    width={288}
+                    height={288}
                   />
                 </figure>
                 <div className="card-body">
@@ -165,8 +191,11 @@ const index = () => {
                       {game.wAka || game.white} vs. {game.bAka || game.black}
                     </p>
                   )}
-                  <div className="badge badge-primary">
-                    {dayjs(game.date).format("MMMM Do, YYYY")}
+                  <div className="flex flex-wrap gap-1">
+                    <div className="badge badge-primary">
+                      {dayjs(game.date).format("MMMM Do, YYYY")}
+                    </div>
+                    <ResultBadge entry={history[game.date]} />
                   </div>
                   {game.event && (
                     <div className="badge badge-secondary text-xs">
@@ -191,6 +220,4 @@ const index = () => {
       </div>
     </div>
   );
-};
-
-export default index;
+}

@@ -1,14 +1,6 @@
 import { zeroPad } from "react-countdown";
 import { useHotkeys as _useHotkeys } from "react-hotkeys-hook";
-import {
-  FaChessBishop,
-  FaChessKing,
-  FaChessKnight,
-  FaChessPawn,
-  FaChessQueen,
-  FaChessRook,
-} from "react-icons/fa";
-import type { FormattedGuessRow, GameType, PlayerStats } from "./types";
+import type { GameType, PlayerStats } from "./types";
 
 export const arraysEqual = (a: string[], b: string[]) => {
   if (a === b) return true;
@@ -19,6 +11,12 @@ export const arraysEqual = (a: string[], b: string[]) => {
     if (a[i] !== b[i]) return false;
   }
   return true;
+};
+
+// Called when the countdown to the next puzzle hits zero. The short delay
+// gives a slightly-fast client clock time to agree with the server's date.
+export const reloadForNewPuzzle = () => {
+  window.setTimeout(() => window.location.reload(), 5000);
 };
 
 export const midnightUtcTomorrow = () => {
@@ -84,7 +82,7 @@ export const GameLink = ({ game }: { game: GameType }) => {
 
 export const guessifySolution = (game: GameType) => {
   return game.solution.map((move) => ({
-    move: convertToIcon(move),
+    move,
     color: "green" as const,
     pieceColor: "regular" as const,
   }));
@@ -104,59 +102,4 @@ export const useHotkeys = (
     },
     deps
   );
-};
-
-export const wrongSolution = (_guesses: FormattedGuessRow[], _gameStatus: string, _date: string) => {
-  return false;
-};
-
-
-
-export const convertToIcon = (move: string) => {
-  return move;
-
-  if (!move) return "";
-
-  if (move[0].toLowerCase() === move[0] && /[a-h]/.test(move[0])) {
-    return (
-      <>
-        <FaChessPawn /> {move}
-      </>
-    );
-  }
-
-  switch (move[0]) {
-    case "K":
-      return (
-        <>
-          <FaChessKing /> {move.substr(1)}
-        </>
-      );
-    case "Q":
-      return (
-        <>
-          <FaChessQueen /> {move.substr(1)}
-        </>
-      );
-    case "B":
-      return (
-        <>
-          <FaChessBishop /> {move.substr(1)}
-        </>
-      );
-    case "N":
-      return (
-        <>
-          <FaChessKnight /> {move.substr(1)}
-        </>
-      );
-    case "R":
-      return (
-        <>
-          <FaChessRook /> {move.substr(1)}
-        </>
-      );
-    default:
-      return move;
-  }
 };

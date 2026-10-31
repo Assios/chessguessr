@@ -15,16 +15,15 @@ function allSquares(): string[] {
   return out;
 }
 
+// Fills its parent; the parent sets the size (see .cg-game-board).
 export function ChessgroundBoard({
   fen,
   orientation,
-  width,
   draggable,
   onDrop,
 }: {
   fen: string;
   orientation: Orientation;
-  width: number;
   draggable: boolean;
   onDrop: (from: string, to: string, promotion?: 'q'|'r'|'b'|'n') => boolean | void;
 }) {
@@ -158,10 +157,7 @@ export function ChessgroundBoard({
   }, [fen, orientation, draggable, turnColor, dests, promotion]);
 
   // Compute absolute position for a board square within cg-wrap
-  const squareSize = (() => {
-    const rect = wrapEl?.getBoundingClientRect();
-    return rect ? rect.width / 8 : width / 8;
-  })();
+  const squareSize = (wrapEl?.getBoundingClientRect().width ?? 0) / 8;
 
   const fileIndex = (file: string) => 'abcdefgh'.indexOf(file);
   const toTopLeft = (sq: string) => {
@@ -191,7 +187,7 @@ export function ChessgroundBoard({
   };
 
   return (
-    <div style={{ width, height: width, touchAction: 'none' }} className="relative">
+    <div style={{ touchAction: 'none' }} className="relative w-full h-full">
       <div ref={containerRef} className="w-full h-full" style={{ touchAction: 'none' }} />
       {promotion && wrapEl && createPortal(
         (() => {

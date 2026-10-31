@@ -4,29 +4,39 @@ export const Footer = () => {
   return (
     <footer className="footer p-4 bg-primary text-primary-content">
       <div className="flex w-full items-center justify-between">
-        {/* Left: Privacy + Credit */}
-        <div className="flex items-center gap-2 text-xs opacity-60">
-          <Link to="/privacy" className="hover:opacity-100">
+        {/* Left: Privacy + Credit + Support */}
+        <div className="flex items-center gap-1 text-xs">
+          <Link to="/privacy" className="py-3 opacity-60 hover:opacity-100">
             Privacy
           </Link>
-          <span>·</span>
+          <span className="opacity-60">·</span>
           <a
             href="https://assios.no"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-100"
+            className="py-3 opacity-60 hover:opacity-100"
           >
             By Assios
+          </a>
+          <span className="opacity-60">·</span>
+          <a
+            href="https://www.buymeacoffee.com/assios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-3 opacity-60 hover:opacity-100"
+          >
+            Support ☕
           </a>
         </div>
 
         {/* Center: Social icons */}
-        <div className="flex flex-row gap-3 items-center">
+        <div className="flex flex-row gap-1 items-center">
           <a
             href="https://twitter.com/chessguessr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
+            className="p-3"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +53,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            className="p-3"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +70,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Lichess"
+            className="p-3"
           >
             <svg
               viewBox="0 0 50 54"
@@ -73,7 +85,7 @@ export const Footer = () => {
         </div>
 
         {/* Right: Empty for balance */}
-        <div className="w-20" />
+        <div className="hidden sm:block w-40" />
       </div>
     </footer>
   );

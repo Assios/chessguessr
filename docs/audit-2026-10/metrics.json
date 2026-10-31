@@ -1,0 +1,1413 @@
+[
+ {
+  "name": "01-first-visit-iphone15",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 36x36",
+   "Close 96x36",
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 226,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "02-first-visit-laptop",
+  "path": "/",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1440,
+  "scrollH": 900,
+  "hOverflow": false,
+  "board": {
+   "x": 150,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 726,
+   "y": 157,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 474,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 283,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1358,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 36x36",
+   "Close 96x36",
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "03-home-se",
+  "path": "/",
+  "vp": "se",
+  "vw": 322,
+  "vh": 572,
+  "scrollW": 322,
+  "scrollH": 1114,
+  "hOverflow": false,
+  "board": {
+   "x": 5,
+   "y": 175,
+   "w": 308,
+   "h": 308
+  },
+  "grid": {
+   "x": 8,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 164,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 76,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 256,
+   "y": 506,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 320,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 50x32",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "04-home-iphone8",
+  "path": "/",
+  "vp": "iphone8",
+  "vw": 375,
+  "vh": 667,
+  "scrollW": 375,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 33,
+   "y": 175,
+   "w": 308,
+   "h": 308
+  },
+  "grid": {
+   "x": 35,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 192,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 104,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 309,
+   "y": 601,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 375,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "05-home-iphone15",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "06-home-iphone15-full",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "07-home-landscape",
+  "path": "/",
+  "vp": "landscape",
+  "vw": 844,
+  "vh": 390,
+  "scrollW": 844,
+  "scrollH": 1629,
+  "hOverflow": false,
+  "board": {
+   "x": 142,
+   "y": 184,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 148,
+   "y": 840,
+   "w": 565,
+   "h": 601
+  },
+  "submit": {
+   "x": 466,
+   "y": 760,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 275,
+   "y": 760,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 762,
+   "y": 308,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 844,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "08-home-ipad",
+  "path": "/",
+  "vp": "ipad",
+  "vw": 768,
+  "vh": 1024,
+  "scrollW": 768,
+  "scrollH": 1629,
+  "hOverflow": false,
+  "board": {
+   "x": 104,
+   "y": 184,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 110,
+   "y": 840,
+   "w": 565,
+   "h": 601
+  },
+  "submit": {
+   "x": 428,
+   "y": 760,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 237,
+   "y": 760,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 686,
+   "y": 942,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "09-home-ipadland",
+  "path": "/",
+  "vp": "ipadland",
+  "vw": 1024,
+  "vh": 768,
+  "scrollW": 1024,
+  "scrollH": 1586,
+  "hOverflow": false,
+  "board": {
+   "x": 232,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 238,
+   "y": 873,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 556,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 365,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 942,
+   "y": 686,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "10-home-laptop",
+  "path": "/",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1440,
+  "scrollH": 900,
+  "hOverflow": false,
+  "board": {
+   "x": 150,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 726,
+   "y": 157,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 474,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 283,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1358,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "11-home-fhd",
+  "path": "/",
+  "vp": "fhd",
+  "vw": 1920,
+  "vh": 1080,
+  "scrollW": 1920,
+  "scrollH": 1080,
+  "hOverflow": false,
+  "board": {
+   "x": 390,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 966,
+   "y": 157,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 714,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 523,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1838,
+   "y": 998,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "12-home-dark-iphone15",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "13-home-dark-laptop",
+  "path": "/",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1440,
+  "scrollH": 900,
+  "hOverflow": false,
+  "board": {
+   "x": 150,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 726,
+   "y": 157,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 474,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 283,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1358,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "14-midgame-iphone15",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "15-failed-modal-iphone15",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1235,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 710,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 26x38",
+   "archive. 56x17",
+   "Chessguessr on X 131x17",
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "on lichess 62x16",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "16-failed-modal-iphone15-full",
+  "path": "/",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1235,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 710,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 26x38",
+   "archive. 56x17",
+   "Chessguessr on X 131x17",
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "on lichess 62x16",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "17-failed-modal-laptop",
+  "path": "/",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1425,
+  "scrollH": 1023,
+  "hOverflow": false,
+  "board": {
+   "x": 142,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 718,
+   "y": 310,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 466,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 275,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1343,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1425,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 26x38",
+   "on lichess 80x20",
+   "archive. 56x17",
+   "Chessguessr on X 131x17",
+   "SHARE SCORE 142x40",
+   "Close 96x36",
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "on lichess 71x17",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "18-failed-dark-laptop",
+  "path": "/",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1425,
+  "scrollH": 1023,
+  "hOverflow": false,
+  "board": {
+   "x": 142,
+   "y": 188,
+   "w": 560,
+   "h": 560
+  },
+  "grid": {
+   "x": 718,
+   "y": 310,
+   "w": 565,
+   "h": 605
+  },
+  "submit": {
+   "x": 466,
+   "y": 764,
+   "w": 102,
+   "h": 40
+  },
+  "undo": {
+   "x": 275,
+   "y": 764,
+   "w": 175,
+   "h": 40
+  },
+  "bmc": {
+   "x": 1343,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1425,
+   "h": 64
+  },
+  "smallTargets": [
+   "Close 26x38",
+   "on lichess 80x20",
+   "archive. 56x17",
+   "Chessguessr on X 131x17",
+   "SHARE SCORE 142x40",
+   "Close 96x36",
+   "Undo last moveUndo 175x40",
+   "Submit 102x40",
+   "on lichess 71x17",
+   "INPUT 224x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 34,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "19-archive-iphone15",
+  "path": "/games",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 397940,
+  "hOverflow": false,
+  "board": null,
+  "grid": null,
+  "submit": null,
+  "undo": null,
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "here 36x20",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 30,
+  "kb": 489,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "images.weserv.nl",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "20-archive-laptop",
+  "path": "/games",
+  "vp": "laptop",
+  "vw": 1440,
+  "vh": 900,
+  "scrollW": 1425,
+  "scrollH": 131008,
+  "hOverflow": false,
+  "board": null,
+  "grid": null,
+  "submit": null,
+  "undo": null,
+  "bmc": {
+   "x": 1343,
+   "y": 818,
+   "w": 64,
+   "h": 64
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 1425,
+   "h": 64
+  },
+  "smallTargets": [
+   "here 36x20",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 47,
+  "kb": 846,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "images.weserv.nl",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "21-archive-game-iphone15",
+  "path": "/games/1500",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 1102,
+  "hOverflow": false,
+  "board": {
+   "x": 40,
+   "y": 175,
+   "w": 309,
+   "h": 309
+  },
+  "grid": {
+   "x": 43,
+   "y": 577,
+   "w": 305,
+   "h": 337
+  },
+  "submit": {
+   "x": 199,
+   "y": 501,
+   "w": 79,
+   "h": 36
+  },
+  "undo": {
+   "x": 111,
+   "y": 501,
+   "w": 80,
+   "h": 36
+  },
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "Undo last moveUndo 80x36",
+   "Submit 79x36",
+   "INPUT 176x32",
+   "Copy link 32x32",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 38,
+  "kb": 227,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "name": "22-privacy-iphone15",
+  "path": "/privacy",
+  "vp": "iphone15",
+  "vw": 390,
+  "vh": 844,
+  "scrollW": 390,
+  "scrollH": 844,
+  "hOverflow": false,
+  "board": null,
+  "grid": null,
+  "submit": null,
+  "undo": null,
+  "bmc": {
+   "x": 324,
+   "y": 778,
+   "w": 48,
+   "h": 48
+  },
+  "navbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 64
+  },
+  "smallTargets": [
+   "mail@chessguessr.com 169x17",
+   "Privacy 39x16",
+   "By Assios 52x16",
+   "Twitter 20x20",
+   "GitHub 20x20",
+   "Lichess 20x20"
+  ],
+  "requests": 22,
+  "kb": 119,
+  "thirdParty": [
+   "cdn.jsdelivr.net",
+   "cdnjs.buymeacoffee.com",
+   "cdn.buymeacoffee.com",
+   "chessguessr-proxy.vercel.app"
+  ],
+  "consoleErrors": []
+ }
+]

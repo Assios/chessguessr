@@ -1,32 +1,41 @@
-import { GuessDistribution } from "~/utils/types";
+import type { GuessDistribution } from '~/utils/types';
 
-const Distribution = ({ guessDistribution }: { guessDistribution: GuessDistribution }) => {
-  const distributionArray = [
-    guessDistribution[1],
-    guessDistribution[2],
-    guessDistribution[3],
-    guessDistribution[4],
-    guessDistribution[5],
-  ];
-
-  const maxGuess = Math.max(...distributionArray);
+const Distribution = ({
+  guessDistribution,
+  highlight,
+}: {
+  guessDistribution: GuessDistribution;
+  highlight?: number;
+}) => {
+  const counts = [1, 2, 3, 4, 5].map((n) => guessDistribution[n] ?? 0);
+  const max = Math.max(1, ...counts);
 
   return (
-    <div className="relative pl-6 mt-4 flex-auto">
-      <h4 className="text-xl font-semibold">Your guess distribution</h4>
-      <div className="flex flex-col">
-        {distributionArray.map((numGuesses, i) => (
-          <div key={i}>
-            <span className="mr-2 font-semibold">{i + 1}</span>
-            <progress
-              className="progress progress-success w-56 mt-4"
-              value={numGuesses}
-              max={maxGuess}
-            ></progress>
-            <span className="ml-2">{numGuesses}</span>
-          </div>
+    <div className="mt-4">
+      <h3 className="mb-2 text-sm font-semibold">Guess distribution</h3>
+      <ol className="space-y-1">
+        {counts.map((count, i) => (
+          <li key={i} className="flex items-center gap-2 text-sm">
+            <span className="w-3 font-semibold tabular-nums">{i + 1}</span>
+            <div className="flex-1">
+              <div
+                className={`flex justify-end rounded px-2 py-0.5 font-semibold tabular-nums ${
+                  highlight === i + 1
+                    ? 'text-white'
+                    : 'bg-base-300 text-base-content'
+                }`}
+                style={{
+                  width: `max(1.75rem, ${(count / max) * 100}%)`,
+                  // Same green as a solved tile (styles/tile-animations.css).
+                  ...(highlight === i + 1 && { background: '#12B980' }),
+                }}
+              >
+                {count}
+              </div>
+            </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

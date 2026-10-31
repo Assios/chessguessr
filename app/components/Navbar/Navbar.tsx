@@ -8,7 +8,7 @@ interface NavbarProps {
 
 export const Navbar = ({ setShowModal, setShowTutorial, showNavbarStats }: NavbarProps) => {
   return (
-    <div className="navbar bg-primary text-primary-content">
+    <div className="navbar min-h-[3.25rem] py-0 sm:min-h-[4rem] sm:py-2 bg-primary text-primary-content">
       <div className="navbar-start">
         <button className="btn btn-ghost btn-circle" onClick={() => setShowTutorial(true)} aria-label="Help">
           <div className="indicator">

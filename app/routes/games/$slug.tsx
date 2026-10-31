@@ -4,15 +4,13 @@ import type {
   LoaderFunction,
   MetaFunction,
 } from "@remix-run/node";
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import dayjs from "dayjs";
 import { useCatch, useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGames } from "~/models/game.server";
-import { redirect } from "@remix-run/node";
 import { useEffect } from "react";
-import { CatchBoundaryComponent } from "@remix-run/react/routeModules";
-import { OutletContextType } from "~/utils/types";
-import { boardOgImage } from "~/utils/ogImage";
+import type { CatchBoundaryComponent } from "@remix-run/react/routeModules";
+import type { OutletContextType } from "~/utils/types";
 
 const ORIGIN = "https://www.chessguessr.com";
 
@@ -22,7 +20,6 @@ export const meta: MetaFunction = ({ data }) => {
   }
 
   const g = data.game;
-  const imageUrl = boardOgImage(g);
 
   const white = g.wAka || g.white;
   const black = g.bAka || g.black;
@@ -38,10 +35,8 @@ export const meta: MetaFunction = ({ data }) => {
     description,
     "og:title": title,
     "og:description": description,
-    "og:image": imageUrl,
     "twitter:title": title,
     "twitter:description": description,
-    "twitter:image": imageUrl,
   };
 };
 
@@ -117,7 +112,6 @@ export default function Index() {
     setShowModal,
     showTutorial,
     setShowTutorial,
-    setTutorial,
     setShowNavbarStats,
   } = useOutletContext<OutletContextType>();
 
@@ -126,7 +120,7 @@ export default function Index() {
   });
 
   return (
-    <div className="mt-10 mb-20 lg:mb-0">
+    <div className="mb-8">
       {game && (
         <script
           type="application/ld+json"
@@ -155,7 +149,6 @@ export default function Index() {
           setShowModal={setShowModal}
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
-          setTutorial={setTutorial}
           game={game}
           stats={stats}
           shouldUpdateStats={false}
