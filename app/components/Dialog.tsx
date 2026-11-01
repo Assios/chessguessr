@@ -8,12 +8,15 @@ export const Dialog = ({
   onClose,
   title,
   labelId,
+  wide = false,
   children,
 }: {
   open: boolean;
   onClose: () => void;
   title: ReactNode;
   labelId: string;
+  /** A wider card with a larger title from 640px (the tutorial). */
+  wide?: boolean;
   children: ReactNode;
 }) => {
   const ref = useRef<HTMLDialogElement>(null);
@@ -42,7 +45,7 @@ export const Dialog = ({
     <dialog
       ref={ref}
       aria-labelledby={labelId}
-      className="cg-dialog bg-base-100 text-base-content"
+      className={`cg-dialog ${wide ? 'cg-dialog-wide' : ''} bg-base-100 text-base-content`}
       onClick={(event) => {
         // The panel fills the dialog, so only backdrop clicks land here.
         if (event.target === event.currentTarget) event.currentTarget.close();
@@ -54,7 +57,9 @@ export const Dialog = ({
             <h2
               id={labelId}
               tabIndex={-1}
-              className="text-xl sm:text-2xl font-semibold outline-none"
+              className={`text-xl font-semibold outline-none ${
+                wide ? 'sm:text-3xl' : 'sm:text-2xl'
+              }`}
             >
               {title}
             </h2>

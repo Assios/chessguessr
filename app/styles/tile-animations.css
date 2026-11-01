@@ -196,10 +196,10 @@
   font-size: 0.95rem;
 }
 
-.tile-legend {
-  width: 1.75rem;
-  height: 1.75rem;
-  flex-shrink: 0;
+@media (min-width: 640px) {
+  .tile-tutorial {
+    font-size: 1rem;
+  }
 }
 
 /* The solution in the result dialog: five columns across the full width. */

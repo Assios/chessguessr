@@ -50,6 +50,18 @@
     border-radius: 1rem;
   }
 
+  .cg-dialog-wide {
+    width: min(48rem, calc(100% - 2rem));
+  }
+
+  .cg-dialog-wide .cg-dialog-header {
+    padding: 1rem 1rem 0.5rem 1.5rem;
+  }
+
+  .cg-dialog-wide .cg-dialog-body {
+    padding: 0 1.5rem 1.5rem;
+  }
+
   .cg-dialog[open] {
     animation-name: cg-dialog-in;
   }

@@ -5,8 +5,8 @@ export const Footer = () => {
     <footer className="footer p-4 bg-primary text-primary-content">
       <div className="flex w-full items-center justify-between">
         {/* Left: Privacy + Credit + Support */}
-        <div className="flex items-center gap-1 text-xs">
-          <Link to="/privacy" className="py-3 opacity-60 hover:opacity-100">
+        <div className="flex items-center gap-1 sm:gap-2 text-xs">
+          <Link to="/privacy" className="py-3 sm:py-0 opacity-60 hover:opacity-100">
             Privacy
           </Link>
           <span className="opacity-60">·</span>
@@ -14,7 +14,7 @@ export const Footer = () => {
             href="https://assios.no"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-3 opacity-60 hover:opacity-100"
+            className="py-3 sm:py-0 opacity-60 hover:opacity-100"
           >
             By Assios
           </a>
@@ -23,20 +23,20 @@ export const Footer = () => {
             href="https://www.buymeacoffee.com/assios"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-3 opacity-60 hover:opacity-100"
+            className="py-3 sm:py-0 opacity-60 hover:opacity-100"
           >
             Support ☕
           </a>
         </div>
 
         {/* Center: Social icons */}
-        <div className="flex flex-row gap-1 items-center">
+        <div className="flex flex-row gap-1 sm:gap-3 items-center">
           <a
             href="https://twitter.com/chessguessr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            className="p-3"
+            className="p-3 sm:p-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="p-3"
+            className="p-3 sm:p-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Lichess"
-            className="p-3"
+            className="p-3 sm:p-0"
           >
             <svg
               viewBox="0 0 50 54"

@@ -1,19 +1,33 @@
 import { Dialog } from './Dialog';
 import { Tile } from './Tile';
 
-const EXAMPLE = [
-  { move: 'Nd5', color: 'green', pieceColor: 'regular' },
-  { move: 'exd5', color: 'grey', pieceColor: 'regular' },
-  { move: 'Bxb6', color: 'yellow', pieceColor: 'regular' },
-  { move: 'Qd6', color: 'grey', pieceColor: 'blue' },
-  { move: 'Rxd4', color: 'grey', pieceColor: 'regular' },
-];
-
-const LEGEND = [
-  { color: 'green', pieceColor: 'regular', text: 'Right move in the right spot.' },
-  { color: 'yellow', pieceColor: 'regular', text: 'The move is in the line, but in another spot.' },
-  { color: 'grey', pieceColor: 'blue', text: 'Right piece type in this spot (any knight, any pawn…), wrong move.' },
-  { color: 'grey', pieceColor: 'regular', text: 'Not in the line.' },
+// Each example flips one tile inside an otherwise unplayed line, so the
+// colour is read in context. animationIndex staggers the flips.
+const EXAMPLES = [
+  {
+    moves: ['Nd5', 'Nbxd5', 'exd5', 'Qd6', 'Rxd4'],
+    flip: 0,
+    color: 'green',
+    pieceColor: 'regular',
+    animationIndex: 1,
+    text: 'Nd5 is the correct move in the correct spot.',
+  },
+  {
+    moves: ['Be6', 'Bxb6', 'Bxc4+', 'Kg1', 'Ne2+'],
+    flip: 1,
+    color: 'yellow',
+    pieceColor: 'regular',
+    animationIndex: 3,
+    text: 'The move Bxb6 is in the played line, but in the wrong spot.',
+  },
+  {
+    moves: ['Nxg7', 'Kd8', 'Qf6+', 'Nxf6', 'Be7#'],
+    flip: 3,
+    color: 'grey',
+    pieceColor: 'blue',
+    animationIndex: 2,
+    text: 'The same piece type was played in this spot, but the move is wrong. In this case, a knight was played, but not necessarily the same knight.',
+  },
 ];
 
 export default function TutorialModal({
@@ -29,55 +43,62 @@ export default function TutorialModal({
       onClose={() => setShowTutorial(false)}
       title="How to play"
       labelId="tutorial-title"
+      wide
     >
-      <p className="leading-relaxed">
-        You're shown a position from a real chess game. Guess the{' '}
-        <strong>next 5 moves</strong> that were played, by making them on the
-        board. You have 5 tries, and the tiles show how close each guess was.
+      <p className="leading-relaxed sm:text-lg">
+        You will be shown a position from a chess game. Guess the 5 next moves
+        played in the game. After each guess, the color of the tile will show
+        how close you were. It's like Wordle, or Chessle, but for chess games.
       </p>
 
-      <div className="flex gap-1.5 mt-4" aria-hidden="true">
-        {EXAMPLE.map(({ move, color, pieceColor }, i) => (
-          <Tile
-            key={move}
-            color={color}
-            pieceColor={pieceColor}
-            flipTile={true}
-            animationIndex={i}
-            tutorial={true}
-          >
-            {move}
-          </Tile>
-        ))}
+      <div className="divider my-3 sm:my-4" />
+
+      <h3 className="text-lg sm:text-xl font-semibold">Examples</h3>
+
+      {EXAMPLES.map(({ moves, flip, color, pieceColor, animationIndex, text }) => (
+        <div key={moves[flip]} className="mt-3 sm:mt-4">
+          <div className="flex gap-1.5" aria-hidden="true">
+            {moves.map((move, i) =>
+              i === flip ? (
+                <Tile
+                  key={move}
+                  color={color}
+                  pieceColor={pieceColor}
+                  flipTile={true}
+                  animationIndex={animationIndex}
+                  tutorial={true}
+                >
+                  {move}
+                </Tile>
+              ) : (
+                <Tile key={move} tutorial={true}>
+                  {move}
+                </Tile>
+              )
+            )}
+          </div>
+          <p className="mt-1.5 leading-snug sm:text-lg">{text}</p>
+        </div>
+      ))}
+
+      <p className="mt-4 sm:mt-5 leading-relaxed sm:text-lg">
+        <span className="font-bold">NB!</span> The notation has to be identical
+        for the moves to be considered the same (<i>Nxf7</i> and <i>Nxf7+</i>{' '}
+        aren't considered the same moves).
+      </p>
+      <p className="mt-3 font-bold leading-relaxed sm:text-lg">
+        A new position will appear every day at midnight UTC.
+      </p>
+
+      <div className="mt-5 flex sm:justify-end">
+        <button
+          type="button"
+          className="btn btn-primary btn-block sm:w-auto sm:px-8 normal-case"
+          onClick={() => setShowTutorial(false)}
+        >
+          Got it
+        </button>
       </div>
-
-      <ul className="mt-4 space-y-2">
-        {LEGEND.map(({ color, pieceColor, text }) => (
-          <li key={text} className="flex items-center gap-3">
-            <Tile
-              color={color}
-              pieceColor={pieceColor}
-              flipTile={true}
-              tutorial={true}
-              className="tile-legend"
-            />
-            <span className="text-sm leading-snug">{text}</span>
-          </li>
-        ))}
-      </ul>
-
-      <p className="mt-4 text-sm leading-relaxed opacity-80">
-        Moves must match exactly, including check (+). A new puzzle appears
-        every day at midnight UTC.
-      </p>
-
-      <button
-        type="button"
-        className="btn btn-primary btn-block normal-case mt-5"
-        onClick={() => setShowTutorial(false)}
-      >
-        Got it
-      </button>
     </Dialog>
   );
 }
