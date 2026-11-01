@@ -18693,19 +18693,20 @@ export async function getGames(): Promise<Array<GameType>> {
     },
     {
       "date": "2026-11-02",
-      "fen": "8/8/2p2Bk1/5pP1/2PK4/b7/8/8 b - - 8 39",
+      "fen": "r2q4/ppp2k2/3p1n1p/2b3p1/N2nP1b1/2PP4/PP1Q1PPP/R1B2RK1 b - - 0 13",
       "solution": [
-        "Bb2+",
-        "Kc5",
-        "Bxf6",
-        "gxf6",
-        "f4"
+        "Nf3+",
+        "gxf3",
+        "Bxf3",
+        "h3",
+        "Qd7"
       ],
-      "gameUrl": "https://lichess.org/bUD5cf2y/black#77",
-      "white": "Chesspampa",
-      "black": "TorVik-1",
-      "wRating": 2384,
-      "bRating": 2555,
+      "gameUrl": "https://lichess.org/PfsEYSSc/black#25",
+      "white": "WattSchrott",
+      "black": "Rambo1998",
+      "wTitle": "FM",
+      "wRating": 2389,
+      "bRating": 2341,
       "id": 1595
     }
   ];
