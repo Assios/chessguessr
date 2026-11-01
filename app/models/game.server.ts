@@ -18691,5 +18691,22 @@ export async function getGames(): Promise<Array<GameType>> {
       "bRating": 2555,
       "id": 1594
     },
+    {
+      "date": "2026-11-02",
+      "fen": "8/8/2p2Bk1/5pP1/2PK4/b7/8/8 b - - 8 39",
+      "solution": [
+        "Bb2+",
+        "Kc5",
+        "Bxf6",
+        "gxf6",
+        "f4"
+      ],
+      "gameUrl": "https://lichess.org/bUD5cf2y/black#77",
+      "white": "Chesspampa",
+      "black": "TorVik-1",
+      "wRating": 2384,
+      "bRating": 2555,
+      "id": 1595
+    }
   ];
 }
