@@ -18708,6 +18708,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2389,
       "bRating": 2341,
       "id": 1595
+    },
+    {
+      "date": "2026-11-03",
+      "fen": "r3k2r/1pp2ppp/p1Nqp3/8/1b1pnP2/1P5P/PBP1B1P1/RN1Q1K1R b kq - 0 16",
+      "solution": [
+        "Qxf4+",
+        "Bf3",
+        "Ng3+",
+        "Kg1",
+        "Qe3+"
+      ],
+      "gameUrl": "https://lichess.org/pbMwDXAm/black#31",
+      "white": "garann",
+      "black": "WMatthew",
+      "wRating": 1974,
+      "bRating": 2234,
+      "id": 1596
     }
   ];
 }
