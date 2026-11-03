@@ -18743,6 +18743,75 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2323,
       "bRating": 2271,
       "id": 1597
+    },
+    {
+      "date": "2026-11-05",
+      "fen": "r3kb1r/ppp2ppp/2n1bPq1/6N1/2ppN1P1/8/PPP2P1P/R1BQR1K1 w kq - 1 13",
+      "solution": [
+        "f4",
+        "O-O-O",
+        "f5",
+        "Bxf5",
+        "gxf5"
+      ],
+      "gameUrl": "https://lichess.org/HIgCDgVE/white#24",
+      "white": "asa76",
+      "black": "Kastling",
+      "wTitle": "FM",
+      "wRating": 2459,
+      "bRating": 2362,
+      "id": 1598
+    },
+    {
+      "date": "2026-11-06",
+      "fen": "r3k2r/1b2bp1p/p3N1P1/2p4Q/4P3/1P2B2P/2P1KP2/7q w kq - 0 26",
+      "solution": [
+        "gxf7+",
+        "Kd7",
+        "Nxc5+",
+        "Bxc5",
+        "Qf5+"
+      ],
+      "gameUrl": "https://lichess.org/NwO4pTGY/white#50",
+      "white": "JCGalvez",
+      "black": "Capev",
+      "wRating": 2026,
+      "bRating": 1841,
+      "id": 1599
+    },
+    {
+      "date": "2026-11-07",
+      "fen": "r5k1/ppqb1rb1/4p1QB/4n3/8/2PB4/PP3PPP/R2R2K1 w - - 1 19",
+      "solution": [
+        "Qh7+",
+        "Kf8",
+        "Qh8+",
+        "Ke7",
+        "Bg5+"
+      ],
+      "gameUrl": "https://lichess.org/Rh1XU3QM/white#36",
+      "white": "Mitchell82",
+      "black": "zeron3",
+      "wRating": 2050,
+      "bRating": 1978,
+      "id": 1600
+    },
+    {
+      "date": "2026-11-08",
+      "fen": "r1b3k1/1p3rN1/2p4p/p5p1/1PQ1p1n1/P5P1/1B2PqBP/R4R1K b - - 5 24",
+      "solution": [
+        "Qxg2+",
+        "Kxg2",
+        "Ne3+",
+        "Kg1",
+        "Nxc4"
+      ],
+      "gameUrl": "https://lichess.org/58lSsWOE/black#47",
+      "white": "Peleteiro",
+      "black": "allep",
+      "wRating": 2310,
+      "bRating": 2222,
+      "id": 1601
     }
   ];
 }
