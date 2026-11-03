@@ -18725,6 +18725,24 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1974,
       "bRating": 2234,
       "id": 1596
+    },
+    {
+      "date": "2026-11-04",
+      "fen": "8/1B3k2/1p3q2/p4PQp/P2bP2P/2rn4/6PB/5R1K b - - 6 34",
+      "solution": [
+        "Nf2+",
+        "Rxf2",
+        "Qxg5",
+        "hxg5",
+        "Rc1+"
+      ],
+      "gameUrl": "https://lichess.org/15qnLoxJ/black#67",
+      "white": "geluska",
+      "black": "Juanjito99",
+      "wTitle": "FM",
+      "wRating": 2323,
+      "bRating": 2271,
+      "id": 1597
     }
   ];
 }
