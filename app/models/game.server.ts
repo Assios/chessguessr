@@ -18846,6 +18846,76 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1968,
       "bRating": 1992,
       "id": 1603
+    },
+    {
+      "date": "2026-11-11",
+      "fen": "r2r2k1/1b2b3/1p2P1p1/2p2p2/p4R2/P1BnP3/5Q1P/6K1 w - - 0 34",
+      "solution": [
+        "Qg3",
+        "Nxf4",
+        "exf4",
+        "g5",
+        "Qh3"
+      ],
+      "gameUrl": "https://lichess.org/KeL35FLp/white#66",
+      "white": "Saeed_tz",
+      "black": "SSO-EAZ-1",
+      "wRating": 2256,
+      "bRating": 2150,
+      "id": 1604
+    },
+    {
+      "date": "2026-11-12",
+      "fen": "r4rk1/pb3ppp/1pn1p3/8/6Q1/P1qB1N2/2P2PPP/R3R1K1 w - - 0 16",
+      "solution": [
+        "Bxh7+",
+        "Kxh7",
+        "Qh5+",
+        "Kg8",
+        "Ng5"
+      ],
+      "gameUrl": "https://lichess.org/i2cQkH94/white#30",
+      "white": "MrGuillermo",
+      "black": "Mendbayar0",
+      "wRating": 1994,
+      "bRating": 1970,
+      "id": 1605
+    },
+    {
+      "date": "2026-11-13",
+      "fen": "2kr4/1pp3pn/1pPp2b1/3Np1pp/2B1P1qP/2PP1r2/P4P2/R2QRK2 w - - 0 21",
+      "solution": [
+        "Qa4",
+        "Rxf2+",
+        "Kxf2",
+        "Rf8+",
+        "Ke3"
+      ],
+      "gameUrl": "https://lichess.org/tmtDq1FP/white#40",
+      "white": "Krabbe",
+      "black": "Sarhane87",
+      "wTitle": "CM",
+      "wRating": 2385,
+      "bRating": 2358,
+      "id": 1606
+    },
+    {
+      "date": "2026-11-14",
+      "fen": "2kr2r1/p2q1p2/2p2b2/2Bp3p/Q7/8/PPP3P1/2KR1B2 w - - 4 22",
+      "solution": [
+        "Ba6+",
+        "Kb8",
+        "Qf4+",
+        "Ka8",
+        "Qxf6"
+      ],
+      "gameUrl": "https://lichess.org/QrSxI6xh/white#42",
+      "white": "Sim_taan_gaaran",
+      "black": "NguyenDucHoa",
+      "bTitle": "GM",
+      "wRating": 2655,
+      "bRating": 2726,
+      "id": 1607
     }
   ];
 }
