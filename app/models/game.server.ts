@@ -18916,6 +18916,23 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2655,
       "bRating": 2726,
       "id": 1607
+    },
+    {
+      "date": "2026-11-15",
+      "fen": "1r6/1q2ppkp/1Pr3p1/8/3Q4/2p2PP1/1R2P2P/1R4K1 b - - 1 30",
+      "solution": [
+        "e5",
+        "Qxe5+",
+        "f6",
+        "Qd4",
+        "cxb2"
+      ],
+      "gameUrl": "https://lichess.org/5uOmoWc6/black#59",
+      "white": "IdealEmployer",
+      "black": "Zachary_Mac",
+      "wRating": 1739,
+      "bRating": 1745,
+      "id": 1608
     }
   ];
 }
