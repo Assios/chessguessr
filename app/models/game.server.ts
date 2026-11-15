@@ -18933,6 +18933,57 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1739,
       "bRating": 1745,
       "id": 1608
+    },
+    {
+      "date": "2026-11-16",
+      "fen": "4r1k1/1q3pp1/p6p/8/Q5RP/P1N5/1P3K2/R1B1r3 b - - 0 28",
+      "solution": [
+        "Rf1+",
+        "Kxf1",
+        "Qf3+",
+        "Kg1",
+        "Re1+"
+      ],
+      "gameUrl": "https://lichess.org/Y5oDNlpg/black#55",
+      "white": "GarboBot",
+      "black": "Nikitosik-ai",
+      "wRating": 2311,
+      "bRating": 3081,
+      "id": 1609
+    },
+    {
+      "date": "2026-11-17",
+      "fen": "r3kb1r/pp1npp1p/3p2p1/3n4/3N4/P1N1B3/1PP1QPqP/2KR3R w kq - 0 15",
+      "solution": [
+        "Nxd5",
+        "Qxd5",
+        "Nb5",
+        "Qc6",
+        "Nxd6+"
+      ],
+      "gameUrl": "https://lichess.org/GhgSkdae/white#28",
+      "white": "viskal2000",
+      "black": "eufelipe",
+      "wRating": 2260,
+      "bRating": 2230,
+      "id": 1610
+    },
+    {
+      "date": "2026-11-18",
+      "fen": "2r2rk1/p4p1p/2pRbQB1/4P3/1p6/4q1P1/PPP3KP/5R2 b - - 0 23",
+      "solution": [
+        "hxg6",
+        "Rxe6",
+        "Qe4+",
+        "Kh3",
+        "fxe6"
+      ],
+      "gameUrl": "https://lichess.org/yomUV2EI/black#45",
+      "white": "Rose29",
+      "black": "dishearten",
+      "wRating": 2183,
+      "bRating": 2268,
+      "id": 1611
     }
   ];
 }
