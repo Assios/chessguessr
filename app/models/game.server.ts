@@ -19052,6 +19052,40 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 2333,
       "bRating": 2338,
       "id": 1615
+    },
+    {
+      "date": "2026-11-23",
+      "fen": "6k1/5pp1/p1bRp2p/1pq5/8/P4P2/1PB3PP/7K w - - 4 31",
+      "solution": [
+        "Rd8+",
+        "Qf8",
+        "Bh7+",
+        "Kxh7",
+        "Rxf8"
+      ],
+      "gameUrl": "https://lichess.org/1S6hgmVJ/white#60",
+      "white": "gzkn",
+      "black": "SergeevMatvey80",
+      "wRating": 1708,
+      "bRating": 1724,
+      "id": 1616
+    },
+    {
+      "date": "2026-11-24",
+      "fen": "r1b2kn1/1p1pq1b1/p3p1Qp/2p2P2/2B1P3/3P4/P1P4P/5R1K w - - 1 24",
+      "solution": [
+        "fxe6+",
+        "Nf6",
+        "e5",
+        "dxe6",
+        "exf6"
+      ],
+      "gameUrl": "https://lichess.org/TfUySlgA/white#46",
+      "white": "sabermostafa",
+      "black": "Nesat",
+      "wRating": 1685,
+      "bRating": 1685,
+      "id": 1617
     }
   ];
 }
