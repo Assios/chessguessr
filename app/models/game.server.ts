@@ -19086,6 +19086,92 @@ export async function getGames(): Promise<Array<GameType>> {
       "wRating": 1685,
       "bRating": 1685,
       "id": 1617
+    },
+    {
+      "date": "2026-11-25",
+      "fen": "r1b1kb1r/pp3ppp/2p5/1B1QP2q/4nP2/5N2/PP5P/RNB1K1R1 b Qkq - 0 13",
+      "solution": [
+        "Qxf3",
+        "Bxc6+",
+        "bxc6",
+        "Qxc6+",
+        "Kd8"
+      ],
+      "gameUrl": "https://lichess.org/5xK5MlxT/black#25",
+      "white": "Batushev-1103",
+      "black": "Johnthebaldarch06",
+      "wRating": 2078,
+      "bRating": 2192,
+      "id": 1618
+    },
+    {
+      "date": "2026-11-26",
+      "fen": "4rr2/ppp3bk/1n1p3p/5N1q/3P4/1P1Q2PP/PB6/R3R1K1 b - - 0 23",
+      "solution": [
+        "Rxe1+",
+        "Rxe1",
+        "Qxf5",
+        "Qxf5+",
+        "Rxf5"
+      ],
+      "gameUrl": "https://lichess.org/5C0wxPdm/black#45",
+      "white": "VoicelessFeather",
+      "black": "Rohan2707",
+      "wTitle": "NM",
+      "wRating": 2263,
+      "bRating": 1814,
+      "id": 1619
+    },
+    {
+      "date": "2026-11-27",
+      "fen": "4r1k1/5pp1/p1b4p/3p4/1P1q1B2/P5QP/3p1PP1/3N1RK1 b - - 1 23",
+      "solution": [
+        "Bb5",
+        "Be3",
+        "Qd3",
+        "Kh2",
+        "d4"
+      ],
+      "gameUrl": "https://lichess.org/hdDdaDwE/black#45",
+      "white": "patroclio",
+      "black": "tank_nagibator",
+      "wRating": 1690,
+      "bRating": 1668,
+      "id": 1620
+    },
+    {
+      "date": "2026-11-28",
+      "fen": "3rr1k1/3qbpp1/2p2R2/p5p1/3P3P/3Q4/1p1B1PP1/1K5R w - - 0 26",
+      "solution": [
+        "hxg5",
+        "Bxf6",
+        "Qh7+",
+        "Kf8",
+        "gxf6"
+      ],
+      "gameUrl": "https://lichess.org/CC3f4QDD/white#50",
+      "white": "mag58S3",
+      "black": "BobLeeSwagger465",
+      "wRating": 2144,
+      "bRating": 2175,
+      "id": 1621
+    },
+    {
+      "date": "2026-11-29",
+      "fen": "5kr1/1p3ppQ/1r2p1P1/3p3P/2pP4/p1P1q3/PP1R4/1K5R w - - 0 27",
+      "solution": [
+        "gxf7",
+        "Kxf7",
+        "Rf1+",
+        "Ke7",
+        "Qxg8"
+      ],
+      "gameUrl": "https://lichess.org/yPJIVqK1/white#52",
+      "white": "RODRIGOFScat",
+      "black": "axpectation",
+      "wRating": 1585,
+      "bRating": 1652,
+      "id": 1622
     }
   ];
 }
